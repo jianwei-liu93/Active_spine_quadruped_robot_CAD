@@ -1,0 +1,13 @@
+{
+  "revision": "r02",
+  "scope": "spine only; shape transforms from actual native neutral solids",
+  "status": "PASS",
+  "samples": 361,
+  "step_deg": 1,
+  "narrowphase_tests": 76378,
+  "volume_tolerance_mm3": 1e-05,
+  "pair_violations": [],
+  "elapsed_seconds": 700.8851139545441,
+  "invariant_pair_check": "All static/static and same-joint point/point pairs checked in neutral; constant relative geometry",
+  "limits": "Finite pose sampling. Raw overlaps, no exceptions. Positive clearance requirement and continuous sweep bound not established."
+}

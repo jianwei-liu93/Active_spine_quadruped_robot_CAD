@@ -3,7 +3,7 @@ Fully constrained dimensional sketches; no face-mapped references.
 """
 import FreeCAD as App, Part, Sketcher, math
 V=App.Vector
-COLORS={'PA12':(0.25,0.44,0.58),'steel':(0.67,0.7,0.74),'brass':(0.8,0.59,0.22),'rubber':(0.12,0.13,0.15),'motor':(0.21,0.22,0.25),'cable':(0.95,0.65,0.15),'spring':(0.55,0.65,0.75)}
+COLORS={'PA12':(0.25,0.44,0.58),'steel':(0.67,0.7,0.74),'brass':(0.8,0.59,0.22),'copper':(0.8,0.59,0.22),'rubber':(0.12,0.13,0.15),'motor':(0.21,0.22,0.25),'cable':(0.95,0.65,0.15),'spring':(0.55,0.65,0.75)}
 
 def metadata(o,pn,material,process,role='CUSTOM'):
     for n,val in [('PartNumber',pn),('Revision','r01'),('MaterialName',material),('Process',process),('ReleaseStatus','PROVISIONAL'),('Role',role)]:

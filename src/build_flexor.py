@@ -111,10 +111,11 @@ def build(root=ROOT):
             xs=[spine(j*math.tau/720,p)[f'C{i}'][0] for j in range(721)];xc=(min(xs)+max(xs))/2;zc=(1 if i==1 else -1)*p['guide_z_mm']
             travel=p['guide_slot_travel_mm'];sw=p['guide_slot_width_mm'];ow=p['guide_outer_width_mm'];L=travel+ow
             pn='GUIDE_FRAME_r02';guide=b.sources.get(pn) or profile_part(b,pn,L,ow,1.6,slot=((ow-sw)/2,(ow-sw)/2,travel+sw,sw))
-            brass=b.sources.get('GUIDE_COPPER_r02') or profile_part(b,'GUIDE_COPPER_r02',travel+sw+1,sw+1,.3,material='brass',slot=(.5,.5,travel+sw,sw))
+            copper=b.sources.get('GUIDE_COPPER_r02') or profile_part(b,'GUIDE_COPPER_r02',travel+sw+1,sw+1,.3,material='copper',slot=(.5,.5,travel+sw,sw))
+            copper.Process='machined copper face liner; attachment method UNVERIFIED'
             b.add(guide,f'GuideFrame{i}_{side}',cc.plane_placement((xc-L/2,zc-ow/2),side*40.2+.8),'Chassis')
             for offset in [-.65,.65]:
-                b.add(brass,f'GuideLiner{i}_{side}_{offset}',cc.plane_placement((xc-(travel+sw+1)/2,zc-(sw+1)/2),side*40.2+offset+.15),'Chassis')
+                b.add(copper,f'GuideLiner{i}_{side}_{offset}',cc.plane_placement((xc-(travel+sw+1)/2,zc-(sw+1)/2),side*40.2+offset+.15),'Chassis')
             b.pin(f'C{i}_{side}',s[f'C{i}'],[side*34.2,side*36,side*40.2],f'C{i}')
             # Slot bosses bolt to short standoffs at the fixed slot ends, outside travel.
             for e in [-1,1]:
