@@ -1,0 +1,60 @@
+{
+  "revision": "r02",
+  "status": "PASS",
+  "samples": 721,
+  "step_deg": 0.5,
+  "phase_rad": [
+    0,
+    6.283185307179586
+  ],
+  "branch": {
+    "B": "positive oriented circle intersection",
+    "slider": [
+      "negative x root",
+      "positive x root"
+    ],
+    "D": "negative oriented circle intersection",
+    "source_visual_seed": "SOURCE_RECONCILED_PROVISIONAL"
+  },
+  "closure_max_mm": 1.4210854715202004e-14,
+  "closure_tolerance_mm": 4.5787599999999996e-07,
+  "min_geometric_feasibility_margin_mm": 3.1959413155329894,
+  "periodic_position_error_mm": 1.7763568394002505e-15,
+  "max_successive_joint_step_mm": 0.05372572819561228,
+  "slider_ranges_mm": {
+    "C1": [
+      -33.16445019477227,
+      -22.250282042573904
+    ],
+    "C2": [
+      22.250282042573907,
+      33.16445019477227
+    ]
+  },
+  "output_ranges_relative_neutral_deg": {
+    "chain1": [
+      -17.953711785397502,
+      42.304356546864916
+    ],
+    "chain2": [
+      -45.53048981713439,
+      14.72757851512799
+    ]
+  },
+  "output_absolute_E_to_D_deg": {
+    "chain1": [
+      63.71353292728345,
+      123.97160125954588
+    ],
+    "chain2": [
+      -116.2864670727165,
+      -56.02839874045413
+    ]
+  },
+  "symmetry_max_abs_deg_project_convention": 3.659477346820272,
+  "symmetry_definition": "psi1=pi/2+(beta1-beta1_neutral), psi2=pi/2+(beta2-beta2_neutral); paper convention uncalibrated",
+  "jacobian": "5x5 length-residual derivatives wrt [Bx,Bz,Cx,Dx,Dz] in mm; uniform lengths/coordinates scale cancel",
+  "max_jacobian_condition_2": 5.435315660532687,
+  "max_analytic_vs_central_derivative_error_rad_per_rad": 1.2657638825963602e-10,
+  "limits": "Finite 0.5-degree samples; strict positive intersection margins and invariant oriented branch labels. No source-visual or physical certification."
+}

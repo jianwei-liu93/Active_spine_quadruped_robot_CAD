@@ -2,9 +2,10 @@
 from kinematics import *
 import csv
 
-def run(root=ROOT):
+def run(root=ROOT, parameter_path=None, revision="r01"):
+    root=Path(root)
     import numpy as np
-    p=load_parameters(); ts=np.linspace(0,math.tau,721)
+    p=load_parameters(parameter_path); ts=np.linspace(0,math.tau,721)
     ss=[spine(float(t),p) for t in ts]
     bs=np.unwrap(np.array([[s['beta1'],s['beta2']] for s in ss]),axis=0)
     # Independent squared-distance Jacobian for each 5-unknown chain. Rows/columns scaled uniformly by Lref.
@@ -26,21 +27,22 @@ def run(root=ROOT):
     q=bs-bs[0]
     # Project convention psi1=pi/2+q1; psi2=pi/2+q2. Paper sign/offset uncalibrated.
     sym=q[:,0]+q[:,1]
-    report={'revision':'r01','status':'PASS','samples':721,'step_deg':0.5,'phase_rad':[0,math.tau],
-      'branch':{'B':'positive oriented circle intersection','slider':['negative x root','positive x root'],'D':'positive oriented circle intersection','source_visual_seed':'BLOCKED'},
+    report={'revision':revision,'status':'PASS','samples':721,'step_deg':0.5,'phase_rad':[0,math.tau],
+      'branch':{'B':'positive oriented circle intersection','slider':['negative x root','positive x root'],'D':('positive' if p['D_branch']==0 else 'negative')+' oriented circle intersection','source_visual_seed':('SOURCE_RECONCILED_PROVISIONAL' if revision=='r02' else 'BLOCKED')},
       'closure_max_mm':max(abs(r) for s in ss for r in residuals(s,p)), 'closure_tolerance_mm':1e-8*p['L4_mm'],
       'min_geometric_feasibility_margin_mm':min(min(s['margins_mm']) for s in ss),
       'periodic_position_error_mm':max(math.dist(ss[0][n],ss[-1][n]) for n in ('B1','B2','C1','C2','D1','D2')),
       'max_successive_joint_step_mm':max(math.dist(a[n],b[n]) for a,b in zip(ss,ss[1:]) for n in ('B1','B2','C1','C2','D1','D2')),
       'slider_ranges_mm':{f'C{i}':[min(s[f'C{i}'][0] for s in ss),max(s[f'C{i}'][0] for s in ss)] for i in (1,2)},
-      'output_ranges_relative_neutral_deg':(np.array([q.min(axis=0),q.max(axis=0)])*180/math.pi).tolist(),
+      'output_ranges_relative_neutral_deg':{f'chain{i+1}':[float(q[:,i].min()*180/math.pi),float(q[:,i].max()*180/math.pi)] for i in range(2)},
+      'output_absolute_E_to_D_deg':{f'chain{i+1}':[float(bs[:,i].min()*180/math.pi),float(bs[:,i].max()*180/math.pi)] for i in range(2)},
       'symmetry_max_abs_deg_project_convention':float(max(abs(sym))*180/math.pi),
       'symmetry_definition':'psi1=pi/2+(beta1-beta1_neutral), psi2=pi/2+(beta2-beta2_neutral); paper convention uncalibrated',
       'jacobian':'5x5 length-residual derivatives wrt [Bx,Bz,Cx,Dx,Dz] in mm; uniform lengths/coordinates scale cancel',
       'max_jacobian_condition_2':max(cond),'max_analytic_vs_central_derivative_error_rad_per_rad':max(derivative_error),
       'limits':'Finite 0.5-degree samples; strict positive intersection margins and invariant oriented branch labels. No source-visual or physical certification.'}
-    (root/'reports/verification/spine_cycle.json').write_text(json.dumps(report,indent=2)+'\n')
-    with (root/'reports/verification/spine_cycle.csv').open('w') as f:
+    (root/f'reports/verification/spine_cycle_{revision}.json').write_text(json.dumps(report,indent=2)+'\n')
+    with (root/f'reports/verification/spine_cycle_{revision}.csv').open('w') as f:
         w=csv.writer(f,lineterminator="\n"); w.writerow(['theta_rad','beta1_rad','beta2_rad','C1_x_mm','C2_x_mm','max_closure_mm','symmetry_rad'])
         for t,s,b,e in zip(ts,ss,bs,sym):w.writerow([t,*b,s['C1'][0],s['C2'][0],max(abs(x) for x in residuals(s,p)),e])
     print(json.dumps(report,indent=2)); return report

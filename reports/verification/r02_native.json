@@ -1,0 +1,1291 @@
+{
+  "revision": "r02",
+  "scope": "spine only",
+  "status": "PASS",
+  "parts": [
+    {
+      "instance": "SpineMotor_1",
+      "part": "ENV_XL330_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "Link1_L2__1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846583
+    },
+    {
+      "instance": "Link2_L2__1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846615
+    },
+    {
+      "instance": "Link1_L3__1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846595
+    },
+    {
+      "instance": "Link2_L3__1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846592
+    },
+    {
+      "instance": "Link1_L4__1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.09697645306298
+    },
+    {
+      "instance": "Link2_L4__1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.0969764530628
+    },
+    {
+      "instance": "Link1_L5__1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619542
+    },
+    {
+      "instance": "Link2_L5__1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619535
+    },
+    {
+      "instance": "Link1_L6__1",
+      "part": "SPN_r02_L6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.64396080161955
+    },
+    {
+      "instance": "Link2_L6__1",
+      "part": "SPN_r02_L6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.64396080161955
+    },
+    {
+      "instance": "DirectCrank_1",
+      "part": "SPN_DIRECT_HORN_CRANK_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 45.64041902589678
+    },
+    {
+      "instance": "HornAdapter_1",
+      "part": "HORN_ADAPTER_UNVERIFIED",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 56.357816010910675
+    },
+    {
+      "instance": "G_1_Pin",
+      "part": "PIN_D1_9_L5_2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.682298958918302
+    },
+    {
+      "instance": "G_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "G_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "G_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "G_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339545
+    },
+    {
+      "instance": "G_1_Spacer1",
+      "part": "G_CRANK_SPACER_L0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.1303843066697785
+    },
+    {
+      "instance": "B1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "B1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "B1__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B1__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.26076861333954
+    },
+    {
+      "instance": "B1__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395446
+    },
+    {
+      "instance": "A1__1_Pin",
+      "part": "PIN_D1_9_L6_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 18.145839167134643
+    },
+    {
+      "instance": "A1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A1__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "A1__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "A1__1_Spacer0",
+      "part": "SPACER_2mm_L3_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.56461168003732
+    },
+    {
+      "instance": "D1__1_Pin",
+      "part": "PIN_D1_9_L3_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.639977057540277
+    },
+    {
+      "instance": "D1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424687
+    },
+    {
+      "instance": "D1__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424687
+    },
+    {
+      "instance": "D1__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339542
+    },
+    {
+      "instance": "E1__1_Pin",
+      "part": "PIN_D1_9_L11_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.45639096440449
+    },
+    {
+      "instance": "E1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "E1__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424688
+    },
+    {
+      "instance": "E1__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424688
+    },
+    {
+      "instance": "E1__1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner1__1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "GuideLiner1__1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "C1__1_Pin",
+      "part": "PIN_D1_9_L7_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.54818401097239
+    },
+    {
+      "instance": "C1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C1__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C1__1_Spacer0",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30384306669778
+    },
+    {
+      "instance": "C1__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.26076861333954
+    },
+    {
+      "instance": "B2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "B2__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B2__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "B2__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339544
+    },
+    {
+      "instance": "A2__1_Pin",
+      "part": "PIN_D1_9_L4_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.042321901378033
+    },
+    {
+      "instance": "A2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424677
+    },
+    {
+      "instance": "A2__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "A2__1_Spacer0",
+      "part": "SPACER_2mm_L1_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.782305840018665
+    },
+    {
+      "instance": "D2__1_Pin",
+      "part": "PIN_D1_9_L3_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.639977057540277
+    },
+    {
+      "instance": "D2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D2__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D2__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "E2__1_Pin",
+      "part": "PIN_D1_9_L11_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.45639096440449
+    },
+    {
+      "instance": "E2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "E2__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "E2__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "E2__1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner2__1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "GuideLiner2__1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "C2__1_Pin",
+      "part": "PIN_D1_9_L7_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.54818401097239
+    },
+    {
+      "instance": "C2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C2__1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C2__1_Spacer0",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697786
+    },
+    {
+      "instance": "C2__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395406
+    },
+    {
+      "instance": "SpineMotor1",
+      "part": "ENV_XL330_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "Link1_L2_1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846583
+    },
+    {
+      "instance": "Link2_L2_1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846592
+    },
+    {
+      "instance": "Link1_L3_1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846578
+    },
+    {
+      "instance": "Link2_L3_1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846587
+    },
+    {
+      "instance": "Link1_L4_1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.09697645306298
+    },
+    {
+      "instance": "Link2_L4_1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.0969764530628
+    },
+    {
+      "instance": "Link1_L5_1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619542
+    },
+    {
+      "instance": "Link2_L5_1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619535
+    },
+    {
+      "instance": "Link1_L6_1",
+      "part": "SPN_r02_L6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.64396080161955
+    },
+    {
+      "instance": "Link2_L6_1",
+      "part": "SPN_r02_L6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.64396080161955
+    },
+    {
+      "instance": "DirectCrank1",
+      "part": "SPN_DIRECT_HORN_CRANK_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 45.64041902589678
+    },
+    {
+      "instance": "HornAdapter1",
+      "part": "HORN_ADAPTER_UNVERIFIED",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 56.357816010910675
+    },
+    {
+      "instance": "G1_Pin",
+      "part": "PIN_D1_9_L5_2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.682298958918302
+    },
+    {
+      "instance": "G1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "G1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "G1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "G1_Spacer0",
+      "part": "G_CRANK_SPACER_L0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.1303843066697785
+    },
+    {
+      "instance": "G1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339545
+    },
+    {
+      "instance": "B1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "B1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "B1_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B1_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395446
+    },
+    {
+      "instance": "B1_1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395406
+    },
+    {
+      "instance": "A1_1_Pin",
+      "part": "PIN_D1_9_L6_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 18.14583916713464
+    },
+    {
+      "instance": "A1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "A1_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "A1_1_Spacer0",
+      "part": "SPACER_2mm_L3_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.56461168003732
+    },
+    {
+      "instance": "D1_1_Pin",
+      "part": "PIN_D1_9_L3_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.639977057540277
+    },
+    {
+      "instance": "D1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "D1_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D1_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395415
+    },
+    {
+      "instance": "E1_1_Pin",
+      "part": "PIN_D1_9_L11_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.45639096440449
+    },
+    {
+      "instance": "E1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "E1_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424688
+    },
+    {
+      "instance": "E1_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424688
+    },
+    {
+      "instance": "E1_1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.91152920009329
+    },
+    {
+      "instance": "GuideLiner1_1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "GuideLiner1_1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "C1_1_Pin",
+      "part": "PIN_D1_9_L7_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.548184010972392
+    },
+    {
+      "instance": "C1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C1_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "C1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395406
+    },
+    {
+      "instance": "C1_1_Spacer1",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30384306669778
+    },
+    {
+      "instance": "B2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B2_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "B2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339544
+    },
+    {
+      "instance": "B2_1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.26076861333954
+    },
+    {
+      "instance": "A2_1_Pin",
+      "part": "PIN_D1_9_L4_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.042321901378033
+    },
+    {
+      "instance": "A2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "A2_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "A2_1_Spacer0",
+      "part": "SPACER_2mm_L1_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.782305840018667
+    },
+    {
+      "instance": "D2_1_Pin",
+      "part": "PIN_D1_9_L3_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.639977057540277
+    },
+    {
+      "instance": "D2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D2_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424686
+    },
+    {
+      "instance": "D2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "E2_1_Pin",
+      "part": "PIN_D1_9_L11_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.45639096440449
+    },
+    {
+      "instance": "E2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "E2_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "E2_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "E2_1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner2_1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "GuideLiner2_1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "C2_1_Pin",
+      "part": "PIN_D1_9_L7_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.548184010972392
+    },
+    {
+      "instance": "C2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Retainer0",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424685
+    },
+    {
+      "instance": "C2_1_Retainer1",
+      "part": "RETAINER_2mm",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.222300526424684
+    },
+    {
+      "instance": "C2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339541
+    },
+    {
+      "instance": "C2_1_Spacer1",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697786
+    },
+    {
+      "instance": "SyncB1",
+      "part": "SYNC_SHAFT_1p9_L59",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 198.47011589053517
+    },
+    {
+      "instance": "SyncB2",
+      "part": "SYNC_SHAFT_1p9_L59",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 198.4701158905351
+    },
+    {
+      "instance": "LumbarIntegrated_1",
+      "part": "FRM_LUMBAR_INTEGRATED_R_r001",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1735.9401136976742
+    },
+    {
+      "instance": "LumbarIntegrated1",
+      "part": "FRM_LUMBAR_INTEGRATED_r002",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1735.9401136976744
+    }
+  ],
+  "editable_bodies": 25,
+  "fully_constrained_sketches": true,
+  "actual_native_joint_max_error_mm": 7.944109290391274e-15,
+  "joint_tolerance_mm": 0.0001,
+  "envelope_mm": [
+    77.40187037263354,
+    83.20000000000002,
+    58.83146503925083
+  ],
+  "limits": "Source morphology, physical clearance and supplier interface verification are separate gates."
+}

@@ -2,7 +2,7 @@
 
 A FreeCAD project for a manufacturable, editable active-spine quadruped inspired by **FLEXOR-F** in Wang et al., *Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*, Science Advances 12, eaed5603 (2026).
 
-**Current status: DESIGN_SPEC_ONLY.** This repository currently contains design requirements, independently derived implementation methods, and development/verification instructions. It does not yet contain a generated or validated robot CAD assembly. Every execution gate starts as `NOT_RUN`.
+**Current status: REFERENCE_FIDELITY_RECOVERY.** Installed FreeCAD MCP execution and an exploratory editable whole robot exist. The exploratory r01 model is superseded because its spine packaging and output geometry diverge from the source. Recovery is on `fix/flexor-reference-fidelity`; see [the morphology audit](docs/10_reference_morphology_and_recovery.md). Numerical closure is separate from physical clearance and fabrication readiness.
 
 The initial target is a desktop-scale research prototype, approximately **110 × 99 × 84 mm**, with a **338 g reference mass**. These are source-prototype targets, not promised dimensions or performance of the eventual design. See the source definitions in [the reference evidence](docs/01_reference_evidence.md).
 
@@ -30,6 +30,7 @@ The lead agent is the sole writer to the live FreeCAD document. Subagents may in
 | [07 — Development plan](docs/07_development_plan.md) | Dependency order, parallel work, first deliverable, and progress recording |
 | [08 — Agent orchestration](docs/08_agent_orchestration.md) | Model/effort defaults, cheaper workers, escalation rules, and live-session ownership |
 | [09 — Codex start prompt](docs/09_codex_start_prompt.md) | Ready-to-copy development request that refers to the specifications and requires actual MCP execution |
+| [10 — Morphology and recovery](docs/10_reference_morphology_and_recovery.md) | Source comparison, preserved r01 work and spine-first correction controls |
 | [Reference files](references/README.md) | Original PDF names, hashes, and local setup after cloning |
 
 ## Mechanical baseline
@@ -56,6 +57,6 @@ Recommended base model: **GPT-6.1 Sol, high reasoning**. Use **GPT-6 Luna, high 
 
 ## Expected future outputs
 
-The development plan calls for native `.FCStd` documents, reproducible Python/macros and parameters, STEP assembly and custom parts, applicable print/profile exports, dimensioned drawings, BOM, assembly instructions, and verification evidence. These outputs are planned; they are not present or verified at this documentation-only stage.
+The development plan calls for native `.FCStd` documents, reproducible Python/macros and parameters, STEP assembly and custom parts, applicable print/profile exports, dimensioned drawings, BOM, assembly instructions, and verification evidence. Native exploratory checkpoints and source/verification scripts are present. Corrected CAD, export and drawing acceptance must be established by the revision-specific reports; the exploratory checkpoints are not manufacturing deliverables.
 
 The final CAD candidate should be assessed for manufacturability. Fabrication release, physical operation, endurance, and locomotion performance require their own evidence.

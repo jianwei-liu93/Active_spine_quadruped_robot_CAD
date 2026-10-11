@@ -27,7 +27,7 @@ class Builder:
         return self.sources[pn]
     def add(self,source,name,placement,group,motion=None):
         obj=cc.instance(self.doc,source,name,placement);self.groups[group].addObject(obj)
-        if motion:self.motion[name]=motion
+        if motion:self.motion[obj.Name]=motion
         return obj
     def link(self,pn,L,material='PA12',width=None,T=None,hole=None):
         p=self.p;w=width or p['link_width_mm'];t=T or p['link_thickness_mm'];d=hole or p['bearing_seat_diameter_mm']

@@ -1,0 +1,20 @@
+{
+  "revision": "r02",
+  "samples": 1441,
+  "step_deg": 0.25,
+  "closure_max_mm": 1.4210854715202004e-14,
+  "min_branch_margin_mm": 3.1959270047420567,
+  "D1_above_E1_all_poses": true,
+  "D2_below_E2_all_poses": true,
+  "output_inclination_deg": {
+    "chain1": [
+      63.71343596461622,
+      123.97160125954588
+    ],
+    "chain2": [
+      -116.28656403538379,
+      -56.02839874045413
+    ]
+  },
+  "limitations": "Closure/branch only. Physical interference and paper phase calibration separate."
+}

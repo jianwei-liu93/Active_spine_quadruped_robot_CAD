@@ -1,0 +1,75 @@
+# Leg topology recovery from original figures
+
+Date: 2026-10-11. Bounded read-only source audit; no source, schema, or live FreeCAD changes. Revision assessed: r01. This note distinguishes direct source evidence from proposed reconstruction. It is not a fabrication drawing or an equilibrium result.
+
+## Sources actually inspected
+
+- [P: original main paper](/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking%20fast%20robotic%20locomotor%20propulsion%20throughdynamic%20spine-leg%20synergy.pdf), printed p. 4 (leg design prose), p. 5 Fig. 2B (elastic hind legs and passive/active cable alternatives). SHA-256 `a922f5a4895ccab1b1af0868c35f9782f20ce1eef32e141c721cd9d856c3b8d4`.
+- [S: original supplement](/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking%20fast%20robotic%20locomotor%20propulsion%20throughdynamic%20spine-leg%20synergy_sm.pdf), PDF pp. 3-4 (biological design rationale), pp. 13-17 (leg FK, cable equations, fabrication), p. 38 Fig. S17, p. 39 Fig. S18, p. 40 Fig. S19. SHA-256 `b4cb79060e2f9394ca8cf1fa67cdab2e664d3ff52ee8f78349358a732c6aefa6`.
+- [Movie S2 at 16.5 s: hind leg](/home/jianwei/freeCAD_projects/flexor_visual_reference_pack/references/visual/movie_s2_16_5s_hind_leg.jpg), including labeled knee servo, hip servo, winding wheel, cable, tension spring and compression spring.
+- [Movie S2 at 26.5 s: foreleg](/home/jianwei/freeCAD_projects/flexor_visual_reference_pack/references/visual/movie_s2_26_5s_fore_leg.jpg), including labeled shoulder servo and both springs. These are perspective renderings, not dimensioned manufacturing drawings.
+
+Original PDF pages were rendered and visually inspected. The bundled `pdftoppm` failed its GLIBC dependency; `/usr/bin/pdftoppm` rendered the source pages successfully. PDF text was also extracted to identify equation labels. Both hashes match the repository reference registry.
+
+## Recovered attachment graph
+
+Use S19A names rather than arbitrary percentages along segment centerlines. Its visible graph is:
+
+| Element | Concrete visible endpoints | Body ownership for reconstruction | Confidence/limit |
+|---|---|---|---|
+| Main proximal segment | Hip axis `Oh` to knee axis `Ok` | Proximal thigh/horn-side assembly | Axes directly labeled in S17B/S19A |
+| Main middle segment | `Ok` to distal ankle carrier at `delta6` | Shank | Directly visible; cable termination is at the distal carrier |
+| Distal segment | Ankle carrier to foot end | Foot/metatarsal | Directly visible in S17B |
+| Tension spring `k1` | `O2` to `O3` | `O2`: proximal/horn-side offset ear near hip. `O3`: short shank lever extending past `Ok` in the opposite direction to the ankle | Endpoint labels directly visible in S19A. Fixing offsets to these bodies is the minimal reconstruction; hidden fastening details need confirmation |
+| Compression spring `k2` | Upper seat near `O1` to lower seat at/adjacent to `delta6` | `O1`: proximal-side offset/rail pivot. Distal seat: ankle carrier | S18/S19 show the spring spanning this diagonal; Movie16.5 shows the guide/seat assembly. Seat offsets and exact coincidence with pivot centers are unknown |
+| Lower return rail | Offset proximal pivot near `O1` to the second ankle-carrier pivot | Separate rigid rail closing the knee/ankle quadrilateral with the main shank | Visible in S17A/B and Movie frames; do not replace with a decorative spring |
+| Active hind cable | `delta3` wheel attachment, via shell `delta4`, hip-center direction change near `delta5`/`Oh`, to distal `delta6` | Wheel; hind shell; hip screw guide; ankle carrier | S19A/B + fabrication text, S pp. 16-17 |
+| Passive hind cable (U only) | `delta1` on torso/frame to `delta2` on distal leg | Fixed frame and moving distal carrier | S18 caption, S36-S37. Not the F active route |
+
+The tension spring is outside the upper knee lever, and compression spring is within the lower rail assembly. The source does not place both springs between two short interior points near the knee. The same physical spring length can therefore affect different moment arms than r01 even if a neutral-length check passes.
+
+The upper attachment needs a specific remaining rigid-body decision: the views show `O2` on the input/horn side, but do not prove that the horn carrying `O2` is rigidly keyed to the `Oh-Ok` thigh. A separate horn `Oh-O2`, thigh `Oh-Ok`, and knee lever `Ok-O3`, joined by the tension spring `O2-O3`, would form a series-elastic proximal path. Then motor angle `u_h` and actual thigh angle `qh` must remain distinct; an independent horn-to-thigh deflection is possible in addition to passive `qk`. This is consistent with the serial-elastic description in P p. 4, but a static rendering cannot certify the hidden bearing/keying. Conversely, if the horn and thigh are proven rigidly keyed, `u_h=qh+offset` and only one passive knee/elbow remains after closing the ankle loop. Do not assume that keying from the phrase directly connected. The visible compression guide supplies spring sliding travel but does not by itself establish another independent linkage coordinate when its seats are fixed to known bodies. Neither spring deflection is an extra coordinate if it is already fixed by the retained body coordinates.
+
+## Fore versus hind graph and passive coordinates
+
+- Fore: active proximal shoulder coordinate; passive elbow buffering, explicitly stated in P p. 4. S17A and Movie26.5 show the same broad two-rail, spring-loaded framework as the hind leg. S pp. 3-4 explicitly says the forelimbs retain the structural framework with changed linkage proportions. There is no visual or textual support here for deleting the fore return rail and holding a freely independent ankle at a prescribed fixed angle. A coupled fore distal coordinate is the better reconstruction candidate, with its own attachment offsets and closure; exact `kappa` is not proven by a still.
+- Hind F: active hip coordinate plus a common knee-wheel command. Each knee remains a passive elastic/load-dependent coordinate when cable stretch or slack is allowed. The distal ankle is dependent on the rigid coupling loop. Do not force equal left/right loaded knee angles.
+- Hind U: the frame-to-leg passive cable adds a unilateral geometric constraint; S37's hip-to-knee relation applies only on its declared taut branch. Hind P has no knee cable actuation.
+- A candidate ideal uncrossed parallelogram can enforce `alpha3 = alpha1 + kappa`, hence `qa = kappa-qk`. Choosing `kappa=0` is a reconstruction assumption requiring body-frame mapping and CAD pivot checks. Current mathematical closure tests validate that selected idealization, not the source's hidden assembly details.
+- Proven necessary passive coordinates for the compliant reconstruction: left/right fore elbows and left/right hind knees. Also retain a potential horn-to-thigh coordinate for each leg until the `Oh-O2` horn / `Oh-Ok` thigh attachment is resolved. A rigidly keyed candidate has four passive knee/elbow coordinates; a separate series-elastic horn candidate has four additional proximal deflections. These are conditional counts alongside six nominal commands, not a source-certified full mobility audit. Resolve them by tracing rigid parts and bearings, not by counting visible springs.
+
+## Dimensions: what the source establishes
+
+P p. 4 establishes a 90 mm **sum of hind segment lengths**, 60 mm standing height, and a biological metatarsal/femur ratio of 1.07 incorporated into the design. It does not supply three individual manufactured center distances. S32 uses three lengths, but S34 drops the distal term and S35 reintroduces `a1+a3`; those equations cannot establish a manufactured length split. S16's annotated hip-to-foot dimensions are reaches, not the segment sum.
+
+The r01 split `29/30/31 mm` sums to 90 mm and has `31/29 = 1.06897`, approximately the stated ratio. It is therefore a coherent **DESIGN_ASSUMPTION**, not three individually reported dimensions. Reusing that exact split on the forelegs has no recovered source support: the supplement says fore proportions change. None of the inspected perspective images supports a defensible metric split without calibration, frame matching and uncertainty. No pixel-derived millimetre values were introduced in this audit. Keep separate `fore_a1/a2/a3` and `hind_a1/a2/a3`; provisional selected values must retain provenance and should be judged against matched-view morphology and closure.
+
+Spring rate, free length, initial tension, stroke, seat offsets and wire dimensions remain unspecified by these figures. Source wheel OD is 13 mm; it does not establish the pitch radius. S36 gives 31 mm for the U passive cable. S38 gives 317 mm for the symmetric F bilateral total, not each branch and not a mandatory length for modified geometry.
+
+## Wheel axis and bilateral route
+
+S19B presents both hind legs and the winding wheel face together; the wheel face spans the bilateral width/vertical plane. Movie16.5 confirms a wheel on the end-facing knee-servo arrangement. Mapping that geometry to project axes gives a wheel axis approximately along the **local hind-torso longitudinal X**, rather than the transverse hip axes Y. This is a frame inference from two views, not a printed signed-axis datum. The mounting sign and exact axis offset remain assumptions.
+
+Per branch the ordered path is wheel attachment/contact `delta3 -> shell bearing/groove delta4 -> hip-center smooth screw direction change delta5/Oh -> distal leg termination delta6`. S19's labeled `delta5` is drawn on the shell-side horizontal run, while its side view routes through `Oh`; reconstruct finite screw/bearing radii instead of treating all labels as coincident dimensioned pivots. The two direction changes must occur in the appropriate, generally different 3D planes. S pp. 16-17 specifically describes the hip-center smooth screw and the shell groove with bolt-retained bearing.
+
+S19 and S38 establish one motor and bilateral routing. They do **not** establish locked independent branches versus a freely redistributing continuous cable. r01's separately secured, no-slip branches can remain a declared prototype choice until terminations are resolved. Source S40/S41 distinguishes moving-hole/chord take-up from later wrap contact. A fixed `radius*wheel_angle` law across all wheel angles is an idealized drum redesign, not a validated reconstruction of the source hole/wrap transition.
+
+## Concrete r01 problems and bounded corrections
+
+Read-only assessment of `src/robot_geometry.py`, with relevant integration calls inspected in `src/build_robot.py` and `src/cad_common.py`:
+
+1. `leg_geometry` uses a common three-length split for fore and hind, supplies a fixed independent fore ankle, and only the hind CAD gets the extra rail. Introduce an explicit leg-type input with separate lengths, four-bar pivot offsets, branch seed and distal orientation convention. Solve fore and hind loops from their actual rigid pivot graph. Keep the generic full three-segment FK utility for checking results, rather than using it as evidence that the fore loop is absent.
+2. Spring anchors `0.65*HK`, `K+0.40*KA`, `0.80*HK`, `K+0.35*KA` erase the named source lever/seat graph. Return `O1/O2/O3` and the two ankle-carrier pivots, with body-local offsets and owning body identifiers. Attach extension `O2-O3` and compression `O1-distal_seat`; preserve adjustable seat offsets and physical guide travel. Recompute moment arms and usable spring ranges before retaining r01 free-length choices.
+3. `cable_anchor = K+0.30*KA` terminates 21 mm from the ankle in r01. Move the source-style termination to a declared ankle-carrier offset near `delta6`. This changes cable length derivatives and knee torque substantially; old route/force results must be invalidated for the corrected geometry.
+4. The wheel is currently built through `hardware_place`, whose local normal is transverse `-Y`. Its body/axis should use an explicit 3D wheel frame approximately longitudinal to the hind torso. The motor placement must use the same frame.
+5. There is an internal r01 wheel/cable mismatch independent of source fidelity: CAD wheel core is centered at `y=19`, with flanges at `y=15,23`, while `tendon_geometry` starts branch contacts at `y=+/-2.5` and at `z=wheel_z+pitch_radius`. These contacts are not on the modeled groove planes. Derive wheel contacts from the actual axle frame, groove offsets and wheel state; verify centerline distance to the groove circle and tangency to the outgoing branch. Do not attach an arbitrary straight line to a wheel envelope.
+6. The hard-coded wheel/guide/mount offsets and lateral cable plane `side*82` are assumptions; they need torso-local 3D attachment frames applied once. Keep the shell bearing and hip screw as named, finite-radius guides. Tangent continuity, wrap sense and routing clearances must be checked after replacing the endpoints.
+7. `elastic_geometry` computes independent branch availability using neutral path plus 1 mm slack and constant-radius take-up. Preserve that only as an explicitly selected secured-branch topology and ideal drum law. Derive installed cable lengths and spring preload from the corrected anchors, not the old neutral fixture.
+
+Suggested bounded return interface for integration: distinguish `motor_proximal_angle` from actual `thigh_angle` until their rigid attachment is established. `leg_geometry(..., leg_type, thigh_angle, passive_knee)` returns named joint centers, `O1/O2/O3`, ankle-carrier pivots, foot contact, body attachment frames, loop residuals and independent/dependent coordinate names. `tendon_geometry(..., wheel_state)` consumes a 3D wheel frame and ordered named guides/termination, returning tangent contacts, arc planes/angles, path length and selected branch/winding state. `elastic_geometry` consumes those exact lengths and reports states/travel; it must not assign an equilibrium pose.
+
+## Checks performed and next acceptance checks
+
+Executed r01 geometry read-only at neutral: both fore and hind extension length `15.7169494496 mm`, compression length `11.9954157910 mm`, and cable termination distance from ankle `21 mm`. The identical spring lengths confirm shared geometry, not correct source topology. These numbers are diagnostic baseline values, not corrected-design acceptance evidence.
+
+For the corrected implementation check: first establish whether `O2` and the thigh share a rigid body (or retain the separate horn coordinate), then verify rigid parent invariance of every named offset; lower-loop closure and assembly branch; separate fore/hind distal coupling; positive guide radii and tangent orthogonality in the correct planes; wheel-contact/groove agreement; two distinct spring length derivatives and force/energy signs; compression seat guidance/bind margin; extension travel; independently asymmetric cable states under the selected topology; and matched-view topology at neutral and sampled extremes. Finite samples must be reported as samples. Loaded equilibrium, supplier spring capacity, wear and fabrication readiness remain unverified.

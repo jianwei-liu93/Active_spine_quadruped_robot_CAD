@@ -1,0 +1,282 @@
+{
+  "revision": "r02",
+  "scope": "actual native neutral spine",
+  "status": "FAIL",
+  "raw_overlaps": [
+    {
+      "a": "MotorCradle_1",
+      "b": "Backbone_1_2",
+      "intersection_mm3": 29.816986025473675
+    },
+    {
+      "a": "MotorCradle1",
+      "b": "Backbone1_2",
+      "intersection_mm3": 29.816986025473653
+    },
+    {
+      "a": "MotorCradle_1",
+      "b": "Backbone_1_0",
+      "intersection_mm3": 25.840728497586344
+    },
+    {
+      "a": "MotorCradle1",
+      "b": "Backbone1_0",
+      "intersection_mm3": 25.840728497586316
+    },
+    {
+      "a": "Backbone_1_0",
+      "b": "Backbone_1_3",
+      "intersection_mm3": 14.157168535880153
+    },
+    {
+      "a": "Backbone1_0",
+      "b": "Backbone1_3",
+      "intersection_mm3": 14.157168535880153
+    },
+    {
+      "a": "Backbone_1_1",
+      "b": "Backbone_1_2",
+      "intersection_mm3": 14.157168535880103
+    },
+    {
+      "a": "Backbone1_1",
+      "b": "Backbone1_2",
+      "intersection_mm3": 14.157168535880103
+    },
+    {
+      "a": "Backbone1_0",
+      "b": "Backbone1_1",
+      "intersection_mm3": 12.136712352268693
+    },
+    {
+      "a": "Backbone_1_0",
+      "b": "Backbone_1_1",
+      "intersection_mm3": 12.136712352268686
+    },
+    {
+      "a": "Backbone1_2",
+      "b": "Backbone1_3",
+      "intersection_mm3": 12.136712352268681
+    },
+    {
+      "a": "Backbone_1_2",
+      "b": "Backbone_1_3",
+      "intersection_mm3": 12.136712352268674
+    },
+    {
+      "a": "Backbone_1_0",
+      "b": "HornAdapter_1",
+      "intersection_mm3": 11.842823150639887
+    },
+    {
+      "a": "Backbone1_0",
+      "b": "HornAdapter1",
+      "intersection_mm3": 11.842823150639887
+    },
+    {
+      "a": "Backbone_1_2",
+      "b": "HornAdapter_1",
+      "intersection_mm3": 11.842823150639859
+    },
+    {
+      "a": "Backbone1_2",
+      "b": "HornAdapter1",
+      "intersection_mm3": 11.842823150639859
+    },
+    {
+      "a": "DirectCrank_1",
+      "b": "G_1_Bearing0",
+      "intersection_mm3": 11.118881799217672
+    },
+    {
+      "a": "DirectCrank1",
+      "b": "G1_Bearing0",
+      "intersection_mm3": 11.11888179921767
+    },
+    {
+      "a": "GuideFrame1__1",
+      "b": "GuideLiner1__1_0_65",
+      "intersection_mm3": 6.114822820780979
+    },
+    {
+      "a": "GuideFrame1_1",
+      "b": "GuideLiner1_1_0_65",
+      "intersection_mm3": 6.114822820780979
+    },
+    {
+      "a": "GuideFrame2__1",
+      "b": "GuideLiner2__1_0_65",
+      "intersection_mm3": 6.114822820780976
+    },
+    {
+      "a": "GuideFrame2_1",
+      "b": "GuideLiner2_1_0_65",
+      "intersection_mm3": 6.114822820780976
+    },
+    {
+      "a": "GuideFrame2__1",
+      "b": "GuideLiner2__1__0_65",
+      "intersection_mm3": 6.114822820780645
+    },
+    {
+      "a": "GuideFrame2_1",
+      "b": "GuideLiner2_1__0_65",
+      "intersection_mm3": 6.114822820780645
+    },
+    {
+      "a": "GuideFrame1__1",
+      "b": "GuideLiner1__1__0_65",
+      "intersection_mm3": 6.114822820780643
+    },
+    {
+      "a": "GuideFrame1_1",
+      "b": "GuideLiner1_1__0_65",
+      "intersection_mm3": 6.114822820780643
+    },
+    {
+      "a": "Link2_L6_1",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 3.1216843072469196
+    },
+    {
+      "a": "Link2_L6__1",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 3.1216843072469094
+    },
+    {
+      "a": "Link1_L4__1",
+      "b": "GuideSupport1__1_1",
+      "intersection_mm3": 2.48721523398593
+    },
+    {
+      "a": "Link1_L4_1",
+      "b": "GuideSupport1_1_1",
+      "intersection_mm3": 2.4872152339859297
+    },
+    {
+      "a": "D2_1_Bearing1",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 2.090524430798548
+    },
+    {
+      "a": "D2_1_Bearing0",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 2.0905244307985478
+    },
+    {
+      "a": "D2__1_Bearing0",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 2.090524430798405
+    },
+    {
+      "a": "D2__1_Bearing1",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 2.0905244307984043
+    },
+    {
+      "a": "D2_1_Pin",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 1.6145785767170788
+    },
+    {
+      "a": "D2__1_Pin",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 1.6145785767170733
+    },
+    {
+      "a": "Link2_L5__1",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 1.352133346432466
+    },
+    {
+      "a": "Link2_L5_1",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 1.3521333464324186
+    },
+    {
+      "a": "Backbone_1_2",
+      "b": "DirectCrank_1",
+      "intersection_mm3": 1.3227404680046935
+    },
+    {
+      "a": "Backbone1_2",
+      "b": "DirectCrank1",
+      "intersection_mm3": 1.3227404680046697
+    },
+    {
+      "a": "HornAdapter_1",
+      "b": "G_1_Retainer1",
+      "intersection_mm3": 0.8685916675559023
+    },
+    {
+      "a": "HornAdapter1",
+      "b": "G1_Retainer0",
+      "intersection_mm3": 0.8685916675559023
+    },
+    {
+      "a": "D2_1_Retainer0",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 0.8425745966319439
+    },
+    {
+      "a": "D2_1_Retainer1",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 0.8425745966319436
+    },
+    {
+      "a": "D2__1_Retainer0",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 0.8425745966318499
+    },
+    {
+      "a": "D2__1_Retainer1",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 0.8425745966318497
+    },
+    {
+      "a": "D2_1_Spacer0",
+      "b": "GuideSupport2_1_1",
+      "intersection_mm3": 0.5245590654424221
+    },
+    {
+      "a": "D2__1_Spacer0",
+      "b": "GuideSupport2__1_1",
+      "intersection_mm3": 0.524559065442333
+    },
+    {
+      "a": "Backbone_1_2",
+      "b": "G_1_Retainer1",
+      "intersection_mm3": 0.4943445147795298
+    },
+    {
+      "a": "Backbone1_2",
+      "b": "G1_Retainer0",
+      "intersection_mm3": 0.4943445147795298
+    },
+    {
+      "a": "Backbone_1_0",
+      "b": "DirectCrank_1",
+      "intersection_mm3": 0.30750199681924434
+    },
+    {
+      "a": "Backbone1_0",
+      "b": "DirectCrank1",
+      "intersection_mm3": 0.3075019968192396
+    },
+    {
+      "a": "Backbone_1_2",
+      "b": "G_1_Bearing0",
+      "intersection_mm3": 0.2875094545422222
+    },
+    {
+      "a": "Backbone1_2",
+      "b": "G1_Bearing0",
+      "intersection_mm3": 0.28750945454221677
+    }
+  ],
+  "instances": 210,
+  "narrowphase": 344,
+  "volume_tolerance_mm3": 1e-05,
+  "exceptions": "None applied",
+  "elapsed_seconds": 1.8618180751800537
+}
