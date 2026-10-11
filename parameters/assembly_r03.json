@@ -1,0 +1,84 @@
+{
+  "revision": "r03",
+  "spine_parameters": "candidate_r02.json",
+  "units": {
+    "length": "mm",
+    "angle": "rad"
+  },
+  "provenance": "DESIGN_ASSUMPTION except explicitly identified purchased envelopes and paper wheel OD",
+  "parameters": {
+    "thigh_y_mm": 44.4,
+    "shank_y_mm": 46.2,
+    "foot_y_mm": 48.0,
+    "return_rail_y_mm": 49.8,
+    "spring_y_mm": 53.2,
+    "motor_horn_y_mm": 51.4,
+    "torso_inner_y_mm": 15.2,
+    "torso_outer_y_mm": 42.6,
+    "torso_plate_thickness_mm": 1.6,
+    "wheel_od_mm": 13.0,
+    "wheel_pitch_radius_mm": 5.5,
+    "wheel_axle_x_local_mm": -27,
+    "wheel_axle_z_local_mm": 0,
+    "cable_diameter_mm": 0.3,
+    "shell_guide_radius_mm": 2.5,
+    "hip_offsets_local_mm": {
+      "hind": -27,
+      "fore": 24
+    },
+    "extension_spring_y_mm": 54.4,
+    "hip_case_center_y_mm": 29,
+    "hip_case_outer_face_y_mm": 42
+  },
+  "source_facts": {
+    "wheel_od_mm": "PAPER_REPORTED; SI fabrication",
+    "servo_envelope_mm": "MANUFACTURER_VERIFIED in supplier report; mounting/output datums unknown"
+  },
+  "states": {
+    "commands": [
+      "spine_phase",
+      "fore_left_motor",
+      "fore_right_motor",
+      "hind_left_motor",
+      "hind_right_motor",
+      "common_hind_wheel"
+    ],
+    "passive_candidate": [
+      "four knees/elbows"
+    ],
+    "dependent": "ankles from uncrossed parallelogram; qa=-qk",
+    "wheel_interval_rad": [
+      0,
+      1.5707963267948966
+    ]
+  },
+  "limits": "Reconstruction candidate. Conservative selected spacing differs from source exterior dimensions; unreported dimensions explicitly assumed. Motor output/spline, manufacturer mounting, catalog spring selection and loaded equilibrium unresolved. Cable and seventh-motor native integration pending at this checkpoint.",
+  "leg_geometry": {
+    "fore_lengths_mm": [
+      22,
+      24,
+      34
+    ],
+    "hind_lengths_mm": [
+      29,
+      30,
+      31
+    ],
+    "fore_neutral_angles_deg": [
+      -50,
+      -90
+    ],
+    "hind_neutral_angles_deg": [
+      -40,
+      -100
+    ],
+    "fixed_horn_bend_deg": {
+      "fore": 60,
+      "hind": 60
+    },
+    "mounting": "neutral torso angles chosen zero; absolute paper datum unknown",
+    "return_offsets": "O1=K-6e(qh), A1=A-6e(qh), O3=K-6e(qh+qk)",
+    "direct_hip_drive": true,
+    "orientation_evidence": "Latest user Figure E / Movie S2: both chains share forward/down thigh and toe, rearward/down shank. Earlier opposing-direction audit superseded."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "tool": "/snap/bin/freecad.cmd isolated subprocess",
+  "freecad_version": [
+    "27",
+    "1",
+    "0",
+    "49159 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git main",
+    "2026/10/10 06:02:14",
+    "main",
+    "e5fabddebb0dc54ecf324cedddd26e053e2a8488"
+  ],
+  "parameters_mm": {
+    "wire_diameter": 0.5,
+    "coil_outer_diameter": 4,
+    "eye_inner_diameter": 2,
+    "eye_axis": "Y",
+    "eye_centres": "(0,0,0), (0,0,length)"
+  },
+  "checks": [
+    {
+      "name": "hind",
+      "length": 21.85579,
+      "free_length": 18,
+      "is_valid": true,
+      "solid_count": 1,
+      "volume_mm3": 64.777698152216,
+      "tessellated_bounds_mm": [
+        -1.999991523087387,
+        -2.000002267017089,
+        -1.4999966148784631,
+        2.9999823222353013,
+        1.999962004252479,
+        23.35579
+      ],
+      "bounding_box_mm": [
+        -2.9929862548195865,
+        -2.9930269278143613,
+        -1.623588300438591,
+        3.0,
+        2.9922484661461106,
+        23.47937830043859
+      ]
+    },
+    {
+      "name": "fore",
+      "length": 16.15549,
+      "free_length": 13,
+      "is_valid": true,
+      "solid_count": 1,
+      "volume_mm3": 43.159163723811915,
+      "tessellated_bounds_mm": [
+        -1.9999925857885765,
+        -2.000002288993969,
+        -1.4999966148784631,
+        2.9999823222353017,
+        1.999961382606893,
+        17.65549
+      ],
+      "bounding_box_mm": [
+        -3.968280246592602,
+        -3.968252916963767,
+        -1.623588300438591,
+        3.9682529169927157,
+        3.9682802465333586,
+        17.77907830043859
+      ]
+    }
+  ],
+  "limitations": [
+    "Qualified only for listed installed extension states.",
+    "Outward hook envelope reaches x=3 mm; assembly clearance requires lead verification.",
+    "Hook bends are overlapping round-wire cylinders and spheres; no claim of production bend radii or physical spring validation.",
+    "Free-length touching coils/compression rejected."
+  ],
+  "passed": true
+}

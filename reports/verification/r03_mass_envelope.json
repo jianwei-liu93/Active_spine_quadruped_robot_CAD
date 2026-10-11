@@ -1,0 +1,56 @@
+{
+  "actual_assembled_bbox_mm": {
+    "x_mm": 154.23759407181774,
+    "xmax": 78.23759407181774,
+    "xmin": -76.0,
+    "y_mm": 112.80000744716057,
+    "ymax": 56.40000302108543,
+    "ymin": -56.40000442607514,
+    "z_mm": 94.12051291461778,
+    "zmax": 32.795121467478054,
+    "zmin": -61.32539144713972
+  },
+  "actual_minus_reference_mm": {
+    "x_delta_mm": 44.23759407181774,
+    "y_delta_mm": 13.800007447160567,
+    "z_delta_mm": 10.120512914617777
+  },
+  "all_geometry_mass_estimate_g": 67.31403248980084,
+  "custom_geometry_mass_estimate_g": 24.197801230881765,
+  "density_assumptions_kg_m3": {
+    "aluminum": 2700.0,
+    "cable": 970.0,
+    "copper": 8960.0,
+    "pa12": 1010.0,
+    "rubber": 1100.0,
+    "spring": 7850.0,
+    "steel": 7850.0
+  },
+  "instance_count": 439,
+  "known_mass_sum_g": 195.31403248980084,
+  "known_purchased_mass_g": 128.0,
+  "mass_limitations": [
+    "Geometry-volume masses are estimates using material-class densities, not weighed masses or validated grades.",
+    "PurchasedMass_g is included as nominal purchased mass and suppresses any shape-volume estimate for that instance.",
+    "Controller mass remains unknown unless the linked definition provides PurchasedMass_g; it is never filled with zero or an old parameter assumption.",
+    "Unknown-mass instances are excluded from known_mass_sum_g.",
+    "The 338 g project target is not treated as achieved or as a measured result."
+  ],
+  "method": "App::Link instances; PurchasedMass_g takes precedence; otherwise instance Shape.Volume times explicit material density. No double counting.",
+  "other_geometry_mass_estimate_g": 43.11623125891907,
+  "part_number_count": 73,
+  "reference_envelope_mm": {
+    "X": 110.0,
+    "Y": 99.0,
+    "Z": 84.0
+  },
+  "revision": "r03",
+  "status": "COMPUTED_FROM_DOCUMENT",
+  "units": {
+    "length": "mm",
+    "mass": "g",
+    "volume": "mm^3"
+  },
+  "unknown_mass_instance_count": 0,
+  "unknown_mass_instances": []
+}

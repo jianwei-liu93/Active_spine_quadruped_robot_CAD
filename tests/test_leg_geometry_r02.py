@@ -17,25 +17,25 @@ class CorrectedLegGeometryTests(unittest.TestCase):
 
     def test_hand_checked_hind_right_angle_pose_and_named_spring_seats(self):
         g=leg_geometry('hind',0,math.pi/2,0)
-        expected={'H':(-13,0),'K':(16,0),'A':(16,30),'F':(47,30),
-                  'O1':(22,0),'A1':(22,30),'O2':(-4,0),'O3':(16,-6)}
+        expected={'H':(-27,0),'K':(2,0),'A':(2,30),'F':(33,30),
+                  'O1':(-4,0),'A1':(-4,30),'O2':(-22.5,4.5*math.sqrt(3)),'O3':(2,-6)}
         for name,point in expected.items():
             self.assertIsInstance(g[name],tuple)
             for got,want in zip(g[name],point): self.assertAlmostEqual(got,want)
         self.assertEqual(g['cable_anchor'],g['A'])
-        self.assertAlmostEqual(g['spring_lengths_mm']['extension'],math.sqrt(436))
+        self.assertAlmostEqual(g['spring_lengths_mm']['extension'],math.hypot(24.5,4.5*math.sqrt(3)+6))
         self.assertAlmostEqual(g['spring_lengths_mm']['compression'],math.sqrt(936))
         self.assertEqual(g['spring_attachments']['compression'],('O1','A'))
         self.assertEqual(g['spring_attachments']['extension'],('O2','O3'))
 
     def test_fore_has_its_own_lengths_and_closed_return_rail(self):
         g=leg_geometry('fore',0,math.pi/2,0)
-        for name,want in {'H':(13,0),'K':(37,0),'A':(37,24),'F':(67,24),'O1':(43,0),'A1':(43,24)}.items():
+        for name,want in {'H':(24,0),'K':(46,0),'A':(46,24),'F':(80,24),'O1':(40,0),'A1':(40,24)}.items():
             for got,target in zip(g[name],want): self.assertAlmostEqual(got,target)
         self.assertAlmostEqual(math.dist(g['O1'],g['A1']),24)
 
     def test_physical_pose_grids_preserve_all_rigid_lengths_and_loop(self):
-        for kind,neutral,lengths in (('hind',(-40,-100),(29,30,31)),('fore',(-130,90),(24,24,30))):
+        for kind,neutral,lengths in (('hind',(-40,-100),(29,30,31)),('fore',(-50,-90),(22,24,34))):
             for dh in (-.25,0,.25):
                 for dk in (-.30,0,.30):
                     qh=math.radians(neutral[0])+dh
@@ -53,16 +53,16 @@ class CorrectedLegGeometryTests(unittest.TestCase):
                     self.assertAlmostEqual(g['distal_angle_rad'],qh)
                     self.assertLess(max(g['loop_residuals_mm'].values()),1e-12)
 
-    def test_motor_angle_only_moves_motor_owned_attachment(self):
-        a=leg_geometry('hind',-.7,-1.6,-.7)
-        b=leg_geometry('hind',-.7,-1.6,.3)
-        for key in ('H','K','A','F','O1','A1','O3','cable_anchor'):
-            self.assertEqual(a[key],b[key])
-        self.assertNotEqual(a['O2'],b['O2'])
-        self.assertEqual(a['spring_lengths_mm']['compression'],b['spring_lengths_mm']['compression'])
-        self.assertNotEqual(a['spring_lengths_mm']['extension'],b['spring_lengths_mm']['extension'])
-        self.assertEqual(b['thigh_angle_rad'],-.7)
-        self.assertEqual(b['motor_proximal_angle_rad'],.3)
+    def test_motor_angle_is_rigidly_coupled_with_fixed_horn_bend(self):
+        for kind,delta in (('hind',math.pi/3),('fore',math.pi/3)):
+            for qh in (-2.4,-.7,.2):
+                a=leg_geometry(kind,qh,1.4,qh)
+                self.assertEqual(a['motor_proximal_angle_rad'],qh)
+                dx,dz=(a['O2'][i]-a['H'][i] for i in (0,1))
+                self.assertAlmostEqual(dx,9*math.cos(qh+delta))
+                self.assertAlmostEqual(dz,9*math.sin(qh+delta))
+                self.assertAlmostEqual(a['body_frames']['motor_horn']['angle_rad'],qh+delta)
+                with self.assertRaises(ValueError): leg_geometry(kind,qh,1.4,qh+.1)
 
     def test_asymmetric_passive_knees_remain_independent(self):
         left=leg_geometry('hind',-.7,-1.4,-.7)
@@ -74,9 +74,9 @@ class CorrectedLegGeometryTests(unittest.TestCase):
         self.assertNotEqual(left['spring_lengths_mm']['compression'],right['spring_lengths_mm']['compression'])
 
     def test_attachment_offsets_are_invariant_in_their_owning_body(self):
-        fixtures={'O1':('thigh',(35,0)),'A1':('foot',(6,0)),
+        fixtures={'O1':('thigh',(23,0)),'A1':('foot',(-6,0)),
                   'O2':('motor_horn',(9,0)),'O3':('shank',(-6,0))}
-        for qh,qk,motor in ((-.7,-1.6,.3),(-1.0,-1.3,-.9),(.2,.5,-.1)):
+        for qh,qk,motor in ((-.7,-1.6,-.7),(-1.0,-1.3,-1.0),(.2,.5,.2)):
             g=leg_geometry('hind',qh,qk,motor)
             for name,(body,want) in fixtures.items():
                 self.assertEqual(g['owning_body'][name],body)
@@ -87,7 +87,7 @@ class CorrectedLegGeometryTests(unittest.TestCase):
                 for got,target in zip(local,want): self.assertAlmostEqual(got,target)
 
     def test_defaults_and_invalid_inputs(self):
-        for kind,qh,qk in (('hind',-40,-100),('fore',-130,90)):
+        for kind,qh,qk in (('hind',-40,-100),('fore',-50,-90)):
             g=leg_geometry(kind)
             self.assertAlmostEqual(g['thigh_angle_rad'],math.radians(qh))
             self.assertAlmostEqual(g['passive_knee_rad'],math.radians(qk))
@@ -95,5 +95,17 @@ class CorrectedLegGeometryTests(unittest.TestCase):
         with self.assertRaises(ValueError): leg_geometry('unknown')
         for args in ((float('nan'),0,0),(0,float('inf'),0),(0,0,float('nan'))):
             with self.assertRaises(ValueError): leg_geometry('fore',*args)
+
+
+class AssemblyDirectionTests(unittest.TestCase):
+    def test_both_source_display_chains_share_direction(self):
+        # Source Figure E traces both chains: H->K +X/down, K->A -X/down,
+        # A->F +X/down. Assert signs independently of selected angle magnitudes.
+        for kind in ('fore','hind'):
+            g=leg_geometry(kind)
+            for a,b,sign in (('H','K',1),('K','A',-1),('A','F',1)):
+                self.assertGreater(sign*(g[b][0]-g[a][0]),0)
+                self.assertLess(g[b][1]-g[a][1],0)
+        self.assertNotEqual(leg_geometry('fore')['lengths_mm'],leg_geometry('hind')['lengths_mm'])
 
 if __name__=='__main__': unittest.main()

@@ -11,3 +11,7 @@ reports/.cad-session.lock
 *.FCBak
 
 reports/verification/r02_sweep_progress.json
+
+reports/tmp/
+reports/verification/r03_sweep_progress.json
+reports/verification/*_progress.json

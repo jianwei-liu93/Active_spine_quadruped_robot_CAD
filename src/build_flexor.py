@@ -63,7 +63,7 @@ class FlexorBuilder(Builder):
                 yy=(a+z)/2;src=self.ring('SPACER_2mm_L'+str(round(gap,3)),3,2.05,gap)
                 self.add(src,name+'_Spacer'+str(j),cc.hardware_place(P,yy,gap),'SpineHardware',{'kind':'point','point':key,'y':yy,'length':gap} if key else None)
 
-def build(root=ROOT):
+def build(root=ROOT,save=True):
     root=Path(root);p=load_parameters(root/'parameters/candidate_r02.json')
     if 'FlexorR02' in App.listDocuments():raise RuntimeError('Save/close FlexorR02 before rebuilding')
     doc=App.newDocument('FlexorR02');b=FlexorBuilder(doc,p);s=spine(p['neutral_phase_rad'],p)
@@ -134,7 +134,8 @@ def build(root=ROOT):
     retain_flexor.apply(b)
     import slider_plate_flexor
     slider_plate_flexor.apply(b)
-    finish(b,root);return b
+    if save:finish(b,root)
+    return b
 
 def pose(doc,theta,p=None):
     p=p or load_parameters(ROOT/'parameters/candidate_r02.json');s=spine(theta,p)

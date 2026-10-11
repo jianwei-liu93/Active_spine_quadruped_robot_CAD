@@ -1,5 +1,7 @@
 # Active spine quadruped robot CAD
 
+**Current whole-robot work:** [r03 native torso/leg candidate](cad/flexor_r03_robot.FCStd), [corrected side view](reports/views/r03_robot_side.png), and [execution ledger](reports/progress.md). Both leg chains share the source display direction; fore/hind modules retain different proportions and motor layouts. Seventh-motor/cable and final package integration remain in progress.
+
 A FreeCAD project for a manufacturable, editable active-spine quadruped inspired by **FLEXOR-F** in Wang et al., *Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*, Science Advances 12, eaed5603 (2026).
 
 **Current status: REFERENCE_FIDELITY_RECOVERY.** Installed FreeCAD MCP execution and an exploratory editable whole robot exist. The exploratory r01 model is superseded because its spine packaging and output geometry diverge from the source. Recovery is on `fix/flexor-reference-fidelity`; see [the morphology audit](docs/10_reference_morphology_and_recovery.md). Numerical closure is separate from physical clearance and fabrication readiness.
