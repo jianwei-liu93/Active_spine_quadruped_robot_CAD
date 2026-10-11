@@ -51,8 +51,14 @@ def apply(b):
         xs=[spine(j*math.tau/720,p)[f'C{i}'][0] for j in range(721)];xc=(min(xs)+max(xs))/2;zc=sign*p['guide_z_mm']
         for dx in [1.5*sign,4.5*sign]:cc.circle(ps,xc+dx,sign*2.5,1.4)
         f=pill_face((xc-6.5,zc),(xc+6.5,zc),8.2)
-        f=f.fuse(rect(xc if sign==1 else xc-6,1.1 if sign==1 else -5.1,6,4)).removeSplitter()
-        f=f.cut(pill_face((xc-6.5,zc),(xc+6.5,zc),5.2)).removeSplitter();guidefaces.append(f)
+        # Fig 1A / Movie S2: the upper-left slot shares a tall outer ear
+        # with fixed A2; the lower-right slot shares its ear with A1.
+        # This is a structural journal/slot plate, not a capsule on posts.
+        ax,az=s['A2' if i==1 else 'A1'];r=p['guide_pivot_radius_mm']
+        pts=[V(xc-6.5,zc,0),V(xc+6.5,zc,0),V(ax+r,az,0),V(ax-r,az,0)]
+        web=Part.Face(Part.makePolygon(pts+[pts[0]]))
+        f=f.fuse(web).fuse(disk(ax,az,r)).removeSplitter()
+        f=f.cut(pill_face((xc-6.5,zc),(xc+6.5,zc),5.2)).cut(disk(ax,az,2.025)).removeSplitter();guidefaces.append(f)
     posts=body.newObject('PartDesign::Pad','GuidePostsPad');posts.Profile=ps;posts.Length=11;posts.Reversed=True;doc.recompute();ps.Visibility=False;pad.Visibility=False
     gf=guidefaces[0].fuse(guidefaces[1]);gs=sketch_face(doc,body,'GuideBossProfiles',gf,-11)
     boss=body.newObject('PartDesign::Pad','GuideBossPad');boss.Profile=gs;boss.Length=1.6;boss.Reversed=True;doc.recompute();gs.Visibility=False;posts.Visibility=False

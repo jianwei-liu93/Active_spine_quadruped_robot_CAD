@@ -35,7 +35,7 @@ Missing dimensions were synthesized without first locating the original PDFs/vid
 
 1. Preserve r01 native/source evidence in Git and checkpoint files.
 2. Keep the intersection solver and independently derived Jacobian. Introduce a separate r02 parameter file; do not relabel estimated dimensions as published values.
-3. Correct spine first: direct horns, ±h guides, short output links, native windowed rods, compact open frame and real axial stacks.
+3. Correct spine first: direct horns, ±h guides, short output links, native windowed rods, compact open frame and real axial stacks. Guide plates must include the tall fixed A2/C1 and A1/C2 journal ears, not isolated capsule bosses.
 4. Check full-cycle closure, branch continuity, actual native placements and sampled interference. Obtain a bounded independent mechanism review before dependent whole-body reconstruction.
 5. Rebuild torso/legs from S17–S20 and movie details; maintain seven motors/six commands and explicit passive elastic states.
 6. Compare side/front/top/isometric views and extreme spine poses. Classify each departure as SOURCE_MATCH, ENGINEERING_ADAPTATION or UNRESOLVED.

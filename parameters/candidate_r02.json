@@ -734,6 +734,76 @@
       "provenance": "DESIGN_ASSUMPTION",
       "source": "MovieS2 qualitative case tilt; 30deg is provisional packaging choice for B-shaft clearance",
       "verification_status": "PROVISIONAL"
+    },
+    "guide_pivot_radius_mm": {
+      "value": 4.1,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "Fig1A and MovieS2 tall tapered C1/A2 and C2/A1 fixed guide ears; outline radius estimated, not dimensioned",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_fixed_journal_length_mm": {
+      "value": 15.8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_fixed_journal_center_y_mm": {
+      "value": 33.9,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_slider_journal_length_mm": {
+      "value": 10.2,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_slider_journal_center_y_mm": {
+      "value": 37.7,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_capture_washer_od_mm": {
+      "value": 6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_capture_washer_thickness_mm": {
+      "value": 0.6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_capture_washer_center_y_mm": {
+      "value": 41.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_slider_outer_clip_y_mm": {
+      "value": 42.3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_fixed_outer_clip_y_mm": {
+      "value": 41.3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r02 slider plate reconstruction axial stack; visible source order from Fig1A/MovieS2, numeric stack unreported",
+      "verification_status": "PROVISIONAL"
     }
   },
   "unknown_interfaces": {

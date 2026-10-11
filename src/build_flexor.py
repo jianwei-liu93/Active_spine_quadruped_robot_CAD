@@ -129,6 +129,10 @@ def build(root=ROOT):
     for key,typ,val in [('ParameterRevision','App::PropertyString','r02'),('SpinePhaseRad','App::PropertyFloat',0.0),('MotionMap','App::PropertyString',json.dumps(b.motion)),('Scope','App::PropertyString','Corrected spine only; dependent torso/legs pending review')]:meta.addProperty(typ,key);setattr(meta,key,val)
     import refine_flexor
     refine_flexor.apply(b)
+    import retain_flexor
+    retain_flexor.apply(b)
+    import slider_plate_flexor
+    slider_plate_flexor.apply(b)
     finish(b,root);return b
 
 def pose(doc,theta,p=None):

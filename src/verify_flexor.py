@@ -32,11 +32,11 @@ def view_evidence(doc):
     extrema={}
     for key,fun in [('output1_min',lambda s:s['beta1']),('output1_max',lambda s:-s['beta1']),('neutral',lambda s:abs(s['G'][1]))]:
         j=min(range(1440),key=lambda x:fun(ss[x]));theta=0 if key=='neutral' else j*math.tau/1440
-        bf.pose(doc,theta,p);v=Gui.activeDocument().activeView();v.viewFront();v.fitAll();v.setCamera(__import__('re').sub(r'height [0-9.eE+-]+','height 80',v.getCamera()))
+        bf.pose(doc,theta,p);v=Gui.activeDocument().activeView();v.viewFront();Gui.updateGui();v.fitAll();v.setCamera(__import__('re').sub(r'height [0-9.eE+-]+','height 90',v.getCamera()))
         path=ROOT/f'reports/views/r02_{key}_side.png';v.saveImage(str(path),1500,1000,'White');extrema[key]={'theta_rad':theta,'file':str(path.relative_to(ROOT))}
     bf.pose(doc,0,p)
     for key,method in [('top','viewTop'),('front','viewRight'),('isometric','viewAxonometric'),('opposite_side','viewRear')]:
-        v=Gui.activeDocument().activeView();getattr(v,method)();v.fitAll();v.setCamera(__import__('re').sub(r'height [0-9.eE+-]+','height 100',v.getCamera()));v.saveImage(str(ROOT/f'reports/views/r02_spine_{key}.png'),1500,1000,'White')
+        v=Gui.activeDocument().activeView();getattr(v,method)();Gui.updateGui();v.fitAll();v.setCamera(__import__('re').sub(r'height [0-9.eE+-]+','height 100',v.getCamera()));Gui.updateGui();v.saveImage(str(ROOT/f'reports/views/r02_spine_{key}.png'),1500,1000,'White')
     (ROOT/'reports/verification/r02_view_poses.json').write_text(json.dumps(extrema,indent=2)+'\n');doc.save();return extrema
 
 def snapshot(doc):
@@ -65,6 +65,15 @@ def sweep(data,placements,motion,step_deg=1):
     """Independent shape copies only. No document/GUI mutation; safe async."""
     from cad_common import line_place,hardware_place,plane_placement
     p=load_parameters(ROOT/'parameters/candidate_r02.json');names=list(data);start=time.time();hits={};worst=0;poses=round(360/step_deg)+1;pairtests=0
+    # Planar spine motion preserves every axial Y interval. Precompute that exact rejection.
+    initial_bounds={n:sh.BoundBox for n,(sh,src) in data.items()}
+    neutral=scan_shapes(data,ROOT/'reports/verification/r02_sweep_neutral.json')
+    def rigid_together(a,z):
+        ma,mz=motion.get(a,{}),motion.get(z,{})
+        return ma.get('kind')==mz.get('kind')=='point' and ma['point']==mz['point']
+    # All point hardware at one joint receives the same translation, so their
+    # relative geometry is invariant. Their actual neutral solids were tested.
+    possible_pairs=[(a,z) for k,a in enumerate(names) for z in names[k+1:] if (a in motion or z in motion) and not rigid_together(a,z) and min(initial_bounds[a].YMax,initial_bounds[z].YMax)-max(initial_bounds[a].YMin,initial_bounds[z].YMin)>1e-6]
     # Different instances sharing a source still have independent placements.
     for j in range(poses):
         theta=j*math.tau/(poses-1);s=spine(theta,p);shapes={}
@@ -77,18 +86,15 @@ def sweep(data,placements,motion,step_deg=1):
                 elif k=='axialrot':new=plane_placement(s[m['point']],m['y']+m['length']/2,theta)
             delta=new.multiply(placements[n].inverse());cop=sh.copy();cop.Placement=delta.multiply(sh.Placement);shapes[n]=cop
         bounds={n:sh.BoundBox for n,sh in shapes.items()}
-        for k,a in enumerate(names):
-            ba=bounds[a]
-            for z in names[k+1:]:
-                if a not in motion and z not in motion:continue # fixed/fixed passed raw neutral scan
-                bz=bounds[z];ds=[min(getattr(ba,q+'Max'),getattr(bz,q+'Max'))-max(getattr(ba,q+'Min'),getattr(bz,q+'Min')) for q in ['X','Y','Z']]
-                if min(ds)<=1e-6:continue
-                pairtests+=1;v=shapes[a].common(shapes[z]).Volume
-                if v>1e-5:
-                    key=a+'|'+z;old=hits.get(key)
-                    if old is None or v>old['intersection_mm3']:hits[key]={'a':a,'b':z,'theta_deg':theta*180/math.pi,'intersection_mm3':v}
-                    worst=max(worst,v)
+        for a,z in possible_pairs:
+            ba,bz=bounds[a],bounds[z]
+            if min(ba.XMax,bz.XMax)-max(ba.XMin,bz.XMin)<=1e-6 or min(ba.ZMax,bz.ZMax)-max(ba.ZMin,bz.ZMin)<=1e-6:continue
+            pairtests+=1;v=shapes[a].common(shapes[z]).Volume
+            if v>1e-5:
+                key=a+'|'+z;old=hits.get(key)
+                if old is None or v>old['intersection_mm3']:hits[key]={'a':a,'b':z,'theta_deg':theta*180/math.pi,'intersection_mm3':v}
+                worst=max(worst,v)
         if j%30==0:
             (ROOT/'reports/verification/r02_sweep_progress.json').write_text(json.dumps({'poses_done':j+1,'poses_planned':poses,'pair_violations_so_far':len(hits),'elapsed_seconds':time.time()-start})+'\n')
-    r={'revision':'r02','scope':'spine only; shape transforms from actual native neutral solids','status':'FAIL' if hits else 'PASS','samples':poses,'step_deg':step_deg,'narrowphase_tests':pairtests,'volume_tolerance_mm3':1e-5,'pair_violations':sorted(hits.values(),key=lambda x:-x['intersection_mm3']),'elapsed_seconds':time.time()-start,'limits':'Finite pose sampling. Raw overlaps, no exceptions. Positive clearance requirement and continuous sweep bound not established.'}
+    r={'revision':'r02','scope':'spine only; shape transforms from actual native neutral solids','status':'FAIL' if hits or neutral['status']!='PASS' else 'PASS','samples':poses,'step_deg':step_deg,'narrowphase_tests':pairtests,'volume_tolerance_mm3':1e-5,'pair_violations':sorted(hits.values(),key=lambda x:-x['intersection_mm3']),'elapsed_seconds':time.time()-start,'invariant_pair_check':'All static/static and same-joint point/point pairs checked in neutral; constant relative geometry','limits':'Finite pose sampling. Raw overlaps, no exceptions. Positive clearance requirement and continuous sweep bound not established.'}
     (ROOT/'reports/verification/r02_spine_sweep.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k!='pair_violations'}));return r

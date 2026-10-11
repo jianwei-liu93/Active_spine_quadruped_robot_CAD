@@ -1,0 +1,136 @@
+{
+  "scope": "r02 corrected fixed slider plates; actual native neutral interfaces and 0.025deg mathematical track sampling",
+  "status": "PASS",
+  "fixed_A_axis_error_mm": 3.552713678800501e-15,
+  "fixed_frame_motion_entries": 0,
+  "native_neutral_distances": [
+    {
+      "parts": [
+        "LumbarIntegrated_1",
+        "A1__1_OuterBearing"
+      ],
+      "gap_mm": 0.02499999999999624
+    },
+    {
+      "parts": [
+        "LumbarIntegrated_1",
+        "A2__1_OuterBearing"
+      ],
+      "gap_mm": 0.024999999999995554
+    },
+    {
+      "parts": [
+        "LumbarIntegrated_1",
+        "C1__1_CaptureWasher"
+      ],
+      "gap_mm": 0.20000000000000284
+    },
+    {
+      "parts": [
+        "GuideLiner1__1__0_65",
+        "C1__1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "GuideLiner1__1_0_65",
+        "C1__1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "LumbarIntegrated_1",
+        "C2__1_CaptureWasher"
+      ],
+      "gap_mm": 0.20000000000000284
+    },
+    {
+      "parts": [
+        "GuideLiner2__1__0_65",
+        "C2__1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "GuideLiner2__1_0_65",
+        "C2__1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "LumbarIntegrated1",
+        "A1_1_OuterBearing"
+      ],
+      "gap_mm": 0.024999999999995318
+    },
+    {
+      "parts": [
+        "LumbarIntegrated1",
+        "A2_1_OuterBearing"
+      ],
+      "gap_mm": 0.02499999999999615
+    },
+    {
+      "parts": [
+        "LumbarIntegrated1",
+        "C1_1_CaptureWasher"
+      ],
+      "gap_mm": 0.19999999999999574
+    },
+    {
+      "parts": [
+        "GuideLiner1_1__0_65",
+        "C1_1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "GuideLiner1_1_0_65",
+        "C1_1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "LumbarIntegrated1",
+        "C2_1_CaptureWasher"
+      ],
+      "gap_mm": 0.19999999999999574
+    },
+    {
+      "parts": [
+        "GuideLiner2_1__0_65",
+        "C2_1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    },
+    {
+      "parts": [
+        "GuideLiner2_1_0_65",
+        "C2_1_Bearing2"
+      ],
+      "gap_mm": 0.09999999999999964
+    }
+  ],
+  "C_ranges_mm": {
+    "C1": [
+      -33.16445581399401,
+      -22.250253760184446
+    ],
+    "C2": [
+      22.250253760184446,
+      33.16445581399401
+    ]
+  },
+  "minimum_center_travel_end_reserve_mm": {
+    "C1": 1.0428989730952178,
+    "C2": 1.0428989730952178
+  },
+  "washer_radial_overlap_mm": 0.8999999999999999,
+  "limits": "Distances apply to neutral only. End reserves use sampled extrema, not a continuous proof. Supplier fits, liner retention method, stiffness and wear are unresolved."
+}

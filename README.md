@@ -4,6 +4,8 @@ A FreeCAD project for a manufacturable, editable active-spine quadruped inspired
 
 **Current status: REFERENCE_FIDELITY_RECOVERY.** Installed FreeCAD MCP execution and an exploratory editable whole robot exist. The exploratory r01 model is superseded because its spine packaging and output geometry diverge from the source. Recovery is on `fix/flexor-reference-fidelity`; see [the morphology audit](docs/10_reference_morphology_and_recovery.md). Numerical closure is separate from physical clearance and fabrication readiness.
 
+The current corrected spine is [flexor_r02_spine.FCStd](cad/flexor_r02_spine.FCStd), with [STEP exports](exports/step/r02/) and [slider-plate source reconciliation](reports/source_review/slider_plate_reconciliation.md). Its fixed guide plates now connect C1 to A2 and C2 to A1 through tall contoured ears, as shown in the paper and Movie S2. Exact fit, liner retention and manufacturer mounting interfaces remain provisional.
+
 The initial target is a desktop-scale research prototype, approximately **110 × 99 × 84 mm**, with a **338 g reference mass**. These are source-prototype targets, not promised dimensions or performance of the eventual design. See the source definitions in [the reference evidence](docs/01_reference_evidence.md).
 
 ## Start here
