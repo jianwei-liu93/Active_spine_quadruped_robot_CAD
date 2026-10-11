@@ -1,0 +1,741 @@
+{
+  "revision": "r01",
+  "units": {
+    "length": "mm",
+    "angle": "rad",
+    "force": "N"
+  },
+  "frame": "+X forward +Y left +Z up; planar positive angle about -Y",
+  "parameters": {
+    "Hx_mm": {
+      "value": 30,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "Hz_mm": {
+      "value": 8.66,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "L1_mm": {
+      "value": 5,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "L2_mm": {
+      "value": 30,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "L3_mm": {
+      "value": 24.1215,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "L4_mm": {
+      "value": 45.7876,
+      "unit": "mm",
+      "provenance": "PAPER_REPORTED",
+      "source": "docs/01 [S] pp7,12-13; local PDF absent",
+      "verification_status": "DOCUMENTED_ONLY"
+    },
+    "L5_mm": {
+      "value": 25,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 reversible output-stage synthesis; source value unknown",
+      "verification_status": "PROVISIONAL"
+    },
+    "L6_mm": {
+      "value": 18,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 reversible output-stage synthesis; source value unknown",
+      "verification_status": "PROVISIONAL"
+    },
+    "HE_mm": {
+      "value": 45,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 reversible output-stage synthesis; source value unknown",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_z_mm": {
+      "value": 0,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 reversible output-stage synthesis; source value unknown",
+      "verification_status": "PROVISIONAL"
+    },
+    "B_branch": {
+      "value": 0,
+      "unit": "index",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "positive oriented circle intersection; source visual seed unresolved",
+      "verification_status": "PROVISIONAL"
+    },
+    "D_branch": {
+      "value": 0,
+      "unit": "index",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "positive oriented circle intersection; source visual seed unresolved",
+      "verification_status": "PROVISIONAL"
+    },
+    "neutral_phase_rad": {
+      "value": 0,
+      "unit": "rad",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "neutral_height_mm": {
+      "value": 80,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "plate_thickness_mm": {
+      "value": 2.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "link_width_mm": {
+      "value": 7,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "link_thickness_mm": {
+      "value": 2,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "pin_diameter_mm": {
+      "value": 1.99,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "pin_clearance_mm": {
+      "value": 0.12,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "bearing_od_mm": {
+      "value": 4,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "bearing_width_mm": {
+      "value": 2,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "frame_half_width_mm": {
+      "value": 29.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "link_layer_base_mm": {
+      "value": 35.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "layer_pitch_mm": {
+      "value": 3.2,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_y_mm": {
+      "value": 57,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "torso_extension_mm": {
+      "value": 18,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_min_mm": {
+      "value": -48,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_max_mm": {
+      "value": 48,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_rail_length_mm": {
+      "value": 42,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_rail_width_mm": {
+      "value": 5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_clearance_mm": {
+      "value": 0.3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_a1_mm": {
+      "value": 29,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_a2_mm": {
+      "value": 30,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_a3_mm": {
+      "value": 31,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_width_mm": {
+      "value": 7,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_thickness_mm": {
+      "value": 3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_qh_rad": {
+      "value": -1.0471975511965976,
+      "unit": "rad",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_qk_rad": {
+      "value": -1.5707963267948966,
+      "unit": "rad",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "leg_qa_fore_rad": {
+      "value": 1.5707963267948966,
+      "unit": "rad",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "coupler_offset_mm": {
+      "value": 6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "wheel_od_mm": {
+      "value": 13,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "wheel_pitch_radius_mm": {
+      "value": 5.8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "cable_diameter_mm": {
+      "value": 0.4,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_radius_mm": {
+      "value": 2.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "cable_stiffness_N_per_mm": {
+      "value": 2,
+      "unit": "N/mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "cable_slack_neutral_mm": {
+      "value": 1,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "extension_free_mm": {
+      "value": 14,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "extension_rate_N_per_mm": {
+      "value": 0.25,
+      "unit": "N/mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "extension_max_mm": {
+      "value": 12,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "compression_free_mm": {
+      "value": 18,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "compression_rate_N_per_mm": {
+      "value": 0.4,
+      "unit": "N/mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "compression_solid_mm": {
+      "value": 6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "compression_bind_margin_mm": {
+      "value": 1,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "spring_od_mm": {
+      "value": 4,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "spring_wire_mm": {
+      "value": 0.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "PA12_density_kg_m3": {
+      "value": 1010,
+      "unit": "kg/m3",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "steel_density_kg_m3": {
+      "value": 7850,
+      "unit": "kg/m3",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "motor_width_mm": {
+      "value": 20,
+      "unit": "mm",
+      "provenance": "MANUFACTURER_VERIFIED",
+      "source": "reports/sources/supplier_interfaces.md R1/R2 specification tables, not mount drawings",
+      "verification_status": "ENVELOPE_OR_MASS_ONLY"
+    },
+    "motor_depth_mm": {
+      "value": 26,
+      "unit": "mm",
+      "provenance": "MANUFACTURER_VERIFIED",
+      "source": "reports/sources/supplier_interfaces.md R1/R2 specification tables, not mount drawings",
+      "verification_status": "ENVELOPE_OR_MASS_ONLY"
+    },
+    "motor_height_mm": {
+      "value": 34,
+      "unit": "mm",
+      "provenance": "MANUFACTURER_VERIFIED",
+      "source": "reports/sources/supplier_interfaces.md R1/R2 specification tables, not mount drawings",
+      "verification_status": "ENVELOPE_OR_MASS_ONLY"
+    },
+    "XL_mass_g": {
+      "value": 18,
+      "unit": "g",
+      "provenance": "MANUFACTURER_VERIFIED",
+      "source": "reports/sources/supplier_interfaces.md R1/R2 specification tables, not mount drawings",
+      "verification_status": "ENVELOPE_OR_MASS_ONLY"
+    },
+    "XC_mass_g": {
+      "value": 23,
+      "unit": "g",
+      "provenance": "MANUFACTURER_VERIFIED",
+      "source": "reports/sources/supplier_interfaces.md R1/R2 specification tables, not mount drawings",
+      "verification_status": "ENVELOPE_OR_MASS_ONLY"
+    },
+    "controller_length_mm": {
+      "value": 50,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "controller_width_mm": {
+      "value": 25,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "controller_height_mm": {
+      "value": 8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "controller_mass_g": {
+      "value": 10,
+      "unit": "g",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "wiring_mass_g": {
+      "value": 8,
+      "unit": "g",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "running_clearance_mm": {
+      "value": 0.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 prototype selection, not supplier verified",
+      "verification_status": "PROVISIONAL"
+    },
+    "L7_mm": {
+      "value": 30,
+      "unit": "mm",
+      "provenance": "DERIVED",
+      "source": "L7=L2; bilateral symmetry docs/02",
+      "verification_status": "DERIVED"
+    },
+    "L8_mm": {
+      "value": 24.1215,
+      "unit": "mm",
+      "provenance": "DERIVED",
+      "source": "L8=L3; bilateral symmetry docs/02",
+      "verification_status": "DERIVED"
+    },
+    "L9_mm": {
+      "value": 45.7876,
+      "unit": "mm",
+      "provenance": "DERIVED",
+      "source": "L9=L4; bilateral symmetry docs/02",
+      "verification_status": "DERIVED"
+    },
+    "L10_mm": {
+      "value": 25,
+      "unit": "mm",
+      "provenance": "DERIVED",
+      "source": "L10=L5; bilateral symmetry docs/02",
+      "verification_status": "DERIVED"
+    },
+    "L11_mm": {
+      "value": 18,
+      "unit": "mm",
+      "provenance": "DERIVED",
+      "source": "L11=L6; bilateral symmetry docs/02",
+      "verification_status": "DERIVED"
+    },
+    "frame_floor_z_mm": {
+      "value": -39,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "frame_end_x_mm": {
+      "value": 49,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "frame_side_height_mm": {
+      "value": 53,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "rail_center_x_mm": {
+      "value": 23,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "rail_center_z_mm": {
+      "value": -5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "rail_length_mm": {
+      "value": 38,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "rail_thickness_mm": {
+      "value": 3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "carriage_length_mm": {
+      "value": 8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "carriage_height_mm": {
+      "value": 6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "carriage_depth_mm": {
+      "value": 5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "bearing_seat_diameter_mm": {
+      "value": 4.05,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "screw_head_diameter_mm": {
+      "value": 3.8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "screw_head_height_mm": {
+      "value": 1.5,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "motor_output_offset_z_mm": {
+      "value": 7,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "motor_connector_keepout_mm": {
+      "value": 8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "torso_span_mm": {
+      "value": 102,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "motor_y_mm": {
+      "value": 15,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "motor_case_clearance_mm": {
+      "value": 0.6,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "controller_z_mm": {
+      "value": 37,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_stroke_min_mm": {
+      "value": -32,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "guide_stroke_max_mm": {
+      "value": 32,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 physical packaging/stack choice; not fabrication released",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_module_mm": {
+      "value": 1,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_teeth": {
+      "value": 22,
+      "unit": "count",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_pressure_rad": {
+      "value": 0.3490658504,
+      "unit": "rad",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_thickness_mm": {
+      "value": 2,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_center_mm": {
+      "value": 22,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "drive_gear_layer_mm": {
+      "value": 32,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "input_shaft_diameter_mm": {
+      "value": 3.99,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "input_bearing_od_mm": {
+      "value": 8,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    },
+    "input_bearing_width_mm": {
+      "value": 3,
+      "unit": "mm",
+      "provenance": "DESIGN_ASSUMPTION",
+      "source": "r01 1:1 spur stage to clear motor cases from through crank shaft; provisional mechanical redesign",
+      "verification_status": "PROVISIONAL"
+    }
+  },
+  "unknown_interfaces": {
+    "paper_phase_map": null,
+    "motor_output_datum_mm": null,
+    "motor_mount_pattern_mm": null,
+    "motor_horn_spline": null,
+    "board_hole_pattern_mm": null,
+    "spring_catalog": null,
+    "bearing_variant": null
+  }
+}
