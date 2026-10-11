@@ -1,0 +1,1302 @@
+{
+  "revision": "r01",
+  "pose": "theta=0, all legs neutral prescribed",
+  "status": "FAIL",
+  "instances": 476,
+  "broadphase_candidate_pairs": 776,
+  "volume_tolerance_mm3": 1e-05,
+  "raw_overlaps": [
+    {
+      "a": "PelvisCross",
+      "b": "KneeMotorDeck",
+      "intersection_mm3": 2227.192037334938
+    },
+    {
+      "a": "LumbarFloor",
+      "b": "LumbarSide_1",
+      "intersection_mm3": 306.25
+    },
+    {
+      "a": "LumbarFloor",
+      "b": "LumbarSide1",
+      "intersection_mm3": 306.2499999999999
+    },
+    {
+      "a": "ForeR_Motor",
+      "b": "ForeR_Motor_Strap3",
+      "intersection_mm3": 80.00000000000003
+    },
+    {
+      "a": "ForeL_Motor",
+      "b": "ForeL_Motor_Strap3",
+      "intersection_mm3": 80.00000000000003
+    },
+    {
+      "a": "HindR_Motor",
+      "b": "HindR_Motor_Strap3",
+      "intersection_mm3": 80.00000000000003
+    },
+    {
+      "a": "HindL_Motor",
+      "b": "HindL_Motor_Strap3",
+      "intersection_mm3": 80.00000000000003
+    },
+    {
+      "a": "SpineMotor_1",
+      "b": "SpineMotor_1_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "SpineMotor_1",
+      "b": "SpineMotor_1_Strap3",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "SpineMotor1",
+      "b": "SpineMotor1_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "SpineMotor1",
+      "b": "SpineMotor1_Strap3",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "ForeR_Motor",
+      "b": "ForeR_Motor_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "ForeL_Motor",
+      "b": "ForeL_Motor_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "HindR_Motor",
+      "b": "HindR_Motor_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "HindL_Motor",
+      "b": "HindL_Motor_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "KneeWindingMotor",
+      "b": "KneeWindingMotor_Strap_24",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "KneeWindingMotor",
+      "b": "KneeWindingMotor_Strap3",
+      "intersection_mm3": 80.0
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "SpineMotor1_Strap_24",
+      "intersection_mm3": 78.29800933373403
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "SpineMotor1_Strap3",
+      "intersection_mm3": 77.55144303521809
+    },
+    {
+      "a": "HindR_Segment3",
+      "b": "HindR_FootPad",
+      "intersection_mm3": 54.6739535023494
+    },
+    {
+      "a": "HindL_Segment3",
+      "b": "HindL_FootPad",
+      "intersection_mm3": 54.67395350234917
+    },
+    {
+      "a": "Rail1__1",
+      "b": "Wear1__1",
+      "intersection_mm3": 48.501249360181035
+    },
+    {
+      "a": "Rail1_1",
+      "b": "Wear1_1",
+      "intersection_mm3": 48.501249360181035
+    },
+    {
+      "a": "Rail2__1",
+      "b": "Wear2__1",
+      "intersection_mm3": 48.501249360180985
+    },
+    {
+      "a": "Rail2_1",
+      "b": "Wear2_1",
+      "intersection_mm3": 48.501249360180985
+    },
+    {
+      "a": "HindR_FootPad",
+      "b": "HindR_FootClevis",
+      "intersection_mm3": 45.35257987081988
+    },
+    {
+      "a": "ForeR_FootPad",
+      "b": "ForeR_FootClevis",
+      "intersection_mm3": 45.35257987081987
+    },
+    {
+      "a": "ForeL_FootPad",
+      "b": "ForeL_FootClevis",
+      "intersection_mm3": 45.352579870819866
+    },
+    {
+      "a": "HindL_FootPad",
+      "b": "HindL_FootClevis",
+      "intersection_mm3": 45.352579870819866
+    },
+    {
+      "a": "ForeR_Segment3",
+      "b": "ForeR_FootPad",
+      "intersection_mm3": 44.69631272105683
+    },
+    {
+      "a": "ForeL_Segment3",
+      "b": "ForeL_FootPad",
+      "intersection_mm3": 44.69631272105679
+    },
+    {
+      "a": "LumbarSide_1",
+      "b": "SpineMotor_1_Saddle",
+      "intersection_mm3": 42.00000000000025
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "SpineMotor1_Saddle",
+      "intersection_mm3": 41.99999999999975
+    },
+    {
+      "a": "RailSupport2__1_6_5",
+      "b": "DrivenGear_1",
+      "intersection_mm3": 28.527223450380728
+    },
+    {
+      "a": "RailSupport1__1__6_5",
+      "b": "DrivenGear_1",
+      "intersection_mm3": 28.52722345038072
+    },
+    {
+      "a": "RailSupport2_1_6_5",
+      "b": "DrivenGear1",
+      "intersection_mm3": 28.52722345038072
+    },
+    {
+      "a": "RailSupport1_1__6_5",
+      "b": "DrivenGear1",
+      "intersection_mm3": 28.527223450380713
+    },
+    {
+      "a": "Chain1_L6_Side1",
+      "b": "Rail1_1",
+      "intersection_mm3": 21.196551708196182
+    },
+    {
+      "a": "Chain1_L6_Side_1",
+      "b": "Rail1__1",
+      "intersection_mm3": 21.196551708196143
+    },
+    {
+      "a": "E1_S_1_Bearing2",
+      "b": "TorsoPivotBearing1__1",
+      "intersection_mm3": 18.849555921538762
+    },
+    {
+      "a": "E2_S_1_Bearing2",
+      "b": "TorsoPivotBearing2__1",
+      "intersection_mm3": 18.849555921538762
+    },
+    {
+      "a": "E1_S1_Bearing2",
+      "b": "TorsoPivotBearing1_1",
+      "intersection_mm3": 18.849555921538762
+    },
+    {
+      "a": "E2_S1_Bearing2",
+      "b": "TorsoPivotBearing2_1",
+      "intersection_mm3": 18.849555921538762
+    },
+    {
+      "a": "D1_S_1_Bearing2",
+      "b": "TorsoBracket1__1",
+      "intersection_mm3": 18.07295421757137
+    },
+    {
+      "a": "D1_S1_Bearing2",
+      "b": "TorsoBracket1_1",
+      "intersection_mm3": 18.07295421757137
+    },
+    {
+      "a": "D2_S_1_Bearing2",
+      "b": "TorsoBracket2__1",
+      "intersection_mm3": 18.072954217571365
+    },
+    {
+      "a": "D2_S1_Bearing2",
+      "b": "TorsoBracket2_1",
+      "intersection_mm3": 18.072954217571365
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 15.710901037499013
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 15.710901037499013
+    },
+    {
+      "a": "HindR_compression_AnchorB",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 15.68184732514234
+    },
+    {
+      "a": "HindL_compression_AnchorB",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 15.68184732514234
+    },
+    {
+      "a": "Stop2__1_1",
+      "b": "TorsoBracket2__1",
+      "intersection_mm3": 14.558274755903376
+    },
+    {
+      "a": "Stop2_1_1",
+      "b": "TorsoBracket2_1",
+      "intersection_mm3": 14.558274755903224
+    },
+    {
+      "a": "Chain1_L6_Side1",
+      "b": "Stop1_1__1",
+      "intersection_mm3": 14.469953872750903
+    },
+    {
+      "a": "Chain1_L6_Side_1",
+      "b": "Stop1__1__1",
+      "intersection_mm3": 14.469953872750901
+    },
+    {
+      "a": "HindR_CompressionSeatB",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 13.087423541723094
+    },
+    {
+      "a": "HindL_CompressionSeatB",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 13.087423541723085
+    },
+    {
+      "a": "Rail1_1",
+      "b": "Stop1_1_1",
+      "intersection_mm3": 12.498085402660754
+    },
+    {
+      "a": "Rail1__1",
+      "b": "Stop1__1_1",
+      "intersection_mm3": 12.498085402660752
+    },
+    {
+      "a": "Rail1__1",
+      "b": "Stop1__1__1",
+      "intersection_mm3": 12.498085402660744
+    },
+    {
+      "a": "Rail2__1",
+      "b": "Stop2__1_1",
+      "intersection_mm3": 12.498085402660744
+    },
+    {
+      "a": "Rail2_1",
+      "b": "Stop2_1_1",
+      "intersection_mm3": 12.498085402660744
+    },
+    {
+      "a": "Rail1_1",
+      "b": "Stop1_1__1",
+      "intersection_mm3": 12.49808540266074
+    },
+    {
+      "a": "Rail2__1",
+      "b": "Stop2__1__1",
+      "intersection_mm3": 12.498085402660738
+    },
+    {
+      "a": "Rail2_1",
+      "b": "Stop2_1__1",
+      "intersection_mm3": 12.498085402660736
+    },
+    {
+      "a": "Stop1__1__1",
+      "b": "TorsoBracket1__1",
+      "intersection_mm3": 12.318540178072073
+    },
+    {
+      "a": "Stop1_1__1",
+      "b": "TorsoBracket1_1",
+      "intersection_mm3": 12.318540178071927
+    },
+    {
+      "a": "Chain2_L2_Side1",
+      "b": "RailSupport2_1_6_5",
+      "intersection_mm3": 10.806927184053645
+    },
+    {
+      "a": "Chain2_L2_Side_1",
+      "b": "RailSupport2__1_6_5",
+      "intersection_mm3": 10.80692718405357
+    },
+    {
+      "a": "LumbarSide_1",
+      "b": "ControllerBeam_24",
+      "intersection_mm3": 10.000000000000103
+    },
+    {
+      "a": "LumbarSide_1",
+      "b": "ControllerBeam24",
+      "intersection_mm3": 10.000000000000103
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "ControllerBeam_24",
+      "intersection_mm3": 9.9999999999999
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "ControllerBeam24",
+      "intersection_mm3": 9.9999999999999
+    },
+    {
+      "a": "ForeL_Segment2",
+      "b": "ForeL_extension_StudB",
+      "intersection_mm3": 9.330765800610703
+    },
+    {
+      "a": "ForeR_Segment2",
+      "b": "ForeR_extension_StudB",
+      "intersection_mm3": 9.3307658006107
+    },
+    {
+      "a": "HindL_Segment2",
+      "b": "HindL_extension_StudB",
+      "intersection_mm3": 9.3307658006107
+    },
+    {
+      "a": "HindR_Segment2",
+      "b": "HindR_extension_StudB",
+      "intersection_mm3": 9.330765800610699
+    },
+    {
+      "a": "A2_S_1_Retainer2",
+      "b": "SpineMotor_1",
+      "intersection_mm3": 8.199556825869358
+    },
+    {
+      "a": "HindR_extension_StudB",
+      "b": "HindR_compression_StudB",
+      "intersection_mm3": 7.901100415798688
+    },
+    {
+      "a": "HindL_extension_StudB",
+      "b": "HindL_compression_StudB",
+      "intersection_mm3": 7.901100415797317
+    },
+    {
+      "a": "ForeR_extension_StudB",
+      "b": "ForeR_compression_StudB",
+      "intersection_mm3": 7.9011004157973055
+    },
+    {
+      "a": "ForeL_extension_StudB",
+      "b": "ForeL_compression_StudB",
+      "intersection_mm3": 7.90110041579688
+    },
+    {
+      "a": "ForeR_Segment2",
+      "b": "ForeR_compression_StudB",
+      "intersection_mm3": 7.775638167175584
+    },
+    {
+      "a": "ForeL_Segment2",
+      "b": "ForeL_compression_StudB",
+      "intersection_mm3": 7.775638167175583
+    },
+    {
+      "a": "HindR_compression_StudB",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 7.775638167175583
+    },
+    {
+      "a": "HindL_Segment2",
+      "b": "HindL_compression_StudB",
+      "intersection_mm3": 7.775638167175583
+    },
+    {
+      "a": "HindR_Segment2",
+      "b": "HindR_compression_StudB",
+      "intersection_mm3": 7.7756381671755825
+    },
+    {
+      "a": "HindL_compression_StudB",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 7.7756381671755825
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "HindR_CompressionSeatA",
+      "intersection_mm3": 6.5973445725386135
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "HindL_CompressionSeatA",
+      "intersection_mm3": 6.5973445725386135
+    },
+    {
+      "a": "ForeR_compression_Spring",
+      "b": "ForeR_CompressionSeatA",
+      "intersection_mm3": 6.5973445725385575
+    },
+    {
+      "a": "ForeL_compression_Spring",
+      "b": "ForeL_CompressionSeatA",
+      "intersection_mm3": 6.5973445725385575
+    },
+    {
+      "a": "Chain2_L2_Side1",
+      "b": "InputThroughShaft",
+      "intersection_mm3": 5.635014906822344
+    },
+    {
+      "a": "Chain2_L2_Side_1",
+      "b": "InputThroughShaft",
+      "intersection_mm3": 5.63501490682226
+    },
+    {
+      "a": "HindR_CompressionGuideRod",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 5.378671026365458
+    },
+    {
+      "a": "HindL_CompressionGuideRod",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 5.378671026364607
+    },
+    {
+      "a": "ForeR_compression_AnchorA",
+      "b": "ForeR_CompressionSeatA",
+      "intersection_mm3": 5.282383854956621
+    },
+    {
+      "a": "ForeR_compression_AnchorB",
+      "b": "ForeR_CompressionSeatB",
+      "intersection_mm3": 5.282383854956013
+    },
+    {
+      "a": "ForeL_compression_AnchorB",
+      "b": "ForeL_CompressionSeatB",
+      "intersection_mm3": 5.282383854956013
+    },
+    {
+      "a": "ForeL_compression_AnchorA",
+      "b": "ForeL_CompressionSeatA",
+      "intersection_mm3": 5.282383854955958
+    },
+    {
+      "a": "HindR_compression_AnchorA",
+      "b": "HindR_CompressionSeatA",
+      "intersection_mm3": 5.282383854955923
+    },
+    {
+      "a": "HindL_compression_AnchorA",
+      "b": "HindL_CompressionSeatA",
+      "intersection_mm3": 5.282383854955923
+    },
+    {
+      "a": "HindR_compression_AnchorB",
+      "b": "HindR_CompressionSeatB",
+      "intersection_mm3": 5.282383854955853
+    },
+    {
+      "a": "HindL_compression_AnchorB",
+      "b": "HindL_CompressionSeatB",
+      "intersection_mm3": 5.282383854955853
+    },
+    {
+      "a": "Chain2_L6_Side1",
+      "b": "Stop2_1_1",
+      "intersection_mm3": 5.081819265733687
+    },
+    {
+      "a": "Chain2_L6_Side_1",
+      "b": "Stop2__1_1",
+      "intersection_mm3": 5.081819265733685
+    },
+    {
+      "a": "Chain1_L2_Side1",
+      "b": "RailSupport2_1_6_5",
+      "intersection_mm3": 4.862112907129811
+    },
+    {
+      "a": "Chain1_L2_Side_1",
+      "b": "RailSupport2__1_6_5",
+      "intersection_mm3": 4.862112907129805
+    },
+    {
+      "a": "HindR_compression_StudA",
+      "b": "HindR_CompressionSeatA",
+      "intersection_mm3": 4.424568128484233
+    },
+    {
+      "a": "HindR_compression_StudB",
+      "b": "HindR_CompressionSeatB",
+      "intersection_mm3": 4.42456812848412
+    },
+    {
+      "a": "ForeR_compression_StudB",
+      "b": "ForeR_CompressionSeatB",
+      "intersection_mm3": 4.424568128483784
+    },
+    {
+      "a": "ForeR_compression_StudA",
+      "b": "ForeR_CompressionSeatA",
+      "intersection_mm3": 4.424568128483356
+    },
+    {
+      "a": "HindL_compression_StudB",
+      "b": "HindL_CompressionSeatB",
+      "intersection_mm3": 4.4245663583937125
+    },
+    {
+      "a": "ForeL_compression_StudA",
+      "b": "ForeL_CompressionSeatA",
+      "intersection_mm3": 4.42456635839369
+    },
+    {
+      "a": "HindL_compression_StudA",
+      "b": "HindL_CompressionSeatA",
+      "intersection_mm3": 4.424566358393349
+    },
+    {
+      "a": "ForeL_compression_StudB",
+      "b": "ForeL_CompressionSeatB",
+      "intersection_mm3": 4.424566358393296
+    },
+    {
+      "a": "RailSupport2__1_39_5",
+      "b": "Stop2__1_1",
+      "intersection_mm3": 4.343809967916037
+    },
+    {
+      "a": "RailSupport2__1_6_5",
+      "b": "Stop2__1__1",
+      "intersection_mm3": 4.3438099679160365
+    },
+    {
+      "a": "RailSupport2_1_39_5",
+      "b": "Stop2_1_1",
+      "intersection_mm3": 4.343809967916027
+    },
+    {
+      "a": "RailSupport2_1_6_5",
+      "b": "Stop2_1__1",
+      "intersection_mm3": 4.343809967916024
+    },
+    {
+      "a": "RailSupport1__1__6_5",
+      "b": "Stop1__1_1",
+      "intersection_mm3": 4.3438099679159965
+    },
+    {
+      "a": "RailSupport1__1__39_5",
+      "b": "Stop1__1__1",
+      "intersection_mm3": 4.343809967915992
+    },
+    {
+      "a": "RailSupport1_1__6_5",
+      "b": "Stop1_1_1",
+      "intersection_mm3": 4.343809967915986
+    },
+    {
+      "a": "RailSupport1_1__39_5",
+      "b": "Stop1_1__1",
+      "intersection_mm3": 4.343809967915982
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_compression_StudB",
+      "intersection_mm3": 4.340280901001359
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_compression_StudB",
+      "intersection_mm3": 4.340280898369278
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_compression_StudB",
+      "intersection_mm3": 4.34028089727912
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_compression_StudB",
+      "intersection_mm3": 4.340280897067311
+    },
+    {
+      "a": "HindR_extension_AnchorB",
+      "b": "HindR_compression_StudB",
+      "intersection_mm3": 3.678248153809054
+    },
+    {
+      "a": "ForeL_extension_AnchorB",
+      "b": "ForeL_compression_StudB",
+      "intersection_mm3": 3.6782481538083376
+    },
+    {
+      "a": "HindL_extension_AnchorB",
+      "b": "HindL_compression_StudB",
+      "intersection_mm3": 3.678248153808337
+    },
+    {
+      "a": "ForeR_extension_AnchorB",
+      "b": "ForeR_compression_StudB",
+      "intersection_mm3": 3.67824815380833
+    },
+    {
+      "a": "ForeL_Motor_Strap3",
+      "b": "ForeL_OutputAdapter",
+      "intersection_mm3": 3.484667340125772
+    },
+    {
+      "a": "HindL_Motor_Strap3",
+      "b": "HindL_OutputAdapter",
+      "intersection_mm3": 3.484667340125772
+    },
+    {
+      "a": "Wear2__1",
+      "b": "TorsoBracket2__1",
+      "intersection_mm3": 2.800000000000025
+    },
+    {
+      "a": "Wear2_1",
+      "b": "TorsoBracket2_1",
+      "intersection_mm3": 2.8000000000000047
+    },
+    {
+      "a": "LumbarSide_1",
+      "b": "SpineMotor_1_Support_12__11",
+      "intersection_mm3": 2.7527768848876284
+    },
+    {
+      "a": "LumbarSide_1",
+      "b": "SpineMotor_1_Support12__11",
+      "intersection_mm3": 2.7527768848876226
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "SpineMotor1_Support12_11",
+      "intersection_mm3": 2.752776884887561
+    },
+    {
+      "a": "LumbarSide1",
+      "b": "SpineMotor1_Support_12_11",
+      "intersection_mm3": 2.752776884887551
+    },
+    {
+      "a": "Chain1_L5_Side1",
+      "b": "A2_S1_Retainer2",
+      "intersection_mm3": 2.4598670477607847
+    },
+    {
+      "a": "Chain1_L5_Side_1",
+      "b": "A2_S_1_Retainer0",
+      "intersection_mm3": 2.4598670477607842
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_extension_AnchorB",
+      "intersection_mm3": 2.3261401413433624
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_extension_AnchorB",
+      "intersection_mm3": 2.326139252595161
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_extension_AnchorB",
+      "intersection_mm3": 2.326139252594766
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_extension_AnchorB",
+      "intersection_mm3": 2.3261386941165023
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "HindL_compression_AnchorB",
+      "intersection_mm3": 2.326138308851584
+    },
+    {
+      "a": "ForeR_compression_Spring",
+      "b": "ForeR_compression_AnchorB",
+      "intersection_mm3": 2.3261376709471087
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "HindR_compression_AnchorB",
+      "intersection_mm3": 2.3261376703688668
+    },
+    {
+      "a": "ForeL_compression_Spring",
+      "b": "ForeL_compression_AnchorB",
+      "intersection_mm3": 2.3261366070787446
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "HindR_compression_AnchorA",
+      "intersection_mm3": 2.3261355746042307
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_extension_AnchorA",
+      "intersection_mm3": 2.3261352647799862
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_extension_AnchorA",
+      "intersection_mm3": 2.326135264779832
+    },
+    {
+      "a": "ForeR_compression_Spring",
+      "b": "ForeR_compression_AnchorA",
+      "intersection_mm3": 2.3261352586603556
+    },
+    {
+      "a": "ForeL_compression_Spring",
+      "b": "ForeL_compression_AnchorA",
+      "intersection_mm3": 2.32613507426417
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "HindL_compression_AnchorA",
+      "intersection_mm3": 2.326134911256121
+    },
+    {
+      "a": "Wear1__1",
+      "b": "TorsoBracket1__1",
+      "intersection_mm3": 2.1000000000000174
+    },
+    {
+      "a": "Wear1_1",
+      "b": "TorsoBracket1_1",
+      "intersection_mm3": 2.0999999999999925
+    },
+    {
+      "a": "A2_S_1_Spacer29_5",
+      "b": "MotorPinion_1",
+      "intersection_mm3": 1.849072333638831
+    },
+    {
+      "a": "A1_S1_Spacer29_5",
+      "b": "MotorPinion1",
+      "intersection_mm3": 1.849072333638789
+    },
+    {
+      "a": "Chain1_L2_Side1",
+      "b": "InputThroughShaft",
+      "intersection_mm3": 1.8451922688094458
+    },
+    {
+      "a": "Chain1_L2_Side_1",
+      "b": "InputThroughShaft",
+      "intersection_mm3": 1.8451922688094053
+    },
+    {
+      "a": "HindR_extension_StudB",
+      "b": "HindR_CompressionSeatB",
+      "intersection_mm3": 1.779669961374038
+    },
+    {
+      "a": "ForeR_extension_StudB",
+      "b": "ForeR_CompressionSeatB",
+      "intersection_mm3": 1.7796699613658336
+    },
+    {
+      "a": "HindL_extension_StudB",
+      "b": "HindL_CompressionSeatB",
+      "intersection_mm3": 1.7796694865689031
+    },
+    {
+      "a": "ForeL_extension_StudB",
+      "b": "ForeL_CompressionSeatB",
+      "intersection_mm3": 1.7796694865510156
+    },
+    {
+      "a": "D2_S_1_Spacer54_7",
+      "b": "TorsoBracket2__1",
+      "intersection_mm3": 1.7693449825018528
+    },
+    {
+      "a": "D1_S_1_Spacer51_5",
+      "b": "TorsoBracket1__1",
+      "intersection_mm3": 1.7693449825017717
+    },
+    {
+      "a": "D1_S1_Spacer51_5",
+      "b": "TorsoBracket1_1",
+      "intersection_mm3": 1.7693449825017715
+    },
+    {
+      "a": "D2_S1_Spacer54_7",
+      "b": "TorsoBracket2_1",
+      "intersection_mm3": 1.7693449825017098
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_extension_StudB",
+      "intersection_mm3": 1.6293451465648008
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_extension_StudB",
+      "intersection_mm3": 1.629345145139037
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_extension_StudB",
+      "intersection_mm3": 1.6293451431705028
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_extension_StudA",
+      "intersection_mm3": 1.6293425812414375
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_extension_StudA",
+      "intersection_mm3": 1.62934177203678
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_extension_StudB",
+      "intersection_mm3": 1.6293397743100066
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_extension_StudA",
+      "intersection_mm3": 1.6293390546717665
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_extension_StudA",
+      "intersection_mm3": 1.6293370682831394
+    },
+    {
+      "a": "ForeR_Segment1",
+      "b": "ForeR_extension_StudA",
+      "intersection_mm3": 1.5551276334351167
+    },
+    {
+      "a": "ForeL_Segment1",
+      "b": "ForeL_extension_StudA",
+      "intersection_mm3": 1.5551276334351167
+    },
+    {
+      "a": "HindR_Segment1",
+      "b": "HindR_extension_StudA",
+      "intersection_mm3": 1.5551276334351165
+    },
+    {
+      "a": "HindL_Segment1",
+      "b": "HindL_extension_StudA",
+      "intersection_mm3": 1.5551276334351165
+    },
+    {
+      "a": "HindL_compression_StudB",
+      "b": "HindL_CompressionGuideRod",
+      "intersection_mm3": 1.5119261967811357
+    },
+    {
+      "a": "ForeL_compression_StudB",
+      "b": "ForeL_CompressionGuideRod",
+      "intersection_mm3": 1.5119261967807913
+    },
+    {
+      "a": "HindR_compression_StudB",
+      "b": "HindR_CompressionGuideRod",
+      "intersection_mm3": 1.5119261967804953
+    },
+    {
+      "a": "ForeR_compression_StudB",
+      "b": "ForeR_CompressionGuideRod",
+      "intersection_mm3": 1.511926196779735
+    },
+    {
+      "a": "ForeR_compression_AnchorB",
+      "b": "ForeR_CompressionGuideRod",
+      "intersection_mm3": 1.499390905300298
+    },
+    {
+      "a": "ForeL_compression_AnchorB",
+      "b": "ForeL_CompressionGuideRod",
+      "intersection_mm3": 1.4993909052992374
+    },
+    {
+      "a": "HindR_compression_AnchorB",
+      "b": "HindR_CompressionGuideRod",
+      "intersection_mm3": 1.4993909052990724
+    },
+    {
+      "a": "HindL_compression_AnchorB",
+      "b": "HindL_CompressionGuideRod",
+      "intersection_mm3": 1.4993909052988084
+    },
+    {
+      "a": "KneeWindingMotor",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 1.3318782196415373
+    },
+    {
+      "a": "KneeWindingMotor",
+      "b": "Hind_1_Cable",
+      "intersection_mm3": 1.3318782085278043
+    },
+    {
+      "a": "HindR_extension_StudB",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 1.1663192373451836
+    },
+    {
+      "a": "HindL_extension_StudB",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 1.1663192373451832
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_extension_AnchorA",
+      "intersection_mm3": 1.163066908382911
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_extension_AnchorA",
+      "intersection_mm3": 1.1630668714414512
+    },
+    {
+      "a": "Wear2_1",
+      "b": "RailSupport2_1_39_5",
+      "intersection_mm3": 0.9871336769862202
+    },
+    {
+      "a": "Wear2_1",
+      "b": "RailSupport2_1_6_5",
+      "intersection_mm3": 0.9871336769861669
+    },
+    {
+      "a": "Wear2__1",
+      "b": "RailSupport2__1_6_5",
+      "intersection_mm3": 0.9871336769861625
+    },
+    {
+      "a": "Wear1_1",
+      "b": "RailSupport1_1__39_5",
+      "intersection_mm3": 0.9871336769861581
+    },
+    {
+      "a": "Wear1__1",
+      "b": "RailSupport1__1__39_5",
+      "intersection_mm3": 0.9871336769861374
+    },
+    {
+      "a": "Wear1__1",
+      "b": "RailSupport1__1__6_5",
+      "intersection_mm3": 0.9871336769861364
+    },
+    {
+      "a": "Wear1_1",
+      "b": "RailSupport1_1__6_5",
+      "intersection_mm3": 0.9871336769861354
+    },
+    {
+      "a": "Wear2__1",
+      "b": "RailSupport2__1_39_5",
+      "intersection_mm3": 0.9871336769861276
+    },
+    {
+      "a": "Chain1_L6_Side1",
+      "b": "RailSupport1_1__39_5",
+      "intersection_mm3": 0.8417235349285679
+    },
+    {
+      "a": "Chain1_L6_Side_1",
+      "b": "RailSupport1__1__39_5",
+      "intersection_mm3": 0.8417235349285661
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "HindR_compression_StudA",
+      "intersection_mm3": 0.8146771525848056
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "HindL_compression_StudA",
+      "intersection_mm3": 0.8146750490030326
+    },
+    {
+      "a": "ForeL_compression_Spring",
+      "b": "ForeL_compression_StudA",
+      "intersection_mm3": 0.814674614782315
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "HindR_compression_StudB",
+      "intersection_mm3": 0.8146739437317398
+    },
+    {
+      "a": "ForeR_compression_Spring",
+      "b": "ForeR_compression_StudB",
+      "intersection_mm3": 0.8146739432739425
+    },
+    {
+      "a": "ForeL_compression_Spring",
+      "b": "ForeL_compression_StudB",
+      "intersection_mm3": 0.8146734426773753
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "HindL_compression_StudB",
+      "intersection_mm3": 0.814673260333328
+    },
+    {
+      "a": "ForeR_compression_Spring",
+      "b": "ForeR_compression_StudA",
+      "intersection_mm3": 0.8146718564540536
+    },
+    {
+      "a": "ForeR_compression_StudA",
+      "b": "ForeR_CompressionGuideRod",
+      "intersection_mm3": 0.7559638845113511
+    },
+    {
+      "a": "HindR_compression_StudA",
+      "b": "HindR_CompressionGuideRod",
+      "intersection_mm3": 0.7559638845111405
+    },
+    {
+      "a": "HindL_compression_StudA",
+      "b": "HindL_CompressionGuideRod",
+      "intersection_mm3": 0.7559638845110819
+    },
+    {
+      "a": "ForeL_compression_StudA",
+      "b": "ForeL_CompressionGuideRod",
+      "intersection_mm3": 0.7559638845108533
+    },
+    {
+      "a": "ForeL_compression_AnchorA",
+      "b": "ForeL_CompressionGuideRod",
+      "intersection_mm3": 0.7497276099957887
+    },
+    {
+      "a": "HindR_compression_AnchorA",
+      "b": "HindR_CompressionGuideRod",
+      "intersection_mm3": 0.749727609995678
+    },
+    {
+      "a": "HindL_compression_AnchorA",
+      "b": "HindL_CompressionGuideRod",
+      "intersection_mm3": 0.7497276099955559
+    },
+    {
+      "a": "ForeR_compression_AnchorA",
+      "b": "ForeR_CompressionGuideRod",
+      "intersection_mm3": 0.7497276099952809
+    },
+    {
+      "a": "Wear1__1",
+      "b": "Stop1__1__1",
+      "intersection_mm3": 0.625
+    },
+    {
+      "a": "Wear2__1",
+      "b": "Stop2__1__1",
+      "intersection_mm3": 0.625
+    },
+    {
+      "a": "Wear2__1",
+      "b": "Stop2__1_1",
+      "intersection_mm3": 0.625
+    },
+    {
+      "a": "Wear1_1",
+      "b": "Stop1_1__1",
+      "intersection_mm3": 0.625
+    },
+    {
+      "a": "Wear1__1",
+      "b": "Stop1__1_1",
+      "intersection_mm3": 0.6249999999999999
+    },
+    {
+      "a": "Wear1_1",
+      "b": "Stop1_1_1",
+      "intersection_mm3": 0.6249999999999999
+    },
+    {
+      "a": "Wear2_1",
+      "b": "Stop2_1__1",
+      "intersection_mm3": 0.6249999999999999
+    },
+    {
+      "a": "Wear2_1",
+      "b": "Stop2_1_1",
+      "intersection_mm3": 0.6249999999999999
+    },
+    {
+      "a": "HindR_extension_Spring",
+      "b": "HindR_CompressionSeatB",
+      "intersection_mm3": 0.6110707067490487
+    },
+    {
+      "a": "ForeR_extension_Spring",
+      "b": "ForeR_CompressionSeatB",
+      "intersection_mm3": 0.6110707067488733
+    },
+    {
+      "a": "HindL_extension_Spring",
+      "b": "HindL_CompressionSeatB",
+      "intersection_mm3": 0.6110707066179825
+    },
+    {
+      "a": "ForeL_extension_Spring",
+      "b": "ForeL_CompressionSeatB",
+      "intersection_mm3": 0.6110707066174894
+    },
+    {
+      "a": "PelvisCross",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 0.5496640290338649
+    },
+    {
+      "a": "PelvisCross",
+      "b": "Hind_1_Cable",
+      "intersection_mm3": 0.549664017916835
+    },
+    {
+      "a": "Hind1_Cable",
+      "b": "Hind1_HipGuide",
+      "intersection_mm3": 0.4701623883568809
+    },
+    {
+      "a": "Hind_1_Cable",
+      "b": "Hind_1_HipGuide",
+      "intersection_mm3": 0.47014337487468616
+    },
+    {
+      "a": "A1_S1_Pin",
+      "b": "MotorPinion1",
+      "intersection_mm3": 0.4254816808225076
+    },
+    {
+      "a": "A2_S_1_Pin",
+      "b": "MotorPinion_1",
+      "intersection_mm3": 0.42548168082237386
+    },
+    {
+      "a": "Chain2_L6_Side1",
+      "b": "Rail2_1",
+      "intersection_mm3": 0.4036043580103531
+    },
+    {
+      "a": "Chain2_L6_Side_1",
+      "b": "Rail2__1",
+      "intersection_mm3": 0.40360435801035255
+    },
+    {
+      "a": "Chain1_L6_Side_1",
+      "b": "Wear1__1",
+      "intersection_mm3": 0.3489675811116114
+    },
+    {
+      "a": "Chain1_L6_Side1",
+      "b": "Wear1_1",
+      "intersection_mm3": 0.3489675811116113
+    },
+    {
+      "a": "Hind1_Cable",
+      "b": "Hind1_CableAnchor",
+      "intersection_mm3": 0.31918165615155325
+    },
+    {
+      "a": "Hind_1_Cable",
+      "b": "Hind_1_CableAnchor",
+      "intersection_mm3": 0.3191816264767586
+    },
+    {
+      "a": "A1_S1_Retainer0",
+      "b": "SpineMotor1_Strap3",
+      "intersection_mm3": 0.2997386138763245
+    },
+    {
+      "a": "A1_S1_Retainer0",
+      "b": "SpineMotor1",
+      "intersection_mm3": 0.2997386138763233
+    },
+    {
+      "a": "A1_S1_Bearing0",
+      "b": "SpineMotor1_Strap3",
+      "intersection_mm3": 0.2574900562987681
+    },
+    {
+      "a": "KneeWindingMotor_Strap3",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 0.25369108841240884
+    },
+    {
+      "a": "HindR_CompressionGuideRod",
+      "b": "Hind_1_Cable",
+      "intersection_mm3": 0.19509837690756734
+    },
+    {
+      "a": "HindL_CompressionGuideRod",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 0.19509695037046448
+    },
+    {
+      "a": "HindR_compression_AnchorB",
+      "b": "Hind_1_Cable",
+      "intersection_mm3": 0.1092085319350069
+    },
+    {
+      "a": "HindL_compression_AnchorB",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 0.10920844661230669
+    },
+    {
+      "a": "HindR_compression_Spring",
+      "b": "Hind_1_Cable",
+      "intersection_mm3": 0.09974946752649957
+    },
+    {
+      "a": "HindL_compression_Spring",
+      "b": "Hind1_Cable",
+      "intersection_mm3": 0.09974916877313371
+    },
+    {
+      "a": "Chain1_L6_Side1",
+      "b": "HindL_CarrierPost12_10",
+      "intersection_mm3": 0.005126515724247143
+    },
+    {
+      "a": "Chain1_L6_Side_1",
+      "b": "HindR_CarrierPost12__10",
+      "intersection_mm3": 0.005126515649689474
+    }
+  ],
+  "exceptions": "None applied in this raw diagnostic",
+  "elapsed_s": 7.0553765296936035
+}

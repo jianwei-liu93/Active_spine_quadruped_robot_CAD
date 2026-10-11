@@ -1,0 +1,6693 @@
+{
+  "revision": "r01",
+  "status": "PASS",
+  "instances": 476,
+  "editable_definitions": 67,
+  "fully_constrained_sketches": true,
+  "envelope_mm": [
+    178.28108891324553,
+    168.99266706925562,
+    118.74261314031187
+  ],
+  "bounds_mm": [
+    -96.0,
+    82.28108891324554,
+    -84.49633353462781,
+    84.49633353462781,
+    -71.74261314031187,
+    47.0
+  ],
+  "mass_estimate_g": 436.07524017698034,
+  "CoM_estimate_mm": [
+    -5.753565819642811,
+    0.12494221880397498,
+    -7.798533946426207
+  ],
+  "mass_limits": "Envelope motor masses overridden; PA12 1010/steel7850/brass8500 kg/m3 assumptions; spring0.5g each/cable0.15g each; wiring8g added at(0,0,10). Simplified hardware/guide solids; unmodeled tie screws remain mass gap. Not measured mass.",
+  "parts": [
+    {
+      "instance": "LumbarFloor",
+      "part": "FRM_LUMBAR_FLOOR",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14416.986728891558,
+      "mass_g": 14.561156596180473,
+      "center_mm": [
+        7.105427357601002e-15,
+        0.0,
+        -37.75
+      ]
+    },
+    {
+      "instance": "LumbarSide_1",
+      "part": "FRM_LUMBAR_SIDE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12506.000386359452,
+      "mass_g": 12.631060390223046,
+      "center_mm": [
+        1.4210854715202004e-14,
+        -29.499999999999993,
+        -12.90885892987734
+      ]
+    },
+    {
+      "instance": "LumbarSide1",
+      "part": "FRM_LUMBAR_SIDE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12506.000386359452,
+      "mass_g": 12.631060390223046,
+      "center_mm": [
+        1.4210854715202004e-14,
+        29.500000000000007,
+        -12.90885892987734
+      ]
+    },
+    {
+      "instance": "Chain1_L2_Side_1",
+      "part": "SPN_L2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 466.47002649949354,
+      "mass_g": 0.4711347267644885,
+      "center_mm": [
+        10.3237599909266,
+        -38.7,
+        14.023465319207274
+      ]
+    },
+    {
+      "instance": "Chain1_L3_Side_1",
+      "part": "SPN_L3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 384.17102649949345,
+      "mass_g": 0.3880127367644884,
+      "center_mm": [
+        22.823759990926604,
+        -41.9,
+        18.35346531920728
+      ]
+    },
+    {
+      "instance": "Chain1_L4_Side_1",
+      "part": "SPN_L4",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 687.4964264994935,
+      "mass_g": 0.6943713907644885,
+      "center_mm": [
+        -2.4485707252854745,
+        -45.1,
+        14.023465319207268
+      ]
+    },
+    {
+      "instance": "Chain1_L5_Side_1",
+      "part": "SPN_L5",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 396.47002649949343,
+      "mass_g": 0.4004347267644884,
+      "center_mm": [
+        -29.735533825893985,
+        -48.3,
+        -8.472181811490733
+      ]
+    },
+    {
+      "instance": "Chain1_L6_Side_1",
+      "part": "SPN_L6",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 298.47002649949343,
+      "mass_g": 0.30145472676448837,
+      "center_mm": [
+        -41.9632031096819,
+        -51.5,
+        -8.47218181149073
+      ]
+    },
+    {
+      "instance": "B1_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        -38.7,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        -41.9,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        -45.1,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.236399508580202,
+      "mass_g": 0.22950573614235456,
+      "center_mm": [
+        15.647519981853195,
+        -41.9,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        15.647519981853195,
+        -47.10000000000001,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        15.647519981853195,
+        -36.7,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Spacer38_7",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679094,
+      "mass_g": 0.03549406722943088,
+      "center_mm": [
+        15.647519981853195,
+        -40.3,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S_1_Spacer41_9",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679094,
+      "mass_g": 0.03549406722943088,
+      "center_mm": [
+        15.647519981853195,
+        -43.49999999999999,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "C1_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        -45.1,
+        1.9582498238709015e-16
+      ]
+    },
+    {
+      "instance": "C1_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        -48.3,
+        2.170030648229737e-16
+      ]
+    },
+    {
+      "instance": "C1_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        -52.1,
+        1.8852468775902112e-16
+      ]
+    },
+    {
+      "instance": "C1_S_1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.102552668702355,
+      "mass_g": 0.2441550384493135,
+      "center_mm": [
+        -20.544661432424157,
+        -48.6,
+        1.1082572733566417e-15
+      ]
+    },
+    {
+      "instance": "C1_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -20.544661432424157,
+        -54.1,
+        8.483113503906312e-17
+      ]
+    },
+    {
+      "instance": "C1_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -20.544661432424157,
+        -43.1,
+        4.985419139029701e-17
+      ]
+    },
+    {
+      "instance": "C1_S_1_Spacer45_1",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        -20.544661432424157,
+        -46.70000000000001,
+        -2.0226086260465593e-18
+      ]
+    },
+    {
+      "instance": "C1_S_1_Spacer48_3",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018681,
+      "mass_g": 0.05324110084414665,
+      "center_mm": [
+        -20.544661432424157,
+        -50.2,
+        1.7432300593030491e-16
+      ]
+    },
+    {
+      "instance": "D1_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        -48.3,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        -51.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        -55.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Pin",
+      "part": "PIN_D1.99_L10.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.72460372207638,
+      "mass_g": 0.2490381392182996,
+      "center_mm": [
+        -38.9264062193638,
+        -51.9,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -38.9264062193638,
+        -57.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -38.9264062193638,
+        -46.3,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Spacer48_3",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.52153722667909,
+      "mass_g": 0.03549406722943086,
+      "center_mm": [
+        -38.9264062193638,
+        -49.9,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S_1_Spacer51_5",
+      "part": "SPACER_2mm_L2.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.535895377798512,
+      "mass_g": 0.05915677871571832,
+      "center_mm": [
+        -38.9264062193638,
+        -53.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "A1_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        30.0,
+        -29.5,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        30.0,
+        -41.9,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S_1_Pin",
+      "part": "PIN_D1.99_L15.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 47.89793110980163,
+      "mass_g": 0.37599875921194276,
+      "center_mm": [
+        30.0,
+        -35.7,
+        8.660000000000002
+      ]
+    },
+    {
+      "instance": "A1_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        30.0,
+        -43.900000000000006,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        30.0,
+        -27.500000000000004,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S_1_Spacer29_5",
+      "part": "SPACER_2mm_L10.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 39.18665596455229,
+      "mass_g": 0.30761524932173545,
+      "center_mm": [
+        30.0,
+        -35.7,
+        8.660000000000002
+      ]
+    },
+    {
+      "instance": "E1_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        -29.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        -51.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        -55.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S_1_Pin",
+      "part": "PIN_D1.99_L29.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 90.19740273923674,
+      "mass_g": 0.7080496115030084,
+      "center_mm": [
+        -45.0,
+        -42.5,
+        3.2760948550970593e-15
+      ]
+    },
+    {
+      "instance": "E1_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.0,
+        -57.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E1_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.0,
+        -27.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E1_S_1_Spacer29_5",
+      "part": "SPACER_2mm_L20.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 75.35895377798512,
+      "mass_g": 0.5915677871571832,
+      "center_mm": [
+        -45.0,
+        -40.5,
+        2.177823739770216e-15
+      ]
+    },
+    {
+      "instance": "E1_S_1_Spacer51_5",
+      "part": "SPACER_2mm_L2.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.535895377798514,
+      "mass_g": 0.05915677871571833,
+      "center_mm": [
+        -45.0,
+        -53.5,
+        1.554218221321753e-16
+      ]
+    },
+    {
+      "instance": "Chain2_L2_Side_1",
+      "part": "SPN_L2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 466.47002649949377,
+      "mass_g": 0.4711347267644887,
+      "center_mm": [
+        -3.5002229720601274,
+        -41.900000000000006,
+        -12.359053743117288
+      ]
+    },
+    {
+      "instance": "Chain2_L3_Side_1",
+      "part": "SPN_L3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 384.1710264994937,
+      "mass_g": 0.3880127367644886,
+      "center_mm": [
+        -21.000222972060122,
+        -45.1,
+        -16.689053743117288
+      ]
+    },
+    {
+      "instance": "Chain2_L4_Side_1",
+      "part": "SPN_L4",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 687.4964264994932,
+      "mass_g": 0.6943713907644881,
+      "center_mm": [
+        7.27077272556275,
+        -48.300000000000004,
+        -12.359053743117279
+      ]
+    },
+    {
+      "instance": "Chain2_L5_Side_1",
+      "part": "SPN_L5",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 396.47002649949354,
+      "mass_g": 0.4004347267644885,
+      "center_mm": [
+        35.23331470365371,
+        -51.5,
+        8.983924484807538
+      ]
+    },
+    {
+      "instance": "Chain2_L6_Side_1",
+      "part": "SPN_L6",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 298.4700264994935,
+      "mass_g": 0.3014547267644884,
+      "center_mm": [
+        44.46231900603084,
+        -54.7,
+        8.983924484807536
+      ]
+    },
+    {
+      "instance": "B2_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        -41.900000000000006,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        -45.1,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        -48.300000000000004,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.23639950858021,
+      "mass_g": 0.22950573614235462,
+      "center_mm": [
+        -12.000445944120248,
+        -45.1,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -12.000445944120248,
+        -50.30000000000001,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -12.000445944120248,
+        -39.900000000000006,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Spacer41_9",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679093,
+      "mass_g": 0.035494067229430874,
+      "center_mm": [
+        -12.000445944120248,
+        -43.5,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S_1_Spacer45_1",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679093,
+      "mass_g": 0.035494067229430874,
+      "center_mm": [
+        -12.000445944120248,
+        -46.699999999999996,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "C2_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        -48.300000000000004,
+        2.1284695649511265e-16
+      ]
+    },
+    {
+      "instance": "C2_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        -51.5,
+        1.962948033285006e-16
+      ]
+    },
+    {
+      "instance": "C2_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        -55.300000000000004,
+        1.758395223409407e-16
+      ]
+    },
+    {
+      "instance": "C2_S_1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.10255266870236,
+      "mass_g": 0.24415503844931352,
+      "center_mm": [
+        26.54199139524574,
+        -51.800000000000004,
+        1.0999124128184333e-15
+      ]
+    },
+    {
+      "instance": "C2_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        26.54199139524574,
+        -57.300000000000004,
+        8.79674286797779e-17
+      ]
+    },
+    {
+      "instance": "C2_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        26.541991395245738,
+        -46.300000000000004,
+        8.796742867977792e-17
+      ]
+    },
+    {
+      "instance": "C2_S_1_Spacer48_3",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679096,
+      "mass_g": 0.0354940672294309,
+      "center_mm": [
+        26.54199139524574,
+        -49.900000000000006,
+        3.9605330961619903e-17
+      ]
+    },
+    {
+      "instance": "C2_S_1_Spacer51_5",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018685,
+      "mass_g": 0.053241100844146676,
+      "center_mm": [
+        26.54199139524574,
+        -53.400000000000006,
+        1.966059312470471e-16
+      ]
+    },
+    {
+      "instance": "D2_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        -51.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        -54.7,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        -58.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.10255266870233,
+      "mass_g": 0.24415503844931327,
+      "center_mm": [
+        43.92463801206168,
+        -55.0,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        43.92463801206168,
+        -60.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        43.92463801206168,
+        -49.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Spacer51_5",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.52153722667909,
+      "mass_g": 0.03549406722943086,
+      "center_mm": [
+        43.92463801206168,
+        -53.1,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S_1_Spacer54_7",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018674,
+      "mass_g": 0.053241100844146586,
+      "center_mm": [
+        43.92463801206168,
+        -56.60000000000001,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "A2_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -30.0,
+        -29.5,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -30.0,
+        -45.1,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S_1_Pin",
+      "part": "PIN_D1.99_L18.6",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 57.850747963786375,
+      "mass_g": 0.45412837151572305,
+      "center_mm": [
+        -30.0,
+        -37.3,
+        -8.659999999999998
+      ]
+    },
+    {
+      "instance": "A2_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -30.0,
+        -47.099999999999994,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -30.0,
+        -27.499999999999996,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S_1_Spacer29_5",
+      "part": "SPACER_2mm_L13.6",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 51.24408856902991,
+      "mass_g": 0.40226609526688484,
+      "center_mm": [
+        -30.0,
+        -37.3,
+        -8.659999999999998
+      ]
+    },
+    {
+      "instance": "E2_S_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        -29.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E2_S_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        -54.7,
+        3.4961906055415893e-16
+      ]
+    },
+    {
+      "instance": "E2_S_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        -58.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E2_S_1_Pin",
+      "part": "PIN_D1.99_L32.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 99.52816853984744,
+      "mass_g": 0.7812961230378024,
+      "center_mm": [
+        45.0,
+        -44.0,
+        3.628058351376448e-15
+      ]
+    },
+    {
+      "instance": "E2_S_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        45.0,
+        -60.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E2_S_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        45.0,
+        -27.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E2_S_1_Spacer29_5",
+      "part": "SPACER_2mm_L23.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 87.41638638246278,
+      "mass_g": 0.6862186331023328,
+      "center_mm": [
+        45.0,
+        -42.1,
+        2.4337905971546213e-15
+      ]
+    },
+    {
+      "instance": "E2_S_1_Spacer54_7",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018678,
+      "mass_g": 0.05324110084414661,
+      "center_mm": [
+        45.0,
+        -56.6,
+        1.230175371370126e-16
+      ]
+    },
+    {
+      "instance": "Crank_1",
+      "part": "SPN_CRANK",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 82.43013373792897,
+      "mass_g": 0.6470765498427423,
+      "center_mm": [
+        2.4812745860459318,
+        -35.5,
+        -8.881784197001252e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        -35.5,
+        1.858503224002235e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        -38.7,
+        1.773212653100042e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        -41.900000000000006,
+        2.0240247556683553e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.236399508580202,
+      "mass_g": 0.22950573614235456,
+      "center_mm": [
+        5.0,
+        -38.7,
+        1.0769940949196668e-15
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        5.0,
+        -43.900000000000006,
+        1.1771029287516567e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        5.0,
+        -33.5,
+        1.076575370996296e-16
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Spacer35_5",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        5.0,
+        -37.1,
+        -2.0885504161246978e-17
+      ]
+    },
+    {
+      "instance": "CrankPin_1_Spacer38_7",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        5.0,
+        -40.300000000000004,
+        5.555695251114554e-18
+      ]
+    },
+    {
+      "instance": "Rail1__1",
+      "part": "GUIDE_RAIL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 547.192037334938,
+      "mass_g": 0.5526639577082874,
+      "center_mm": [
+        -23.0,
+        -52.1,
+        -5.5
+      ]
+    },
+    {
+      "instance": "Wear1__1",
+      "part": "GUIDE_WEAR_STRIP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 85.00000000000001,
+      "mass_g": 0.7225,
+      "center_mm": [
+        -23.000000000000004,
+        -52.1,
+        -4.549999999999999
+      ]
+    },
+    {
+      "instance": "Slider1__1",
+      "part": "GUIDE_SHOE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 163.98753312436676,
+      "mass_g": 0.16562740845561041,
+      "center_mm": [
+        -20.544661432424157,
+        -52.1,
+        0.20195437646399395
+      ]
+    },
+    {
+      "instance": "RailSupport1__1__39_5",
+      "part": "RAIL_STANDOFF_L19.85",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 314.2974954357373,
+      "mass_g": 2.671528711203767,
+      "center_mm": [
+        -39.5,
+        -40.675,
+        -5.499999999999998
+      ]
+    },
+    {
+      "instance": "RailSupport1__1__6_5",
+      "part": "RAIL_STANDOFF_L19.85",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 314.2974954357373,
+      "mass_g": 2.671528711203767,
+      "center_mm": [
+        -6.5,
+        -40.675,
+        -5.499999999999998
+      ]
+    },
+    {
+      "instance": "Stop1__1__1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        -41.0,
+        -52.1,
+        -1.9999999999999987
+      ]
+    },
+    {
+      "instance": "Stop1__1_1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        -4.999999999999999,
+        -52.1,
+        -1.9999999999999987
+      ]
+    },
+    {
+      "instance": "Rail2__1",
+      "part": "GUIDE_RAIL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 547.192037334938,
+      "mass_g": 0.5526639577082874,
+      "center_mm": [
+        23.0,
+        -55.300000000000004,
+        -5.5
+      ]
+    },
+    {
+      "instance": "Wear2__1",
+      "part": "GUIDE_WEAR_STRIP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 85.0,
+      "mass_g": 0.7224999999999999,
+      "center_mm": [
+        23.0,
+        -55.300000000000004,
+        -4.549999999999999
+      ]
+    },
+    {
+      "instance": "Slider2__1",
+      "part": "GUIDE_SHOE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 163.98753312436676,
+      "mass_g": 0.16562740845561041,
+      "center_mm": [
+        26.54199139524574,
+        -55.300000000000004,
+        0.20195437646399395
+      ]
+    },
+    {
+      "instance": "RailSupport2__1_6_5",
+      "part": "RAIL_STANDOFF_L23.05",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.96510175283356,
+      "mass_g": 3.1022033648990854,
+      "center_mm": [
+        6.5,
+        -42.275000000000006,
+        -5.499999999999997
+      ]
+    },
+    {
+      "instance": "RailSupport2__1_39_5",
+      "part": "RAIL_STANDOFF_L23.05",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.9651017528336,
+      "mass_g": 3.102203364899086,
+      "center_mm": [
+        39.5,
+        -42.275000000000006,
+        -5.499999999999997
+      ]
+    },
+    {
+      "instance": "Stop2__1__1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        5.000000000000001,
+        -55.300000000000004,
+        -1.9999999999999978
+      ]
+    },
+    {
+      "instance": "Stop2__1_1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        41.0,
+        -55.300000000000004,
+        -1.9999999999999987
+      ]
+    },
+    {
+      "instance": "Chain1_L2_Side1",
+      "part": "SPN_L2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 466.47002649949354,
+      "mass_g": 0.4711347267644885,
+      "center_mm": [
+        10.3237599909266,
+        38.7,
+        14.023465319207277
+      ]
+    },
+    {
+      "instance": "Chain1_L3_Side1",
+      "part": "SPN_L3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 384.17102649949345,
+      "mass_g": 0.3880127367644884,
+      "center_mm": [
+        22.823759990926604,
+        41.9,
+        18.35346531920728
+      ]
+    },
+    {
+      "instance": "Chain1_L4_Side1",
+      "part": "SPN_L4",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 687.4964264994935,
+      "mass_g": 0.6943713907644885,
+      "center_mm": [
+        -2.448570725285478,
+        45.1,
+        14.023465319207261
+      ]
+    },
+    {
+      "instance": "Chain1_L5_Side1",
+      "part": "SPN_L5",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 396.47002649949354,
+      "mass_g": 0.4004347267644885,
+      "center_mm": [
+        -29.73553382589398,
+        48.3,
+        -8.472181811490728
+      ]
+    },
+    {
+      "instance": "Chain1_L6_Side1",
+      "part": "SPN_L6",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 298.47002649949343,
+      "mass_g": 0.30145472676448837,
+      "center_mm": [
+        -41.9632031096819,
+        51.5,
+        -8.47218181149073
+      ]
+    },
+    {
+      "instance": "B1_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        38.7,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        41.9,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        15.647519981853195,
+        45.1,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.236399508580202,
+      "mass_g": 0.22950573614235456,
+      "center_mm": [
+        15.647519981853195,
+        41.90000000000001,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        15.647519981853195,
+        36.7,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        15.647519981853195,
+        47.10000000000001,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Spacer38_7",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679093,
+      "mass_g": 0.035494067229430874,
+      "center_mm": [
+        15.647519981853195,
+        40.29999999999999,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "B1_S1_Spacer41_9",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679094,
+      "mass_g": 0.03549406722943088,
+      "center_mm": [
+        15.647519981853195,
+        43.50000000000001,
+        28.04693063841455
+      ]
+    },
+    {
+      "instance": "C1_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        45.1,
+        2.170030648229737e-16
+      ]
+    },
+    {
+      "instance": "C1_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        48.3,
+        1.9582498238709015e-16
+      ]
+    },
+    {
+      "instance": "C1_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -20.544661432424157,
+        52.1,
+        2.0066775209085875e-16
+      ]
+    },
+    {
+      "instance": "C1_S1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.102552668702355,
+      "mass_g": 0.2441550384493135,
+      "center_mm": [
+        -20.544661432424157,
+        48.6,
+        1.1078630279768838e-15
+      ]
+    },
+    {
+      "instance": "C1_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -20.544661432424157,
+        43.1,
+        3.09948892328863e-17
+      ]
+    },
+    {
+      "instance": "C1_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -20.544661432424157,
+        54.1,
+        7.070742857756613e-17
+      ]
+    },
+    {
+      "instance": "C1_S1_Spacer45_1",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        -20.544661432424157,
+        46.699999999999996,
+        -2.816248382858062e-17
+      ]
+    },
+    {
+      "instance": "C1_S1_Spacer48_3",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018681,
+      "mass_g": 0.05324110084414665,
+      "center_mm": [
+        -20.544661432424157,
+        50.2,
+        1.0963874222067247e-16
+      ]
+    },
+    {
+      "instance": "D1_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        48.3,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        51.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -38.9264062193638,
+        55.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Pin",
+      "part": "PIN_D1.99_L10.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.72460372207638,
+      "mass_g": 0.2490381392182996,
+      "center_mm": [
+        -38.9264062193638,
+        51.9,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -38.9264062193638,
+        46.3,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -38.9264062193638,
+        57.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Spacer48_3",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679091,
+      "mass_g": 0.03549406722943086,
+      "center_mm": [
+        -38.9264062193638,
+        49.900000000000006,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "D1_S1_Spacer51_5",
+      "part": "SPACER_2mm_L2.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.535895377798512,
+      "mass_g": 0.05915677871571832,
+      "center_mm": [
+        -38.9264062193638,
+        53.5,
+        -16.94436362298146
+      ]
+    },
+    {
+      "instance": "A1_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        30.0,
+        29.5,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        30.0,
+        41.9,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S1_Pin",
+      "part": "PIN_D1.99_L15.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 47.897931109801625,
+      "mass_g": 0.37599875921194276,
+      "center_mm": [
+        30.0,
+        35.7,
+        8.660000000000002
+      ]
+    },
+    {
+      "instance": "A1_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        30.0,
+        27.500000000000004,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        30.0,
+        43.900000000000006,
+        8.66
+      ]
+    },
+    {
+      "instance": "A1_S1_Spacer29_5",
+      "part": "SPACER_2mm_L10.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 39.18665596455228,
+      "mass_g": 0.3076152493217354,
+      "center_mm": [
+        30.0,
+        35.7,
+        8.660000000000002
+      ]
+    },
+    {
+      "instance": "E1_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        29.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        51.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        55.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E1_S1_Pin",
+      "part": "PIN_D1.99_L29.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 90.19740273923674,
+      "mass_g": 0.7080496115030084,
+      "center_mm": [
+        -45.0,
+        42.5,
+        3.2760948550970593e-15
+      ]
+    },
+    {
+      "instance": "E1_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.0,
+        27.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E1_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.0,
+        57.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E1_S1_Spacer29_5",
+      "part": "SPACER_2mm_L20.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 75.35895377798512,
+      "mass_g": 0.5915677871571832,
+      "center_mm": [
+        -45.0,
+        40.5,
+        2.177823739770216e-15
+      ]
+    },
+    {
+      "instance": "E1_S1_Spacer51_5",
+      "part": "SPACER_2mm_L2.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.535895377798514,
+      "mass_g": 0.05915677871571833,
+      "center_mm": [
+        -45.0,
+        53.5,
+        1.554218221321753e-16
+      ]
+    },
+    {
+      "instance": "Chain2_L2_Side1",
+      "part": "SPN_L2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 466.47002649949377,
+      "mass_g": 0.4711347267644887,
+      "center_mm": [
+        -3.5002229720601274,
+        41.900000000000006,
+        -12.359053743117288
+      ]
+    },
+    {
+      "instance": "Chain2_L3_Side1",
+      "part": "SPN_L3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 384.1710264994937,
+      "mass_g": 0.3880127367644886,
+      "center_mm": [
+        -21.000222972060122,
+        45.1,
+        -16.689053743117288
+      ]
+    },
+    {
+      "instance": "Chain2_L4_Side1",
+      "part": "SPN_L4",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 687.496426499493,
+      "mass_g": 0.694371390764488,
+      "center_mm": [
+        7.270772725562747,
+        48.300000000000004,
+        -12.359053743117283
+      ]
+    },
+    {
+      "instance": "Chain2_L5_Side1",
+      "part": "SPN_L5",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 396.47002649949354,
+      "mass_g": 0.4004347267644885,
+      "center_mm": [
+        35.23331470365371,
+        51.5,
+        8.983924484807538
+      ]
+    },
+    {
+      "instance": "Chain2_L6_Side1",
+      "part": "SPN_L6",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 298.4700264994935,
+      "mass_g": 0.3014547267644884,
+      "center_mm": [
+        44.46231900603084,
+        54.7,
+        8.983924484807536
+      ]
+    },
+    {
+      "instance": "B2_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        41.900000000000006,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        45.1,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        -12.000445944120248,
+        48.300000000000004,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.23639950858021,
+      "mass_g": 0.22950573614235462,
+      "center_mm": [
+        -12.000445944120248,
+        45.100000000000016,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -12.000445944120248,
+        39.900000000000006,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -12.000445944120248,
+        50.30000000000001,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Spacer41_9",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679093,
+      "mass_g": 0.035494067229430874,
+      "center_mm": [
+        -12.000445944120248,
+        43.5,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "B2_S1_Spacer45_1",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679093,
+      "mass_g": 0.035494067229430874,
+      "center_mm": [
+        -12.000445944120248,
+        46.70000000000001,
+        -24.718107486234572
+      ]
+    },
+    {
+      "instance": "C2_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        48.300000000000004,
+        2.2419493923379424e-16
+      ]
+    },
+    {
+      "instance": "C2_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        51.5,
+        1.962948033285006e-16
+      ]
+    },
+    {
+      "instance": "C2_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        26.54199139524574,
+        55.300000000000004,
+        2.0431789940489326e-16
+      ]
+    },
+    {
+      "instance": "C2_S1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.102552668702355,
+      "mass_g": 0.2441550384493135,
+      "center_mm": [
+        26.54199139524574,
+        51.800000000000004,
+        1.1009199287889257e-15
+      ]
+    },
+    {
+      "instance": "C2_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        26.54199139524574,
+        46.300000000000004,
+        7.86623985404387e-17
+      ]
+    },
+    {
+      "instance": "C2_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        26.541991395245738,
+        57.300000000000004,
+        5.83907257368783e-17
+      ]
+    },
+    {
+      "instance": "C2_S1_Spacer48_3",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679096,
+      "mass_g": 0.0354940672294309,
+      "center_mm": [
+        26.54199139524574,
+        49.9,
+        2.0697236794945422e-17
+      ]
+    },
+    {
+      "instance": "C2_S1_Spacer51_5",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018685,
+      "mass_g": 0.053241100844146676,
+      "center_mm": [
+        26.54199139524574,
+        53.400000000000006,
+        1.3192166753741474e-16
+      ]
+    },
+    {
+      "instance": "D2_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        51.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        54.7,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        43.92463801206168,
+        58.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Pin",
+      "part": "PIN_D1.99_L10.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 31.10255266870233,
+      "mass_g": 0.24415503844931327,
+      "center_mm": [
+        43.92463801206168,
+        55.0,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        43.92463801206168,
+        49.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        43.92463801206168,
+        60.5,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Spacer51_5",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.521537226679089,
+      "mass_g": 0.03549406722943085,
+      "center_mm": [
+        43.92463801206168,
+        53.1,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "D2_S1_Spacer54_7",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018676,
+      "mass_g": 0.0532411008441466,
+      "center_mm": [
+        43.92463801206168,
+        56.599999999999994,
+        17.96784896961507
+      ]
+    },
+    {
+      "instance": "A2_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -30.0,
+        29.5,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153875,
+      "mass_g": 0.14796901398407922,
+      "center_mm": [
+        -30.0,
+        45.1,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S1_Pin",
+      "part": "PIN_D1.99_L18.6",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 57.850747963786375,
+      "mass_g": 0.45412837151572305,
+      "center_mm": [
+        -30.0,
+        37.3,
+        -8.659999999999998
+      ]
+    },
+    {
+      "instance": "A2_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -30.0,
+        27.499999999999996,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -30.0,
+        47.099999999999994,
+        -8.66
+      ]
+    },
+    {
+      "instance": "A2_S1_Spacer29_5",
+      "part": "SPACER_2mm_L13.6",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 51.24408856902991,
+      "mass_g": 0.40226609526688484,
+      "center_mm": [
+        -30.0,
+        37.29999999999999,
+        -8.659999999999998
+      ]
+    },
+    {
+      "instance": "E2_S1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        29.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E2_S1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        54.7,
+        3.3827107781547724e-16
+      ]
+    },
+    {
+      "instance": "E2_S1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        58.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "E2_S1_Pin",
+      "part": "PIN_D1.99_L32.0",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 99.52816853984744,
+      "mass_g": 0.7812961230378024,
+      "center_mm": [
+        45.0,
+        44.0,
+        3.628058351376448e-15
+      ]
+    },
+    {
+      "instance": "E2_S1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        45.0,
+        27.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E2_S1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        45.0,
+        60.5,
+        4.740331291609608e-17
+      ]
+    },
+    {
+      "instance": "E2_S1_Spacer29_5",
+      "part": "SPACER_2mm_L23.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 87.41638638246278,
+      "mass_g": 0.6862186331023328,
+      "center_mm": [
+        45.0,
+        42.1,
+        2.508228067472003e-15
+      ]
+    },
+    {
+      "instance": "E2_S1_Spacer54_7",
+      "part": "SPACER_2mm_L1.8",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6.782305840018678,
+      "mass_g": 0.05324110084414661,
+      "center_mm": [
+        45.0,
+        56.599999999999994,
+        1.8770180084664503e-16
+      ]
+    },
+    {
+      "instance": "Crank1",
+      "part": "SPN_CRANK",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 82.43013373792897,
+      "mass_g": 0.6470765498427423,
+      "center_mm": [
+        2.4812745860459318,
+        35.5,
+        -8.881784197001252e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        35.5,
+        1.858503224002235e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        38.7,
+        1.9849934774588774e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Bearing2",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        4.999999999999999,
+        41.900000000000006,
+        2.1375045830551713e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Pin",
+      "part": "PIN_D1.99_L9.4",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29.236399508580202,
+      "mass_g": 0.22950573614235456,
+      "center_mm": [
+        5.0,
+        38.7,
+        1.0657399271641676e-15
+      ]
+    },
+    {
+      "instance": "CrankPin1_Retainer0",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        5.0,
+        33.5,
+        1.076575370996296e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Retainer2",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        5.0,
+        43.900000000000006,
+        1.0840526273582649e-16
+      ]
+    },
+    {
+      "instance": "CrankPin1_Spacer35_5",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        5.0,
+        37.1,
+        5.555695251114554e-18
+      ]
+    },
+    {
+      "instance": "CrankPin1_Spacer38_7",
+      "part": "SPACER_2mm_L1.2",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4.5215372266790945,
+      "mass_g": 0.03549406722943089,
+      "center_mm": [
+        5.0,
+        40.300000000000004,
+        5.555695251114554e-18
+      ]
+    },
+    {
+      "instance": "Rail1_1",
+      "part": "GUIDE_RAIL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 547.192037334938,
+      "mass_g": 0.5526639577082874,
+      "center_mm": [
+        -23.0,
+        52.1,
+        -5.5
+      ]
+    },
+    {
+      "instance": "Wear1_1",
+      "part": "GUIDE_WEAR_STRIP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 85.00000000000001,
+      "mass_g": 0.7225,
+      "center_mm": [
+        -23.000000000000004,
+        52.1,
+        -4.549999999999999
+      ]
+    },
+    {
+      "instance": "Slider1_1",
+      "part": "GUIDE_SHOE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 163.98753312436676,
+      "mass_g": 0.16562740845561041,
+      "center_mm": [
+        -20.544661432424157,
+        52.1,
+        0.20195437646399395
+      ]
+    },
+    {
+      "instance": "RailSupport1_1__39_5",
+      "part": "RAIL_STANDOFF_L19.85",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 314.29749543573735,
+      "mass_g": 2.6715287112037673,
+      "center_mm": [
+        -39.5,
+        40.675,
+        -5.499999999999998
+      ]
+    },
+    {
+      "instance": "RailSupport1_1__6_5",
+      "part": "RAIL_STANDOFF_L19.85",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 314.2974954357373,
+      "mass_g": 2.671528711203767,
+      "center_mm": [
+        -6.5,
+        40.67499999999999,
+        -5.499999999999998
+      ]
+    },
+    {
+      "instance": "Stop1_1__1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        -41.0,
+        52.1,
+        -1.9999999999999987
+      ]
+    },
+    {
+      "instance": "Stop1_1_1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493808,
+      "mass_g": 0.06786395770828746,
+      "center_mm": [
+        -5.0,
+        52.1,
+        -1.9999999999999987
+      ]
+    },
+    {
+      "instance": "Rail2_1",
+      "part": "GUIDE_RAIL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 547.192037334938,
+      "mass_g": 0.5526639577082874,
+      "center_mm": [
+        23.000000000000004,
+        55.300000000000004,
+        -5.499999999999999
+      ]
+    },
+    {
+      "instance": "Wear2_1",
+      "part": "GUIDE_WEAR_STRIP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 85.0,
+      "mass_g": 0.7224999999999999,
+      "center_mm": [
+        23.0,
+        55.300000000000004,
+        -4.549999999999999
+      ]
+    },
+    {
+      "instance": "Slider2_1",
+      "part": "GUIDE_SHOE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 163.98753312436673,
+      "mass_g": 0.1656274084556104,
+      "center_mm": [
+        26.54199139524574,
+        55.300000000000004,
+        0.20195437646399306
+      ]
+    },
+    {
+      "instance": "RailSupport2_1_6_5",
+      "part": "RAIL_STANDOFF_L23.05",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.96510175283356,
+      "mass_g": 3.1022033648990854,
+      "center_mm": [
+        6.499999999999999,
+        42.27500000000001,
+        -5.499999999999997
+      ]
+    },
+    {
+      "instance": "RailSupport2_1_39_5",
+      "part": "RAIL_STANDOFF_L23.05",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.96510175283356,
+      "mass_g": 3.1022033648990854,
+      "center_mm": [
+        39.5,
+        42.27500000000001,
+        -5.499999999999997
+      ]
+    },
+    {
+      "instance": "Stop2_1__1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.1920373349381,
+      "mass_g": 0.06786395770828749,
+      "center_mm": [
+        5.0,
+        55.300000000000004,
+        -2.0
+      ]
+    },
+    {
+      "instance": "Stop2_1_1",
+      "part": "GUIDE_STOP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 67.19203733493809,
+      "mass_g": 0.06786395770828747,
+      "center_mm": [
+        41.0,
+        55.300000000000004,
+        -2.0
+      ]
+    },
+    {
+      "instance": "InputThroughShaft",
+      "part": "INPUT_SHAFT_D3p99_L110",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1262.4800304551804,
+      "mass_g": 9.910468239073166,
+      "center_mm": [
+        -0.1494360920221639,
+        0.0,
+        1.222550800029873e-14
+      ]
+    },
+    {
+      "instance": "MainBearing_29_5",
+      "part": "BRG_4x8x3_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 113.09733552923251,
+      "mass_g": 0.8878140839044751,
+      "center_mm": [
+        -1.7120022729853011e-15,
+        -29.5,
+        1.2267145247133207e-16
+      ]
+    },
+    {
+      "instance": "MainBearing29_5",
+      "part": "BRG_4x8x3_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 113.09733552923251,
+      "mass_g": 0.8878140839044751,
+      "center_mm": [
+        -1.7120022729853011e-15,
+        29.5,
+        1.2267145247133207e-16
+      ]
+    },
+    {
+      "instance": "DrivenGear_1",
+      "part": "DRV_GEAR_M1_Z22",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 719.1300378027111,
+      "mass_g": 0.7263213381807381,
+      "center_mm": [
+        0.004667764580954972,
+        -32.0,
+        -1.2750526148028021e-15
+      ]
+    },
+    {
+      "instance": "MotorPinion_1",
+      "part": "DRV_GEAR_M1_Z22",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 719.130037802711,
+      "mass_g": 0.726321338180738,
+      "center_mm": [
+        -21.995379746532116,
+        -32.0,
+        0.0006642921614341828
+      ]
+    },
+    {
+      "instance": "SpineMotor_1",
+      "part": "ENV_XL330_M077_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 18.0,
+      "center_mm": [
+        -22.0,
+        -15.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        -22.000000000000004,
+        -15.000000000000002,
+        -28.0
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Support_12__11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.7522023056942,
+      "mass_g": 1.0093937195984006,
+      "center_mm": [
+        -34.0,
+        -26.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Support_12_11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.75220230569417,
+      "mass_g": 1.0093937195984004,
+      "center_mm": [
+        -34.0,
+        -4.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Support12__11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.7522023056942,
+      "mass_g": 1.0093937195984006,
+      "center_mm": [
+        -10.0,
+        -26.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Support12_11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.75220230569418,
+      "mass_g": 1.0093937195984004,
+      "center_mm": [
+        -10.0,
+        -4.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -22.000000000000007,
+        -1.9999999999999993,
+        -22.0
+      ]
+    },
+    {
+      "instance": "SpineMotor_1_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -22.000000000000004,
+        -1.9999999999999993,
+        5.0
+      ]
+    },
+    {
+      "instance": "DrivenGear1",
+      "part": "DRV_GEAR_M1_Z22",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 719.1300378027111,
+      "mass_g": 0.7263213381807381,
+      "center_mm": [
+        0.0046677645809550415,
+        32.0,
+        -2.697857233868441e-15
+      ]
+    },
+    {
+      "instance": "MotorPinion1",
+      "part": "DRV_GEAR_M1_Z22",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 719.1300378027113,
+      "mass_g": 0.7263213381807384,
+      "center_mm": [
+        22.004620253467884,
+        32.0,
+        0.0006642921614349885
+      ]
+    },
+    {
+      "instance": "SpineMotor1",
+      "part": "ENV_XL330_M077_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 18.0,
+      "center_mm": [
+        22.0,
+        15.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        21.999999999999996,
+        15.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Support_12__11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.75220230569418,
+      "mass_g": 1.0093937195984004,
+      "center_mm": [
+        10.0,
+        4.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Support_12_11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.7522023056942,
+      "mass_g": 1.0093937195984006,
+      "center_mm": [
+        10.0,
+        26.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Support12__11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.7522023056942,
+      "mass_g": 1.0093937195984006,
+      "center_mm": [
+        34.0,
+        4.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Support12_11",
+      "part": "MOTOR_STANDOFF_L7p5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.75220230569421,
+      "mass_g": 1.0093937195984006,
+      "center_mm": [
+        34.0,
+        26.0,
+        -32.75
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.7946915566254,
+      "mass_g": 0.21088263847219163,
+      "center_mm": [
+        22.0,
+        28.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "SpineMotor1_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662537,
+      "mass_g": 0.2108826384721916,
+      "center_mm": [
+        22.0,
+        28.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "PelvisCross",
+      "part": "FRM_TORSO_CROSS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8477.50829765832,
+      "mass_g": 8.562283380634904,
+      "center_mm": [
+        -62.999999999999986,
+        2.842170943040401e-14,
+        9.500000000000002
+      ]
+    },
+    {
+      "instance": "TorsoBracket1__1",
+      "part": "FRM_OUTPUT_BRACKET_1",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2807.9548766928374,
+      "mass_g": 2.836034425459766,
+      "center_mm": [
+        -45.022905431372536,
+        -55.49999999999999,
+        -0.03356897058304398
+      ]
+    },
+    {
+      "instance": "TorsoPivotBearing1__1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        -55.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "TorsoBracket1_1",
+      "part": "FRM_OUTPUT_BRACKET_1",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2807.9548766928374,
+      "mass_g": 2.836034425459766,
+      "center_mm": [
+        -45.022905431372536,
+        55.50000000000001,
+        -0.03356897058304398
+      ]
+    },
+    {
+      "instance": "TorsoPivotBearing1_1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.0,
+        55.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "ThoraxCross",
+      "part": "FRM_TORSO_CROSS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8477.50829765832,
+      "mass_g": 8.562283380634904,
+      "center_mm": [
+        63.00000000000001,
+        2.842170943040401e-14,
+        9.500000000000002
+      ]
+    },
+    {
+      "instance": "TorsoBracket2__1",
+      "part": "FRM_OUTPUT_BRACKET_2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2807.954876692838,
+      "mass_g": 2.8360344254597663,
+      "center_mm": [
+        45.004055528095066,
+        -58.49999999999999,
+        -0.16523389887522555
+      ]
+    },
+    {
+      "instance": "TorsoPivotBearing2__1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        -58.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "TorsoBracket2_1",
+      "part": "FRM_OUTPUT_BRACKET_2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2807.954876692838,
+      "mass_g": 2.8360344254597663,
+      "center_mm": [
+        45.004055528095066,
+        58.50000000000001,
+        -0.16523389887522555
+      ]
+    },
+    {
+      "instance": "TorsoPivotBearing2_1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        45.0,
+        58.5,
+        3.2171892464886527e-16
+      ]
+    },
+    {
+      "instance": "ControllerTray",
+      "part": "CTRL_TRAY",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3101.5893831132507,
+      "mass_g": 3.132605276944383,
+      "center_mm": [
+        -3.552713678800501e-15,
+        1.7763568394002505e-15,
+        38.0
+      ]
+    },
+    {
+      "instance": "ControllerBeam_24",
+      "part": "CTRL_SUPPORT_BEAM",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 441.5893831132506,
+      "mass_g": 0.4460052769443831,
+      "center_mm": [
+        -24.0,
+        7.105427357601002e-15,
+        13.0
+      ]
+    },
+    {
+      "instance": "ControllerPost_24__11_5",
+      "part": "STANDOFF_OD5_ID2p2_L23",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.17342040412893,
+      "mass_g": 3.095474073435096,
+      "center_mm": [
+        -24.0,
+        -11.5,
+        25.5
+      ]
+    },
+    {
+      "instance": "ControllerPost_24_11_5",
+      "part": "STANDOFF_OD5_ID2p2_L23",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.17342040412893,
+      "mass_g": 3.095474073435096,
+      "center_mm": [
+        -24.0,
+        11.5,
+        25.5
+      ]
+    },
+    {
+      "instance": "ControllerBeam24",
+      "part": "CTRL_SUPPORT_BEAM",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 441.5893831132506,
+      "mass_g": 0.4460052769443831,
+      "center_mm": [
+        24.0,
+        7.105427357601002e-15,
+        13.0
+      ]
+    },
+    {
+      "instance": "ControllerPost24__11_5",
+      "part": "STANDOFF_OD5_ID2p2_L23",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.17342040412893,
+      "mass_g": 3.095474073435096,
+      "center_mm": [
+        24.0,
+        -11.5,
+        25.5
+      ]
+    },
+    {
+      "instance": "ControllerPost24_11_5",
+      "part": "STANDOFF_OD5_ID2p2_L23",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 364.17342040412893,
+      "mass_g": 3.095474073435096,
+      "center_mm": [
+        24.0,
+        11.5,
+        25.5
+      ]
+    },
+    {
+      "instance": "ControllerCandidate",
+      "part": "ENV_OpenRB150",
+      "role": "ENVELOPE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 10000.0,
+      "mass_g": 10,
+      "center_mm": [
+        0.0,
+        0.0,
+        43.0
+      ]
+    },
+    {
+      "instance": "ForeR_Motor",
+      "part": "ENV_XC330_M181_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 23.0,
+      "center_mm": [
+        63.0,
+        -40.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "ForeR_Motor_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        62.99999999999999,
+        -40.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "ForeR_Motor_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.7946915566254,
+      "mass_g": 0.21088263847219163,
+      "center_mm": [
+        63.0,
+        -27.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "ForeR_Motor_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662537,
+      "mass_g": 0.2108826384721916,
+      "center_mm": [
+        63.0,
+        -27.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "ForeR_CarrierPost_12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712825,
+      "mass_g": 1.73139061625559,
+      "center_mm": [
+        51.0,
+        -50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeR_CarrierPost_12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.6930136771282,
+      "mass_g": 1.7313906162555894,
+      "center_mm": [
+        51.0,
+        -30.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeR_CarrierPost12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712848,
+      "mass_g": 1.731390616255592,
+      "center_mm": [
+        75.0,
+        -50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeR_CarrierPost12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712836,
+      "mass_g": 1.731390616255591,
+      "center_mm": [
+        75.0,
+        -30.0,
+        -9.5
+      ]
+    },
+    {
+      "instance": "ForeR_OutputAdapter",
+      "part": "HIP_OUTPUT_ADAPTER_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 253.6737893003334,
+      "mass_g": 1.991339246007617,
+      "center_mm": [
+        63.0,
+        -56.0,
+        3.780500816611525e-16
+      ]
+    },
+    {
+      "instance": "ForeR_Segment1",
+      "part": "LEG_Forelegs_SEG1",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 678.7050397492402,
+      "mass_g": 0.6854920901467326,
+      "center_mm": [
+        70.25,
+        -60.0,
+        -12.557368354874356
+      ]
+    },
+    {
+      "instance": "ForeR_Segment2",
+      "part": "LEG_Forelegs_SEG2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 699.7050397492402,
+      "mass_g": 0.7067020901467326,
+      "center_mm": [
+        64.50961894323343,
+        -64.0,
+        -32.61473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_Segment3",
+      "part": "LEG_Forelegs_SEG3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 720.70503974924,
+      "mass_g": 0.7279120901467324,
+      "center_mm": [
+        59.26923788646686,
+        -68.0,
+        -53.538130468407516
+      ]
+    },
+    {
+      "instance": "ForeR_H_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        63.0,
+        -60.0,
+        1.6385908833497592e-16
+      ]
+    },
+    {
+      "instance": "ForeR_H_Pin",
+      "part": "LEG_PIN_D1p99_L5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.551276334351165,
+      "mass_g": 0.12207751922465664,
+      "center_mm": [
+        63.0,
+        -60.0,
+        6.220620436778481e-16
+      ]
+    },
+    {
+      "instance": "ForeR_H_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        63.0,
+        -63.0,
+        5.1079630627397504e-17
+      ]
+    },
+    {
+      "instance": "ForeR_H_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        63.0,
+        -57.0,
+        5.1079630627397504e-17
+      ]
+    },
+    {
+      "instance": "ForeR_K_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        77.5,
+        -60.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_K_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        77.5,
+        -64.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_K_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832104,
+      "mass_g": 0.21973953460438203,
+      "center_mm": [
+        77.5,
+        -62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_K_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869355,
+      "mass_g": 0.06436652108307443,
+      "center_mm": [
+        77.5,
+        -67.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_K_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869355,
+      "mass_g": 0.06436652108307443,
+      "center_mm": [
+        77.5,
+        -57.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_K_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992607,
+      "mass_g": 0.029578389357859194,
+      "center_mm": [
+        77.5,
+        -62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_A_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        51.519237886466854,
+        -64.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_A_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        51.519237886466854,
+        -68.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_A_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832104,
+      "mass_g": 0.21973953460438203,
+      "center_mm": [
+        51.519237886466854,
+        -66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_A_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        51.519237886466854,
+        -71.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_A_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        51.519237886466854,
+        -61.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_A_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992562,
+      "mass_g": 0.029578389357859163,
+      "center_mm": [
+        51.519237886466854,
+        -66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeR_FootPad",
+      "part": "FOOT_TPU",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 368.7946915566254,
+      "mass_g": 0.3724826384721917,
+      "center_mm": [
+        67.01923788646687,
+        -68.0,
+        -68.96152422706632
+      ]
+    },
+    {
+      "instance": "ForeR_FootClevis",
+      "part": "FOOT_CLEVIS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 181.41031948327955,
+      "mass_g": 0.18322442267811234,
+      "center_mm": [
+        67.01923788646687,
+        -72.0,
+        -66.96152422706632
+      ]
+    },
+    {
+      "instance": "ForeR_extension_Spring",
+      "part": "ForeR_extension_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86.40844262326034,
+      "mass_g": 0.5,
+      "center_mm": [
+        69.76634757729337,
+        -78.0,
+        -23.719657785542697
+      ]
+    },
+    {
+      "instance": "ForeR_extension_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571347,
+      "mass_g": 0.14187269060793506,
+      "center_mm": [
+        72.425,
+        -78.0,
+        -16.32457886133667
+      ]
+    },
+    {
+      "instance": "ForeR_extension_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        72.425,
+        -71.0,
+        -16.324578861336665
+      ]
+    },
+    {
+      "instance": "ForeR_extension_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        67.10769515458674,
+        -78.0,
+        -31.114736709748723
+      ]
+    },
+    {
+      "instance": "ForeR_extension_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        67.10769515458674,
+        -71.0,
+        -31.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_compression_Spring",
+      "part": "ForeR_compression_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 65.9482427203165,
+      "mass_g": 0.5,
+      "center_mm": [
+        71.50336663013171,
+        -82.0,
+        -25.228263038773846
+      ]
+    },
+    {
+      "instance": "ForeR_compression_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757135,
+      "mass_g": 0.1418726906079351,
+      "center_mm": [
+        74.60000000000001,
+        -82.0,
+        -20.091789367798977
+      ]
+    },
+    {
+      "instance": "ForeR_compression_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740469,
+      "mass_g": 0.48831007689862677,
+      "center_mm": [
+        74.60000000000001,
+        -73.0,
+        -20.091789367798974
+      ]
+    },
+    {
+      "instance": "ForeR_compression_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        68.4067332602634,
+        -82.0,
+        -30.36473670974872
+      ]
+    },
+    {
+      "instance": "ForeR_compression_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        68.4067332602634,
+        -73.0,
+        -30.364736709748716
+      ]
+    },
+    {
+      "instance": "ForeR_CompressionGuideRod",
+      "part": "COMPRESSION_GUIDE_ROD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.707963267949,
+      "mass_g": 0.12330751165339965,
+      "center_mm": [
+        69.436972016959,
+        -82.0,
+        -28.655850439880115
+      ]
+    },
+    {
+      "instance": "ForeR_CompressionSeatA",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.37970075452454,
+      "mass_g": 0.1756806509230176,
+      "center_mm": [
+        74.29021832101755,
+        -82.0,
+        -20.605633032123848
+      ]
+    },
+    {
+      "instance": "ForeR_CompressionSeatB",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524535,
+      "mass_g": 0.17568065092301757,
+      "center_mm": [
+        68.09695158128093,
+        -82.0,
+        -30.87858037407359
+      ]
+    },
+    {
+      "instance": "ForeL_Motor",
+      "part": "ENV_XC330_M181_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 23.0,
+      "center_mm": [
+        63.0,
+        40.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "ForeL_Motor_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        62.99999999999999,
+        40.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "ForeL_Motor_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.7946915566254,
+      "mass_g": 0.21088263847219163,
+      "center_mm": [
+        63.0,
+        53.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "ForeL_Motor_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662537,
+      "mass_g": 0.2108826384721916,
+      "center_mm": [
+        63.0,
+        53.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "ForeL_CarrierPost_12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.6930136771282,
+      "mass_g": 1.7313906162555894,
+      "center_mm": [
+        51.0,
+        30.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeL_CarrierPost_12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712825,
+      "mass_g": 1.73139061625559,
+      "center_mm": [
+        51.0,
+        50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeL_CarrierPost12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712836,
+      "mass_g": 1.731390616255591,
+      "center_mm": [
+        75.0,
+        30.0,
+        -9.5
+      ]
+    },
+    {
+      "instance": "ForeL_CarrierPost12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712848,
+      "mass_g": 1.731390616255592,
+      "center_mm": [
+        75.0,
+        50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "ForeL_OutputAdapter",
+      "part": "HIP_OUTPUT_ADAPTER_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 253.6737893003334,
+      "mass_g": 1.991339246007617,
+      "center_mm": [
+        63.0,
+        56.0,
+        3.780500816611525e-16
+      ]
+    },
+    {
+      "instance": "ForeL_Segment1",
+      "part": "LEG_Forelegs_SEG1",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 678.7050397492402,
+      "mass_g": 0.6854920901467326,
+      "center_mm": [
+        70.25,
+        60.0,
+        -12.557368354874356
+      ]
+    },
+    {
+      "instance": "ForeL_Segment2",
+      "part": "LEG_Forelegs_SEG2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 699.7050397492402,
+      "mass_g": 0.7067020901467326,
+      "center_mm": [
+        64.50961894323343,
+        64.0,
+        -32.61473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_Segment3",
+      "part": "LEG_Forelegs_SEG3",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 720.70503974924,
+      "mass_g": 0.7279120901467324,
+      "center_mm": [
+        59.26923788646686,
+        68.0,
+        -53.538130468407516
+      ]
+    },
+    {
+      "instance": "ForeL_H_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538755,
+      "mass_g": 0.14796901398407925,
+      "center_mm": [
+        63.0,
+        60.0,
+        1.6385908833497592e-16
+      ]
+    },
+    {
+      "instance": "ForeL_H_Pin",
+      "part": "LEG_PIN_D1p99_L5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.551276334351165,
+      "mass_g": 0.12207751922465664,
+      "center_mm": [
+        63.0,
+        60.0,
+        6.220620436778481e-16
+      ]
+    },
+    {
+      "instance": "ForeL_H_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        63.0,
+        57.0,
+        5.1079630627397504e-17
+      ]
+    },
+    {
+      "instance": "ForeL_H_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        63.0,
+        63.0,
+        5.1079630627397504e-17
+      ]
+    },
+    {
+      "instance": "ForeL_K_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        77.5,
+        60.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_K_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153876,
+      "mass_g": 0.14796901398407927,
+      "center_mm": [
+        77.5,
+        64.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_K_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832104,
+      "mass_g": 0.21973953460438203,
+      "center_mm": [
+        77.5,
+        62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_K_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869355,
+      "mass_g": 0.06436652108307443,
+      "center_mm": [
+        77.5,
+        57.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_K_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869355,
+      "mass_g": 0.06436652108307443,
+      "center_mm": [
+        77.5,
+        67.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_K_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992607,
+      "mass_g": 0.029578389357859194,
+      "center_mm": [
+        77.5,
+        62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_A_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        51.519237886466854,
+        64.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_A_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        51.519237886466854,
+        68.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_A_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832104,
+      "mass_g": 0.21973953460438203,
+      "center_mm": [
+        51.519237886466854,
+        66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_A_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        51.519237886466854,
+        61.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_A_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.19955682586936,
+      "mass_g": 0.06436652108307447,
+      "center_mm": [
+        51.519237886466854,
+        71.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_A_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992562,
+      "mass_g": 0.029578389357859163,
+      "center_mm": [
+        51.519237886466854,
+        66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "ForeL_FootPad",
+      "part": "FOOT_TPU",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 368.7946915566254,
+      "mass_g": 0.3724826384721917,
+      "center_mm": [
+        67.01923788646687,
+        68.0,
+        -68.96152422706632
+      ]
+    },
+    {
+      "instance": "ForeL_FootClevis",
+      "part": "FOOT_CLEVIS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 181.41031948327955,
+      "mass_g": 0.18322442267811234,
+      "center_mm": [
+        67.01923788646687,
+        72.0,
+        -66.96152422706632
+      ]
+    },
+    {
+      "instance": "ForeL_extension_Spring",
+      "part": "ForeL_extension_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86.40844262326034,
+      "mass_g": 0.5,
+      "center_mm": [
+        69.76634757729337,
+        78.0,
+        -23.719657785542697
+      ]
+    },
+    {
+      "instance": "ForeL_extension_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571347,
+      "mass_g": 0.14187269060793506,
+      "center_mm": [
+        72.425,
+        78.0,
+        -16.32457886133667
+      ]
+    },
+    {
+      "instance": "ForeL_extension_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        72.425,
+        71.0,
+        -16.324578861336665
+      ]
+    },
+    {
+      "instance": "ForeL_extension_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        67.10769515458674,
+        78.0,
+        -31.114736709748723
+      ]
+    },
+    {
+      "instance": "ForeL_extension_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        67.10769515458674,
+        71.0,
+        -31.11473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_compression_Spring",
+      "part": "ForeL_compression_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 65.9482427203165,
+      "mass_g": 0.5,
+      "center_mm": [
+        71.50336663013171,
+        82.0,
+        -25.228263038773846
+      ]
+    },
+    {
+      "instance": "ForeL_compression_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757135,
+      "mass_g": 0.1418726906079351,
+      "center_mm": [
+        74.60000000000001,
+        82.0,
+        -20.091789367798977
+      ]
+    },
+    {
+      "instance": "ForeL_compression_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740469,
+      "mass_g": 0.48831007689862677,
+      "center_mm": [
+        74.60000000000001,
+        73.0,
+        -20.091789367798974
+      ]
+    },
+    {
+      "instance": "ForeL_compression_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        68.4067332602634,
+        82.0,
+        -30.36473670974872
+      ]
+    },
+    {
+      "instance": "ForeL_compression_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.205105337404675,
+      "mass_g": 0.48831007689862665,
+      "center_mm": [
+        68.4067332602634,
+        73.0,
+        -30.364736709748716
+      ]
+    },
+    {
+      "instance": "ForeL_CompressionGuideRod",
+      "part": "COMPRESSION_GUIDE_ROD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.707963267949,
+      "mass_g": 0.12330751165339965,
+      "center_mm": [
+        69.436972016959,
+        82.0,
+        -28.655850439880115
+      ]
+    },
+    {
+      "instance": "ForeL_CompressionSeatA",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.37970075452454,
+      "mass_g": 0.1756806509230176,
+      "center_mm": [
+        74.29021832101755,
+        82.0,
+        -20.605633032123848
+      ]
+    },
+    {
+      "instance": "ForeL_CompressionSeatB",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524535,
+      "mass_g": 0.17568065092301757,
+      "center_mm": [
+        68.09695158128093,
+        82.0,
+        -30.87858037407359
+      ]
+    },
+    {
+      "instance": "HindR_Motor",
+      "part": "ENV_XC330_M181_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 23.0,
+      "center_mm": [
+        -63.0,
+        -40.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "HindR_Motor_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        -63.0,
+        -40.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "HindR_Motor_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -63.0,
+        -27.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "HindR_Motor_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -63.0,
+        -27.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "HindR_CarrierPost_12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712848,
+      "mass_g": 1.731390616255592,
+      "center_mm": [
+        -75.0,
+        -50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindR_CarrierPost_12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712836,
+      "mass_g": 1.731390616255591,
+      "center_mm": [
+        -75.0,
+        -30.0,
+        -9.5
+      ]
+    },
+    {
+      "instance": "HindR_CarrierPost12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712825,
+      "mass_g": 1.73139061625559,
+      "center_mm": [
+        -51.0,
+        -50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindR_CarrierPost12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.6930136771282,
+      "mass_g": 1.7313906162555894,
+      "center_mm": [
+        -51.0,
+        -30.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindR_OutputAdapter",
+      "part": "HIP_OUTPUT_ADAPTER_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 253.67378930033334,
+      "mass_g": 1.9913392460076165,
+      "center_mm": [
+        -63.0,
+        -56.0,
+        5.717236094098227e-16
+      ]
+    },
+    {
+      "instance": "HindR_Segment1",
+      "part": "LEG_HIND_THIGH",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 766.0575596238605,
+      "mass_g": 0.7737181352200991,
+      "center_mm": [
+        -54.540086571079655,
+        -60.0,
+        -14.652999886524267
+      ]
+    },
+    {
+      "instance": "HindR_Segment2",
+      "part": "LEG_Hindlegs_SEG2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 699.7050397492401,
+      "mass_g": 0.7067020901467325,
+      "center_mm": [
+        -61.49038105676658,
+        -64.0,
+        -32.614736709748726
+      ]
+    },
+    {
+      "instance": "HindR_Segment3",
+      "part": "LEG_HIND_DISTAL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 710.1153592325196,
+      "mass_g": 0.7172165128248448,
+      "center_mm": [
+        -66.16603207023978,
+        -68.0,
+        -54.51627159595221
+      ]
+    },
+    {
+      "instance": "HindR_Parallelogram",
+      "part": "LEG_HIND_COUPLER",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 380.47002649949343,
+      "mass_g": 0.3842747267644884,
+      "center_mm": [
+        -58.49038105676658,
+        -72.0,
+        -37.81088913245535
+      ]
+    },
+    {
+      "instance": "HindR_H_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -63.0,
+        -60.0,
+        3.077688566962185e-16
+      ]
+    },
+    {
+      "instance": "HindR_H_Pin",
+      "part": "LEG_PIN_D1p99_L5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.551276334351165,
+      "mass_g": 0.12207751922465664,
+      "center_mm": [
+        -63.0,
+        -60.0,
+        6.220620436778481e-16
+      ]
+    },
+    {
+      "instance": "HindR_H_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -63.0,
+        -63.0,
+        2.3642253810283495e-17
+      ]
+    },
+    {
+      "instance": "HindR_H_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -63.0,
+        -57.0,
+        2.3642253810283495e-17
+      ]
+    },
+    {
+      "instance": "HindR_K_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -48.5,
+        -60.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_K_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -48.5,
+        -64.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_K_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832094,
+      "mass_g": 0.21973953460438195,
+      "center_mm": [
+        -48.5,
+        -62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_K_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -48.5,
+        -67.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_K_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -48.5,
+        -57.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_K_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992545,
+      "mass_g": 0.02957838935785915,
+      "center_mm": [
+        -48.5,
+        -62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_A_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -74.48076211353315,
+        -64.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_A_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -74.48076211353315,
+        -68.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_A_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.99229740183211,
+      "mass_g": 0.21973953460438206,
+      "center_mm": [
+        -74.48076211353315,
+        -66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_A_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -74.48076211353315,
+        -71.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_A_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -74.48076211353315,
+        -61.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_A_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.767947688899261,
+      "mass_g": 0.029578389357859197,
+      "center_mm": [
+        -74.48076211353315,
+        -66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindR_P1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.5,
+        -60.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindR_P1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.5,
+        -72.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindR_P1_Pin",
+      "part": "LEG_PIN_D1p99_L17",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 52.87433953679396,
+      "mass_g": 0.41506356536383254,
+      "center_mm": [
+        -45.5,
+        -66.0,
+        -30.310889132455348
+      ]
+    },
+    {
+      "instance": "HindR_P1_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.5,
+        -75.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindR_P1_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.5,
+        -57.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindR_P1_Spacer",
+      "part": "LEG_SPACER_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 33.911529200093305,
+      "mass_g": 0.2662055042207324,
+      "center_mm": [
+        -45.5,
+        -66.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindR_P2_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -71.48076211353315,
+        -68.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_P2_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -71.48076211353315,
+        -72.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_P2_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.99229740183211,
+      "mass_g": 0.21973953460438206,
+      "center_mm": [
+        -71.48076211353315,
+        -70.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_P2_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -71.48076211353315,
+        -75.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_P2_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -71.48076211353315,
+        -65.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_P2_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.767947688899261,
+      "mass_g": 0.029578389357859197,
+      "center_mm": [
+        -71.48076211353315,
+        -70.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindR_FootPad",
+      "part": "FOOT_TPU",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 368.79469155662537,
+      "mass_g": 0.3724826384721916,
+      "center_mm": [
+        -58.98076211353313,
+        -68.0,
+        -68.96152422706632
+      ]
+    },
+    {
+      "instance": "HindR_FootClevis",
+      "part": "FOOT_CLEVIS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 181.41031948327952,
+      "mass_g": 0.18322442267811231,
+      "center_mm": [
+        -58.98076211353314,
+        -72.0,
+        -66.96152422706632
+      ]
+    },
+    {
+      "instance": "HindR_extension_Spring",
+      "part": "HindR_extension_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86.40844262326036,
+      "mass_g": 0.5,
+      "center_mm": [
+        -56.233652422706626,
+        -78.0,
+        -23.719657785542694
+      ]
+    },
+    {
+      "instance": "HindR_extension_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -53.574999999999996,
+        -78.0,
+        -16.32457886133667
+      ]
+    },
+    {
+      "instance": "HindR_extension_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -53.574999999999996,
+        -71.0,
+        -16.324578861336665
+      ]
+    },
+    {
+      "instance": "HindR_extension_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        -58.89230484541326,
+        -78.0,
+        -31.114736709748723
+      ]
+    },
+    {
+      "instance": "HindR_extension_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -58.89230484541326,
+        -71.0,
+        -31.11473670974872
+      ]
+    },
+    {
+      "instance": "HindR_compression_Spring",
+      "part": "HindR_compression_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 65.94824272031641,
+      "mass_g": 0.5,
+      "center_mm": [
+        -54.4966333698683,
+        -82.0,
+        -25.228263038773846
+      ]
+    },
+    {
+      "instance": "HindR_compression_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -51.4,
+        -82.0,
+        -20.091789367798977
+      ]
+    },
+    {
+      "instance": "HindR_compression_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -51.4,
+        -73.0,
+        -20.091789367798974
+      ]
+    },
+    {
+      "instance": "HindR_compression_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -57.5932667397366,
+        -82.0,
+        -30.36473670974872
+      ]
+    },
+    {
+      "instance": "HindR_compression_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -57.5932667397366,
+        -73.0,
+        -30.364736709748716
+      ]
+    },
+    {
+      "instance": "HindR_CompressionGuideRod",
+      "part": "COMPRESSION_GUIDE_ROD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.707963267948994,
+      "mass_g": 0.12330751165339959,
+      "center_mm": [
+        -56.563027983040996,
+        -82.0,
+        -28.65585043988012
+      ]
+    },
+    {
+      "instance": "HindR_CompressionSeatA",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524528,
+      "mass_g": 0.17568065092301755,
+      "center_mm": [
+        -51.70978167898246,
+        -82.0,
+        -20.605633032123848
+      ]
+    },
+    {
+      "instance": "HindR_CompressionSeatB",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524528,
+      "mass_g": 0.17568065092301755,
+      "center_mm": [
+        -57.90304841871906,
+        -82.0,
+        -30.87858037407359
+      ]
+    },
+    {
+      "instance": "HindL_Motor",
+      "part": "ENV_XC330_M181_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 23.0,
+      "center_mm": [
+        -63.0,
+        40.0,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "HindL_Motor_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        -63.0,
+        40.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "HindL_Motor_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -63.0,
+        53.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "HindL_Motor_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -63.0,
+        53.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "HindL_CarrierPost_12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712836,
+      "mass_g": 1.731390616255591,
+      "center_mm": [
+        -75.0,
+        30.0,
+        -9.5
+      ]
+    },
+    {
+      "instance": "HindL_CarrierPost_12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712848,
+      "mass_g": 1.731390616255592,
+      "center_mm": [
+        -75.0,
+        50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindL_CarrierPost12__10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.6930136771282,
+      "mass_g": 1.7313906162555894,
+      "center_mm": [
+        -51.0,
+        30.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindL_CarrierPost12_10",
+      "part": "MOTOR_CARRIER_POST_L35",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203.69301367712825,
+      "mass_g": 1.73139061625559,
+      "center_mm": [
+        -51.0,
+        50.0,
+        -9.499999999999996
+      ]
+    },
+    {
+      "instance": "HindL_OutputAdapter",
+      "part": "HIP_OUTPUT_ADAPTER_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 253.67378930033334,
+      "mass_g": 1.9913392460076165,
+      "center_mm": [
+        -63.0,
+        56.0,
+        5.717236094098227e-16
+      ]
+    },
+    {
+      "instance": "HindL_Segment1",
+      "part": "LEG_HIND_THIGH",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 766.0575596238605,
+      "mass_g": 0.7737181352200991,
+      "center_mm": [
+        -54.540086571079655,
+        60.0,
+        -14.652999886524267
+      ]
+    },
+    {
+      "instance": "HindL_Segment2",
+      "part": "LEG_Hindlegs_SEG2",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 699.7050397492401,
+      "mass_g": 0.7067020901467325,
+      "center_mm": [
+        -61.49038105676658,
+        64.0,
+        -32.614736709748726
+      ]
+    },
+    {
+      "instance": "HindL_Segment3",
+      "part": "LEG_HIND_DISTAL",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 710.1153592325196,
+      "mass_g": 0.7172165128248448,
+      "center_mm": [
+        -66.16603207023978,
+        68.0,
+        -54.51627159595221
+      ]
+    },
+    {
+      "instance": "HindL_Parallelogram",
+      "part": "LEG_HIND_COUPLER",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 380.47002649949343,
+      "mass_g": 0.3842747267644884,
+      "center_mm": [
+        -58.49038105676658,
+        72.0,
+        -37.81088913245535
+      ]
+    },
+    {
+      "instance": "HindL_H_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -63.0,
+        60.0,
+        3.077688566962185e-16
+      ]
+    },
+    {
+      "instance": "HindL_H_Pin",
+      "part": "LEG_PIN_D1p99_L5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.551276334351165,
+      "mass_g": 0.12207751922465664,
+      "center_mm": [
+        -63.0,
+        60.0,
+        6.220620436778481e-16
+      ]
+    },
+    {
+      "instance": "HindL_H_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -63.0,
+        57.0,
+        2.3642253810283495e-17
+      ]
+    },
+    {
+      "instance": "HindL_H_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -63.0,
+        63.0,
+        2.3642253810283495e-17
+      ]
+    },
+    {
+      "instance": "HindL_K_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -48.5,
+        60.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_K_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538762,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -48.5,
+        64.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_K_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.992297401832094,
+      "mass_g": 0.21973953460438195,
+      "center_mm": [
+        -48.5,
+        62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_K_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -48.5,
+        57.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_K_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -48.5,
+        67.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_K_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.7679476888992545,
+      "mass_g": 0.02957838935785915,
+      "center_mm": [
+        -48.5,
+        62.0,
+        -25.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_A_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -74.48076211353315,
+        64.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_A_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -74.48076211353315,
+        68.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_A_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.99229740183211,
+      "mass_g": 0.21973953460438206,
+      "center_mm": [
+        -74.48076211353315,
+        66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_A_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -74.48076211353315,
+        61.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_A_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -74.48076211353315,
+        71.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_A_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.767947688899261,
+      "mass_g": 0.029578389357859197,
+      "center_mm": [
+        -74.48076211353315,
+        66.0,
+        -40.114736709748726
+      ]
+    },
+    {
+      "instance": "HindL_P1_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.5,
+        60.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindL_P1_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.849555921538766,
+      "mass_g": 0.1479690139840793,
+      "center_mm": [
+        -45.5,
+        72.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindL_P1_Pin",
+      "part": "LEG_PIN_D1p99_L17",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 52.87433953679396,
+      "mass_g": 0.41506356536383254,
+      "center_mm": [
+        -45.5,
+        66.0,
+        -30.310889132455348
+      ]
+    },
+    {
+      "instance": "HindL_P1_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.5,
+        57.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindL_P1_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869358,
+      "mass_g": 0.06436652108307446,
+      "center_mm": [
+        -45.5,
+        75.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindL_P1_Spacer",
+      "part": "LEG_SPACER_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 33.911529200093305,
+      "mass_g": 0.2662055042207324,
+      "center_mm": [
+        -45.5,
+        66.0,
+        -30.31088913245535
+      ]
+    },
+    {
+      "instance": "HindL_P2_Bearing0",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -71.48076211353315,
+        68.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_P2_Bearing1",
+      "part": "BRG_2x4x2_PROVISIONAL",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.84955592153874,
+      "mass_g": 0.1479690139840791,
+      "center_mm": [
+        -71.48076211353315,
+        72.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_P2_Pin",
+      "part": "LEG_PIN_D1p99_L9",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27.99229740183211,
+      "mass_g": 0.21973953460438206,
+      "center_mm": [
+        -71.48076211353315,
+        70.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_P2_Retainer_1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -71.48076211353315,
+        65.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_P2_Retainer1",
+      "part": "COLLAR_2mm",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8.199556825869356,
+      "mass_g": 0.06436652108307445,
+      "center_mm": [
+        -71.48076211353315,
+        75.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_P2_Spacer",
+      "part": "LEG_SPACER_L1",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.767947688899261,
+      "mass_g": 0.029578389357859197,
+      "center_mm": [
+        -71.48076211353315,
+        70.0,
+        -45.31088913245536
+      ]
+    },
+    {
+      "instance": "HindL_FootPad",
+      "part": "FOOT_TPU",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 368.79469155662537,
+      "mass_g": 0.3724826384721916,
+      "center_mm": [
+        -58.98076211353313,
+        68.0,
+        -68.96152422706632
+      ]
+    },
+    {
+      "instance": "HindL_FootClevis",
+      "part": "FOOT_CLEVIS",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 181.41031948327952,
+      "mass_g": 0.18322442267811231,
+      "center_mm": [
+        -58.98076211353314,
+        72.0,
+        -66.96152422706632
+      ]
+    },
+    {
+      "instance": "HindL_extension_Spring",
+      "part": "HindL_extension_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86.40844262326036,
+      "mass_g": 0.5,
+      "center_mm": [
+        -56.233652422706626,
+        78.0,
+        -23.719657785542694
+      ]
+    },
+    {
+      "instance": "HindL_extension_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -53.574999999999996,
+        78.0,
+        -16.32457886133667
+      ]
+    },
+    {
+      "instance": "HindL_extension_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -53.574999999999996,
+        71.0,
+        -16.324578861336665
+      ]
+    },
+    {
+      "instance": "HindL_extension_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.07295421757137,
+      "mass_g": 0.14187269060793528,
+      "center_mm": [
+        -58.89230484541326,
+        78.0,
+        -31.114736709748723
+      ]
+    },
+    {
+      "instance": "HindL_extension_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -58.89230484541326,
+        71.0,
+        -31.11473670974872
+      ]
+    },
+    {
+      "instance": "HindL_compression_Spring",
+      "part": "HindL_compression_SpringEnvelope",
+      "role": "SPRING",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 65.94824272031641,
+      "mass_g": 0.5,
+      "center_mm": [
+        -54.4966333698683,
+        82.0,
+        -25.228263038773846
+      ]
+    },
+    {
+      "instance": "HindL_compression_AnchorA",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -51.4,
+        82.0,
+        -20.091789367798977
+      ]
+    },
+    {
+      "instance": "HindL_compression_StudA",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -51.4,
+        73.0,
+        -20.091789367798974
+      ]
+    },
+    {
+      "instance": "HindL_compression_AnchorB",
+      "part": "SPRING_ANCHOR_EYE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18.072954217571365,
+      "mass_g": 0.14187269060793523,
+      "center_mm": [
+        -57.5932667397366,
+        82.0,
+        -30.36473670974872
+      ]
+    },
+    {
+      "instance": "HindL_compression_StudB",
+      "part": "SPRING_ANCHOR_STUD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 62.20510533740466,
+      "mass_g": 0.48831007689862654,
+      "center_mm": [
+        -57.5932667397366,
+        73.0,
+        -30.364736709748716
+      ]
+    },
+    {
+      "instance": "HindL_CompressionGuideRod",
+      "part": "COMPRESSION_GUIDE_ROD_L20",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.707963267948994,
+      "mass_g": 0.12330751165339959,
+      "center_mm": [
+        -56.563027983040996,
+        82.0,
+        -28.65585043988012
+      ]
+    },
+    {
+      "instance": "HindL_CompressionSeatA",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524528,
+      "mass_g": 0.17568065092301755,
+      "center_mm": [
+        -51.70978167898246,
+        82.0,
+        -20.605633032123848
+      ]
+    },
+    {
+      "instance": "HindL_CompressionSeatB",
+      "part": "SPRING_SEAT_OD5",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22.379700754524528,
+      "mass_g": 0.17568065092301755,
+      "center_mm": [
+        -57.90304841871906,
+        82.0,
+        -30.87858037407359
+      ]
+    },
+    {
+      "instance": "KneeWindingMotor",
+      "part": "ENV_XC330_M181_T",
+      "role": "PURCHASED",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.0,
+      "mass_g": 23.0,
+      "center_mm": [
+        -82.0,
+        4.1796631515300017e-17,
+        -9.999999999999998
+      ]
+    },
+    {
+      "instance": "KneeWindingMotor_Saddle",
+      "part": "MOTOR_SADDLE",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1537.5893831132512,
+      "mass_g": 1.5529652769443836,
+      "center_mm": [
+        -82.0,
+        0.0,
+        -28.0
+      ]
+    },
+    {
+      "instance": "KneeWindingMotor_Strap_24",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -82.0,
+        13.0,
+        -22.0
+      ]
+    },
+    {
+      "instance": "KneeWindingMotor_Strap3",
+      "part": "MOTOR_STRAP",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 208.79469155662542,
+      "mass_g": 0.21088263847219166,
+      "center_mm": [
+        -82.0,
+        13.0,
+        5.0
+      ]
+    },
+    {
+      "instance": "KneeMotorDeck",
+      "part": "KNEE_MOTOR_DECK",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3914.384074669876,
+      "mass_g": 3.953527915416575,
+      "center_mm": [
+        -74.0,
+        1.7763568394002505e-15,
+        9.5
+      ]
+    },
+    {
+      "instance": "CommonKneeWheel",
+      "part": "WINDING_WHEEL_CORE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 599.4649656901445,
+      "mass_g": 0.605459615347046,
+      "center_mm": [
+        -82.0,
+        19.0,
+        6.438851715481147e-16
+      ]
+    },
+    {
+      "instance": "WheelFlange15",
+      "part": "WINDING_WHEEL_FLANGE_OD13",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 119.84979623904209,
+      "mass_g": 0.12104829420143251,
+      "center_mm": [
+        -82.0,
+        15.0,
+        -6.171396921603477e-17
+      ]
+    },
+    {
+      "instance": "WheelFlange23",
+      "part": "WINDING_WHEEL_FLANGE_OD13",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 119.84979623904209,
+      "mass_g": 0.12104829420143251,
+      "center_mm": [
+        -82.0,
+        23.0,
+        -2.0971172394980063e-17
+      ]
+    },
+    {
+      "instance": "Hind_1_Cable",
+      "part": "Hind-1_Cable_Source",
+      "role": "CABLE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.924783448957868,
+      "mass_g": 0.15,
+      "center_mm": [
+        -71.48363468441418,
+        -56.82531339633964,
+        2.906696643570649
+      ]
+    },
+    {
+      "instance": "Hind_1_ShellGuide",
+      "part": "Hind-1_ShellGuide_Source",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 16.74712132895123,
+      "mass_g": 0.14235053129608544,
+      "center_mm": [
+        -72.5211430483165,
+        -81.26190586115202,
+        11.453799142740566
+      ]
+    },
+    {
+      "instance": "Hind_1_HipGuide",
+      "part": "HIP_CABLE_GUIDE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 48.43079234774025,
+      "mass_g": 0.4116617349557921,
+      "center_mm": [
+        -63.0,
+        -82.0,
+        2.469447678600829e-16
+      ]
+    },
+    {
+      "instance": "Hind_1_CableAnchor",
+      "part": "CABLE_ANCHOR_TAB",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 105.64380550980766,
+      "mass_g": 0.10670024356490573,
+      "center_mm": [
+        -56.29422863405994,
+        -82.0,
+        -29.61473670974872
+      ]
+    },
+    {
+      "instance": "Hind1_Cable",
+      "part": "Hind1_Cable_Source",
+      "role": "CABLE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 15.924783448957895,
+      "mass_g": 0.15,
+      "center_mm": [
+        -71.48363468441418,
+        56.82531339633965,
+        2.9066966435706463
+      ]
+    },
+    {
+      "instance": "Hind1_ShellGuide",
+      "part": "Hind1_ShellGuide_Source",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 16.747121328951252,
+      "mass_g": 0.14235053129608566,
+      "center_mm": [
+        -72.5211430483165,
+        81.26190586115197,
+        11.45379914274056
+      ]
+    },
+    {
+      "instance": "Hind1_HipGuide",
+      "part": "HIP_CABLE_GUIDE",
+      "role": "HARDWARE",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 48.43079234774025,
+      "mass_g": 0.4116617349557921,
+      "center_mm": [
+        -63.0,
+        82.0,
+        2.469447678600829e-16
+      ]
+    },
+    {
+      "instance": "Hind1_CableAnchor",
+      "part": "CABLE_ANCHOR_TAB",
+      "role": "CUSTOM",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 105.64380550980766,
+      "mass_g": 0.10670024356490573,
+      "center_mm": [
+        -56.29422863405994,
+        82.0,
+        -29.61473670974872
+      ]
+    }
+  ]
+}
