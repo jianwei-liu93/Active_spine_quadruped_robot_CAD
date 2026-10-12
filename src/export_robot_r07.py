@@ -1,0 +1,493 @@
+"""Export and verify the r07 robot package from an already-open FreeCAD document.
+
+This module performs no document construction, mutation, or save. Call ``run``
+from the lead-owned FreeCAD session after the intended r07 build and checks.
+Exports and checks are evidence about the serialized CAD package only; they do
+not certify physical interfaces or release the design for fabrication.
+
+Runtime dependencies: adaptive_volume_r07.py plus occt_adaptive_volume_r07.cpp,
+a C++17 compiler and the installed matching OCCT development headers/libraries.
+The backend discovers the FreeCAD/snap installation, compiles reproducibly in
+reports/tmp, and fails closed if unavailable. README/API details are in
+reports/reviews/r07_assembly_volume_diagnostic.md. No binary is committed.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import math
+import re
+import traceback
+import uuid
+from pathlib import Path
+
+
+VOLUME_REL_TOL = 1e-6
+BBOX_ABS_TOL_MM = 1e-5
+MESH_LINEAR_DEFLECTION_MM = 0.1
+MESH_ANGULAR_DEFLECTION_RAD = 0.25
+
+
+def _shape(obj):
+    shape = getattr(obj, "Shape", None)
+    if shape is None:
+        raise ValueError(f"{getattr(obj, 'Name', obj)!s} has no Shape")
+    try:
+        if shape.isNull():
+            raise ValueError(f"{getattr(obj, 'Name', obj)!s} has a null Shape")
+    except AttributeError:
+        pass
+    if not shape.isValid():
+        raise ValueError(f"{getattr(obj, 'Name', obj)!s} has an invalid Shape")
+    return shape
+
+
+def _bbox(shape):
+    # Reparameterized STEP splines can have different pole hull bounds.
+    # Compare actual extrema without triangulation or shape-tolerance padding.
+    box = shape.optimalBoundingBox(False,False)
+    values = {
+        "XMin": float(box.XMin), "XMax": float(box.XMax),
+        "YMin": float(box.YMin), "YMax": float(box.YMax),
+        "ZMin": float(box.ZMin), "ZMax": float(box.ZMax),
+        "XLength": float(box.XLength), "YLength": float(box.YLength),
+        "ZLength": float(box.ZLength),
+    }
+    if not all(math.isfinite(value) for value in values.values()):
+        raise ValueError("Shape has non-finite bounding-box values")
+    return values
+
+
+def _solid_count(shape):
+    return len(shape.Solids)
+
+
+def _volume(shape):
+    value = float(shape.Volume)
+    if not math.isfinite(value) or value < 0:
+        raise ValueError("Shape has invalid volume")
+    return value
+
+
+def _relative_error(actual, expected):
+    if expected == 0:
+        return 0.0 if actual == 0 else math.inf
+    return abs(actual - expected) / abs(expected)
+
+
+def _check_shape(actual, expected, label, expected_solids=None, root=None, labels=None):
+    """Compare imported STEP geometry to the source with declared tolerances."""
+    if actual.isNull() or not actual.isValid():
+        raise ValueError(f"{label}: imported STEP shape is null or invalid")
+    actual_solids = _solid_count(actual)
+    if expected_solids is not None and actual_solids != expected_solids:
+        raise ValueError(
+            f"{label}: STEP solid count {actual_solids} != expected {expected_solids}"
+        )
+    if root is None:
+        raise ValueError("Adaptive STEP checks require an explicit package root")
+    from adaptive_volume_r07 import validate_solids
+    adaptive = validate_solids(actual, [expected], root, labels=labels,
+                               volume_rel_tol=VOLUME_REL_TOL,
+                               bbox_abs_tol_mm=BBOX_ABS_TOL_MM)
+    actual_volume = adaptive["volume_mm3"]
+    expected_volume = adaptive["expected_volume_mm3"]
+    volume_error = adaptive["volume_relative_error"]
+    if volume_error > VOLUME_REL_TOL:
+        raise ValueError(f"{label}: summed adaptive volume error {volume_error} exceeds {VOLUME_REL_TOL}")
+    actual_box = _bbox(actual)
+    expected_box = _bbox(expected)
+    bbox_errors = {
+        key: abs(actual_box[key] - expected_box[key])
+        for key in ("XMin", "XMax", "YMin", "YMax", "ZMin", "ZMax")
+    }
+    largest_bbox_error = max(bbox_errors.values(), default=0.0)
+    if largest_bbox_error > BBOX_ABS_TOL_MM:
+        raise ValueError(
+            f"{label}: bounding-box absolute error {largest_bbox_error:.12g} mm "
+            f"exceeds {BBOX_ABS_TOL_MM} mm"
+        )
+    return {
+        **adaptive,
+        "solid_count": actual_solids,
+        "expected_solid_count": expected_solids,
+        "volume_mm3": actual_volume,
+        "expected_volume_mm3": expected_volume,
+        "volume_relative_error": volume_error,
+        "bounding_box_mm": actual_box,
+        "expected_bounding_box_mm": expected_box,
+        "bounding_box_absolute_errors_mm": bbox_errors,
+        "maximum_bounding_box_absolute_error_mm": largest_bbox_error,
+    }
+
+
+def _safe_stem(value):
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "_", str(value).strip())
+    stem = stem.strip(" ._")
+    return stem or "UNSPECIFIED_PART_NUMBER"
+
+
+def _file_record(path, root):
+    path = Path(path)
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return {
+        "path": path.resolve().relative_to(Path(root).resolve()).as_posix(),
+        "bytes": path.stat().st_size,
+        "sha256": digest.hexdigest(),
+    }
+
+
+def _write_diagnostics(root, stage, exc, artifacts):
+    """Best-effort failure log; callers still receive the original exception."""
+    target = Path(root) / "reports" / "verification" / "r07_export_diagnostics.json"
+    try:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps({
+            "revision": "r07",
+            "status": "FAIL",
+            "stage": stage,
+            "error_type": type(exc).__name__,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+            "artifacts_written_before_failure": [str(p) for p in artifacts],
+            "note": "A failed export/round-trip run is not a package pass or fabrication release.",
+        }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    except Exception:
+        # Preserve the actionable export/verification exception if diagnostics
+        # cannot be written (for example, a read-only destination).
+        pass
+
+
+def _validate_part_step(source, path, Part, root):
+    source_shape = _shape(source)
+    expected_solids = _solid_count(source_shape)
+    if expected_solids != 1:
+        raise ValueError(
+            f"Part source {source.Name} has {expected_solids} solids; per-part export expects one"
+        )
+    Part.export([source], str(path))
+    if not path.is_file() or path.stat().st_size == 0:
+        raise IOError(f"Per-part STEP was not written: {path}")
+    imported = Part.read(str(path))
+    checks = _check_shape(imported, source_shape, f"part STEP {source.Name}", expected_solids, root=root, labels=[source.Name])
+    return checks, _file_record(path, root)
+
+
+def _validate_part_stl(source, path, MeshPart, root):
+    source_shape = _shape(source)
+    mesh = MeshPart.meshFromShape(
+        Shape=source_shape,
+        LinearDeflection=MESH_LINEAR_DEFLECTION_MM,
+        AngularDeflection=MESH_ANGULAR_DEFLECTION_RAD,
+        Relative=False,
+    )
+    mesh.write(str(path))
+    if not path.is_file() or path.stat().st_size == 0:
+        raise IOError(f"PA12 STL was not written: {path}")
+    # Read the serialized STL independently. Compare to the generated mesh;
+    # a mesh is an approximation of BRep, whose discrepancy is reported below.
+    import Mesh
+    imported = Mesh.Mesh(str(path))
+    if not imported.isSolid() or imported.CountFacets != mesh.CountFacets:
+        raise ValueError(f"PA12 STL {source.Name}: mesh is open or facet count changed")
+    mesh_volume = abs(float(mesh.Volume))
+    imported_volume = abs(float(imported.Volume))
+    mesh_volume_error = _relative_error(imported_volume, mesh_volume)
+    if mesh_volume_error > VOLUME_REL_TOL:
+        raise ValueError(f"PA12 STL {source.Name}: serialized mesh volume changed {mesh_volume_error}")
+    mesh_box_error = max(abs(getattr(mesh.BoundBox, key)-getattr(imported.BoundBox, key))
+                         for key in ("XMin", "XMax", "YMin", "YMax", "ZMin", "ZMax"))
+    if mesh_box_error > BBOX_ABS_TOL_MM:
+        raise ValueError(f"PA12 STL {source.Name}: serialized mesh bounds changed {mesh_box_error} mm")
+    record = _file_record(path, root)
+    record["stl_geometry_check"] = {
+        "watertight": True,
+        "facet_count": imported.CountFacets,
+        "mesh_volume_mm3": imported_volume,
+        "generated_mesh_volume_mm3": mesh_volume,
+        "serialized_mesh_volume_relative_error": mesh_volume_error,
+        "serialized_mesh_bbox_max_error_mm": mesh_box_error,
+        "source_brep_volume_mm3": _volume(source_shape),
+        "mesh_to_brep_volume_relative_difference": _relative_error(imported_volume, _volume(source_shape)),
+        "note": "Source default Shape.Volume is a raw diagnostic; BRep-to-mesh difference is not an exact-volume certification. STEP acceptance uses adaptive per-solid volumes.",
+    }
+    return record
+
+
+def _clean_roundtrip(shape, App, original_doc, root):
+    """Place imported assembly shape in a disposable clean Part::Feature doc."""
+    name = "R07_STEP_Roundtrip_" + uuid.uuid4().hex[:12]
+    temp_doc = App.newDocument(name)
+    try:
+        feature = temp_doc.addObject("Part::Feature", "ImportedRobotSTEP")
+        feature.Label = "Imported r07 robot STEP for clean-document round-trip"
+        feature.Shape = shape.copy()
+        temp_doc.recompute()
+        imported_shape = _shape(feature)
+        if _solid_count(imported_shape) != _solid_count(shape):
+            raise ValueError("Clean-document round-trip changed the STEP solid count")
+        _check_shape(imported_shape, shape, "clean-document round-trip", _solid_count(shape), root=root)
+        return {
+            "temporary_document": name,
+            "feature_type": feature.TypeId,
+            "solid_count": _solid_count(imported_shape),
+            "closed_without_save": True,
+        }
+    finally:
+        App.closeDocument(temp_doc.Name)
+        if original_doc is not None:
+            try:
+                if App.getDocument(original_doc.Name) is not None:
+                    App.setActiveDocument(original_doc.Name)
+            except Exception:
+                pass
+
+
+def run(doc, root):
+    """Export and validate the open r07 assembly without changing or saving it.
+
+    Raises on the first export/check failure and writes a best-effort diagnostic
+    record. Success writes assembly/per-part STEP, PA12-only STL, BOM/mass data,
+    and a SHA-256 package manifest beneath ``root``.
+    """
+    import FreeCAD as App
+    import Import
+    import MeshPart
+    import Part
+
+    from package_bom_r02 import build_bom
+
+    root = Path(root).resolve()
+    artifacts = []
+    stage = "invalidate_previous_success_manifest"
+    try:
+        # Avoid leaving an older success manifest that could be mistaken for
+        # the result of a run that fails partway through.
+        previous_manifest = root / "reports" / "package_manifest_r07.json"
+        if previous_manifest.exists():
+            previous_manifest.unlink()
+        previous_diagnostics = root / "reports" / "verification" / "r07_export_diagnostics.json"
+        if previous_diagnostics.exists():
+            previous_diagnostics.unlink()
+
+        stage = "enumerate_instances"
+        links = [obj for obj in doc.Objects if getattr(obj, "TypeId", None) == "App::Link"]
+        if len(links) != 486:
+            raise ValueError(f"Frozen r07 requires 486 physical App::Link instances; found {len(links)}")
+        link_sources = {}
+        source_objects = {}
+        instance_shapes = {}
+        for link in links:
+            source = getattr(link, "LinkedObject", None)
+            if source is None:
+                raise ValueError(f"App::Link {link.Name} has no LinkedObject")
+            source_name = str(source.Name)
+            link_sources.setdefault(source_name, []).append(link)
+            source_objects[source_name] = source
+            link_shape = _shape(link)
+            source_shape = _shape(source)
+            if _solid_count(link_shape) != 1:
+                raise ValueError(f"Physical instance {link.Name} is not exactly one solid")
+            if _solid_count(source_shape) != 1:
+                raise ValueError(f"Native definition {source_name} is not exactly one solid")
+            instance_shapes[link.Name] = link_shape
+
+        stage = "prepare_output_directories"
+        assembly_dir = root / "exports" / "step" / "r07"
+        parts_dir = assembly_dir / "parts"
+        stl_dir = root / "exports" / "print" / "r07"
+        assembly_dir.mkdir(parents=True, exist_ok=True)
+        parts_dir.mkdir(parents=True, exist_ok=True)
+        stl_dir.mkdir(parents=True, exist_ok=True)
+        assembly_path = assembly_dir / "flexor_r07_robot.step"
+
+        stage = "compile_and_verify_adaptive_volume_backend"
+        from adaptive_volume_r07 import backend_metadata
+        volume_backend = backend_metadata(root)
+        dependency_readme = assembly_dir / "README_volume_validation.md"
+        dependency_readme.write_text(
+            "# r07 STEP volume validation dependencies\n\n"
+            "Validation uses src/adaptive_volume_r07.py and src/occt_adaptive_volume_r07.cpp. "
+            "Build requires a C++17 compiler and OCCT development headers/libraries matching the FreeCAD runtime exactly.\n\n"
+            "Prepare on the host (the snap runtime may lack a compiler):\n\n"
+            "```sh\npython src/adaptive_volume_r07.py --prepare . --occt-root /snap/freecad/current/usr\n```\n\n"
+            "The helper is reproducibly compiled under reports/tmp/adaptive_volume_r07; source/header/binary hashes "
+            "and kernel version are verified at runtime. Missing dependencies fail closed. "
+            "No compiled helper is included as a source replacement.\n\n"
+            "Every physical solid must independently pass one-to-one placed bounds (1e-5 mm) and "
+            "adaptive volume with qualified GK/domain refinement including estimated numerical margin (1e-6 relative). "
+            "Both GK and Gauss run at eps1e-8 and1e-10; GK refines to1e-12 when needed for convergence. Coarse GK error above2.5e-7 triggers quadrature on unchanged original boundary domains at8/order31 and16/order61, requiring1e-8 convergence and retaining all coarse algorithm deviations in its numerical margin. Raw Shape.Volume is diagnostic only. "
+            "Kernel error estimates are numerical evidence, not certified mathematical bounds.\n\n"
+            "This dependency note does not certify export success; inspect reports/package_manifest_r07.json "
+            "and the current export diagnostics. Details: reports/reviews/r07_assembly_volume_diagnostic.md.\n",
+            encoding="utf-8",
+        )
+        artifacts.append(dependency_readme)
+
+        stage = "assert_surface_curve_export_setting"
+        # The repaired native spring topology requires explicit pcurves. The
+        # lead applies source normalization before calling this exporter; export
+        # must always compare against the actual native document, never a hidden
+        # repaired copy. Leave the volume and bounds gates unchanged.
+        if not App.ParamGet("User parameter:BaseApp/Preferences/Mod/Part/STEP").GetBool("WriteSurfaceCurveMode", True):
+            raise ValueError("r07 requires STEP WriteSurfaceCurveMode=True (explicit pcurves)")
+        Part.setStaticValue("write.surfacecurve.mode", 1)
+
+        stage = "export_assembly_step"
+        # Import.export preserves App::Link instances in the installed exporter;
+        # Part.export on these links was observed to drop assembly instances.
+        Import.export(links, str(assembly_path))
+        if not assembly_path.is_file() or assembly_path.stat().st_size == 0:
+            raise IOError(f"Assembly STEP was not written: {assembly_path}")
+        artifacts.append(assembly_path)
+
+        stage = "validate_assembly_step"
+        assembly_shape = Part.read(str(assembly_path))
+        raw_native_link_volume_sum = math.fsum(_volume(shape) for shape in instance_shapes.values())
+        # Sum placements' actual world-coordinate extents without fusing parts.
+        boxes = [_bbox(shape) for shape in instance_shapes.values()]
+        expected_box = {
+            "XMin": min(box["XMin"] for box in boxes),
+            "XMax": max(box["XMax"] for box in boxes),
+            "YMin": min(box["YMin"] for box in boxes),
+            "YMax": max(box["YMax"] for box in boxes),
+            "ZMin": min(box["ZMin"] for box in boxes),
+            "ZMax": max(box["ZMax"] for box in boxes),
+        }
+        expected_box.update({
+            "XLength": expected_box["XMax"] - expected_box["XMin"],
+            "YLength": expected_box["YMax"] - expected_box["YMin"],
+            "ZLength": expected_box["ZMax"] - expected_box["ZMin"],
+        })
+        assembly_checks = _check_shape(
+            assembly_shape,
+            # A Part compound of physical instances gives the expected aggregate
+            # volume and world bounding box without altering the source doc.
+            Part.makeCompound(list(instance_shapes.values())),
+            "assembly STEP",
+            expected_solids=len(links),
+            root=root, labels=list(instance_shapes),
+        )
+        expected_volume = assembly_checks["expected_volume_mm3"]
+        if _relative_error(assembly_checks["volume_mm3"], expected_volume) > VOLUME_REL_TOL:
+            raise ValueError("Assembly STEP adaptive volume differs from consistently summed native solids")
+        # Make the explicit pre-export expectations visible in the report.
+        assembly_checks["raw_native_link_volume_sum_mm3_diagnostic_only"] = raw_native_link_volume_sum
+        assembly_checks["expected_volume_mm3"] = expected_volume
+        assembly_checks["expected_bounding_box_mm"] = expected_box
+
+        stage = "clean_document_roundtrip"
+        roundtrip = _clean_roundtrip(assembly_shape, App, doc, root)
+
+        stage = "export_unique_definition_steps_and_pa12_stls"
+        # Filenames are PartNumber-based; append the native source name only
+        # when distinct definitions share a PartNumber, preventing overwrite.
+        pn_by_source = {}
+        sources_by_pn = {}
+        for source_name, source in source_objects.items():
+            pn = str(getattr(source, "PartNumber", "") or "UNSPECIFIED_PART_NUMBER").strip()
+            pn = pn or "UNSPECIFIED_PART_NUMBER"
+            pn_by_source[source_name] = pn
+            sources_by_pn.setdefault(pn, []).append(source_name)
+
+        part_rows = []
+        allocated_stems = set()
+        for source_name in sorted(source_objects):
+            source = source_objects[source_name]
+            pn = pn_by_source[source_name]
+            stem = _safe_stem(pn)
+            if len(sources_by_pn[pn]) > 1:
+                stem += "__" + _safe_stem(source_name)
+            if stem.casefold() in allocated_stems:
+                stem += "__" + hashlib.sha256(source_name.encode("utf-8")).hexdigest()[:12]
+            if stem.casefold() in allocated_stems:
+                raise ValueError(f"Per-part filename collision for {source_name}")
+            allocated_stems.add(stem.casefold())
+            row_files = []
+
+            step_path = parts_dir / f"{stem}.step"
+            part_checks, step_record = _validate_part_step(source, step_path, Part, root)
+            artifacts.append(step_path)
+            row_files.append(step_record)
+
+            material = str(getattr(source, "MaterialName", "")).strip().casefold()
+            if material == "pa12":
+                stl_path = stl_dir / f"{stem}.stl"
+                stl_record = _validate_part_stl(source, stl_path, MeshPart, root)
+                artifacts.append(stl_path)
+                row_files.append(stl_record)
+
+            part_rows.append({
+                "part_number": pn,
+                "native_source": source_name,
+                "quantity": len(link_sources[source_name]),
+                "files": [record["path"] for record in row_files],
+                "file_geometry_checks": {record["path"]: record["stl_geometry_check"] for record in row_files if "stl_geometry_check" in record},
+                "bytes": sum(record["bytes"] for record in row_files),
+                "sha256": {record["path"]: record["sha256"] for record in row_files},
+                "step_geometry_check": part_checks,
+            })
+
+        stage = "build_bom_and_mass_envelope"
+        mass_report = build_bom(doc, root, revision="r07")
+        bom_paths = [
+            root / "bom" / "bom_r07.csv",
+            root / "bom" / "instances_r07.csv",
+            root / "reports" / "verification" / "r07_mass_envelope.json",
+        ]
+        for path in bom_paths:
+            if not path.is_file():
+                raise IOError(f"Expected BOM/mass output was not written: {path}")
+            artifacts.append(path)
+
+        stage = "write_package_manifest"
+        assembly_record = _file_record(assembly_path, root)
+        bom_records = [_file_record(path, root) for path in bom_paths]
+        manifest = {
+            "revision": "r07",
+            "status": "EXPORTS_AND_STEP_ROUNDTRIP_VALIDATED_NO_FABRICATION_RELEASE",
+            "assembly_step": assembly_record,
+            "assembly_geometry_check": assembly_checks,
+            "clean_document_roundtrip": roundtrip,
+            "physical_link_count": len(links),
+            "unique_used_definition_count": len(source_objects),
+            "parts": part_rows,
+            "bom_and_mass_files": bom_records,
+            "bom_mass_summary": {
+                "status": mass_report.get("status"),
+                "instance_count": mass_report.get("instance_count"),
+                "part_number_count": mass_report.get("part_number_count"),
+                "known_purchased_mass_g": mass_report.get("known_purchased_mass_g"),
+                "all_geometry_mass_estimate_g": mass_report.get("all_geometry_mass_estimate_g"),
+                "unknown_mass_instance_count": mass_report.get("unknown_mass_instance_count"),
+                "actual_assembled_bbox_mm": mass_report.get("actual_assembled_bbox_mm"),
+            },
+            "export_settings": {
+                "volume_relative_tolerance": VOLUME_REL_TOL,
+                "write_surfacecurve_mode": 1,
+                "adaptive_volume_backend": volume_backend,
+                "volume_acceptance": "every one-to-one placed solid must pass strict adaptive volume with qualified GK/domain refinement including estimated numerical margin; aggregate cancellation is insufficient",
+                "bbox_absolute_tolerance_mm": BBOX_ABS_TOL_MM,
+                "pa12_stl_linear_deflection_mm": MESH_LINEAR_DEFLECTION_MM,
+                "pa12_stl_angular_deflection_rad": MESH_ANGULAR_DEFLECTION_RAD,
+                "pa12_selection": "unique used native definitions with MaterialName casefolded to PA12",
+            },
+            "limitations": [
+                "STEP and STL validity checks concern serialized CAD geometry only.",
+                "Motor output splines, mounting datums, fasteners, and torque interfaces remain provisional or unknown.",
+                "Bearing/shaft fits, spring specifications, cable terminations/guides, and structural loads remain unresolved.",
+                "OpenRB-150 mounting and wiring interfaces remain unresolved; its footprint alone is not a mount definition.",
+                "No physical build, load validation, or fabrication release is claimed.",
+            ],
+        }
+        manifest_path = root / "reports" / "package_manifest_r07.json"
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        artifacts.append(manifest_path)
+        return manifest
+    except Exception as exc:
+        _write_diagnostics(root, stage, exc, artifacts)
+        raise

@@ -259,57 +259,13 @@ def spring_shape(length,kind,free_length):
     coaxial end tori are deliberately omitted on extension: their tangent
     contacts with tightly pitched helix wire produced invalid OCC unions.
     """
-    import FreeCAD as App, Part
-    if kind=='extension':
+    if kind == 'extension':
         from spring_wire_r03 import shape
-        return shape(length,free_length)
-    V=App.Vector
-    if kind not in ('extension','compression') or length<=4:
-        raise ValueError('Invalid spring type or installed eye/seat length')
-    if kind=='compression' and length<8:
-        raise ValueError('Compression spring violates assumed 7mm solid + 1mm margin')
-    radius,wire=1.75,.5
-    z0,z1=(2.0,length-2.0) if kind=='extension' else (.25,length-.25)
-    turns=max(1,round((free_length-4)/wire)) if kind=='extension' else 12
-    pitch=(z1-z0)/turns
-    if pitch<wire-1e-9:
-        raise ValueError('Assumed coil count causes intersecting wire; revise spring data')
-    path=Part.Wire(Part.makeHelix(pitch,z1-z0,radius).Edges)
-    # Helix tangent at its first point has a pitch component along the axis.
-    tangent=V(0,radius,pitch/math.tau)
-    section=Part.Wire([Part.makeCircle(wire/2,V(radius,0,0),tangent)])
-    solid=path.makePipeShell([section],True,True)
-    # Construct in the helix's local frame, then move the completed sweep.
-    # Moving the path before re-wrapping its Edges loses its location context
-    # in this OCC build and leaves the hooks disconnected from the coil.
-    solid.translate(V(0,0,z0))
-    if not solid.isValid() or len(solid.Solids)!=1:
-        raise RuntimeError(kind+': helix sweep itself is invalid or disconnected')
-    if kind=='compression':
-        for z in (z0,z1):
-            solid=solid.fuse(Part.makeTorus(radius,wire/2,V(0,0,z),V(0,0,1)))
-    if kind=='extension':
-        for z,end in ((0,z0),(length,z1)):
-            # End eyelet planes contain the spring axis, permitting transverse
-            # pivot studs through their centers; connectors are real round wire.
-            eye=Part.makeTorus(1.25,wire/2,V(0,0,z),V(0,1,0))
-            a=V(1.25,0,z);d=V(radius,0,end)-a
-            # Join the bridge to the helix FIRST, with finite penetration past
-            # both centerline endpoints. Do not fuse disconnected eyelets first
-            # or rely on exact end-face/tangent contacts to repair a compound.
-            unit=d/d.Length;overlap=.15
-            bridge=Part.makeCylinder(wire/2,d.Length+2*overlap,a-unit*overlap,d)
-            solid=solid.fuse(bridge).removeSplitter()
-            if not solid.isValid() or len(solid.Solids)!=1:
-                raise RuntimeError('extension: hook bridge union failed at eye '+str(z))
-            solid=solid.fuse(eye).removeSplitter()
-            if not solid.isValid() or len(solid.Solids)!=1:
-                raise RuntimeError('extension: closed eye union failed at eye '+str(z))
-    solid=solid.removeSplitter()
-    if not solid.isValid() or len(solid.Solids)!=1:
-        raise RuntimeError('Helical spring wire did not form one valid solid; inspect source')
-    from spring_normalization_r07 import normalize
-    return normalize(solid,length)
+    elif kind == 'compression':
+        from compression_spring_r07 import shape
+    else:
+        raise ValueError('Invalid spring kind')
+    return shape(length, free_length)
 
 
 def _compression_seat_source(b):

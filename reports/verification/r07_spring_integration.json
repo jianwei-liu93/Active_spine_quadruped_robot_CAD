@@ -1,0 +1,104 @@
+{
+  "status": "PASS_NATIVE_SOURCES",
+  "scope": "Explicit neutral wire regeneration in the canonical document using qualified compression generator and existing extension generator; no STEP normalization",
+  "sources": [
+    {
+      "instance": "hindR_extension_Spring",
+      "source": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+      "kind": "extension",
+      "length_mm": 25.611379556424005,
+      "free_length_mm": 18.0,
+      "old_raw_volume_mm3": 64.82499842474894,
+      "new_raw_volume_mm3": 64.82499831004118,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 1.4654943925052066e-14
+    },
+    {
+      "instance": "hindR_compression_Spring",
+      "source": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+      "kind": "compression",
+      "length_mm": 22.354807663727144,
+      "free_length_mm": 26.8,
+      "old_raw_volume_mm3": 30.068448687676522,
+      "new_raw_volume_mm3": 30.068611067465476,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 1.3322676295501878e-15
+    },
+    {
+      "instance": "hindL_extension_Spring",
+      "source": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "kind": "extension",
+      "length_mm": 25.611379556424005,
+      "free_length_mm": 18.0,
+      "old_raw_volume_mm3": 64.8249983100412,
+      "new_raw_volume_mm3": 64.82499831004118,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 1.4654943925052066e-14
+    },
+    {
+      "instance": "hindL_compression_Spring",
+      "source": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "kind": "compression",
+      "length_mm": 22.354807663727144,
+      "free_length_mm": 26.8,
+      "old_raw_volume_mm3": 30.06865899368338,
+      "new_raw_volume_mm3": 30.068611067465476,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 1.3322676295501878e-15
+    },
+    {
+      "instance": "foreR_extension_Spring",
+      "source": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "kind": "extension",
+      "length_mm": 17.591738299306314,
+      "free_length_mm": 13.0,
+      "old_raw_volume_mm3": 43.17752758648248,
+      "new_raw_volume_mm3": 43.1775275864825,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 3.1086244689504383e-15
+    },
+    {
+      "instance": "foreR_compression_Spring",
+      "source": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "kind": "compression",
+      "length_mm": 17.53863375370597,
+      "free_length_mm": 19.8,
+      "old_raw_volume_mm3": 29.837277466398085,
+      "new_raw_volume_mm3": 29.789233371317273,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 7.105427357601002e-15
+    },
+    {
+      "instance": "foreL_extension_Spring",
+      "source": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+      "kind": "extension",
+      "length_mm": 17.591738299306314,
+      "free_length_mm": 13.0,
+      "old_raw_volume_mm3": 43.17752741758982,
+      "new_raw_volume_mm3": 43.1775275864825,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 3.1086244689504383e-15
+    },
+    {
+      "instance": "foreL_compression_Spring",
+      "source": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+      "kind": "compression",
+      "length_mm": 17.53863375370597,
+      "free_length_mm": 19.8,
+      "old_raw_volume_mm3": 29.89795182629611,
+      "new_raw_volume_mm3": 29.789233371317273,
+      "valid": true,
+      "solids": 1,
+      "bounds_max_difference_mm": 7.105427357601002e-15
+    }
+  ],
+  "seconds": 60.93549425600213,
+  "native_sha256": "cea39190bd1265a7a9be2eddcd061a4abc85e19076e15e1514aa318cdffbb227"
+}
