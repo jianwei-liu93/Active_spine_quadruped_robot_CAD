@@ -16,7 +16,8 @@ Both branches are separately secured; available length remains neutral path
 +0.5mm slack. Wound arcs are already counted in path, never subtracted again.
 Cable stiffness2N/mm is provisional. No loaded passive equilibrium is solved.
 
-Cable/ankle attachment A is at the compression-seat plane53.2: physical eye
+Defaults retain r03; r04 datums plane57/wheelX-37 are packaging assumptions.
+Cable/ankle attachment A defaults to compression-seat plane53.2: physical eye
 and seat coexistence remains a CAD integration clearance/attachment question.
 """
 import math
@@ -65,7 +66,7 @@ def _transformers(transform):
     return point,vector
 
 
-def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap_sign=-1):
+def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap_sign=-1,cable_plane_mm=53.2,wheel_x_mm=-27):
     """Ordered centerline primitives, finite guide frames, diagnostics and length.
 
     Arc axes follow the right-hand rule; sweep_rad is positive and may exceed
@@ -75,9 +76,11 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
     """
     if side not in (-1,1) or not math.isfinite(u):
         raise ValueError('side must be +/-1 and u must be finite')
+    if not math.isfinite(cable_plane_mm) or cable_plane_mm<=0 or not math.isfinite(wheel_x_mm):
+        raise ValueError('Cable plane must be positive finite and wheel X finite')
     tf,tv=_transformers(transform)
     g=leg_geometry('hind',thigh_angle,passive_knee)
-    r=5.5;gx=-27+side*.6;y=side*53.2
+    r=5.5;gx=wheel_x_mm+side*.6;y=side*cable_plane_mm
     C=(gx,0.0,0.0);P=(gx,y,8.0)
     dy,dz=P[1]-C[1],P[2]-C[2];d=math.hypot(dy,dz)
     beta=math.atan2(dz,dy);a=math.acos(r/d)
@@ -143,7 +146,7 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
         'assembled_operating_interval_rad':(0,math.pi/2),'assembly_compatible':0<=u<=math.pi/2,
         'primitives':transformed,'length_mm':sum(q['length_mm'] for q in primitives),
         'tangency_errors':errors,
-        'wheel':{'center':tf(C),'axle_center':tf((-27,0,0)),'axis':tv((1,0,0)),
+        'wheel':{'center':tf(C),'axle_center':tf((wheel_x_mm,0,0)),'axis':tv((1,0,0)),
                  'hole':tf(hole),'contact':tf(T),'pitch_radius_mm':r,'outer_diameter_mm':13,
                  'neutral_hole_angle_rad':theta,'hole_angle_rad':theta+u,
                  'reverse_chord_limit_rad':reverse_limit,'chord_min_radius_mm':chord_min,
@@ -158,7 +161,7 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
                       'No loaded equilibrium or wear/strength certification')}
 
 
-def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_thigh=None,transform=None,stiffness=2.0):
+def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_thigh=None,transform=None,stiffness=2.0,cable_plane_mm=53.2,wheel_x_mm=-27):
     """Two secured branches with neutral+0.5mm fixed available length per branch.
 
     Available lengths are installed at the declared neutral knees/thighs, not
@@ -168,8 +171,8 @@ def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_th
         raise ValueError('Assembled fixed-guide wheel interval is [0, pi/2]; use tendon_route for diagnostics')
     result={}
     for side,knee,thigh in ((1,left_knee,left_thigh),(-1,right_knee,right_thigh)):
-        neutral=tendon_route(side,0)
-        route=tendon_route(side,u,thigh,knee,transform)
+        neutral=tendon_route(side,0,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm)
+        route=tendon_route(side,u,thigh,knee,transform,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm)
         available=neutral['length_mm']+.5
         state=cable_state(route['length_mm'],available,{'cable_stiffness_N_per_mm':stiffness})
         result[side]={'route':route,'path_mm':route['length_mm'],'available_mm':available,'state':state}

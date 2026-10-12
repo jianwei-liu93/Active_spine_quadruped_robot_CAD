@@ -1,0 +1,183 @@
+{
+  "revision": "r04",
+  "scope": "actual native assembly at saved prescribed pose; raw intersections without exceptions",
+  "status": "PASS",
+  "instances": 24,
+  "parts": [
+    {
+      "instance": "HindTendon_Wheel",
+      "source": "TENDON_r03_WHEEL_OD13_4p4772482_1p6145357",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 267.7808977602013
+    },
+    {
+      "instance": "HindTendon_KneeMotor",
+      "source": "ENV_TENDON_XC330_M181_r03",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 17680.000000000004
+    },
+    {
+      "instance": "HindTendon_R_shell_guide",
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20.745507087980197
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Shaft",
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12.28048568288251
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Washer",
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1.3756248831906281
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Clip",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "HindTendon_R_hip_guide",
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20.745507087980215
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Shaft",
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12.280485682882489
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Washer",
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1.3756248831906372
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Clip",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.9544797527061557
+    },
+    {
+      "instance": "HindTendon_R_Cable",
+      "source": "TENDON_r03_HindTendon_R_CABLE_u0",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.763295367334491
+    },
+    {
+      "instance": "HindTendon_L_shell_guide",
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20.74550708798021
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Shaft",
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12.280485682882507
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Washer",
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1.3756248831906268
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Clip",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.9544797527061513
+    },
+    {
+      "instance": "HindTendon_L_hip_guide",
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20.74550708798022
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Shaft",
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12.280485682882487
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Washer",
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1.3756248831906377
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Clip",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "HindTendon_L_Cable",
+      "source": "TENDON_r03_HindTendon_L_CABLE_u0",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7.7044326292432785
+    },
+    {
+      "instance": "HindTendon_DriveDshaft",
+      "source": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9.81667665352892
+    },
+    {
+      "instance": "HindTendon_DriveOuterClip",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3.954479752706155
+    },
+    {
+      "instance": "HindTendon_DriveOuterWasher",
+      "source": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1.3756248831906372
+    },
+    {
+      "instance": "HindTendon_DriveRootShim",
+      "source": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 0.7535895377798553
+    }
+  ],
+  "editable_bodies": 8,
+  "fully_constrained_sketches": true,
+  "narrowphase_tests": 41,
+  "raw_overlaps": [],
+  "volume_tolerance_mm3": 1e-05,
+  "elapsed_seconds": 0.27997851371765137,
+  "limits": "Prescribed pose only. No continuous clearance, loaded equilibrium or fabrication claim."
+}

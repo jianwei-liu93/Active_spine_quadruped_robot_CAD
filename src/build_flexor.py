@@ -73,6 +73,7 @@ def build(root=ROOT,save=True):
         par.addProperty('App::PropertyFloat',k,'Parameters');setattr(par,k,float(v))
     # Compact back-to-back direct servo envelopes. Inverted cases extend above O.
     src=cc.simple_shape(doc,'ENV_XL330_r02',Part.makeBox(p['motor_width_mm'],p['motor_depth_mm'],p['motor_height_mm'],V(-10,-13,-7)),'motor','verified case envelope; output datum and horn pattern UNVERIFIED',role='PURCHASED')
+    src.PartNumber='DYNAMIXEL_XL330_M077_T';src.Label='XL330-M077-T spine motor envelope';src.addProperty('App::PropertyString','PaperDesignation');src.PaperDesignation='XL330–077-T'
     src.addProperty('App::PropertyFloat','PurchasedMass_g');src.PurchasedMass_g=p['XL_mass_g'];b.library.addObject(src);b.sources[src.Name]=src
     # Native open motor face cradles; a 20.8 x 34.8 window clears cases.
     cradle=b.plate('FRM_MOTOR_CRADLE_r02',24,38,1.6,[(2,2,2.2),(22,2,2.2),(2,36,2.2),(22,36,2.2)])

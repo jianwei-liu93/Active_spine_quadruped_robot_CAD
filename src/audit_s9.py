@@ -6,7 +6,7 @@ from kinematics import spine
 
 EXPECTED=[('O','G'),('G','B1'),('G','B2'),('A1','B1'),('A2','B2'),('B1','C1'),('B2','C2'),('C1','D1'),('C2','D2'),('E1','D1'),('E2','D2')]
 
-def run(doc,p,root):
+def run(doc,p,root,revision='r03'):
     state=spine(doc.PoseController.SpinePhaseRad,p);motion=json.loads(doc.PoseController.MotionMap)
     rows=[];errors=[];missing={};extra={};observed={-1:[],1:[]}
     for n,m in motion.items():
@@ -45,5 +45,5 @@ def run(doc,p,root):
             'fixed_structure':'LumbarIntegrated A/E backbone, motor cradle and C/A guide ears are one grounded frame; no independently moving frame bars',
             'bilateral_copies':'Two side planes share one phase and B synchronization shafts; they are not extra independent planar links',
             'limits':'Source topology and native axis audit, not complete spatial mobility, elastic equilibrium or fabrication validation'}
-    Path(root,'reports/verification/r03_s9_topology.json').write_text(json.dumps(result,indent=2)+'\n')
+    Path(root,f'reports/verification/{revision}_s9_topology.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='physical_moving_members'}));return result

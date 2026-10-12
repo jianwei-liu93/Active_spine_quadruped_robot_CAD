@@ -33,17 +33,18 @@ def build_torso(b,kind):
     E=s[f'E{i}'];D=(s[f'D{i}'][0]-E[0],s[f'D{i}'][1]-E[1]);H=leg_geometry(kind)['H']
     angle=-math.pi/2 if kind=='hind' else 0
     def rotate(P):return (H[0]+math.cos(angle)*P[0]-math.sin(angle)*P[1],math.sin(angle)*P[0]+math.cos(angle)*P[1])
-    zmin=-16 if kind=='hind' else -9
+    zmin=-22 if kind=='hind' else -9
     cage=rect(-12,zmin,24,38).cut(rect(-10.4,zmin+1.6,20.8,34.8));cage.rotate(V(),V(0,0,1),math.degrees(angle));cage.translate(V(H[0],0,0))
     body=b.doc.addObject('PartDesign::Body','TORSO_'+kind.upper()+'_CAGE_r03')
-    cc.metadata(body,body.Name,'PA12','SLS cage; inner E/D carrier; outboard motor cases and outer H support; provisional fits');body.Revision='r03'
+    cc.metadata(body,body.Name,'PA12','SLS cage; inner E/D carrier; outboard motor cases and outer H support; provisional fits');body.Revision='r04'
     def make_cheek(suffix,z,outer=False):
         thickness=1.2 if outer else 1.6
         face=cage
-        if outer and kind=='hind':face=cage.cut(rect(H[0]+20.4,-15,6,30))
+        if outer and kind=='hind':face=cage.cut(rect(H[0]+14.4,-15,6,30))
         native_pad(b,body,kind+'Cage'+suffix,face,z,thickness)
         bars=[(rotate((-11.2,0)),rotate((11.2,0)),5)] if outer else [((0,0),D,5),((0,0),H,5),(D,H,5),(rotate((-11.2,0)),rotate((11.2,0)),5)]
         for j,(P,Q,W) in enumerate(bars):native_pad(b,body,kind+'Web'+suffix+str(j),pill_face(P,Q,W),z,thickness)
+        for j,P in enumerate([H] if outer else [(0,0),D,H]):native_pad(b,body,kind+'JournalBoss'+suffix+str(j),disk(*P,3.5),z,thickness)
         sk=b.doc.addObject('Sketcher::SketchObject',kind+'OutputBores'+suffix);body.addObject(sk);sk.Placement.Base.z=z+thickness
         for P in ([H] if outer else [(0,0),D,H]):cc.circle(sk,*P,2.025)
         old=body.Tip;cut=body.newObject('PartDesign::Pocket',kind+'OutputBorePocket'+suffix);cut.Profile=sk;cut.Length=thickness
@@ -52,7 +53,7 @@ def build_torso(b,kind):
     sections=None
     # Rear cage uses only its rear corner ties so the central knee servo
     # fits between the two outboard hip motors, as in FigS6.
-    corners=[rotate((x,z)) for x in [-11.2,11.2] for z in ([-15.2] if kind=='hind' else [-8.2,28.2])]
+    corners=[rotate((x,z)) for x in [-11.2,11.2] for z in ([-21.2] if kind=='hind' else [-8.2,28.2])]
     for P in corners:
         f=disk(*P,.65);sections=f if sections is None else sections.fuse(f)
     native_pad(b,body,kind+'CrossTies',sections,1.6,28.8)
@@ -61,7 +62,7 @@ def build_torso(b,kind):
     # internal output axis. The external H bearing sits in the outer face.
     allcorners=None
     for x in [-11.2,11.2]:
-        for z in ([-15.2,21.2] if kind=='hind' else [-8.2,28.2]):
+        for z in ([-21.2,15.2] if kind=='hind' else [-8.2,28.2]):
             f=disk(*rotate((x,z)),.65);allcorners=f if allcorners is None else allcorners.fuse(f)
     native_pad(b,body,kind+'CaseRailsLeft',allcorners,0,26,True)
     # Outer face is built forward along local +Z, meeting the rail at z=-26.
@@ -92,8 +93,8 @@ def build_torso(b,kind):
         if old:b.motion.pop(old.Name,None);b.doc.removeObject(old.Name)
     pn='ENV_XC330_M181_'+kind.upper()+'_DATUM_r03'
     if pn not in b.sources:
-        src=cc.simple_shape(b.doc,pn,Part.makeBox(20,26,34,V(-10,-13,-14 if kind=='hind' else -7)),'motor','manufacturer envelope; output/mount datum UNVERIFIED',role='PURCHASED')
-        src.PartNumber='DYNAMIXEL_XC330_M181_T';src.Revision='r03';src.addProperty('App::PropertyFloat','PurchasedMass_g');src.PurchasedMass_g=p['XC_mass_g'];b.library.addObject(src);b.sources[pn]=src
+        src=cc.simple_shape(b.doc,pn,Part.makeBox(20,26,34,V(-10,-13,-20 if kind=='hind' else -7)),'motor','manufacturer envelope; output/mount datum UNVERIFIED',role='PURCHASED')
+        src.PartNumber='DYNAMIXEL_XC330_M181_T';src.Label='XC330-M181-T '+kind+' proximal motor envelope';src.addProperty('App::PropertyString','PaperDesignation');src.PaperDesignation='XC-M181-T';src.Revision='r03';src.addProperty('App::PropertyFloat','PurchasedMass_g');src.PurchasedMass_g=p['XC_mass_g'];b.library.addObject(src);b.sources[pn]=src
     for side in [-1,1]:
         b.add(b.sources[pn],kind+'_ProximalMotor_'+str(side),App.Placement(V(E[0]+H[0],side*29,0),App.Rotation(V(0,-1,0),math.degrees(angle))),'Actuators',
               {'kind':'torso_offset_r03','torso':kind,'point':H,'y':side*29,'angle':angle})

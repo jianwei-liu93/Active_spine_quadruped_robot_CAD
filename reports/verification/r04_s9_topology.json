@@ -1,0 +1,255 @@
+{
+  "status": "PASS",
+  "source": "Supplement PDF p30 Fig S9; translucent rods in panelA are alternate poses",
+  "expected_projected_edges": [
+    [
+      "O",
+      "G"
+    ],
+    [
+      "G",
+      "B1"
+    ],
+    [
+      "G",
+      "B2"
+    ],
+    [
+      "A1",
+      "B1"
+    ],
+    [
+      "A2",
+      "B2"
+    ],
+    [
+      "B1",
+      "C1"
+    ],
+    [
+      "B2",
+      "C2"
+    ],
+    [
+      "C1",
+      "D1"
+    ],
+    [
+      "C2",
+      "D2"
+    ],
+    [
+      "E1",
+      "D1"
+    ],
+    [
+      "E2",
+      "D2"
+    ]
+  ],
+  "physical_moving_members": [
+    {
+      "instance": "Link1_L2__1",
+      "side": -1,
+      "edge": [
+        "G",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L2__1",
+      "side": -1,
+      "edge": [
+        "G",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L3__1",
+      "side": -1,
+      "edge": [
+        "A1",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L3__1",
+      "side": -1,
+      "edge": [
+        "A2",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L4__1",
+      "side": -1,
+      "edge": [
+        "B1",
+        "C1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L4__1",
+      "side": -1,
+      "edge": [
+        "B2",
+        "C2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L5__1",
+      "side": -1,
+      "edge": [
+        "C1",
+        "D1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L5__1",
+      "side": -1,
+      "edge": [
+        "C2",
+        "D2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "DirectCrank_1",
+      "side": -1,
+      "edge": [
+        "O",
+        "G"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L2_1",
+      "side": 1,
+      "edge": [
+        "G",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L2_1",
+      "side": 1,
+      "edge": [
+        "G",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L3_1",
+      "side": 1,
+      "edge": [
+        "A1",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L3_1",
+      "side": 1,
+      "edge": [
+        "A2",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L4_1",
+      "side": 1,
+      "edge": [
+        "B1",
+        "C1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L4_1",
+      "side": 1,
+      "edge": [
+        "B2",
+        "C2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L5_1",
+      "side": 1,
+      "edge": [
+        "C1",
+        "D1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L5_1",
+      "side": 1,
+      "edge": [
+        "C2",
+        "D2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "DirectCrank1",
+      "side": 1,
+      "edge": [
+        "O",
+        "G"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Torso_hind",
+      "sides": [
+        -1,
+        1
+      ],
+      "edge": [
+        "E1",
+        "D1"
+      ],
+      "role": "torso cage replaces E-D output rocker"
+    },
+    {
+      "instance": "Torso_fore",
+      "sides": [
+        -1,
+        1
+      ],
+      "edge": [
+        "E2",
+        "D2"
+      ],
+      "role": "torso cage replaces E-D output rocker"
+    }
+  ],
+  "missing_edges": {
+    "-1": [],
+    "1": []
+  },
+  "extra_edges": {
+    "-1": [],
+    "1": []
+  },
+  "actual_native_hole_axis_error_mm": 1.4210854715202004e-14,
+  "projected_mobility": {
+    "links_including_ground_and_two_slider_blocks": 14,
+    "one_DOF_joint_equivalents": 19,
+    "planar_gruebler": 1
+  },
+  "fixed_structure": "LumbarIntegrated A/E backbone, motor cradle and C/A guide ears are one grounded frame; no independently moving frame bars",
+  "bilateral_copies": "Two side planes share one phase and B synchronization shafts; they are not extra independent planar links",
+  "limits": "Source topology and native axis audit, not complete spatial mobility, elastic equilibrium or fabrication validation"
+}

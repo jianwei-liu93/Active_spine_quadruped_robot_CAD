@@ -1,0 +1,74 @@
+{
+  "revision": "r04",
+  "scope": "Previously colliding pairs at their previously worst sampled phases only; not whole-cycle acceptance",
+  "status": "PASS",
+  "raw_pairs": [
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "hind_ProximalMotor__1",
+      "phase_deg": 60.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "hind_ProximalMotor_1",
+      "phase_deg": 60.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "Torso_hind",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "Torso_hind",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Torso_hind",
+      "b": "ThroughA2",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Link2_L3_1",
+      "b": "Torso_hind",
+      "phase_deg": 270.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Link2_L3__1",
+      "b": "Torso_hind",
+      "phase_deg": 255.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Torso_hind",
+      "b": "A2_1_CaptureCap",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Torso_hind",
+      "b": "A2__1_CaptureCap",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Link2_L3__1",
+      "b": "hind_ProximalMotor__1",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "Link2_L3_1",
+      "b": "hind_ProximalMotor_1",
+      "phase_deg": 240.0,
+      "intersection_mm3": 0.0
+    }
+  ],
+  "change": "6mm rearward shift of provisional hind case/cage relative to unchanged hip datum and verified case dimensions"
+}

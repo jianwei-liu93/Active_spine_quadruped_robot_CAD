@@ -91,7 +91,7 @@ def sweep(doc, step_deg=5, output=None):
     output = Path(output or ROOT / 'reports/verification/r03_robot_spine_sweep.json')
     progress = output.with_name(output.stem + '_progress.json')
     phases = _phases(step_deg)
-    report = {'revision': 'r03', 'status': 'RUNNING',
+    report = {'revision': str(getattr(doc.DesignParameters,'Revision','r03')), 'status': 'RUNNING',
               'scope': 'Actual native App::Link world-shape copies; full spine cycle; fixed saved leg angles; raw intersections without exceptions',
               'step_deg': float(step_deg), 'sample_degrees': phases,
               'samples_total': len(phases), 'samples_completed': 0,

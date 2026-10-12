@@ -107,6 +107,27 @@ class TendonR03Tests(unittest.TestCase):
             self.assertAlmostEqual(c['branches'][side]['state']['tension_N'],2.3)
             self.assertAlmostEqual(c['branches'][side]['state']['energy_Nmm'],1.3225)
 
+    def test_r04_offset_datums_preserve_tangency_and_installed_available_lengths(self):
+        cfg={'cable_plane_mm':57,'wheel_x_mm':-37}
+        states=bilateral_states(.4,**cfg)
+        for side in (-1,1):
+            neutral=tendon_route(side,**cfg)
+            self.assertEqual(neutral['wheel']['axle_center'],(-37,0,0))
+            self.assertEqual(neutral['ankle_anchor'][1],side*57)
+            self.assertAlmostEqual(states['branches'][side]['available_mm'],neutral['length_mm']+.5)
+            for i in range(17):
+                u=i*math.pi/32;r=tendon_route(side,u,**cfg)
+                self.assertLess(max(r['tangency_errors'].values()),1e-10)
+                self.assertLess(math.dist(r['shell_guide']['center'],neutral['shell_guide']['center']),1e-12)
+                self.assertAlmostEqual(r['length_mm']-neutral['length_mm'],5.5*u)
+                # Independent centerline integral: Euclidean lines + radius*angle.
+                integral=sum(math.dist(p['start'],p['end']) if p['type']=='line' else p['radius_mm']*p['sweep_rad'] for p in r['primitives'])
+                self.assertAlmostEqual(integral,r['length_mm'])
+            self.assertAlmostEqual(states['branches'][side]['state']['tension_N'],3.4)
+        for cfg in ({'cable_plane_mm':0},{'cable_plane_mm':-1},{'cable_plane_mm':float('nan')},{'wheel_x_mm':float('inf')}):
+            with self.assertRaises(ValueError):tendon_route(1,**cfg)
+            with self.assertRaises(ValueError):bilateral_states(**cfg)
+
     def test_invalid_state_and_transform_rejected(self):
         with self.assertRaises(ValueError): tendon_route(0,0)
         with self.assertRaises(ValueError): tendon_route(1,float('nan'))

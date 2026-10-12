@@ -46,20 +46,26 @@ def _wheel(b,routes):
 
 
 def _guide(b):
-    pn='TENDON_r03_GUIDE_OD6p5_ID2p05_L1p2'
+    pn='TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2'
     if pn not in b.sources:
-        body=b.ring(pn,6.5,2.05,1.2,'PA12')
-        _groove(b,body,.6,3.35,2.35,.5,'CenterGroove')
+        body=b.ring(pn,5.4,2.05,1.2,'PA12')
+        _groove(b,body,.6,2.8,2.35,.5,'CenterGroove')
         body.Process='ASSUMED finite guide pitch R2.5; mounting journal/support UNVERIFIED'
     return b.sources[pn]
 
 
 def _shaft(b):
-    pn='TENDON_r03_GUIDE_SHAFT_D1p9_L3p6'
+    pn='TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6'
     if pn not in b.sources:
         body=b.ring(pn,1.9,0,3.6)
         _groove(b,body,3.15,1.05,.85,.6,'OuterRetainingGroove')
-        body.Process='ASSUMED fixed guide journal; support/inner axial capture unresolved'
+        import cad_common as cc
+        old=body.Tip
+        sk=b.doc.addObject('Sketcher::SketchObject',pn+'_InnerHeadSketch');body.addObject(sk)
+        cc.circle(sk,0,0,1.6)
+        head=body.newObject('PartDesign::Pad',pn+'_InnerHead');head.Profile=sk;head.Length=.3;head.Reversed=True
+        b.doc.recompute();sk.Visibility=False;old.Visibility=False
+        body.Process='ASSUMED headed fixed guide journal; mounting support unresolved'
     return b.sources[pn]
 
 
@@ -125,27 +131,33 @@ def build(b,transform=None,routes=None,u=0,tag='HindTendon'):
         z=V(tv(axis));rot=App.Rotation(V((0,0,1)),z)
         rot=App.Rotation(z,math.degrees(spin)).multiply(rot)
         return App.Placement(V(tf(center))-z*(length/2),rot)
+    W=tuple(routes[-1]['wheel']['axle_center'])
+    if math.dist(W,routes[1]['wheel']['axle_center'])>1e-9:raise ValueError('Branches must share one wheel axle center')
+    wheel_start=(W[0]-1.2,W[1],W[2]);motor_center=(W[0]+14.4,W[1],W[2])
     # Wheel native XY -> local YZ with +Z pad axis -> +X.
     wheel=_wheel(b,routes)
     base=App.Rotation(V(tv((0,1,0))),V(tv((0,0,1))),V(tv((1,0,0))),'ZXY')
     rot=App.Rotation(V(tv((1,0,0))),math.degrees(u)).multiply(base)
-    add(wheel,'Wheel',App.Placement(V(tf((-28.2,0,0))),rot),
-        {'kind':'tendon_r03_wheel','center':(-27,0,0),'axis':(1,0,0),'angle_rad':u,'source_start_x':-28.2})
+    add(wheel,'Wheel',App.Placement(V(tf(wheel_start)),rot),
+        {'kind':'tendon_r03_wheel','center':W,'axis':(1,0,0),'angle_rad':u,'source_start_x':wheel_start[0]})
     pn='ENV_TENDON_XC330_M181_r03'
     if pn not in b.sources:
         src=cc.simple_shape(b.doc,pn,Part.makeBox(20,26,34,V((-10,-13,-7))),'motor','manufacturer envelope; output/mount datum UNVERIFIED',role='PURCHASED')
-        src.PartNumber='DYNAMIXEL_XC330_M181_T';src.addProperty('App::PropertyFloat','PurchasedMass_g');src.PurchasedMass_g=23
+        src.PartNumber='DYNAMIXEL_XC330_M181_T';src.Label='XC330-M181-T shared hind-knee motor envelope';src.addProperty('App::PropertyString','PaperDesignation');src.PaperDesignation='XC-M181-T';src.addProperty('App::PropertyFloat','PurchasedMass_g');src.PurchasedMass_g=23
         b.library.addObject(src);b.sources[pn]=src
     torso=App.Rotation(V(tv((1,0,0))),V(tv((0,1,0))),V(tv((0,0,1))),'ZXY')
-    add(b.sources[pn],'KneeMotor',App.Placement(V(tf((-12.6,0,0))),torso.multiply(App.Rotation(V((0,0,1)),90))),
-        {'kind':'torso_r03_offset','point':(-12.6,0,0),'rotation_local_axis':(0,0,1),'rotation_deg':90},'Actuators')
+    add(b.sources[pn],'KneeMotor',App.Placement(V(tf(motor_center)),torso.multiply(App.Rotation(V((0,0,1)),90))),
+        {'kind':'torso_r03_offset','point':motor_center,'rotation_local_axis':(0,0,1),'rotation_deg':90},'Actuators')
     guide=_guide(b);shaft=_shaft(b);clip=clip_source(b)
     washer=b.ring('TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2',3.6,2.05,.2)
     frames={}
     for side,r in routes.items():
         label='L' if side==1 else 'R';frames[side]={}
         for name in ('shell_guide','hip_guide'):
-            q=r[name];C=q['center'];axis=q['axis'];frames[side][name]={'center':tf(C),'axis':tv(axis)}
+            q=r[name];C=q['center'];axis=q['axis']
+            # Hardware can face outward; cable arc direction is unchanged.
+            if axis[1]*side<0:axis=tuple(-a for a in axis)
+            frames[side][name]={'center':tf(C),'axis':tv(axis),'cable_arc_axis':tv(q['axis'])}
             desc={'kind':'tendon_r03_guide','side':side,'guide':name,'center':C,'axis':axis,'mount_support':'UNRESOLVED'}
             add(guide,label+'_'+name,axial(C,axis,1.2),desc)
             add(shaft,label+'_'+name+'_Shaft',axial(C,axis,3.6),dict(desc,component='journal'))
