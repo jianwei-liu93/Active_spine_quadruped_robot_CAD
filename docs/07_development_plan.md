@@ -15,6 +15,8 @@ Use [00](00_project_specification.md) for scope, [05](05_freecad_mcp_workflow.md
 | B2 — Whole robot | Instantiate four legs, integrate torso, support hardware, controller/connection space | Documentation and independent report review | Complete assembly; mass/envelope and engineering screening |
 | C — Verified package | Fix concrete failures; reopen/recompute; export and reimport; finish drawings/BOM | Review exported snapshots and package manifest | Consistent native/export package and gate results |
 
+**Animation-readiness invariant (all CAD stages):** Preserve stable instance IDs, local part frames, source/instance mesh separation, complete motion descriptors, and spring/cable anchor/route metadata. Follow [20 — animation and visualization interface](20_animation_and_visualisation_pipeline.md). At a safe checkpoint implement its minimal **read-only AX0/AX1 export smoke** using current motion APIs; AX2–AX4 and polished videos are deferred until appropriate. Do not rework otherwise sound geometry just to satisfy a rendering tool, and never let an animation worker modify the live FreeCAD session.
+
 The numerical spine solver should precede expensive detailed solids. Independent work may continue while a supplier interface is unresolved, but it must not establish a false gate pass.
 
 ## 2. First local Codex assignment

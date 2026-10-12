@@ -46,6 +46,10 @@ Use at most three concurrent subagents, with no recursive delegation. Delegate b
 
 **Only the lead may operate the live FreeCAD MCP session or modify the canonical assembly and shared parameter schema.** Workers must not call the live CAD tools, even if those tools are inherited. Separate worktrees do not isolate the application. Integrate changes sequentially. Escalate routine tasks after two materially different failed repair attempts and avoid repeated reviews of resolved issues.
 
+## Preserve animation readiness without delaying mechanical CAD
+
+Read `docs/20_animation_and_visualisation_pipeline.md`. From now on keep stable App::Link-instance IDs, body-local geometry frames, explicit native placements, complete PoseController/MotionMap coverage and separate spring/cable shape requests. Reuse existing read-only r03/r07 motion APIs where applicable. When safe, implement the document's bounded AX0/AX1 inventory/pose-export smoke. Preserve correct physical linkage and manufacturing priorities; do not make Blender video rendering or a second pose solver part of this initial CAD task.
+
 ## Execute and deliver
 
 Follow `docs/07_development_plan.md`: establish the environment and source/interface contracts, build and verify the spine mechanism, complete one foreleg and one hind-leg module, then integrate and verify the whole robot. The spine is the first reviewable checkpoint; continue through the complete authorized CAD candidate without stopping for routine approvals.

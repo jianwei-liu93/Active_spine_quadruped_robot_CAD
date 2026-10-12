@@ -45,6 +45,8 @@ Escalate a bounded routine task after two materially different failed attempts. 
 
 Custom manufactured components should have meaningful native feature editability, supported by reproducible source scripts and parameters. Preserve separate parts and instances. See [05](docs/05_freecad_mcp_workflow.md).
 
+For all current and future geometry/pose changes, preserve stable physical-instance identities, part-local frames, complete MotionMap coverage, and separately regenerated spring/cable motion. Follow the [CAD-to-animation interface](docs/20_animation_and_visualisation_pipeline.md); it is a cross-cutting export requirement, **not** permission to render videos now or alter accepted mechanism geometry. Use the current read-only motion adapter and never double-apply App::Link transforms.
+
 Use the checks in [06](docs/06_verification_and_acceptance.md). Reopen/recompute native files and round-trip the final STEP export. Keep fit/contact exceptions precise. Finite pose sampling supports only the sampled coverage.
 
 Perform enough verification to resolve concrete risks, then proceed. Maintain short progress updates, a decision log, and links to actual evidence. Keep mathematical assumptions, runtime results, and fabrication-release status distinct.

@@ -35,6 +35,7 @@ The lead agent is the sole writer to the live FreeCAD document. Subagents may in
 | [08 — Agent orchestration](docs/08_agent_orchestration.md) | Model/effort defaults, cheaper workers, escalation rules, and live-session ownership |
 | [09 — Codex start prompt](docs/09_codex_start_prompt.md) | Ready-to-copy development request that refers to the specifications and requires actual MCP execution |
 | [10 — Morphology and recovery](docs/10_reference_morphology_and_recovery.md) | Source comparison, preserved r01 work and spine-first correction controls |
+| [20 — Animation and visualisation](docs/20_animation_and_visualisation_pipeline.md) | Stable physical-instance IDs, CAD-to-Blender geometry/pose contract, procedural spring/cable geometry, and later video pipeline |
 | [Reference files](references/README.md) | Original PDF names, hashes, and local setup after cloning |
 
 ## Mechanical baseline

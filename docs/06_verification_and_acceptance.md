@@ -69,6 +69,10 @@ Reimport STEP into a clean document and compare units, overall dimensions, expec
 
 Inspect TechDraw PDFs and applicable profile DXFs for units, scale, dimensions, material, revision, critical fits and readable section/detail views. A screenshot of a drawing is not a fabrication drawing. The final report must identify files actually generated and checks actually run.
 
+## Animation interface readiness (separate from G0–G5)
+
+Maintain exportable stable physical-instance identifiers, part-local frames, the complete pose-controller/motion-map contract, and separate length/route-dependent springs and cables as specified in [20 — CAD-to-animation interface](20_animation_and_visualisation_pipeline.md). That document defines independent AX0–AX4 readiness gates. A read-only AX0/AX1 smoke is useful during CAD development, but **final Blender videos are not a prerequisite for G5 CAD candidate or fabrication-release assessment**. These checks must not mutate or replace the canonical assembly and must not mask missing G0–G5 evidence.
+
 ## Candidate acceptance and fabrication release
 
 A **CAD candidate** can pass the staged criteria while containing explicitly declared provisional components or assumptions, provided their envelopes/interfaces are sufficient for the stated geometric checks and those limitations appear in the delivered model, BOM and report. A record of a provisional assumption is evidence of traceability, not verification of that assumption.
