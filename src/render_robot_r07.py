@@ -45,16 +45,17 @@ def render(doc, root=None, revision='r07'):
         if not selected:
             raise ValueError('No actual links selected for '+suffix)
         if front:
-            view.viewFront()
-            normal = None
+            # Set the camera directly: animated viewFront() can finish after
+            # the following capture and overwrite its requested oblique view.
+            normal = App.Vector(0,-1,0)
         else:
             normal = App.Vector(*(normal_xyz or (-.3, y_side, .22)))
-            normal.normalize()
-            right = App.Vector(0, 0, 1).cross(normal)
-            right.normalize()
-            up = normal.cross(right)
-            rotation = App.Rotation(right, up, normal, 'ZXY')
-            view.getCameraNode().orientation.setValue(coin.SbRotation(*rotation.Q))
+        normal.normalize()
+        right = App.Vector(0, 0, 1).cross(normal)
+        right.normalize()
+        up = normal.cross(right)
+        rotation = App.Rotation(right, up, normal, 'ZXY')
+        view.getCameraNode().orientation.setValue(coin.SbRotation(*rotation.Q))
         Gui.updateGui()
         rotation = view.getCameraOrientation()
         node = view.getCameraNode()

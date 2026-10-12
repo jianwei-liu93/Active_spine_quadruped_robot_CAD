@@ -1,0 +1,48 @@
+# Bounded source review: central torso attachment missing from r09
+
+Reviewed 2026-10-12. Scope: the new user crop, actual S1 assembly/motion frames, supplementary Fig.S9 and current r09 source/captures. No CAD/MCP operations, native/source changes or full-package approval. Frozen r09 SHA256 independently checked: `765bb3b9a32365e1c005ff16a246ac284d2e0544d3648d4e4be3f436a58e1b57`.
+
+## Finding and recommended interpretation
+
+**The user identifies a real remaining omission.** r09's one-piece case cage and two independent side shelves do not reproduce the source's transverse open-box crossmember and central attachment lug. Add that support and a functional central E-joint attachment. Preserve the existing sagittal E1/E2 rotation axes and six commanded coordinates. The inspected sequence does **not** establish a longitudinal roll joint, extra commanded coordinate or a rigid red peg to copy into the robot.
+
+The preferred interpretation is a grounded Y-spanning crossmember at each end, supporting a central sagittal lug/bearing boss near Y=0 at the existing E coordinate. Its joint axis is transverse Y; the lug's circular end face is approximately sagittal XZ. Initial perspective made the hole look longitudinal; that inference is withdrawn after comparing the assembly/motion sequence and S9. Exact hidden bore direction is not dimensionally recoverable from these views, but the existing E-axis interpretation has much stronger kinematic support than an added X-roll hinge.
+
+## Observations, inference and limits
+
+| Evidence | Direct observation | Supported interpretation / limit |
+|---|---|---|
+| User crop `/tmp/codex-clipboard-ae8aca3a-9818-48b7-81f3-5d8dc6868e72.png`; source51.5/52.7s closeups | A transverse structural bridge connects the near/far shelf region. Rectangular open cavities flank a round-ended central lug/boss with a visible hole/cap. | The central feature is real geometric detail missing from r09, rather than camera framing or an unmodelled motor connector. Open-box wall thickness, bearing seats and hidden underside remain unknown. |
+| Lead extraction requested51.0s, decoded PTS51.1001 | Before mechanical parts cover the diagram, red skeletal torso segments meet at two visible transverse-looking cylindrical caps; the limb anatomy is white. | Red is schematic anatomy/kinematic illustration. Do not assign its diameter, length, material, arrow-like projection or count to bought/mechanical parts. |
+| Source52.7/53.3 and lead54–58s assembly sequence | The motor horn and white crank/rocker pieces are added and change inclination; the black crossmember, central boss center, A ears and guide supports retain their relationships. | High-confidence fixed frame ownership of the crossmember/lug support. The moving white output members and later end plate are distinct pieces; do not fuse them into this support. |
+| Lead55–58s plus independently extracted54/55/56/58s frames | Red anatomical end segment changes sagittal inclination about the projected boss region; it does not visibly execute axial roll. The boss face is consistent with the neighboring sagittal ear-face family. | Consistent with a transverse-Y E hinge, not affirmative evidence of an X hinge. A single oblique circle alone cannot prove axis direction. |
+| Source60s; lead59/64/68/71s | The slotted torso/end plate and connected output assembly appear in front of the central boss and subsequently change pitch. Metal hardware becomes visible in the previously exposed central region; much of the attachment is occluded. | The central support needs a real moving attachment/load path, not an ornamental blind hole. Exact bearing count, clevis layering and retention are not uniquely resolved. |
+| Lead61s (PTS61.1001) | Dissolve/transparency overlays multiple stages and the red schematic through the assembly. | Do not read coincident transparent faces as extra hardware, a longitudinal shaft or new topology. |
+| Source76s; lead74/79s | Side views show the later torso/leg and output plate; the central beam interior is substantially hidden. | Useful confirmation that the end plate is moving; insufficient to derive a new central bearing stack or metric dimensions. |
+| Supplementary Fig.S9, PDFp30, and “Mathematical modeling of the spinal mechanism” | E1/O/E2 are grounded, collinear centers. D1–E1 and D2–E2 are output rockers, rotating around E1/E2. A1/A2 and fixed C tracks belong to the frame. | Existing E1/E2 joint axes govern torso pitch; no separate roll hinge is specified. In repository world coordinates, sagittal XZ rotation means an axis parallelY. Fig.S9's in-plane vertical labelY is not the repository's left/transverseY. |
+
+The preferred traceable frame set is `references/visual/movie_s1_attachment/` with `provenance.json`: source SHA256 `16b180fa5da669e78e7d2038147e1f09fd8adbb2265341d8c3a14d0093a235a9`, accurate GStreamer seeks and decoded PTS. Its filenames denote requested times; actual decoded frames are0.1001s later. Earlier `reports/views/source_fidelity_r07/source_51.5s.png`, `_52.7s.png`, `_53.3s.png` and existing60/76s references provide the closeups; timestamp precision must not exceed their extraction provenance.
+
+## Position, ownership and axis proposal
+
+Use the immutable numerical relationships rather than screen left/right:
+
+- **Hind:** central support at E1=(−33,0) in sagittal XZ, Y≈0; adjacent frozen A2/C1 support architecture.
+- **Fore:** central support at E2=(+33,0), Y≈0; adjacent frozen A1/C2 architecture.
+- **Both:** shaft/bearing axis parallel worldY, coaxial with the existing E axis; crossmember spansY between the actual local shelf supports. The central boss belongs to the fixed one-piece frame. Moving torso attachment follows its existing `beta_i−beta_i(neutral)` about E.
+
+These E coordinates come from the current mechanism, not pixel measurement. A1 is the positive-Z/high ear and C2 the negative-Z/low guide in the current convention; A2/C1 form the opposite end. The source's screen-left low-slot/high-ear end therefore cannot be called “hind” solely from its position in the screenshot. The new boss must not replace/move an A ear or a C guide.
+
+## Concrete bounded geometry and mechanical attachment
+
+1. **Integrate the open-box crossmember into the existing single frame Body.** Bridge the two local shelf/ear sides with positive material at the E/shelf region; retain the visible rectangular openings/webs and rounded central end rather than filling the whole region with a solid block. Connect the central lug to that bridge with genuine load-bearing material. Keep its source-local frame and every motor/A/E/O/C datum unchanged. Detailed dimensions are `DESIGN_ASSUMPTION`; use actual available envelope and travel checks, not pixel-to-mm conversion.
+2. **Make the central E connection functional.** Provide a coaxial E pin/bearing arrangement and a moving torso inner clevis/carrier on that pin. Tie the clevis rigidly to the same moving E–D output body/end plate that already carries the appropriate front/hind leg assemblies. A central lug bearing pair is a reasonable engineered support proposal; the film does not establish the pair count, exact selected bearing, seat spacing, pin diameter, fits or retainers. Record those choices explicitly. Do not describe a newly added decorative hole as an attachment.
+3. **Preserve the original kinematic constraint.** The central E revolute joint is the same existing joint represented at a different axial support location. D remains the output drive attachment, and the torso stays rigidly related to E–D. There is no new X-roll joint, universal joint, independent passive roll state or extra actuator. The six commands and four prescribed knees remain unchanged.
+4. **Resolve redundant outer E support honestly.** Existing r09 outer E journal/spacer hardware may remain only if it is physically connected/coaxial with this same joint and has a documented support function. It must not become disconnected decorative pin ends or a second incompatible torso constraint. If the user's required central attachment is the primary interface, adapt the torso's central clevis and actual pin stack accordingly; remove/reassign obsolete outer attachment hardware with an explicit inventory/identity migration. A central boss added without that carrier/pin change will leave the user's mechanical objection unresolved.
+5. **Keep manufacturing additions distinct.** The new printed crossmember is not the discarded four tie tubes/screws, and those split-frame fasteners should not return. Bearings, pin and retention are separate real physical instances where required. Do not copy the schematic red members as mechanical hardware or assume that a rendered red cap proves a thread/bearing designation.
+
+## Focused lead verification needed after implementation
+
+Show bare frame, frame+central bearing/pin, and frame+torso clevis at neutral and two different torso pitches so the fixed/moving interface is reviewable. Verify coaxiality at E, a continuous load path to the leg-bearing torso, assembly/pin insertion access, one connected editable frame solid and no new commanded DOF. Check changed crossmember/clevis material against actual moving E–D links, output end plate, C-shaft envelope and existing motor/connector reservations; retain all previously accepted mechanism datums. Existing r08 motion evidence does not certify this new material, and the stopped r09 partial campaign must not be called full acceptance.
+
+This source review justifies the bounded attachment correction. It does not select a manufacturer bearing interface, establish stiffness or approve fabrication or the complete package.

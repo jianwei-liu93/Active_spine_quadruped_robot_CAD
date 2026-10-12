@@ -1,6 +1,6 @@
 # Active spine quadruped robot CAD
 
-**Current whole-robot work:** [r08 editable robot](cad/flexor_r08_robot.FCStd) and [r08 delivery record](docs/19_candidate_package_r08.md). The center cage now has windowed transverse crosswalls and solid upper horn-side cheeks, matching the face arrangement visible in Movie S1. The 486-part candidate preserves distinct fore/hind mechanisms, the S9 spine topology, real spring wires and positive cable terminals. Native neutral/axis/motor checks pass; final motion, exports and drawings are being regenerated for r08. Fabrication release remains blocked by explicit supplier and engineering assumptions.
+**Current whole-robot work:** [r09 native checkpoint](cad/flexor_r09_robot.FCStd) contains one editable lumbar frame and passes native/S9/actuator/leg-axis checks and read-only AX0/AX1 pose export. It remains an intermediate checkpoint: source review identifies missing central transverse attachment beams/lugs and requests mounting-plate/link-profile refinements for r10. The r09 affected-motion campaign was stopped after 169/1346 records; no full r09 motion PASS or final package is claimed. The completed r08 motion evidence is historical and qualifies only unchanged geometry after explicit identity proof. Fabrication release remains blocked by supplier and engineering assumptions.
 
 A FreeCAD project for a manufacturable, editable active-spine quadruped inspired by **FLEXOR-F** in Wang et al., *Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*, Science Advances 12, eaed5603 (2026).
 

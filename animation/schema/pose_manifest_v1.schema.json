@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pose_manifest_v1.schema.json",
+  "title": "AX1 pose manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source", "conventions", "instances", "meshes", "instance_order", "frames"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["cad_path", "cad_sha256", "cad_revision", "parameter_files_sha256", "motion_map_sha256", "exporter_revision"],
+      "properties": {
+        "cad_path": {"type": "string", "minLength": 1},
+        "cad_sha256": {"$ref": "#/$defs/sha256"},
+        "cad_revision": {"type": "string", "minLength": 1},
+        "parameter_files_sha256": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/sha256"}},
+        "motion_map_sha256": {"$ref": "#/$defs/sha256"},
+        "exporter_revision": {"type": "string", "minLength": 1}
+      }
+    },
+    "conventions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world_axes", "axis_mapping", "handedness", "cad_length_unit", "blender_length_unit", "angle_unit", "matrix_layout", "vectors", "quaternion_order", "reference_pose_id"],
+      "properties": {
+        "world_axes": {"type": "object", "additionalProperties": false, "required": ["x", "y", "z"], "properties": {"x": {"const": "forward"}, "y": {"const": "left"}, "z": {"const": "up"}}},
+        "axis_mapping": {"const": "identity"}, "handedness": {"const": "right"}, "cad_length_unit": {"const": "mm"}, "blender_length_unit": {"const": "m"}, "angle_unit": {"const": "rad"},
+        "matrix_layout": {"const": "row_major_nested_rows"}, "vectors": {"const": "column"}, "quaternion_order": {"const": "wxyz"},
+        "reference_pose_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "instances": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/instance"}},
+    "meshes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/mesh"}},
+    "instance_order": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "frames": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/frame"}}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "finiteNumber": {"type": "number"},
+    "instance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["instance_id", "freecad_object_name", "source_object_name", "part_number", "mesh_id", "group", "motion_kind", "geometry_kind", "classification", "local_frame"],
+      "properties": {
+        "instance_id": {"type": "string", "pattern": "^instance:.+$"}, "freecad_object_name": {"type": "string", "minLength": 1},
+        "source_object_name": {"type": "string", "minLength": 1}, "part_number": {"type": "string", "minLength": 1}, "mesh_id": {"type": "string", "minLength": 1},
+        "group": {"type": "string", "minLength": 1}, "motion_kind": {"type": "string", "minLength": 1},
+        "geometry_kind": {"enum": ["rigid", "length_route_dependent", "static_auxiliary"]},
+        "classification": {"enum": ["active", "passive", "fixed"]}, "local_frame": {"type": "string", "minLength": 1}
+      }
+    },
+    "mesh": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mesh_id", "local_units", "geometry_hash", "asset_status"],
+      "properties": {
+        "mesh_id": {"type": "string", "minLength": 1}, "local_units": {"const": "mm"}, "geometry_hash": {"$ref": "#/$defs/sha256"},
+        "asset_status": {"const": "NOT_EXPORTED_AX01"}, "local_geometry_status": {"type": "string", "minLength": 1}
+      }
+    },
+    "frame": {
+      "type": "object", "additionalProperties": false,
+      "required": ["frame_id", "time_s", "commanded_order", "commanded_rad", "prescribed_knees_rad", "passive_provenance", "transforms_mm", "transforms_m", "quaternions_wxyz", "procedural_shapes"],
+      "properties": {
+        "frame_id": {"type": "string", "minLength": 1}, "time_s": {"$ref": "#/$defs/finiteNumber"},
+        "commanded_order": {"const": ["spine_phase", "foreL_hip", "foreR_hip", "hindL_hip", "hindR_hip", "hind_wheel"]},
+        "commanded_rad": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/finiteNumber"}},
+        "prescribed_knees_rad": {"type": "object", "additionalProperties": false, "required": ["foreL", "foreR", "hindL", "hindR"], "properties": {"foreL": {"$ref": "#/$defs/finiteNumber"}, "foreR": {"$ref": "#/$defs/finiteNumber"}, "hindL": {"$ref": "#/$defs/finiteNumber"}, "hindR": {"$ref": "#/$defs/finiteNumber"}}},
+        "leg_angles_rad": {"type": "object", "additionalProperties": false, "required": ["foreL", "foreR", "hindL", "hindR"], "properties": {"foreL": {"$ref": "#/$defs/anglePair"}, "foreR": {"$ref": "#/$defs/anglePair"}, "hindL": {"$ref": "#/$defs/anglePair"}, "hindR": {"$ref": "#/$defs/anglePair"}}},
+        "passive_provenance": {"enum": ["PRESCRIBED_KINEMATIC", "QUASISTATIC_MODEL", "DYNAMIC_SIMULATION", "SOURCE_MEASURED"]},
+        "transforms_mm": {"type": "array", "items": {"$ref": "#/$defs/matrix4"}}, "transforms_m": {"type": "array", "items": {"$ref": "#/$defs/matrix4"}},
+        "quaternions_wxyz": {"type": "array", "items": {"$ref": "#/$defs/quaternion"}},
+        "procedural_shapes": {"type": "array", "items": {"$ref": "#/$defs/proceduralShape"}}
+      }
+    },
+    "anglePair": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/finiteNumber"}},
+    "matrix4": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/finiteNumber"}}},
+    "quaternion": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/finiteNumber"}},
+    "proceduralShape": {
+      "type": "object", "additionalProperties": true,
+      "required": ["instance_id", "generator", "frame_id", "generator_module", "generator_source_sha256", "shape_parameters_sha256", "local_shape_sha256"],
+      "properties": {
+        "instance_id": {"type": "string", "minLength": 1}, "generator": {"enum": ["spring", "cable"]},
+        "frame_id": {"type": "string", "minLength": 1}, "generator_module": {"type": "string", "minLength": 1},
+        "generator_source_sha256": {"oneOf": [{"$ref": "#/$defs/sha256"}, {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/sha256"}}]},
+        "shape_parameters_sha256": {"$ref": "#/$defs/sha256"}, "local_shape_sha256": {"$ref": "#/$defs/sha256"},
+        "anchors": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/ownerAnchor"}},
+        "coil_seats_world_mm": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/point3"}},
+        "axis_world": {"$ref": "#/$defs/point3"}, "coil_length_mm": {"type": "number", "exclusiveMinimum": 0},
+        "free_length_mm": {"type": "number", "exclusiveMinimum": 0}, "kind": {"enum": ["extension", "compression"]},
+        "primitives": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/cablePrimitive"}},
+        "route_local_mm": {"type": "object", "minProperties": 1}, "ankle_anchor": {"$ref": "#/$defs/cableAnkleAnchor"},
+        "owner_anchors": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/ownerAnchor"}}
+      },
+      "allOf": [
+        {"if": {"properties": {"generator": {"const": "spring"}}, "required": ["generator"]},
+         "then": {"required": ["anchors", "coil_seats_world_mm", "axis_world", "coil_length_mm", "free_length_mm", "kind"]}},
+        {"if": {"properties": {"generator": {"const": "cable"}}, "required": ["generator"]},
+         "then": {"required": ["primitives", "route_local_mm", "ankle_anchor", "owner_anchors"]}}
+      ]
+    }
+    ,
+    "point3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/finiteNumber"}},
+    "ownerAnchor": {
+      "type": "object", "additionalProperties": true,
+      "required": ["name", "owner_instance_id", "owner_local_mm", "world_mm"],
+      "properties": {"name": {"type": "string", "minLength": 1}, "owner_instance_id": {"type": "string", "minLength": 1}, "owner_local_mm": {"$ref": "#/$defs/point3"}, "world_mm": {"$ref": "#/$defs/point3"}}
+    },
+    "cableAnkleAnchor": {
+      "type": "object", "additionalProperties": true,
+      "required": ["owner_instance_id", "owner_local_mm", "world_mm"],
+      "properties": {"name": {"type": "string", "minLength": 1}, "owner_instance_id": {"type": "string", "minLength": 1}, "owner_local_mm": {"$ref": "#/$defs/point3"}, "world_mm": {"$ref": "#/$defs/point3"}}
+    },
+    "cablePrimitive": {
+      "type": "object", "additionalProperties": true,
+      "required": ["type", "start_world_mm", "end_world_mm"],
+      "properties": {"type": {"enum": ["line", "arc"]}, "start_world_mm": {"$ref": "#/$defs/point3"}, "end_world_mm": {"$ref": "#/$defs/point3"}, "mid_world_mm": {"$ref": "#/$defs/point3"}},
+      "allOf": [{"if": {"properties": {"type": {"const": "arc"}}, "required": ["type"]}, "then": {"required": ["mid_world_mm"]}}]
+    }
+  }
+}

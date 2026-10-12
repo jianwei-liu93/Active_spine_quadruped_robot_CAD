@@ -1,0 +1,62 @@
+{
+  "revision": "r09",
+  "status": "PASS",
+  "scope": "Actual installed native motor instances; complete FLEXOR-F architecture requires two XL and five XC",
+  "expected": {
+    "DYNAMIXEL_XL330_M077_T": 2,
+    "DYNAMIXEL_XC330_M181_T": 5
+  },
+  "actual": {
+    "DYNAMIXEL_XL330_M077_T": 2,
+    "DYNAMIXEL_XC330_M181_T": 5
+  },
+  "instances": [
+    {
+      "instance": "SpineMotor_1",
+      "manufacturer_model": "DYNAMIXEL_XL330_M077_T",
+      "nominal_mass_g": 18.0,
+      "source_definition": "ENV_XL330_r02"
+    },
+    {
+      "instance": "SpineMotor1",
+      "manufacturer_model": "DYNAMIXEL_XL330_M077_T",
+      "nominal_mass_g": 18.0,
+      "source_definition": "ENV_XL330_r02"
+    },
+    {
+      "instance": "hind_ProximalMotor__1",
+      "manufacturer_model": "DYNAMIXEL_XC330_M181_T",
+      "nominal_mass_g": 23.0,
+      "source_definition": "ENV_XC330_M181_HIND_DATUM_r03"
+    },
+    {
+      "instance": "hind_ProximalMotor_1",
+      "manufacturer_model": "DYNAMIXEL_XC330_M181_T",
+      "nominal_mass_g": 23.0,
+      "source_definition": "ENV_XC330_M181_HIND_DATUM_r03"
+    },
+    {
+      "instance": "fore_ProximalMotor__1",
+      "manufacturer_model": "DYNAMIXEL_XC330_M181_T",
+      "nominal_mass_g": 23.0,
+      "source_definition": "ENV_XC330_M181_FORE_DATUM_r03"
+    },
+    {
+      "instance": "fore_ProximalMotor_1",
+      "manufacturer_model": "DYNAMIXEL_XC330_M181_T",
+      "nominal_mass_g": 23.0,
+      "source_definition": "ENV_XC330_M181_FORE_DATUM_r03"
+    },
+    {
+      "instance": "HindTendon_KneeMotor",
+      "manufacturer_model": "DYNAMIXEL_XC330_M181_T",
+      "nominal_mass_g": 23.0,
+      "source_definition": "ENV_TENDON_XC330_M181_r03"
+    }
+  ],
+  "paper_names": {
+    "XL330\u2013077-T": "XL330-M077-T",
+    "XC-M181-T": "XC330-M181-T"
+  },
+  "limits": "Case envelopes and nominal catalog masses do not verify shaft/spline, mounting datums, control calibration or electrical power budget."
+}

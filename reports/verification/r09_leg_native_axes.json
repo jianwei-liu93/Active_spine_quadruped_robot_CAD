@@ -1,0 +1,4790 @@
+{
+  "revision": "r09",
+  "status": "PASS",
+  "scope": "Actual saved neutral leg shaft/cylindrical bore axes and orientation; read-only native geometry",
+  "document": {
+    "name": "flexor_r09_robot",
+    "file": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r09_robot.FCStd",
+    "bytes": 7044271,
+    "sha256": "765bb3b9a32365e1c005ff16a246ac284d2e0544d3648d4e4be3f436a58e1b57"
+  },
+  "tolerances": {
+    "axis_position_mm": 1e-06,
+    "axis_transverse_unit_component": 1e-09,
+    "surface_radius_match_mm": 1e-07
+  },
+  "checks": [
+    {
+      "check": "saved_neutral_spine_phase",
+      "passed": true,
+      "phase_rad": 0.0
+    },
+    {
+      "check": "hind:bilateral_E_journals_found",
+      "passed": true,
+      "instances": [
+        "E1__1_Pin",
+        "E1_1_Pin"
+      ]
+    },
+    {
+      "check": "E1__1_Pin:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "E1__1_Pin:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E1__1_Pin:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E1__1_Pin:E_contract",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "E1_1_Pin:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "E1_1_Pin:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E1_1_Pin:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E1_1_Pin:E_contract",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "fore:bilateral_E_journals_found",
+      "passed": true,
+      "instances": [
+        "E2__1_Pin",
+        "E2_1_Pin"
+      ]
+    },
+    {
+      "check": "E2__1_Pin:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "E2__1_Pin:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E2__1_Pin:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E2__1_Pin:E_contract",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "E2_1_Pin:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "E2_1_Pin:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E2_1_Pin:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "E2_1_Pin:E_contract",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR:recorded_neutral_angles",
+      "passed": true,
+      "recorded_rad": [
+        -0.6981317007977318,
+        -1.7453292519943295
+      ],
+      "expected_rad": [
+        -0.6981317007977318,
+        -1.7453292519943295
+      ]
+    },
+    {
+      "check": "hindR_H_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_H_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR_H_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR:H_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -60.0,
+        0.0
+      ]
+    },
+    {
+      "check": "hindR_K_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_K_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR_K_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR:K_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -37.784711149549636,
+        -18.640840680909637
+      ]
+    },
+    {
+      "check": "hindR_A_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_A_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR_A_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindR:A_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -60.76604444311897,
+        -37.92446897150582
+      ]
+    },
+    {
+      "check": "hindR_FootPad:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR:F_pad_origin_expected_position",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_FootPad:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "hindR_FootPad:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "hindR:F_native_cup_matches_pad_origin",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_thigh:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.577566798522237e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindR_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindR_thigh:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 7.216449660063518e-16
+    },
+    {
+      "check": "hindR_InputHorn:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_InputHorn:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindR_InputHorn:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindR_InputHorn:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.577566798522237e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_thigh:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.5888218580782548e-14
+    },
+    {
+      "check": "hindR_shank:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_shank:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 3.552713678800501e-15
+    },
+    {
+      "check": "hindR_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_shank:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 2.0097183471152322e-14
+    },
+    {
+      "check": "hindR_Foot:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_Foot:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_Foot:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR_Foot:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "Torso_hind:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "Torso_hind:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4779791479411853e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "Torso_hind:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 1.8918200339612665e-14,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindR:torso_H_support_coaxial",
+      "passed": true,
+      "error_mm": 7.131049517197238e-14
+    },
+    {
+      "check": "hindR_H_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindR_H_Bearing2"
+      ]
+    },
+    {
+      "check": "hindR_H_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_H_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_H_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_H_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_K_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindR_K_Bearing0",
+        "hindR_K_Bearing1"
+      ]
+    },
+    {
+      "check": "hindR_K_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_K_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_K_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_K_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_K_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_K_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_K_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_K_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_A_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindR_A_Bearing0",
+        "hindR_A_Bearing1",
+        "hindR_A_Bearing2"
+      ]
+    },
+    {
+      "check": "hindR_A_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_A_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_A_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_A_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR_A_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindR_A_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindR_A_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindR:H->K_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        22.215288850450364,
+        -18.640840680909637
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hindR:K->A_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        -22.981333293569335,
+        -19.28362829059618
+      ],
+      "expected_x_sign": -1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hindR:A->F_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        23.74737773668832,
+        -19.92641590028272
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hindL:recorded_neutral_angles",
+      "passed": true,
+      "recorded_rad": [
+        -0.6981317007977318,
+        -1.7453292519943295
+      ],
+      "expected_rad": [
+        -0.6981317007977318,
+        -1.7453292519943295
+      ]
+    },
+    {
+      "check": "hindL_H_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_H_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL_H_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL:H_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -60.0,
+        0.0
+      ]
+    },
+    {
+      "check": "hindL_K_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_K_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL_K_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL:K_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -37.784711149549636,
+        -18.640840680909637
+      ]
+    },
+    {
+      "check": "hindL_A_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_A_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL_A_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "hindL:A_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        -60.76604444311897,
+        -37.92446897150582
+      ]
+    },
+    {
+      "check": "hindL_FootPad:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL:F_pad_origin_expected_position",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_FootPad:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "hindL_FootPad:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "hindL:F_native_cup_matches_pad_origin",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_thigh:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.577566798522237e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindL_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindL_thigh:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 7.216449660063518e-16
+    },
+    {
+      "check": "hindL_InputHorn:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_InputHorn:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindL_InputHorn:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "hindL_InputHorn:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.577566798522237e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_thigh:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.5888218580782548e-14
+    },
+    {
+      "check": "hindL_shank:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_shank:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 3.552713678800501e-15
+    },
+    {
+      "check": "hindL_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_shank:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 2.0097183471152322e-14
+    },
+    {
+      "check": "hindL_Foot:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_Foot:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 5.551115123125783e-17,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_Foot:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL_Foot:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "Torso_hind:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4779791479411853e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "Torso_hind:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 1.8918200339612665e-14,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "hindL:torso_H_support_coaxial",
+      "passed": true,
+      "error_mm": 7.131049517197238e-14
+    },
+    {
+      "check": "hindL_H_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindL_H_Bearing0"
+      ]
+    },
+    {
+      "check": "hindL_H_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_H_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_H_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_H_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_K_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindL_K_Bearing0",
+        "hindL_K_Bearing1"
+      ]
+    },
+    {
+      "check": "hindL_K_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_K_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_K_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_K_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_K_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_K_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_K_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_K_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_A_Bearing:found",
+      "passed": true,
+      "instances": [
+        "hindL_A_Bearing0",
+        "hindL_A_Bearing1",
+        "hindL_A_Bearing2"
+      ]
+    },
+    {
+      "check": "hindL_A_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_A_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_A_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_A_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL_A_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "hindL_A_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "hindL_A_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "hindL:H->K_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        22.215288850450364,
+        -18.640840680909637
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hindL:K->A_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        -22.981333293569335,
+        -19.28362829059618
+      ],
+      "expected_x_sign": -1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hindL:A->F_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        23.74737773668832,
+        -19.92641590028272
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreR:recorded_neutral_angles",
+      "passed": true,
+      "recorded_rad": [
+        -0.8726646259971648,
+        -1.5707963267948966
+      ],
+      "expected_rad": [
+        -0.8726646259971648,
+        -1.5707963267948966
+      ]
+    },
+    {
+      "check": "foreR_H_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_H_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR_H_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR:H_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        57.0,
+        0.0
+      ]
+    },
+    {
+      "check": "foreR_K_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_K_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR_K_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR:K_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        71.14132741310387,
+        -16.852977748617516
+      ]
+    },
+    {
+      "check": "foreR_A_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_A_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR_A_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreR:A_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        52.7562607782484,
+        -32.279880381094465
+      ]
+    },
+    {
+      "check": "foreR_FootPad:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR:F_pad_origin_expected_position",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_FootPad:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "foreR_FootPad:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "foreR:F_native_cup_matches_pad_origin",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_thigh:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreR_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreR_thigh:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.1102230246251565e-16
+    },
+    {
+      "check": "foreR_InputHorn:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_InputHorn:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.443059973708341e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreR_InputHorn:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreR_InputHorn:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 4.440892098500626e-16
+    },
+    {
+      "check": "foreR_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_thigh:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.5888218580782548e-14
+    },
+    {
+      "check": "foreR_shank:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_shank:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 3.552713678800501e-15
+    },
+    {
+      "check": "foreR_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_shank:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 7.105427357601002e-15
+    },
+    {
+      "check": "foreR_Foot:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_Foot:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_Foot:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR_Foot:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "Torso_fore:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "Torso_fore:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4779791479411853e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "Torso_fore:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 2.0208547746532052e-14,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreR:torso_H_support_coaxial",
+      "passed": true,
+      "error_mm": 1.4708674422151798e-14
+    },
+    {
+      "check": "foreR_H_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreR_H_Bearing2"
+      ]
+    },
+    {
+      "check": "foreR_H_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_H_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_H_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_H_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_K_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreR_K_Bearing0",
+        "foreR_K_Bearing1"
+      ]
+    },
+    {
+      "check": "foreR_K_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_K_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_K_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_K_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_K_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_K_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_K_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_K_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_A_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreR_A_Bearing0",
+        "foreR_A_Bearing1",
+        "foreR_A_Bearing2"
+      ]
+    },
+    {
+      "check": "foreR_A_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_A_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_A_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_A_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR_A_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreR_A_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreR_A_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreR:H->K_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        14.141327413103866,
+        -16.852977748617516
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreR:K->A_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        -18.38506663485547,
+        -15.42690263247695
+      ],
+      "expected_x_sign": -1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreR:A->F_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        21.854778729342335,
+        -26.045511066045258
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreL:recorded_neutral_angles",
+      "passed": true,
+      "recorded_rad": [
+        -0.8726646259971648,
+        -1.5707963267948966
+      ],
+      "expected_rad": [
+        -0.8726646259971648,
+        -1.5707963267948966
+      ]
+    },
+    {
+      "check": "foreL_H_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_H_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL_H_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL:H_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        57.0,
+        0.0
+      ]
+    },
+    {
+      "check": "foreL_K_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_K_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL_K_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL:K_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        71.14132741310387,
+        -16.852977748617516
+      ]
+    },
+    {
+      "check": "foreL_A_Journal:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_A_Journal:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL_A_Journal:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 0.95
+    },
+    {
+      "check": "foreL:A_shaft_expected_position",
+      "passed": true,
+      "error_mm": 0.0,
+      "measured_xz_mm": [
+        52.7562607782484,
+        -32.279880381094465
+      ]
+    },
+    {
+      "check": "foreL_FootPad:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL:F_pad_origin_expected_position",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_FootPad:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "foreL_FootPad:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 3.0
+    },
+    {
+      "check": "foreL:F_native_cup_matches_pad_origin",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_thigh:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreL_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreL_thigh:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.1102230246251565e-16
+    },
+    {
+      "check": "foreL_InputHorn:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_InputHorn:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 4.443059973708341e-16,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreL_InputHorn:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.025
+    },
+    {
+      "check": "foreL_InputHorn:H_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 4.440892098500626e-16
+    },
+    {
+      "check": "foreL_thigh:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_thigh:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_thigh:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 1.5888218580782548e-14
+    },
+    {
+      "check": "foreL_shank:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_shank:K_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 3.552713678800501e-15
+    },
+    {
+      "check": "foreL_shank:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_shank:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_shank:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 7.105427357601002e-15
+    },
+    {
+      "check": "foreL_Foot:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_Foot:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4825341532472726e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_Foot:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL_Foot:A_bore_shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "Torso_fore:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.4779791479411853e-16,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "Torso_fore:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 2.0208547746532052e-14,
+      "radius_mm": 2.025
+    },
+    {
+      "check": "foreL:torso_H_support_coaxial",
+      "passed": true,
+      "error_mm": 1.4708674422151798e-14
+    },
+    {
+      "check": "foreL_H_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreL_H_Bearing0"
+      ]
+    },
+    {
+      "check": "foreL_H_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_H_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_H_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_H_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_K_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreL_K_Bearing0",
+        "foreL_K_Bearing1"
+      ]
+    },
+    {
+      "check": "foreL_K_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_K_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_K_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_K_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_K_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_K_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_K_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_K_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_A_Bearing:found",
+      "passed": true,
+      "instances": [
+        "foreL_A_Bearing0",
+        "foreL_A_Bearing1",
+        "foreL_A_Bearing2"
+      ]
+    },
+    {
+      "check": "foreL_A_Bearing0:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_A_Bearing0:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing0:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing0:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_A_Bearing1:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_A_Bearing1:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing1:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing1:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL_A_Bearing2:valid_single_solid",
+      "passed": true
+    },
+    {
+      "check": "foreL_A_Bearing2:selected_axis_parallel_Y",
+      "passed": true,
+      "transverse_component": 2.220446049250313e-16,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing2:split_faces_coaxial",
+      "passed": true,
+      "max_xz_spread_mm": 0.0,
+      "radius_mm": 1.0
+    },
+    {
+      "check": "foreL_A_Bearing2:shaft_coaxial",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "foreL:H->K_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        14.141327413103866,
+        -16.852977748617516
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreL:K->A_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        -18.38506663485547,
+        -15.42690263247695
+      ],
+      "expected_x_sign": -1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "foreL:A->F_direction",
+      "passed": true,
+      "measured_dx_dz_mm": [
+        21.854778729342335,
+        -26.045511066045258
+      ],
+      "expected_x_sign": 1,
+      "expected_z_sign": -1
+    },
+    {
+      "check": "hind:left_right_same_sagittal_points",
+      "passed": true,
+      "error_mm": 0.0
+    },
+    {
+      "check": "fore:left_right_same_sagittal_points",
+      "passed": true,
+      "error_mm": 0.0
+    }
+  ],
+  "legs": [
+    {
+      "tag": "hindR",
+      "leg_type": "hind",
+      "expected_points_xz_mm": {
+        "H": [
+          -60.0,
+          0.0
+        ],
+        "K": [
+          -37.784711149549636,
+          -18.640840680909637
+        ],
+        "A": [
+          -60.76604444311897,
+          -37.92446897150582
+        ],
+        "F": [
+          -37.01866670643065,
+          -57.85088487178854
+        ]
+      },
+      "shaft_axes": {
+        "H": {
+          "instance": "hindR_H_Journal",
+          "source_object": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.0,
+                -52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                -1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.0,
+                -52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                -1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ]
+        },
+        "K": {
+          "instance": "hindR_K_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L4p7",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -42.94999999999999,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -42.94999999999999,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -42.94999999999999,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        },
+        "A": {
+          "instance": "hindR_A_Journal",
+          "source_object": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -44.75,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -44.75,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -44.75,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        }
+      },
+      "bore_axes": [
+        {
+          "instance": "hindR_thigh",
+          "source_object": "LEG_r03_DIRECT_HIND_THIGH",
+          "point_xz_mm": [
+            -60.0,
+            -7.216449660063518e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.577566798522237e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                -60.0,
+                -45.0,
+                -7.216449660063518e-16
+              ],
+              "axis_direction_xyz": [
+                -2.0040702382342114e-16,
+                -1.0,
+                -4.115558318765146e-16
+              ],
+              "axis_transverse_component": 4.577566798522237e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 7.216449660063518e-16
+        },
+        {
+          "instance": "hindR_InputHorn",
+          "source_object": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 0.0,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.025,
+              "axis_point_xyz_mm": [
+                -60.0,
+                -52.0,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                0.0,
+                -1.0,
+                0.0
+              ],
+              "axis_transverse_component": 0.0
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "hindR_thigh",
+          "source_object": "LEG_r03_DIRECT_HIND_THIGH",
+          "point_xz_mm": [
+            -37.78471114954962,
+            -18.640840680909644
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.577566798522237e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 10,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -37.78471114954962,
+                -44.99999999999999,
+                -18.640840680909644
+              ],
+              "axis_direction_xyz": [
+                -2.0040702382342114e-16,
+                -1.0,
+                -4.115558318765146e-16
+              ],
+              "axis_transverse_component": 4.577566798522237e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 1.5888218580782548e-14
+        },
+        {
+          "instance": "hindR_shank",
+          "source_object": "LEG_r03_DIRECT_HIND_SHANK",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.64084068090964
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 8,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -46.800000000000004,
+                -18.64084068090964
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 3.552713678800501e-15
+        },
+        {
+          "instance": "hindR_shank",
+          "source_object": "LEG_r03_DIRECT_HIND_SHANK",
+          "point_xz_mm": [
+            -60.766044443118986,
+            -37.92446897150583
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -60.766044443118986,
+                -46.800000000000004,
+                -37.92446897150583
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 2.0097183471152322e-14
+        },
+        {
+          "instance": "hindR_Foot",
+          "source_object": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -47.4,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "Torso_hind",
+          "source_object": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+          "point_xz_mm": [
+            -60.00000000000007,
+            -6.039613253960857e-15
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 1.8918200339612665e-14,
+          "max_axis_transverse_component": 2.4779791479411853e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 144,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.00000000000007,
+                43.200000000000024,
+                -6.039613253960857e-15
+              ],
+              "axis_direction_xyz": [
+                -1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            },
+            {
+              "face_index": 163,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.00000000000007,
+                -41.99999999999997,
+                1.287858708565181e-14
+              ],
+              "axis_direction_xyz": [
+                -1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            }
+          ],
+          "joint": "H"
+        }
+      ],
+      "bearing_axes": [
+        {
+          "instance": "hindR_H_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.0,
+                -42.0,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "H"
+        },
+        {
+          "instance": "hindR_K_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -45.6,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "hindR_K_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                -43.8,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "hindR_A_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -52.6,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "hindR_A_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -47.4,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "hindR_A_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                -45.6,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        }
+      ],
+      "foot_reference": {
+        "instance": "hindR_FootPad",
+        "origin_xyz_mm": [
+          -37.01866670643065,
+          -46.8,
+          -57.85088487178854
+        ],
+        "point_xz_mm": [
+          -37.01866670643065,
+          -57.85088487178854
+        ],
+        "native_cup_axis": {
+          "instance": "hindR_FootPad",
+          "source_object": "LEG_r02_CURVED_CONTACT_PAD",
+          "point_xz_mm": [
+            -37.01866670643065,
+            -57.85088487178854
+          ],
+          "radius_mm": 3.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 3.0,
+              "axis_point_xyz_mm": [
+                -37.01866670643065,
+                -46.8,
+                -57.85088487178854
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ]
+        }
+      },
+      "measured_points_xz_mm": {
+        "H": [
+          -60.0,
+          0.0
+        ],
+        "K": [
+          -37.784711149549636,
+          -18.640840680909637
+        ],
+        "A": [
+          -60.76604444311897,
+          -37.92446897150582
+        ],
+        "F": [
+          -37.01866670643065,
+          -57.85088487178854
+        ]
+      },
+      "measured_segment_vectors_dx_dz_mm": {
+        "H_K": [
+          22.215288850450364,
+          -18.640840680909637
+        ],
+        "K_A": [
+          -22.981333293569335,
+          -19.28362829059618
+        ],
+        "A_F": [
+          23.74737773668832,
+          -19.92641590028272
+        ]
+      },
+      "measured_lengths_mm": {
+        "H_K": 28.999999999999996,
+        "K_A": 29.999999999999996,
+        "A_F": 31.000000000000004
+      }
+    },
+    {
+      "tag": "hindL",
+      "leg_type": "hind",
+      "expected_points_xz_mm": {
+        "H": [
+          -60.0,
+          0.0
+        ],
+        "K": [
+          -37.784711149549636,
+          -18.640840680909637
+        ],
+        "A": [
+          -60.76604444311897,
+          -37.92446897150582
+        ],
+        "F": [
+          -37.01866670643065,
+          -57.85088487178854
+        ]
+      },
+      "shaft_axes": {
+        "H": {
+          "instance": "hindL_H_Journal",
+          "source_object": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.0,
+                52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.0,
+                52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ]
+        },
+        "K": {
+          "instance": "hindL_K_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L4p7",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                47.650000000000006,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                47.650000000000006,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                47.650000000000006,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        },
+        "A": {
+          "instance": "hindL_A_Journal",
+          "source_object": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                59.8,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                59.8,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                59.8,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        }
+      },
+      "bore_axes": [
+        {
+          "instance": "hindL_thigh",
+          "source_object": "LEG_r03_DIRECT_HIND_THIGH",
+          "point_xz_mm": [
+            -60.0,
+            -7.216449660063518e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.577566798522237e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                -60.0,
+                43.8,
+                -7.216449660063518e-16
+              ],
+              "axis_direction_xyz": [
+                -2.0040702382342114e-16,
+                -1.0,
+                -4.115558318765146e-16
+              ],
+              "axis_transverse_component": 4.577566798522237e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 7.216449660063518e-16
+        },
+        {
+          "instance": "hindL_InputHorn",
+          "source_object": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 0.0,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.025,
+              "axis_point_xyz_mm": [
+                -60.0,
+                50.8,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                0.0,
+                -1.0,
+                0.0
+              ],
+              "axis_transverse_component": 0.0
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "hindL_thigh",
+          "source_object": "LEG_r03_DIRECT_HIND_THIGH",
+          "point_xz_mm": [
+            -37.78471114954962,
+            -18.640840680909644
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.577566798522237e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 10,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -37.78471114954962,
+                43.800000000000004,
+                -18.640840680909644
+              ],
+              "axis_direction_xyz": [
+                -2.0040702382342114e-16,
+                -1.0,
+                -4.115558318765146e-16
+              ],
+              "axis_transverse_component": 4.577566798522237e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 1.5888218580782548e-14
+        },
+        {
+          "instance": "hindL_shank",
+          "source_object": "LEG_r03_DIRECT_HIND_SHANK",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.64084068090964
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 8,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                45.6,
+                -18.64084068090964
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 3.552713678800501e-15
+        },
+        {
+          "instance": "hindL_shank",
+          "source_object": "LEG_r03_DIRECT_HIND_SHANK",
+          "point_xz_mm": [
+            -60.766044443118986,
+            -37.92446897150583
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                -60.766044443118986,
+                45.6,
+                -37.92446897150583
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 2.0097183471152322e-14
+        },
+        {
+          "instance": "hindL_Foot",
+          "source_object": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                48.6,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "Torso_hind",
+          "source_object": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+          "point_xz_mm": [
+            -60.00000000000007,
+            -6.039613253960857e-15
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 1.8918200339612665e-14,
+          "max_axis_transverse_component": 2.4779791479411853e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 144,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.00000000000007,
+                43.200000000000024,
+                -6.039613253960857e-15
+              ],
+              "axis_direction_xyz": [
+                -1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            },
+            {
+              "face_index": 163,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                -60.00000000000007,
+                -41.99999999999997,
+                1.287858708565181e-14
+              ],
+              "axis_direction_xyz": [
+                -1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            }
+          ],
+          "joint": "H"
+        }
+      ],
+      "bearing_axes": [
+        {
+          "instance": "hindL_H_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.0,
+            0.0
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.0,
+                43.2,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "H"
+        },
+        {
+          "instance": "hindL_K_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                45.0,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "hindL_K_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -37.784711149549636,
+            -18.640840680909637
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -37.784711149549636,
+                46.800000000000004,
+                -18.640840680909637
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "hindL_A_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                46.800000000000004,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "hindL_A_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                48.6,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "hindL_A_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            -60.76604444311897,
+            -37.92446897150582
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                -60.76604444311897,
+                53.800000000000004,
+                -37.92446897150582
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        }
+      ],
+      "foot_reference": {
+        "instance": "hindL_FootPad",
+        "origin_xyz_mm": [
+          -37.01866670643065,
+          49.2,
+          -57.85088487178854
+        ],
+        "point_xz_mm": [
+          -37.01866670643065,
+          -57.85088487178854
+        ],
+        "native_cup_axis": {
+          "instance": "hindL_FootPad",
+          "source_object": "LEG_r02_CURVED_CONTACT_PAD",
+          "point_xz_mm": [
+            -37.01866670643065,
+            -57.85088487178854
+          ],
+          "radius_mm": 3.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 5.551115123125783e-17,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 3.0,
+              "axis_point_xyz_mm": [
+                -37.01866670643065,
+                49.2,
+                -57.85088487178854
+              ],
+              "axis_direction_xyz": [
+                4.252400893184228e-17,
+                1.0,
+                -3.5681880210888215e-17
+              ],
+              "axis_transverse_component": 5.551115123125783e-17
+            }
+          ]
+        }
+      },
+      "measured_points_xz_mm": {
+        "H": [
+          -60.0,
+          0.0
+        ],
+        "K": [
+          -37.784711149549636,
+          -18.640840680909637
+        ],
+        "A": [
+          -60.76604444311897,
+          -37.92446897150582
+        ],
+        "F": [
+          -37.01866670643065,
+          -57.85088487178854
+        ]
+      },
+      "measured_segment_vectors_dx_dz_mm": {
+        "H_K": [
+          22.215288850450364,
+          -18.640840680909637
+        ],
+        "K_A": [
+          -22.981333293569335,
+          -19.28362829059618
+        ],
+        "A_F": [
+          23.74737773668832,
+          -19.92641590028272
+        ]
+      },
+      "measured_lengths_mm": {
+        "H_K": 28.999999999999996,
+        "K_A": 29.999999999999996,
+        "A_F": 31.000000000000004
+      }
+    },
+    {
+      "tag": "foreR",
+      "leg_type": "fore",
+      "expected_points_xz_mm": {
+        "H": [
+          57.0,
+          0.0
+        ],
+        "K": [
+          71.14132741310387,
+          -16.852977748617516
+        ],
+        "A": [
+          52.7562607782484,
+          -32.279880381094465
+        ],
+        "F": [
+          74.61103950759073,
+          -58.32539144713972
+        ]
+      },
+      "shaft_axes": {
+        "H": {
+          "instance": "foreR_H_Journal",
+          "source_object": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+          "point_xz_mm": [
+            57.0,
+            0.0
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.9500000000000002,
+              "axis_point_xyz_mm": [
+                57.0,
+                -52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                -1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.9500000000000002,
+              "axis_point_xyz_mm": [
+                57.0,
+                -52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                -1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ]
+        },
+        "K": {
+          "instance": "foreR_K_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L4p7",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -42.94999999999999,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -42.94999999999999,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -42.94999999999999,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        },
+        "A": {
+          "instance": "foreR_A_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L9p9",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -44.75,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -44.75,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -44.75,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        }
+      },
+      "bore_axes": [
+        {
+          "instance": "foreR_thigh",
+          "source_object": "LEG_r03_DIRECT_FORE_THIGH",
+          "point_xz_mm": [
+            57.0,
+            1.1102230246251565e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                57.0,
+                -45.0,
+                1.1102230246251565e-16
+              ],
+              "axis_direction_xyz": [
+                -9.873227530559262e-17,
+                -1.0,
+                -2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 1.1102230246251565e-16
+        },
+        {
+          "instance": "foreR_InputHorn",
+          "source_object": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+          "point_xz_mm": [
+            57.0,
+            4.440892098500626e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.443059973708341e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                57.0,
+                -52.0,
+                4.440892098500626e-16
+              ],
+              "axis_direction_xyz": [
+                6.344832898421637e-17,
+                -1.0,
+                -4.397523494522824e-16
+              ],
+              "axis_transverse_component": 4.443059973708341e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 4.440892098500626e-16
+        },
+        {
+          "instance": "foreR_thigh",
+          "source_object": "LEG_r03_DIRECT_FORE_THIGH",
+          "point_xz_mm": [
+            71.14132741310388,
+            -16.852977748617523
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 10,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                71.14132741310388,
+                -44.99999999999999,
+                -16.852977748617523
+              ],
+              "axis_direction_xyz": [
+                -9.873227530559262e-17,
+                -1.0,
+                -2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 1.5888218580782548e-14
+        },
+        {
+          "instance": "foreR_shank",
+          "source_object": "LEG_r03_DIRECT_FORE_SHANK",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.85297774861752
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 8,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -46.800000000000004,
+                -16.85297774861752
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 3.552713678800501e-15
+        },
+        {
+          "instance": "foreR_shank",
+          "source_object": "LEG_r03_DIRECT_FORE_SHANK",
+          "point_xz_mm": [
+            52.75626077824839,
+            -32.279880381094465
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                52.75626077824839,
+                -46.800000000000004,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 7.105427357601002e-15
+        },
+        {
+          "instance": "foreR_Foot",
+          "source_object": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -47.4,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "Torso_fore",
+          "source_object": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+          "point_xz_mm": [
+            56.99999999999999,
+            1.2878587085651816e-14
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 2.0208547746532052e-14,
+          "max_axis_transverse_component": 2.4779791479411853e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 91,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                56.99999999999999,
+                -42.0,
+                1.2878587085651816e-14
+              ],
+              "axis_direction_xyz": [
+                1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            },
+            {
+              "face_index": 110,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                57.0,
+                43.2,
+                -6.039613253960852e-15
+              ],
+              "axis_direction_xyz": [
+                1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            }
+          ],
+          "joint": "H"
+        }
+      ],
+      "bearing_axes": [
+        {
+          "instance": "foreR_H_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            57.0,
+            0.0
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                57.0,
+                -42.0,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "H"
+        },
+        {
+          "instance": "foreR_K_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -45.6,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "foreR_K_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                -43.8,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "foreR_A_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -52.6,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "foreR_A_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -47.4,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "foreR_A_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                -45.6,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        }
+      ],
+      "foot_reference": {
+        "instance": "foreR_FootPad",
+        "origin_xyz_mm": [
+          74.61103950759073,
+          -46.8,
+          -58.32539144713972
+        ],
+        "point_xz_mm": [
+          74.61103950759073,
+          -58.32539144713972
+        ],
+        "native_cup_axis": {
+          "instance": "foreR_FootPad",
+          "source_object": "LEG_r02_CURVED_CONTACT_PAD",
+          "point_xz_mm": [
+            74.61103950759073,
+            -58.32539144713972
+          ],
+          "radius_mm": 3.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 3.000000000000001,
+              "axis_point_xyz_mm": [
+                74.61103950759073,
+                -46.8,
+                -58.32539144713972
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ]
+        }
+      },
+      "measured_points_xz_mm": {
+        "H": [
+          57.0,
+          0.0
+        ],
+        "K": [
+          71.14132741310387,
+          -16.852977748617516
+        ],
+        "A": [
+          52.7562607782484,
+          -32.279880381094465
+        ],
+        "F": [
+          74.61103950759073,
+          -58.32539144713972
+        ]
+      },
+      "measured_segment_vectors_dx_dz_mm": {
+        "H_K": [
+          14.141327413103866,
+          -16.852977748617516
+        ],
+        "K_A": [
+          -18.38506663485547,
+          -15.42690263247695
+        ],
+        "A_F": [
+          21.854778729342335,
+          -26.045511066045258
+        ]
+      },
+      "measured_lengths_mm": {
+        "H_K": 22.0,
+        "K_A": 24.0,
+        "A_F": 34.0
+      }
+    },
+    {
+      "tag": "foreL",
+      "leg_type": "fore",
+      "expected_points_xz_mm": {
+        "H": [
+          57.0,
+          0.0
+        ],
+        "K": [
+          71.14132741310387,
+          -16.852977748617516
+        ],
+        "A": [
+          52.7562607782484,
+          -32.279880381094465
+        ],
+        "F": [
+          74.61103950759073,
+          -58.32539144713972
+        ]
+      },
+      "shaft_axes": {
+        "H": {
+          "instance": "foreL_H_Journal",
+          "source_object": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+          "point_xz_mm": [
+            57.0,
+            0.0
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.9500000000000002,
+              "axis_point_xyz_mm": [
+                57.0,
+                52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.9500000000000002,
+              "axis_point_xyz_mm": [
+                57.0,
+                52.85,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ]
+        },
+        "K": {
+          "instance": "foreL_K_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L4p7",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                47.650000000000006,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                47.650000000000006,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                47.650000000000006,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        },
+        "A": {
+          "instance": "foreL_A_Journal",
+          "source_object": "LEG_r02_JOURNAL_D1p9_L9p9",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 0.95,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                54.650000000000006,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 6,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                54.650000000000006,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            },
+            {
+              "face_index": 10,
+              "radius_mm": 0.95,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                54.650000000000006,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ]
+        }
+      },
+      "bore_axes": [
+        {
+          "instance": "foreL_thigh",
+          "source_object": "LEG_r03_DIRECT_FORE_THIGH",
+          "point_xz_mm": [
+            57.0,
+            1.1102230246251565e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                57.0,
+                43.8,
+                1.1102230246251565e-16
+              ],
+              "axis_direction_xyz": [
+                -9.873227530559262e-17,
+                -1.0,
+                -2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 1.1102230246251565e-16
+        },
+        {
+          "instance": "foreL_InputHorn",
+          "source_object": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+          "point_xz_mm": [
+            57.0,
+            4.440892098500626e-16
+          ],
+          "radius_mm": 1.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 4.443059973708341e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 7,
+              "radius_mm": 1.0250000000000001,
+              "axis_point_xyz_mm": [
+                57.0,
+                50.8,
+                4.440892098500626e-16
+              ],
+              "axis_direction_xyz": [
+                6.344832898421637e-17,
+                -1.0,
+                -4.397523494522824e-16
+              ],
+              "axis_transverse_component": 4.443059973708341e-16
+            }
+          ],
+          "joint": "H",
+          "shaft_axis_offset_mm": 4.440892098500626e-16
+        },
+        {
+          "instance": "foreL_thigh",
+          "source_object": "LEG_r03_DIRECT_FORE_THIGH",
+          "point_xz_mm": [
+            71.14132741310388,
+            -16.852977748617523
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 10,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                71.14132741310388,
+                43.800000000000004,
+                -16.852977748617523
+              ],
+              "axis_direction_xyz": [
+                -9.873227530559262e-17,
+                -1.0,
+                -2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 1.5888218580782548e-14
+        },
+        {
+          "instance": "foreL_shank",
+          "source_object": "LEG_r03_DIRECT_FORE_SHANK",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.85297774861752
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 8,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                45.6,
+                -16.85297774861752
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "K",
+          "shaft_axis_offset_mm": 3.552713678800501e-15
+        },
+        {
+          "instance": "foreL_shank",
+          "source_object": "LEG_r03_DIRECT_FORE_SHANK",
+          "point_xz_mm": [
+            52.75626077824839,
+            -32.279880381094465
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                52.75626077824839,
+                45.6,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -5.767950297986838e-17,
+                -1.0,
+                2.414597961491455e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 7.105427357601002e-15
+        },
+        {
+          "instance": "foreL_Foot",
+          "source_object": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 9,
+              "radius_mm": 2.0250000000000004,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                48.6,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ],
+          "joint": "A",
+          "shaft_axis_offset_mm": 0.0
+        },
+        {
+          "instance": "Torso_fore",
+          "source_object": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+          "point_xz_mm": [
+            56.99999999999999,
+            1.2878587085651816e-14
+          ],
+          "radius_mm": 2.025,
+          "max_xz_spread_mm": 2.0208547746532052e-14,
+          "max_axis_transverse_component": 2.4779791479411853e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 91,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                56.99999999999999,
+                -42.0,
+                1.2878587085651816e-14
+              ],
+              "axis_direction_xyz": [
+                1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            },
+            {
+              "face_index": 110,
+              "radius_mm": 2.025,
+              "axis_point_xyz_mm": [
+                57.0,
+                43.2,
+                -6.039613253960852e-15
+              ],
+              "axis_direction_xyz": [
+                1.1e-16,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.4779791479411853e-16
+            }
+          ],
+          "joint": "H"
+        }
+      ],
+      "bearing_axes": [
+        {
+          "instance": "foreL_H_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            57.0,
+            0.0
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                57.0,
+                43.2,
+                0.0
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "H"
+        },
+        {
+          "instance": "foreL_K_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                45.0,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "foreL_K_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            71.14132741310387,
+            -16.852977748617516
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                71.14132741310387,
+                46.800000000000004,
+                -16.852977748617516
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "K"
+        },
+        {
+          "instance": "foreL_A_Bearing0",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                46.800000000000004,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "foreL_A_Bearing1",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                48.6,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        },
+        {
+          "instance": "foreL_A_Bearing2",
+          "source_object": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+          "point_xz_mm": [
+            52.7562607782484,
+            -32.279880381094465
+          ],
+          "radius_mm": 1.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.220446049250313e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 2,
+              "radius_mm": 1.0,
+              "axis_point_xyz_mm": [
+                52.7562607782484,
+                53.800000000000004,
+                -32.279880381094465
+              ],
+              "axis_direction_xyz": [
+                -0.0,
+                1.0,
+                -2.220446049250313e-16
+              ],
+              "axis_transverse_component": 2.220446049250313e-16
+            }
+          ],
+          "joint": "A"
+        }
+      ],
+      "foot_reference": {
+        "instance": "foreL_FootPad",
+        "origin_xyz_mm": [
+          74.61103950759073,
+          49.2,
+          -58.32539144713972
+        ],
+        "point_xz_mm": [
+          74.61103950759073,
+          -58.32539144713972
+        ],
+        "native_cup_axis": {
+          "instance": "foreL_FootPad",
+          "source_object": "LEG_r02_CURVED_CONTACT_PAD",
+          "point_xz_mm": [
+            74.61103950759073,
+            -58.32539144713972
+          ],
+          "radius_mm": 3.0,
+          "max_xz_spread_mm": 0.0,
+          "max_axis_transverse_component": 2.4825341532472726e-16,
+          "native_cylindrical_faces": [
+            {
+              "face_index": 1,
+              "radius_mm": 3.000000000000001,
+              "axis_point_xyz_mm": [
+                74.61103950759073,
+                49.2,
+                -58.32539144713972
+              ],
+              "axis_direction_xyz": [
+                9.873227530559262e-17,
+                1.0,
+                2.2777553870723737e-16
+              ],
+              "axis_transverse_component": 2.4825341532472726e-16
+            }
+          ]
+        }
+      },
+      "measured_points_xz_mm": {
+        "H": [
+          57.0,
+          0.0
+        ],
+        "K": [
+          71.14132741310387,
+          -16.852977748617516
+        ],
+        "A": [
+          52.7562607782484,
+          -32.279880381094465
+        ],
+        "F": [
+          74.61103950759073,
+          -58.32539144713972
+        ]
+      },
+      "measured_segment_vectors_dx_dz_mm": {
+        "H_K": [
+          14.141327413103866,
+          -16.852977748617516
+        ],
+        "K_A": [
+          -18.38506663485547,
+          -15.42690263247695
+        ],
+        "A_F": [
+          21.854778729342335,
+          -26.045511066045258
+        ]
+      },
+      "measured_lengths_mm": {
+        "H_K": 22.0,
+        "K_A": 24.0,
+        "A_F": 34.0
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Neutral saved pose only; no full gait or dynamic closure certification.",
+    "Cylindrical axis coincidence is checked, not keyed-flat angular engagement, bearing preload, fits, retention strength or motor spline.",
+    "F denotes the contact cup reference center, not a solved ground-contact point under load.",
+    "Candidate dimensions/neutral angles remain reconstruction assumptions; no source/supplier dimension certification.",
+    "No assembly-wide collision, equilibrium or fabrication approval."
+  ],
+  "runtime_freecad_version": [
+    "27",
+    "1",
+    "0",
+    "49159 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git main",
+    "2026/10/10 06:02:14",
+    "main",
+    "e5fabddebb0dc54ecf324cedddd26e053e2a8488"
+  ],
+  "recorded_leg_angles_rad": {
+    "hindR": [
+      -0.6981317007977318,
+      -1.7453292519943295
+    ],
+    "hindL": [
+      -0.6981317007977318,
+      -1.7453292519943295
+    ],
+    "foreR": [
+      -0.8726646259971648,
+      -1.5707963267948966
+    ],
+    "foreL": [
+      -0.8726646259971648,
+      -1.5707963267948966
+    ]
+  },
+  "assembly_link_instances": 473,
+  "expected_neutral_E_xz_mm": {
+    "hind": [
+      -33.0,
+      0.0
+    ],
+    "fore": [
+      33.0,
+      0.0
+    ]
+  },
+  "output_ground_axes": [
+    {
+      "instance": "E1__1_Pin",
+      "source_object": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "point_xz_mm": [
+        -33.0,
+        0.0
+      ],
+      "radius_mm": 0.95,
+      "max_xz_spread_mm": 0.0,
+      "max_axis_transverse_component": 2.220446049250313e-16,
+      "native_cylindrical_faces": [
+        {
+          "face_index": 1,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 6,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 10,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "instance": "E1_1_Pin",
+      "source_object": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "point_xz_mm": [
+        -33.0,
+        0.0
+      ],
+      "radius_mm": 0.95,
+      "max_xz_spread_mm": 0.0,
+      "max_axis_transverse_component": 2.220446049250313e-16,
+      "native_cylindrical_faces": [
+        {
+          "face_index": 1,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 6,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 10,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            -33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "instance": "E2__1_Pin",
+      "source_object": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "point_xz_mm": [
+        33.0,
+        0.0
+      ],
+      "radius_mm": 0.95,
+      "max_xz_spread_mm": 0.0,
+      "max_axis_transverse_component": 2.220446049250313e-16,
+      "native_cylindrical_faces": [
+        {
+          "face_index": 1,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 6,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 10,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            -13.6,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "instance": "E2_1_Pin",
+      "source_object": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "point_xz_mm": [
+        33.0,
+        0.0
+      ],
+      "radius_mm": 0.95,
+      "max_xz_spread_mm": 0.0,
+      "max_axis_transverse_component": 2.220446049250313e-16,
+      "native_cylindrical_faces": [
+        {
+          "face_index": 1,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 6,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        },
+        {
+          "face_index": 10,
+          "radius_mm": 0.95,
+          "axis_point_xyz_mm": [
+            33.0,
+            39.4,
+            0.0
+          ],
+          "axis_direction_xyz": [
+            -0.0,
+            1.0,
+            -2.220446049250313e-16
+          ],
+          "axis_transverse_component": 2.220446049250313e-16
+        }
+      ]
+    }
+  ],
+  "geometry_instances_inspected": 62,
+  "maximum_position_or_coaxial_error_mm": 7.131049517197238e-14,
+  "maximum_axis_transverse_component": 4.577566798522237e-16,
+  "elapsed_seconds": 2.1780165530217346,
+  "check_count": 315,
+  "failed_checks": []
+}

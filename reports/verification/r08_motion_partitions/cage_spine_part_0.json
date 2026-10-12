@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "revision": "r08",
+  "native_sha256": "3832778436b75539d0ecf0e95df935099005331157c1328c2f77389985a817c8",
+  "config_sha256": "2c3fa8b55ab7eeb8885d3c9f8f8edfcd56464d2fee5c15b6214be4f9612371bf",
+  "dependency_sha256": {
+    "verify_motion_package_r08.py": "4f7747804bc9edf1976f2017f3db2d40a2804142e8035782ae6df05c02924cdb",
+    "leg_motion_r07.py": "fbcba404cf162688e647c1d982c5f124467750c46ecc9204104d858d5a0da7a4",
+    "robot_pose_r03.py": "962898052a75f1bd5ee0e43d968b38c676ed2e3ad8985da8744d865b220439a9",
+    "leg_geometry_r02.py": "459c0b40a6add8ea9f7a781ef34e09e98c183c70e4542a2691e51f829e0887a6",
+    "build_leg_r02.py": "7187b1cdc295f9c352eea21600feacfbdf538a4b5a7e639a4a856dca697a1cd9",
+    "spring_wire_r03.py": "ea61499d6e2fd85bc2391bb648116321dcbb441d816ae0fdb5cc47a063158002",
+    "build_tendon_r03.py": "e623c808d5f0a566a5f99c6d066553e11181f7e198ada237e478269c204d05fd",
+    "tendon_r03.py": "e53b5cbcd506149df39ca3d6677bcf9bf30b4bc779183117b4a9c4c85499c050",
+    "cable_clamps_r07.py": "8c36a3d013fab3439858c659afda2d03b8f52e91342eb63f145aecf916a38440",
+    "kinematics.py": "c053c7273b29ef108c12a2ae5244e72cd4ea554b1503164ce97bd8e6dd3517cb",
+    "cad_common.py": "5e4a2c629297c061bfa89b71d84a791a853a2c06f606d240ac3d1cdce33d0f84",
+    "spine_attachments_r02.py": "5286eb532fd95db8e8902159eb22342a5c84b8678229368fa81c9f5510f8ae34",
+    "leg_mechanics.py": "971bb313a22ab6037411f31f4e4dcfedcdd1730eb6d8ae25af0f5d91a84831fa",
+    "robot_geometry.py": "478b86a5b5ff985d5475113e2c4003de389d3492cb2e3a3473f192845931d4f4",
+    "compression_spring_r07.py": "8bde615c158d2c41ca8f99081411ec3336676e0d9b34ac1b5b44be7047825d0b",
+    "spring_normalization_r07.py": "13a7d99d476aa9ab2bdcb08df976272ba9d5d3217c3430150038e5889eca0696",
+    "spine_frame_r08.py": "c216b6cf6249c0d96303644e3074f7b30168c10b199c212fa42ac788ec44c009",
+    "build_robot_r08.py": "107066dc36fce0453f5ddd9199317241f546bc3b915bc673063be6e996cd8244",
+    "controller_carrier_r07.py": "7ec69887942221fbbad12e1057a4168cb13daa730e9ac945325ec68410c3c387",
+    "sweep_robot_r03.py": "3b9949bbcb2e885cf690cf2bfa598d56a964a06adc0ecfc45954f292780fb865"
+  },
+  "freeze_sha256": "67d73e7d9fc879bbf3ab686748c12a09a5f87fd343912fb938daa2c4cc2df911",
+  "samples_expected": 16,
+  "partition": 0,
+  "partitions": 24,
+  "driver_sha256": "41b8a6f7ca6b5078736d5e886b88791e1d39f70cdbb58c7c3be07043f2e74f01",
+  "samples_completed": 16,
+  "scope": "Both actual half-cages vs every other physical instance including each other; integer spine phases0..360; legs/wheel neutral",
+  "exceptions": [],
+  "volume_tolerance_mm3": 1e-05,
+  "occ_checks": 1833,
+  "cached_pair_checks": 1456,
+  "records": [
+    {
+      "sample_id": "cage_000",
+      "spine_angle_deg": 0,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_024",
+      "spine_angle_deg": 24,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_048",
+      "spine_angle_deg": 48,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_072",
+      "spine_angle_deg": 72,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_096",
+      "spine_angle_deg": 96,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_120",
+      "spine_angle_deg": 120,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_144",
+      "spine_angle_deg": 144,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_168",
+      "spine_angle_deg": 168,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_192",
+      "spine_angle_deg": 192,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_216",
+      "spine_angle_deg": 216,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_240",
+      "spine_angle_deg": 240,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_264",
+      "spine_angle_deg": 264,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_288",
+      "spine_angle_deg": 288,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_312",
+      "spine_angle_deg": 312,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_336",
+      "spine_angle_deg": 336,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    },
+    {
+      "sample_id": "cage_360",
+      "spine_angle_deg": 360,
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486
+    }
+  ],
+  "worst_pair": {
+    "a": "A1_1_Bearing0",
+    "b": "LumbarIntegrated1",
+    "intersection_mm3": 0.0,
+    "spine_angle_deg": 0
+  },
+  "overlaps": [],
+  "errors": [],
+  "continuous_clearance": false,
+  "loaded_equilibrium": false,
+  "fabrication_release": false,
+  "geometry_sha256_before": "2954a64ae595ed8846c74bfe0cc36e58e7f5c8800148dbacdf5a9a93ecdb5d3e",
+  "instances": 486,
+  "pairs_per_angle": 969,
+  "elapsed_seconds": 657.7969407929922,
+  "geometry_sha256_after": "2954a64ae595ed8846c74bfe0cc36e58e7f5c8800148dbacdf5a9a93ecdb5d3e",
+  "document_unchanged": true,
+  "native_file_unchanged": true,
+  "driver_unchanged": true
+}

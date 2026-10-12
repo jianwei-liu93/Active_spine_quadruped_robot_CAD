@@ -1,0 +1,22 @@
+# Rebuild the review candidate in a GUI-enabled FreeCAD session.
+# Output is separate from the canonical model; interfaces remain provisional.
+from pathlib import Path
+import sys
+import FreeCAD as App
+root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root / 'src'))
+import build_robot_r09, robot_pose_r03, leg_motion_r07
+builder = build_robot_r09.build(save=False, doc_name='FlexorR09Rebuilt')
+document = builder.doc
+leg_motion_r07.apply_prescribed_pose(document, theta=0., wheel_angle=0.)
+springs = robot_pose_r03._plan(document, 0., None)[3]
+for name, descriptor, source, length, free, mismatch in robot_pose_r03._spring_lengths(document, springs):
+    source.Shape = leg_motion_r07._spring_source({'kind': descriptor['spring'], 'length_mm': length, 'free_length_mm': free})
+    if 'InstalledCoilLength_mm' not in source.PropertiesList:
+        source.addProperty('App::PropertyLength', 'InstalledCoilLength_mm', 'MotionR09')
+    source.InstalledCoilLength_mm = length
+output = root / 'cad/rebuilt/flexor_r09_rebuilt.FCStd'
+output.parent.mkdir(parents=True, exist_ok=True)
+document.recompute()
+document.saveAs(str(output))
+print('Saved reconstructed review candidate:', output)

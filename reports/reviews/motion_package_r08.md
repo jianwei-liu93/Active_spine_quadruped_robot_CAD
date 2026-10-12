@@ -1,6 +1,6 @@
 # r08 motion package verification
 
-Status: PREPARED; CAD checks NOT_RUN pending explicit lead native SHA freeze.
+Status: coarse PASS105/105; bounded cage PASS361/361; full PASS985/985 (24 isolated partitions).
 
 `src/verify_motion_package_r08.py` is revision-isolated from the preserved r07 verifier. Inputs are `cad/flexor_r08_robot.FCStd` and `parameters/assembly_r08.json`. It requires a frozen native SHA, configuration SHA, and source dependency SHA set before reading CAD. Canonical native sources and placements are fingerprinted before/after; native file and freeze inputs are checked after each run. Qualified exact compression BRep reuse remains subject to the r07 helper's generator/length/BRep hash checks and shape validation. No spring envelope substitutes, pair exemptions, or canonical writes are used.
 
@@ -10,4 +10,14 @@ Generated isolated CLI wrappers live in `reports/tmp/motion_package_r08`. Coarse
 
 A separate bounded `cage_spine_361.py` wrapper checks the actual two half-cage BReps against all physical instances at each integer spine angle 0..360 inclusive, with neutral leg and wheel states. It checks 969 distinct pairs per angle (including the two cages against each other), uses only AABB-disjoint broadphase pruning and exact common volume, and records worst pair and angle without exceptions. It does not certify the 985-state combined trajectory scope.
 
-Preparation checks actually executed: Python compilation; manifest generation and pose-descriptor math validation for all 105/985 states; full maximum coordinate increment 1.0000000000000395 degrees (floating-point tolerance 1e-9). Native CAD checks remain NOT_RUN.
+Preparation checks actually executed: Python compilation; manifest generation and pose-descriptor math validation for all 105/985 states; full maximum coordinate increment 1.0000000000000395 degrees (floating-point tolerance 1e-9). At preparation, native CAD checks were NOT_RUN; executed results follow below.
+
+Executed against native SHA256 `3832778436b75539d0ecf0e95df935099005331157c1328c2f77389985a817c8`, config SHA256 `2c3fa8b55ab7eeb8885d3c9f8f8edfcd56464d2fee5c15b6214be4f9612371bf`. Coarse has zero raw overlaps, warnings, or errors. The cage check has exactly361 unique phase IDs, no missing/duplicate/extra IDs, and24 complete PASS partitions with all native/config/dependency/freeze/driver hashes coherent. All native-file and in-memory source/placement immutability checks PASS. Worst evaluated cage pair is `A1_1_Bearing0` / `LumbarIntegrated1` at0 degrees with intersection0mm³.
+
+The initially single-process cage run was superseded for runtime efficiency; its14 completed PASS records remain explicitly historical diagnostic in `cage_spine_single_partial_diagnostic.json` and are not counted toward the merged361 states. The replacement driver is `reports/tmp/motion_package_r08/cage_partition_driver.py`; its exact SHA is recorded in every partition and merged report. The original frozen verifier source was not changed.
+
+Full execution completed PASS985/985 with24 terminal PASS partitions, zero missing/duplicate/failed sample records, zero baseline or sampled raw overlaps, and all native/config/geometry/manifest/freeze/dependency hashes coherent. Every partition confirms native-file and in-memory document source/placement immutability. Exact OCC common-volume checks: 621963, cached identical-geometry pair checks: 609346. Maximum partition elapsed time: 5230.1seconds.
+
+The user subsequently rejected the r08 split-frame design in favor of an r09 monolithic centerframe. These results are preserved historical r08 finite-sample evidence. They do not establish any r09PASS. Potential nonframe reuse requires exact source-BRep, instance placement, MotionMap descriptor, motion helper/config, and input-trajectory equivalence, plus separate affected-frame coverage; a neutral-leg361-angle frame scan alone does not establish the full985 combined-motion frame scope.
+
+Operational process reaping: full and24-way cage launchers exited0. The older coarse launcher later reported exit143 when reaped, although all six coarse partition reports had already completed terminalPASS105/105 with coherent hashes and immutability evidence before full was authorized. This launcher-level termination does not replace or alter the partition evidence.

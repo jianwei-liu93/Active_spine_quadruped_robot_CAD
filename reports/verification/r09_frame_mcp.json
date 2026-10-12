@@ -1,0 +1,158 @@
+{
+  "features": [
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseCheek",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_ContinuousCrosswall0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_ContinuousCrosswall1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseCheek",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CrosswallWindow0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CrosswallWindow1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CarrierAccess",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftLocalEndPlatform0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftLocalEndPlatform1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShortEarE1A2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShortEarE2A1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftBroadShelf0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftBroadShelf1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftOuterGuide0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftOuterGuide1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseEdgeCollar",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseFaceBand0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseFaceBand1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftInnerJournalBossA1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftInnerJournalBossA2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShelfJournalBossE1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShelfJournalBossE2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightLocalEndPlatform0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightLocalEndPlatform1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShortEarE1A2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShortEarE2A1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightBroadShelf0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightBroadShelf1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightOuterGuide0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightOuterGuide1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseEdgeCollar",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseFaceBand0",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseFaceBand1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightInnerJournalBossA1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightInnerJournalBossA2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShelfJournalBossE1",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShelfJournalBossE2",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_WholeStackJournalClearances",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C1TravelRelief",
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C2TravelRelief"
+  ],
+  "guide_slots": [
+    {
+      "slider": "C1",
+      "pivot": "A2",
+      "center_xz_mm": [
+        -27.707366118673086,
+        8.66
+      ],
+      "travel_bounds_x_mm": [
+        -33.16445019477227,
+        -22.250282042573904
+      ]
+    },
+    {
+      "slider": "C2",
+      "pivot": "A1",
+      "center_xz_mm": [
+        27.70736611867309,
+        -8.66
+      ],
+      "travel_bounds_x_mm": [
+        22.250282042573907,
+        33.16445019477227
+      ]
+    }
+  ],
+  "travel_reliefs": [
+    {
+      "shaft": "C1",
+      "center_x_bounds_mm": [
+        -33.17445581399401,
+        -22.24025583592318
+      ],
+      "center_z_mm": 8.66,
+      "radius_mm": 2.15,
+      "feature": "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C1TravelRelief"
+    },
+    {
+      "shaft": "C2",
+      "center_x_bounds_mm": [
+        22.240255835923183,
+        33.17445581399401
+      ],
+      "center_z_mm": -8.66,
+      "radius_mm": 2.15,
+      "feature": "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C2TravelRelief"
+    }
+  ],
+  "execution_native_validity": true,
+  "solid_count": 1,
+  "pad_count": 34,
+  "pocket_count": 6,
+  "sketch_count": 40,
+  "source_local_stack_bounds_mm": [
+    -12.6,
+    69.4
+  ],
+  "instances": [
+    "LumbarIntegrated1"
+  ],
+  "sources": [
+    "FRM_LUMBAR_MONOLITHIC_CAGE_r09"
+  ],
+  "identity_merge": {
+    "LumbarIntegrated_1": "LumbarIntegrated1"
+  },
+  "removed_unused_sources": [
+    "FRM_LUMBAR_CROSSWALL_CAGE_L_r08",
+    "FRM_LUMBAR_CROSSWALL_CAGE_R_r08",
+    "FIXED_TIE_OD2p4_TAPMINOR1p7_L53p6",
+    "FIXED_TIE_M2_CORE_L2p8"
+  ],
+  "retained_used_sources": [],
+  "physical_frame_instance_count": 1,
+  "removed_obsolete_tie_instances": [
+    "FixedLumbarTie0",
+    "FixedLumbarTie1",
+    "FixedLumbarTie2",
+    "FixedLumbarTie3",
+    "FixedTieScrew0__1",
+    "FixedTieScrew0_1",
+    "FixedTieScrew1__1",
+    "FixedTieScrew1_1",
+    "FixedTieScrew2__1",
+    "FixedTieScrew2_1",
+    "FixedTieScrew3__1",
+    "FixedTieScrew3_1"
+  ],
+  "retired_physical_instances": [
+    "LumbarIntegrated_1",
+    "FixedLumbarTie0",
+    "FixedLumbarTie1",
+    "FixedLumbarTie2",
+    "FixedLumbarTie3",
+    "FixedTieScrew0__1",
+    "FixedTieScrew0_1",
+    "FixedTieScrew1__1",
+    "FixedTieScrew1_1",
+    "FixedTieScrew2__1",
+    "FixedTieScrew2_1",
+    "FixedTieScrew3__1",
+    "FixedTieScrew3_1"
+  ],
+  "physical_link_count_before": 486,
+  "physical_link_count_after": 473,
+  "limitations": [
+    "Whole-spine collision/motion require lead validation",
+    "Metric reconstruction, fits/preload and fabrication remain assumptions",
+    "Motor center shims preserved; native motor retention remains provisional"
+  ],
+  "revision": "r09",
+  "execution": "installed FreeCAD MCP GUI thread",
+  "native_sha256": "765bb3b9a32365e1c005ff16a246ac284d2e0544d3648d4e4be3f436a58e1b57",
+  "native_path": "cad/flexor_r09_robot.FCStd"
+}

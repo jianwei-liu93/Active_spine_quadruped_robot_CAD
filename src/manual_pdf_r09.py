@@ -1,0 +1,553 @@
+"""Build the r09 assembly and calibration PDF from final revision-matched evidence.
+
+The generator deliberately refuses to publish a PDF until the frozen r09
+package, native, composite motion, AX0/AX1, drawing, profile, mass and engineering-screen records
+are present and pass their declared gates. It writes only the owned r09 PDF
+and cropped copies of actual r09 FreeCAD captures.
+"""
+from __future__ import print_function
+
+import csv
+import hashlib
+import json
+import importlib.util
+import math
+from pathlib import Path
+
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import mm
+from reportlab.platypus import (BaseDocTemplate, Frame, PageTemplate, Paragraph,
+    Spacer, Table, TableStyle, Image, PageBreak, LongTable, KeepTogether)
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'docs/flexor_r09_assembly_calibration.pdf'
+VIEW_DIR = ROOT / 'reports/views/manual_r09'
+PAGE_W, PAGE_H = A4
+NAVY = colors.HexColor('#173247')
+TEAL = colors.HexColor('#18838B')
+ORANGE = colors.HexColor('#D16C43')
+PALE = colors.HexColor('#EDF4F5')
+PALE_ORANGE = colors.HexColor('#FFF1E9')
+INK = colors.HexColor('#243642')
+MID = colors.HexColor('#5A6B75')
+GRID = colors.HexColor('#D1DDE1')
+PACKAGE_STATUS = 'EXPORTS_AND_STEP_ROUNDTRIP_VALIDATED_NO_FABRICATION_RELEASE'
+CAPTURE_NAMES = ('r09_robot_assembled.png', 'r09_robot_side.png',
+                 'r09_spine_source_facing.png', 'r09_bare_lumbar_pos_y_oblique.png',
+                 'r09_bare_lumbar_neg_y_oblique.png')
+
+
+def safe(text):
+    text = str(text)
+    for a, b in (('\u2013', '-'), ('\u2014', '-'), ('\u2212', '-'),
+                 ('\u00d7', 'x'), ('\u00d8', 'dia.'), ('\u00b0', ' deg'),
+                 ('\u00b7', ' '), ('\u2264', '<='), ('\u2265', '>=')):
+        text = text.replace(a, b)
+    return text
+
+
+def styles():
+    base = getSampleStyleSheet()
+    return {
+        'title': ParagraphStyle('r09title', parent=base['Title'], fontName='Helvetica-Bold',
+            fontSize=27, leading=31, textColor=NAVY, spaceAfter=8),
+        'subtitle': ParagraphStyle('r09subtitle', parent=base['Normal'], fontSize=12,
+            leading=17, textColor=MID, spaceAfter=10),
+        'h1': ParagraphStyle('r09h1', parent=base['Heading1'], fontName='Helvetica-Bold',
+            fontSize=18, leading=22, textColor=NAVY, spaceAfter=8, keepWithNext=True),
+        'h2': ParagraphStyle('r09h2', parent=base['Heading2'], fontName='Helvetica-Bold',
+            fontSize=11.5, leading=14, textColor=TEAL, spaceBefore=8, spaceAfter=4, keepWithNext=True),
+        'body': ParagraphStyle('r09body', parent=base['BodyText'], fontName='Helvetica',
+            fontSize=8.7, leading=12, textColor=INK, spaceAfter=6),
+        'small': ParagraphStyle('r09small', parent=base['BodyText'], fontName='Helvetica',
+            fontSize=7.4, leading=9.5, textColor=INK, spaceAfter=3),
+        'caption': ParagraphStyle('r09caption', parent=base['BodyText'], fontName='Helvetica-Oblique',
+            fontSize=7.4, leading=9, textColor=MID, alignment=1, spaceBefore=3, spaceAfter=6),
+        'th': ParagraphStyle('r09th', parent=base['BodyText'], fontName='Helvetica-Bold',
+            fontSize=7.2, leading=9, textColor=colors.white, spaceAfter=0),
+        'td': ParagraphStyle('r09td', parent=base['BodyText'], fontName='Helvetica',
+            fontSize=7.2, leading=9, textColor=INK, spaceAfter=0),
+        'center': ParagraphStyle('r09center', parent=base['BodyText'], fontName='Helvetica-Bold',
+            fontSize=8, leading=10, textColor=NAVY, alignment=1),
+    }
+
+
+def p(text, style):
+    return Paragraph(safe(text), style)
+
+
+def read_json(rel, required=False):
+    path = ROOT / rel
+    if not path.exists():
+        if required:
+            raise RuntimeError('Required final r09 evidence is missing: ' + rel)
+        return None
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def sha256(path):
+    h = hashlib.sha256()
+    with path.open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def _require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def _module(name):
+    """Load a read-only Python evidence helper without depending on sys.path."""
+    spec = importlib.util.spec_from_file_location(name, ROOT / 'src' / (name + '.py'))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _native_hash(record):
+    return (record.get('native_sha256') or record.get('canonical_robot_sha256')
+            or record.get('source_sha256') or record.get('final_canonical_sha256'))
+
+
+def gate_evidence(expected_native_sha256):
+    """Read-only acceptance. The lead must explicitly supply the frozen SHA.
+
+    Importing this module never opens CAD, creates a PDF or writes any report.
+    The affected-frame aggregation is rechecked against its pinned
+    partitions; a historical r08 PASS alone cannot satisfy the r09 motion gate.
+    """
+    _require(isinstance(expected_native_sha256, str) and len(expected_native_sha256) == 64
+             and all(c in '0123456789abcdef' for c in expected_native_sha256),
+             'Supply the lead-frozen r09 native SHA256 explicitly')
+    required = {
+        'package': 'reports/package_manifest_r09.json',
+        'mass': 'reports/verification/r09_mass_envelope.json',
+        'engineering': 'reports/verification/r09_engineering_screen.json',
+        'neutral': 'reports/verification/r09_neutral.json',
+        'motion': 'reports/verification/r09_frame_partitions/summary.json',
+        'drawings': 'drawings/r09/drawing_manifest_r09.json',
+        'profiles': 'exports/profiles/r09/profile_manifest_r09.json',
+        'capture': 'reports/views/r09_capture_manifest.json',
+        'ax01': 'reports/animation/ax01_r09.json',
+        'poses': 'animation/motion/ax01_r09.json',
+    }
+    data = {key: read_json(path, required=True) for key, path in required.items()}
+    native = ROOT / 'cad/flexor_r09_robot.FCStd'
+    native_sha = sha256(native)
+    _require(native_sha == expected_native_sha256, 'Native differs from lead-frozen r09 SHA')
+    package = data['package']
+    _require(package.get('revision') == 'r09' and package.get('status') == PACKAGE_STATUS,
+             'r09 package manifest is not in the validated export state')
+    _require((package.get('native_document') or {}).get('sha256') == native_sha,
+             'Package native SHA does not match final r09 native')
+    for key in ('mass', 'neutral', 'drawings', 'profiles', 'capture'):
+        _require(data[key].get('revision') == 'r09', key + ' record is not revision r09')
+    for key in ('mass', 'engineering', 'neutral', 'drawings', 'profiles', 'capture'):
+        _require(_native_hash(data[key]) == native_sha,
+                 key + ' must identify the final canonical r09 SHA (staging evidence is insufficient)')
+    _require(data['neutral'].get('status') == 'PASS', 'r09 primary neutral check is not PASS')
+    _require(data['drawings'].get('visual_review') == 'PASS'
+             and data['drawings'].get('pdf_exports') in ('PASS', 'COMPLETE'),
+             'r09 drawing PDF export and visual review must both pass')
+    sheets = data['drawings'].get('sheets', [])
+    _require(sheets and len(sheets) == data['drawings'].get('sheet_count')
+             and sum(len(s.get('dimensions', [])) for s in sheets) == data['drawings'].get('dimension_count'),
+             'Drawing counts disagree with actual sheet/dimension records')
+    _require(not data['drawings'].get('errors'), 'Drawing manifest has errors')
+    _require(data['profiles'].get('status') in ('PASS', 'PASS_EXACT_PROFILE_READBACK'),
+             'r09 profile round-trip check is not PASS')
+    _require(data['capture'].get('visual_review') == 'PASS', 'r09 source-fidelity image review is not PASS')
+    captures = {r['path']: r for r in data['capture'].get('captures', [])}
+    for name in CAPTURE_NAMES:
+        rel = 'reports/views/' + name
+        _require(rel in captures and sha256(ROOT / rel) == captures[rel].get('sha256'),
+                 'Missing/stale canonical r09 capture: ' + rel)
+    _require(data['mass'].get('status') == 'COMPUTED_FROM_DOCUMENT', 'r09 mass calculation is incomplete')
+    _require(data['engineering'].get('native_document') == str(native),
+             'Engineering screen does not identify final r09 document')
+    count = data['mass'].get('instance_count')
+    _require(count == 473 and package.get('physical_link_count') == count
+             and data['neutral'].get('instances') == count
+             and data['engineering'].get('physical_link_count') == count,
+             'r09 physical inventory disagrees across final records')
+    _require(package.get('bom_mass_summary', {}).get('part_number_count') == data['mass'].get('part_number_count'),
+             'Package and mass report part-number counts disagree')
+    _require(math.isclose(data['engineering']['known_mass']['mass_g'],
+                         data['mass']['known_mass_sum_g'], rel_tol=1e-10, abs_tol=1e-8),
+             'Engineering screen and mass report known mass disagree')
+    _gate_motion(data['motion'], native_sha)
+    _gate_animation(data['ax01'], data['poses'], native_sha, count)
+    return data, native_sha
+
+
+def _gate_motion(summary, native_sha):
+    """Require all three finite-sample proof legs, plus current frozen inputs."""
+    folder = ROOT / 'reports/verification/r09_frame_partitions'
+    freeze = read_json('reports/verification/r09_frame_partitions/freeze.json', True)
+    identity = read_json('reports/verification/r09_frame_partitions/identity.json', True)
+    _require(summary.get('status') == 'PASS' and all(summary.get(k) is True for k in
+             ('r08_full_985_pass', 'identity_472_pass', 'affected_frame_1346_pass', 'hash_coherence')),
+             'r09 motion needs r08 full 985 PASS + strict 472 identity + all 1346 affected-frame states')
+    _require(freeze.get('native_sha256') == native_sha and Path(freeze.get('native_path', '')).resolve()
+             == (ROOT / 'cad/flexor_r09_robot.FCStd').resolve(), 'r09 motion freeze native mismatch')
+    for key, path in (('freeze_sha256', folder / 'freeze.json'), ('identity_sha256', folder / 'identity.json'),
+                      ('r08_summary_sha256', ROOT / 'reports/verification/r08_motion_partitions/full_summary.json')):
+        _require(summary.get(key) == sha256(path), 'Motion summary stale: ' + key)
+    _require(identity.get('status') == 'PASS_IDENTITY_ONLY' and identity.get('unchanged_count') == 472
+             and identity.get('native_r09_sha256') == native_sha and not identity.get('errors')
+             and identity.get('freeze_sha256') == sha256(folder / 'freeze.json')
+             and all(identity.get(k) is True for k in ('native_files_unchanged', 'documents_unchanged',
+                       'motion_map_exact_after_retirement', 'pose_and_configuration_numerics_exact')),
+             'Strict nonframe identity proof is incomplete or stale')
+    expected = summary.get('expected_sample_ids', [])
+    completed = summary.get('completed_sample_ids', [])
+    _require(len(expected) == len(completed) == len(set(expected)) == len(set(completed)) == 1346
+             and set(expected) == set(completed) and not summary.get('missing_sample_ids')
+             and not summary.get('duplicate_sample_ids'), 'Affected-frame state coverage is incomplete')
+    _require(all(summary.get(k) is False for k in ('continuous_clearance', 'loaded_equilibrium', 'fabrication_release')),
+             'Finite-sample report must retain its declared limits')
+    # validate_freeze/manifest are read-only, but use sibling imports internally.
+    import sys
+    source_path = str(ROOT / 'src')
+    inserted = source_path not in sys.path
+    if inserted:
+        sys.path.insert(0, source_path)
+    try:
+        verifier = _module('verify_frame_revision_r09')
+        verifier.validate_freeze()
+        plan = verifier.manifest()
+        _require(summary.get('manifest_sha256') == plan['sha256']
+                 and expected == [s['sample_id'] for s in plan['states']], 'r09 motion input manifest changed')
+        _gate_motion_records(summary, freeze, identity, plan)
+    finally:
+        if inserted:
+            sys.path.remove(source_path)
+
+
+def _gate_motion_records(summary, freeze, identity, plan):
+    """Read-only equivalent of the verifier's baseline/partition gates."""
+    folder = ROOT / 'reports/verification/r09_frame_partitions'
+    baseline = read_json('reports/verification/r08_motion_partitions/full_summary.json', True)
+    old_freeze_path = ROOT / 'reports/verification/r08_motion_partitions/freeze.json'
+    old_freeze = json.loads(old_freeze_path.read_text())
+    keys = ('native_sha256', 'geometry_sha256_before', 'config_sha256',
+            'manifest_sha256', 'freeze_sha256', 'dependencies', 'current_freeze')
+    _require(baseline.get('status') == 'PASS' and baseline.get('samples_expected') == 985
+             and baseline.get('records_found') == 985
+             and not any(baseline.get(k) for k in ('missing_sample_ids', 'duplicate_sample_ids',
+                                                  'failed_records', 'baseline_overlaps'))
+             and all(baseline.get('hash_coherence', {}).get(k) is True for k in keys)
+             and baseline.get('geometry_sha256_before') == identity['r08_campaign_geometry_sha256']
+             and baseline.get('config_sha256') == old_freeze['config_sha256']
+             and baseline.get('native_sha256') == old_freeze['native_sha256']
+             and baseline.get('freeze_sha256') == sha256(old_freeze_path)
+             and baseline.get('manifest', {}).get('sha256') == plan['r08_manifest_sha256'],
+             'Historical r08 full campaign is not coherent with strict identity proof')
+    statuses = baseline.get('partition_statuses', {})
+    _require(statuses and len(statuses) == baseline.get('partitions_expected')
+             and all(v == 'PASS' for v in statuses.values()), 'Historical r08 partitions incomplete')
+    paths = sorted(folder.glob('part_*.json'))
+    _require(paths, 'No affected-frame partition reports')
+    reports = [json.loads(path.read_text()) for path in paths]
+    partitions = reports[0].get('partitions')
+    _require(isinstance(partitions, int) and 1 <= partitions <= 24 and len(reports) == partitions
+             and {p.get('partition') for p in reports} == set(range(partitions)),
+             'Affected-frame partition union incomplete or duplicated')
+    inputs = {s['sample_id']: s['input_sha256'] for s in plan['states']}
+    completed = []
+    for report in sorted(reports, key=lambda p: p['partition']):
+        expected = [s['sample_id'] for s in plan['states'][report['partition']::partitions]]
+        _require(report.get('status') == 'PASS_AFFECTED_FRAME_ONLY'
+                 and report.get('document_unchanged') is True and report.get('native_unchanged') is True
+                 and not report.get('overlaps') and not report.get('errors')
+                 and report.get('partitions') == partitions and report.get('expected_sample_ids') == expected
+                 and report.get('native_sha256') == freeze['native_sha256']
+                 and report.get('dependency_sha256') == freeze['dependency_sha256']
+                 and report.get('freeze_sha256') == summary['freeze_sha256']
+                 and report.get('identity_sha256') == summary['identity_sha256']
+                 and report.get('manifest_sha256') == plan['sha256'], 'Affected-frame partition stale/failed')
+        for row in report.get('records', []):
+            value = {k: row['input'][k] for k in ('theta', 'leg_angles', 'wheel_angle')}
+            digest = hashlib.sha256(json.dumps(value, sort_keys=True, allow_nan=False).encode()).hexdigest()
+            _require(row.get('status') == 'PASS_AFFECTED_FRAME_ONLY' and row.get('pair_coverage') == 472
+                     and row.get('input_sha256') == inputs.get(row.get('sample_id')) == digest,
+                     'Affected-frame state failed/incomplete or input hash changed')
+            completed.append(row['sample_id'])
+    _require(completed == summary['completed_sample_ids'], 'Summary differs from current partition records')
+
+
+def _gate_animation(report, payload, native_sha, count):
+    _require(report.get('AX0') == report.get('AX1') == 'PASS' and report.get('cad_revision') == 'r09'
+             and report.get('native_sha256') == native_sha
+             and report.get('document_unchanged') is True and report.get('native_file_unchanged') is True,
+             'r09 AX0/AX1 report is incomplete or stale')
+    _require(report.get('output') == 'animation/motion/ax01_r09.json'
+             and report.get('output_sha256') == sha256(ROOT / 'animation/motion/ax01_r09.json'),
+             'AX0/AX1 pose payload hash mismatch')
+    _require(payload.get('source', {}).get('cad_sha256') == native_sha
+             and payload.get('source', {}).get('cad_revision') == 'r09'
+             and report.get('physical_instances') == report.get('effective_motion_coverage') == count
+             and len(payload.get('instances', [])) == count, 'AX0/AX1 inventory/native mismatch')
+    _module('animation_manifest_validate').validate_manifest(payload)
+    coupling = report.get('command_coupling', {})
+    _require(coupling.get('physical_motors') == 7 and coupling.get('commanded_coordinates') == 6
+             and coupling.get('prescribed_knees') == 4 and coupling.get('loaded_passive_motion') == 'NOT_SOLVED',
+             'AX0/AX1 commanded/prescribed coordinate contract mismatch')
+    _require(report.get('source_definitions') == len(payload.get('meshes', [])),
+             'AX0/AX1 source-definition count mismatch')
+    _require(report.get('grounding_sha256') == sha256(ROOT / 'animation/schema/grounded_instances_r09.json'),
+             'AX0/AX1 reviewed grounding supplement changed')
+    _require(report.get('exporter_source_sha256') == sha256(ROOT / 'src/animation_pose_export.py'),
+             'AX0/AX1 exporter source changed')
+    for rel, digest in payload['source'].get('parameter_files_sha256', {}).items():
+        _require(sha256(ROOT / rel) == digest, 'AX0/AX1 parameter changed: ' + rel)
+    for name, digest in report.get('generator_source_sha256', {}).items():
+        _require(sha256(ROOT / 'src' / name) == digest, 'AX0/AX1 generator changed: ' + name)
+
+
+def bom_rows():
+    path = ROOT / 'bom/bom_r09.csv'
+    with path.open(newline='', encoding='utf-8') as stream:
+        rows = list(csv.DictReader(stream))
+    if not rows:
+        raise RuntimeError('bom/bom_r09.csv has no part rows')
+    return sorted(rows, key=lambda r: (r.get('part_number', ''),))
+
+
+def category(pn):
+    if pn.startswith('DYNAMIXEL_'):
+        return 'Actuators'
+    if pn.startswith(('SPN_', 'SPINE_', 'DIRECT_CRANK_', 'G_CRANK_', 'GUIDE_COPPER', 'HORN_')):
+        return 'Spine drive and joints'
+    if pn.startswith(('FRM_', 'TORSO_', 'FIXED_TIE_', 'MOTOR_CENTER_')):
+        return 'Frames and ties'
+    if pn.startswith(('OpenRB150_', 'OPENRB150_')):
+        return 'Controller and carrier'
+    if pn.startswith(('LEG_', 'KNEE_', 'TENDON_')):
+        return 'Legs, springs and tendon drive'
+    return 'Bearings, clips, spacers and other hardware'
+
+
+def crop_image(name):
+    from PIL import Image as PILImage
+    source = ROOT / 'reports/views' / name
+    if not source.exists():
+        raise RuntimeError('Required r09 FreeCAD capture is missing: ' + str(source))
+    VIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = VIEW_DIR / (source.stem + '_crop.png')
+    im = PILImage.open(source).convert('RGB')
+    w, h = im.size
+    im.crop((int(w * .08), int(h * .08), int(w * .91), int(h * .92))).save(target, optimize=True)
+    return target
+
+
+def header_footer(canvas, doc):
+    canvas.saveState()
+    canvas.setStrokeColor(GRID); canvas.setLineWidth(.5)
+    canvas.line(19 * mm, PAGE_H - 13 * mm, PAGE_W - 19 * mm, PAGE_H - 13 * mm)
+    canvas.setFillColor(NAVY); canvas.setFont('Helvetica-Bold', 7.5)
+    canvas.drawString(19 * mm, PAGE_H - 10.5 * mm, 'FLEXOR-F INSPIRED QUADRUPED | R09')
+    canvas.setFillColor(ORANGE)
+    canvas.drawRightString(PAGE_W - 19 * mm, PAGE_H - 10.5 * mm, 'REVIEW CANDIDATE - NOT FOR FABRICATION')
+    canvas.line(19 * mm, 14 * mm, PAGE_W - 19 * mm, 14 * mm)
+    canvas.setFillColor(MID); canvas.setFont('Helvetica', 7)
+    canvas.drawString(19 * mm, 9.5 * mm, 'Assembly and torque-off calibration record | 2026-10-12')
+    canvas.drawRightString(PAGE_W - 19 * mm, 9.5 * mm, 'Page %d' % doc.page)
+    canvas.restoreState()
+
+
+def make_table(data, widths, repeat=1, header=True):
+    table = Table(data, colWidths=widths, repeatRows=repeat if header else 0, hAlign='LEFT')
+    commands = [('VALIGN', (0, 0), (-1, -1), 'TOP'),
+                ('LEFTPADDING', (0, 0), (-1, -1), 4), ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+                ('TOPPADDING', (0, 0), (-1, -1), 3), ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+                ('GRID', (0, 0), (-1, -1), .35, GRID)]
+    if header:
+        commands.extend([('BACKGROUND', (0, 0), (-1, 0), NAVY),
+                         ('TEXTCOLOR', (0, 0), (-1, 0), colors.white)])
+    table.setStyle(TableStyle(commands))
+    return table
+
+
+def build(expected_native_sha256):
+    evidence, native_sha = gate_evidence(expected_native_sha256)
+    rows = bom_rows()
+    mass = evidence['mass']
+    screen = evidence['engineering']
+    summary = evidence['package']['bom_mass_summary']
+    if len(rows) != mass['part_number_count']:
+        raise RuntimeError('r09 BOM row count disagrees with final mass report')
+    count = sum(int(r['quantity']) for r in rows)
+    quantities = {r['part_number']: int(r['quantity']) for r in rows}
+    _require(quantities.get('DYNAMIXEL_XL330_M077_T') == 2
+             and quantities.get('DYNAMIXEL_XC330_M181_T') == 5, 'Final BOM motor inventory is not 2 XL + 5 XC')
+    _require(quantities.get('FRM_LUMBAR_MONOLITHIC_CAGE_r09') == 1,
+             'Final BOM must contain exactly one monolithic lumbar cage')
+    if count != mass['instance_count']:
+        raise RuntimeError('r09 BOM quantities disagree with final mass report')
+    ss = styles()
+    doc = BaseDocTemplate(str(OUT), pagesize=A4, leftMargin=19*mm, rightMargin=19*mm,
+        topMargin=19*mm, bottomMargin=19*mm, title='FLEXOR r09 Assembly and Calibration Record',
+        author='Engineering review package', subject='Editable review candidate; no fabrication release')
+    frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height,
+        leftPadding=0, rightPadding=0, topPadding=1*mm, bottomPadding=1*mm, id='main')
+    doc.addPageTemplates([PageTemplate(id='all', frames=[frame], onPage=header_footer)])
+    story = []
+
+    # Candidate cover and actual captured assembly views.
+    hero = crop_image('r09_robot_assembled.png')
+    story += [Spacer(1, 7*mm), p('Assembly &amp; calibration<br/>record', ss['title']),
+        p('Review candidate r09 | FLEXOR-F inspired active-spine quadruped', ss['subtitle'])]
+    status = Table([[p('EDITABLE CANDIDATE', ss['center']), p('PROVISIONAL INTERFACES', ss['center']),
+                     p('NOT FOR FABRICATION', ss['center'])]], colWidths=[doc.width/3]*3)
+    status.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),PALE_ORANGE),('BOX',(0,0),(-1,-1),.7,ORANGE),
+        ('INNERGRID',(0,0),(-1,-1),.4,colors.white),('TOPPADDING',(0,0),(-1,-1),7),
+        ('BOTTOMPADDING',(0,0),(-1,-1),7)]))
+    story += [status, Spacer(1, 4*mm), Image(str(hero), width=doc.width, height=doc.width*.55),
+        p('Actual saved FreeCAD view of the r09 candidate. Motor and controller representations are envelopes; this is not a photograph or supplier-interface verification.', ss['caption'])]
+    facts = [[p('<b>{}</b><br/>physical links'.format(count), ss['center']),
+              p('<b>{}</b><br/>unique part numbers'.format(len(rows)), ss['center']),
+              p('<b>{:.3f} g</b><br/>known mass'.format(mass['known_mass_sum_g']), ss['center']),
+              p('<b>{}</b><br/>unknown-mass instances'.format(mass['unknown_mass_instance_count']), ss['center'])]]
+    ft = Table(facts, colWidths=[doc.width/4]*4)
+    ft.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),PALE),('BOX',(0,0),(-1,-1),.5,GRID),
+        ('INNERGRID',(0,0),(-1,-1),.5,colors.white),('TOPPADDING',(0,0),(-1,-1),7),
+        ('BOTTOMPADDING',(0,0),(-1,-1),7)]))
+    story += [ft, Spacer(1, 3*mm), p('This record provides the r09 assembly order, candidate seven-motor map, torque-off calibration checklist, revision-matched engineering screen and complete part-number index. It does not authorize fabrication, energizing, device-ID writes, motion tests or load tests.', ss['body']),
+        p('Native source SHA256: <font name="Courier">{}</font>'.format(native_sha), ss['small']), PageBreak()]
+
+    story += [p('1 | Architecture and source fidelity', ss['h1']),
+        p('The candidate preserves the coupled two-output spine, seven physical motors and six commanded coordinates, four distinct fore/hind leg modules in the same sagittal orientation, four prescribed knee coordinates, S9 linkage topology, physical extension and compression springs, and bilateral hind cable route. The r09 center structure is one monolithic native cage, FRM_LUMBAR_MONOLITHIC_CAGE_r09, used once as LumbarIntegrated1. Solid upper sagittal horn cheeks meet perpendicular windowed crosswalls, with the top open for carrier access. The former second half, four lumbar ties and eight associated tie screws are retired. The integral geometry has no assembly seam; its strength and print process remain unverified.', ss['body']),
+        p('Movie S1 at 51.5 and 52.7 seconds supports the orthogonal crosswall and solid upper cheek arrangement. Dimensions remain reconstruction assumptions. Wall, window, relief and carrier access details are engineering adaptations represented by editable native features. S9 pivots, shaft stacks, liners and motor datums must retain the strict unchanged-instance evidence. The monolithic frame receives its own affected-frame motion checks; historical half-cage checks do not certify it.', ss['body'])]
+    image_names = [('r09_robot_side.png', 'Assembled side view'), ('r09_spine_source_facing.png', 'Source-facing spine detail'),
+                   ('r09_bare_lumbar_pos_y_oblique.png', 'Lumbar cage, positive-Y face'),
+                   ('r09_bare_lumbar_neg_y_oblique.png', 'Lumbar cage, negative-Y face')]
+    image_cells = []
+    for name, caption in image_names:
+        path = crop_image(name)
+        image_cells.append((Image(str(path), width=(doc.width-8*mm)/2, height=(doc.width-8*mm)/2*.64), caption))
+    griddata = []
+    for i in (0, 2):
+        griddata.append([image_cells[i][0], image_cells[i+1][0]])
+        griddata.append([p(image_cells[i][1], ss['caption']), p(image_cells[i+1][1], ss['caption'])])
+    grid = Table(griddata, colWidths=[(doc.width-8*mm)/2]*2)
+    grid.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'MIDDLE'),('ALIGN',(0,0),(-1,-1),'CENTER'),
+        ('LEFTPADDING',(0,0),(-1,-1),2),('RIGHTPADDING',(0,0),(-1,-1),2),
+        ('TOPPADDING',(0,0),(-1,-1),1),('BOTTOMPADDING',(0,0),(-1,-1),1)]))
+    story += [Spacer(1, 2*mm), grid, p('Captures are actual FreeCAD views of saved r09 geometry; the paired oblique cage views expose opposite faces for source-fidelity inspection.', ss['caption'])]
+    bbox = mass['actual_assembled_bbox_mm']
+    ref = mass.get('reference_envelope_mm', {'X':110,'Y':99,'Z':84})
+    story += [p('Saved envelope: {:.3f} x {:.3f} x {:.3f} mm; reference: {:.1f} x {:.1f} x {:.1f} mm. This comparison records the candidate packaging and does not imply scale conformity.'.format(
+        bbox['x_mm'], bbox['y_mm'], bbox['z_mm'], ref['X'], ref['Y'], ref['Z']), ss['body']), PageBreak()]
+
+    story += [p('2 | Assembly sequence', ss['h1'])]
+    steps = [
+        ('1. Stage exact parts', 'Use the r09 BOM and instance list. Record supplier identity, batch, material, finish, measured dimensions and mass. Preserve unknown mass explicitly.'),
+        ('2. Build the spine core', 'Assemble A/B/C shafts, links, crank hardware, guides, liners and retainers at the native placements. Retain both coupled outputs and the two XL motors. Check axial capture, free motion and tool access.'),
+        ('3. Install the one-piece lumbar cage', 'Use the single saved LumbarIntegrated1 placement. Inspect solid horn cheeks, perpendicular windowed crosswalls, open top, native travel reliefs and carrier access. Do not install the retired second half, four FixedLumbarTie parts or eight FixedTieScrew parts. Verify process, wall quality and actual interfaces before fitting hardware.'),
+        ('4. Fit torso structures and joints', 'Preserve distinct fore/hind structures, moving-frame axes and S9 topology. Verify shafts, journals, bearing stacks, ties and shims in their saved orientations.'),
+        ('5. Install motors and adapters', 'The two XL330-M077-T and five XC330-M181-T solids are 20 x 26 x 34 mm in native XYZ (catalog W/H/D 20 x 34 x 26 mm). Critical mount/output/horn/connector interfaces remain provisional. Confirm the real case pattern, output center, pilot/spline, horn pattern, fastener engagement, connectors and cable bend space from exact drawings or metrology.'),
+        ('6. Assemble the four legs', 'Retain distinct fore/hind modules and the same +X-forward, +Y-left, +Z-up direction. Fit hip axes, three links, pins, bearings, spacers, clips and return features in their saved sides.'),
+        ('7. Fit springs and cable drive', 'Identify spring rate/free length/end form/preload. Preserve passive hind knees and the bilateral cable path. Validate cable bend, grip, tension and slip on bench coupons before robot loading.'),
+        ('8. Fit carrier and route harness', 'Carrier retainer outer wall is 0.8 mm after expansion to X=[-24.8,4.8] mm; board and screw locations are unchanged. Verify actual PCB population/connectors. Keep power and TTL wiring correct, strain-relieved and clear of moving parts.'),
+        ('9. Torque-off inspection', 'With supply disconnected and torque off, inspect engagement, clips, hand motion, spring seats, cable paths, pinch points, polarity and plug access. Stop on binding or mismatch. This is a proposed sequence; no physical inspection has occurred.'),
+    ]
+    for title, body in steps:
+        story.append(KeepTogether([p(title, ss['h2']), p(body, ss['body'])]))
+    story += [p('Nominal interfaces are geometry candidates, not manufacturing tolerances', ss['h2'])]
+    fit = [[p('Interface',ss['th']),p('Candidate nominal',ss['th']),p('Still to verify',ss['th'])],
+        [p('Bearing seat',ss['td']),p('4.05 mm seat / 4.00 mm OD',ss['td']),p('Bearing type, process size, retention and wall strength',ss['td'])],
+        [p('Journal / bore',ss['td']),p('1.90 mm journal / 2.00 mm bore',ss['td']),p('Actual shaft, finish, coaxiality and running fit',ss['td'])],
+        [p('Remaining carrier clamp',ss['td']),p('2.50 mm bore / nominal 2.40 mm tie',ss['td']),p('Tie size, preload, friction, creep and retention',ss['td'])],
+        [p('OpenRB carrier',ss['td']),p('25 x 66 mm board footprint; 0.8 mm retainer wall',ss['td']),p('Board thickness, populated keepouts, connectors and mount',ss['td'])]]
+    story += [make_table(fit,[75,115,doc.width-190]), PageBreak()]
+
+    story += [p('3 | Motor map and torque-off calibration', ss['h1']),
+        p('The candidate map has seven motors and six commanded coordinates because the two spine motors share phase. It is not a commissioned device map. No IDs have been written, offsets measured, torque enabled or hardware moved.', ss['body'])]
+    maprows = [[p('ID',ss['th']),p('Motor envelope',ss['th']),p('Candidate coordinate',ss['th'])]]
+    mapentries = [('1','XL330-M077-T spine A','Shared spine phase theta'),('2','XL330-M077-T spine B','Same theta; redundant paired drive'),
+        ('3','XC330-M181-T fore left','Fore-left hip/thigh'),('4','XC330-M181-T fore right','Fore-right hip/thigh'),
+        ('5','XC330-M181-T hind left','Hind-left hip/thigh'),('6','XC330-M181-T hind right','Hind-right hip/thigh'),
+        ('7','XC330-M181-T hind wheel','Bilateral tendon take-up')]
+    for row in mapentries: maprows.append([p(x,ss['td']) for x in row])
+    story += [make_table(maprows,[35,180,doc.width-215]), p('Record-only checklist for any later authorized commissioning',ss['h2'])]
+    cal = [[p('Unit',ss['th']),p('Record before a separately authorized powered test',ss['th'])],
+        [p('Each ID 1-7',ss['td']),p('Exact model/serial, output orientation, sign, mechanical reference, raw encoder, offset, software limits, current/temperature limits, operator and date.',ss['td'])],
+        [p('Spine pair 1/2',ss['td']),p('Both mechanical references and unloaded tracking error; safe synchronization, torque sharing and stop limits.',ss['td'])],
+        [p('Leg IDs 3-6',ss['td']),p('Verify the same positive sagittal direction at all four mounts; record each real motor sign.',ss['td'])],
+        [p('Wheel ID 7',ss['td']),p('Verify both cable branch winding signs and record terminal retention evidence.',ss['td'])]]
+    story += [make_table(cal,[76,doc.width-76]), p('The saved neutral pose does not establish encoder zero, spline orientation, hard stops, tendon preload or loaded spring equilibrium. Keep offsets unset and torque disabled until real interfaces and safe restraints are established. This document does not authorize energizing, ID writes, jogging, gait operation, cable pull or calibration motion.',ss['body']), PageBreak()]
+
+    story += [p('4 | Mass and engineering demand screen', ss['h1']),
+        p('Values below are loaded from the final r09 calculation files. Geometry masses use explicit material-class density estimates; nominal purchased mass metadata takes precedence. Unknown mass remains excluded from the known sum. Point-mass inertia omits each solid’s own centroidal inertia.',ss['body'])]
+    known = screen['known_mass']; sensitivity = screen.get('assumed_loaded_sensitivity')
+    mass_rows = [[p('Quantity',ss['th']),p('Known case',ss['th']),p('Separate sensitivity case',ss['th'])],
+        [p('Mass',ss['td']),p('{:.4f} g'.format(known['mass_g']),ss['td']),p('{:.4f} g'.format(sensitivity['mass_g']) if sensitivity else 'Not reported',ss['td'])],
+        [p('CoM X/Y/Z',ss['td']),p('({:.3f}, {:.3f}, {:.3f}) mm'.format(*known['center_mm']),ss['td']),p('({:.3f}, {:.3f}, {:.3f}) mm'.format(*sensitivity['center_mm']) if sensitivity else 'Not reported',ss['td'])],
+        [p('Point-mass inertia diagonal Ixx/Iyy/Izz',ss['td']),p(' / '.join('{:.1f}'.format(known['point_mass_inertia_g_mm2'][i][i]) for i in range(3))+' g mm2',ss['td']),p(' / '.join('{:.1f}'.format(sensitivity['point_mass_inertia_g_mm2'][i][i]) for i in range(3))+' g mm2' if sensitivity else 'Not reported',ss['td'])]]
+    story += [make_table(mass_rows,[108,doc.width*.39,doc.width*.61-108]),
+        p('Actual B-rep envelope: {:.3f} x {:.3f} x {:.3f} mm. Density-based known sum: {:.4f} g; purchased mass: {:.4f} g; unknown-mass instances: {}. These are estimates, not physical weighing.'.format(
+            mass['actual_assembled_bbox_mm']['x_mm'],mass['actual_assembled_bbox_mm']['y_mm'],mass['actual_assembled_bbox_mm']['z_mm'],
+            mass['known_mass_sum_g'],mass['known_purchased_mass_g'],mass['unknown_mass_instance_count']),ss['body'])]
+    cases = screen.get('load_screens',{}).get('cases',[])
+    spine_cases = screen.get('load_screens',{}).get('spine_B_shaft',{}).get('cases',[])
+    if cases:
+        demand = [[p(x,ss['th']) for x in ('Alpha','Support','Fore hip N m','Hind hip N m','Pin shear MPa','Pin bend MPa','Seat MPa','B shaft MPa')]]
+        for alpha in (1,3,6):
+            for support,label in (('two_legs_equal_share','2-leg equal'),('one_leg_worst_case','1-leg worst')):
+                fore=next(c for c in cases if c['alpha']==alpha and c['support']==support and c['leg']=='foreL')
+                hind=next(c for c in cases if c['alpha']==alpha and c['support']==support and c['leg']=='hindL')
+                spine=next(c for c in spine_cases if c['alpha']==alpha and c['support']==support)
+                demand.append([p(str(alpha),ss['td']),p(label,ss['td']),p('{:.4f}'.format(fore['hip_static_moment_Nm']),ss['td']),
+                    p('{:.4f}'.format(hind['hip_static_moment_Nm']),ss['td']),p('{:.2f}'.format(fore['pin_single_shear_MPa']),ss['td']),
+                    p('{:.2f}'.format(fore['pin_nominal_bending_stress_MPa']),ss['td']),p('{:.2f}'.format(fore['PA12_bearing_seat_projected_pressure_MPa']),ss['td']),
+                    p('{:.2f}'.format(spine['nominal_bending_stress_MPa']),ss['td'])])
+        widths=[31,67,48,48,48,48,54,doc.width-344]
+        story += [p('Quasi-static demand estimates',ss['h2']), make_table(demand,widths),
+            p('The screen uses the load cases and geometry inputs in reports/verification/r09_engineering_screen.json. Pin bending is a simplified circular beam estimate; seat pressure is projected area only; B-shaft bending assumes a simply supported central point load and the report span. Loads, contact distribution, dynamics, cable forces and local failure modes are not solved. No strength, fatigue, creep, bearing, motor-duty or safety-factor pass is claimed.',ss['small'])]
+        fore_worst=next(c for c in cases if c['alpha']==6 and c['support']=='one_leg_worst_case' and c['leg']=='foreL')
+        hind_worst=next(c for c in cases if c['alpha']==6 and c['support']=='one_leg_worst_case' and c['leg']=='hindL')
+        story.append(p('At the alpha 6 one-leg case, estimated hip moments are {:.0f}% fore and {:.0f}% hind of the cited XC330-M181-T stall torque at 5 V. Stall is not a continuous-duty or thermal limit.'.format(
+            100*fore_worst['hip_moment_fraction_of_XC330_M181_T_stall_at_5V'],
+            100*hind_worst['hip_moment_fraction_of_XC330_M181_T_stall_at_5V']),ss['body']))
+    limitations = screen.get('limitations',[])
+    if limitations:
+        story += [p('Calculation limitations: '+ '; '.join(limitations),ss['small'])]
+    story += [PageBreak(), p('5 | Verification boundary and unresolved interfaces',ss['h1'])]
+    ver_rows = [[p('Gate',ss['th']),p('Final record',ss['th']),p('Scope',ss['th'])],
+        [p('Neutral raw intersections',ss['td']),p(evidence['neutral'].get('status','UNKNOWN'),ss['td']),p('{} instances; prescribed pose only'.format(evidence['neutral'].get('instances','?')),ss['td'])],
+        [p('Composite finite motion',ss['td']),p(evidence['motion']['status'],ss['td']),p('Historical r08 985 states + strict 472 nonframe identity + {} new-frame states; sampled only'.format(len(evidence['motion']['completed_sample_ids'])),ss['td'])],
+        [p('AX0 / AX1',ss['td']),p(evidence['ax01']['AX0']+' / '+evidence['ax01']['AX1'],ss['td']),p('{} instances / {} source definitions / {} prescribed poses; no mesh/video or dynamics claim'.format(evidence['ax01']['physical_instances'],evidence['ax01']['source_definitions'],len(evidence['poses']['frames'])),ss['td'])],
+        [p('STEP/package',ss['td']),p(evidence['package'].get('status','UNKNOWN'),ss['td']),p('Serialized geometry round trips; no fabrication release',ss['td'])],
+        [p('Drawings',ss['td']),p(evidence['drawings'].get('visual_review','UNKNOWN'),ss['td']),p('{} sheets / {} dimensions'.format(evidence['drawings'].get('sheet_count','?'),evidence['drawings'].get('dimension_count','?')),ss['td'])],
+        [p('Profiles',ss['td']),p(evidence['profiles'].get('status','UNKNOWN'),ss['td']),p('Native-derived flat-stock/profile readback',ss['td'])]]
+    story += [make_table(ver_rows,[85,90,doc.width-175]),
+        p('A finite sampled sweep does not prove continuous clearance, loaded equilibrium, endurance or hardware performance. Motor output/mount/horn/connector interfaces, OpenRB population and mounting, bearing/shaft/clip fits and retention, fastener thread and engagement, spring identity and preload, cable holding force, material/process allowables and physical load paths remain open. No fabrication release or physical build inspection is claimed.',ss['body']),
+        p('Evidence identity',ss['h2']),
+        p('Native: cad/flexor_r09_robot.FCStd (SHA256 {}). BOM: bom/bom_r09.csv and bom/instances_r09.csv. Package: reports/package_manifest_r09.json. Mass: reports/verification/r09_mass_envelope.json. Demand calculation: reports/verification/r09_engineering_screen.json. Neutral: reports/verification/r09_neutral.json. Motion: reports/verification/r09_frame_partitions/summary.json, freeze.json, identity.json and all affected-frame partitions, backed by reports/verification/r08_motion_partitions/full_summary.json. Animation interface: reports/animation/ax01_r09.json and animation/motion/ax01_r09.json. Drawings: drawings/r09/drawing_manifest_r09.json. Profiles: exports/profiles/r09/profile_manifest_r09.json.'.format(native_sha),ss['small']), PageBreak()]
+
+    story += [p('Appendix A | Complete r09 part-number index',ss['h1']),
+        p('All exact part numbers and aggregate quantities are read from bom/bom_r09.csv. The revision-specific CSV and instance list remain authoritative for roles, materials, provenance and individual placements.',ss['body'])]
+    bomdata = [[p('Group',ss['th']),p('Exact part number',ss['th']),p('Qty',ss['th'])]]
+    for row in rows:
+        bomdata.append([p(category(row['part_number']),ss['td']),p(row['part_number'],ss['td']),p(row['quantity'],ss['td'])])
+    story.append(LongTable(bomdata,colWidths=[112,doc.width-150,38],repeatRows=1,hAlign='LEFT',splitByRow=1,
+        style=TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('BACKGROUND',(0,0),(-1,0),NAVY),
+            ('TEXTCOLOR',(0,0),(-1,0),colors.white),('GRID',(0,0),(-1,-1),.3,GRID),
+            ('LEFTPADDING',(0,0),(-1,-1),4),('RIGHTPADDING',(0,0),(-1,-1),4),
+            ('TOPPADDING',(0,0),(-1,-1),3),('BOTTOMPADDING',(0,0),(-1,-1),3)])))
+    story += [Spacer(1,5*mm),p('Appendix totals: {} unique part numbers, {} assembly instances. The OpenRB PCB mass remains whatever the matching r09 mass/BOM reports; do not substitute an assumed zero.'.format(len(rows),count),ss['body'])]
+    doc.build(story)
+    return {'pdf':str(OUT),'native_sha256':native_sha,'unique_part_numbers':len(rows),'assembly_instances':count}
+
+
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--native-sha256', required=True, help='Explicit lead-frozen canonical r09 SHA256')
+    args = parser.parse_args()
+    print(json.dumps(build(args.native_sha256), indent=2))

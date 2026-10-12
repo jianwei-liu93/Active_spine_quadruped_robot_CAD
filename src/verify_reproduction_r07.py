@@ -7,7 +7,7 @@ from pathlib import Path
 import hashlib,json,time
 ROOT=Path(__file__).resolve().parents[1]
 
-def run(rebuilt, canonical, revision='r07'):
+def run(rebuilt, canonical, revision='r07', expected_instances=486):
     import FreeCAD as App,Part
     import robot_pose_r03 as pose,leg_motion_r07
     from adaptive_volume_r07 import validate_solids
@@ -23,7 +23,7 @@ def run(rebuilt, canonical, revision='r07'):
     rebuilt.recompute()
     a={o.Name:o for o in canonical.Objects if o.TypeId=='App::Link'}
     b={o.Name:o for o in rebuilt.Objects if o.TypeId=='App::Link'}
-    assert set(a)==set(b) and len(a)==486
+    assert set(a)==set(b) and len(a)==expected_instances
     assert all(a[n].LinkedObject.PartNumber==b[n].LinkedObject.PartNumber for n in a)
     assert all(o.Shape.isValid() and len(o.Shape.Solids)==1 for o in b.values())
     print('REBUILT',len(b),'seconds',time.monotonic()-start,flush=True)
@@ -31,7 +31,7 @@ def run(rebuilt, canonical, revision='r07'):
     comparison=validate_solids(Part.makeCompound([b[n].Shape for n in names]),[a[n].Shape for n in names],ROOT,names)
     record={'status':'PASS','native_sha256':before,'native_file_unchanged':before==hashlib.sha256(native.read_bytes()).hexdigest(),
             'instances':len(a),'part_numbers_match':True,'source_partdesign_bodies':len([o for o in rebuilt.Objects if o.TypeId=='PartDesign::Body']),
-            'scope':'Clean frozen-source rebuild and all486placedsolid comparison; no byte-equality claim; installed MCP source build also executed',
+            'scope':f'Clean frozen-source rebuild and all{expected_instances}placedsolid comparison; no byte-equality claim; installed MCP source build also executed',
             'comparison':comparison,'seconds':time.monotonic()-start}
     assert record['native_file_unchanged']
     (ROOT/('reports/verification/'+revision+'_source_reproduction.json')).write_text(json.dumps(record,indent=2)+'\n')
