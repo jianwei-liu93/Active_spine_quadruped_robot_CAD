@@ -119,7 +119,7 @@ def _instance_row(link, revision):
         purchased = None
     role = _string(_prop(source, "Role"))
     controller_identity = " ".join((part_number, role, _string(getattr(source, "Name", "")), _string(getattr(link, "Name", "")))).casefold()
-    is_controller = "controller" in controller_identity or "openrb" in controller_identity
+    is_controller = ("controller" in controller_identity or "openrb" in controller_identity) and role in ("PURCHASED", "ENVELOPE") and material.casefold() not in DENSITY_KG_M3
     if purchased is not None:
         mass_g = purchased
         mass_method = "PURCHASED_NOMINAL"

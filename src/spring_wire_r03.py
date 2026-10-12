@@ -50,4 +50,5 @@ def shape(length, free_length):
             result = result.fuse(piece)
     if not result.isValid() or len(result.Solids) != 1:
         raise RuntimeError('Extension spring union is not a valid single solid')
-    return result
+    from spring_normalization_r07 import normalize
+    return normalize(result,length)

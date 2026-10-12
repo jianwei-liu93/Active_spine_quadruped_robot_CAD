@@ -1,0 +1,82 @@
+{
+  "revision": "r07",
+  "status": "PASS",
+  "manufacturer_whd_mm": [
+    20,
+    34,
+    26
+  ],
+  "limits": "Nominal case envelopes only; output datums, horn, mounting holes and connector clearances unverified",
+  "instances": [
+    {
+      "instance": "SpineMotor_1",
+      "model": "DYNAMIXEL_XL330_M077_T",
+      "source": "ENV_XL330_r02",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "SpineMotor1",
+      "model": "DYNAMIXEL_XL330_M077_T",
+      "source": "ENV_XL330_r02",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "hind_ProximalMotor__1",
+      "model": "DYNAMIXEL_XC330_M181_T",
+      "source": "ENV_XC330_M181_HIND_DATUM_r03",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "hind_ProximalMotor_1",
+      "model": "DYNAMIXEL_XC330_M181_T",
+      "source": "ENV_XC330_M181_HIND_DATUM_r03",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "fore_ProximalMotor__1",
+      "model": "DYNAMIXEL_XC330_M181_T",
+      "source": "ENV_XC330_M181_FORE_DATUM_r03",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "fore_ProximalMotor_1",
+      "model": "DYNAMIXEL_XC330_M181_T",
+      "source": "ENV_XC330_M181_FORE_DATUM_r03",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    },
+    {
+      "instance": "HindTendon_KneeMotor",
+      "model": "DYNAMIXEL_XC330_M181_T",
+      "source": "ENV_TENDON_XC330_M181_r03",
+      "source_box_xyz_mm": [
+        20.0,
+        26.0,
+        34.0
+      ]
+    }
+  ]
+}

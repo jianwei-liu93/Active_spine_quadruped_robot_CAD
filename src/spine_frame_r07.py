@@ -7,6 +7,36 @@ import math,json
 from pathlib import Path
 
 
+def add_travel_reliefs(doc, body, p):
+    """Native full-stack clearance for actual C-shaft travel; no datum changes.
+
+    Radius2.15 gives nominal .35 radial space about the existing radius1.8
+    shaft. This is an engineering relief, not a dimension recovered from film.
+    """
+    import FreeCAD as App
+    from refine_flexor import pill_face,sketch_face
+    from kinematics import spine
+    config=json.loads((Path(__file__).resolve().parents[1]/'parameters/assembly_r07.json').read_text())['lumbar_frame_r07']
+    radius=config['travel_relief_radius_mm']
+    records=[]
+    for i in (1,2):
+        name=body.Name+'_C'+str(i)+'TravelRelief'
+        if doc.getObject(name):raise ValueError('Travel relief already exists: '+name)
+        points=[spine(j*math.tau/3600,p)['C'+str(i)] for j in range(3601)]
+        lo=min(q[0] for q in points)-.01;hi=max(q[0] for q in points)+.01
+        z=points[0][1]
+        face=pill_face((lo,z),(hi,z),2*radius)
+        sk=sketch_face(doc,body,name+'Sketch',face,14.2)
+        previous=body.Tip
+        feature=body.newObject('PartDesign::Pocket',name)
+        feature.Profile=sk;feature.Length=26.8
+        doc.recompute();sk.Visibility=False;previous.Visibility=False
+        if not body.Shape.isValid() or len(body.Shape.Solids)!=1:
+            raise RuntimeError('Travel relief must preserve one valid connected frame: '+name)
+        records.append({'shaft':'C'+str(i),'center_x_bounds_mm':[lo,hi],'center_z_mm':z,'radius_mm':radius,'feature':name})
+    return records
+
+
 def apply(b, remove_old=True):
     """Replace only the two lumbar source bodies, preserving AppLinks/placements.
 
@@ -106,6 +136,7 @@ def apply(b, remove_old=True):
         for key in ('E1','E2'):pad(body,'ShelfJournalBoss'+key,disk(*s[key],3.5),1.6 if side==1 else 0,14.2,side==1)
         # Final cuts clear every base/shelf/collar feature across the whole stack.
         pocket(body,'WholeStackJournalClearances',[(0,0,frame['lower_opening_radius_mm'])]+[(s[n][0],s[n][1],2.025) for n in ('A1','A2','E1','E2')],14.2,26.8)
+        add_travel_reliefs(doc,body,p)
         doc.recompute()
         if not body.Shape.isValid() or len(body.Shape.Solids)!=1:
             raise RuntimeError(pn+' requires one valid native solid before replacement')

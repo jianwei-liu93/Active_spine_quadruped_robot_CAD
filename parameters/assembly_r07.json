@@ -351,7 +351,9 @@
     "ear_top_radius_mm": 3.5,
     "all_joint_case_tie_datums": "unchanged from r06",
     "supersedes": "r06 circular external lower-foot outline and narrow upper window",
-    "minimum_aperture_sill_mm": 1.5
+    "minimum_aperture_sill_mm": 1.5,
+    "travel_relief_radius_mm": 2.15,
+    "travel_relief_provenance": "DESIGN_ASSUMPTION: full-stack C1/C2 travel capsules, actual solver center range plus .01mm endpoint allowance; .35mm nominal radial clearance about radius1.8 shaft; preserves all S9 datums."
   },
   "fore_panel_relief_r07": {
     "provenance": "DESIGN_ASSUMPTION; measured fore O1 clip overlap in motion",

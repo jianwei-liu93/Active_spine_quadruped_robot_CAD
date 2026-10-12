@@ -25,7 +25,7 @@ LEG_KINDS = frozenset(('leg_r02_segment', 'leg_r02_point', 'leg_r02_body',
 KINDS = LEG_KINDS | {'segment', 'point', 'axialrot', 'horn_screw',
                      'torso_r03', 'torso_offset_r03', 'torso_r03_offset',
                      'tendon_r03_wheel', 'tendon_r03_guide', 'tendon_r03_cable',
-                     'torso_r04_rigid'}
+                     'torso_r04_rigid','fixed'}
 
 
 def _number(value):
@@ -208,7 +208,9 @@ def _plan(doc, theta, leg_angles=None):
     springs, guides = [], []
     for name, m in motion.items():
         k = m['kind']
-        if k == 'segment':
+        if k == 'fixed':
+            place = App.Placement(doc.getObject(name).LinkPlacement)
+        elif k == 'segment':
             place = cc.line_place(state[m['a']], state[m['b']], m['y'], m['width'], m['thickness'])
         elif k == 'point':
             place = cc.hardware_place(state[m['point']], m['y'], m['length'])

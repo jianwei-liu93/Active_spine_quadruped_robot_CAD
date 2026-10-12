@@ -1,0 +1,636 @@
+{
+  "assumed_loaded_sensitivity": {
+    "center_mm": [
+      -8.778410311375858,
+      -0.0005867199992645356,
+      5.455376689458081
+    ],
+    "mass_g": 286.3757666252076,
+    "point_mass_inertia_g_mm2": [
+      [
+        243772.09133314254,
+        -25.49278131878976,
+        -18472.7577588079
+      ],
+      [
+        -25.49278131878976,
+        658462.0066953944,
+        -5.166577009779343
+      ],
+      [
+        -18472.7577588079,
+        -5.166577009779343,
+        777097.2210262069
+      ]
+    ]
+  },
+  "controller_board_center_mm": [
+    -10.0,
+    -2.220446049250311e-17,
+    40.4
+  ],
+  "known_mass": {
+    "center_mm": [
+      -8.696478121030438,
+      -0.0006260713912309713,
+      3.111635943043481
+    ],
+    "mass_g": 268.3757666252076,
+    "point_mass_inertia_g_mm2": [
+      [
+        220317.59028147048,
+        -25.506547761212552,
+        -19292.677217485474
+      ],
+      [
+        -25.506547761212552,
+        634978.8430103812,
+        -4.772776089004054
+      ],
+      [
+        -19292.677217485474,
+        -4.772776089004054,
+        777068.5583796424
+      ]
+    ]
+  },
+  "limitations": [
+    "Point-mass inertia omits each solid\u2019s own centroidal inertia.",
+    "Known geometry masses are density estimates; purchased masses are nominal metadata.",
+    "Controller and harness assumptions do not modify BOM or the unknown-mass PCB record.",
+    "Loads are static screening cases, not dynamic gait, impact, cable-tension, fatigue or strength qualification.",
+    "The hip-torque ratio compares static hip moment with 0.60 N m XC330-M181-T stall torque at 5 V; it is not a continuous-duty or thermal margin."
+  ],
+  "load_screens": {
+    "cases": [
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.3055253766110278,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.05386029994062187,
+        "hip_static_moment_Nm": 0.03231617996437312,
+        "leg": "foreL",
+        "leg_horizontal_N": 0.421401940588993,
+        "leg_resultant_N": 1.4665218077329334,
+        "leg_vertical_N": 1.4046731352966433,
+        "pin_double_shear_MPa": 0.25861960648505095,
+        "pin_nominal_bending_stress_MPa": 8.548058572242732,
+        "pin_overhang_bending_moment_Nmm": 5.756098095351759,
+        "pin_single_shear_MPa": 0.5172392129701019,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.3055253766110278,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.05386029994062187,
+        "hip_static_moment_Nm": 0.03231617996437312,
+        "leg": "foreR",
+        "leg_horizontal_N": 0.421401940588993,
+        "leg_resultant_N": 1.4665218077329334,
+        "leg_vertical_N": 1.4046731352966433,
+        "pin_double_shear_MPa": 0.25861960648505095,
+        "pin_nominal_bending_stress_MPa": 8.548058572242732,
+        "pin_overhang_bending_moment_Nmm": 5.756098095351759,
+        "pin_single_shear_MPa": 0.5172392129701019,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.3055253766110278,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.06301928359370311,
+        "hip_static_moment_Nm": 0.037811570156221865,
+        "leg": "hindL",
+        "leg_horizontal_N": 0.421401940588993,
+        "leg_resultant_N": 1.4665218077329334,
+        "leg_vertical_N": 1.4046731352966433,
+        "pin_double_shear_MPa": 0.25861960648505095,
+        "pin_nominal_bending_stress_MPa": 8.548058572242732,
+        "pin_overhang_bending_moment_Nmm": 5.756098095351759,
+        "pin_single_shear_MPa": 0.5172392129701019,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.3055253766110278,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.06301928359370311,
+        "hip_static_moment_Nm": 0.037811570156221865,
+        "leg": "hindR",
+        "leg_horizontal_N": 0.421401940588993,
+        "leg_resultant_N": 1.4665218077329334,
+        "leg_vertical_N": 1.4046731352966433,
+        "pin_double_shear_MPa": 0.25861960648505095,
+        "pin_nominal_bending_stress_MPa": 8.548058572242732,
+        "pin_overhang_bending_moment_Nmm": 5.756098095351759,
+        "pin_single_shear_MPa": 0.5172392129701019,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.6110507532220556,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10772059988124374,
+        "hip_static_moment_Nm": 0.06463235992874625,
+        "leg": "foreL",
+        "leg_horizontal_N": 0.842803881177986,
+        "leg_resultant_N": 2.933043615465867,
+        "leg_vertical_N": 2.8093462705932866,
+        "pin_double_shear_MPa": 0.5172392129701019,
+        "pin_nominal_bending_stress_MPa": 17.096117144485465,
+        "pin_overhang_bending_moment_Nmm": 11.512196190703518,
+        "pin_single_shear_MPa": 1.0344784259402038,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.6110507532220556,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10772059988124374,
+        "hip_static_moment_Nm": 0.06463235992874625,
+        "leg": "foreR",
+        "leg_horizontal_N": 0.842803881177986,
+        "leg_resultant_N": 2.933043615465867,
+        "leg_vertical_N": 2.8093462705932866,
+        "pin_double_shear_MPa": 0.5172392129701019,
+        "pin_nominal_bending_stress_MPa": 17.096117144485465,
+        "pin_overhang_bending_moment_Nmm": 11.512196190703518,
+        "pin_single_shear_MPa": 1.0344784259402038,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.6110507532220556,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.12603856718740622,
+        "hip_static_moment_Nm": 0.07562314031244373,
+        "leg": "hindL",
+        "leg_horizontal_N": 0.842803881177986,
+        "leg_resultant_N": 2.933043615465867,
+        "leg_vertical_N": 2.8093462705932866,
+        "pin_double_shear_MPa": 0.5172392129701019,
+        "pin_nominal_bending_stress_MPa": 17.096117144485465,
+        "pin_overhang_bending_moment_Nmm": 11.512196190703518,
+        "pin_single_shear_MPa": 1.0344784259402038,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.6110507532220556,
+        "alpha": 1,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.12603856718740622,
+        "hip_static_moment_Nm": 0.07562314031244373,
+        "leg": "hindR",
+        "leg_horizontal_N": 0.842803881177986,
+        "leg_resultant_N": 2.933043615465867,
+        "leg_vertical_N": 2.8093462705932866,
+        "pin_double_shear_MPa": 0.5172392129701019,
+        "pin_nominal_bending_stress_MPa": 17.096117144485465,
+        "pin_overhang_bending_moment_Nmm": 11.512196190703518,
+        "pin_single_shear_MPa": 1.0344784259402038,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 2.8093462705932866
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.9165761298330835,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1615808998218656,
+        "hip_static_moment_Nm": 0.09694853989311936,
+        "leg": "foreL",
+        "leg_horizontal_N": 1.264205821766979,
+        "leg_resultant_N": 4.3995654231988,
+        "leg_vertical_N": 4.21401940588993,
+        "pin_double_shear_MPa": 0.7758588194551529,
+        "pin_nominal_bending_stress_MPa": 25.6441757167282,
+        "pin_overhang_bending_moment_Nmm": 17.26829428605528,
+        "pin_single_shear_MPa": 1.5517176389103058,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.9165761298330835,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1615808998218656,
+        "hip_static_moment_Nm": 0.09694853989311936,
+        "leg": "foreR",
+        "leg_horizontal_N": 1.264205821766979,
+        "leg_resultant_N": 4.3995654231988,
+        "leg_vertical_N": 4.21401940588993,
+        "pin_double_shear_MPa": 0.7758588194551529,
+        "pin_nominal_bending_stress_MPa": 25.6441757167282,
+        "pin_overhang_bending_moment_Nmm": 17.26829428605528,
+        "pin_single_shear_MPa": 1.5517176389103058,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.9165761298330835,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1890578507811093,
+        "hip_static_moment_Nm": 0.11343471046866557,
+        "leg": "hindL",
+        "leg_horizontal_N": 1.264205821766979,
+        "leg_resultant_N": 4.3995654231988,
+        "leg_vertical_N": 4.21401940588993,
+        "pin_double_shear_MPa": 0.7758588194551529,
+        "pin_nominal_bending_stress_MPa": 25.6441757167282,
+        "pin_overhang_bending_moment_Nmm": 17.26829428605528,
+        "pin_single_shear_MPa": 1.5517176389103058,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 0.9165761298330835,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1890578507811093,
+        "hip_static_moment_Nm": 0.11343471046866557,
+        "leg": "hindR",
+        "leg_horizontal_N": 1.264205821766979,
+        "leg_resultant_N": 4.3995654231988,
+        "leg_vertical_N": 4.21401940588993,
+        "pin_double_shear_MPa": 0.7758588194551529,
+        "pin_nominal_bending_stress_MPa": 25.6441757167282,
+        "pin_overhang_bending_moment_Nmm": 17.26829428605528,
+        "pin_single_shear_MPa": 1.5517176389103058,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3231617996437312,
+        "hip_static_moment_Nm": 0.1938970797862387,
+        "leg": "foreL",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3231617996437312,
+        "hip_static_moment_Nm": 0.1938970797862387,
+        "leg": "foreR",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3781157015622186,
+        "hip_static_moment_Nm": 0.22686942093733115,
+        "leg": "hindL",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 3,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3781157015622186,
+        "hip_static_moment_Nm": 0.22686942093733115,
+        "leg": "hindR",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 8.42803881177986
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3231617996437312,
+        "hip_static_moment_Nm": 0.1938970797862387,
+        "leg": "foreL",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3231617996437312,
+        "hip_static_moment_Nm": 0.1938970797862387,
+        "leg": "foreR",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3781157015622186,
+        "hip_static_moment_Nm": 0.22686942093733115,
+        "leg": "hindL",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 1.833152259666167,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3781157015622186,
+        "hip_static_moment_Nm": 0.22686942093733115,
+        "leg": "hindR",
+        "leg_horizontal_N": 2.528411643533958,
+        "leg_resultant_N": 8.7991308463976,
+        "leg_vertical_N": 8.42803881177986,
+        "pin_double_shear_MPa": 1.5517176389103058,
+        "pin_nominal_bending_stress_MPa": 51.2883514334564,
+        "pin_overhang_bending_moment_Nmm": 34.53658857211056,
+        "pin_single_shear_MPa": 3.1034352778206116,
+        "support": "two_legs_equal_share",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 3.666304519332334,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.6463235992874624,
+        "hip_static_moment_Nm": 0.3877941595724774,
+        "leg": "foreL",
+        "leg_horizontal_N": 5.056823287067916,
+        "leg_resultant_N": 17.5982616927952,
+        "leg_vertical_N": 16.85607762355972,
+        "pin_double_shear_MPa": 3.1034352778206116,
+        "pin_nominal_bending_stress_MPa": 102.5767028669128,
+        "pin_overhang_bending_moment_Nmm": 69.07317714422112,
+        "pin_single_shear_MPa": 6.206870555641223,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 3.666304519332334,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.6463235992874624,
+        "hip_static_moment_Nm": 0.3877941595724774,
+        "leg": "foreR",
+        "leg_horizontal_N": 5.056823287067916,
+        "leg_resultant_N": 17.5982616927952,
+        "leg_vertical_N": 16.85607762355972,
+        "pin_double_shear_MPa": 3.1034352778206116,
+        "pin_nominal_bending_stress_MPa": 102.5767028669128,
+        "pin_overhang_bending_moment_Nmm": 69.07317714422112,
+        "pin_single_shear_MPa": 6.206870555641223,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 3.666304519332334,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.7562314031244372,
+        "hip_static_moment_Nm": 0.4537388418746623,
+        "leg": "hindL",
+        "leg_horizontal_N": 5.056823287067916,
+        "leg_resultant_N": 17.5982616927952,
+        "leg_vertical_N": 16.85607762355972,
+        "pin_double_shear_MPa": 3.1034352778206116,
+        "pin_nominal_bending_stress_MPa": 102.5767028669128,
+        "pin_overhang_bending_moment_Nmm": 69.07317714422112,
+        "pin_single_shear_MPa": 6.206870555641223,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 16.85607762355972
+      },
+      {
+        "PA12_bearing_seat_projected_pressure_MPa": 3.666304519332334,
+        "alpha": 6,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.7562314031244372,
+        "hip_static_moment_Nm": 0.4537388418746623,
+        "leg": "hindR",
+        "leg_horizontal_N": 5.056823287067916,
+        "leg_resultant_N": 17.5982616927952,
+        "leg_vertical_N": 16.85607762355972,
+        "pin_double_shear_MPa": 3.1034352778206116,
+        "pin_nominal_bending_stress_MPa": 102.5767028669128,
+        "pin_overhang_bending_moment_Nmm": 69.07317714422112,
+        "pin_single_shear_MPa": 6.206870555641223,
+        "support": "one_leg_worst_case",
+        "whole_robot_vertical_N": 16.85607762355972
+      }
+    ],
+    "leg_geometry_native_mm": {
+      "foreL": {
+        "ankle_bearing_center_mm": [
+          75.73759407181774,
+          46.2,
+          -12.99625209049828
+        ],
+        "ankle_pin_center_mm": [
+          75.73759407181774,
+          50.125,
+          -12.996252090498277
+        ],
+        "foot_contact_estimate_mm": [
+          61.75528731385995,
+          48.0,
+          -60.82461440214176
+        ],
+        "hip_arm_mm": 61.01349947304371,
+        "hip_mm": [
+          56.99740671763869,
+          47.367673374493044,
+          0.0030905535706972718
+        ],
+        "hip_to_contact_xz_mm": [
+          4.757880596221263,
+          -60.82770495571246
+        ],
+        "kind": "fore",
+        "native_bearing_to_joint_plane_mm": 3.924999999999997
+      },
+      "foreR": {
+        "ankle_bearing_center_mm": [
+          75.73759407181774,
+          -46.2,
+          -12.99625209049828
+        ],
+        "ankle_pin_center_mm": [
+          75.73759407181774,
+          -50.125,
+          -12.996252090498277
+        ],
+        "foot_contact_estimate_mm": [
+          61.75528731385995,
+          -48.0,
+          -60.82461440214176
+        ],
+        "hip_arm_mm": 61.01349947304371,
+        "hip_mm": [
+          56.99740671763869,
+          -47.367673374493044,
+          0.00309055357069736
+        ],
+        "hip_to_contact_xz_mm": [
+          4.757880596221263,
+          -60.82770495571246
+        ],
+        "kind": "fore",
+        "native_bearing_to_joint_plane_mm": 3.924999999999997
+      },
+      "hindL": {
+        "ankle_bearing_center_mm": [
+          -33.18844449083577,
+          46.2,
+          -14.7841150227904
+        ],
+        "ankle_pin_center_mm": [
+          -33.18844449083577,
+          50.125,
+          -14.784115022790399
+        ],
+        "foot_contact_estimate_mm": [
+          -51.19048890413175,
+          48.0,
+          -60.35010782679058
+        ],
+        "hip_arm_mm": 60.99270840848369,
+        "hip_mm": [
+          -60.0030905535707,
+          47.367673374493044,
+          0.0025932823613071332
+        ],
+        "hip_to_contact_xz_mm": [
+          8.812601649438953,
+          -60.35270110915189
+        ],
+        "kind": "hind",
+        "native_bearing_to_joint_plane_mm": 3.924999999999997
+      },
+      "hindR": {
+        "ankle_bearing_center_mm": [
+          -33.18844449083577,
+          -46.2,
+          -14.7841150227904
+        ],
+        "ankle_pin_center_mm": [
+          -33.18844449083577,
+          -50.125,
+          -14.784115022790399
+        ],
+        "foot_contact_estimate_mm": [
+          -51.19048890413175,
+          -48.0,
+          -60.35010782679058
+        ],
+        "hip_arm_mm": 60.99270840848369,
+        "hip_mm": [
+          -60.0030905535707,
+          -47.36767337449305,
+          0.002593282361307185
+        ],
+        "hip_to_contact_xz_mm": [
+          8.812601649438953,
+          -60.35270110915189
+        ],
+        "kind": "hind",
+        "native_bearing_to_joint_plane_mm": 3.924999999999997
+      }
+    },
+    "spine_B_shaft": {
+      "cases": [
+        {
+          "F_N": 1.4046731352966433,
+          "M_Nmm": 21.07009702944965,
+          "alpha": 1,
+          "nominal_bending_stress_MPa": 4.600013845902293,
+          "support": "two_legs_equal_share"
+        },
+        {
+          "F_N": 2.8093462705932866,
+          "M_Nmm": 42.1401940588993,
+          "alpha": 1,
+          "nominal_bending_stress_MPa": 9.200027691804586,
+          "support": "one_leg_worst_case"
+        },
+        {
+          "F_N": 4.21401940588993,
+          "M_Nmm": 63.21029108834895,
+          "alpha": 3,
+          "nominal_bending_stress_MPa": 13.800041537706882,
+          "support": "two_legs_equal_share"
+        },
+        {
+          "F_N": 8.42803881177986,
+          "M_Nmm": 126.4205821766979,
+          "alpha": 3,
+          "nominal_bending_stress_MPa": 27.600083075413764,
+          "support": "one_leg_worst_case"
+        },
+        {
+          "F_N": 8.42803881177986,
+          "M_Nmm": 126.4205821766979,
+          "alpha": 6,
+          "nominal_bending_stress_MPa": 27.600083075413764,
+          "support": "two_legs_equal_share"
+        },
+        {
+          "F_N": 16.85607762355972,
+          "M_Nmm": 252.8411643533958,
+          "alpha": 6,
+          "nominal_bending_stress_MPa": 55.20016615082753,
+          "support": "one_leg_worst_case"
+        }
+      ],
+      "diameter_mm": 3.6,
+      "max_span_assumption_mm": 60.0,
+      "model": "simply supported, central point load; M=F L/4"
+    }
+  },
+  "mass_item_count": 485,
+  "native_document": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r07_robot.FCStd",
+  "physical_link_count": 486,
+  "separate_assumptions": {
+    "controller_mass_g": 10.0,
+    "placement": "both lumped at actual OpenRB150 envelope B-rep center",
+    "source": "parameters/candidate_r02.json r01 DESIGN_ASSUMPTION; not BOM mass",
+    "wiring_mass_g": 8.0
+  },
+  "source": "actual native B-rep link placements and source metadata",
+  "unknown_mass": [
+    {
+      "name": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "pn": "OPENRB150_PCB_ENVELOPE_r07",
+      "reason": "no PurchasedMass_g and no applicable material density; excluded from known sum"
+    }
+  ]
+}

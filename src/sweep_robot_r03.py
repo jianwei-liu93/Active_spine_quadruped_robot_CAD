@@ -60,7 +60,7 @@ def _group(m):
     unlike its arbitrary axial rotation datum, rotates rigidly with its torso.
     Fixed leg angles include the installed coils and fixed guide lengths.
     """
-    if m is None:
+    if m is None or m.get('kind')=='fixed':
         return ('fixed',)
     k = m.get('kind')
     if k == 'point':

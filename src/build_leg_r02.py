@@ -308,7 +308,8 @@ def spring_shape(length,kind,free_length):
     solid=solid.removeSplitter()
     if not solid.isValid() or len(solid.Solids)!=1:
         raise RuntimeError('Helical spring wire did not form one valid solid; inspect source')
-    return solid
+    from spring_normalization_r07 import normalize
+    return normalize(solid,length)
 
 
 def _compression_seat_source(b):
