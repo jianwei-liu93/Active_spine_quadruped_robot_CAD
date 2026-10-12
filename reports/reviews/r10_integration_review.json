@@ -1,0 +1,296 @@
+{
+  "review_date": "2026-10-12",
+  "revision": "r10",
+  "scope": "Bounded independent static mechanical/reference review. No MCP, CAD execution, canonical/source/schema mutation or full motion campaign.",
+  "reviewer_routing": "Inherited parent model/effort; no independent routing verification or override claim.",
+  "native_artifact": {
+    "path": "cad/flexor_r10_robot.FCStd",
+    "sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+    "hash_independently_computed": true,
+    "reopen_recompute_execution": "Lead-owned actual MCP evidence; not repeated by reviewer"
+  },
+  "disposition": "MORPHOLOGY_AND_NOMINAL_KINEMATIC_OWNERSHIP_SUPPORTED; CAD_PACKAGE_PENDING; FABRICATION_RELEASE_BLOCKED",
+  "full_package_pass": false,
+  "confirmed_geometry_candidate_failure": false,
+  "mandatory_morphology_correction_found": false,
+  "reported_actual_checks": {
+    "physical_instances": 487,
+    "used_sources": 107,
+    "editable_bodies": 95,
+    "fully_constrained_sketches": 321,
+    "invalid_native_features": [],
+    "AX0": "PASS",
+    "AX1": "PASS",
+    "AX_coverage": "three prescribed poses only; errors below 1e-12 mm",
+    "S9": "PASS, no missing or extra projected edges; one nominal planar mobility",
+    "leg_axis_checks": 315,
+    "leg_axis_status": "PASS, neutral only",
+    "long_bar_repair": "10 sketch geometries: 8 boundary edges + 2 bores; volume 199.60229607815495 mm\u00b3"
+  },
+  "morphology_conclusions": {
+    "central_frame": "One native monolithic source with genuinely open beam windows and connected central round-ended lugs; fixed ownership agrees with S1 54/58/59. No restored split ties or red manufactured members required.",
+    "moving_torso": "Central ears appended to the existing fore/hind torso bodies; separate pin stack on E1/E2, no extra axis or command. Captures at 0/60/240 input phase visibly preserve fixed/moving ownership.",
+    "plates": "Separate fore/hind bodies and different surrounding motor mount structures retained. Long side slots, central slot and paired short curved openings/holes are plausible visual reconstructions. Mirroring a common motif is not proof the source had identical exact fore/hind patterns; hind capture partly occluded. No exact distinct rear pattern can be prescribed from the inspected source views.",
+    "long_link": "Broad rounded rectangular relief is a defensible morphology candidate. Source S1 56/59 supports longer relief family versus broad plain short bars. Through versus recessed depth, fork layering, edge chamfers and every named-link assignment remain ambiguous; no unsupported fork/bevel addition required.",
+    "schematic": "S1 51/54/64 red skeleton, rods and pegs are anatomy/kinematic illustrations, not manufactured-part evidence."
+  },
+  "findings": [
+    {
+      "id": "R10-IR-01",
+      "priority": "P1",
+      "classification": "PACKAGE_VERIFICATION_PENDING",
+      "title": "Changed-material clearance is still a required candidate/package gate",
+      "observation": "AX0/AX1 three-pose transforms, native validity and neutral axis coincidence do not establish clearance of the added beams/lugs, clevis stems, pin stack or relieved link over motion.",
+      "required_action": "Lead to complete the already-running revision-specific clearance work on the repaired SHA, with exact changed pairs, contact exceptions, sample domain and failures recorded. Check lumbar versus both moving torso/clevis bodies, guide/C-shaft envelopes, motor/connector reservations, link layers and central retainers. Bind final exports to the accepted native artifact.",
+      "candidate_failure_proven": false,
+      "evidence": [
+        "reports/animation/ax01_r10.json",
+        "reports/verification/r10_integration_mcp.json"
+      ]
+    },
+    {
+      "id": "R10-IR-02",
+      "priority": "P1",
+      "classification": "ASSEMBLY_ACCESS_RELEASE_BLOCKER",
+      "title": "Center-pin assembly order must account for the existing outer E journals",
+      "observation": "The center pin runs along the same Y line as the retained outer E journals. Their native axis records locate those journals outside the center stack; an insertion path from the side must pass their occupied axial positions. The source module only says before motors/cables. Closeups do not demonstrate a pin insertion or retainer tool path.",
+      "required_action": "Demonstrate center-pin insertion with the outer E journals removed/uninstalled; install the center pin and radial retainers before those journals, or document an alternate feasible sequence. Verify retainer installation/removal access and specify what must be removed for service. Do not claim in-place service access from the current static captures.",
+      "candidate_failure_proven": false,
+      "evidence": [
+        "src/central_joint_hardware_r10.py",
+        "reports/verification/r10_leg_axes.json",
+        "reports/views/r10_central_E1_close.png",
+        "reports/views/r10_central_E2_close.png"
+      ]
+    },
+    {
+      "id": "R10-IR-03",
+      "priority": "P1",
+      "classification": "SUPPLIER_FIT_RETENTION_RELEASE_BLOCKER",
+      "title": "Bearing outer-race retention and the axial/thrust path are not defined",
+      "observation": "A nominal \u00d84 bearing is modeled in a \u00d84.05 blind seat, with no specified fit or positive outer-race cap. Seat depth equals bearing width 1.2 mm. The moving OD3 washers are 0.2 mm clear of the lug and cannot establish a verified outer-race restraint or thrust path without the actual bearing ring geometry. Split-retainer spring material/installation strain and allowable thrust are also unknown.",
+      "required_action": "Select and inspect the actual bearing/retainer interfaces. Define housing and pin fits, outer-race retention, a race-specific thrust contact path, groove tolerances, installed endplay and retainer capacity. Update drawings/stack and geometry only as required by that resolved selection.",
+      "candidate_failure_proven": false,
+      "evidence": [
+        "parameters/assembly_r10.json",
+        "src/central_joint_hardware_r10.py",
+        "src/spine_frame_r10.py"
+      ]
+    },
+    {
+      "id": "R10-IR-04",
+      "priority": "P1",
+      "classification": "TOLERANCE_ALIGNMENT_RELEASE_BLOCKER",
+      "title": "The central support supplements an already redundant coaxial E support",
+      "observation": "The two moving clevis ears are integral to each torso while the central bearing pair is fixed to the lumbar; retained outer E supports act on that same rigid torso axis. Exact CAD coaxiality makes this consistent nominally, but does not accommodate printed bore position error or housing/pin deflection. The central pin has only 0.1 mm diametral clearance in the assumed \u00d82 clevis bore.",
+      "required_action": "Declare which supports locate radially and axially, whether any support floats, and the coaxiality/reaming or alignment assembly process. Calculate permissible angular/position error and endplay before fabrication release. Avoid asserting a new kinematic DOF: this is a same-axis support/tolerance problem.",
+      "candidate_failure_proven": false,
+      "evidence": [
+        "parameters/assembly_r10.json",
+        "reports/verification/r10_s9_topology.json",
+        "src/torso_attachment_r10.py"
+      ]
+    },
+    {
+      "id": "R10-IR-05",
+      "priority": "P1",
+      "classification": "STRENGTH_PROCESS_RELEASE_BLOCKER",
+      "title": "Thin relief rails and lug/beam sections require a declared load/process check",
+      "observation": "The long B-C member has two 1.4 mm-wide rails at 1.2 mm thickness; nominal net rail area is 3.36 mm\u00b2. Its \u00d84.05 bores leave 0.975 mm radial ligament at a 6 mm-wide capsule end. The beam window roof/floor is 1.3 mm; opposed lug bearing seats leave a 0.8 mm central web. These are geometrically valid assumptions, not qualified printed or machined sections.",
+      "required_action": "Select material and fabrication orientation/process, then check reversal fatigue, pin bearing/tear-out, rail buckling/out-of-plane bending, beam torsion and lug root/seat splitting for declared loads. Include the \u00d81.6 groove root in the pin load/retention check. Do not thicken or resize solely from image scaling.",
+      "candidate_failure_proven": false,
+      "evidence": [
+        "parameters/assembly_r10.json",
+        "reports/verification/r10_integration_mcp.json",
+        "reports/views/r10_long_bar_profile.png"
+      ]
+    }
+  ],
+  "source_images_actually_seen": [
+    {
+      "path": "references/visual/movie_s1_attachment/s1_51.0s.png",
+      "sha256": "0bc35dfc29ca0674a5f9e96334f463cfc1298d1f3298e6f02e627d62f97a09ea",
+      "requested_seconds": 51.0,
+      "decoded_pts_seconds": 51.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_54.0s.png",
+      "sha256": "525b5a335cb7dd9c22b5c90cb3407b451aa1b52d83da5e11428eebc79ba8d572",
+      "requested_seconds": 54.0,
+      "decoded_pts_seconds": 54.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_56.0s.png",
+      "sha256": "da34e87b89ad7cf634d3ebf18b284c9e0e237dd23ecf82cbdd3620238d242d41",
+      "requested_seconds": 56.0,
+      "decoded_pts_seconds": 56.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_58.0s.png",
+      "sha256": "131669ce80932507ed0a9c1645471ce3fa518c1db84ee932049c13d9f1e4fcfb",
+      "requested_seconds": 58.0,
+      "decoded_pts_seconds": 58.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_59.0s.png",
+      "sha256": "3b12f118c64359b631b26f0d553a34f68f4f65ff69ab69f3dec4d68b05d84187",
+      "requested_seconds": 59.0,
+      "decoded_pts_seconds": 59.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_64.0s.png",
+      "sha256": "22e960bd32ca7ae49df26cddefb1bc0c786cf1f53e598d71e2ee7e905faa7b01",
+      "requested_seconds": 64.0,
+      "decoded_pts_seconds": 64.1001,
+      "provenance_hash_matches": true
+    },
+    {
+      "path": "references/visual/movie_s1_attachment/s1_68.0s.png",
+      "sha256": "bbee028c5c93aa191b9b48888b5ccd3564fa112badf7a3e12ca39665a27f799d",
+      "requested_seconds": 68.0,
+      "decoded_pts_seconds": 68.1001,
+      "provenance_hash_matches": true
+    }
+  ],
+  "cad_images_actually_seen": [
+    {
+      "path": "reports/views/r10_central_attachment_bare.png",
+      "sha256": "ca5d69526b9a923fa6933af4842f33a20b960114936598a984ebf180e78b3709"
+    },
+    {
+      "path": "reports/views/r10_fore_plate_profile.png",
+      "sha256": "f3070e75012e50d70f71977f9ecbe76469587488918e776b98a66f4d7a894b8d"
+    },
+    {
+      "path": "reports/views/r10_hind_plate_profile.png",
+      "sha256": "9f90e3c8f27a37ff4fbc549626b65fe6936354b4d6343aa6ca49f05dbbc97bb4"
+    },
+    {
+      "path": "reports/views/r10_central_E1_close.png",
+      "sha256": "726febecfdf61482a55e4536256e1714169887d0d56ea0ff869009337f6e24ce"
+    },
+    {
+      "path": "reports/views/r10_central_E2_close.png",
+      "sha256": "db33ab987aa8276490a093bc4b6294f1a68a3d13c0d35f3e1d7de2a008301a0f"
+    },
+    {
+      "path": "reports/views/r10_long_bar_profile.png",
+      "sha256": "f7e34b56ee893fab9b0b1c8a237635444174283c077452f235015818e692c39e"
+    },
+    {
+      "path": "reports/views/r10_central_attachment_060deg.png",
+      "sha256": "c9ce0744bddb7e2f010a1a003bde8c896058e0c83cea8c329c6bf5345b795779"
+    },
+    {
+      "path": "reports/views/r10_central_attachment_240deg.png",
+      "sha256": "ea247afe0dd6f44888d9c08d8089689971e3dd9957218c7943db76a842641d13"
+    },
+    {
+      "path": "reports/views/r10_bare_lumbar_pos_y_oblique.png",
+      "sha256": "9b1a492bf19b4d2e7bed6c5317007658ece378e3ab454f21e27f77f76b2fa794"
+    },
+    {
+      "path": "reports/views/r10_bare_lumbar_neg_y_oblique.png",
+      "sha256": "4ec69717b74e70ff5f29cb9a049675ebdc8f2dec1cbef13225521683b045b7d5"
+    },
+    {
+      "path": "reports/views/r10_spine_source_facing.png",
+      "sha256": "e7a76fad048259f1ae232172eda96ca821a5b06df18f82605727f6d21f672fa6"
+    },
+    {
+      "path": "reports/views/r10_robot_side.png",
+      "sha256": "bbb6f5f79c1b924c157494d54c7db7b523c4ab43fbc67eeac506f19f8ceae4f7"
+    },
+    {
+      "path": "reports/views/r10_bare_lumbar_crosswall_neg_x.png",
+      "sha256": "2af36804620d476b0951acc78770ebe3b7ba1116f933e0103d4c0e4257d1b2e7"
+    },
+    {
+      "path": "reports/views/r10_bare_lumbar_crosswall_pos_x.png",
+      "sha256": "efbe59ae1b609ec1b11c1a614fb844bc71ee5f541822f8fb7657174cf5faa14d"
+    }
+  ],
+  "report_snapshot": [
+    {
+      "path": "reports/verification/r10_integration_mcp.json",
+      "sha256": "8be348269c437fb3bd331f4abec315a4ab8579f6a05194c2bbab5ff9b8eb2170",
+      "status": null
+    },
+    {
+      "path": "reports/verification/r10_native_checks.json",
+      "sha256": "38927843661d9cee0784ea8fcaea27e624f117fafb9b7ae492ab9dc160abaa08",
+      "status": "PASS"
+    },
+    {
+      "path": "reports/animation/ax01_r10.json",
+      "sha256": "59b3815b674e5b0888df26da1c57dc081b791963634e6bd1247cec7cb9b82ba0",
+      "status": null
+    },
+    {
+      "path": "reports/verification/r10_s9_topology.json",
+      "sha256": "dd6339f718a8d5df0798832281e7b79ad172996960181a403e38e8bc401a7793",
+      "status": "PASS"
+    },
+    {
+      "path": "reports/verification/r10_leg_axes.json",
+      "sha256": "1275a1db244f89a5ea432e0c9920f5a0ccc6e8cc53a5fd26933b9463a9d90299",
+      "status": "PASS"
+    },
+    {
+      "path": "reports/views/r10_reference_capture_manifest.json",
+      "sha256": "af94852a6e8db7d742a7ec601992279b766788015abfe677672c98125a9a4eee",
+      "status": "PASS_CAPTURED_RESTORED"
+    },
+    {
+      "path": "reports/views/r10_capture_manifest.json",
+      "sha256": "e13f93cd07cd990d5ca746151d98c4de0bf29cec0dce6a92a703449ea4559d67",
+      "status": "PASS_CAPTURED_RESTORED"
+    },
+    {
+      "path": "reports/verification/r10_source_reproduction.json",
+      "sha256": "c366cdb1287bbc2203f19da1236798c7fe4f83973d5be6d946e3433df3dae52c",
+      "status": "PASS"
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "parameters/assembly_r10.json",
+      "sha256": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9"
+    },
+    {
+      "path": "src/spine_frame_r10.py",
+      "sha256": "e8e16590f5616ed2c65aa2f538028909bf5cd98c2c334e8c329a28a6c4575d10"
+    },
+    {
+      "path": "src/torso_attachment_r10.py",
+      "sha256": "eefbde19527b6317bd91fb54e40fc2db382d14575f6de4b641f8053fe76b36ba"
+    },
+    {
+      "path": "src/spine_bar_profile_r10.py",
+      "sha256": "d44fe25c5523edfa98263128000fd55bf2e3d9c6bba33c770453341dca1dfbc3"
+    },
+    {
+      "path": "src/central_joint_hardware_r10.py",
+      "sha256": "11f2b53fea1cb56c4adb64721a98ee403ac9a10ee4581ea076263703587158d4"
+    }
+  ],
+  "source_movie_sha256": "16b180fa5da669e78e7d2038147e1f09fd8adbb2265341d8c3a14d0093a235a9",
+  "kinematic_source_basis": [
+    "docs/02_spine_kinematics.md",
+    "docs/01_reference_evidence.md",
+    "reports/source_review/spine_reconciliation.md",
+    "reports/source_review/movie_s1_frame_attachment_r06.md"
+  ],
+  "original_paper_or_s9_pixels_reinspected_this_review": false,
+  "limits": [
+    "Static source images and lead runtime reports inspected; no reviewer native geometric operations.",
+    "No collision or loading failure is established by this bounded review. Pending checks and release blockers must not be relabeled PASS.",
+    "Source reproduction report RUNNING at review snapshot; final export/drawing/manual package unfinished.",
+    "Native hashes and individual runtime gates are authoritative over stale prose saying all post-repair checks remain pending."
+  ]
+}

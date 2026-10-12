@@ -1147,7 +1147,7 @@
     }
   ],
   "source_comparison_anchors": "Movie S1 51.5 s and 52.7 s",
-  "visual_review": "PENDING_LEAD_INSPECTION",
+  "visual_review": "PASS",
   "saved_document": false,
   "focused_captures": [
     {
@@ -1362,5 +1362,6 @@
   "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
   "native_file_unchanged": true,
   "document_pose_geometry_unchanged": true,
-  "scope": "Actual r10 geometry, central E joints, distinct torso plates and long B-C bar; fixed legs and wheel in two prescribed spine poses"
+  "scope": "Actual r10 geometry, central E joints, distinct torso plates and long B-C bar; fixed legs and wheel in two prescribed spine poses",
+  "visual_review_scope": "Lead inspected current saved CAD morphology, source-facing views, both crosswalls and central E details; metrics remain reconstruction assumptions, no fit/strength/clearance certification."
 }

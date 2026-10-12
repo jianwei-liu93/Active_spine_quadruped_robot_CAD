@@ -1,0 +1,70 @@
+{
+  "revision": "r10",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "disposition": "SUPPORTED_MORPHOLOGY_CANDIDATE_WITH_DECLARED_METRIC_ASSUMPTIONS_AND_RELEASE_BLOCKERS",
+  "required_morphology_corrections": [],
+  "artifacts_sha256": {
+    "cad/flexor_r10_robot.FCStd": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+    "src/spine_frame_r10.py": "e8e16590f5616ed2c65aa2f538028909bf5cd98c2c334e8c329a28a6c4575d10",
+    "src/torso_attachment_r10.py": "eefbde19527b6317bd91fb54e40fc2db382d14575f6de4b641f8053fe76b36ba",
+    "src/spine_bar_profile_r10.py": "d44fe25c5523edfa98263128000fd55bf2e3d9c6bba33c770453341dca1dfbc3",
+    "src/central_joint_hardware_r10.py": "11f2b53fea1cb56c4adb64721a98ee403ac9a10ee4581ea076263703587158d4",
+    "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9",
+    "docs/21_reference_fidelity_r10.md": "8bba8f353fada340e06cec0552c1b2544ce133084d120dd9477f035e35226951",
+    "reports/reviews/r10_integration_review.md": "93b12dca660fde82c9a471df9d61a2420bdcbce03287039f3ad645d234e784d8",
+    "reports/reviews/r10_integration_review.json": "d793e8a26ec1d161e8b09f79bb6f13f6ba15703ff24cacc2c24f3ae555bfadf4",
+    "reports/reviews/r10_bar_plate_source_review.md": "8610e8f3343e9a4f7f56a0254075639dcdd669e326f51af9db4cd8060118917c",
+    "reports/views/r10_bare_lumbar.png": "f9b5e017ab8813ce2024945bfb9d70babbff9bf8987528502cbf68b2d653a26a",
+    "reports/views/r10_bare_lumbar_pos_y_oblique.png": "9b1a492bf19b4d2e7bed6c5317007658ece378e3ab454f21e27f77f76b2fa794",
+    "reports/views/r10_bare_lumbar_neg_y_oblique.png": "4ec69717b74e70ff5f29cb9a049675ebdc8f2dec1cbef13225521683b045b7d5",
+    "reports/views/r10_bare_lumbar_crosswall_neg_x.png": "2af36804620d476b0951acc78770ebe3b7ba1116f933e0103d4c0e4257d1b2e7",
+    "reports/views/r10_bare_lumbar_crosswall_pos_x.png": "efbe59ae1b609ec1b11c1a614fb844bc71ee5f541822f8fb7657174cf5faa14d",
+    "reports/views/r10_lumbar_motors_crosswall.png": "cf921f27e33c9764a6a04c591907ef06434f9cc112d4eea8cb122b1a31b383a2",
+    "reports/views/r10_spine_source_facing.png": "e7a76fad048259f1ae232172eda96ca821a5b06df18f82605727f6d21f672fa6",
+    "reports/views/r10_robot_side.png": "bbb6f5f79c1b924c157494d54c7db7b523c4ab43fbc67eeac506f19f8ceae4f7",
+    "reports/views/r10_robot_assembled.png": "33153e56b14a0d2cd31bb1e08e4bb9d457a461695ed48e346866d46cda47cf33",
+    "reports/views/r10_central_attachment_bare.png": "ca5d69526b9a923fa6933af4842f33a20b960114936598a984ebf180e78b3709",
+    "reports/views/r10_central_E1_close.png": "726febecfdf61482a55e4536256e1714169887d0d56ea0ff869009337f6e24ce",
+    "reports/views/r10_central_E2_close.png": "db33ab987aa8276490a093bc4b6294f1a68a3d13c0d35f3e1d7de2a008301a0f",
+    "reports/views/r10_hind_plate_profile.png": "9f90e3c8f27a37ff4fbc549626b65fe6936354b4d6343aa6ca49f05dbbc97bb4",
+    "reports/views/r10_fore_plate_profile.png": "f3070e75012e50d70f71977f9ecbe76469587488918e776b98a66f4d7a894b8d",
+    "reports/views/r10_long_bar_profile.png": "f7e34b56ee893fab9b0b1c8a237635444174283c077452f235015818e692c39e",
+    "reports/views/r10_central_attachment_060deg.png": "c9ce0744bddb7e2f010a1a003bde8c896058e0c83cea8c329c6bf5345b795779",
+    "reports/views/r10_central_attachment_240deg.png": "ea247afe0dd6f44888d9c08d8089689971e3dd9957218c7943db76a842641d13"
+  },
+  "source_evidence": [
+    "references/visual/movie_s1_attachment/s1_51.0s.png",
+    "references/visual/movie_s1_attachment/s1_53.0s.png",
+    "references/visual/movie_s1_attachment/s1_54.0s.png",
+    "references/visual/movie_s1_attachment/s1_55.0s.png",
+    "references/visual/movie_s1_attachment/s1_56.0s.png",
+    "references/visual/movie_s1_attachment/s1_57.0s.png",
+    "references/visual/movie_s1_attachment/s1_58.0s.png",
+    "references/visual/movie_s1_attachment/s1_59.0s.png",
+    "references/visual/movie_s1_attachment/s1_61.0s.png",
+    "references/visual/movie_s1_attachment/s1_64.0s.png",
+    "references/visual/movie_s1_attachment/s1_68.0s.png",
+    "references/visual/movie_s1_attachment/s1_71.0s.png",
+    "references/visual/movie_s1_attachment/s1_74.0s.png",
+    "references/visual/movie_s1_attachment/s1_79.0s.png",
+    "references/visual/movie_s1_attachment/provenance.json"
+  ],
+  "observations": [
+    "One connected native center frame; open beam windows, round central E lugs and separate moving torso clevises.",
+    "Distinct front/hind motor-mount structures retained, with same-direction three-segment leg layouts.",
+    "Plate profiles have long side slots, central slot, paired curved end openings and adjacent holes.",
+    "Four long B-C bars use broad rounded relief; short bars retain plain profiles and existing S9 ownership.",
+    "No red schematic anatomy added as rigid hardware; no independent extra output link or command introduced."
+  ],
+  "limits": [
+    "Video morphology cannot recover metric thickness, fits, exact fore/hind hole patterns or hidden bearing stack.",
+    "No mandatory extra fork/bevel is supported by inspected views.",
+    "Current revision-specific motion campaign and final package remain pending.",
+    "Bearing race retention, thrust path, fits, support alignment, clip/tool/service access and structural/process qualification remain release blockers."
+  ],
+  "review_basis": [
+    "Lead visual inspection of all17 current reference captures (including earlier inspected focused views).",
+    "Independent Sol/high bounded review of seven source frames and14 current CAD images; reports/reviews/r10_integration_review.json."
+  ],
+  "fabrication_release": "BLOCKED"
+}
