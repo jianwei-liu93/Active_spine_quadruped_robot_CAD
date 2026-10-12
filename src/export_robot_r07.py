@@ -20,6 +20,7 @@ import re
 import traceback
 import uuid
 from pathlib import Path
+from collections import Counter
 
 
 VOLUME_REL_TOL = 1e-6
@@ -140,13 +141,13 @@ def _file_record(path, root):
     }
 
 
-def _write_diagnostics(root, stage, exc, artifacts):
+def _write_diagnostics(root, stage, exc, artifacts, revision="r07"):
     """Best-effort failure log; callers still receive the original exception."""
-    target = Path(root) / "reports" / "verification" / "r07_export_diagnostics.json"
+    target = Path(root) / "reports" / "verification" / f"{revision}_export_diagnostics.json"
     try:
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps({
-            "revision": "r07",
+            "revision": revision,
             "status": "FAIL",
             "stage": stage,
             "error_type": type(exc).__name__,
@@ -176,6 +177,46 @@ def _validate_part_step(source, path, Part, root):
     return checks, _file_record(path, root)
 
 
+def _mesh_metrics(mesh, label):
+    """Require an oriented closed triangle manifold; sum volume stably.
+
+    FreeCAD Mesh.Volume depends on facet ordering and loses precision on thin
+    translated parts. Integrate the actual triangle coordinates about one mesh
+    vertex with math.fsum; retain the raw API volume as a diagnostic only.
+    """
+    points, facets = mesh.Topology
+    if not facets or not points:
+        raise ValueError(f"{label}: empty mesh")
+    edges = Counter()
+    directions = Counter()
+    terms = []
+    origin = points[0]
+    for triangle in facets:
+        if len(set(triangle)) != 3:
+            raise ValueError(f"{label}: degenerate triangle")
+        a, b, c = [points[index] - origin for index in triangle]
+        if (b-a).cross(c-a).Length == 0:
+            raise ValueError(f"{label}: zero-area triangle")
+        terms.append(a.dot(b.cross(c)) / 6.0)
+        for u, v in zip(triangle, triangle[1:] + triangle[:1]):
+            edge = tuple(sorted((u, v)))
+            edges[edge] += 1
+            directions[edge] += 1 if u < v else -1
+    boundary = sum(n == 1 for n in edges.values())
+    nonmanifold = sum(n > 2 for n in edges.values())
+    misoriented = sum(directions[edge] != 0 for edge in edges if edges[edge] == 2)
+    if boundary or nonmanifold or misoriented or not mesh.isSolid():
+        raise ValueError(f"{label}: mesh is not an oriented closed manifold "
+                         f"(boundary_edges={boundary}, nonmanifold_edges={nonmanifold}, "
+                         f"inconsistently_oriented_edges={misoriented})")
+    volume = abs(math.fsum(terms))
+    if not math.isfinite(volume) or volume <= 0:
+        raise ValueError(f"{label}: mesh has no finite positive volume")
+    return {"volume_mm3": volume, "boundary_edge_count": boundary,
+            "nonmanifold_edge_count": nonmanifold,
+            "inconsistently_oriented_edge_count": misoriented}
+
+
 def _validate_part_stl(source, path, MeshPart, root):
     source_shape = _shape(source)
     mesh = MeshPart.meshFromShape(
@@ -184,17 +225,32 @@ def _validate_part_stl(source, path, MeshPart, root):
         AngularDeflection=MESH_ANGULAR_DEFLECTION_RAD,
         Relative=False,
     )
-    mesh.write(str(path))
+    generated_metrics = _mesh_metrics(mesh, f"Generated PA12 mesh {source.Name}")
+    mesh.write(str(path), "AST")
     if not path.is_file() or path.stat().st_size == 0:
         raise IOError(f"PA12 STL was not written: {path}")
     # Read the serialized STL independently. Compare to the generated mesh;
     # a mesh is an approximation of BRep, whose discrepancy is reported below.
     import Mesh
     imported = Mesh.Mesh(str(path))
-    if not imported.isSolid() or imported.CountFacets != mesh.CountFacets:
-        raise ValueError(f"PA12 STL {source.Name}: mesh is open or facet count changed")
-    mesh_volume = abs(float(mesh.Volume))
-    imported_volume = abs(float(imported.Volume))
+    imported_metrics = _mesh_metrics(imported, f"Readback PA12 STL {source.Name}")
+    if imported.CountFacets != mesh.CountFacets:
+        raise ValueError(f"PA12 STL {source.Name}: facet count changed")
+    generated_points, generated_facets = mesh.Topology
+    imported_points, imported_facets = imported.Topology
+    facet_vertex_error = 0.0
+    for generated, serialized in zip(generated_facets, imported_facets):
+        # STL retains facet sequence; permit cyclic start-vertex changes while
+        # preserving orientation and verifying every serialized triangle.
+        error = min(max((generated_points[generated[i]] -
+                         imported_points[serialized[(i+shift)%3]]).Length
+                        for i in range(3)) for shift in range(3))
+        facet_vertex_error = max(facet_vertex_error, error)
+    if facet_vertex_error > BBOX_ABS_TOL_MM:
+        raise ValueError(f"PA12 STL {source.Name}: serialized facet vertex changed "
+                         f"{facet_vertex_error} mm")
+    mesh_volume = generated_metrics["volume_mm3"]
+    imported_volume = imported_metrics["volume_mm3"]
     mesh_volume_error = _relative_error(imported_volume, mesh_volume)
     if mesh_volume_error > VOLUME_REL_TOL:
         raise ValueError(f"PA12 STL {source.Name}: serialized mesh volume changed {mesh_volume_error}")
@@ -205,11 +261,17 @@ def _validate_part_stl(source, path, MeshPart, root):
     record = _file_record(path, root)
     record["stl_geometry_check"] = {
         "watertight": True,
+        "serialization": "ASCII STL (AST)",
+        "volume_method": "translated signed triangle tetrahedra with math.fsum",
+        "topology_check": imported_metrics,
+        "raw_generated_freecad_mesh_volume_mm3_diagnostic_only": float(mesh.Volume),
+        "raw_imported_freecad_mesh_volume_mm3_diagnostic_only": float(imported.Volume),
         "facet_count": imported.CountFacets,
         "mesh_volume_mm3": imported_volume,
         "generated_mesh_volume_mm3": mesh_volume,
         "serialized_mesh_volume_relative_error": mesh_volume_error,
         "serialized_mesh_bbox_max_error_mm": mesh_box_error,
+        "serialized_facet_vertex_max_error_mm": facet_vertex_error,
         "source_brep_volume_mm3": _volume(source_shape),
         "mesh_to_brep_volume_relative_difference": _relative_error(imported_volume, _volume(source_shape)),
         "note": "Source default Shape.Volume is a raw diagnostic; BRep-to-mesh difference is not an exact-volume certification. STEP acceptance uses adaptive per-solid volumes.",
@@ -217,13 +279,13 @@ def _validate_part_stl(source, path, MeshPart, root):
     return record
 
 
-def _clean_roundtrip(shape, App, original_doc, root):
+def _clean_roundtrip(shape, App, original_doc, root, revision="r07"):
     """Place imported assembly shape in a disposable clean Part::Feature doc."""
-    name = "R07_STEP_Roundtrip_" + uuid.uuid4().hex[:12]
+    name = revision.upper() + "_STEP_Roundtrip_" + uuid.uuid4().hex[:12]
     temp_doc = App.newDocument(name)
     try:
         feature = temp_doc.addObject("Part::Feature", "ImportedRobotSTEP")
-        feature.Label = "Imported r07 robot STEP for clean-document round-trip"
+        feature.Label = f"Imported {revision} robot STEP for clean-document round-trip"
         feature.Shape = shape.copy()
         temp_doc.recompute()
         imported_shape = _shape(feature)
@@ -246,8 +308,11 @@ def _clean_roundtrip(shape, App, original_doc, root):
                 pass
 
 
-def run(doc, root):
-    """Export and validate the open r07 assembly without changing or saving it.
+def run(doc, root, revision="r07", expected_instances=486):
+    """Export and validate an open assembly without changing or saving it.
+
+    Defaults preserve r07 API behavior. For r08 pass revision="r08" and the
+    declared physical link count as expected_instances (for example 485).
 
     Raises on the first export/check failure and writes a best-effort diagnostic
     record. Success writes assembly/per-part STEP, PA12-only STL, BOM/mass data,
@@ -260,23 +325,36 @@ def run(doc, root):
 
     from package_bom_r02 import build_bom
 
+    if not re.fullmatch(r"r[0-9]+", revision):
+        raise ValueError("revision must be an r-prefixed integer")
+    if not isinstance(expected_instances, int) or expected_instances <= 0:
+        raise ValueError("expected_instances must be a positive integer")
     root = Path(root).resolve()
     artifacts = []
     stage = "invalidate_previous_success_manifest"
     try:
         # Avoid leaving an older success manifest that could be mistaken for
         # the result of a run that fails partway through.
-        previous_manifest = root / "reports" / "package_manifest_r07.json"
+        previous_manifest = root / "reports" / f"package_manifest_{revision}.json"
         if previous_manifest.exists():
             previous_manifest.unlink()
-        previous_diagnostics = root / "reports" / "verification" / "r07_export_diagnostics.json"
+        previous_diagnostics = root / "reports" / "verification" / f"{revision}_export_diagnostics.json"
         if previous_diagnostics.exists():
             previous_diagnostics.unlink()
 
+        stage = "capture_native_document_identity"
+        native_filename = str(getattr(doc, "FileName", "")).strip()
+        if not native_filename:
+            raise ValueError(f"{revision} export requires a saved native document with an existing file")
+        native_path = Path(native_filename).resolve()
+        if not native_path.is_file():
+            raise ValueError(f"Saved native document file does not exist: {native_path}")
+        native_document = _file_record(native_path, root)
+
         stage = "enumerate_instances"
         links = [obj for obj in doc.Objects if getattr(obj, "TypeId", None) == "App::Link"]
-        if len(links) != 486:
-            raise ValueError(f"Frozen r07 requires 486 physical App::Link instances; found {len(links)}")
+        if len(links) != expected_instances:
+            raise ValueError(f"Frozen {revision} requires {expected_instances} physical App::Link instances; found {len(links)}")
         link_sources = {}
         source_objects = {}
         instance_shapes = {}
@@ -296,20 +374,20 @@ def run(doc, root):
             instance_shapes[link.Name] = link_shape
 
         stage = "prepare_output_directories"
-        assembly_dir = root / "exports" / "step" / "r07"
+        assembly_dir = root / "exports" / "step" / revision
         parts_dir = assembly_dir / "parts"
-        stl_dir = root / "exports" / "print" / "r07"
+        stl_dir = root / "exports" / "print" / revision
         assembly_dir.mkdir(parents=True, exist_ok=True)
         parts_dir.mkdir(parents=True, exist_ok=True)
         stl_dir.mkdir(parents=True, exist_ok=True)
-        assembly_path = assembly_dir / "flexor_r07_robot.step"
+        assembly_path = assembly_dir / f"flexor_{revision}_robot.step"
 
         stage = "compile_and_verify_adaptive_volume_backend"
         from adaptive_volume_r07 import backend_metadata
         volume_backend = backend_metadata(root)
         dependency_readme = assembly_dir / "README_volume_validation.md"
         dependency_readme.write_text(
-            "# r07 STEP volume validation dependencies\n\n"
+            f"# {revision} STEP volume validation dependencies\n\n"
             "Validation uses src/adaptive_volume_r07.py and src/occt_adaptive_volume_r07.cpp. "
             "Build requires a C++17 compiler and OCCT development headers/libraries matching the FreeCAD runtime exactly.\n\n"
             "Prepare on the host (the snap runtime may lack a compiler):\n\n"
@@ -321,7 +399,7 @@ def run(doc, root):
             "adaptive volume with qualified GK/domain refinement including estimated numerical margin (1e-6 relative). "
             "Both GK and Gauss run at eps1e-8 and1e-10; GK refines to1e-12 when needed for convergence. Coarse GK error above2.5e-7 triggers quadrature on unchanged original boundary domains at8/order31 and16/order61, requiring1e-8 convergence and retaining all coarse algorithm deviations in its numerical margin. Raw Shape.Volume is diagnostic only. "
             "Kernel error estimates are numerical evidence, not certified mathematical bounds.\n\n"
-            "This dependency note does not certify export success; inspect reports/package_manifest_r07.json "
+            f"This dependency note does not certify export success; inspect reports/package_manifest_{revision}.json "
             "and the current export diagnostics. Details: reports/reviews/r07_assembly_volume_diagnostic.md.\n",
             encoding="utf-8",
         )
@@ -333,7 +411,7 @@ def run(doc, root):
         # must always compare against the actual native document, never a hidden
         # repaired copy. Leave the volume and bounds gates unchanged.
         if not App.ParamGet("User parameter:BaseApp/Preferences/Mod/Part/STEP").GetBool("WriteSurfaceCurveMode", True):
-            raise ValueError("r07 requires STEP WriteSurfaceCurveMode=True (explicit pcurves)")
+            raise ValueError(f"{revision} requires STEP WriteSurfaceCurveMode=True (explicit pcurves)")
         Part.setStaticValue("write.surfacecurve.mode", 1)
 
         stage = "export_assembly_step"
@@ -380,7 +458,7 @@ def run(doc, root):
         assembly_checks["expected_bounding_box_mm"] = expected_box
 
         stage = "clean_document_roundtrip"
-        roundtrip = _clean_roundtrip(assembly_shape, App, doc, root)
+        roundtrip = _clean_roundtrip(assembly_shape, App, doc, root, revision)
 
         stage = "export_unique_definition_steps_and_pa12_stls"
         # Filenames are PartNumber-based; append the native source name only
@@ -432,11 +510,11 @@ def run(doc, root):
             })
 
         stage = "build_bom_and_mass_envelope"
-        mass_report = build_bom(doc, root, revision="r07")
+        mass_report = build_bom(doc, root, revision=revision)
         bom_paths = [
-            root / "bom" / "bom_r07.csv",
-            root / "bom" / "instances_r07.csv",
-            root / "reports" / "verification" / "r07_mass_envelope.json",
+            root / "bom" / f"bom_{revision}.csv",
+            root / "bom" / f"instances_{revision}.csv",
+            root / "reports" / "verification" / f"{revision}_mass_envelope.json",
         ]
         for path in bom_paths:
             if not path.is_file():
@@ -447,8 +525,10 @@ def run(doc, root):
         assembly_record = _file_record(assembly_path, root)
         bom_records = [_file_record(path, root) for path in bom_paths]
         manifest = {
-            "revision": "r07",
+            "revision": revision,
             "status": "EXPORTS_AND_STEP_ROUNDTRIP_VALIDATED_NO_FABRICATION_RELEASE",
+            "native_document": native_document,
+            "native_file_unchanged": True,
             "assembly_step": assembly_record,
             "assembly_geometry_check": assembly_checks,
             "clean_document_roundtrip": roundtrip,
@@ -483,11 +563,17 @@ def run(doc, root):
                 "No physical build, load validation, or fabrication release is claimed.",
             ],
         }
-        manifest_path = root / "reports" / "package_manifest_r07.json"
+        manifest_path = root / "reports" / f"package_manifest_{revision}.json"
         manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        stage = "verify_native_document_unchanged"
+        if Path(str(getattr(doc, "FileName", ""))).resolve() != native_path:
+            raise ValueError("Native document file path changed during export")
+        if not native_path.is_file() or _file_record(native_path, root) != native_document:
+            raise ValueError("Native document file bytes or SHA-256 changed during export")
+        stage = "write_package_manifest"
         manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         artifacts.append(manifest_path)
         return manifest
     except Exception as exc:
-        _write_diagnostics(root, stage, exc, artifacts)
+        _write_diagnostics(root, stage, exc, artifacts, revision)
         raise

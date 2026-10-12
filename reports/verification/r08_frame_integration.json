@@ -1,0 +1,116 @@
+{
+  "instances": [
+    "LumbarIntegrated1",
+    "LumbarIntegrated_1"
+  ],
+  "sources": [
+    "FRM_LUMBAR_CROSSWALL_CAGE_L_r08",
+    "FRM_LUMBAR_CROSSWALL_CAGE_R_r08"
+  ],
+  "features": {
+    "1": [
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CaseWindowBase",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_Crosswall0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_Crosswall1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CrosswallWindow0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CrosswallWindow1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CarrierAccess",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_LocalEndPlatform0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_LocalEndPlatform1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_ShortEarE1A2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_ShortEarE2A1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BroadShelf0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BroadShelf1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_OuterGuide0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_OuterGuide1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BraceBoss0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BraceBoss1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BraceBoss2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_BraceBoss3",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CaseEdgeCollar",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CaseFaceBand0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_CaseFaceBand1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_TieClearances",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_TieCollarRecesses",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_InnerJournalBossA1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_InnerJournalBossA2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_ShelfJournalBossE1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_ShelfJournalBossE2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_WholeStackJournalClearances",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_WholeCrosswallTiePassages",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_C1TravelRelief",
+      "FRM_LUMBAR_CROSSWALL_CAGE_L_r08_C2TravelRelief"
+    ],
+    "-1": [
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CaseWindowBase",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_Crosswall0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_Crosswall1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CrosswallWindow0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CrosswallWindow1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CarrierAccess",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_LocalEndPlatform0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_LocalEndPlatform1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_ShortEarE1A2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_ShortEarE2A1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BroadShelf0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BroadShelf1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_OuterGuide0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_OuterGuide1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BraceBoss0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BraceBoss1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BraceBoss2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_BraceBoss3",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CaseEdgeCollar",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CaseFaceBand0",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_CaseFaceBand1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_TieClearances",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_TieCollarRecesses",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_InnerJournalBossA1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_InnerJournalBossA2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_ShelfJournalBossE1",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_ShelfJournalBossE2",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_WholeStackJournalClearances",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_WholeCrosswallTiePassages",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_C1TravelRelief",
+      "FRM_LUMBAR_CROSSWALL_CAGE_R_r08_C2TravelRelief"
+    ]
+  },
+  "guide_slots": [
+    {
+      "slider": "C1",
+      "pivot": "A2",
+      "center_xz_mm": [
+        -27.707366118673086,
+        8.66
+      ],
+      "travel_bounds_x_mm": [
+        -33.16445019477227,
+        -22.250282042573904
+      ]
+    },
+    {
+      "slider": "C2",
+      "pivot": "A1",
+      "center_xz_mm": [
+        27.70736611867309,
+        -8.66
+      ],
+      "travel_bounds_x_mm": [
+        22.250282042573907,
+        33.16445019477227
+      ]
+    }
+  ],
+  "removed_unused_sources": [
+    "FRM_LUMBAR_ROUNDED_CRADLE_L_r07_final",
+    "FRM_LUMBAR_ROUNDED_CRADLE_R_r07_final"
+  ],
+  "retained_used_sources": [],
+  "worker_validation": "CAD validity/collision NOT_RUN",
+  "execution_native_validity": true,
+  "limitations": [
+    "Whole-spine collision and motion sweep require lead validation",
+    "Shelf, clamp fit/preload and fabrication dimensions remain assumptions",
+    "Existing shaft/liner/tie/shim hardware preserved; no new attachment hardware added"
+  ]
+}

@@ -4,19 +4,24 @@ Fixed saved leg coordinates and wheel state. No native save, source regeneration
 hidden part substitution or interpolation of rendered geometry.
 """
 from pathlib import Path
-import hashlib,json,math
+import hashlib,json,math,re
 
 
-def render(doc, root, step_deg=15):
+def render(doc, root, step_deg=15, revision='r07'):
     import FreeCAD as App, FreeCADGui as Gui
     from pivy import coin
     import robot_pose_r03 as pose
-    root=Path(root);out=root/'reports/motion/r07';out.mkdir(parents=True,exist_ok=True)
+    revision=str(revision)
+    if not re.fullmatch(r'r[0-9]+',revision):raise ValueError('Revision must be r followed by digits')
+    if isinstance(step_deg,bool) or not isinstance(step_deg,int) or not 0<step_deg<360:
+        raise ValueError('step_deg must be an integer between 1 and 359')
+    root=Path(root).resolve();out=root/'reports/motion'/revision;out.mkdir(parents=True,exist_ok=True)
     filename=Path(doc.FileName);before=hashlib.sha256(filename.read_bytes()).hexdigest()
     original=float(doc.PoseController.SpinePhaseRad)
     App.setActiveDocument(doc.Name);view=Gui.activeDocument().activeView()
+    original_camera=view.getCamera()
     links=[o for o in doc.Objects if o.TypeId=='App::Link']
-    visibility={o.Name:o.Visibility for o in links}
+    visibility=[(o,o.Visibility) for o in doc.Objects if hasattr(o,'Visibility')]
     for o in doc.PartsLibrary.Group:o.Visibility=False
     doc.PartsLibrary.Visibility=False
     for o in doc.Objects:
@@ -28,7 +33,7 @@ def render(doc, root, step_deg=15):
     try:
         for index,degree in enumerate(range(0,360,step_deg)):
             pose.apply_pose(doc,math.radians(degree))
-            for o in links:o.Visibility=True
+            for o in links:o.Visibility=not getattr(o,'NonphysicalClearance',False)
             node=view.getCameraNode();node.orientation.setValue(coin.SbRotation(*rotation.Q))
             position=App.Vector(0,0,-7)+rotation.multVec(App.Vector(0,0,300))
             node.position.setValue(*tuple(position));node.nearDistance.setValue(1)
@@ -40,10 +45,10 @@ def render(doc, root, step_deg=15):
             (out/'capture_progress.json').write_text(json.dumps({'status':'RUNNING','frames_completed':len(records),'frames':records},indent=2)+'\n')
     finally:
         pose.apply_pose(doc,original)
-        for o in links:o.Visibility=visibility[o.Name]
-        view.viewAxonometric();view.fitAll();Gui.updateGui()
+        for o,value in visibility:o.Visibility=value
+        view.setCamera(original_camera);Gui.updateGui()
     unchanged=before==hashlib.sha256(filename.read_bytes()).hexdigest()
-    report={'status':'PASS_CAPTURED_RESTORED' if unchanged else 'FAIL_NATIVE_CHANGED',
+    report={'revision':revision,'status':'PASS_CAPTURED_RESTORED' if unchanged else 'FAIL_NATIVE_CHANGED',
             'native_sha256':before,'native_file_unchanged':unchanged,'frames':records,
             'scope':'Actual CAD spine articulation at fixed saved leg/wheel state; visual evidence only',
             'limits':'Finite visual frames; no continuous clearance, loaded equilibrium or physical performance claim.'}

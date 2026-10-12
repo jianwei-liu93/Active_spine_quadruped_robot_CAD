@@ -1,0 +1,101 @@
+{
+  "revision": "r08",
+  "reviewed_date": "2026-10-12",
+  "scope": "Bounded source-fidelity review of actual saved lumbar views; no final package approval",
+  "reviewer_routing": {
+    "requested": "Sol/high",
+    "actual_service_routing": "NOT_INDEPENDENTLY_OBSERVABLE"
+  },
+  "disposition": "PRINCIPAL_R07_FACE_OWNERSHIP_ERROR_CORRECTED; NO_ADDITIONAL_REQUIRED_MORPHOLOGY_CHANGE_IDENTIFIED_IN_INSPECTED_VIEWS",
+  "artifacts_sha256": {
+    "cad/flexor_r08_robot.FCStd": "3832778436b75539d0ecf0e95df935099005331157c1328c2f77389985a817c8",
+    "src/spine_frame_r08.py": "c216b6cf6249c0d96303644e3074f7b30168c10b199c212fa42ac788ec44c009",
+    "parameters/assembly_r08.json": "2c3fa8b55ab7eeb8885d3c9f8f8edfcd56464d2fee5c15b6214be4f9612371bf",
+    "reports/views/r08_bare_lumbar_crosswall_neg_x.png": "e0d5c905ccd9f55b266cf3dc2b5cae694e737f7f3ac9c1bc0bea781102bd049e",
+    "reports/views/r08_bare_lumbar_crosswall_pos_x.png": "400d2338411f28c164183ccd9772d0ee57c17be6eba3b66ec438dc7595917ec0",
+    "reports/views/r08_bare_lumbar_pos_y_oblique.png": "5929b9165a0593e9545f4a5e6f9120e7263ba5d461617a39385de8d9d13bfa14",
+    "reports/views/r08_bare_lumbar_neg_y_oblique.png": "b773645cba3de2012aad5b83ac3fb862ff411487a80309a712d674aa07a64a5c",
+    "reports/views/r08_lumbar_motors_crosswall.png": "20d8b25554098b0fdd100737e2fe1165a9ce11a418859e985d57af6132bf197f"
+  },
+  "source_evidence": [
+    "reports/views/source_fidelity_r07/source_51.5s.png",
+    "reports/views/source_fidelity_r07/source_52.7s.png",
+    "references/visual/movie_s1/frame_052s.png",
+    "/tmp/codex-clipboard-17794a29-f3c1-4e2e-86a4-4495146f791f.png"
+  ],
+  "feature_checks": [
+    {
+      "feature": "orthogonal_window_face_ownership",
+      "status": "CORRECTED_IN_ACTUAL_VIEWS",
+      "confidence": "HIGH",
+      "evidence": "Both crosswall views show the broad rectangular apertures spanning Y between the side cheeks; oblique views show that their planes meet the sagittal horn cheeks at corners. The former sagittal upper windows are filled. This corresponds to source 51.5/52.7s connector-window versus horn-face ownership."
+    },
+    {
+      "feature": "open_top",
+      "status": "VISIBLE_GEOMETRIC_CORRESPONDENCE",
+      "confidence": "HIGH",
+      "evidence": "Both Y-oblique views show an uncapped central cavity. The motor view shows separate motor envelopes below that opening, with transverse ties rather than a roof. This is consistent with source top insertion, but does not verify a practical insertion path past collars, bands, connectors and fasteners."
+    },
+    {
+      "feature": "sagittal_lower_circle_and_upper_cheek",
+      "status": "VISIBLE_GEOMETRIC_CORRESPONDENCE",
+      "confidence": "HIGH_FOR_FEATURE_PLANES",
+      "evidence": "The lower circular openings are in the solid sagittal side cheeks, orthogonal to the broad windowed walls. Their outside foot remains broadly rectangular. Exact radius, upper cheek outline, blends, thickness and height are assumptions."
+    },
+    {
+      "feature": "guide_ear_attachment_and_order",
+      "status": "VISIBLE_GEOMETRIC_CORRESPONDENCE",
+      "confidence": "HIGH_FOR_ARCHITECTURE",
+      "evidence": "Both oblique views retain the opposed low-slot/high-ear and high-slot/low-ear structures, connected through local shelves to the central cheeks. Source reads retain C1/A2 and C2/A1 ownership; no new planar moving member appears. No independent native axis or loaded-joint measurement was performed."
+    },
+    {
+      "feature": "second_crosswall",
+      "status": "REASONABLE_RECONSTRUCTION",
+      "confidence": "MEDIUM",
+      "evidence": "Two windowed walls are visible in r08. Source has a partly occluded second opening before insertion; its exact hidden outline and panel extent remain uncertain."
+    }
+  ],
+  "required_morphology_corrections": [],
+  "engineering_adaptations_not_source_recovered": [
+    "Two native half-cages with 0.2mm nonstructural midplane seam retained by existing ties",
+    "Case-local top height33mm rather than31mm",
+    "Positive-case-X carrier-clearance stepped pockets; 1.85mm remaining top rail",
+    "Full C-shaft travel reliefs and nominal0.35mm shaft allowance",
+    "Tie passages, inward collars, capture bands and shim"
+  ],
+  "unresolved": [
+    "Metric panel/window/circle proportions and exact dihedral angle are not calibrated by perspective film",
+    "Hidden second-wall outline and exact original manufactured part seams",
+    "Split-wall cantilever/rail strength, seam racking and actual tie preload",
+    "Purchased case output/horn/connector geometry, keepouts and allowable case contact",
+    "Manufactured tolerances, positive insertion/removal and tool access",
+    "Revision-specific motion/exports still require lead verification"
+  ],
+  "runtime_report_read": {
+    "path": "reports/verification/r08_neutral.json",
+    "status": "PASS",
+    "instances": 486,
+    "editable_bodies": 95,
+    "fully_constrained_sketches": true,
+    "narrowphase_tests": 1207,
+    "raw_overlaps": [],
+    "volume_tolerance_mm3": 1e-05,
+    "independently_rerun": false,
+    "coverage": "SAVED_PRESCRIBED_POSE_ONLY"
+  },
+  "actions_performed": [
+    "Read local source and parameters",
+    "Inspected five actual r08 PNGs and source frames",
+    "Hashed inspected artifacts",
+    "Read lead neutral report",
+    "Authored this JSON and appended owned Markdown report"
+  ],
+  "actions_not_performed": [
+    "No live FreeCAD/MCP calls",
+    "No native recompute, geometry writes, exports or motion sweep",
+    "No metric reconstruction from film pixels",
+    "No fabrication approval"
+  ],
+  "final_package_approval": false,
+  "fabrication_approval": false
+}

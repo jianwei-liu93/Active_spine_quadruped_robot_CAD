@@ -6,6 +6,7 @@ presentation copies under reports/views/manual_r07/.
 """
 from __future__ import print_function
 import csv
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -151,6 +152,89 @@ def bom_rows():
                        for r in csv.DictReader(f)], key=lambda x:(x[0],x[1]))
 
 
+def load_json(path):
+    path = ROOT / path
+    return json.loads(path.read_text()) if path.exists() else None
+
+
+def evidence_status():
+    """Summarize current motion/export/drawing evidence without stale prose."""
+    coarse = load_json('reports/verification/r07_motion_partitions/coarse_summary.json')
+    full = load_json('reports/verification/r07_motion_partitions/full_summary.json')
+    if full is not None:
+        motion = 'Full native motion: {} ({}/{} records, {}/{} partitions).'.format(
+            full.get('status', 'UNKNOWN'), full.get('records_found', '?'),
+            full.get('samples_expected', '?'), full.get('partitions_found', '?'),
+            full.get('partitions_expected', '?'))
+    else:
+        parts = []
+        for path in sorted((ROOT/'reports/verification/r07_motion_partitions').glob('full_part_*.json')):
+            try:
+                parts.append(json.loads(path.read_text()))
+            except (ValueError, OSError):
+                continue
+        completed = sum(int(p.get('samples_completed', 0)) for p in parts)
+        expected = sum(int(p.get('samples_total', 0)) for p in parts)
+        if parts:
+            motion = 'Full native motion: RUNNING ({}/{} samples reported across {} partitions).'.format(
+                completed, expected, len(parts))
+        elif coarse:
+            motion = 'Full native motion: NOT_RUN; corrected coarse screen is {} ({}/{} states).'.format(
+                coarse.get('status', 'UNKNOWN'), coarse.get('records_found', '?'),
+                coarse.get('samples_expected', '?'))
+        else:
+            motion = 'Full native motion: NOT_RUN.'
+    if full is not None and full.get('status') == 'PASS':
+        motion += ' This is finite sampled coverage; continuous clearance and loaded equilibrium are not established.'
+    elif coarse:
+        motion += ' Corrected coarse screen: {} ({}/{} states, {}/{} partitions).'.format(
+            coarse.get('status', 'UNKNOWN'), coarse.get('records_found', '?'),
+            coarse.get('samples_expected', '?'), coarse.get('partitions_found', '?'),
+            coarse.get('partitions_expected', '?'))
+
+    package = load_json('reports/package_manifest_r07.json')
+    native_sha = hashlib.sha256((ROOT/'cad/flexor_r07_robot.FCStd').read_bytes()).hexdigest()
+    drawings = load_json('drawings/r07/drawing_manifest_r07.json')
+    full_manifest = load_json('reports/verification/r07_motion_partitions/full_manifest.json')
+    coarse_manifest = load_json('reports/verification/r07_motion_partitions/coarse_manifest.json')
+    recorded_native_hashes = [m.get('native_sha256') for m in
+                              (full_manifest, coarse_manifest) if m and m.get('native_sha256')]
+    if drawings and drawings.get('canonical_robot_sha256'):
+        recorded_native_hashes.append(drawings['canonical_robot_sha256'])
+    sha_consistent = bool(recorded_native_hashes) and all(
+        value == native_sha for value in recorded_native_hashes)
+    expected_package_status = 'EXPORTS_AND_STEP_ROUNDTRIP_VALIDATED_NO_FABRICATION_RELEASE'
+    if package:
+        package_ok = (package.get('status') == expected_package_status and sha_consistent)
+        if package.get('status') == expected_package_status and not sha_consistent:
+            export_status = 'Final package manifest reports validated exports, but native SHA consistency check FAILS.'
+        else:
+            export_status = 'Final package manifest: {}; native SHA consistency {}.'.format(
+                package.get('status', 'UNKNOWN'), 'PASS' if sha_consistent else 'NOT_ESTABLISHED')
+    else:
+        export = load_json('reports/verification/r07_export_diagnostics.json')
+        if export and export.get('stage') == 'validate_assembly_step' and export.get('status') != 'PASS':
+            export_status = 'Recorded assembly STEP diagnostic: {} at {}; final package export/round-trip remains pending.'.format(
+                export.get('status', 'UNKNOWN'), export.get('stage'))
+        elif export:
+            export_status = 'No current package manifest; recorded STEP diagnostic: {} ({})'.format(
+                export.get('status', 'UNKNOWN'), export.get('stage', 'stage unspecified'))
+        else:
+            export_status = 'Final package manifest: NOT_RUN'
+        package_ok = False
+    if drawings:
+        drawing_status = 'Native drawings: {} sheets / {} dimensions; PDF exports {}; visual review {}; canonical native SHA consistency {}.'.format(
+            drawings.get('sheet_count', '?'), drawings.get('dimension_count', '?'),
+            drawings.get('pdf_exports', 'UNKNOWN'), drawings.get('visual_review', 'UNKNOWN'),
+            'PASS' if drawings.get('canonical_robot_sha256') == native_sha else 'FAIL')
+    else:
+        drawing_status = 'Native drawing package: NOT_RUN.'
+    return {'motion': motion, 'export': export_status, 'drawings': drawing_status,
+            'full_motion_pass': bool(full and full.get('status') == 'PASS'),
+            'export_pass': package_ok,
+            'drawings_visual_pass': bool(drawings and drawings.get('visual_review') == 'PASS')}
+
+
 def build():
     ss = styles()
     mass = json.loads((ROOT/'reports/verification/r07_mass_envelope.json').read_text())
@@ -160,6 +244,7 @@ def build():
     cases = screen['load_screens']['cases']
     spine_cases = screen['load_screens']['spine_B_shaft']['cases']
     bom = bom_rows()
+    evidence = evidence_status()
     if len(bom) != mass['part_number_count']:
         raise ValueError('BOM row count and saved r07 mass report disagree')
     doc = BaseDocTemplate(str(OUT), pagesize=A4, leftMargin=19*mm, rightMargin=19*mm,
@@ -319,19 +404,21 @@ def build():
         para('Nominal candidate stackups requiring metrology: 4.05 mm bearing seat / 4.00 mm OD gives 0.05 mm diametral clearance; 1.90 mm shaft / 2.00 mm bearing bore gives 0.10 mm; controller clamp bore 2.50 mm / fixed tie OD 2.40 mm gives 0.10 mm. The PA12 bearing boss nominal outer dia. 7.00 mm gives a 1.475 mm radial wall. These are geometry assumptions, not tolerance limits.',ss['body']),
         para('Spring parameters are assumptions: extension free length 14 mm and rate 0.25 N/mm; compression free length 18 mm and rate 0.4 N/mm; compression solid length 6 mm plus 1 mm bind margin. Catalogue identity, preload, fatigue, end form and measured lengths are open. Positive cable-capture geometry is modeled; required grip force, surface preparation, clamp torque, friction and slip limit are unverified.',ss['body']),
         para('Verification boundary',ss['h2']),
-        para('The current primary-MCP check sampled the C1/C2 moving frame pair against two frame pieces at 361 states and reported PASS with a 0.35 mm minimum gap. This is a scoped pairwise clearance result only. Full whole-robot motion remains unqualified; the check does not establish whole-assembly G3, loaded equilibrium, strength or manufacturing accuracy. The earlier 472-link frame/clamp report is a partial integration only. This manual makes no G3, G4 or G5 pass claim. Fabrication release is not established.',ss['body'])]
+        para('The primary-MCP C1/C2 frame-pair check sampled 361 states and reported PASS with a 0.35 mm minimum gap; that result is pairwise only. {} {} {} No whole-assembly G3/G4/G5 pass is inferred from these scoped gates. The 472-link frame/clamp report is an earlier partial integration. Fabrication release, loaded equilibrium, strength and manufacturing accuracy remain unestablished.'.format(evidence['motion'], evidence['export']+'.', evidence['drawings']),ss['body'])]
     blockers=[
         'Revision-matched motor mounting/output/horn drawings and populated connector clearance.',
         'Measured OpenRB board thickness, component/connector keepouts, mounting strategy and mass.',
         'Bearing, shaft, clip, screw engagement and printed-fit tolerance stackups.',
         'Spring catalogue/rate/free-length/preload and cable terminal holding/slip evidence.',
-        'Material/process allowables, safety factors, frame load-path review and full assembly collision/access evidence.',
-        'Final drawing/export checks and physical build inspection.'
+        'Material/process allowables, safety factors, frame load-path review, full assembly collision/access and loaded-equilibrium evidence.',
+        evidence['export'] + '.',
+        evidence['drawings'],
+        'Physical build inspection.'
     ]
     blockerdata=[[para('Open release blocker',ss['table_bold'])]]+[[para('- '+b,ss['table'])] for b in blockers]
     story += [table(blockerdata,[doc.width],header=False),
         para('Evidence files',ss['h2']),
-        para('Native candidate: cad/flexor_r07_robot.FCStd. BOM: bom/bom_r07.csv and bom/instances_r07.csv. Mass and envelope: reports/verification/r07_mass_envelope.json. Mass/CoM/inertia/load source: reports/verification/r07_engineering_screen.json. Current scoped 361-state C1/C2-vs-two-frame PASS is reported by the primary MCP review; whole-robot motion is unqualified. Earlier partial report: reports/verification/r07_frame_clamps_neutral.json. Supplier evidence: reports/sources/supplier_interfaces.md and reports/sources/supplier_completion_r07.md. Actual screenshots used here: reports/views/r07_robot_assembled.png, r07_robot_side.png, r07_spine_torso_frames.png, r07_bare_lumbar.png, r07_spine_source_facing.png.',ss['small']),
+        para('Native candidate: cad/flexor_r07_robot.FCStd. BOM: bom/bom_r07.csv and bom/instances_r07.csv. Mass and envelope: reports/verification/r07_mass_envelope.json. Mass/CoM/inertia/load source: reports/verification/r07_engineering_screen.json. {} {} {} Earlier partial report: reports/verification/r07_frame_clamps_neutral.json. Supplier evidence: reports/sources/supplier_interfaces.md and reports/sources/supplier_completion_r07.md. Actual screenshots used here: reports/views/r07_robot_assembled.png, r07_robot_side.png, r07_spine_torso_frames.png, r07_bare_lumbar.png, r07_spine_source_facing.png.'.format(evidence['motion'], evidence['export'], evidence['drawings']),ss['small']),
         para('Primary context: Wang et al., Science Advances 12 (2026), eaed5603, DOI 10.1126/sciadv.aed5603; supplementary Table S1 and source figures are summarized in docs/01_reference_evidence.md and docs/13_candidate_frames_r06.md. ROBOTIS exact product manuals and drawing retrieval outcomes are logged in reports/sources/supplier_completion_r07.md.',ss['small']), PageBreak()]
 
     # Exact complete BOM appendix; retain CSV quantity and IDs.

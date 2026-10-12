@@ -216,7 +216,7 @@ def _hex_face(Part, across_flats, x=0, y=0):
     return Part.Face(Part.Wire([Part.makePolygon(vertices + [vertices[0]])]))
 
 
-def apply(builder):
+def apply(builder, revision="r07"):
     """Add the r07 carrier, clamps, retainers, fasteners, and nonphysical envelopes.
 
     This only constructs source bodies and placed links in the caller's builder;
@@ -224,6 +224,8 @@ def apply(builder):
     adaptation assumptions until verified against the real board and tied
     lumbar source.
     """
+    if revision not in ("r07", "r08"):
+        raise ValueError("Carrier revision must be r07 or r08")
     App, Part, Sketcher, cc = _cc()
     doc = builder.doc
     V = App.Vector
@@ -443,8 +445,10 @@ def apply(builder):
     add(board, prefix + '_BoardEnvelope_Instance', App.Placement(), 'Electronics',
         {'role': 'PURCHASED'})
 
+    if revision == "r08":
+        repair_existing(builder)
     return {
-        'revision': 'r07',
+        'revision': revision,
         'carrier_source': carrier.Name,
         'carrier_instances': tuple(links),
         'board_envelope_role': 'PURCHASED',
@@ -469,3 +473,50 @@ def apply(builder):
                         'r06 actual-shape interference and motion validation remain lead gates')
     }
 
+
+
+def repair_existing(builder):
+    """Rebuild three native pad sketches with 0.8 mm outer hole walls.
+
+    Intended for the lead's r08 integration. Preserves bodies, feature history,
+    part numbers, links, hole geometry, board datum and clamp/tie attachments.
+    Repeated calls are idempotent; never saves the caller's document.
+    """
+    App, Part, Sketcher, cc = _cc()
+    doc = builder.doc
+    edits = (
+        ('OpenRB150_Carrier_r07_Tray', 'TrayPlatePad', -24.8, -35.0, 29.6, 70.0),
+        ('OpenRB150_Carrier_r07_EdgeRetainerLeft', 'RetainerStripPad', -24.8, -33.0, 2.8, 66.0),
+        ('OpenRB150_Carrier_r07_EdgeRetainerRight', 'RetainerStripPad', 2.0, -33.0, 2.8, 66.0),
+    )
+    sketches = []
+    for body_name, pad_prefix, x, y, length, width in edits:
+        body = doc.getObject(body_name)
+        if body is None:
+            raise ValueError('Missing existing carrier body: ' + body_name)
+        pads = [o for o in body.Group if o.TypeId == 'PartDesign::Pad' and o.Name.startswith(pad_prefix)]
+        if len(pads) != 1:
+            raise ValueError('Expected one native base pad in ' + body_name)
+        sk = pads[0].Profile[0] if isinstance(pads[0].Profile, tuple) else pads[0].Profile
+        sketches.append((body, sk, x, y, length, width))
+    for body, sk, x, y, length, width in sketches:
+        for i in range(sk.ConstraintCount - 1, -1, -1):
+            sk.delConstraint(i)
+        for i in range(sk.GeometryCount - 1, -1, -1):
+            sk.delGeometry(i)
+        pts = [App.Vector(x,y,0), App.Vector(x+length,y,0),
+               App.Vector(x+length,y+width,0), App.Vector(x,y+width,0)]
+        for i in range(4):
+            index = sk.addGeometry(Part.LineSegment(pts[i], pts[(i+1)%4]), False)
+            sk.addConstraint(Sketcher.Constraint('Block', index))
+        body.Revision = 'r08'
+    doc.recompute()
+    for body, sk, *_ in sketches:
+        if not sk.FullyConstrained:
+            raise ValueError('Repaired carrier sketch is not fully constrained: ' + sk.Name)
+        if not body.Shape.isValid() or len(body.Shape.Solids) != 1:
+            raise ValueError('Repaired carrier body is not one valid solid: ' + body.Name)
+    return {'revision': 'r08', 'outer_wall_mm': 0.8, 'tray_x_mm': [-24.8, 4.8],
+            'modified_bodies': [body.Name for body, *_ in sketches],
+            'modified_sketches': [sk.Name for _, sk, *_ in sketches],
+            'datums_and_holes_unchanged': True}
