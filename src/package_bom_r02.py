@@ -324,6 +324,9 @@ def build_bom(doc, root, revision="r02"):
     _write_csv(root / "bom" / f"bom_{revision}.csv", group_fields, grouped)
     _write_csv(root / "bom" / f"instances_{revision}.csv", instance_fields, rows)
     report = _mass_report(rows, revision)
+    native_path = Path(getattr(doc, "FileName", ""))
+    if native_path.is_file():
+        report["native_sha256"] = hashlib.sha256(native_path.read_bytes()).hexdigest()
     output = root / "reports" / "verification" / f"{revision}_mass_envelope.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")

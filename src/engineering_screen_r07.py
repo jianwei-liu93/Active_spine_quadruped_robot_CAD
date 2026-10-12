@@ -7,6 +7,7 @@ case. This module deliberately does not judge material allowables or release.
 """
 from __future__ import print_function
 import json
+import hashlib
 import math
 from pathlib import Path
 
@@ -194,5 +195,7 @@ def analyze_document(doc):
 
 def write_report(doc, path):
     data = analyze_document(doc)
+    native = Path(getattr(doc, "FileName", ""))
+    if native.is_file():data["native_sha256"] = hashlib.sha256(native.read_bytes()).hexdigest()
     Path(path).write_text(json.dumps(data, indent=2, sort_keys=True) + '\n')
     return data

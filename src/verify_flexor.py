@@ -6,7 +6,7 @@ import build_flexor as bf
 from kinematics import load_parameters,spine
 ROOT=Path(__file__).resolve().parents[1]
 
-def native_checks(doc):
+def native_checks(doc, output=None, revision='r02'):
     p=load_parameters(ROOT/'parameters/candidate_r02.json');s=spine(doc.PoseController.SpinePhaseRad,p)
     rows=[];err=[]
     for o in doc.Objects:
@@ -21,8 +21,8 @@ def native_checks(doc):
     box=App.BoundBox()
     for o in doc.Objects:
         if o.TypeId=='App::Link':box.add(o.Shape.BoundBox)
-    r={'revision':'r02','scope':'spine only','status':'PASS' if all(x['valid'] and x['solid_count']==1 and x['volume_mm3']>0 for x in rows) and max(err)<1e-4 else 'FAIL','parts':rows,'editable_bodies':len([o for o in doc.Objects if o.TypeId=='PartDesign::Body']),'fully_constrained_sketches':all(o.FullyConstrained for o in doc.Objects if o.TypeId=='Sketcher::SketchObject'),'actual_native_joint_max_error_mm':max(err),'joint_tolerance_mm':1e-4,'envelope_mm':[box.XLength,box.YLength,box.ZLength],'limits':'Source morphology, physical clearance and supplier interface verification are separate gates.'}
-    (ROOT/'reports/verification/r02_native.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k!='parts'}));return r
+    r={'revision':revision,'scope':'all physical links; spine axis residual subset','status':'PASS' if all(x['valid'] and x['solid_count']==1 and x['volume_mm3']>0 for x in rows) and max(err)<1e-4 else 'FAIL','parts':rows,'editable_bodies':len([o for o in doc.Objects if o.TypeId=='PartDesign::Body']),'fully_constrained_sketches':all(o.FullyConstrained for o in doc.Objects if o.TypeId=='Sketcher::SketchObject'),'actual_native_joint_max_error_mm':max(err),'joint_tolerance_mm':1e-4,'envelope_mm':[box.XLength,box.YLength,box.ZLength],'limits':'Source morphology, physical clearance and supplier interface verification are separate gates.'}
+    (Path(output) if output else ROOT/'reports/verification/r02_native.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k!='parts'}));return r
 
 def view_evidence(doc):
     import FreeCADGui as Gui

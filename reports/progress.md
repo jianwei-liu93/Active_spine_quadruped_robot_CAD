@@ -1,5 +1,15 @@
 # Execution ledger
 
+## r08 corrected cage and accepted export checkpoint — 2026-10-12
+
+The installed-MCP r08 assembly integrates broad windowed transverse crosswalls and solid upper sagittal horn cheeks, correcting the face ownership visible in Movie S1 at 51.5–52.7 s. The two half-cages, seam, carrier clearance pockets and controller screw margins are explicit engineering adaptations. Source-fidelity review records no additional required morphology correction in the inspected views. The corrected native/source checkpoint was committed and pushed as `8dcc006`.
+
+Actual r08 checks now pass: 486 physical links, 95 editable bodies, fully constrained sketches, neutral raw intersections, S9 topology and axes, distinct same-direction fore/hind layouts, and two XL330-M077-T plus five XC330-M181-T motor envelopes. Clean source rebuild passes strict per-solid comparison for all 486 placed solids; edit/restore and saved-native reopen/recompute pass. The completed 105-state coarse and 361-phase cage screens are PASS. The existing 985-state detailed motion campaign is still running; its incomplete records are not accepted as a full PASS.
+
+Final r08 exports pass strict per-solid STEP readback and print-mesh validity. Three applicable analytic profile DXFs pass exact readback. Actual CAD cycle captures and a GIF are saved separately from mechanical clearance evidence. Native drawing staging passes reopen checks with 67 sheets and 312 dimensions; GUI exports and visual review remain pending. The final manual and complete-package independent review remain pending. Supplier interfaces, physical strength, cable/spring characterization and fabrication release remain unresolved.
+
+User commit `8103449` is already HEAD and agrees with the fetched branch. Its AX0/AX1 constraints are being integrated through a read-only adapter; no canonical geometry or frozen mechanical dependency changed for animation convenience. AX2–AX4 remain future work.
+
 2026-10-11 | r01 | A0/G0 | PASS | verification/environment.json, views/mcp_sanity.png | no connection blocker | committed/pushed 85c8a96
 2026-10-11 | r01 | A1 numerical spine | PASS (bounded) | verification/spine_cycle.json,csv | paper phase/visual branch unresolved | full native physical review
 2026-10-11 | r01 | A2 native spine | initial CAD built | ../cad/checkpoints/spine_r01.FCStd | review identified crank bore/support/coupling defects | repair before legs

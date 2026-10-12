@@ -2,24 +2,24 @@
   "assumed_loaded_sensitivity": {
     "center_mm": [
       -8.773205429977649,
-      -0.0006670802574641478,
+      -0.0006670802574639886,
       5.618578700238693
     ],
     "mass_g": 291.05560860591913,
     "point_mass_inertia_g_mm2": [
       [
         244849.4728096763,
-        -23.822218164219375,
+        -23.822218164219834,
         -18710.33271189595
       ],
       [
-        -23.822218164219375,
+        -23.822218164219834,
         658555.5188849678,
-        -6.03287732826676
+        -6.032877328266375
       ],
       [
         -18710.33271189595,
-        -6.03287732826676,
+        -6.032877328266375,
         777842.4190750814
       ]
     ]
@@ -32,24 +32,24 @@
   "known_mass": {
     "center_mm": [
       -8.692334348906861,
-      -0.000711054613807378,
+      -0.0007110546138072081,
       3.3257652085398
     ],
     "mass_g": 273.05560860591913,
     "point_mass_inertia_g_mm2": [
       [
         221638.57036747367,
-        -23.837919887134138,
-        -19529.0171706341
+        -23.837919887135048,
+        -19529.017170634113
       ],
       [
-        -23.837919887134138,
+        -23.837919887135048,
         635315.7401831402,
-        -5.587710506651533
+        -5.587710506650566
       ],
       [
-        -19529.0171706341,
-        -5.587710506651533,
+        -19529.017170634113,
+        -5.587710506650566,
         777813.5427983808
       ]
     ]
@@ -66,8 +66,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.3105181541092309,
         "alpha": 1,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.05474046412394718,
-        "hip_static_moment_Nm": 0.032844278474368306,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.054740464123947154,
+        "hip_static_moment_Nm": 0.03284427847436829,
         "leg": "foreL",
         "leg_horizontal_N": 0.42828832806361,
         "leg_resultant_N": 1.4904871397243082,
@@ -82,8 +82,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.3105181541092309,
         "alpha": 1,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.05474046412394718,
-        "hip_static_moment_Nm": 0.032844278474368306,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.054740464123947154,
+        "hip_static_moment_Nm": 0.03284427847436829,
         "leg": "foreR",
         "leg_horizontal_N": 0.42828832806361,
         "leg_resultant_N": 1.4904871397243082,
@@ -130,8 +130,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.6210363082184618,
         "alpha": 1,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10948092824789436,
-        "hip_static_moment_Nm": 0.06568855694873661,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10948092824789431,
+        "hip_static_moment_Nm": 0.06568855694873658,
         "leg": "foreL",
         "leg_horizontal_N": 0.85657665612722,
         "leg_resultant_N": 2.9809742794486165,
@@ -146,8 +146,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.6210363082184618,
         "alpha": 1,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10948092824789436,
-        "hip_static_moment_Nm": 0.06568855694873661,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.10948092824789431,
+        "hip_static_moment_Nm": 0.06568855694873658,
         "leg": "foreR",
         "leg_horizontal_N": 0.85657665612722,
         "leg_resultant_N": 2.9809742794486165,
@@ -194,8 +194,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.9315544623276927,
         "alpha": 3,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.16422139237184155,
-        "hip_static_moment_Nm": 0.09853283542310493,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1642213923718415,
+        "hip_static_moment_Nm": 0.0985328354231049,
         "leg": "foreL",
         "leg_horizontal_N": 1.28486498419083,
         "leg_resultant_N": 4.4714614191729245,
@@ -210,8 +210,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 0.9315544623276927,
         "alpha": 3,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.16422139237184155,
-        "hip_static_moment_Nm": 0.09853283542310493,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.1642213923718415,
+        "hip_static_moment_Nm": 0.0985328354231049,
         "leg": "foreR",
         "leg_horizontal_N": 1.28486498419083,
         "leg_resultant_N": 4.4714614191729245,
@@ -258,8 +258,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 1.8631089246553854,
         "alpha": 3,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3284427847436831,
-        "hip_static_moment_Nm": 0.19706567084620985,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.328442784743683,
+        "hip_static_moment_Nm": 0.1970656708462098,
         "leg": "foreL",
         "leg_horizontal_N": 2.56972996838166,
         "leg_resultant_N": 8.942922838345849,
@@ -274,8 +274,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 1.8631089246553854,
         "alpha": 3,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3284427847436831,
-        "hip_static_moment_Nm": 0.19706567084620985,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.328442784743683,
+        "hip_static_moment_Nm": 0.1970656708462098,
         "leg": "foreR",
         "leg_horizontal_N": 2.56972996838166,
         "leg_resultant_N": 8.942922838345849,
@@ -322,8 +322,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 1.8631089246553854,
         "alpha": 6,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3284427847436831,
-        "hip_static_moment_Nm": 0.19706567084620985,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.328442784743683,
+        "hip_static_moment_Nm": 0.1970656708462098,
         "leg": "foreL",
         "leg_horizontal_N": 2.56972996838166,
         "leg_resultant_N": 8.942922838345849,
@@ -338,8 +338,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 1.8631089246553854,
         "alpha": 6,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.3284427847436831,
-        "hip_static_moment_Nm": 0.19706567084620985,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.328442784743683,
+        "hip_static_moment_Nm": 0.1970656708462098,
         "leg": "foreR",
         "leg_horizontal_N": 2.56972996838166,
         "leg_resultant_N": 8.942922838345849,
@@ -386,8 +386,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 3.7262178493107707,
         "alpha": 6,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.6568855694873662,
-        "hip_static_moment_Nm": 0.3941313416924197,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.656885569487366,
+        "hip_static_moment_Nm": 0.3941313416924196,
         "leg": "foreL",
         "leg_horizontal_N": 5.13945993676332,
         "leg_resultant_N": 17.885845676691698,
@@ -402,8 +402,8 @@
       {
         "PA12_bearing_seat_projected_pressure_MPa": 3.7262178493107707,
         "alpha": 6,
-        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.6568855694873662,
-        "hip_static_moment_Nm": 0.3941313416924197,
+        "hip_moment_fraction_of_XC330_M181_T_stall_at_5V": 0.656885569487366,
+        "hip_static_moment_Nm": 0.3941313416924196,
         "leg": "foreR",
         "leg_horizontal_N": 5.13945993676332,
         "leg_resultant_N": 17.885845676691698,
@@ -461,19 +461,19 @@
           -12.996252090498277
         ],
         "foot_contact_estimate_mm": [
-          61.75528731385995,
+          61.755287313859945,
           48.0,
           -60.82461440214176
         ],
-        "hip_arm_mm": 61.01349947304371,
+        "hip_arm_mm": 61.0134994730437,
         "hip_mm": [
           56.99740671763869,
-          47.367673374493044,
-          0.0030905535706972718
+          47.36767337449305,
+          0.0030905535706965853
         ],
         "hip_to_contact_xz_mm": [
-          4.757880596221263,
-          -60.82770495571246
+          4.757880596221256,
+          -60.827704955712456
         ],
         "kind": "fore",
         "native_bearing_to_joint_plane_mm": 3.924999999999997
@@ -490,19 +490,19 @@
           -12.996252090498277
         ],
         "foot_contact_estimate_mm": [
-          61.75528731385995,
+          61.755287313859945,
           -48.0,
           -60.82461440214176
         ],
-        "hip_arm_mm": 61.01349947304371,
+        "hip_arm_mm": 61.0134994730437,
         "hip_mm": [
           56.99740671763869,
-          -47.367673374493044,
-          0.00309055357069736
+          -47.36767337449305,
+          0.003090553570696724
         ],
         "hip_to_contact_xz_mm": [
-          4.757880596221263,
-          -60.82770495571246
+          4.757880596221256,
+          -60.827704955712456
         ],
         "kind": "fore",
         "native_bearing_to_joint_plane_mm": 3.924999999999997
@@ -618,6 +618,7 @@
   },
   "mass_item_count": 485,
   "native_document": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r08_robot.FCStd",
+  "native_sha256": "3832778436b75539d0ecf0e95df935099005331157c1328c2f77389985a817c8",
   "physical_link_count": 486,
   "separate_assumptions": {
     "controller_mass_g": 10.0,

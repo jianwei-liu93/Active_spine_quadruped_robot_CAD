@@ -1,0 +1,63 @@
+{
+  "actual_assembled_bbox_mm": {
+    "x_mm": 164.33759407181776,
+    "xmax": 78.23759407181774,
+    "xmin": -86.10000000000001,
+    "y_mm": 119.6,
+    "ymax": 59.8,
+    "ymin": -59.8,
+    "z_mm": 104.02539144713973,
+    "zmax": 42.7,
+    "zmin": -61.32539144713972
+  },
+  "actual_minus_reference_mm": {
+    "x_delta_mm": 54.33759407181776,
+    "y_delta_mm": 20.599999999999994,
+    "z_delta_mm": 20.025391447139725
+  },
+  "all_geometry_mass_estimate_g": 122.05560860591915,
+  "custom_geometry_mass_estimate_g": 48.40234904560252,
+  "density_assumptions_kg_m3": {
+    "aluminum": 2700.0,
+    "cable": 970.0,
+    "copper": 8960.0,
+    "pa12": 1010.0,
+    "rubber": 1100.0,
+    "spring": 7850.0,
+    "steel": 7850.0
+  },
+  "instance_count": 486,
+  "known_mass_sum_g": 273.05560860591913,
+  "known_purchased_mass_g": 151.0,
+  "mass_limitations": [
+    "Geometry-volume masses are estimates using material-class densities, not weighed masses or validated grades.",
+    "PurchasedMass_g is included as nominal purchased mass and suppresses any shape-volume estimate for that instance.",
+    "Controller mass remains unknown unless the linked definition provides PurchasedMass_g; it is never filled with zero or an old parameter assumption.",
+    "Unknown-mass instances are excluded from known_mass_sum_g.",
+    "The 338 g project target is not treated as achieved or as a measured result."
+  ],
+  "method": "App::Link instances; PurchasedMass_g takes precedence; otherwise instance Shape.Volume times explicit material density. No double counting.",
+  "native_sha256": "3832778436b75539d0ecf0e95df935099005331157c1328c2f77389985a817c8",
+  "other_geometry_mass_estimate_g": 73.65325956031663,
+  "part_number_count": 105,
+  "reference_envelope_mm": {
+    "X": 110.0,
+    "Y": 99.0,
+    "Z": 84.0
+  },
+  "revision": "r08",
+  "status": "COMPUTED_FROM_DOCUMENT",
+  "units": {
+    "length": "mm",
+    "mass": "g",
+    "volume": "mm^3"
+  },
+  "unknown_mass_instance_count": 1,
+  "unknown_mass_instances": [
+    {
+      "instance_name": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "part_number": "OPENRB150_PCB_ENVELOPE_r07",
+      "reason": "controller requires source PurchasedMass_g; geometric envelope is not used as mass"
+    }
+  ]
+}
