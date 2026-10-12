@@ -45,3 +45,5 @@ Sources checked on 2026-10-11:
 - Recover the complete front/back four-hole pattern, pilot/thread/depth, and any supported mounting variants.
 - Retrieve a dimensioned horn/idler drawing, and reconcile its spline/pilot, fastener, and screw length against the exact package/accessory variant.
 - Do not promote the qualitative face-normal axis and visual 2×2 screw arrangement above to `MANUFACTURER_VERIFIED` numeric interface values.
+
+2026-10-12 lead retry: unrestricted public HTTPS curl retrieval (including official download-center referrer) of the official ROBOTIS1987 and2121 endpoints returned an external error page titled404NotFound, not CAD. No downloaded HTML is accepted as vendorgeometry. Mechanical interfaces remain UNKNOWN.

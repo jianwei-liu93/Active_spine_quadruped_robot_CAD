@@ -1,0 +1,39 @@
+{
+  "revision": "r05",
+  "status": "FAIL",
+  "instances": 464,
+  "mismatches": [
+    {
+      "instance": "LumbarIntegrated1",
+      "volume_error_mm3": 322.2966501743931,
+      "bound_error_mm": 0.0
+    },
+    {
+      "instance": "LumbarIntegrated_1",
+      "volume_error_mm3": 322.29665017438447,
+      "bound_error_mm": 0.0
+    },
+    {
+      "instance": "Torso_fore",
+      "volume_error_mm3": 89.60270899556053,
+      "bound_error_mm": 0.9881365503319106
+    },
+    {
+      "instance": "Torso_hind",
+      "volume_error_mm3": 82.35856346513174,
+      "bound_error_mm": 1.0091684395939815
+    },
+    {
+      "instance": "hind_ProximalMotor_1",
+      "volume_error_mm3": 0.0,
+      "bound_error_mm": 6.0
+    },
+    {
+      "instance": "hind_ProximalMotor__1",
+      "volume_error_mm3": 0.0,
+      "bound_error_mm": 6.0
+    }
+  ],
+  "method": "Independent fresh native MCP build from source; compare actual world volumes and all6bounds against saved incremental candidate; tolerances1e-6mm3/mm",
+  "limitations": "Not a full surface identity or fabrication certificate"
+}

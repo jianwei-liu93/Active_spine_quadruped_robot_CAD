@@ -20,7 +20,7 @@ def finalize(b,save=True):
     if save:b.doc.saveAs(str(ROOT/'cad/flexor_r04_robot.FCStd'))
     return b
 
-def build(save=True):
-    b=build_robot_r03.build(save=False)
+def build(save=True,doc_name='FlexorR02'):
+    b=build_robot_r03.build(save=False,doc_name=doc_name)
     spine_frame_r04.apply(b);spine_shafts_r04.apply(b)
     return finalize(b,save)

@@ -66,7 +66,7 @@ def _transformers(transform):
     return point,vector
 
 
-def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap_sign=-1,cable_plane_mm=53.2,wheel_x_mm=-27):
+def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap_sign=-1,cable_plane_mm=53.2,wheel_x_mm=-27,ankle_eye_radius_mm=0):
     """Ordered centerline primitives, finite guide frames, diagnostics and length.
 
     Arc axes follow the right-hand rule; sweep_rad is positive and may exceed
@@ -78,6 +78,8 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
         raise ValueError('side must be +/-1 and u must be finite')
     if not math.isfinite(cable_plane_mm) or cable_plane_mm<=0 or not math.isfinite(wheel_x_mm):
         raise ValueError('Cable plane must be positive finite and wheel X finite')
+    if not math.isfinite(ankle_eye_radius_mm) or ankle_eye_radius_mm<0:
+        raise ValueError('Ankle eye radius must be nonnegative finite')
     tf,tv=_transformers(transform)
     g=leg_geometry('hind',thigh_angle,passive_knee)
     r=5.5;gx=wheel_x_mm+side*.6;y=side*cable_plane_mm
@@ -117,7 +119,10 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
     hipmid=(hip_center[0]+2.5*math.cos(hm),y,hip_center[1]+2.5*math.sin(hm))
     hipaxis=(0.0,-float(wrap_sign),0.0)
     primitives.append(_arc('hip_redirect',Tin,Tout,hipmid,H,hipaxis,2.5,hip['wrap_angle_rad']))
-    A=(g['A'][0],y,g['A'][1])
+    virtual_A=(g['A'][0],y,g['A'][1])
+    if ankle_eye_radius_mm>=math.dist(Tout,virtual_A):raise ValueError('Ankle eye must lie on final incoming span')
+    approach=_unit(_sub(Tout,virtual_A))
+    A=tuple(c+ankle_eye_radius_mm*v for c,v in zip(virtual_A,approach))
     primitives.append(_line('hip_to_ankle',Tout,A))
     # Dot products carry mm²; radius residuals carry mm. The set is deliberately
     # explicit about which segment is checked against which finite guide.
@@ -154,14 +159,14 @@ def tendon_route(side,u=0,thigh_angle=None,passive_knee=None,transform=None,wrap
         'shell_guide':{'corner':tf(P),'center':tf(corner['center']),'entry':tf(entry),'exit':tf(exit),
                        'mid':tf(corner['mid']),'axis':tv(axis),'pitch_radius_mm':2.5},
         'hip_guide':{'center':tf(H),'entry':tf(Tin),'exit':tf(Tout),'axis':tv(hipaxis),'pitch_radius_mm':2.5},
-        'ankle_anchor':tf(A),'geometry':g,
+        'ankle_anchor':tf(A),'virtual_ankle_axis':tf(virtual_A),'ankle_eye_radius_mm':ankle_eye_radius_mm,'geometry':g,
         'limitations':('Wheel grooves/hole/radii/terminations are provisional engineering choices',
                       'Shell circular guide center/axis moves in chord regime; see mounting note',
                       'Cable ankle anchor coincides with spring seat plane; attachment collision pending',
                       'No loaded equilibrium or wear/strength certification')}
 
 
-def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_thigh=None,transform=None,stiffness=2.0,cable_plane_mm=53.2,wheel_x_mm=-27):
+def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_thigh=None,transform=None,stiffness=2.0,cable_plane_mm=53.2,wheel_x_mm=-27,ankle_eye_radius_mm=0):
     """Two secured branches with neutral+0.5mm fixed available length per branch.
 
     Available lengths are installed at the declared neutral knees/thighs, not
@@ -171,8 +176,8 @@ def bilateral_states(u=0,left_knee=None,right_knee=None,left_thigh=None,right_th
         raise ValueError('Assembled fixed-guide wheel interval is [0, pi/2]; use tendon_route for diagnostics')
     result={}
     for side,knee,thigh in ((1,left_knee,left_thigh),(-1,right_knee,right_thigh)):
-        neutral=tendon_route(side,0,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm)
-        route=tendon_route(side,u,thigh,knee,transform,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm)
+        neutral=tendon_route(side,0,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm,ankle_eye_radius_mm=ankle_eye_radius_mm)
+        route=tendon_route(side,u,thigh,knee,transform,cable_plane_mm=cable_plane_mm,wheel_x_mm=wheel_x_mm,ankle_eye_radius_mm=ankle_eye_radius_mm)
         available=neutral['length_mm']+.5
         state=cable_state(route['length_mm'],available,{'cable_stiffness_N_per_mm':stiffness})
         result[side]={'route':route,'path_mm':route['length_mm'],'available_mm':available,'state':state}

@@ -1,7 +1,9 @@
 """r03 prescribed poses and read-only copied-source placements (mm/radians).
 
 apply_pose(doc, theta, leg_angles={tag: (qh, qk)}) moves actual links and,
-only when needed after a leg-angle change, creates private spring definitions.
+only when needed after a permitted leg-angle change, creates private spring definitions.
+Installed tendon geometry permits fixed wheel u=0 and captured hind leg angles
+only; spine motion rigidly transforms its torso-local source geometry once.
 placements(doc, theta) returns all App::Link placements without mutations or
 spring rebuilding, holding the document's recorded leg angles fixed. Assign
 these placements to COPIES OF LINKED SOURCE shapes, not already placed shapes.
@@ -21,7 +23,9 @@ LEG_KINDS = frozenset(('leg_r02_segment', 'leg_r02_point', 'leg_r02_body',
     'leg_r02_body_axial', 'leg_r02_headed_pin', 'leg_r02_spring',
     'leg_r02_compression_seat', 'leg_r02_spring_guide'))
 KINDS = LEG_KINDS | {'segment', 'point', 'axialrot', 'horn_screw',
-                     'torso_r03', 'torso_offset_r03'}
+                     'torso_r03', 'torso_offset_r03', 'torso_r03_offset',
+                     'tendon_r03_wheel', 'tendon_r03_guide', 'tendon_r03_cable',
+                     'torso_r04_rigid'}
 
 
 def _number(value):
@@ -113,6 +117,63 @@ def _angles(motion, controller, requested=None):
     return tags, target, changed
 
 
+def _world_tendon_point(E, angle, point):
+    """Torso-local XYZ to world XYZ, preserving axial Y exactly once."""
+    x,z=_transform(E,angle,(point[0],point[2]))
+    return (x,point[1],z)
+
+
+def _guard_installed_tendons(motion,tags,angles):
+    """Refuse stale cable geometry before any document mutation/regeneration."""
+    cables=[m for m in motion.values() if m['kind']=='tendon_r03_cable']
+    if not cables:return
+    for m in cables:
+        route=m.get('route_local')
+        if not route or 'geometry' not in route:
+            raise ValueError('Installed tendon lacks captured local route/leg state; regenerate routing')
+        if abs(route['wheel_angle_rad'])>1e-12 or abs(m.get('wheel_angle_rad',0))>1e-12:
+            raise ValueError('Installed tendon pose supports fixed wheel u=0 only; regenerate routing')
+        g=route['geometry'];fixed=(g['thigh_angle_rad'],g['passive_knee_rad'])
+        for tag,(kind,side) in tags.items():
+            if kind=='hind' and side==m['side'] and any(abs(x-y)>1e-12 for x,y in zip(angles[tag],fixed)):
+                raise ValueError('Installed tendon requires fixed hind leg angles for '+tag+'; regenerate cable route before changing leg/wheel state')
+    for m in motion.values():
+        if m['kind'] in ('tendon_r03_wheel','torso_r04_rigid'):
+            u=m.get('angle_rad',m.get('wheel_angle_rad',0))
+            if abs(u)>1e-12:
+                raise ValueError('Installed tendon wheel/coupling state differs from fixed u=0; regenerate routing')
+
+
+def _tendon_placement(App,m,E,a):
+    """Rigid parent motion for source-local geometry; no route rebuilding."""
+    V=lambda p:App.Vector(*p)
+    parent=App.Rotation(App.Vector(0,-1,0),math.degrees(a))
+    k=m['kind']
+    if k=='torso_r04_rigid':
+        data=json.loads(m['local_placement_json'])
+        base=tuple(data['base_xyz_mm']);q=tuple(data['rotation_xyzw'])
+        if len(base)!=3 or len(q)!=4 or not all(math.isfinite(x) for x in (*base,*q)):
+            raise ValueError('Invalid captured rigid placement')
+        rotation=App.Rotation(*q)
+    elif k=='tendon_r03_wheel':
+        W=m['center'];base=(m['source_start_x'],W[1],W[2])
+        rotation=App.Rotation(V((0,1,0)),V((0,0,1)),V((1,0,0)),'ZXY')
+        rotation=App.Rotation(V((1,0,0)),math.degrees(m['angle_rad'])).multiply(rotation)
+    elif k=='tendon_r03_guide':
+        C=m['center'];axis=m['axis'];component=m.get('component')
+        length=3.6 if component=='journal' else .2 if component=='washer' else .6 if component=='outer_clip' else 1.2
+        offset=m.get('axial_offset_mm',0)
+        base=tuple(c+(offset-length/2)*v for c,v in zip(C,axis))
+        rotation=App.Rotation(V((0,0,1)),V(axis))
+    elif k=='tendon_r03_cable':
+        base=(0,0,0);rotation=App.Rotation()
+    elif k=='torso_r03_offset':
+        base=m['point']
+        rotation=App.Rotation(V(m['rotation_local_axis']),m['rotation_deg'])
+    else:raise ValueError('Unsupported tendon parent frame: '+str(k))
+    return App.Placement(V(_world_tendon_point(E,a,base)),parent.multiply(rotation))
+
+
 def _plan(doc, theta, leg_angles=None):
     import FreeCAD as App
     import cad_common as cc
@@ -136,6 +197,7 @@ def _plan(doc, theta, leg_angles=None):
     torsos = {kind: (state['E1' if kind == 'hind' else 'E2'], torso_angle(theta, kind, p))
               for kind in ('hind', 'fore')}
     tags, angles, changed = _angles(motion, controller, leg_angles)
+    _guard_installed_tendons(motion,tags,angles)
     legs = {}
     for tag, (kind, side) in tags.items():
         g = leg_geometry(kind, thigh_angle=angles[tag][0], passive_knee=angles[tag][1])
@@ -154,6 +216,9 @@ def _plan(doc, theta, leg_angles=None):
             place = cc.plane_placement(state[m['point']], m['y'] + m['length']/2, theta)
         elif k == 'horn_screw':
             place = motion_placement(m, theta, state)
+        elif k in ('tendon_r03_wheel','tendon_r03_guide','tendon_r03_cable','torso_r03_offset','torso_r04_rigid'):
+            E,a=torsos[m.get('torso','hind')]
+            place=_tendon_placement(App,m,E,a)
         elif k in ('torso_r03', 'torso_offset_r03'):
             E, a = torsos[m['torso']]
             if k == 'torso_r03':

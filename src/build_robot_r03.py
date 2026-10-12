@@ -23,8 +23,8 @@ def finalize(b,save=True):
     if save:d.saveAs(str(ROOT/'cad/flexor_r03_robot.FCStd'))
     return b
 
-def build(save=True):
-    b=build_flexor.build(ROOT,save=False)
+def build(save=True,doc_name='FlexorR02'):
+    b=build_flexor.build(ROOT,save=False,doc_name=doc_name)
     spine_attachments_r02.apply(b)
     for kind in ('hind','fore'):
         transform=build_torso_r03.build_torso(b,kind)

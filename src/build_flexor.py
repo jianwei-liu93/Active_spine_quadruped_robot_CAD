@@ -63,10 +63,10 @@ class FlexorBuilder(Builder):
                 yy=(a+z)/2;src=self.ring('SPACER_2mm_L'+str(round(gap,3)),3,2.05,gap)
                 self.add(src,name+'_Spacer'+str(j),cc.hardware_place(P,yy,gap),'SpineHardware',{'kind':'point','point':key,'y':yy,'length':gap} if key else None)
 
-def build(root=ROOT,save=True):
+def build(root=ROOT,save=True,doc_name='FlexorR02'):
     root=Path(root);p=load_parameters(root/'parameters/candidate_r02.json')
-    if 'FlexorR02' in App.listDocuments():raise RuntimeError('Save/close FlexorR02 before rebuilding')
-    doc=App.newDocument('FlexorR02');b=FlexorBuilder(doc,p);s=spine(p['neutral_phase_rad'],p)
+    if doc_name in App.listDocuments():raise RuntimeError('Save/close '+doc_name+' before rebuilding')
+    doc=App.newDocument(doc_name);b=FlexorBuilder(doc,p);s=spine(p['neutral_phase_rad'],p)
     par=doc.addObject('App::FeaturePython','DesignParameters');par.addProperty('App::PropertyString','Revision');par.Revision='r02'
     par.addProperty('App::PropertyString','ParameterFile');par.ParameterFile='parameters/candidate_r02.json'
     for k,v in p.items():

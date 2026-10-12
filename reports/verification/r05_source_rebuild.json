@@ -1,0 +1,20 @@
+{
+  "revision": "r05",
+  "status": "PASS",
+  "instances": 464,
+  "mismatches": [
+    {
+      "instance": "Torso_hind",
+      "volume_error_mm3": 3.872574779961724e-06,
+      "bound_error_mm": 7.105427357601002e-15
+    }
+  ],
+  "method": "Independent fresh native MCP build from source; compare actual world volumes and all6bounds against saved incremental candidate; tolerances1e-6mm3/mm",
+  "limitations": "Not a full surface identity or fabrication certificate",
+  "torso_symmetric_difference_mm3": [
+    0.0,
+    0.0
+  ],
+  "torso_volume_relative_difference": 9.353831398716526e-10,
+  "numerical_note": "One3.87e-6mm3 volume integration difference remained between equivalent feature orders; both Boolean set differences measured empty. All actual world bounds match1e-6mm and allotherinstancevolumes match1e-6mm3."
+}

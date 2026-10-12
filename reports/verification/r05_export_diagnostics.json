@@ -1,0 +1,12 @@
+{
+  "artifacts_written_before_failure": [
+    "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/exports/step/r05/flexor_r05_robot.step"
+  ],
+  "error": "assembly STEP: volume relative error 1.2512800034e-06 exceeds 1e-06",
+  "error_type": "ValueError",
+  "note": "A failed export/round-trip run is not a package pass or fabrication release.",
+  "revision": "r05",
+  "stage": "validate_assembly_step",
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/export_robot_r05.py\", line 295, in run\n    assembly_checks = _check_shape(\n                      ^^^^^^^^^^^^^\n  File \"/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/export_robot_r05.py\", line 85, in _check_shape\n    raise ValueError(\nValueError: assembly STEP: volume relative error 1.2512800034e-06 exceeds 1e-06\n"
+}

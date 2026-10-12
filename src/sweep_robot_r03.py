@@ -21,7 +21,9 @@ REPROJECTION_TOL = 1e-6
 BOUND_KEYS = tuple(axis + end for axis in 'XYZ' for end in ('Min', 'Max'))
 FIXED_POINTS = frozenset(('O', 'A1', 'A2', 'E1', 'E2'))
 PLANAR_KINDS = frozenset(('segment', 'point', 'axialrot', 'horn_screw',
-                          'torso_r03', 'torso_offset_r03')) | pose.LEG_KINDS
+                          'torso_r03', 'torso_offset_r03', 'torso_r03_offset',
+                          'torso_r04_rigid', 'tendon_r03_wheel',
+                          'tendon_r03_guide', 'tendon_r03_cable')) | pose.LEG_KINDS
 
 
 def _write(path, value):
@@ -42,6 +44,15 @@ def _phases(step):
     return phases + [360.0]
 
 
+def _sample_phases(step, explicit=None):
+    if explicit is None:return _phases(step),None
+    requested=[float(v) for v in explicit]
+    if not all(math.isfinite(v) and 0<=v<=360 for v in requested):
+        raise ValueError('phase_values_deg must be finite and in [0,360]')
+    requested=sorted(set(requested))
+    return sorted(set([0.0]+requested)),requested
+
+
 def _group(m):
     """Only declared rigid relationships; unclassified descriptors stay dynamic.
 
@@ -54,8 +65,10 @@ def _group(m):
     k = m.get('kind')
     if k == 'point':
         return ('fixed',) if m['point'] in FIXED_POINTS else ('joint', m['point'])
-    if k in ('torso_r03', 'torso_offset_r03'):
+    if k in ('torso_r03', 'torso_offset_r03','torso_r03_offset','torso_r04_rigid'):
         return ('torso', m['torso'])
+    if k in ('tendon_r03_wheel','tendon_r03_guide','tendon_r03_cable'):
+        return ('torso',m.get('torso','hind'))
     if k in pose.LEG_KINDS:
         return ('torso', m['leg_type'])
     return None
@@ -78,7 +91,7 @@ def _world_copy(shape, initial, target):
     return copy
 
 
-def sweep(doc, step_deg=5, output=None):
+def sweep(doc, step_deg=5, output=None, phase_values_deg=None):
     """Return/write raw sampled intersections from copies of every App::Link.
 
     output defaults to reports/verification/r03_robot_spine_sweep.json.
@@ -90,10 +103,13 @@ def sweep(doc, step_deg=5, output=None):
     start = time.monotonic()
     output = Path(output or ROOT / 'reports/verification/r03_robot_spine_sweep.json')
     progress = output.with_name(output.stem + '_progress.json')
-    phases = _phases(step_deg)
+    phases, requested = _sample_phases(step_deg,phase_values_deg)
     report = {'revision': str(getattr(doc.DesignParameters,'Revision','r03')), 'status': 'RUNNING',
-              'scope': 'Actual native App::Link world-shape copies; full spine cycle; fixed saved leg angles; raw intersections without exceptions',
+              'scope': 'Actual native App::Link world-shape copies; ' + ('partial explicit spine phases' if requested is not None else 'full spine cycle') + '; fixed saved leg angles; raw intersections without exceptions',
               'step_deg': float(step_deg), 'sample_degrees': phases,
+              'requested_phase_values_deg':requested, 'actual_sample_degrees':phases,
+              'coverage_scope':'full_step_cycle' if requested is None else 'partial_explicit',
+              'requested_samples_total':len(phases) if requested is None else len(requested),
               'samples_total': len(phases), 'samples_completed': 0,
               'volume_tolerance_mm3': VOLUME_TOL,
               'bbox_overlap_tolerance_mm': BBOX_TOL,
@@ -124,6 +140,8 @@ def sweep(doc, step_deg=5, output=None):
         if controller is None:
             raise ValueError('PoseController is missing')
         motion = json.loads(controller.MotionMap)
+        report['document_sha256']=(hashlib.sha256(Path(doc.FileName).read_bytes()).hexdigest()
+                                   if doc.FileName and Path(doc.FileName).is_file() else None)
         report['motion_map_sha256'] = hashlib.sha256(controller.MotionMap.encode()).hexdigest()
         objs = [o for o in doc.Objects if o.TypeId == 'App::Link']
         if not objs:
@@ -259,13 +277,13 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cad', type=Path, default=ROOT / 'cad/flexor_r03_robot.FCStd')
     parser.add_argument('--step-deg', type=float, default=5)
+    parser.add_argument('--phase-values-deg',type=float,nargs='+',default=None)
     parser.add_argument('--output', type=Path, default=None)
     args = parser.parse_args(argv)
     import FreeCAD as App
     doc = App.openDocument(str(args.cad))
     try:
-        doc.recompute()
-        result = sweep(doc, args.step_deg, args.output)
+        result = sweep(doc, args.step_deg, args.output, args.phase_values_deg)
     finally:
         App.closeDocument(doc.Name)
     return 0 if result['status'] == 'PASS' else 1

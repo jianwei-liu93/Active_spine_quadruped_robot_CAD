@@ -1,0 +1,660 @@
+[
+  {
+    "source": "ENV_XL330_r02",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPN_r02_L2",
+    "volume_relative_error": 1.2977284851900143e-16,
+    "volume_absolute_error_mm3": -2.842170943040401e-14,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPN_r02_L3",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPN_r02_L4",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPN_r02_L5",
+    "volume_relative_error": 2.480602248694345e-16,
+    "volume_absolute_error_mm3": -7.105427357601002e-15,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "DIRECT_CRANK_FLUSH_M2_R",
+    "volume_relative_error": 9.73807992074095e-15,
+    "volume_absolute_error_mm3": -6.536993168992922e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "PIN_D1_9_L5_2",
+    "volume_relative_error": 1.614597211225848e-16,
+    "volume_absolute_error_mm3": 3.552713678800501e-15,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "BRG_2x4x1p2_PROVISIONAL",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+    "volume_relative_error": 3.391468657361076e-14,
+    "volume_absolute_error_mm3": 1.341149413747189e-13,
+    "bbox_error_mm": 1.021405182655144e-14,
+    "solids": 1
+  },
+  {
+    "source": "SPACER_2mm_L0_6",
+    "volume_relative_error": 4.517955427319705e-15,
+    "volume_absolute_error_mm3": 1.021405182655144e-14,
+    "bbox_error_mm": 2.7755575615628914e-15,
+    "solids": 1
+  },
+  {
+    "source": "G_CRANK_SPACER_L0p3",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPACER_2mm_L3_6",
+    "volume_relative_error": 7.857313786642936e-16,
+    "volume_absolute_error_mm3": 1.0658141036401503e-14,
+    "bbox_error_mm": 3.1086244689504383e-15,
+    "solids": 1
+  },
+  {
+    "source": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPACER_2mm_L9_0",
+    "volume_relative_error": 4.1905673528762307e-16,
+    "volume_absolute_error_mm3": 1.4210854715202004e-14,
+    "bbox_error_mm": 3.552713678800501e-15,
+    "solids": 1
+  },
+  {
+    "source": "GUIDE_COPPER_r02",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 8.881784197001252e-16,
+    "solids": 1
+  },
+  {
+    "source": "SPACER_2mm_L3_0",
+    "volume_relative_error": 9.428776543971506e-16,
+    "volume_absolute_error_mm3": -1.0658141036401503e-14,
+    "bbox_error_mm": 2.6645352591003757e-15,
+    "solids": 1
+  },
+  {
+    "source": "SPACER_2mm_L1_8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "DIRECT_CRANK_FLUSH_M2_L",
+    "volume_relative_error": 9.73807992074095e-15,
+    "volume_absolute_error_mm3": -6.536993168992922e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "FRM_LUMBAR_HORIZONTAL_SHELF_R_r04",
+    "volume_relative_error": 6.522619995632912e-14,
+    "volume_absolute_error_mm3": -2.6147972675971687e-10,
+    "bbox_error_mm": 9.283240842705709e-12,
+    "solids": 1
+  },
+  {
+    "source": "FRM_LUMBAR_HORIZONTAL_SHELF_L_r04",
+    "volume_relative_error": 3.686698258401204e-14,
+    "volume_absolute_error_mm3": -1.4779288903810084e-10,
+    "bbox_error_mm": 9.283240842705709e-12,
+    "solids": 1
+  },
+  {
+    "source": "A_OUTER_SPACER_L6_6",
+    "volume_relative_error": 2.8572050133247013e-16,
+    "volume_absolute_error_mm3": -7.105427357601002e-15,
+    "bbox_error_mm": 1.7763568394002505e-15,
+    "solids": 1
+  },
+  {
+    "source": "A_OUTER_SPACER_L8_4",
+    "volume_relative_error": 2.2449467961836943e-16,
+    "volume_absolute_error_mm3": 7.105427357601002e-15,
+    "bbox_error_mm": 1.7763568394002505e-15,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_CAPTURE_CAP_NEG",
+    "volume_relative_error": 1.1876795050661875e-16,
+    "volume_absolute_error_mm3": 3.552713678800501e-15,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_CAPTURE_CAP_POS",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "HORN_GAP_WASHER_OD8_T0p3",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "HORN_M2_TRIMMED_CORE_L1p9",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "FIXED_TIE_OD2p4_TAPMINOR1p7_L53p6",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "FIXED_TIE_M2_CORE_L2p8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 4.440892098500626e-16,
+    "solids": 1
+  },
+  {
+    "source": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TORSO_HIND_CAGE_r03",
+    "volume_relative_error": 2.91905818758516e-08,
+    "volume_absolute_error_mm3": -0.00012085177331755403,
+    "bbox_error_mm": 1.8687273950490635e-12,
+    "solids": 1
+  },
+  {
+    "source": "TORSO_OUTPUT_SPACER_L11_0",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TORSO_OUTPUT_SPACER_L19_4",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "ENV_XC330_M181_HIND_DATUM_r03",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_HIND_THIGH",
+    "volume_relative_error": 8.37747013574774e-15,
+    "volume_absolute_error_mm3": -1.3642420526593924e-12,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_HIND_SHANK",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+    "volume_relative_error": 5.25345673686143e-15,
+    "volume_absolute_error_mm3": 5.968558980384842e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+    "volume_relative_error": 2.382070255907883e-13,
+    "volume_absolute_error_mm3": 5.118749868415762e-11,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_CURVED_CONTACT_PAD",
+    "volume_relative_error": 3.426860262856315e-16,
+    "volume_absolute_error_mm3": 3.552713678800501e-15,
+    "bbox_error_mm": 4.259848888193464e-29,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+    "volume_relative_error": 2.646578059123899e-15,
+    "volume_absolute_error_mm3": 1.8474111129762605e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+    "volume_relative_error": 8.211298068083716e-16,
+    "volume_absolute_error_mm3": -2.4868995751603507e-14,
+    "bbox_error_mm": 1.7763568394002505e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+    "volume_relative_error": 4.517955427319705e-15,
+    "volume_absolute_error_mm3": 1.021405182655144e-14,
+    "bbox_error_mm": 2.7755575615628914e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_JOURNAL_D1p9_L4p7",
+    "volume_relative_error": 2.247261030600671e-15,
+    "volume_absolute_error_mm3": -2.842170943040401e-14,
+    "bbox_error_mm": 9.769962616701378e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_JOURNAL_D1p9_L13p75",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+    "volume_relative_error": 1.0607373611967943e-15,
+    "volume_absolute_error_mm3": -1.5987211554602254e-14,
+    "bbox_error_mm": 2.6645352591003757e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_JOURNAL_D1p9_L11p7",
+    "volume_relative_error": 1.0933351574626764e-15,
+    "volume_absolute_error_mm3": -3.552713678800501e-14,
+    "bbox_error_mm": 1.0658141036401503e-14,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+    "volume_relative_error": 2.7857748879915765e-15,
+    "volume_absolute_error_mm3": -2.3092638912203256e-14,
+    "bbox_error_mm": 5.329070518200751e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+    "volume_relative_error": 5.612366990459237e-16,
+    "volume_absolute_error_mm3": 8.881784197001252e-15,
+    "bbox_error_mm": 1.7763568394002505e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_JOURNAL_D1p9_L10p75",
+    "volume_relative_error": 1.1921555857973922e-16,
+    "volume_absolute_error_mm3": 3.552713678800501e-15,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+    "volume_relative_error": 6.414133703381987e-16,
+    "volume_absolute_error_mm3": 1.7763568394002505e-14,
+    "bbox_error_mm": 3.552713678800501e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956",
+    "volume_relative_error": 5.34579398193269e-06,
+    "volume_absolute_error_mm3": -0.0003465410864578189,
+    "bbox_error_mm": 5.995204332975845e-14,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766",
+    "volume_relative_error": 2.890493386806874e-06,
+    "volume_absolute_error_mm3": 8.691265208327081e-05,
+    "bbox_error_mm": 3.352873534367973e-13,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+    "volume_relative_error": 2.5575046392515197e-07,
+    "volume_absolute_error_mm3": -5.526748623196909e-06,
+    "bbox_error_mm": 2.220446049250313e-16,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+    "volume_relative_error": 5.34579398193269e-06,
+    "volume_absolute_error_mm3": -0.0003465410864578189,
+    "bbox_error_mm": 5.995204332975845e-14,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+    "volume_relative_error": 2.890493386806874e-06,
+    "volume_absolute_error_mm3": 8.691265208327081e-05,
+    "bbox_error_mm": 3.352873534367973e-13,
+    "solids": 1
+  },
+  {
+    "source": "TORSO_FORE_CAGE_r03",
+    "volume_relative_error": 1.0150301021742087e-13,
+    "volume_absolute_error_mm3": -2.687556843739003e-10,
+    "bbox_error_mm": 6.775024985472555e-12,
+    "solids": 1
+  },
+  {
+    "source": "ENV_XC330_M181_FORE_DATUM_r03",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_FORE_THIGH",
+    "volume_relative_error": 7.526029933729465e-15,
+    "volume_absolute_error_mm3": -9.094947017729282e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_FORE_SHANK",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+    "volume_relative_error": 5.4915397255326706e-15,
+    "volume_absolute_error_mm3": 4.973799150320701e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+    "volume_relative_error": 7.424236355732323e-13,
+    "volume_absolute_error_mm3": -1.7286083675571717e-10,
+    "bbox_error_mm": 7.318590178329032e-12,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+    "volume_relative_error": 2.646578059123899e-15,
+    "volume_absolute_error_mm3": 1.8474111129762605e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_JOURNAL_D1p9_L9p9",
+    "volume_relative_error": 5.188192742044826e-16,
+    "volume_absolute_error_mm3": -1.4210854715202004e-14,
+    "bbox_error_mm": 5.329070518200751e-15,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+    "volume_relative_error": 4.8705120437099465e-06,
+    "volume_absolute_error_mm3": -0.00021029666730498775,
+    "bbox_error_mm": 3.126388037344441e-13,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+    "volume_relative_error": 0.0019138769109959786,
+    "volume_absolute_error_mm3": -0.05722099968641814,
+    "bbox_error_mm": 2.362554596402333e-13,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383",
+    "volume_relative_error": 4.8705120437099465e-06,
+    "volume_absolute_error_mm3": -0.00021029666730498775,
+    "bbox_error_mm": 3.126388037344441e-13,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375",
+    "volume_relative_error": 0.0019138769109959786,
+    "volume_absolute_error_mm3": -0.05722099968641814,
+    "bbox_error_mm": 2.362554596402333e-13,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+    "volume_relative_error": 1.5457010727822154e-16,
+    "volume_absolute_error_mm3": -1.1368683772161603e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+    "volume_relative_error": 1.5457010727822154e-16,
+    "volume_absolute_error_mm3": -1.1368683772161603e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r03_WHEEL_OD13_4p4772482_1p6145357",
+    "volume_relative_error": 2.7595861070428147e-15,
+    "volume_absolute_error_mm3": 7.389644451905042e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "ENV_TENDON_XC330_M181_r03",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+    "volume_relative_error": 2.892974895734418e-16,
+    "volume_absolute_error_mm3": 3.552713678800501e-15,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r03_HindTendon_R_CABLE_u001",
+    "volume_relative_error": 3.286801239321818e-14,
+    "volume_absolute_error_mm3": 2.8066438062523957e-13,
+    "bbox_error_mm": 1.0000000116860974e-07,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r03_HindTendon_L_CABLE_u001",
+    "volume_relative_error": 3.066053213401459e-13,
+    "volume_absolute_error_mm3": -2.595257342363766e-12,
+    "bbox_error_mm": 1.0000000116860974e-07,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+    "volume_relative_error": 1.628576769802756e-15,
+    "volume_absolute_error_mm3": 1.5987211554602254e-14,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "KNEE_r05_REMOVABLE_REAR_LOCK",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "KNEE_r05_M2_CORE_D1p65_L8p8",
+    "volume_relative_error": 2.785458360208415e-14,
+    "volume_absolute_error_mm3": 9.094947017729282e-13,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+    "volume_relative_error": 9.877623852770682e-14,
+    "volume_absolute_error_mm3": 3.204547738278052e-12,
+    "bbox_error_mm": 4.9649173661237e-13,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r05_ANKLE_SWIVEL_EYE_OD4_ID2p05_T1p2_RADIALp4",
+    "volume_relative_error": 9.277710219838267e-06,
+    "volume_absolute_error_mm3": -0.00010201918817465128,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  },
+  {
+    "source": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+    "volume_relative_error": 0.0,
+    "volume_absolute_error_mm3": 0.0,
+    "bbox_error_mm": 0.0,
+    "solids": 1
+  }
+]

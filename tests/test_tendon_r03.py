@@ -133,4 +133,20 @@ class TendonR03Tests(unittest.TestCase):
         with self.assertRaises(ValueError): tendon_route(1,float('nan'))
         with self.assertRaises(ValueError): tendon_route(1,0,transform=lambda p:(p[0]*2,p[1]))
 
+    def test_r05_eye_termination_preserves_route_and_constant_take_up(self):
+        cfg={'cable_plane_mm':57,'wheel_x_mm':-50}
+        for side in (-1,1):
+            virtual=tendon_route(side,**cfg)
+            eye=tendon_route(side,ankle_eye_radius_mm=1.5,**cfg)
+            self.assertAlmostEqual(virtual['length_mm']-eye['length_mm'],1.5)
+            self.assertAlmostEqual(math.dist(eye['ankle_anchor'],eye['virtual_ankle_axis']),1.5)
+            for name in ('shell_guide','hip_guide'):
+                self.assertEqual(virtual[name],eye[name])
+            self.assertLess(max(eye['tangency_errors'].values()),1e-10)
+            q=bilateral_states(.4,ankle_eye_radius_mm=1.5,**cfg)['branches'][side]
+            self.assertAlmostEqual(q['available_mm'],eye['length_mm']+.5)
+            self.assertAlmostEqual(q['path_mm']-eye['length_mm'],.4*5.5)
+        for radius in (-1,float('nan'),1000):
+            with self.assertRaises(ValueError):tendon_route(1,ankle_eye_radius_mm=radius,**cfg)
+
 if __name__=='__main__': unittest.main()
