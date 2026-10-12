@@ -1,0 +1,14 @@
+{
+  "event": "Native FreeCAD SIGSEGV during first combined r06 frame integration; GroupExtension::addObject in stack",
+  "root_cause": "UNPROVEN; stale group/body handles during source replacement/deletion suspected",
+  "saved_checkpoint_preserved": "cad/flexor_r05_robot.FCStd",
+  "recovery": "Restart installed FreeCAD, cancel crash-recovery dialog, reopen saved r05; reconstruct builder from live current document; integrate lumbar, torso and tendon supports in separate stages",
+  "successful_recovery_checkpoints": [
+    "cad/checkpoints/r06_lumbar_only.FCStd",
+    "cad/checkpoints/r06_frames_before_tendon.FCStd",
+    "cad/checkpoints/r06_frames_clean.FCStd",
+    "cad/flexor_r06_robot.FCStd"
+  ],
+  "source_cleanup": "Snapshot child names; detach obsolete body from library; delete body first; reacquire surviving child objects by name. No single transaction spans source replacement/deletion. Fresh complete r06 build passes.",
+  "final_native_sha256": "812074066fa3803c865dea3ae7b537d0677246642141e042a9e39912af2a45e8"
+}

@@ -15,3 +15,7 @@ reports/verification/r02_sweep_progress.json
 reports/tmp/
 reports/verification/r03_sweep_progress.json
 reports/verification/*_progress.json
+
+# Failed diagnostic exports are retained locally, with the failure record tracked.
+reports/diagnostics/r05_failed_step_export/*.step
+reports/diagnostics/r05_failed_step_export/parts/

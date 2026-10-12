@@ -1,0 +1,298 @@
+{
+  "revision": "r06",
+  "spine_parameters": "candidate_r02.json",
+  "units": {
+    "length": "mm",
+    "angle": "rad"
+  },
+  "provenance": "DESIGN_ASSUMPTION except explicitly identified purchased envelopes and paper wheel OD",
+  "parameters": {
+    "thigh_y_mm": 44.4,
+    "shank_y_mm": 46.2,
+    "foot_y_mm": 48.0,
+    "return_rail_y_mm": 49.8,
+    "spring_y_mm": 53.2,
+    "motor_horn_y_mm": 51.4,
+    "torso_inner_y_mm": 15.2,
+    "torso_outer_y_mm": 42.6,
+    "torso_plate_thickness_mm": 1.6,
+    "wheel_od_mm": 13.0,
+    "wheel_pitch_radius_mm": 5.5,
+    "wheel_axle_x_local_mm": -50,
+    "wheel_axle_z_local_mm": 0,
+    "cable_diameter_mm": 0.3,
+    "shell_guide_radius_mm": 2.5,
+    "hip_offsets_local_mm": {
+      "hind": -27,
+      "fore": 24
+    },
+    "extension_spring_y_mm": 54.4,
+    "hip_case_center_y_mm": 29,
+    "hip_case_outer_face_y_mm": 42,
+    "hind_case_local_z_bounds_mm": [
+      -20,
+      14
+    ],
+    "fore_case_local_z_bounds_mm": [
+      -7,
+      27
+    ],
+    "cable_plane_y_abs_mm": 57,
+    "finite_guide_od_mm": 5.4,
+    "knee_motor_x_local_mm": -35.6,
+    "ankle_eye_radius_mm": 1.5,
+    "ankle_eye_plane_abs_y_mm": 57,
+    "ankle_journal_outer_abs_y_mm": 58.5
+  },
+  "source_facts": {
+    "wheel_od_mm": "PAPER_REPORTED; SI fabrication",
+    "servo_envelope_mm": "MANUFACTURER_VERIFIED in supplier report; mounting/output datums unknown",
+    "motor_models": {
+      "spine": {
+        "quantity": 2,
+        "manufacturer_model": "XL330-M077-T",
+        "paper_name": "XL330\u2013077-T"
+      },
+      "legs": {
+        "quantity": 5,
+        "manufacturer_model": "XC330-M181-T",
+        "paper_name": "XC-M181-T",
+        "installed_at_checkpoint": 5
+      }
+    }
+  },
+  "states": {
+    "commands": [
+      "spine_phase",
+      "fore_left_motor",
+      "fore_right_motor",
+      "hind_left_motor",
+      "hind_right_motor",
+      "common_hind_wheel"
+    ],
+    "passive_candidate": [
+      "four knees/elbows"
+    ],
+    "dependent": "ankles from uncrossed parallelogram; qa=-qk",
+    "wheel_interval_rad": [
+      0,
+      1.5707963267948966
+    ]
+  },
+  "limits": "Movie S1 frame morphology revision; all new dimensions provisional. Preserve current joint/motor/cable datums first. Reverify native geometry and motion; r05 results do not validate r06.",
+  "leg_geometry": {
+    "fore_lengths_mm": [
+      22,
+      24,
+      34
+    ],
+    "hind_lengths_mm": [
+      29,
+      30,
+      31
+    ],
+    "fore_neutral_angles_deg": [
+      -50,
+      -90
+    ],
+    "hind_neutral_angles_deg": [
+      -40,
+      -100
+    ],
+    "fixed_horn_bend_deg": {
+      "fore": 60,
+      "hind": 60
+    },
+    "mounting": "neutral torso angles chosen zero; absolute paper datum unknown",
+    "return_offsets": "O1=K-6e(qh), A1=A-6e(qh), O3=K-6e(qh+qk)",
+    "direct_hip_drive": true,
+    "orientation_evidence": "Latest user Figure E / Movie S2: both chains share forward/down thigh and toe, rearward/down shank. Earlier opposing-direction audit superseded."
+  },
+  "spine_frame": {
+    "morphology_source": "Movie S1 52-60s exploded assembly",
+    "horizontal_rail_width_mm": 5,
+    "shelf_x_intervals_mm": [
+      [
+        -35.5,
+        -16
+      ],
+      [
+        16,
+        35.5
+      ]
+    ],
+    "shelf_z_interval_mm": [
+      -2.5,
+      2.5
+    ],
+    "shelf_axial_depth_mm": 11,
+    "journal_boss_od_mm": 7,
+    "journal_bore_mm": 4.05,
+    "minimum_selected_radial_boss_wall_mm": 1.475,
+    "cross_shaft_center_od_mm": 3.6,
+    "journal_od_mm": 1.9,
+    "A_C_shaft_length_mm": 85.6,
+    "B_shaft_length_mm": 72,
+    "caps": "native recessed collars; hidden split clips; exact original nut/thread UNKNOWN",
+    "kinematic_change": "none; bilateral copies share original A/B/C axes"
+  },
+  "case_datum_provenance": "DESIGN_ASSUMPTION: shift horizontal hind case/cage 6mm rearward relative H after sampled guide/rocker collisions; preserves verified 20x26x34mm motor dimensions. Vendor output datum UNKNOWN.",
+  "attachment_frame": {
+    "provenance": "DESIGN_ASSUMPTION dimensions; Movie S1 58-60s supports transverse slotted output plate and short sagittal E/D ears",
+    "plate_y_bounds_mm": [
+      -18,
+      18
+    ],
+    "plate_z_bounds_mm": [
+      -16,
+      24
+    ],
+    "plate_thickness_mm": 1.6,
+    "plate_corner_radius_mm": 2,
+    "plate_inner_x_mm": {
+      "fore": 12.4,
+      "hind": -11.4
+    },
+    "plate_normal_x": {
+      "fore": 1,
+      "hind": -1
+    },
+    "ear_y_centers_mm": [
+      -15.2,
+      15.2
+    ],
+    "ear_thickness_mm": 1.6,
+    "ear_width_mm": 7,
+    "bearing_bore_mm": 4.05,
+    "outer_hip_support_y_mm": [
+      -42.6,
+      42.6
+    ],
+    "outer_hip_panel_thickness_mm": 1.2,
+    "slot_width_mm": 2.2,
+    "center_slot_z_length_mm": 14,
+    "corner_slot_centers_yz_mm": [
+      [
+        -12,
+        -10
+      ],
+      [
+        -12,
+        10
+      ],
+      [
+        12,
+        -10
+      ],
+      [
+        12,
+        10
+      ]
+    ],
+    "corner_slot_z_length_mm": 6,
+    "fore_panel_xz_outer_mm": [
+      12,
+      -9,
+      24,
+      38
+    ],
+    "fore_panel_xz_window_mm": [
+      17,
+      7,
+      14,
+      18
+    ],
+    "hind_panel_xz_outer_mm": [
+      -49,
+      -12,
+      38,
+      24
+    ],
+    "hind_panel_xz_window_mm": [
+      -46,
+      2,
+      32,
+      7
+    ],
+    "pan_thickness_mm": 1.2,
+    "case_y_bounds_positive_mm": [
+      16,
+      42
+    ],
+    "pan_y_bounds_positive_mm": [
+      14.4,
+      43.2
+    ],
+    "case_x_bounds_mm": {
+      "fore": [
+        14,
+        34
+      ],
+      "hind": [
+        -47,
+        -13
+      ]
+    },
+    "case_z_bounds_mm": {
+      "fore": [
+        -7,
+        27
+      ],
+      "hind": [
+        -10,
+        10
+      ]
+    },
+    "top_strap_x_width_mm": 2,
+    "inner_case_band_width_mm": 4,
+    "hind_knee_connector_x_bounds_mm": [
+      -22.6,
+      -11.4
+    ],
+    "hind_knee_connector_y_bounds_positive_mm": [
+      8.5,
+      15
+    ],
+    "hind_knee_connector_z_bounds_mm": [
+      -2.5,
+      2.5
+    ],
+    "supplier_mounting_pattern": "UNKNOWN; frame slots are generic reconstruction features, not manufacturer mounting holes",
+    "outer_hip_boss_od_mm": 7,
+    "plate_width_basis": "Provisional36mm portrait end plate, spanning existing\u00b115.2mm E/D ears and staying between moving side-link planes. Source supports morphology, not measured width."
+  },
+  "lumbar_frame_r06": {
+    "provenance": "DESIGN_ASSUMPTION dimensions; Movie S1 52-54s lower rounded opening and upper rectangular window morphology",
+    "outer_lower_radius_mm": 13.5,
+    "outer_upper_rectangle_mm": [
+      -12,
+      0,
+      24,
+      29
+    ],
+    "lower_opening_radius_mm": 8,
+    "upper_window_mm": [
+      -7,
+      9,
+      14,
+      17
+    ],
+    "local_platform_x_intervals_mm": [
+      [
+        -35.5,
+        -10
+      ],
+      [
+        10,
+        35.5
+      ]
+    ],
+    "platform_z_bounds_mm": [
+      -2.5,
+      2.5
+    ],
+    "shelves_retained_from_r04": true,
+    "pivots_and_case_angle_unchanged": true,
+    "radius_basis": "Provisional rounded foot retains material around existing tie-boss centers; not measured from video."
+  }
+}

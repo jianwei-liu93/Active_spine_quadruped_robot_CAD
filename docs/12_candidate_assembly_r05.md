@@ -63,10 +63,10 @@ This order reflects the current native features and modeled part paths. The crit
 - **`DESIGN_ASSUMPTION`:** cage and removable-lock geometry, guide supports/journals/clips, axle/cable planes, route/retention model, eye, spacer, journal extension, fits, cable and spring states, and motor-output adapters.
 - **`UNKNOWN` / `PENDING`:** cable end securing, motor and controller mounts, output spline/horn geometry, cage/load qualification, service access, moving tendon behavior, power/harness, and fabrication tolerances. No purchase, physical assembly, motor operation, CAD fabrication release, or controller installation is claimed.
 
-[01] [Project reference evidence and motor-name mapping](01_reference_evidence.md).  
-[A1] [r05 actuator-count audit](../reports/verification/r05_actuators.json).  
-[N1] [r05 prescribed-pose native neutral report](../reports/verification/r05_robot_neutral.json).  
-[O1] [OpenRB-150 supplier interface evidence](../reports/sources/openrb150_interfaces_r04.md).  
+[01] [Project reference evidence and motor-name mapping](01_reference_evidence.md).
+[A1] [r05 actuator-count audit](../reports/verification/r05_actuators.json).
+[N1] [r05 prescribed-pose native neutral report](../reports/verification/r05_robot_neutral.json).
+[O1] [OpenRB-150 supplier interface evidence](../reports/sources/openrb150_interfaces_r04.md).
 [P5] [r05 assembly parameters](../parameters/assembly_r05.json).
 
 ## Actual source files read

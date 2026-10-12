@@ -1,0 +1,12 @@
+{
+  "revision": "r06",
+  "status": "PASS",
+  "feature": "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+  "length_mm_before": 1.6,
+  "length_mm_test": 1.7000000000000002,
+  "volume_mm3_before": 6318.234887198185,
+  "volume_mm3_test": 6449.524514666779,
+  "restored_volume_error_mm3": 0.0,
+  "test_shape_valid_single_solid": true,
+  "scope": "Native PartDesign plate thickness edit/recompute/restore; temporary parameter test does not establish changed-pose clearance"
+}

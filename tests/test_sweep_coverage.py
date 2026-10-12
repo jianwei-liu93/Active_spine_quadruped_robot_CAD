@@ -33,17 +33,32 @@ class SweepCoverageTests(unittest.TestCase):
               'pair_coverage':{'all_pairs':1,'neutral_all_pairs_once':True,'pair_samples_covered_including_cache':len(phases),'pair_samples_expected':len(phases)},
               'sample_degrees':phases,'actual_sample_degrees':phases,'samples_total':len(phases),'samples_completed':len(phases)}
         return [row(list(range(181))),row([0]+list(range(181,361)))]
-    def run_fixture(self,rows):
+    def run_fixture(self,rows,**kwargs):
         with tempfile.TemporaryDirectory() as directory:
             paths=[]
             for i,r in enumerate(rows):
                 p=Path(directory)/('part'+str(i)+'.json');p.write_text(json.dumps(r));paths.append(p)
-            return aggregate(paths)
+            return aggregate(paths,**kwargs)
     def test_complete_actual_fixture_coverage_and_duplicate_neutral_count(self):
         result=self.run_fixture(self.reports())
         self.assertEqual(result['samples_completed'],361)
         self.assertEqual(result['actual_partition_sample_count'],362)
         self.assertEqual(result['duplicate_phase_samples'],1)
+    def test_coarse_coverage_cannot_claim_full_degree_pass(self):
+        rows=self.reports()
+        for r in rows:
+            phases=[v for v in r['sample_degrees'] if v%15==0]
+            r['revision']='r06'
+            r['sample_degrees']=r['actual_sample_degrees']=phases
+            r['samples_total']=r['samples_completed']=len(phases)
+            r['pair_coverage']['pair_samples_covered_including_cache']=len(phases)
+            r['pair_coverage']['pair_samples_expected']=len(phases)
+        with self.assertRaisesRegex(ValueError,'Missing actual phase'):self.run_fixture(rows)
+        result=self.run_fixture(rows,expected_phase_values_deg=range(0,361,15))
+        self.assertEqual(result['coverage_kind'],'explicit_samples')
+        self.assertEqual(result['revision'],'r06')
+        self.assertEqual(result['samples_completed'],25)
+
     def test_missing_hash_inventory_failed_or_incomplete_partition_rejected(self):
         mutations=[lambda r:r[1].update(document_sha256='c'*64),
                    lambda r:r[1].update(status='FAIL'),

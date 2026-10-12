@@ -9,7 +9,7 @@ _MATCH_FIELDS=('revision','document_sha256','motion_map_sha256','volume_toleranc
                'bbox_overlap_tolerance_mm','reprojection_tolerance_mm','leg_angles_rad',
                'motion_kinds','instances')
 
-def aggregate(paths,output=None):
+def aggregate(paths,output=None,expected_phase_values_deg=None):
     paths=[Path(p) for p in paths]
     if not paths:raise ValueError('No actual partition reports supplied')
     reports=[json.loads(p.read_text()) for p in paths]
@@ -59,9 +59,13 @@ def aggregate(paths,output=None):
         if pc.get('pair_samples_expected')!=pc.get('all_pairs',-1)*len(phases):
             raise ValueError('Incorrect expected pair samples')
         sample_count+=len(phases);coverage.update(int(v) for v in phases)
-    missing=sorted(set(range(361))-coverage)
+    expected=set(range(361)) if expected_phase_values_deg is None else set(expected_phase_values_deg)
+    if not expected or any(not math.isfinite(v) or not 0<=v<=360 or not float(v).is_integer() for v in expected):raise ValueError('Invalid required integer-degree coverage')
+    missing=sorted(expected-coverage)
     if missing:raise ValueError('Missing actual phase degrees: '+repr(missing))
-    result={'revision':'r05','status':'PASS','scope':'Actual native partition evidence covering every integer degree 0..360; fixed saved leg/wheel states; sampled raw intersection checks only',
+    if coverage!=expected:raise ValueError('Actual coverage differs from declared required poses')
+    result={'revision':reference['revision'],'status':'PASS','scope':'Actual native partition evidence for explicitly listed spine poses; fixed saved leg/wheel states; sampled raw intersection checks only',
+            'coverage_kind':'full_integer_degrees' if expected==set(range(361)) else 'explicit_samples',
             'sample_degrees':sorted(coverage),'samples_total':len(coverage),'samples_completed':len(coverage),
             'actual_partition_sample_count':sample_count,'duplicate_phase_samples':sample_count-len(coverage),
             'partition_reports':[str(p.resolve()) for p in paths],'partitions':len(paths),

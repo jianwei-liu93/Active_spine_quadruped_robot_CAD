@@ -12,8 +12,9 @@ def case_clearances(b,body,routes):
     import cad_common as cc
     V=App.Vector
     ties=b.doc.getObject('hindCrossTiesProfile')
-    for i in reversed(range(ties.GeometryCount)):
-        if ties.Geometry[i].Center.y>0:ties.delGeometry(i)
+    if ties is not None and ties in body.Group:
+        for i in reversed(range(ties.GeometryCount)):
+            if ties.Geometry[i].Center.y>0:ties.delGeometry(i)
     rear=routes[-1]['wheel']['axle_center'][0]+27.4
     if b.doc.getObject('KneeLockThroughBores'):return
     old=body.Tip
@@ -25,13 +26,13 @@ def case_clearances(b,body,routes):
     b.doc.recompute();sk.Visibility=False;old.Visibility=False
 
 
-def apply(b,routes,transform=None):
+def apply(b,routes,transform=None,body_override=None):
     import FreeCAD as App
     import cad_common as cc
     from refine_flexor import rect,disk,sketch_face
     from tendon_r03 import _transformers
     V=App.Vector
-    body=b.doc.getObject('TORSO_HIND_CAGE_r03')
+    body=body_override or b.doc.getObject('TORSO_HIND_CAGE_r03')
     if body is None:raise ValueError('Build hind torso before its tendon mounts')
     if b.doc.getObject('KneeCageRearBridge'):raise ValueError('Mounts already installed')
     dx=routes[-1]['wheel']['axle_center'][0]+37
@@ -78,45 +79,46 @@ def apply(b,routes,transform=None):
             disk(-15,side*12.8,2.5).cut(disk(-15,side*12.8,1.1)),
             (rear-3.6,0,0),(1,0,0),4.8)
     case_clearances(b,body,routes)
-    def source_pad(src,name,face,z,length,reverse=False):
-        old=src.Tip;sk=sketch_face(b.doc,src,name+'Profile',face,z)
-        p=src.newObject('PartDesign::Pad',name);p.Profile=sk;p.Length=length;p.Reversed=reverse
-        b.doc.recompute();sk.Visibility=False
-        if old:old.Visibility=False
-        return p
-    lock=b.doc.addObject('PartDesign::Body','KNEE_r05_REMOVABLE_REAR_LOCK')
-    cc.metadata(lock,lock.Name,'PA12','ASSUMED case-face lock with M2 through bolts; exact case datum/access/load unverified')
-    f=rect(-15.3,13,30.6,4)
-    for y in (-12.8,12.8):f=f.cut(disk(y,15,1.1))
-    source_pad(lock,'KneeRearLockPlate',f,0,1.2)
-    source_pad(lock,'KneeRearLockContactRib',rect(-8,14,16,2),0,1.2,True)
-    bolt=b.ring('KNEE_r05_M2_CORE_D1p65_L8p8',1.65,0,8.8)
-    source_pad(bolt,'KneeBoltHead',disk(0,0,1.75),8.8,1.6)
-    # Hex socket provides an explicit driver access feature.
-    import Part
-    old=bolt.Tip
-    hp=[V((1.5/math.sqrt(3))*math.cos(i*math.pi/3),(1.5/math.sqrt(3))*math.sin(i*math.pi/3),0) for i in range(6)]
-    hs=sketch_face(b.doc,bolt,'KneeBoltHexSocketProfile',Part.Face(Part.makePolygon(hp+[hp[0]])),10.4)
-    hc=bolt.newObject('PartDesign::Pocket','KneeBoltHexSocket');hc.Profile=hs;hc.Length=.8
-    b.doc.recompute();hs.Visibility=False;old.Visibility=False
-    # Hex nut has an explicit minor bore; cosmetic threads are omitted.
-    nut=b.doc.addObject('PartDesign::Body','KNEE_r05_M2_HEX_NUT_AF4_T2p8')
-    cc.metadata(nut,nut.Name,'steel','ASSUMED M2 nut envelope/minor bore; supplier thread/strength unverified',role='HARDWARE')
-    pts=[V((4/math.sqrt(3))*math.cos(i*math.pi/3),(4/math.sqrt(3))*math.sin(i*math.pi/3),0) for i in range(6)]
-    nf=Part.Face(Part.makePolygon(pts+[pts[0]])).cut(disk(0,0,.85))
-    source_pad(nut,'KneeNutPad',nf,0,2.8)
-    for src in (lock,nut):b.library.addObject(src);b.sources[src.Name]=src
-    tf,tv=_transformers(transform)
-    rotation=App.Rotation(V(*tv((0,1,0))),V(*tv((0,0,1))),V(*tv((1,0,0))),'ZXY')
-    localrot=App.Rotation(V(0,1,0),V(0,0,1),V(1,0,0),'ZXY')
-    def add(src,name,origin):
-        desc={'kind':'torso_r04_rigid','torso':'hind','local_placement_json':json.dumps({'base_xyz_mm':origin,'rotation_xyzw':tuple(localrot.Q)})}
-        b.add(src,name,App.Placement(V(*tf(origin)),rotation),'Tendons',desc)
-    add(lock,'HindTendon_RearCaseLock',(rear+1.2,0,0))
-    for side in (-1,1):
-        label='L' if side==1 else 'R'
-        add(bolt,'HindTendon_CaseLockBolt'+label,(rear-6.4,side*12.8,15))
-        add(nut,'HindTendon_CaseLockNut'+label,(rear-6.4,side*12.8,15))
+    if b.doc.getObject('HindTendon_RearCaseLock') is None:
+        def source_pad(src,name,face,z,length,reverse=False):
+            old=src.Tip;sk=sketch_face(b.doc,src,name+'Profile',face,z)
+            p=src.newObject('PartDesign::Pad',name);p.Profile=sk;p.Length=length;p.Reversed=reverse
+            b.doc.recompute();sk.Visibility=False
+            if old:old.Visibility=False
+            return p
+        lock=b.doc.addObject('PartDesign::Body','KNEE_r05_REMOVABLE_REAR_LOCK')
+        cc.metadata(lock,lock.Name,'PA12','ASSUMED case-face lock with M2 through bolts; exact case datum/access/load unverified')
+        f=rect(-15.3,13,30.6,4)
+        for y in (-12.8,12.8):f=f.cut(disk(y,15,1.1))
+        source_pad(lock,'KneeRearLockPlate',f,0,1.2)
+        source_pad(lock,'KneeRearLockContactRib',rect(-8,14,16,2),0,1.2,True)
+        bolt=b.ring('KNEE_r05_M2_CORE_D1p65_L8p8',1.65,0,8.8)
+        source_pad(bolt,'KneeBoltHead',disk(0,0,1.75),8.8,1.6)
+        # Hex socket provides an explicit driver access feature.
+        import Part
+        old=bolt.Tip
+        hp=[V((1.5/math.sqrt(3))*math.cos(i*math.pi/3),(1.5/math.sqrt(3))*math.sin(i*math.pi/3),0) for i in range(6)]
+        hs=sketch_face(b.doc,bolt,'KneeBoltHexSocketProfile',Part.Face(Part.makePolygon(hp+[hp[0]])),10.4)
+        hc=bolt.newObject('PartDesign::Pocket','KneeBoltHexSocket');hc.Profile=hs;hc.Length=.8
+        b.doc.recompute();hs.Visibility=False;old.Visibility=False
+        # Hex nut has an explicit minor bore; cosmetic threads are omitted.
+        nut=b.doc.addObject('PartDesign::Body','KNEE_r05_M2_HEX_NUT_AF4_T2p8')
+        cc.metadata(nut,nut.Name,'steel','ASSUMED M2 nut envelope/minor bore; supplier thread/strength unverified',role='HARDWARE')
+        pts=[V((4/math.sqrt(3))*math.cos(i*math.pi/3),(4/math.sqrt(3))*math.sin(i*math.pi/3),0) for i in range(6)]
+        nf=Part.Face(Part.makePolygon(pts+[pts[0]])).cut(disk(0,0,.85))
+        source_pad(nut,'KneeNutPad',nf,0,2.8)
+        for src in (lock,nut):b.library.addObject(src);b.sources[src.Name]=src
+        tf,tv=_transformers(transform)
+        rotation=App.Rotation(V(*tv((0,1,0))),V(*tv((0,0,1))),V(*tv((1,0,0))),'ZXY')
+        localrot=App.Rotation(V(0,1,0),V(0,0,1),V(1,0,0),'ZXY')
+        def add(src,name,origin):
+            desc={'kind':'torso_r04_rigid','torso':'hind','local_placement_json':json.dumps({'base_xyz_mm':origin,'rotation_xyzw':tuple(localrot.Q)})}
+            b.add(src,name,App.Placement(V(*tf(origin)),rotation),'Tendons',desc)
+        add(lock,'HindTendon_RearCaseLock',(rear+1.2,0,0))
+        for side in (-1,1):
+            label='L' if side==1 else 'R'
+            add(bolt,'HindTendon_CaseLockBolt'+label,(rear-6.4,side*12.8,15))
+            add(nut,'HindTendon_CaseLockNut'+label,(rear-6.4,side*12.8,15))
     # Two fixed guide support trees, routed above/behind the proximal drive.
     # Each body is fused into the torso; support dimensions are not source facts.
     for side in (-1,1):
