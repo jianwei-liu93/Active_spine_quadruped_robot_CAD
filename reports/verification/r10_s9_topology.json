@@ -1,0 +1,405 @@
+{
+  "status": "PASS",
+  "source": "Supplement PDF p30 Fig S9; translucent rods in panelA are alternate poses",
+  "expected_projected_edges": [
+    [
+      "O",
+      "G"
+    ],
+    [
+      "G",
+      "B1"
+    ],
+    [
+      "G",
+      "B2"
+    ],
+    [
+      "A1",
+      "B1"
+    ],
+    [
+      "A2",
+      "B2"
+    ],
+    [
+      "B1",
+      "C1"
+    ],
+    [
+      "B2",
+      "C2"
+    ],
+    [
+      "C1",
+      "D1"
+    ],
+    [
+      "C2",
+      "D2"
+    ],
+    [
+      "E1",
+      "D1"
+    ],
+    [
+      "E2",
+      "D2"
+    ]
+  ],
+  "physical_moving_members": [
+    {
+      "instance": "Link1_L2__1",
+      "side": -1,
+      "edge": [
+        "G",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L2__1",
+      "side": -1,
+      "edge": [
+        "G",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L3__1",
+      "side": -1,
+      "edge": [
+        "A1",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L3__1",
+      "side": -1,
+      "edge": [
+        "A2",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L4__1",
+      "side": -1,
+      "edge": [
+        "B1",
+        "C1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L4__1",
+      "side": -1,
+      "edge": [
+        "B2",
+        "C2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L5__1",
+      "side": -1,
+      "edge": [
+        "C1",
+        "D1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L5__1",
+      "side": -1,
+      "edge": [
+        "C2",
+        "D2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "DirectCrank_1",
+      "side": -1,
+      "edge": [
+        "O",
+        "G"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L2_1",
+      "side": 1,
+      "edge": [
+        "G",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L2_1",
+      "side": 1,
+      "edge": [
+        "G",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L3_1",
+      "side": 1,
+      "edge": [
+        "A1",
+        "B1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L3_1",
+      "side": 1,
+      "edge": [
+        "A2",
+        "B2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L4_1",
+      "side": 1,
+      "edge": [
+        "B1",
+        "C1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L4_1",
+      "side": 1,
+      "edge": [
+        "B2",
+        "C2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link1_L5_1",
+      "side": 1,
+      "edge": [
+        "C1",
+        "D1"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Link2_L5_1",
+      "side": 1,
+      "edge": [
+        "C2",
+        "D2"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "DirectCrank1",
+      "side": 1,
+      "edge": [
+        "O",
+        "G"
+      ],
+      "role": "moving source link"
+    },
+    {
+      "instance": "Torso_hind",
+      "sides": [
+        -1,
+        1
+      ],
+      "edge": [
+        "E1",
+        "D1"
+      ],
+      "role": "rigid torso frame replaces E-D output rocker"
+    },
+    {
+      "instance": "Torso_fore",
+      "sides": [
+        -1,
+        1
+      ],
+      "edge": [
+        "E2",
+        "D2"
+      ],
+      "role": "rigid torso frame replaces E-D output rocker"
+    }
+  ],
+  "missing_edges": {
+    "-1": [],
+    "1": []
+  },
+  "extra_edges": {
+    "-1": [],
+    "1": []
+  },
+  "actual_native_hole_axis_error_mm": 1.464821375527116e-14,
+  "torso_native_bore_axes": [
+    {
+      "axis_point_world_mm": [
+        -33.0,
+        -14.4,
+        6.7501559897209515e-15
+      ],
+      "axis_direction_world": [
+        -1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": -15.199999999999998,
+      "radius_mm": 2.025,
+      "instance": "Torso_hind",
+      "side": -1,
+      "pivot": "E1",
+      "axis_error_mm": 6.7501559897209515e-15
+    },
+    {
+      "axis_point_world_mm": [
+        -31.405859352835492,
+        -14.399999999999993,
+        10.883874107920308
+      ],
+      "axis_direction_world": [
+        -1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": -15.19999999999999,
+      "radius_mm": 2.025,
+      "instance": "Torso_hind",
+      "side": -1,
+      "pivot": "D1",
+      "axis_error_mm": 7.944109290391274e-15
+    },
+    {
+      "axis_point_world_mm": [
+        -33.00000000000001,
+        16.0,
+        -3.952393967665558e-31
+      ],
+      "axis_direction_world": [
+        -1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": 15.2,
+      "radius_mm": 2.025,
+      "instance": "Torso_hind",
+      "side": 1,
+      "pivot": "E1",
+      "axis_error_mm": 7.105427357601002e-15
+    },
+    {
+      "axis_point_world_mm": [
+        -31.405859352835492,
+        16.000000000000004,
+        10.8838741079203
+      ],
+      "axis_direction_world": [
+        -1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": 15.200000000000003,
+      "radius_mm": 2.025,
+      "instance": "Torso_hind",
+      "side": 1,
+      "pivot": "D1",
+      "axis_error_mm": 3.552713678800501e-15
+    },
+    {
+      "axis_point_world_mm": [
+        33.00000000000001,
+        -14.4,
+        6.7501559897209515e-15
+      ],
+      "axis_direction_world": [
+        1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": -15.199999999999998,
+      "radius_mm": 2.025,
+      "instance": "Torso_fore",
+      "side": -1,
+      "pivot": "E2",
+      "axis_error_mm": 9.800597115467527e-15
+    },
+    {
+      "axis_point_world_mm": [
+        36.62551368814982,
+        -14.400000000000004,
+        -10.385357504536769
+      ],
+      "axis_direction_world": [
+        1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": -15.200000000000001,
+      "radius_mm": 2.025,
+      "instance": "Torso_fore",
+      "side": -1,
+      "pivot": "D2",
+      "axis_error_mm": 1.0048591735576161e-14
+    },
+    {
+      "axis_point_world_mm": [
+        33.00000000000001,
+        15.999999999999998,
+        0.0
+      ],
+      "axis_direction_world": [
+        1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": 15.199999999999998,
+      "radius_mm": 2.025,
+      "instance": "Torso_fore",
+      "side": 1,
+      "pivot": "E2",
+      "axis_error_mm": 7.105427357601002e-15
+    },
+    {
+      "axis_point_world_mm": [
+        36.62551368814982,
+        15.999999999999996,
+        -10.385357504536776
+      ],
+      "axis_direction_world": [
+        1.1e-16,
+        1.0,
+        -2.220446049250313e-16
+      ],
+      "face_center_y_mm": 15.199999999999996,
+      "radius_mm": 2.025,
+      "instance": "Torso_fore",
+      "side": 1,
+      "pivot": "D2",
+      "axis_error_mm": 7.105427357601002e-15
+    }
+  ],
+  "native_axis_issues": [],
+  "projected_mobility": {
+    "links_including_ground_and_two_slider_blocks": 14,
+    "one_DOF_joint_equivalents": 19,
+    "planar_gruebler": 1
+  },
+  "fixed_structure": "LumbarIntegrated A/E backbone, motor cradle and C/A guide ears are one grounded frame; no independently moving frame bars",
+  "bilateral_copies": "Two side planes share one phase and B synchronization shafts; they are not extra independent planar links",
+  "limits": "Source topology and native axis audit, not complete spatial mobility, elastic equilibrium or fabrication validation",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "canonical_reopened_recomputed": true,
+  "invalid_native_features": []
+}

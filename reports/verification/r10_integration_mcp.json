@@ -1,0 +1,698 @@
+{
+  "revision": "r10",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "frame": {
+    "source": "FRM_LUMBAR_MONOLITHIC_CAGE_r09",
+    "part_number": "FRM_LUMBAR_MONOLITHIC_CAGE_r10",
+    "revision": "r10",
+    "instance": "LumbarIntegrated1",
+    "original_features_preserved": [
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseCheek",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_ContinuousCrosswall0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_ContinuousCrosswall1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseCheek",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CrosswallWindow0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CrosswallWindow1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CarrierAccess",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftLocalEndPlatform0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftLocalEndPlatform1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShortEarE1A2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShortEarE2A1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftBroadShelf0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftBroadShelf1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftOuterGuide0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftOuterGuide1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseEdgeCollar",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseFaceBand0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftCaseFaceBand1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftInnerJournalBossA1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftInnerJournalBossA2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShelfJournalBossE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_LeftShelfJournalBossE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightLocalEndPlatform0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightLocalEndPlatform1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShortEarE1A2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShortEarE2A1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightBroadShelf0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightBroadShelf1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightOuterGuide0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightOuterGuide1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseEdgeCollar",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseFaceBand0",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightCaseFaceBand1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightInnerJournalBossA1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightInnerJournalBossA2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShelfJournalBossE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_RightShelfJournalBossE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_WholeStackJournalClearances",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C1TravelRelief",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_C2TravelRelief"
+    ],
+    "appended_features": [
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralBeamE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralBeamWindowsE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugThroughBoreE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugBearingSeatPositiveYE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugBearingSeatNegativeYE1",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralBeamE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralBeamWindowsE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugThroughBoreE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugBearingSeatPositiveYE2",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09_CentralLugBearingSeatNegativeYE2"
+    ],
+    "appended_feature_count": 12,
+    "pad_count": 38,
+    "pocket_count": 14,
+    "sketch_count": 52,
+    "all_frame_sketches_fully_constrained": true,
+    "solid_count": 1,
+    "native_validity": true,
+    "physical_instance_count": 487,
+    "central_joints": [
+      {
+        "joint": "E1",
+        "center_world_xz_mm": [
+          -33,
+          0
+        ],
+        "axis_world": [
+          0,
+          1,
+          0
+        ],
+        "beam_world_x_bounds_mm": [
+          -29,
+          -25
+        ],
+        "beam_world_y_bounds_mm": [
+          -28.4,
+          28.4
+        ],
+        "beam_world_z_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "lug_world_y_bounds_mm": [
+          -1.6,
+          1.6
+        ],
+        "bearing_y_centers_mm": [
+          -1,
+          1
+        ],
+        "through_bore_diameter_mm": 2.2,
+        "bearing_seat_diameter_mm": 4.05,
+        "bearing_seat_depth_mm": 1.2
+      },
+      {
+        "joint": "E2",
+        "center_world_xz_mm": [
+          33,
+          0
+        ],
+        "axis_world": [
+          0,
+          1,
+          0
+        ],
+        "beam_world_x_bounds_mm": [
+          25,
+          29
+        ],
+        "beam_world_y_bounds_mm": [
+          -28.4,
+          28.4
+        ],
+        "beam_world_z_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "lug_world_y_bounds_mm": [
+          -1.6,
+          1.6
+        ],
+        "bearing_y_centers_mm": [
+          -1,
+          1
+        ],
+        "through_bore_diameter_mm": 2.2,
+        "bearing_seat_diameter_mm": 4.05,
+        "bearing_seat_depth_mm": 1.2
+      }
+    ],
+    "limitations": [
+      "Reconstructed metric assumptions; source does not identify exact hidden bearing stack",
+      "Moving central clevis/pin/bearings are separate lead-owned parts",
+      "Actual motion/collision, insertion access and manufacturing fits require lead verification"
+    ]
+  },
+  "torso": {
+    "bodies": {
+      "fore": {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "plate": "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+        "plate_sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+        "plate_sketch_fully_constrained": true,
+        "plate_web_pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_PlateWebFill_r10",
+        "pattern_pocket": "TORSO_FORE_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10",
+        "plate_web_fully_constrained": true,
+        "pattern_fully_constrained": true,
+        "preserved_existing_objects": [
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanL",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelL",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+          "ForeClipReliefR07_Profile",
+          "ForeClipReliefR07"
+        ],
+        "existing_feature_checks": [
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "ForeClipReliefR07",
+            "valid": true,
+            "solid_count": 1
+          }
+        ],
+        "added_pads": [
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10"
+        ],
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 6435.1763384701335,
+        "E_torso_xyz": [
+          0,
+          0,
+          0
+        ],
+        "axis_torso_xyz": [
+          0,
+          1,
+          0
+        ],
+        "clevis_centers_y_mm": [
+          -2.8,
+          2.8
+        ]
+      },
+      "hind": {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "plate": "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+        "plate_sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+        "plate_sketch_fully_constrained": true,
+        "plate_web_pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_PlateWebFill_r10",
+        "pattern_pocket": "TORSO_HIND_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10",
+        "plate_web_fully_constrained": true,
+        "pattern_fully_constrained": true,
+        "preserved_existing_objects": [
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorL",
+          "KneeCarrierBridgeR1Profile",
+          "KneeCarrierBridgeR1",
+          "KneeCarrierBridge1Profile",
+          "KneeCarrierBridge1",
+          "KneeCageRearBridgeProfile",
+          "KneeCageRearBridge",
+          "KneeCageRail_R11p2_R8p2Profile",
+          "KneeCageRail_R11p2_R8p2",
+          "KneeCageRail_R11p2_28p2Profile",
+          "KneeCageRail_R11p2_28p2",
+          "KneeCageRail_11p2_R8p2Profile",
+          "KneeCageRail_11p2_R8p2",
+          "KneeCageRail_11p2_28p2Profile",
+          "KneeCageRail_11p2_28p2",
+          "KneeCageFrontRimProfile",
+          "KneeCageFrontRim",
+          "KneeLockBoltBossRProfile",
+          "KneeLockBoltBossR",
+          "KneeLockBoltBossLProfile",
+          "KneeLockBoltBossL",
+          "KneeLockThroughBores",
+          "KneeLockThroughBorePocket",
+          "GuideBridgeRProfile",
+          "GuideBridgeR",
+          "HipGuideRearPostRProfile",
+          "HipGuideRearPostR",
+          "GuideStrutRshell_guideProfile",
+          "GuideStrutRshell_guide",
+          "GuideJournalBossRshell_guideProfile",
+          "GuideJournalBossRshell_guide",
+          "GuideStrutRhip_guideProfile",
+          "GuideStrutRhip_guide",
+          "GuideJournalBossRhip_guideProfile",
+          "GuideJournalBossRhip_guide",
+          "GuideBridgeLProfile",
+          "GuideBridgeL",
+          "HipGuideRearPostLProfile",
+          "HipGuideRearPostL",
+          "GuideStrutLshell_guideProfile",
+          "GuideStrutLshell_guide",
+          "GuideJournalBossLshell_guideProfile",
+          "GuideJournalBossLshell_guide",
+          "GuideStrutLhip_guideProfile",
+          "GuideStrutLhip_guide",
+          "GuideJournalBossLhip_guideProfile",
+          "GuideJournalBossLhip_guide"
+        ],
+        "existing_feature_checks": [
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL0",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCarrierBridgeR1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCarrierBridge1",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageRearBridge",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageRail_R11p2_R8p2",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageRail_R11p2_28p2",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageRail_11p2_R8p2",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageRail_11p2_28p2",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeCageFrontRim",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeLockBoltBossR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeLockBoltBossL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "KneeLockThroughBorePocket",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideBridgeR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "HipGuideRearPostR",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideStrutRshell_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideJournalBossRshell_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideStrutRhip_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideJournalBossRhip_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideBridgeL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "HipGuideRearPostL",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideStrutLshell_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideJournalBossLshell_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideStrutLhip_guide",
+            "valid": true,
+            "solid_count": 1
+          },
+          {
+            "name": "GuideJournalBossLhip_guide",
+            "valid": true,
+            "solid_count": 1
+          }
+        ],
+        "added_pads": [
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10"
+        ],
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 9049.607390180863,
+        "E_torso_xyz": [
+          0,
+          0,
+          0
+        ],
+        "axis_torso_xyz": [
+          0,
+          1,
+          0
+        ],
+        "clevis_centers_y_mm": [
+          -2.8,
+          2.8
+        ]
+      }
+    },
+    "revision": "r10",
+    "pattern_interpretation": "Arc center Y=0, given Z; angles from +Y; neighboring hole at Y=-2.5, same Z; sketch X=sign*Y",
+    "scope": "Appended native plate web/pocket and clevis only; legacy features unchanged; no save, motion, instance, or hardware changes",
+    "clearance_status": "NOT_RUN; lead integration must verify central pin stack and motion clearance"
+  },
+  "bars": {
+    "source": "SPN_r02_L4",
+    "part_number": "SPN_LONG_BC_RELIEVED_r10",
+    "instances": [
+      "Link1_L4__1",
+      "Link2_L4__1",
+      "Link1_L4_1",
+      "Link2_L4_1"
+    ],
+    "bores_local_xy_mm": [
+      [
+        3.0,
+        3.0
+      ],
+      [
+        48.7876,
+        3.0
+      ]
+    ],
+    "bore_diameter_mm": 4.05,
+    "center_distance_mm": 45.7876,
+    "thickness_mm": 1.2,
+    "side_rail_width_mm": 1.4,
+    "profile_fully_constrained": true,
+    "source_frame_and_placements_preserved": true,
+    "short_bar_profiles": "unchanged; source supports plain bars",
+    "limits": "No fork/chamfer assigned without identified source layering; strength and fits unverified"
+  },
+  "hardware": {
+    "new_instances": [
+      "CentralE1_Pin",
+      "CentralE1_Bearing0",
+      "CentralE1_Bearing1",
+      "CentralE1_Washer0",
+      "CentralE1_Washer1",
+      "CentralE1_Retainer0",
+      "CentralE1_Retainer1",
+      "CentralE2_Pin",
+      "CentralE2_Bearing0",
+      "CentralE2_Bearing1",
+      "CentralE2_Washer0",
+      "CentralE2_Washer1",
+      "CentralE2_Retainer0",
+      "CentralE2_Retainer1"
+    ],
+    "grounded_bearings": [
+      "CentralE1_Bearing0",
+      "CentralE1_Bearing1",
+      "CentralE2_Bearing0",
+      "CentralE2_Bearing1"
+    ],
+    "physical_additions": 14,
+    "moving_hardware_owner": "existing torso E output; fixed bearings owned by integrated lumbar frame",
+    "nominal_lug_to_washer_gap_mm": 0.2,
+    "nominal_washer_to_clevis_gap_mm": 0.0,
+    "nominal_clevis_to_retainer_gap_mm": 0.1,
+    "pin_axial_insertion": "before motors/cables, along transverseY through open clevis; service-access check pending",
+    "limits": "Supplier bearing/retainer, pin fits and printed bore/stack tolerances unverified; no strength qualification"
+  },
+  "canonical_path": "cad/flexor_r10_robot.FCStd",
+  "native_neutral_status": "PASS",
+  "limits": "Candidate checkpoint; full changed-geometry motion, final exports/drawings/package pending",
+  "bar_recompute_repair": {
+    "scope": "Installed MCP actual repair, save, reopen and recompute",
+    "native_feature_errors": [],
+    "source": "SPN_r02_L4",
+    "sketch_geometry_count": 10,
+    "circle_count": 2,
+    "relief_boundary": {
+      "lines": 4,
+      "circular_arcs": 4
+    },
+    "volume_mm3": 199.60229607815495,
+    "fully_constrained": true,
+    "reason": "Planar Boolean boundary initially retained internal seam edges; invalid Pocket retained stale cached shape. Explicit contour replaces those seams. Pre-repair evidence diagnostic only."
+  },
+  "scope": "Corrected source-fidelity checkpoint; final motion/package gates pending"
+}
