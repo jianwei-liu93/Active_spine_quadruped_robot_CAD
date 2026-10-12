@@ -1,0 +1,1274 @@
+{
+  "status": "PASS",
+  "stage": "coarse",
+  "partition": 9,
+  "partitions": 12,
+  "native_path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r07_robot.FCStd",
+  "native_sha256": "8d0d363add856115761ac767c5b3948d62360c36a5b4d80d76a8de87b9162ca5",
+  "config_sha256": "6537f008ea524bfa006ab3fe56e146a33e65d58f91881e4dee0e82a4eb8df82e",
+  "dependency_sha256": {
+    "verify_motion_package_r07.py": "d8c66e1f1a1712ffcb4a50752a5cad886a0d17142e78966a43996057f3269e98",
+    "leg_motion_r07.py": "e71edfd09cb7af4e911a9382ca99f0cb6e27b2a79ca501500f62452a97e0d48b",
+    "robot_pose_r03.py": "962898052a75f1bd5ee0e43d968b38c676ed2e3ad8985da8744d865b220439a9",
+    "leg_geometry_r02.py": "459c0b40a6add8ea9f7a781ef34e09e98c183c70e4542a2691e51f829e0887a6",
+    "build_leg_r02.py": "3828e21e0a13628aeeffe97f55c741b935c3bf0a83b99c8f225157c0c31beb7a",
+    "spring_wire_r03.py": "ea61499d6e2fd85bc2391bb648116321dcbb441d816ae0fdb5cc47a063158002",
+    "build_tendon_r03.py": "e623c808d5f0a566a5f99c6d066553e11181f7e198ada237e478269c204d05fd",
+    "tendon_r03.py": "e53b5cbcd506149df39ca3d6677bcf9bf30b4bc779183117b4a9c4c85499c050",
+    "cable_clamps_r07.py": "8c36a3d013fab3439858c659afda2d03b8f52e91342eb63f145aecf916a38440",
+    "kinematics.py": "c053c7273b29ef108c12a2ae5244e72cd4ea554b1503164ce97bd8e6dd3517cb",
+    "cad_common.py": "5e4a2c629297c061bfa89b71d84a791a853a2c06f606d240ac3d1cdce33d0f84",
+    "spine_attachments_r02.py": "5286eb532fd95db8e8902159eb22342a5c84b8678229368fa81c9f5510f8ae34",
+    "leg_mechanics.py": "971bb313a22ab6037411f31f4e4dcfedcdd1730eb6d8ae25af0f5d91a84831fa",
+    "robot_geometry.py": "478b86a5b5ff985d5475113e2c4003de389d3492cb2e3a3473f192845931d4f4"
+  },
+  "manifest_sha256": "3944c27aba68495e0b9be7000d259ce103f5f638b25b38efc3d448bfea68a429",
+  "expected_sample_ids": [
+    "coarse_0009",
+    "coarse_0021",
+    "coarse_0033",
+    "coarse_0045",
+    "coarse_0057",
+    "coarse_0069",
+    "coarse_0081",
+    "coarse_0093"
+  ],
+  "samples_total": 8,
+  "samples_completed": 8,
+  "records": [
+    {
+      "sample_id": "coarse_0009",
+      "input_sha256": "d19ac3bc9294a1ba3c53eeb0e760357aa8def4932c536d724f82c5f59b5c7fb2",
+      "input": {
+        "label": "foreL_qk_-85.0",
+        "leg_angles": {
+          "foreL": [
+            -0.8726646259971648,
+            -1.4835298641951802
+          ],
+          "foreR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "hindL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ]
+        },
+        "wheel_angle": 0.0,
+        "theta": 0.0,
+        "trajectory": "foreL_qk",
+        "sample_id": "coarse_0009",
+        "input_sha256": "d19ac3bc9294a1ba3c53eeb0e760357aa8def4932c536d724f82c5f59b5c7fb2"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0021",
+      "input_sha256": "7adc6fa95dc8b17e561542cd101b25dd8883fd56b742c1fe584c14d5d7aab5b4",
+      "input": {
+        "label": "hindL_qh_-50.0",
+        "leg_angles": {
+          "foreL": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "foreR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "hindL": [
+            -0.8726646259971648,
+            -1.7453292519943295
+          ],
+          "hindR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ]
+        },
+        "wheel_angle": 0.0,
+        "theta": 0.0,
+        "trajectory": "hindL_qh",
+        "sample_id": "coarse_0021",
+        "input_sha256": "7adc6fa95dc8b17e561542cd101b25dd8883fd56b742c1fe584c14d5d7aab5b4"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0033",
+      "input_sha256": "fb853a2466526291ee02b2e6c04acf0275a66a2885a228fe9cf41b86e01376ba",
+      "input": {
+        "label": "hindR_qh_-40.0",
+        "leg_angles": {
+          "foreL": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "foreR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "hindL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ]
+        },
+        "wheel_angle": 0.0,
+        "theta": 0.0,
+        "trajectory": "hindR_qh",
+        "sample_id": "coarse_0033",
+        "input_sha256": "fb853a2466526291ee02b2e6c04acf0275a66a2885a228fe9cf41b86e01376ba"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0045",
+      "input_sha256": "5aea06d905ee225db7107fa7fd5fee66ceabf7b27e43227676a8760c75b06ec0",
+      "input": {
+        "label": "wheel_20.0",
+        "leg_angles": {
+          "foreL": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "foreR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "hindL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ]
+        },
+        "wheel_angle": 0.3490658503988659,
+        "theta": 0.0,
+        "trajectory": "wheel",
+        "sample_id": "coarse_0045",
+        "input_sha256": "5aea06d905ee225db7107fa7fd5fee66ceabf7b27e43227676a8760c75b06ec0"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0057",
+      "input_sha256": "08dc09f4e30aaafb4e3b9065f55243a3c8d7496bce43e9fe224bba7893ebfd70",
+      "input": {
+        "label": "wheel_80.0",
+        "leg_angles": {
+          "foreL": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "foreR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ],
+          "hindL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ]
+        },
+        "wheel_angle": 1.3962634015954636,
+        "theta": 0.0,
+        "trajectory": "wheel",
+        "sample_id": "coarse_0057",
+        "input_sha256": "08dc09f4e30aaafb4e3b9065f55243a3c8d7496bce43e9fe224bba7893ebfd70"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0069",
+      "input_sha256": "50dd00e8a5b58c837f8789bcad380d3d4f710bc884c7417817a0d90281a63277",
+      "input": {
+        "label": "asymmetric_-1_10.0",
+        "leg_angles": {
+          "foreL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "foreR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindL": [
+            -0.5235987755982988,
+            -1.9198621771937625
+          ],
+          "hindR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ]
+        },
+        "wheel_angle": 1.5707963267948966,
+        "theta": 0.0,
+        "trajectory": "asymmetric_-1",
+        "sample_id": "coarse_0069",
+        "input_sha256": "50dd00e8a5b58c837f8789bcad380d3d4f710bc884c7417817a0d90281a63277"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0081",
+      "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "coarse_0093",
+      "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "status": "PASS",
+      "overlap_pairs": 0,
+      "valid_single_solids": 486,
+      "guide_warnings": []
+    }
+  ],
+  "baseline_overlaps": [],
+  "overlaps": [],
+  "errors": [],
+  "minimum_observed_distances": [
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "LumbarIntegrated1",
+      "distance_mm": 24.59900208126717,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "LumbarIntegrated_1",
+      "distance_mm": 50.45416798571703,
+      "sample_id": "coarse_0069",
+      "input": {
+        "label": "asymmetric_-1_10.0",
+        "leg_angles": {
+          "foreL": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "foreR": [
+            -0.6981317007977318,
+            -1.7453292519943295
+          ],
+          "hindL": [
+            -0.5235987755982988,
+            -1.9198621771937625
+          ],
+          "hindR": [
+            -0.8726646259971648,
+            -1.5707963267948966
+          ]
+        },
+        "wheel_angle": 1.5707963267948966,
+        "theta": 0.0,
+        "trajectory": "asymmetric_-1",
+        "sample_id": "coarse_0069",
+        "input_sha256": "50dd00e8a5b58c837f8789bcad380d3d4f710bc884c7417817a0d90281a63277"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "distance_mm": 54.805739318224944,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "distance_mm": 51.468173569679784,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "Torso_fore",
+      "distance_mm": 81.53324382435075,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_L_Cable",
+      "b": "Torso_hind",
+      "distance_mm": 0.24999999999990236,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "LumbarIntegrated1",
+      "distance_mm": 51.2510320188062,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "LumbarIntegrated_1",
+      "distance_mm": 24.599002081267173,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "distance_mm": 54.805739318224944,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "distance_mm": 51.468173569679784,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "Torso_fore",
+      "distance_mm": 81.5332438243507,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "HindTendon_R_Cable",
+      "b": "Torso_hind",
+      "distance_mm": 0.4499999999999815,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "distance_mm": 6.302250588359058,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "distance_mm": 3.4000000000000092,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "SyncB1",
+      "distance_mm": 6.017091787947555,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated1",
+      "b": "SyncB2",
+      "distance_mm": 7.558387248893653,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "distance_mm": 6.302250588359058,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "distance_mm": 3.3999999999999773,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "SyncB1",
+      "distance_mm": 6.01709178794756,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "LumbarIntegrated_1",
+      "b": "SyncB2",
+      "distance_mm": 7.558387248893641,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "b": "SyncB1",
+      "distance_mm": 15.70230537234547,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "b": "SyncB2",
+      "distance_mm": 61.765101953199036,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "b": "Torso_fore",
+      "distance_mm": 41.63502662164843,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "b": "Torso_hind",
+      "distance_mm": 23.609075347517567,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_Instance",
+      "b": "SyncB1",
+      "distance_mm": 12.045712456419096,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_Instance",
+      "b": "SyncB2",
+      "distance_mm": 51.12897892428718,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_Instance",
+      "b": "Torso_fore",
+      "distance_mm": 39.30845861894331,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "OpenRB150_Carrier_r07_Instance",
+      "b": "Torso_hind",
+      "distance_mm": 20.98311557293509,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "SyncB1",
+      "b": "Torso_fore",
+      "distance_mm": 24.620159452965034,
+      "sample_id": "coarse_0081",
+      "input": {
+        "label": "combined_spine_15",
+        "trajectory": "combined_spine_gait",
+        "theta": 0.2617993877991494,
+        "leg_angles": {
+          "foreL": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "foreR": [
+            -0.8500784034776313,
+            -1.548210104275363
+          ],
+          "hindL": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ],
+          "hindR": [
+            -0.6755454782781983,
+            -1.767915474513863
+          ]
+        },
+        "wheel_angle": 0.9886741660732493,
+        "sample_id": "coarse_0081",
+        "input_sha256": "d3a4eb8d5be3145c6b65d42a440e0088dd8d0aed72da145b56b1664b34df7c8b"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "SyncB1",
+      "b": "Torso_hind",
+      "distance_mm": 44.78583648381104,
+      "sample_id": "neutral_baseline",
+      "input": {
+        "sample_id": "neutral_baseline",
+        "theta": 0.0,
+        "wheel_angle": 0.0,
+        "leg_angles": {},
+        "label": "neutral_baseline"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "SyncB2",
+      "b": "Torso_fore",
+      "distance_mm": 44.91574711142116,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    },
+    {
+      "a": "SyncB2",
+      "b": "Torso_hind",
+      "distance_mm": 17.494099741742737,
+      "sample_id": "coarse_0093",
+      "input": {
+        "label": "combined_spine_195",
+        "trajectory": "combined_spine_gait",
+        "theta": 3.4033920413889427,
+        "leg_angles": {
+          "foreL": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "foreR": [
+            -0.8952508485166982,
+            -1.59338254931443
+          ],
+          "hindL": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ],
+          "hindR": [
+            -0.7207179233172653,
+            -1.722743029474796
+          ]
+        },
+        "wheel_angle": 0.5821221607216471,
+        "sample_id": "coarse_0093",
+        "input_sha256": "c1a17b6d41c2aa5661b3a7c848e7fc698fcc755d7d4d85afb58547ee943964e1"
+      },
+      "scope": "Minimum over declared finite samples; AABB lower bounds prune only impossible improvements"
+    }
+  ],
+  "occ_checks": 4154,
+  "distance_checks": 261,
+  "cached_pair_checks": 6503,
+  "continuous_clearance": false,
+  "loaded_equilibrium": false,
+  "fabrication_release": false,
+  "volume_tolerance_mm3": 1e-05,
+  "instances": 486,
+  "geometry_sha256_before": "5aec770351de54ea7cfb96a01c989b7c04ee3afd57c3c954dc37e7462c1deadc",
+  "baseline_status": "PASS",
+  "elapsed_seconds": 491.4000594000099,
+  "geometry_sha256_after": "5aec770351de54ea7cfb96a01c989b7c04ee3afd57c3c954dc37e7462c1deadc",
+  "document_unchanged": true,
+  "native_sha256_after": "8d0d363add856115761ac767c5b3948d62360c36a5b4d80d76a8de87b9162ca5",
+  "native_file_unchanged": true
+}

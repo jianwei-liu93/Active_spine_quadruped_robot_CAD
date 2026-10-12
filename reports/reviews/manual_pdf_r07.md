@@ -1,5 +1,7 @@
 # Assembly and calibration PDF - r07 review
 
+**Status update — 2026-10-12:** The existing PDF and its visual review describe an earlier r07 snapshot and are stale for package delivery. The 985-state native motion run was stopped before completion after review found the reproduced S1 window and sagittal horn/opening cheek coplanar in r07, where the source requires a corner relationship. The r07 candidate is superseded pending geometry correction. Its recorded final assembly STEP export/round-trip attempt failed, and the 67-sheet drawing PDF export/review is incomplete. Do not present the current PDF as a complete candidate package; regenerate and re-review only against the corrected frozen candidate and successful current manifests.
+
 **Result:** regenerated the ten-page A4 review manual at `docs/flexor_r07_assembly_calibration.pdf` from the current assembly/calibration record, primary-MCP engineering-screen JSON, BOM and saved FreeCAD view captures. The PDF is explicitly watermarked as a review candidate, preserves the no-hardware-operation hold, and distinguishes the scoped frame-pair sample from full whole-robot motion qualification.
 
 ## Contents and traceability

@@ -1,0 +1,51 @@
+{
+  "status": "FAIL_IDENTITY",
+  "freeze_sha256": "ebb725c17d5744c495aa1ab13577eeb5428946ec4aed8a77789fcee9c46adc3a",
+  "retired_instances": [
+    "LumbarIntegrated_1",
+    "FixedLumbarTie0",
+    "FixedLumbarTie1",
+    "FixedLumbarTie2",
+    "FixedLumbarTie3",
+    "FixedTieScrew0__1",
+    "FixedTieScrew0_1",
+    "FixedTieScrew1__1",
+    "FixedTieScrew1_1",
+    "FixedTieScrew2__1",
+    "FixedTieScrew2_1",
+    "FixedTieScrew3__1",
+    "FixedTieScrew3_1"
+  ],
+  "changed_existing": [
+    "LumbarIntegrated1",
+    "Torso_fore",
+    "Torso_hind",
+    "Link1_L4_1",
+    "Link1_L4__1",
+    "Link2_L4_1",
+    "Link2_L4__1"
+  ],
+  "new_instances": [
+    "CentralE1_Pin",
+    "CentralE1_Bearing0",
+    "CentralE1_Bearing1",
+    "CentralE1_Washer0",
+    "CentralE1_Washer1",
+    "CentralE1_Retainer0",
+    "CentralE1_Retainer1",
+    "CentralE2_Pin",
+    "CentralE2_Bearing0",
+    "CentralE2_Bearing1",
+    "CentralE2_Washer0",
+    "CentralE2_Washer1",
+    "CentralE2_Retainer0",
+    "CentralE2_Retainer1"
+  ],
+  "records": [],
+  "errors": [
+    "RuntimeError('Expected107 used and library source definitions')"
+  ],
+  "continuous_clearance": false,
+  "native_files_unchanged": true,
+  "documents_unchanged": true
+}

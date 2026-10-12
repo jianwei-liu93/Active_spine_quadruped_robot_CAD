@@ -1,0 +1,22 @@
+{
+  "revision": "r10",
+  "status": "PASS_FINITE_SAMPLED_CLEARANCE",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "partitions": 24,
+  "states": 1346,
+  "affected_instances": 21,
+  "strictly_unchanged_instances": 466,
+  "affected_pairs_per_state": 9996,
+  "pair_decisions": 13454616,
+  "actual_occ_checks": 317087,
+  "exact_cached_pair_checks": 308495,
+  "raw_intersection_volume_tolerance_mm3": 1e-05,
+  "maximum_recorded_intersection_mm3": 0.0,
+  "exceptions": [],
+  "source_summary_sha256": "ae648540a112df7412bde18501f1c261ef31b2fdce2a73e9ec7d59f88fad49d2",
+  "baseline_r08_full985_coarse105_cage361_pass": true,
+  "continuous_clearance": false,
+  "minimum_separation_distance": "NOT_MEASURED",
+  "loaded_equilibrium": false,
+  "fabrication_release": false
+}

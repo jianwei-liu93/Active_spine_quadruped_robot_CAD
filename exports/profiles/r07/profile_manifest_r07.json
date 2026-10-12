@@ -1,0 +1,655 @@
+{
+  "revision": "r07",
+  "status": "PASS_EXACT_PROFILE_READBACK",
+  "units": "mm",
+  "release_status": "PROVISIONAL - NOT RELEASED FOR FABRICATION",
+  "source_file": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r07_robot.FCStd",
+  "source_sha256": "cea39190bd1265a7a9be2eddcd061a4abc85e19076e15e1514aa318cdffbb227",
+  "selection": "used steel/aluminium thin constant-thickness solids only; purchase/shaft/collar/spring/clamp/fastener exclusions",
+  "maximum_thickness_to_minimum_inplane_span": 0.35,
+  "profiles": [
+    {
+      "part_number": "HORN_GAP_WASHER_OD8_T0p3",
+      "source": "HORN_GAP_WASHER_OD8_T0p3",
+      "instances": [
+        "HornGapWasher_R",
+        "HornGapWasher_L"
+      ],
+      "material": "steel",
+      "process": "machined gap washer; candidate horn pattern",
+      "provenance": "DESIGN_ASSUMPTION source geometry; DERIVED exact profile",
+      "thickness_mm": 0.29999999999999993,
+      "face_index_1based": 2,
+      "local_plane": {
+        "origin": [
+          -6.661338147750939e-16,
+          -1.805140139460402e-16,
+          0.0
+        ],
+        "x_axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "y_axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "normal": [
+          -0.0,
+          -0.0,
+          -1.0
+        ]
+      },
+      "solid_equivalence": {
+        "source_volume_mm3": 11.80865773622148,
+        "missing_volume_mm3": 0.0,
+        "excess_volume_mm3": 0.0
+      },
+      "entity_count": 4,
+      "hole_count": 3,
+      "path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/exports/profiles/r07/HORN_GAP_WASHER_OD8_T0p3.dxf",
+      "bytes": 715,
+      "sha256": "d36b5eed7a1ad9a1e9558ffce35f42e017965d5cbce44731cb568dbd090990f2",
+      "readback": {
+        "status": "PASS",
+        "reader": "FreeCAD compiled Import.readDXF",
+        "edge_count": 4,
+        "closed_wire_count": 4,
+        "hole_count": 3,
+        "units": "mm",
+        "INSUNITS": 4,
+        "bounding_box_errors_mm": {
+          "XMin": 0.0,
+          "XMax": 0.0,
+          "YMin": 0.0,
+          "YMax": 0.0,
+          "ZMin": 0.0,
+          "ZMax": 0.0
+        },
+        "contour_length_error_mm": 0.0,
+        "profile_area_error_mm2": 1.4210854715202004e-14,
+        "missing_profile_area_mm2": 0.0,
+        "excess_profile_area_mm2": 0.0,
+        "curved_approximation": "NONE - native lines/arcs/circles"
+      }
+    },
+    {
+      "part_number": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "source": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "instances": [
+        "HornAdapter_1",
+        "HornAdapter1"
+      ],
+      "material": "steel",
+      "process": "candidate horn adapter; pattern/spline/output datum NOT ROBOTIS VERIFIED",
+      "provenance": "DESIGN_ASSUMPTION source geometry; DERIVED exact profile",
+      "thickness_mm": 1.2000000000000004,
+      "face_index_1based": 2,
+      "local_plane": {
+        "origin": [
+          -1.1102230246251565e-15,
+          -2.9309195009758277e-16,
+          0.0
+        ],
+        "x_axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "y_axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "normal": [
+          -0.0,
+          -0.0,
+          -1.0
+        ]
+      },
+      "solid_equivalence": {
+        "source_volume_mm3": 50.910294349585996,
+        "missing_volume_mm3": 0.0,
+        "excess_volume_mm3": 0.0
+      },
+      "entity_count": 4,
+      "hole_count": 3,
+      "path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/exports/profiles/r07/HORN_PATTERN_ASSUMED_OD8_T1p2.dxf",
+      "bytes": 747,
+      "sha256": "f0ec32637bf2f7a91a9d6bd8fd6734c22f516448f2ef92441f93bad8d75a8920",
+      "readback": {
+        "status": "PASS",
+        "reader": "FreeCAD compiled Import.readDXF",
+        "edge_count": 4,
+        "closed_wire_count": 4,
+        "hole_count": 3,
+        "units": "mm",
+        "INSUNITS": 4,
+        "bounding_box_errors_mm": {
+          "XMin": 0.0,
+          "XMax": 0.0,
+          "YMin": 0.0,
+          "YMax": 0.0,
+          "ZMin": 0.0,
+          "ZMax": 0.0
+        },
+        "contour_length_error_mm": 0.0,
+        "profile_area_error_mm2": 2.842170943040401e-14,
+        "missing_profile_area_mm2": 0.0,
+        "excess_profile_area_mm2": 0.0,
+        "curved_approximation": "NONE - native lines/arcs/circles"
+      }
+    },
+    {
+      "part_number": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "instances": [
+        "G_1_Retainer0",
+        "B1__1_Retainer0",
+        "A1__1_Retainer0",
+        "D1__1_Retainer0",
+        "D1__1_Retainer1",
+        "E1__1_Retainer0",
+        "E1__1_Retainer1",
+        "C1__1_Retainer0",
+        "B2__1_Retainer0",
+        "A2__1_Retainer0",
+        "D2__1_Retainer0",
+        "D2__1_Retainer1",
+        "E2__1_Retainer0",
+        "E2__1_Retainer1",
+        "C2__1_Retainer0",
+        "G1_Retainer1",
+        "B1_1_Retainer1",
+        "A1_1_Retainer1",
+        "D1_1_Retainer0",
+        "D1_1_Retainer1",
+        "E1_1_Retainer0",
+        "E1_1_Retainer1",
+        "C1_1_Retainer1",
+        "B2_1_Retainer1",
+        "A2_1_Retainer1",
+        "D2_1_Retainer0",
+        "D2_1_Retainer1",
+        "E2_1_Retainer0",
+        "E2_1_Retainer1",
+        "C2_1_Retainer1",
+        "hindR_H_Clip0",
+        "hindR_K_Clip0",
+        "hindR_K_Clip1",
+        "hindR_A_Clip0",
+        "hindR_A_Clip1",
+        "hindR_O1_Clip0",
+        "hindR_O1_Clip1",
+        "hindR_A1_Clip0",
+        "hindR_A1_Clip1",
+        "hindR_O2_Clip0",
+        "hindR_O3_Clip0",
+        "hindR_O3_Clip1",
+        "hindL_H_Clip0",
+        "hindL_K_Clip0",
+        "hindL_K_Clip1",
+        "hindL_A_Clip0",
+        "hindL_A_Clip1",
+        "hindL_O1_Clip0",
+        "hindL_O1_Clip1",
+        "hindL_A1_Clip0",
+        "hindL_A1_Clip1",
+        "hindL_O2_Clip0",
+        "hindL_O3_Clip0",
+        "hindL_O3_Clip1",
+        "foreR_H_Clip0",
+        "foreR_K_Clip0",
+        "foreR_K_Clip1",
+        "foreR_A_Clip0",
+        "foreR_A_Clip1",
+        "foreR_O1_Clip0",
+        "foreR_O1_Clip1",
+        "foreR_A1_Clip0",
+        "foreR_A1_Clip1",
+        "foreR_O2_Clip0",
+        "foreR_O3_Clip0",
+        "foreR_O3_Clip1",
+        "foreL_H_Clip0",
+        "foreL_K_Clip0",
+        "foreL_K_Clip1",
+        "foreL_A_Clip0",
+        "foreL_A_Clip1",
+        "foreL_O1_Clip0",
+        "foreL_O1_Clip1",
+        "foreL_A1_Clip0",
+        "foreL_A1_Clip1",
+        "foreL_O2_Clip0",
+        "foreL_O3_Clip0",
+        "foreL_O3_Clip1",
+        "HindTendon_R_shell_guide_Clip",
+        "HindTendon_R_hip_guide_Clip",
+        "HindTendon_L_shell_guide_Clip",
+        "HindTendon_L_hip_guide_Clip",
+        "HindTendon_DriveOuterClip"
+      ],
+      "material": "steel",
+      "process": "spring steel split clip envelope; vendor/groove standard UNVERIFIED",
+      "provenance": "DESIGN_ASSUMPTION source geometry; DERIVED exact profile",
+      "thickness_mm": 0.6000000000000001,
+      "face_index_1based": 5,
+      "local_plane": {
+        "origin": [
+          -0.2638969131870894,
+          3.00243518810157e-16,
+          0.0
+        ],
+        "x_axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "y_axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "normal": [
+          -0.0,
+          -0.0,
+          -1.0
+        ]
+      },
+      "solid_equivalence": {
+        "source_volume_mm3": 3.9544797527061517,
+        "missing_volume_mm3": 0.0,
+        "excess_volume_mm3": 0.0
+      },
+      "entity_count": 4,
+      "hole_count": 0,
+      "path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/exports/profiles/r07/RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL.dxf",
+      "bytes": 704,
+      "sha256": "62704b1bc8664d138faa982af307147f7d3eafb1618be331503c386f5ede899b",
+      "readback": {
+        "status": "PASS",
+        "reader": "FreeCAD compiled Import.readDXF",
+        "edge_count": 4,
+        "closed_wire_count": 1,
+        "hole_count": 0,
+        "units": "mm",
+        "INSUNITS": 4,
+        "bounding_box_errors_mm": {
+          "XMin": 0.0,
+          "XMax": 0.0,
+          "YMin": 0.0,
+          "YMax": 0.0,
+          "ZMin": 0.0,
+          "ZMax": 0.0
+        },
+        "contour_length_error_mm": 0.0,
+        "profile_area_error_mm2": 8.881784197001252e-16,
+        "missing_profile_area_mm2": 0.0,
+        "excess_profile_area_mm2": 0.0,
+        "curved_approximation": "NONE - native lines/arcs/circles"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "source": "A_OUTER_SPACER_L6_6",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "A_OUTER_SPACER_L8_4",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "BRG_2x4x1p2_PROVISIONAL",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "DIRECT_CRANK_FLUSH_M2_L",
+      "reason": "no thin planar cap exactly extrudes to the entire solid; stepped/nonplanar/complex parts excluded"
+    },
+    {
+      "source": "DIRECT_CRANK_FLUSH_M2_R",
+      "reason": "no thin planar cap exactly extrudes to the entire solid; stepped/nonplanar/complex parts excluded"
+    },
+    {
+      "source": "FIXED_TIE_M2_CORE_L2p8",
+      "reason": "process/type exclusion: screw"
+    },
+    {
+      "source": "FIXED_TIE_OD2p4_TAPMINOR1p7_L53p6",
+      "reason": "process/type exclusion: spacer"
+    },
+    {
+      "source": "FRM_LUMBAR_ROUNDED_CRADLE_L_r07_final",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "FRM_LUMBAR_ROUNDED_CRADLE_R_r07_final",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "GUIDE_COPPER_r02",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "G_CRANK_SPACER_L0p3",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "HORN_M2_TRIMMED_CORE_L1p9",
+      "reason": "process/type exclusion: screw"
+    },
+    {
+      "source": "PIN_D1_9_L5_2",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "reason": "process/type exclusion: nut envelope"
+    },
+    {
+      "source": "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "reason": "no thin planar cap exactly extrudes to the entire solid; stepped/nonplanar/complex parts excluded"
+    },
+    {
+      "source": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_CURVED_CONTACT_PAD",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_SHANK",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_THIGH",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_SHANK",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_THIGH",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "reason": "process/type exclusion: spacer"
+    },
+    {
+      "source": "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "reason": "process/type exclusion: clamp"
+    },
+    {
+      "source": "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "reason": "process/type exclusion: clamp"
+    },
+    {
+      "source": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "reason": "process/type exclusion: grub"
+    },
+    {
+      "source": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "reason": "process/type exclusion: bolt"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "reason": "process/type exclusion: bolt"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "reason": "process/type exclusion: clamp"
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_Tray",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "SPACER_2mm_L0_6",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "SPACER_2mm_L1_8",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "SPACER_2mm_L3_0",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "SPACER_2mm_L3_6",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "SPACER_2mm_L9_0",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "SPINE_r04_CAPTURE_CAP_NEG",
+      "reason": "process/type exclusion: collar"
+    },
+    {
+      "source": "SPINE_r04_CAPTURE_CAP_POS",
+      "reason": "process/type exclusion: collar"
+    },
+    {
+      "source": "SPN_r02_L2",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "SPN_r02_L3",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "SPN_r02_L4",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "SPN_r02_L5",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "reason": "process/type exclusion: screw"
+    },
+    {
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "reason": "process/type exclusion: shaft"
+    },
+    {
+      "source": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "reason": "process/type exclusion: bolt"
+    },
+    {
+      "source": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "reason": "process/type exclusion: grub"
+    },
+    {
+      "source": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "reason": "process/type exclusion: clamp"
+    },
+    {
+      "source": "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+      "reason": "material is not candidate steel/aluminium flat stock"
+    },
+    {
+      "source": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "reason": "process/type exclusion: journal"
+    },
+    {
+      "source": "TORSO_OUTPUT_SPACER_L11_0",
+      "reason": "process/type exclusion: purchased"
+    },
+    {
+      "source": "TORSO_OUTPUT_SPACER_L19_4",
+      "reason": "process/type exclusion: purchased"
+    }
+  ],
+  "errors": [],
+  "source_file_unchanged": true,
+  "profile_count": 3
+}

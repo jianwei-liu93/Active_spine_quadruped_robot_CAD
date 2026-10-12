@@ -1,5 +1,11 @@
 # Execution ledger
 
+## User pause at verified r10 CAD checkpoint — 2026-10-13
+
+The user deferred drawings and other deliverables and requested commit/push of all changes. The active export batch finished safely; FreeCAD is healthy with the r10 robot active and all existing documents retained. No canonical geometry changed during pause preparation. Native SHA is `d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9`.
+
+All 24 r10 changed-pair partitions pass for 1,346 states, with 317,087 actual OCC checks, 308,495 exact cached checks and zero recorded intersection volume; continuous clearance, minimum separation and loaded equilibrium are not established. Native/source/export and AX0/AX1 evidence is saved. The 77-sheet/321-dimension editable drawing companion is saved and reopened; final exports cover sheets 1–11 and 68, with final visual review NOT_RUN. Remaining drawings, manual, package acceptance and Blender work are deferred. Physical-interface/process/load blockers and fabrication release BLOCKED are unchanged. Resume from `reports/checkpoints/r10_paused_2026-10-13.json`; earlier ledger entries are historical snapshots.
+
 ## r08 corrected cage and accepted export checkpoint — 2026-10-12
 
 The installed-MCP r08 assembly integrates broad windowed transverse crosswalls and solid upper sagittal horn cheeks, correcting the face ownership visible in Movie S1 at 51.5–52.7 s. The two half-cages, seam, carrier clearance pockets and controller screw margins are explicit engineering adaptations. Source-fidelity review records no additional required morphology correction in the inspected views. The corrected native/source checkpoint was committed and pushed as `8dcc006`.

@@ -1,0 +1,3426 @@
+{
+  "revision": "r10",
+  "scope": "all physical links; spine axis residual subset",
+  "status": "PASS",
+  "parts": [
+    {
+      "instance": "SpineMotor_1",
+      "part": "ENV_XL330_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "Link1_L2__1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.0112165584659
+    },
+    {
+      "instance": "Link2_L2__1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846603
+    },
+    {
+      "instance": "Link1_L3__1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.6860165584659
+    },
+    {
+      "instance": "Link2_L3__1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846575
+    },
+    {
+      "instance": "Link1_L4__1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.09697645306298
+    },
+    {
+      "instance": "Link2_L4__1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.0969764530628
+    },
+    {
+      "instance": "Link1_L5__1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.64396080161955
+    },
+    {
+      "instance": "Link2_L5__1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619535
+    },
+    {
+      "instance": "DirectCrank_1",
+      "part": "DIRECT_CRANK_FLUSH_M2_R",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 67.12815280012134
+    },
+    {
+      "instance": "HornAdapter_1",
+      "part": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 50.91029434958598
+    },
+    {
+      "instance": "G_1_Pin",
+      "part": "PIN_D1_9_L5_2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.003714945742903
+    },
+    {
+      "instance": "G_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "G_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "G_1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "G_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395446
+    },
+    {
+      "instance": "G_1_Spacer1",
+      "part": "G_CRANK_SPACER_L0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.1303843066697785
+    },
+    {
+      "instance": "B1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "B1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "B1__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "B1__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339544
+    },
+    {
+      "instance": "A1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A1__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "A1__1_Spacer0",
+      "part": "SPACER_2mm_L3_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.56461168003732
+    },
+    {
+      "instance": "D1__1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "D1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "D1__1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061513
+    },
+    {
+      "instance": "D1__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395415
+    },
+    {
+      "instance": "E1__1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "E1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "E1__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "E1__1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061504
+    },
+    {
+      "instance": "E1__1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner1__1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.1148228207807795
+    },
+    {
+      "instance": "GuideLiner1__1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "C1__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "C1__1_Spacer0",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697782
+    },
+    {
+      "instance": "C1__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "B2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "B2__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "B2__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395437
+    },
+    {
+      "instance": "A2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061566
+    },
+    {
+      "instance": "A2__1_Spacer0",
+      "part": "SPACER_2mm_L1_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.782305840018665
+    },
+    {
+      "instance": "D2__1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "D2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "D2__1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061495
+    },
+    {
+      "instance": "D2__1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "E2__1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "E2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "E2__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "E2__1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061504
+    },
+    {
+      "instance": "E2__1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner2__1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780777
+    },
+    {
+      "instance": "GuideLiner2__1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "C2__1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2__1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "C2__1_Spacer0",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697787
+    },
+    {
+      "instance": "C2__1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395406
+    },
+    {
+      "instance": "SpineMotor1",
+      "part": "ENV_XL330_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "Link1_L2_1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846592
+    },
+    {
+      "instance": "Link2_L2_1",
+      "part": "SPN_r02_L2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 219.01121655846603
+    },
+    {
+      "instance": "Link1_L3_1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.6860165584659
+    },
+    {
+      "instance": "Link2_L3_1",
+      "part": "SPN_r02_L3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.68601655846575
+    },
+    {
+      "instance": "Link1_L4_1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.09697645306292
+    },
+    {
+      "instance": "Link2_L4_1",
+      "part": "SPN_r02_L4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 231.0969764530628
+    },
+    {
+      "instance": "Link1_L5_1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.64396080161955
+    },
+    {
+      "instance": "Link2_L5_1",
+      "part": "SPN_r02_L5",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28.643960801619535
+    },
+    {
+      "instance": "DirectCrank1",
+      "part": "DIRECT_CRANK_FLUSH_M2_L",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 67.12815280012133
+    },
+    {
+      "instance": "HornAdapter1",
+      "part": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 50.91029434958598
+    },
+    {
+      "instance": "G1_Pin",
+      "part": "PIN_D1_9_L5_2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.003714945742903
+    },
+    {
+      "instance": "G1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "G1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "G1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "G1_Spacer0",
+      "part": "G_CRANK_SPACER_L0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.1303843066697785
+    },
+    {
+      "instance": "G1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395446
+    },
+    {
+      "instance": "B1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "B1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "B1_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "B1_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "B1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339544
+    },
+    {
+      "instance": "B1_1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.26076861333954
+    },
+    {
+      "instance": "A1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A1_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "A1_1_Spacer0",
+      "part": "SPACER_2mm_L3_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.56461168003732
+    },
+    {
+      "instance": "D1_1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "D1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "D1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "D1_1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061513
+    },
+    {
+      "instance": "D1_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "D1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395415
+    },
+    {
+      "instance": "E1_1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933611
+    },
+    {
+      "instance": "E1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "E1_1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061504
+    },
+    {
+      "instance": "E1_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "E1_1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.91152920009329
+    },
+    {
+      "instance": "GuideLiner1_1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "GuideLiner1_1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780783
+    },
+    {
+      "instance": "C1_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "C1_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "C1_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.26076861333954
+    },
+    {
+      "instance": "C1_1_Spacer1",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697782
+    },
+    {
+      "instance": "B2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "B2_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "B2_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "B2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395437
+    },
+    {
+      "instance": "B2_1_Spacer1",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395397
+    },
+    {
+      "instance": "A2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923248
+    },
+    {
+      "instance": "A2_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "A2_1_Spacer0",
+      "part": "SPACER_2mm_L1_8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.782305840018667
+    },
+    {
+      "instance": "D2_1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933613
+    },
+    {
+      "instance": "D2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "D2_1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061495
+    },
+    {
+      "instance": "D2_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "D2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339539
+    },
+    {
+      "instance": "E2_1_Pin",
+      "part": "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 72.47183012933611
+    },
+    {
+      "instance": "E2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "E2_1_Retainer0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061504
+    },
+    {
+      "instance": "E2_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "E2_1_Spacer0",
+      "part": "SPACER_2mm_L9_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 33.9115292000933
+    },
+    {
+      "instance": "GuideLiner2_1__0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "GuideLiner2_1_0_65",
+      "part": "GUIDE_COPPER_r02",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6.114822820780784
+    },
+    {
+      "instance": "C2_1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Bearing2",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "C2_1_Retainer1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "C2_1_Spacer0",
+      "part": "SPACER_2mm_L0_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395406
+    },
+    {
+      "instance": "C2_1_Spacer1",
+      "part": "SPACER_2mm_L3_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.303843066697787
+    },
+    {
+      "instance": "SyncB1",
+      "part": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 644.0704762830579
+    },
+    {
+      "instance": "SyncB2",
+      "part": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 644.0704762830578
+    },
+    {
+      "instance": "LumbarIntegrated1",
+      "part": "FRM_LUMBAR_MONOLITHIC_CAGE_r09",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15907.31469821606
+    },
+    {
+      "instance": "A1__1_OuterBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A1__1_OuterSpacer",
+      "part": "A_OUTER_SPACER_L6_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 24.86845474673511
+    },
+    {
+      "instance": "A2__1_OuterBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A2__1_OuterSpacer",
+      "part": "A_OUTER_SPACER_L8_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 31.650760586753766
+    },
+    {
+      "instance": "A1_1_OuterBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A1_1_OuterSpacer",
+      "part": "A_OUTER_SPACER_L6_6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 24.86845474673511
+    },
+    {
+      "instance": "A2_1_OuterBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "A2_1_OuterSpacer",
+      "part": "A_OUTER_SPACER_L8_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 31.650760586753762
+    },
+    {
+      "instance": "C1__1_CaptureWasher",
+      "part": "SPINE_r04_CAPTURE_CAP_NEG",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236913
+    },
+    {
+      "instance": "C2__1_CaptureWasher",
+      "part": "SPINE_r04_CAPTURE_CAP_NEG",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236905
+    },
+    {
+      "instance": "C1_1_CaptureWasher",
+      "part": "SPINE_r04_CAPTURE_CAP_POS",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236923
+    },
+    {
+      "instance": "C2_1_CaptureWasher",
+      "part": "SPINE_r04_CAPTURE_CAP_POS",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.91306715023691
+    },
+    {
+      "instance": "HornGapWasher_R",
+      "part": "HORN_GAP_WASHER_OD8_T0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.808657736221491
+    },
+    {
+      "instance": "HornClampScrew_R_0",
+      "part": "HORN_M2_TRIMMED_CORE_L1p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.759570351009145
+    },
+    {
+      "instance": "HornClampScrew_R_1",
+      "part": "HORN_M2_TRIMMED_CORE_L1p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.759570351009145
+    },
+    {
+      "instance": "HornGapWasher_L",
+      "part": "HORN_GAP_WASHER_OD8_T0p3",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.80865773622149
+    },
+    {
+      "instance": "HornClampScrew_L_0",
+      "part": "HORN_M2_TRIMMED_CORE_L1p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.759570351009142
+    },
+    {
+      "instance": "HornClampScrew_L_1",
+      "part": "HORN_M2_TRIMMED_CORE_L1p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.759570351009142
+    },
+    {
+      "instance": "MotorCenterShim",
+      "part": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 544.0000000000001
+    },
+    {
+      "instance": "Torso_hind",
+      "part": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9049.607390180878
+    },
+    {
+      "instance": "E1__1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1__1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L11_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.44742457789181
+    },
+    {
+      "instance": "D1__1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923245
+    },
+    {
+      "instance": "D1__1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L19_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 73.09818516464563
+    },
+    {
+      "instance": "E1_1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "E1_1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L11_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.44742457789181
+    },
+    {
+      "instance": "D1_1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923246
+    },
+    {
+      "instance": "D1_1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L19_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 73.09818516464564
+    },
+    {
+      "instance": "hind_ProximalMotor__1",
+      "part": "ENV_XC330_M181_HIND_DATUM_r03",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "hind_ProximalMotor_1",
+      "part": "ENV_XC330_M181_HIND_DATUM_r03",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "hindR_thigh",
+      "part": "LEG_r03_DIRECT_HIND_THIGH",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 162.84654323481237
+    },
+    {
+      "instance": "hindR_shank",
+      "part": "LEG_r03_DIRECT_HIND_SHANK",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 193.18496875146784
+    },
+    {
+      "instance": "hindR_return_rail",
+      "part": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 113.61203259761956
+    },
+    {
+      "instance": "hindR_Foot",
+      "part": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 214.886603605436
+    },
+    {
+      "instance": "hindR_FootPad",
+      "part": "LEG_r02_CURVED_CONTACT_PAD",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10.367255756846308
+    },
+    {
+      "instance": "hindR_InputHorn",
+      "part": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 69.80376439710282
+    },
+    {
+      "instance": "hindR_H_Journal",
+      "part": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.28631471589878
+    },
+    {
+      "instance": "hindR_H_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_H_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindR_H_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.854096595615687
+    },
+    {
+      "instance": "hindR_H_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "hindR_K_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189133
+    },
+    {
+      "instance": "hindR_K_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_K_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292327
+    },
+    {
+      "instance": "hindR_K_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindR_K_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706152
+    },
+    {
+      "instance": "hindR_K_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339538
+    },
+    {
+      "instance": "hindR_A_Journal",
+      "part": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.992490903289664
+    },
+    {
+      "instance": "hindR_A_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_A_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_A_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_A_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "hindR_A_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "hindR_A_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.07179075559703
+    },
+    {
+      "instance": "hindR_A_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339539
+    },
+    {
+      "instance": "hindR_O1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.49427821424264
+    },
+    {
+      "instance": "hindR_O1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindR_O1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_O1_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindR_O1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindR_O1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "hindR_O1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.28948491557838
+    },
+    {
+      "instance": "hindR_O1_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.825380293376869
+    },
+    {
+      "instance": "hindR_A1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189154
+    },
+    {
+      "instance": "hindR_A1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindR_A1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "hindR_A1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "hindR_A1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "hindR_A1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339543
+    },
+    {
+      "instance": "hindR_O2_Journal",
+      "part": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 16.48707824603921
+    },
+    {
+      "instance": "hindR_O2_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706155
+    },
+    {
+      "instance": "hindR_O2_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.1010875311334
+    },
+    {
+      "instance": "hindR_O3_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.800755212871074
+    },
+    {
+      "instance": "hindR_O3_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindR_O3_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "hindR_O3_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "hindR_O3_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.694415513409517
+    },
+    {
+      "instance": "hindR_extension_Spring",
+      "part": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 64.82499831004124
+    },
+    {
+      "instance": "hindR_compression_Spring",
+      "part": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.06861106746549
+    },
+    {
+      "instance": "hindR_compression_SeatAssembly0",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138455
+    },
+    {
+      "instance": "hindR_compression_SeatAssembly1",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138476
+    },
+    {
+      "instance": "hindR_compression_GuideRod",
+      "part": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.833626974092548
+    },
+    {
+      "instance": "hindR_compression_GuideTube",
+      "part": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.19468914507714
+    },
+    {
+      "instance": "hindL_thigh",
+      "part": "LEG_r03_DIRECT_HIND_THIGH",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 162.84654323481243
+    },
+    {
+      "instance": "hindL_shank",
+      "part": "LEG_r03_DIRECT_HIND_SHANK",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 193.18496875146778
+    },
+    {
+      "instance": "hindL_return_rail",
+      "part": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 113.61203259761959
+    },
+    {
+      "instance": "hindL_Foot",
+      "part": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 214.886603605436
+    },
+    {
+      "instance": "hindL_FootPad",
+      "part": "LEG_r02_CURVED_CONTACT_PAD",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10.367255756846308
+    },
+    {
+      "instance": "hindL_InputHorn",
+      "part": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 69.80376439710281
+    },
+    {
+      "instance": "hindL_H_Journal",
+      "part": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.28631471589878
+    },
+    {
+      "instance": "hindL_H_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindL_H_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindL_H_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "hindL_H_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.854096595615687
+    },
+    {
+      "instance": "hindL_K_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189133
+    },
+    {
+      "instance": "hindL_K_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_K_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292327
+    },
+    {
+      "instance": "hindL_K_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindL_K_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindL_K_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339538
+    },
+    {
+      "instance": "hindL_A_Journal",
+      "part": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.992490903289664
+    },
+    {
+      "instance": "hindL_A_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_A_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_A_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_A_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "hindL_A_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "hindL_A_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339539
+    },
+    {
+      "instance": "hindL_A_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.07179075559703
+    },
+    {
+      "instance": "hindL_O1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.49427821424264
+    },
+    {
+      "instance": "hindL_O1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindL_O1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "hindL_O1_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_O1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "hindL_O1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "hindL_O1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.82538029337687
+    },
+    {
+      "instance": "hindL_O1_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.28948491557838
+    },
+    {
+      "instance": "hindL_A1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189154
+    },
+    {
+      "instance": "hindL_A1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "hindL_A1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923264
+    },
+    {
+      "instance": "hindL_A1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061557
+    },
+    {
+      "instance": "hindL_A1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "hindL_A1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.260768613339543
+    },
+    {
+      "instance": "hindL_O2_Journal",
+      "part": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 16.48707824603921
+    },
+    {
+      "instance": "hindL_O2_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "hindL_O2_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.101087531133398
+    },
+    {
+      "instance": "hindL_O3_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.800755212871074
+    },
+    {
+      "instance": "hindL_O3_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "hindL_O3_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "hindL_O3_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061544
+    },
+    {
+      "instance": "hindL_O3_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.694415513409517
+    },
+    {
+      "instance": "hindL_extension_Spring",
+      "part": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 64.82499831004124
+    },
+    {
+      "instance": "hindL_compression_Spring",
+      "part": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.06861106746549
+    },
+    {
+      "instance": "hindL_compression_SeatAssembly0",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138455
+    },
+    {
+      "instance": "hindL_compression_SeatAssembly1",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138476
+    },
+    {
+      "instance": "hindL_compression_GuideRod",
+      "part": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.833626974092548
+    },
+    {
+      "instance": "hindL_compression_GuideTube",
+      "part": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.194689145077145
+    },
+    {
+      "instance": "Torso_fore",
+      "part": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6435.17633847014
+    },
+    {
+      "instance": "E2__1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2__1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L11_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.447424577891816
+    },
+    {
+      "instance": "D2__1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923259
+    },
+    {
+      "instance": "D2__1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L19_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 73.09818516464559
+    },
+    {
+      "instance": "E2_1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "E2_1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L11_0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 41.447424577891816
+    },
+    {
+      "instance": "D2_1_TorsoBearing",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "D2_1_TorsoSpacer",
+      "part": "TORSO_OUTPUT_SPACER_L19_4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 73.0981851646456
+    },
+    {
+      "instance": "fore_ProximalMotor__1",
+      "part": "ENV_XC330_M181_FORE_DATUM_r03",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "fore_ProximalMotor_1",
+      "part": "ENV_XC330_M181_FORE_DATUM_r03",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.0
+    },
+    {
+      "instance": "foreR_thigh",
+      "part": "LEG_r03_DIRECT_FORE_THIGH",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 120.84654323481232
+    },
+    {
+      "instance": "foreR_shank",
+      "part": "LEG_r03_DIRECT_FORE_SHANK",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 157.18496875146775
+    },
+    {
+      "instance": "foreR_return_rail",
+      "part": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 90.57203259762011
+    },
+    {
+      "instance": "foreR_Foot",
+      "part": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 232.83315410917655
+    },
+    {
+      "instance": "foreR_FootPad",
+      "part": "LEG_r02_CURVED_CONTACT_PAD",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10.367255756846324
+    },
+    {
+      "instance": "foreR_InputHorn",
+      "part": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 69.80376439710285
+    },
+    {
+      "instance": "foreR_H_Journal",
+      "part": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.28631471589881
+    },
+    {
+      "instance": "foreR_H_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "foreR_H_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "foreR_H_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.854096595615687
+    },
+    {
+      "instance": "foreR_H_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "foreR_K_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189154
+    },
+    {
+      "instance": "foreR_K_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "foreR_K_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923252
+    },
+    {
+      "instance": "foreR_K_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "foreR_K_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706155
+    },
+    {
+      "instance": "foreR_K_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395415
+    },
+    {
+      "instance": "foreR_A_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.39076094848602
+    },
+    {
+      "instance": "foreR_A_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreR_A_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreR_A_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreR_A_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "foreR_A_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "foreR_A_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.071790755597027
+    },
+    {
+      "instance": "foreR_A_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "foreR_O1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.4942782142427
+    },
+    {
+      "instance": "foreR_O1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "foreR_O1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923262
+    },
+    {
+      "instance": "foreR_O1_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923262
+    },
+    {
+      "instance": "foreR_O1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreR_O1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061557
+    },
+    {
+      "instance": "foreR_O1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.289484915578395
+    },
+    {
+      "instance": "foreR_O1_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.82538029337689
+    },
+    {
+      "instance": "foreR_A1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.64726662518913
+    },
+    {
+      "instance": "foreR_A1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "foreR_A1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "foreR_A1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "foreR_A1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "foreR_A1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395375
+    },
+    {
+      "instance": "foreR_O2_Journal",
+      "part": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 16.48707824603924
+    },
+    {
+      "instance": "foreR_O2_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061557
+    },
+    {
+      "instance": "foreR_O2_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.101087531133414
+    },
+    {
+      "instance": "foreR_O3_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.800755212871124
+    },
+    {
+      "instance": "foreR_O3_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "foreR_O3_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "foreR_O3_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreR_O3_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.694415513409552
+    },
+    {
+      "instance": "foreR_extension_Spring",
+      "part": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 43.17752758648252
+    },
+    {
+      "instance": "foreR_compression_Spring",
+      "part": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.789233371317316
+    },
+    {
+      "instance": "foreR_compression_SeatAssembly0",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.60992609113848
+    },
+    {
+      "instance": "foreR_compression_SeatAssembly1",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138476
+    },
+    {
+      "instance": "foreR_compression_GuideRod",
+      "part": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.833626974092562
+    },
+    {
+      "instance": "foreR_compression_GuideTube",
+      "part": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.194689145077133
+    },
+    {
+      "instance": "foreL_thigh",
+      "part": "LEG_r03_DIRECT_FORE_THIGH",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 120.84654323481234
+    },
+    {
+      "instance": "foreL_shank",
+      "part": "LEG_r03_DIRECT_FORE_SHANK",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 157.18496875146775
+    },
+    {
+      "instance": "foreL_return_rail",
+      "part": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 90.57203259762014
+    },
+    {
+      "instance": "foreL_Foot",
+      "part": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 232.83315410917655
+    },
+    {
+      "instance": "foreL_FootPad",
+      "part": "LEG_r02_CURVED_CONTACT_PAD",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10.367255756846324
+    },
+    {
+      "instance": "foreL_InputHorn",
+      "part": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 69.80376439710285
+    },
+    {
+      "instance": "foreL_H_Journal",
+      "part": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 30.28631471589881
+    },
+    {
+      "instance": "foreL_H_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923266
+    },
+    {
+      "instance": "foreL_H_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "foreL_H_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "foreL_H_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.854096595615687
+    },
+    {
+      "instance": "foreL_K_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.647266625189154
+    },
+    {
+      "instance": "foreL_K_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292325
+    },
+    {
+      "instance": "foreL_K_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923252
+    },
+    {
+      "instance": "foreL_K_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "foreL_K_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "foreL_K_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395415
+    },
+    {
+      "instance": "foreL_A_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.390760948486015
+    },
+    {
+      "instance": "foreL_A_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreL_A_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreL_A_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923271
+    },
+    {
+      "instance": "foreL_A_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "foreL_A_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061535
+    },
+    {
+      "instance": "foreL_A_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395393
+    },
+    {
+      "instance": "foreL_A_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.071790755597027
+    },
+    {
+      "instance": "foreL_O1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.494278214242705
+    },
+    {
+      "instance": "foreL_O1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "foreL_O1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.30973355292326
+    },
+    {
+      "instance": "foreL_O1_Bearing2",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923262
+    },
+    {
+      "instance": "foreL_O1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreL_O1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreL_O1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.825380293376892
+    },
+    {
+      "instance": "foreL_O1_Spacer1",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.289484915578395
+    },
+    {
+      "instance": "foreL_A1_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.64726662518913
+    },
+    {
+      "instance": "foreL_A1_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "foreL_A1_Bearing1",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923268
+    },
+    {
+      "instance": "foreL_A1_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "foreL_A1_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "foreL_A1_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2.2607686133395375
+    },
+    {
+      "instance": "foreL_O2_Journal",
+      "part": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 16.487078246039236
+    },
+    {
+      "instance": "foreL_O2_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreL_O2_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.101087531133413
+    },
+    {
+      "instance": "foreL_O3_Journal",
+      "part": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.800755212871124
+    },
+    {
+      "instance": "foreL_O3_Bearing0",
+      "part": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923262
+    },
+    {
+      "instance": "foreL_O3_Clip0",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706156
+    },
+    {
+      "instance": "foreL_O3_Clip1",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061553
+    },
+    {
+      "instance": "foreL_O3_Spacer0",
+      "part": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 27.694415513409552
+    },
+    {
+      "instance": "foreL_extension_Spring",
+      "part": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 43.17752758648248
+    },
+    {
+      "instance": "foreL_compression_Spring",
+      "part": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.78923337131733
+    },
+    {
+      "instance": "foreL_compression_SeatAssembly0",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138483
+    },
+    {
+      "instance": "foreL_compression_SeatAssembly1",
+      "part": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21.609926091138476
+    },
+    {
+      "instance": "foreL_compression_GuideRod",
+      "part": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15.833626974092562
+    },
+    {
+      "instance": "foreL_compression_GuideTube",
+      "part": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.19468914507714
+    },
+    {
+      "instance": "ThroughA1",
+      "part": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 638.5695475466221
+    },
+    {
+      "instance": "A1__1_CaptureCap",
+      "part": "SPINE_r04_CAPTURE_CAP_NEG",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.91306715023692
+    },
+    {
+      "instance": "A1_1_CaptureCap",
+      "part": "SPINE_r04_CAPTURE_CAP_POS",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236927
+    },
+    {
+      "instance": "ThroughA2",
+      "part": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 638.5695475466221
+    },
+    {
+      "instance": "A2__1_CaptureCap",
+      "part": "SPINE_r04_CAPTURE_CAP_NEG",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236913
+    },
+    {
+      "instance": "A2_1_CaptureCap",
+      "part": "SPINE_r04_CAPTURE_CAP_POS",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 29.913067150236923
+    },
+    {
+      "instance": "ThroughC1",
+      "part": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 735.5033888731352
+    },
+    {
+      "instance": "ThroughC2",
+      "part": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 735.5033888731352
+    },
+    {
+      "instance": "HindTendon_Wheel",
+      "part": "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 266.12332072911175
+    },
+    {
+      "instance": "HindTendon_KneeMotor",
+      "part": "ENV_TENDON_XC330_M181_r03",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 17680.000000000004
+    },
+    {
+      "instance": "HindTendon_R_shell_guide",
+      "part": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 20.745507087980204
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Shaft",
+      "part": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.280485682882501
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Washer",
+      "part": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.3756248831906297
+    },
+    {
+      "instance": "HindTendon_R_shell_guide_Clip",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061513
+    },
+    {
+      "instance": "HindTendon_R_hip_guide",
+      "part": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 20.745507087980222
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Shaft",
+      "part": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.28048568288249
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Washer",
+      "part": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.3756248831906377
+    },
+    {
+      "instance": "HindTendon_R_hip_guide_Clip",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.9544797527061526
+    },
+    {
+      "instance": "HindTendon_R_Cable",
+      "part": "TENDON_r07_R_CABLE_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.607787394634578
+    },
+    {
+      "instance": "HindTendon_L_shell_guide",
+      "part": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 20.745507087980208
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Shaft",
+      "part": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.28048568288251
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Washer",
+      "part": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.37562488319063
+    },
+    {
+      "instance": "HindTendon_L_shell_guide_Clip",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706158
+    },
+    {
+      "instance": "HindTendon_L_hip_guide",
+      "part": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 20.74550708798022
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Shaft",
+      "part": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 12.280485682882489
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Washer",
+      "part": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.3756248831906377
+    },
+    {
+      "instance": "HindTendon_L_hip_guide_Clip",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706153
+    },
+    {
+      "instance": "HindTendon_L_Cable",
+      "part": "TENDON_r07_L_CABLE_PoseR07",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 8.617964744287658
+    },
+    {
+      "instance": "HindTendon_DriveDshaft",
+      "part": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.816676653528926
+    },
+    {
+      "instance": "HindTendon_DriveOuterClip",
+      "part": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 3.954479752706141
+    },
+    {
+      "instance": "HindTendon_DriveOuterWasher",
+      "part": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.3756248831906384
+    },
+    {
+      "instance": "HindTendon_DriveRootShim",
+      "part": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7535895377798558
+    },
+    {
+      "instance": "HindTendon_RearCaseLock",
+      "part": "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 176.15681493397545
+    },
+    {
+      "instance": "HindTendon_CaseLockBoltR",
+      "part": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.651527474454106
+    },
+    {
+      "instance": "HindTendon_CaseLockNutR",
+      "part": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.44249615133071
+    },
+    {
+      "instance": "HindTendon_CaseLockBoltL",
+      "part": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.651527474454106
+    },
+    {
+      "instance": "HindTendon_CaseLockNutL",
+      "part": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.442496151330715
+    },
+    {
+      "instance": "HindTendon_R_AnkleEye",
+      "part": "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.09785214883652
+    },
+    {
+      "instance": "HindTendon_R_AnkleSpacer",
+      "part": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.796663991138068
+    },
+    {
+      "instance": "HindTendon_L_AnkleEye",
+      "part": "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 58.097852332081935
+    },
+    {
+      "instance": "HindTendon_L_AnkleSpacer",
+      "part": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.796663991138066
+    },
+    {
+      "instance": "HindTendon_R_AnkleGrub",
+      "part": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.412162860541807
+    },
+    {
+      "instance": "HindTendon_R_WheelClamp",
+      "part": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 7.805104751670621
+    },
+    {
+      "instance": "HindTendon_R_WheelAnchorBolt",
+      "part": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.8837091327443574
+    },
+    {
+      "instance": "HindTendon_R_WheelClampGrub",
+      "part": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7469306161441696
+    },
+    {
+      "instance": "HindTendon_L_AnkleGrub",
+      "part": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.4121628605418075
+    },
+    {
+      "instance": "HindTendon_L_WheelClamp",
+      "part": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 7.80510475167062
+    },
+    {
+      "instance": "HindTendon_L_WheelAnchorBolt",
+      "part": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1.8837091327443574
+    },
+    {
+      "instance": "HindTendon_L_WheelClampGrub",
+      "part": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7469306161441697
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_Instance",
+      "part": "OpenRB150_Carrier_r07_Tray",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2746.59192659316
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampCap_0",
+      "part": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.054138739737308
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampBolt_0_0",
+      "part": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.941914221638623
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampBolt_0_1",
+      "part": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.941914221638623
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampCap_1",
+      "part": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 22.054138739737308
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampBolt_1_0",
+      "part": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.941914221638623
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_ClampBolt_1_1",
+      "part": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13.941914221638621
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_EdgeRetainerLeft001",
+      "part": "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 144.62300912272391
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_EdgeRetainerRight001",
+      "part": "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 144.62300912272386
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_RetainerBolt_m23_2_m29_0",
+      "part": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.561748664371056
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_RetainerBolt_m23_2_29_0",
+      "part": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.561748664371056
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_RetainerBolt_3_2_m29_0",
+      "part": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.561748664371056
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_RetainerBolt_3_2_29_0",
+      "part": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9.561748664371056
+    },
+    {
+      "instance": "OpenRB150_Carrier_r07_BoardEnvelope_Instance",
+      "part": "OpenRB150_Carrier_r07_BoardEnvelope",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2640.0000000000023
+    },
+    {
+      "instance": "CentralE1_Pin",
+      "part": "CENTRAL_E_GROOVED_PIN_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 24.930108502561787
+    },
+    {
+      "instance": "CentralE1_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923257
+    },
+    {
+      "instance": "CentralE1_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923255
+    },
+    {
+      "instance": "CentralE1_Washer0",
+      "part": "CENTRAL_E_THRUST_WASHER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7535895377798513
+    },
+    {
+      "instance": "CentralE1_Washer1",
+      "part": "CENTRAL_E_THRUST_WASHER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7535895377798512
+    },
+    {
+      "instance": "CentralE1_Retainer0",
+      "part": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.598660142577421
+    },
+    {
+      "instance": "CentralE1_Retainer1",
+      "part": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.5986601425774225
+    },
+    {
+      "instance": "CentralE2_Pin",
+      "part": "CENTRAL_E_GROOVED_PIN_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 24.930108502561787
+    },
+    {
+      "instance": "CentralE2_Bearing0",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923253
+    },
+    {
+      "instance": "CentralE2_Bearing1",
+      "part": "BRG_2x4x1p2_PROVISIONAL",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11.309733552923252
+    },
+    {
+      "instance": "CentralE2_Washer0",
+      "part": "CENTRAL_E_THRUST_WASHER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7535895377798515
+    },
+    {
+      "instance": "CentralE2_Washer1",
+      "part": "CENTRAL_E_THRUST_WASHER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 0.7535895377798514
+    },
+    {
+      "instance": "CentralE2_Retainer0",
+      "part": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.598660142577421
+    },
+    {
+      "instance": "CentralE2_Retainer1",
+      "part": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 4.5986601425774225
+    }
+  ],
+  "editable_bodies": 95,
+  "fully_constrained_sketches": true,
+  "actual_native_joint_max_error_mm": 8.881784197001252e-15,
+  "joint_tolerance_mm": 0.0001,
+  "envelope_mm": [
+    164.3360711393655,
+    119.6,
+    104.02521296214017
+  ],
+  "limits": "Source morphology, physical clearance and supplier interface verification are separate gates."
+}

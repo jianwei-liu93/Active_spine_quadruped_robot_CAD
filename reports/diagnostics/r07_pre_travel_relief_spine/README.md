@@ -1,0 +1,1 @@
+Pre-relief r07 sweep stopped after actual C1/lumbar frame interference was found. Partial coverage is NOT a pass. Full validation must use the corrected native hash. Exact failed coarse states are preserved separately.

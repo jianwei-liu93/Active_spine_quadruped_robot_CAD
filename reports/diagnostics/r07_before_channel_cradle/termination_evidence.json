@@ -1,0 +1,294 @@
+{
+  "scope": "Only verified workflow, launcher and24 exact full_part scripts; no GUI or otherjobs",
+  "before": [
+    {
+      "pid": 80855,
+      "argv": [
+        "python3",
+        "reports/tmp/motion_package_r07/launch_corrected_workflow.py"
+      ]
+    },
+    {
+      "pid": 101056,
+      "argv": [
+        "/usr/bin/python3",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/launch_full.py"
+      ]
+    },
+    {
+      "pid": 101059,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_0.py"
+      ]
+    },
+    {
+      "pid": 101060,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_1.py"
+      ]
+    },
+    {
+      "pid": 101061,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_2.py"
+      ]
+    },
+    {
+      "pid": 101063,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_3.py"
+      ]
+    },
+    {
+      "pid": 101064,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_4.py"
+      ]
+    },
+    {
+      "pid": 101065,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_5.py"
+      ]
+    },
+    {
+      "pid": 101066,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_6.py"
+      ]
+    },
+    {
+      "pid": 101067,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_7.py"
+      ]
+    },
+    {
+      "pid": 101068,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_8.py"
+      ]
+    },
+    {
+      "pid": 101069,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_9.py"
+      ]
+    },
+    {
+      "pid": 101070,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_10.py"
+      ]
+    },
+    {
+      "pid": 101071,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_11.py"
+      ]
+    },
+    {
+      "pid": 101072,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_12.py"
+      ]
+    },
+    {
+      "pid": 101073,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_13.py"
+      ]
+    },
+    {
+      "pid": 101074,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_14.py"
+      ]
+    },
+    {
+      "pid": 101075,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_15.py"
+      ]
+    },
+    {
+      "pid": 101076,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_16.py"
+      ]
+    },
+    {
+      "pid": 101077,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_17.py"
+      ]
+    },
+    {
+      "pid": 101078,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_18.py"
+      ]
+    },
+    {
+      "pid": 101079,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_19.py"
+      ]
+    },
+    {
+      "pid": 101080,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_20.py"
+      ]
+    },
+    {
+      "pid": 101081,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_21.py"
+      ]
+    },
+    {
+      "pid": 101124,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_22.py"
+      ]
+    },
+    {
+      "pid": 101141,
+      "argv": [
+        "/snap/freecad/2830/usr/bin/FreeCADCmd",
+        "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/full_part_23.py"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "pid": 80855,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101056,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101059,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101060,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101061,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101063,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101064,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101065,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101066,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101067,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101068,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101069,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101070,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101071,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101072,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101073,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101074,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101075,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101076,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101077,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101078,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101079,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101080,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101081,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101124,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 101141,
+      "signal": "SIGTERM"
+    }
+  ],
+  "remaining_nonempty_cmdlines": []
+}

@@ -1,6 +1,6 @@
 # r08 candidate delivery record
 
-Status: IN_VERIFICATION. This supersedes r07 central-frame morphology; it is not a fabrication release.
+Status: SUPERSEDED_CHECKPOINT. User steering requires a single integrated frame; r09 is being built to replace the r08 two-half adaptation. The r08 native/export evidence remains historical and is not final acceptance of the new revision or a fabrication release.
 
 The corrected native model is `cad/flexor_r08_robot.FCStd`. Movie S1 frames51.5–52.7s show broad windowed transverse crosswalls meeting solid upper sagittal horn cheeks. r07 incorrectly placed the broad window in the horn cheek. r08 corrects that face ownership and preserves the open top, lower circular horn openings, guide ears, all S9 joint centers and motor placements.
 

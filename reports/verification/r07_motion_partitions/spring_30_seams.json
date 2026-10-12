@@ -1,0 +1,51 @@
+[
+  {
+    "name": "hindR_compression_Spring",
+    "length": 22.093032259946785,
+    "seam": 0.0,
+    "status": "PASS",
+    "volume": 30.054263099411955
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 0.0,
+    "status": "FAIL",
+    "error": "RuntimeError('Compression coil does not span its OD4/seat bounding envelope')"
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 23.0,
+    "status": "FAIL",
+    "error": "OCCError('Bnd_Box is void')"
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 11.0,
+    "status": "FAIL",
+    "error": "OCCError('Bnd_Box is void')"
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 37.0,
+    "status": "FAIL",
+    "error": "RuntimeError('Compression coil lost wire or exceeds constituent volume bounds')"
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 61.0,
+    "status": "FAIL",
+    "error": "RuntimeError('Compression coil is not one valid solid')"
+  },
+  {
+    "name": "foreR_compression_Spring",
+    "length": 17.791246138622558,
+    "seam": 43.0,
+    "status": "PASS",
+    "volume": 29.80508811976343
+  }
+]

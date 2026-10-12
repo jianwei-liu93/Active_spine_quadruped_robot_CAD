@@ -1,0 +1,8 @@
+import subprocess
+from pathlib import Path
+wrappers=['/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_0.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_1.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_2.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_3.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_4.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_5.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_6.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_7.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_8.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_9.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_10.py', '/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/motion_package_r07/coarse_part_11.py']
+children=[]
+for wrapper in wrappers:
+ log=open(str(Path(wrapper).with_suffix(".log")),"w")
+ children.append(subprocess.Popen(["/snap/bin/freecad.cmd",wrapper],stdout=log,stderr=subprocess.STDOUT))
+for child in children:child.wait()

@@ -10,7 +10,7 @@
     "src/spine_bar_profile_r10.py": "d44fe25c5523edfa98263128000fd55bf2e3d9c6bba33c770453341dca1dfbc3",
     "src/central_joint_hardware_r10.py": "11f2b53fea1cb56c4adb64721a98ee403ac9a10ee4581ea076263703587158d4",
     "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9",
-    "docs/21_reference_fidelity_r10.md": "8bba8f353fada340e06cec0552c1b2544ce133084d120dd9477f035e35226951",
+    "docs/21_reference_fidelity_r10.md": "0006089852cd782532cb0f093902d9aa9174a7e16853aa2374b5bb2df884e77b",
     "reports/reviews/r10_integration_review.md": "93b12dca660fde82c9a471df9d61a2420bdcbce03287039f3ad645d234e784d8",
     "reports/reviews/r10_integration_review.json": "d793e8a26ec1d161e8b09f79bb6f13f6ba15703ff24cacc2c24f3ae555bfadf4",
     "reports/reviews/r10_bar_plate_source_review.md": "8610e8f3343e9a4f7f56a0254075639dcdd669e326f51af9db4cd8060118917c",
@@ -59,12 +59,13 @@
   "limits": [
     "Video morphology cannot recover metric thickness, fits, exact fore/hind hole patterns or hidden bearing stack.",
     "No mandatory extra fork/bevel is supported by inspected views.",
-    "Current revision-specific motion campaign and final package remain pending.",
+    "Revision-specific 1,346-state sampled motion gate passes; final package work is deferred by user request.",
     "Bearing race retention, thrust path, fits, support alignment, clip/tool/service access and structural/process qualification remain release blockers."
   ],
   "review_basis": [
     "Lead visual inspection of all17 current reference captures (including earlier inspected focused views).",
     "Independent Sol/high bounded review of seven source frames and14 current CAD images; reports/reviews/r10_integration_review.json."
   ],
-  "fabrication_release": "BLOCKED"
+  "fabrication_release": "BLOCKED",
+  "lead_checkpoint_update": "2026-10-13: completed sampled motion evidence collected; historical independent review scope preserved."
 }
