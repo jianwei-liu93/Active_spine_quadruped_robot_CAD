@@ -102,3 +102,8 @@ The task is complete at the agreed CAD deliverable level when the actual package
 ## r11 reference review checkpoint — 2026-10-13
 
 User reopened CAD refinement after the r10 pause. Expanded Movie S1 51–80 s review identified local fork sections and recessed long-link faces missing from the generic thin-plate representation. Lead integrated r11 native geometry through MCP, preserving r10 and all existing physical IDs. Initial native/S9/AX0–AX1 and 13-pose affected-pair checks PASS; broader candidate verification pending. See [22](22_linkage_reference_review_r11.md), `reports/reviews/r11/` and `reports/verification/r11_*`. No new drawings/manual or Blender render requested for this CAD revision.
+
+
+## r13 compact reference revision — 2026-10-13
+
+Latest user steering requires transverse narrowing, B-only terminal forks and organic rocker shape. Earlier r11 long-cheek and r12 two-ended interpretations are superseded; saved checkpoints preserved. Fresh r13 construction reuses corrected r12 component factories with a separate assembly revision. Lead serializes native rebuild, local/S9/identity checks, affected finite-motion screening and AX0/AX1. See [23](23_compact_reference_revision_r13.md). Manufacturing drawings/manual and new Blender videos remain outside this CAD refinement.

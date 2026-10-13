@@ -1,0 +1,38 @@
+{
+  "status": "FAIL",
+  "method": "Supplemental isolated FreeCADCmd; MCP headless tool inaccessible cache script PermissionError; actual CAD loaded without saving",
+  "pairs": [
+    {
+      "parts": [
+        "Link1_L3_1",
+        "Link1_L2_1"
+      ],
+      "intersection_mm3": 0.0,
+      "valid": true
+    },
+    {
+      "parts": [
+        "Link1_L3_1",
+        "Link1_L4_1"
+      ],
+      "intersection_mm3": 1.7589934860540386,
+      "valid": true
+    },
+    {
+      "parts": [
+        "Link2_L3_1",
+        "Link2_L2_1"
+      ],
+      "intersection_mm3": 0.0,
+      "valid": true
+    },
+    {
+      "parts": [
+        "Link2_L3_1",
+        "Link2_L4_1"
+      ],
+      "intersection_mm3": 1.5696888419956443,
+      "valid": true
+    }
+  ]
+}

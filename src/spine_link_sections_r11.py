@@ -154,9 +154,9 @@ def apply(b):
     retired=[]
     for source in list(b.library.Group):
         if source.Name=='SPN_r02_L3' and source.Name not in used:
-            retired.append(source.Name)
+            obsolete_name=source.Name;retired.append(obsolete_name)
             for child in reversed(list(source.Group)):doc.removeObject(child.Name)
-            doc.removeObject(source.Name);b.sources.pop(source.Name,None)
+            doc.removeObject(obsolete_name);b.sources.pop(obsolete_name,None)
     doc.PoseController.MotionMap=json.dumps(b.motion)
     doc.PoseController.addProperty('App::PropertyString','LinkSectionsR11','R11')
     report={'revision':'r11','classification':'RECONSTRUCTED_CANDIDATE_NOT_FABRICATION_RELEASE',

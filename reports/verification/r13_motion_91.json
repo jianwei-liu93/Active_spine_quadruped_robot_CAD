@@ -1,0 +1,1999 @@
+{
+  "status": "FAIL",
+  "assembly_revision": "r13",
+  "configuration_path": "parameters/assembly_r13.json",
+  "identity": {
+    "status": "PASS_IDENTITY_ONLY",
+    "unchanged_count": 378,
+    "unchanged_identity_sha256": "362af75254868c9bdb9cf87c165728f47e85031d5d5ce4482d70a20da86c46e0",
+    "source_proof_count": 87,
+    "affected": [
+      "A1_1_CaptureCap",
+      "A1_1_OuterBearing",
+      "A1_1_OuterSpacer",
+      "A1_1_Retainer1",
+      "A1__1_CaptureCap",
+      "A1__1_OuterBearing",
+      "A1__1_OuterSpacer",
+      "A1__1_Retainer0",
+      "A2_1_CaptureCap",
+      "A2_1_OuterBearing",
+      "A2_1_OuterSpacer",
+      "A2_1_Retainer1",
+      "A2__1_CaptureCap",
+      "A2__1_OuterBearing",
+      "A2__1_OuterSpacer",
+      "A2__1_Retainer0",
+      "B1_1_ForkOuterBearing",
+      "B1_1_ForkOuterSpacer",
+      "B1_1_Retainer1",
+      "B1__1_ForkOuterBearing",
+      "B1__1_ForkOuterSpacer",
+      "B1__1_Retainer0",
+      "B2_1_ForkOuterBearing",
+      "B2_1_ForkOuterSpacer",
+      "B2_1_Retainer1",
+      "B2__1_ForkOuterBearing",
+      "B2__1_ForkOuterSpacer",
+      "B2__1_Retainer0",
+      "C1_1_Bearing2",
+      "C1_1_CaptureWasher",
+      "C1_1_Retainer1",
+      "C1_1_Spacer1",
+      "C1__1_Bearing2",
+      "C1__1_CaptureWasher",
+      "C1__1_Retainer0",
+      "C1__1_Spacer0",
+      "C2_1_Bearing2",
+      "C2_1_CaptureWasher",
+      "C2_1_Retainer1",
+      "C2_1_Spacer1",
+      "C2__1_Bearing2",
+      "C2__1_CaptureWasher",
+      "C2__1_Retainer0",
+      "C2__1_Spacer0",
+      "D1_1_Pin",
+      "D1_1_Retainer1",
+      "D1__1_Pin",
+      "D1__1_Retainer0",
+      "D2_1_Pin",
+      "D2_1_Retainer1",
+      "D2__1_Pin",
+      "D2__1_Retainer0",
+      "GuideLiner1_1_0_65",
+      "GuideLiner1_1__0_65",
+      "GuideLiner1__1_0_65",
+      "GuideLiner1__1__0_65",
+      "GuideLiner2_1_0_65",
+      "GuideLiner2_1__0_65",
+      "GuideLiner2__1_0_65",
+      "GuideLiner2__1__0_65",
+      "Link1_L3_1",
+      "Link1_L3__1",
+      "Link1_L4_1",
+      "Link1_L4__1",
+      "Link2_L3_1",
+      "Link2_L3__1",
+      "Link2_L4_1",
+      "Link2_L4__1",
+      "LumbarIntegrated1",
+      "SyncB1",
+      "SyncB2",
+      "ThroughA1",
+      "ThroughA2",
+      "ThroughC1",
+      "ThroughC2",
+      "Torso_fore",
+      "Torso_hind"
+    ],
+    "changed_existing": [
+      "A1_1_CaptureCap",
+      "A1_1_OuterBearing",
+      "A1_1_OuterSpacer",
+      "A1_1_Retainer1",
+      "A1__1_CaptureCap",
+      "A1__1_OuterBearing",
+      "A1__1_OuterSpacer",
+      "A1__1_Retainer0",
+      "A2_1_CaptureCap",
+      "A2_1_OuterBearing",
+      "A2_1_OuterSpacer",
+      "A2_1_Retainer1",
+      "A2__1_CaptureCap",
+      "A2__1_OuterBearing",
+      "A2__1_OuterSpacer",
+      "A2__1_Retainer0",
+      "B1_1_Retainer1",
+      "B1__1_Retainer0",
+      "B2_1_Retainer1",
+      "B2__1_Retainer0",
+      "C1_1_Bearing2",
+      "C1_1_CaptureWasher",
+      "C1_1_Retainer1",
+      "C1_1_Spacer1",
+      "C1__1_Bearing2",
+      "C1__1_CaptureWasher",
+      "C1__1_Retainer0",
+      "C1__1_Spacer0",
+      "C2_1_Bearing2",
+      "C2_1_CaptureWasher",
+      "C2_1_Retainer1",
+      "C2_1_Spacer1",
+      "C2__1_Bearing2",
+      "C2__1_CaptureWasher",
+      "C2__1_Retainer0",
+      "C2__1_Spacer0",
+      "D1_1_Pin",
+      "D1_1_Retainer1",
+      "D1__1_Pin",
+      "D1__1_Retainer0",
+      "D2_1_Pin",
+      "D2_1_Retainer1",
+      "D2__1_Pin",
+      "D2__1_Retainer0",
+      "GuideLiner1_1_0_65",
+      "GuideLiner1_1__0_65",
+      "GuideLiner1__1_0_65",
+      "GuideLiner1__1__0_65",
+      "GuideLiner2_1_0_65",
+      "GuideLiner2_1__0_65",
+      "GuideLiner2__1_0_65",
+      "GuideLiner2__1__0_65",
+      "Link1_L3_1",
+      "Link1_L3__1",
+      "Link1_L4_1",
+      "Link1_L4__1",
+      "Link2_L3_1",
+      "Link2_L3__1",
+      "Link2_L4_1",
+      "Link2_L4__1",
+      "LumbarIntegrated1",
+      "SyncB1",
+      "SyncB2",
+      "ThroughA1",
+      "ThroughA2",
+      "ThroughC1",
+      "ThroughC2",
+      "Torso_fore",
+      "Torso_hind"
+    ],
+    "retired": [
+      "D1_1_Bearing1",
+      "D1_1_Spacer0",
+      "D1__1_Bearing1",
+      "D1__1_Spacer0",
+      "D2_1_Bearing1",
+      "D2_1_Spacer0",
+      "D2__1_Bearing1",
+      "D2__1_Spacer0",
+      "E1_1_Bearing0",
+      "E1_1_Bearing1",
+      "E1_1_Pin",
+      "E1_1_Retainer0",
+      "E1_1_Retainer1",
+      "E1_1_Spacer0",
+      "E1_1_TorsoBearing",
+      "E1_1_TorsoSpacer",
+      "E1__1_Bearing0",
+      "E1__1_Bearing1",
+      "E1__1_Pin",
+      "E1__1_Retainer0",
+      "E1__1_Retainer1",
+      "E1__1_Spacer0",
+      "E1__1_TorsoBearing",
+      "E1__1_TorsoSpacer",
+      "E2_1_Bearing0",
+      "E2_1_Bearing1",
+      "E2_1_Pin",
+      "E2_1_Retainer0",
+      "E2_1_Retainer1",
+      "E2_1_Spacer0",
+      "E2_1_TorsoBearing",
+      "E2_1_TorsoSpacer",
+      "E2__1_Bearing0",
+      "E2__1_Bearing1",
+      "E2__1_Pin",
+      "E2__1_Retainer0",
+      "E2__1_Retainer1",
+      "E2__1_Spacer0",
+      "E2__1_TorsoBearing",
+      "E2__1_TorsoSpacer"
+    ],
+    "new_count": 8,
+    "pair_count": 32032,
+    "native_editability": {
+      "body_count": 93,
+      "body_member_count": 735,
+      "sketch_count": 321,
+      "fully_constrained_sketch_count": 321,
+      "invalid_or_error_count": 0,
+      "recursive_guard": {
+        "status": "PASS_NATIVE_STATE_ONLY",
+        "body_count": 93,
+        "body_and_member_count": 735,
+        "invalid_or_error_count": 0
+      }
+    },
+    "strictly_unchanged_motors": [
+      "SpineMotor1",
+      "SpineMotor_1"
+    ],
+    "native_configuration_comparison": {
+      "status": "PASS_EXACT_NATIVE_MOTION_PROJECTION",
+      "exact_preserved_keys": [
+        "parameters",
+        "leg_geometry",
+        "states"
+      ],
+      "baseline_native_configuration_sha256": "7339848b87d3ad1bd10f026a61b582587637519effddfe6780b351cc4446fba3",
+      "current_native_configuration_sha256": "220294aff8ebb20d75c5e74bef1e10e4bc10c40855d84a7aeaa0024c5458d07c",
+      "historical_native_metadata_refresh": [
+        {
+          "path": [
+            "bar_profile_r10"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "provenance": "DESIGN_ASSUMPTION; S1 56\u201359s supports broad plain G-B/A-B bars and broad rounded-rect relief on long B-C bars. Fork/bearing hidden detail not dimensionally resolved.",
+            "long_source_name": "SPN_r02_L4",
+            "relief_width_mm": 3.2,
+            "relief_end_inset_from_bore_mm": 5.5,
+            "relief_corner_radius_mm": 0.7,
+            "thickness_mm": 1.2,
+            "bore_diameter_mm": 4.05,
+            "preserve_plain_short_bars": true,
+            "fork_detail_status": "Not added without identified layering/load-path evidence; separate existing bearing stacks retained."
+          }
+        },
+        {
+          "path": [
+            "center_frame_r12"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "classification": "DESIGN_ASSUMPTION",
+            "source": "Movie S1 51\u201380 s and user transverse-width correction; dimensions not measured from pixels",
+            "frame_origin_world_y_mm": 28.4,
+            "housing_y_span_mm": 56.8,
+            "ground_y_span_mm": 78.8,
+            "guide_center_abs_y_mm": 38.6,
+            "shelf_axial_depth_mm": 9.4,
+            "source_stack_bounds_mm": [
+              -11.0,
+              67.8
+            ],
+            "housing_case_x_bounds_mm": [
+              -12,
+              12
+            ],
+            "motor_case_x_bounds_mm": [
+              -10,
+              10
+            ],
+            "crosswall_thickness_mm": 1.6,
+            "motor_y_envelopes_mm": [
+              [
+                -26.4,
+                -0.4
+              ],
+              [
+                0.4,
+                26.4
+              ]
+            ],
+            "case_cheek_y_bands_mm": [
+              [
+                -28.4,
+                -26.8
+              ],
+              [
+                26.8,
+                28.4
+              ]
+            ],
+            "E_support_ownership": "central r10 lug/bearings and torso clevis only; retire outer E tube pads, lateral E ears and32 old hardware instances",
+            "A_C_shaft_length_mm": 82.4,
+            "capture_cap_abs_y_mm": 40.8,
+            "outer_clip_abs_y_mm": 40.7,
+            "D_pin_length_mm": 24.0,
+            "D_pin_center_abs_y_mm": 25.6,
+            "D_outer_clip_abs_y_mm": 37.1,
+            "nominal_D_clip_to_guide_axial_gap_mm": 0.4,
+            "fits_loads_retention": "UNVERIFIED",
+            "A_shoulder_span_mm": 54.0
+          }
+        },
+        {
+          "path": [
+            "central_attachment_r10"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "provenance": "DESIGN_ASSUMPTION dimensions; source S1 51\u201359s supports grounded open-box crossmember/round-ended center lug and moving output carrier; exact bearing stack hidden. Existing E axes unchanged; no new DOF.",
+            "frame_origin_world_y_mm": 28.4,
+            "beam_inward_x_bounds_from_E_mm": [
+              4,
+              8
+            ],
+            "beam_z_bounds_mm": [
+              -2.5,
+              2.5
+            ],
+            "beam_y_bounds_mm": [
+              -28.4,
+              28.4
+            ],
+            "window_y_intervals_mm": [
+              [
+                -26.8,
+                -3
+              ],
+              [
+                3,
+                26.8
+              ]
+            ],
+            "window_z_bounds_mm": [
+              -1.2,
+              1.2
+            ],
+            "lug_radius_mm": 3.5,
+            "lug_half_width_y_mm": 1.6,
+            "lug_stem_inward_length_mm": 8,
+            "lug_through_bore_mm": 2.2,
+            "bearing_seat_diameter_mm": 4.05,
+            "bearing_seat_depth_mm": 1.2,
+            "bearing_y_centers_mm": [
+              -1,
+              1
+            ],
+            "clevis_ear_y_centers_mm": [
+              -2.8,
+              2.8
+            ],
+            "clevis_ear_thickness_mm": 1.6,
+            "clevis_ear_width_mm": 7,
+            "clevis_pin_bore_mm": 2.0,
+            "pin_diameter_mm": 1.9,
+            "pin_length_mm": 9.2,
+            "pin_groove_center_abs_y_mm": 4.0,
+            "pin_groove_width_mm": 0.7,
+            "pin_groove_root_diameter_mm": 1.6,
+            "washer_y_centers_mm": [
+              -1.9,
+              1.9
+            ],
+            "washer_od_mm": 3,
+            "washer_id_mm": 2.05,
+            "washer_thickness_mm": 0.2,
+            "retainer_y_centers_mm": [
+              -4,
+              4
+            ],
+            "retainer_od_mm": 3.6,
+            "retainer_id_mm": 1.6,
+            "retainer_thickness_mm": 0.6,
+            "retainer_slot_width_mm": 0.5,
+            "outer_E_supports": "Retain coaxial outer supports as same-joint supplemental bearings; no independent joint or decorative disconnected shaft. Central joint pin supports new clevis."
+          }
+        },
+        {
+          "path": [
+            "controller_r07",
+            "retainer_minimum_outer_wall_mm"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": 0.8
+        },
+        {
+          "path": [
+            "controller_r07",
+            "tray_bounds_xyz_mm"
+          ],
+          "baseline_present": true,
+          "current_present": true,
+          "baseline": [
+            -24,
+            4,
+            -35,
+            35,
+            37.2,
+            38.4
+          ],
+          "current": [
+            -24.8,
+            4.8,
+            -35,
+            35,
+            37.2,
+            38.4
+          ]
+        },
+        {
+          "path": [
+            "limits"
+          ],
+          "baseline_present": true,
+          "current_present": true,
+          "baseline": "Complete reviewable candidate in development; dimensions remain provisional where marked. Geometry, package and release gates recorded separately.",
+          "current": "Single-ended organic rocker and compact frame candidate; r12 two-ended trial superseded. Verification results only as recorded for r13."
+        },
+        {
+          "path": [
+            "lumbar_frame_r07",
+            "travel_relief_provenance"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": "DESIGN_ASSUMPTION: full-stack C1/C2 travel capsules, actual solver center range plus .01mm endpoint allowance; .35mm nominal radial clearance about radius1.8 shaft; preserves all S9 datums."
+        },
+        {
+          "path": [
+            "lumbar_frame_r07",
+            "travel_relief_radius_mm"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": 2.15
+        },
+        {
+          "path": [
+            "lumbar_frame_r08"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "provenance": "DESIGN_ASSUMPTION metric reconstruction; Movie S1 51.5-52.7s confirms orthogonal windowed crosswalls and solid upper sagittal horn cheeks. Opposite wall partly occluded; medium confidence.",
+            "outer_rectangle_mm": [
+              -14,
+              -11,
+              28,
+              44
+            ],
+            "outer_corner_radius_mm": 1.5,
+            "lower_opening_radius_mm": 9.0,
+            "upper_window_mm": [
+              -8.5,
+              10.5,
+              17,
+              15.5
+            ],
+            "ear_base_width_mm": 11.5,
+            "ear_top_radius_mm": 3.5,
+            "all_joint_case_tie_datums": "unchanged from r06",
+            "supersedes": "r06 circular external lower-foot outline and narrow upper window",
+            "minimum_aperture_sill_mm": 1.5,
+            "travel_relief_radius_mm": 2.15,
+            "travel_relief_provenance": "DESIGN_ASSUMPTION: full-stack C1/C2 travel capsules, actual solver center range plus .01mm endpoint allowance; .35mm nominal radial clearance about radius1.8 shaft; preserves all S9 datums.",
+            "sagittal_upper_window": false,
+            "crosswall_case_x_intervals_mm": [
+              [
+                -14,
+                -12.4
+              ],
+              [
+                12.4,
+                14
+              ]
+            ],
+            "crosswall_case_z_bounds_mm": [
+              0,
+              33
+            ],
+            "crosswall_total_y_bounds_mm": [
+              -28.4,
+              28.4
+            ],
+            "crosswall_window_y_bounds_mm": [
+              -18,
+              18
+            ],
+            "crosswall_window_case_z_bounds_mm": [
+              10.5,
+              27.5
+            ],
+            "midplane_seam_total_clearance_mm": 0.2,
+            "split_basis": "ENGINEERING_ADAPTATION two printed half-cages retained by existing four transverse ties. Seam nonstructural; no bond or moment transfer credited. Open top preserves motor insertion.",
+            "tie_crosswall_passage_diameter_mm": 2.6,
+            "carrier_access_pockets_y_abs_mm": [
+              17.75,
+              22.25
+            ],
+            "carrier_access_pockets_case_z_mm": [
+              26.65,
+              31.15
+            ],
+            "carrier_access_basis": "ENGINEERING_ADAPTATION actual neutral intersections; positive case-X crosswall only; 1.85mm top rail retained, all controller and S9 datums unchanged"
+          }
+        },
+        {
+          "path": [
+            "lumbar_frame_r09"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "provenance": "DESIGN_ASSUMPTION metric reconstruction; Movie S1 51.5\u201352.7s and 60/76s support a continuous one-piece central cage with orthogonal windowed crosswalls and solid horn cheeks; exact original dimensions remain unknown.",
+            "outer_rectangle_mm": [
+              -14,
+              -11,
+              28,
+              44
+            ],
+            "outer_corner_radius_mm": 1.5,
+            "lower_opening_radius_mm": 9.0,
+            "upper_window_mm": [
+              -8.5,
+              10.5,
+              17,
+              15.5
+            ],
+            "ear_base_width_mm": 11.5,
+            "ear_top_radius_mm": 3.5,
+            "all_joint_case_tie_datums": "unchanged from r06",
+            "supersedes": "r08 two printed half-cages; removed midplane seam and unnecessary separation ties",
+            "minimum_aperture_sill_mm": 1.5,
+            "travel_relief_radius_mm": 2.15,
+            "travel_relief_provenance": "DESIGN_ASSUMPTION: full-stack C1/C2 travel capsules, actual solver center range plus .01mm endpoint allowance; .35mm nominal radial clearance about radius1.8 shaft; preserves all S9 datums.",
+            "sagittal_upper_window": false,
+            "crosswall_case_x_intervals_mm": [
+              [
+                -14,
+                -12.4
+              ],
+              [
+                12.4,
+                14
+              ]
+            ],
+            "crosswall_case_z_bounds_mm": [
+              0,
+              33
+            ],
+            "crosswall_total_y_bounds_mm": [
+              -28.4,
+              28.4
+            ],
+            "crosswall_window_y_bounds_mm": [
+              -18,
+              18
+            ],
+            "crosswall_window_case_z_bounds_mm": [
+              10.5,
+              27.5
+            ],
+            "midplane_seam_total_clearance_mm": 0,
+            "split_basis": "Superseded: user requires one integrated native frame; no midplane manufacturing split.",
+            "tie_crosswall_passage_diameter_mm": 2.6,
+            "carrier_access_pockets_y_abs_mm": [
+              17.75,
+              22.25
+            ],
+            "carrier_access_pockets_case_z_mm": [
+              26.65,
+              31.15
+            ],
+            "carrier_access_basis": "ENGINEERING_ADAPTATION actual neutral intersections; positive case-X crosswall only; 1.85mm top rail retained, all controller and S9 datums unchanged",
+            "monolithic_local_z_bounds_mm": [
+              0,
+              56.8
+            ],
+            "opposite_cheek_offset_local_z_mm": 55.2,
+            "whole_stack_local_z_bounds_mm": [
+              -12.6,
+              69.4
+            ],
+            "obsolete_tie_hardware_removed": true,
+            "native_part_number": "FRM_LUMBAR_MONOLITHIC_CAGE_r09",
+            "physical_frame_instances": 1,
+            "motor_retention": "Case collars/bands remain reconstruction envelopes. Critical vendor mounting/output pattern and verified retention/load capacity remain UNVERIFIED."
+          }
+        },
+        {
+          "path": [
+            "plate_profile_r10"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "provenance": "DESIGN_ASSUMPTION metric reconstruction; S1 59s left visible plate has long side reliefs, center slot and short end curved slots with adjacent round holes; no manufacturer pattern recovered.",
+            "replace_five_capsule_pattern": true,
+            "side_slot_y_mm": [
+              -12,
+              12
+            ],
+            "side_slot_z_bounds_mm": [
+              -12,
+              20
+            ],
+            "slot_width_mm": 2.2,
+            "center_slot_z_bounds_mm": [
+              -6,
+              8
+            ],
+            "end_slot_z_centers_mm": [
+              -10,
+              17
+            ],
+            "end_slot_radius_mm": 4.5,
+            "end_slot_sweep_deg": [
+              -35,
+              35
+            ],
+            "end_round_hole_diameter_mm": 2.2,
+            "end_round_hole_offset_y_mm": -2.5,
+            "exact_pattern_status": "UNVERIFIED reconstructed morphology; pending clearance check"
+          }
+        },
+        {
+          "path": [
+            "revision"
+          ],
+          "baseline_present": true,
+          "current_present": true,
+          "baseline": "r07",
+          "current": "r13"
+        },
+        {
+          "path": [
+            "spine_bar_r12"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "outline_width_mm": 8.0,
+            "thickness_mm": 1.2,
+            "pose_frame_width_mm": 6.0,
+            "pivot_datum_xy_mm": [
+              3,
+              3
+            ],
+            "link_bore_mm": 4.05,
+            "long_relief_depth_mm": 0.6,
+            "long_relief_width_mm": 3.2,
+            "long_relief_end_inset_mm": 5.5,
+            "long_relief_corner_radius_mm": 0.7,
+            "source": "Movie S1 compact B-end fork only, A single eye; user close-up correction. Organic tangent-arc web; dimensions assumed.",
+            "terminal_reach_mm": 5.5,
+            "terminal_opening_depth_mm": 3.5,
+            "terminal_leaf_mm": 1.2,
+            "B_added_cheek_abs_y_mm": 36.0,
+            "A_shoulder_span_mm": 54.0,
+            "B_shaft_length_mm": 76.0,
+            "B_shoulder_span_mm": 60.0,
+            "B_retainer_abs_y_mm": 37.5,
+            "B_outer_spacer_abs_y_mm": 36.9,
+            "fork_end": "B",
+            "waist_width_mm": 6.0
+          }
+        },
+        {
+          "path": [
+            "torso_contours_r12"
+          ],
+          "baseline_present": false,
+          "current_present": true,
+          "current": {
+            "outer_corner_radius_mm": 4,
+            "window_corner_radius_mm": 1,
+            "pan_rail_width_mm": 2,
+            "retired_E_ear_stub_inboard_mm": 0.4,
+            "status": "DESIGN_ASSUMPTION native profile revision; D/H and central E retained"
+          }
+        }
+      ],
+      "scope": "Historical native config metadata may predate canonical r10 geometry; all source/world identity gates remain strict"
+    }
+  },
+  "manifest_sha256": "06da7b21fcd8d3921e53e81ef3ccb8413e1378433ba280e51c6deab6460bce62",
+  "native_sha256": {
+    "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r13_robot.FCStd": "480b8f48286517585bc857d35ed4fd4a73094cc289acbe577e11cf168acd3ff2",
+    "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r10_robot.FCStd": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9"
+  },
+  "dependency_sha256": {
+    "src/adaptive_volume_r07.py": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+    "src/build_leg_r02.py": "7187b1cdc295f9c352eea21600feacfbdf538a4b5a7e639a4a856dca697a1cd9",
+    "src/build_robot_r08.py": "107066dc36fce0453f5ddd9199317241f546bc3b915bc673063be6e996cd8244",
+    "src/build_robot_r12.py": "5e3855964bc825c664609a2be7d70fed42959181fe20f583a944ae7c424f0668",
+    "src/build_robot_r13.py": "ddbde6dbabc37cc7d63eafda1a3ba8c34cc197fbdea6572593eabe07630a99c0",
+    "src/build_tendon_r03.py": "e623c808d5f0a566a5f99c6d066553e11181f7e198ada237e478269c204d05fd",
+    "src/cable_clamps_r07.py": "8c36a3d013fab3439858c659afda2d03b8f52e91342eb63f145aecf916a38440",
+    "src/cad_common.py": "5e4a2c629297c061bfa89b71d84a791a853a2c06f606d240ac3d1cdce33d0f84",
+    "src/central_joint_hardware_r10.py": "11f2b53fea1cb56c4adb64721a98ee403ac9a10ee4581ea076263703587158d4",
+    "src/compact_spine_stack_r12.py": "825e5bc18e77bdc104a5117f86349cc3c85e82e7fb0ef117ddde67a47e29df2a",
+    "src/compression_spring_r07.py": "8bde615c158d2c41ca8f99081411ec3336676e0d9b34ac1b5b44be7047825d0b",
+    "src/controller_carrier_r07.py": "7ec69887942221fbbad12e1057a4168cb13daa730e9ac945325ec68410c3c387",
+    "src/kinematics.py": "c053c7273b29ef108c12a2ae5244e72cd4ea554b1503164ce97bd8e6dd3517cb",
+    "src/leg_geometry_r02.py": "459c0b40a6add8ea9f7a781ef34e09e98c183c70e4542a2691e51f829e0887a6",
+    "src/leg_mechanics.py": "971bb313a22ab6037411f31f4e4dcfedcdd1730eb6d8ae25af0f5d91a84831fa",
+    "src/leg_motion_r07.py": "fbcba404cf162688e647c1d982c5f124467750c46ecc9204104d858d5a0da7a4",
+    "src/occt_adaptive_volume_r07.cpp": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+    "src/robot_geometry.py": "478b86a5b5ff985d5475113e2c4003de389d3492cb2e3a3473f192845931d4f4",
+    "src/robot_pose_r03.py": "962898052a75f1bd5ee0e43d968b38c676ed2e3ad8985da8744d865b220439a9",
+    "src/spine_attachments_r02.py": "5286eb532fd95db8e8902159eb22342a5c84b8678229368fa81c9f5510f8ae34",
+    "src/spine_bar_profile_r10.py": "d44fe25c5523edfa98263128000fd55bf2e3d9c6bba33c770453341dca1dfbc3",
+    "src/spine_bars_r12.py": "8deda1d65934ee88a5f58421a21bf7191e1096c8c84699dee0ff91bde2656f08",
+    "src/spine_frame_r08.py": "c216b6cf6249c0d96303644e3074f7b30168c10b199c212fa42ac788ec44c009",
+    "src/spine_frame_r09.py": "aeba68150e0dee2043236617b5e784de50ed2f17bf1403a8b476b4a75d4e03a7",
+    "src/spine_frame_r10.py": "e8e16590f5616ed2c65aa2f538028909bf5cd98c2c334e8c329a28a6c4575d10",
+    "src/spine_frame_r12.py": "2429aecff2fdc3dd00d1f3be7f178118ca38ba5e3bcca391f85fdc6104501d76",
+    "src/spring_normalization_r07.py": "13a7d99d476aa9ab2bdcb08df976272ba9d5d3217c3430150038e5889eca0696",
+    "src/spring_wire_r03.py": "ea61499d6e2fd85bc2391bb648116321dcbb441d816ae0fdb5cc47a063158002",
+    "src/sweep_robot_r03.py": "3b9949bbcb2e885cf690cf2bfa598d56a964a06adc0ecfc45954f292780fb865",
+    "src/tendon_r03.py": "e53b5cbcd506149df39ca3d6677bcf9bf30b4bc779183117b4a9c4c85499c050",
+    "src/torso_attachment_r10.py": "eefbde19527b6317bd91fb54e40fc2db382d14575f6de4b641f8053fe76b36ba",
+    "src/torso_contours_r12.py": "cb97ddacc8ed691a2167bc0a206dfc83958166cc83b0d72041c50d4d4b9e1f16",
+    "src/verify_changed_revision_r10.py": "fdd243030cec6c07f686500d6a0496c2d0815dff488f453e243e46e39bf27e02",
+    "src/verify_compact_revision_r12.py": "edf9eb9e62b008b3f75383161e960d2a0d4580e617f247149be5e09642ad3a87",
+    "src/verify_frame_revision_r09.py": "723239c9fda21e3a719d5cc7b14fcff7e280c7378775cd9a1b77ebe86ae4e59c",
+    "src/verify_link_sections_r11.py": "96704283563da8d60961f3004ad6751b281f724c2069b9f437e712af7337dce2",
+    "src/verify_motion_package_r08.py": "4f7747804bc9edf1976f2017f3db2d40a2804142e8035782ae6df05c02924cdb",
+    "parameters/assembly_r12.json": "206df3ea8c39fff9f4d85d6fb255575f9e5ba6e9141a1f1c040e198fdbeb1c45",
+    "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9",
+    "reports/verification/r10_changed_partitions/freeze.json": "1310c7211f02e06d17773d9223bc8acdcdd7a0e1e738a462d4d009c53ad2db02",
+    "parameters/candidate_r02.json": "10dd7267e75457bb855d15a75a0b2810704578b94501dd04c935db76196bfb3d",
+    "reports/verification/r08_motion_partitions/full_manifest.json": "e4f1509916d90b7e4fad69898435033f6157660869d66cb696b1be9b6a474ea4",
+    "parameters/assembly_r13.json": "2b9111a60d4056d40ccf11b265b172f7630942bc2801a72ecd2013ef05982e52"
+  },
+  "lead_frozen_sha256": "480b8f48286517585bc857d35ed4fd4a73094cc289acbe577e11cf168acd3ff2",
+  "expected_sample_ids": [
+    "r13_spine_000",
+    "r13_spine_004",
+    "r13_spine_008",
+    "r13_spine_012",
+    "r13_spine_016",
+    "r13_spine_020",
+    "r13_spine_024",
+    "r13_spine_028",
+    "r13_spine_032",
+    "r13_spine_036",
+    "r13_spine_040",
+    "r13_spine_044",
+    "r13_spine_048",
+    "r13_spine_052",
+    "r13_spine_056",
+    "r13_spine_060",
+    "r13_spine_064",
+    "r13_spine_068",
+    "r13_spine_072",
+    "r13_spine_076",
+    "r13_spine_080",
+    "r13_spine_084",
+    "r13_spine_088",
+    "r13_spine_092",
+    "r13_spine_096",
+    "r13_spine_100",
+    "r13_spine_104",
+    "r13_spine_108",
+    "r13_spine_112",
+    "r13_spine_116",
+    "r13_spine_120",
+    "r13_spine_124",
+    "r13_spine_128",
+    "r13_spine_132",
+    "r13_spine_136",
+    "r13_spine_140",
+    "r13_spine_144",
+    "r13_spine_148",
+    "r13_spine_152",
+    "r13_spine_156",
+    "r13_spine_160",
+    "r13_spine_164",
+    "r13_spine_168",
+    "r13_spine_172",
+    "r13_spine_176",
+    "r13_spine_180",
+    "r13_spine_184",
+    "r13_spine_188",
+    "r13_spine_192",
+    "r13_spine_196",
+    "r13_spine_200",
+    "r13_spine_204",
+    "r13_spine_208",
+    "r13_spine_212",
+    "r13_spine_216",
+    "r13_spine_220",
+    "r13_spine_224",
+    "r13_spine_228",
+    "r13_spine_232",
+    "r13_spine_236",
+    "r13_spine_240",
+    "r13_spine_244",
+    "r13_spine_248",
+    "r13_spine_252",
+    "r13_spine_256",
+    "r13_spine_260",
+    "r13_spine_264",
+    "r13_spine_268",
+    "r13_spine_272",
+    "r13_spine_276",
+    "r13_spine_280",
+    "r13_spine_284",
+    "r13_spine_288",
+    "r13_spine_292",
+    "r13_spine_296",
+    "r13_spine_300",
+    "r13_spine_304",
+    "r13_spine_308",
+    "r13_spine_312",
+    "r13_spine_316",
+    "r13_spine_320",
+    "r13_spine_324",
+    "r13_spine_328",
+    "r13_spine_332",
+    "r13_spine_336",
+    "r13_spine_340",
+    "r13_spine_344",
+    "r13_spine_348",
+    "r13_spine_352",
+    "r13_spine_356",
+    "r13_spine_360"
+  ],
+  "changed_existing_count": 69,
+  "new_instance_count": 8,
+  "retired_instance_count": 40,
+  "requested_sample_count": 91,
+  "expected_pair_decisions": 2914912,
+  "pair_count": 32032,
+  "pair_sha256": "789fa7a44be458aa578599eaa8184c2622e112ff85a206f2e95f293c12969ac8",
+  "records": [
+    {
+      "sample_id": "r13_spine_000",
+      "input_sha256": "fb853a2466526291ee02b2e6c04acf0275a66a2885a228fe9cf41b86e01376ba",
+      "pair_count": 32032,
+      "decision_sha256": "f4d23f251d0d09d8680351f2f55c8f4b447630e7501f99386509137f60c192ca",
+      "counts": {
+        "bbox": 31423,
+        "occ": 609,
+        "cached": 0
+      },
+      "guide_warnings": []
+    }
+  ],
+  "adaptive_intersections": [
+    {
+      "volume_mm3": 1.758993486054135,
+      "gauss_volume_mm3": 1.7589934860541352,
+      "estimated_numerical_margin_mm3": 1.9088876577091564e-15,
+      "estimated_relative_integration_error": 1.085215876490408e-15,
+      "raw_shape_volume_mm3": 1.7589934860540568,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 1.758993486054135,
+          "estimated_relative_integration_error": 1.085215876490408e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 1.085215876490408e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 3.787016950639196e-16,
+          "cross_algorithm_relative_difference": 1.2623389835463987e-16,
+          "gauss_volume_mm3": 1.7589934860541352,
+          "estimated_numerical_margin_mm3": 1.9088876577091564e-15,
+          "brep_sha256": "c74fd3153167c878900dc985887b931539c52ab6329740ad58827cebeca6dcf1",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 1.7589934860541359,
+              "estimated_relative_integration_error": 6.821844599228688e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 1.7589934860541352,
+              "estimated_relative_integration_error": 3.3393427100348423e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 1.758993486054135,
+              "estimated_relative_integration_error": 1.085215876490408e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 1.758993486054135,
+              "estimated_relative_integration_error": 1.085215876490408e-15
+            }
+          ],
+          "label": "Link1_L3_1 / Link1_L4_1:0",
+          "raw_shape_volume_mm3": 1.7589934860540568
+        }
+      ],
+      "a": "Link1_L3_1",
+      "b": "Link1_L4_1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 1.7589934860541523,
+      "gauss_volume_mm3": 1.7589934860541532,
+      "estimated_numerical_margin_mm3": 2.2232564598112733e-15,
+      "estimated_relative_integration_error": 1.2639367214477725e-15,
+      "raw_shape_volume_mm3": 1.7589934860540593,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 1.7589934860541523,
+          "estimated_relative_integration_error": 1.2639367214477725e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 1.2639367214477725e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 0.0,
+          "cross_algorithm_relative_difference": 5.049355934185545e-16,
+          "gauss_volume_mm3": 1.7589934860541532,
+          "estimated_numerical_margin_mm3": 2.2232564598112733e-15,
+          "brep_sha256": "195ef9359fa7c0dace2fd52f64eaeb666320fb42dbe54dcdf183b60b0af4ecaf",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 1.7589934860541532,
+              "estimated_relative_integration_error": 4.950073804303982e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 1.7589934860541532,
+              "estimated_relative_integration_error": 4.547896399485738e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 1.7589934860541523,
+              "estimated_relative_integration_error": 1.2639367214477725e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 1.7589934860541523,
+              "estimated_relative_integration_error": 1.2639367214477725e-15
+            }
+          ],
+          "label": "Link1_L3__1 / Link1_L4__1:0",
+          "raw_shape_volume_mm3": 1.7589934860540593
+        }
+      ],
+      "a": "Link1_L3__1",
+      "b": "Link1_L4__1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 1.5696888419957575,
+      "gauss_volume_mm3": 1.5696888419957604,
+      "estimated_numerical_margin_mm3": 2.132552793311818e-15,
+      "estimated_relative_integration_error": 1.358583138426604e-15,
+      "raw_shape_volume_mm3": 1.5696888419956645,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 1.5696888419957575,
+          "estimated_relative_integration_error": 1.358583138426604e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 1.358583138426604e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 1.4145772014453258e-16,
+          "cross_algorithm_relative_difference": 1.838950361878924e-15,
+          "gauss_volume_mm3": 1.5696888419957604,
+          "estimated_numerical_margin_mm3": 2.132552793311818e-15,
+          "brep_sha256": "2cf8370263f3d5de0d5af51884bc14216f89c11c077434c4650ae9b55a406a23",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 1.5696888419957606,
+              "estimated_relative_integration_error": 3.379305280770344e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 1.5696888419957604,
+              "estimated_relative_integration_error": 7.951306542988788e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 1.5696888419957575,
+              "estimated_relative_integration_error": 1.358583138426604e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 1.5696888419957575,
+              "estimated_relative_integration_error": 1.358583138426604e-15
+            }
+          ],
+          "label": "Link2_L3_1 / Link2_L4_1:0",
+          "raw_shape_volume_mm3": 1.5696888419956645
+        }
+      ],
+      "a": "Link2_L3_1",
+      "b": "Link2_L4_1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 1.569688841995812,
+      "gauss_volume_mm3": 1.5696888419958126,
+      "estimated_numerical_margin_mm3": 2.0719092997492956e-15,
+      "estimated_relative_integration_error": 1.3199490525236361e-15,
+      "raw_shape_volume_mm3": 1.569688841995722,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 1.569688841995812,
+          "estimated_relative_integration_error": 1.3199490525236361e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 1.3199490525236361e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 8.487463208671661e-16,
+          "cross_algorithm_relative_difference": 4.2437316043358305e-16,
+          "gauss_volume_mm3": 1.5696888419958126,
+          "estimated_numerical_margin_mm3": 2.0719092997492956e-15,
+          "brep_sha256": "02e20afe95d61513d8388ed5e4846c99e772949cb41bb4387823e0ef376489ed",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 1.569688841995814,
+              "estimated_relative_integration_error": 4.1986378376916063e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 1.5696888419958126,
+              "estimated_relative_integration_error": 1.987826635745477e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 1.569688841995812,
+              "estimated_relative_integration_error": 1.3199490525236361e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 1.569688841995812,
+              "estimated_relative_integration_error": 1.3199490525236361e-15
+            }
+          ],
+          "label": "Link2_L3__1 / Link2_L4__1:0",
+          "raw_shape_volume_mm3": 1.569688841995722
+        }
+      ],
+      "a": "Link2_L3__1",
+      "b": "Link2_L4__1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 0.6253217475195045,
+      "gauss_volume_mm3": 0.6253217475073387,
+      "estimated_numerical_margin_mm3": 2.9062086071007798e-11,
+      "estimated_relative_integration_error": 4.6475412355783e-11,
+      "raw_shape_volume_mm3": 0.6253217484467208,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 0.6253217475195045,
+          "estimated_relative_integration_error": 9.747938420645313e-12,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.747938420645313e-12,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 4.6475412355783e-11,
+          "coarse_gk_relative_change": 4.6475412355783e-11,
+          "gauss_convergence_relative_change": 1.3457856791389135e-13,
+          "cross_algorithm_relative_difference": 1.9455302733514795e-11,
+          "gauss_volume_mm3": 0.6253217475073387,
+          "estimated_numerical_margin_mm3": 2.9062086071007798e-11,
+          "brep_sha256": "8b820fa7ec029ed24f57ce7a2e239fc43655ccb2b4c1748311641fb79dc63cd4",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475072546,
+              "estimated_relative_integration_error": 0.0004872175206417442
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.6253217475073387,
+              "estimated_relative_integration_error": 0.00020989932375380617
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475485666,
+              "estimated_relative_integration_error": 1.496856688730631e-09
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.6253217475195045,
+              "estimated_relative_integration_error": 9.747938420645313e-12
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampBolt_0_0:0",
+          "raw_shape_volume_mm3": 0.6253217484467208
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_0_0",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 0.6253217475172859,
+      "gauss_volume_mm3": 0.6253217475051208,
+      "estimated_numerical_margin_mm3": 2.906219709331026e-11,
+      "estimated_relative_integration_error": 4.647558990023274e-11,
+      "raw_shape_volume_mm3": 0.6253217484445034,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 0.6253217475172859,
+          "estimated_relative_integration_error": 9.747824297115508e-12,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.747824297115508e-12,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 4.647558990023274e-11,
+          "coarse_gk_relative_change": 4.647558990023274e-11,
+          "gauss_convergence_relative_change": 1.347561121992163e-13,
+          "cross_algorithm_relative_difference": 1.945405992358989e-11,
+          "gauss_volume_mm3": 0.6253217475051208,
+          "estimated_numerical_margin_mm3": 2.906219709331026e-11,
+          "brep_sha256": "3bf876d33483160591eec1209e5444f17cbb23f6f7928460bc7f14908a133ca6",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475050366,
+              "estimated_relative_integration_error": 0.0001964769243183403
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.6253217475051208,
+              "estimated_relative_integration_error": 0.00016514953434797943
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475463481,
+              "estimated_relative_integration_error": 1.4968566039658563e-09
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.6253217475172859,
+              "estimated_relative_integration_error": 9.747824297115508e-12
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampBolt_0_1:0",
+          "raw_shape_volume_mm3": 0.6253217484445034
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_0_1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 0.6253217475171584,
+      "gauss_volume_mm3": 0.625321747504993,
+      "estimated_numerical_margin_mm3": 2.9060642781075785e-11,
+      "estimated_relative_integration_error": 4.647310428025435e-11,
+      "raw_shape_volume_mm3": 0.6253217484443782,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 0.6253217475171584,
+          "estimated_relative_integration_error": 9.747860124857433e-12,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.747860124857433e-12,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 4.647310428025435e-11,
+          "coarse_gk_relative_change": 4.647310428025435e-11,
+          "gauss_convergence_relative_change": 1.3440102362954878e-13,
+          "cross_algorithm_relative_difference": 1.94545925564484e-11,
+          "gauss_volume_mm3": 0.625321747504993,
+          "estimated_numerical_margin_mm3": 2.9060642781075785e-11,
+          "brep_sha256": "e9c58e87eda37be7a365a65e544c1fd3043cc5b7ffaba6db5ca66a9480a1abe2",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.625321747504909,
+              "estimated_relative_integration_error": 0.00028912612316774413
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.625321747504993,
+              "estimated_relative_integration_error": 0.00012186379031324049
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.625321747546219,
+              "estimated_relative_integration_error": 1.496847909818367e-09
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.6253217475171584,
+              "estimated_relative_integration_error": 9.747860124857433e-12
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampBolt_1_0:0",
+          "raw_shape_volume_mm3": 0.6253217484443782
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_1_0",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 0.625321747517142,
+      "gauss_volume_mm3": 0.625321747504976,
+      "estimated_numerical_margin_mm3": 2.9060753803378248e-11,
+      "estimated_relative_integration_error": 4.647328182454042e-11,
+      "raw_shape_volume_mm3": 0.6253217484443394,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 0.625321747517142,
+          "estimated_relative_integration_error": 9.74779341826928e-12,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.74779341826928e-12,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 4.647328182454042e-11,
+          "coarse_gk_relative_change": 4.647328182454042e-11,
+          "gauss_convergence_relative_change": 1.3422347934470482e-13,
+          "cross_algorithm_relative_difference": 1.9455480277873146e-11,
+          "gauss_volume_mm3": 0.625321747504976,
+          "estimated_numerical_margin_mm3": 2.9060753803378248e-11,
+          "brep_sha256": "fec150d6ad391b2f2b71f5a8d3bfd0ee8b5a40e708f43f17b55524a8a33182c6",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475048921,
+              "estimated_relative_integration_error": 0.0002227331471703844
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.625321747504976,
+              "estimated_relative_integration_error": 0.00014104692974456593
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.6253217475462027,
+              "estimated_relative_integration_error": 1.4968478286405768e-09
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.625321747517142,
+              "estimated_relative_integration_error": 9.74779341826928e-12
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampBolt_1_1:0",
+          "raw_shape_volume_mm3": 0.6253217484443394
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_1_1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 2.011461345890579,
+      "gauss_volume_mm3": 2.0114613458895656,
+      "estimated_numerical_margin_mm3": 1.7871082391707205e-10,
+      "estimated_relative_integration_error": 8.884626308239964e-11,
+      "raw_shape_volume_mm3": 2.01146134595039,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 2.011461345890579,
+          "estimated_relative_integration_error": 9.157917219093714e-13,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.157917219093714e-13,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 8.884626308239964e-11,
+          "coarse_gk_relative_change": 8.884626308239964e-11,
+          "gauss_convergence_relative_change": 2.9372490104846537e-12,
+          "cross_algorithm_relative_difference": 5.038185689962402e-13,
+          "gauss_volume_mm3": 2.0114613458895656,
+          "estimated_numerical_margin_mm3": 1.7871082391707205e-10,
+          "brep_sha256": "a995223076d3e3d5c82ce04cf3473786d92265e88dc36f3ae417df97b6f2e4e6",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 2.0114613458836574,
+              "estimated_relative_integration_error": 3.273286264766806e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 2.0114613458895656,
+              "estimated_relative_integration_error": 8.183215661917016e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 2.01146134606929,
+              "estimated_relative_integration_error": 3.515298070009989e-10
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 2.011461345890579,
+              "estimated_relative_integration_error": 9.157917219093714e-13
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampCap_0:0",
+          "raw_shape_volume_mm3": 2.01146134595039
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampCap_0",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 2.011461345890737,
+      "gauss_volume_mm3": 2.011461345889725,
+      "estimated_numerical_margin_mm3": 1.787103798278622e-10,
+      "estimated_relative_integration_error": 8.884604230300222e-11,
+      "raw_shape_volume_mm3": 2.0114613459505497,
+      "solid_count": 1,
+      "solids": [
+        {
+          "volume_mm3": 2.011461345890737,
+          "estimated_relative_integration_error": 9.155588835594141e-13,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 9.155588835594141e-13,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 8.884604230300222e-11,
+          "coarse_gk_relative_change": 8.884604230300222e-11,
+          "gauss_convergence_relative_change": 2.9370282310939775e-12,
+          "cross_algorithm_relative_difference": 5.031562308248647e-13,
+          "gauss_volume_mm3": 2.011461345889725,
+          "estimated_numerical_margin_mm3": 1.787103798278622e-10,
+          "brep_sha256": "a9e5bda515649fa774febe096c782adcd3fc57b6b91ccd5f24c8eaf3903bf45b",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 2.0114613458838173,
+              "estimated_relative_integration_error": 8.183215661916707e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 2.011461345889725,
+              "estimated_relative_integration_error": 6.783337897905907e-16
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 2.0114613460694475,
+              "estimated_relative_integration_error": 3.515301169752407e-10
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 2.011461345890737,
+              "estimated_relative_integration_error": 9.155588835594141e-13
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_ClampCap_1:0",
+          "raw_shape_volume_mm3": 2.0114613459505497
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampCap_1",
+      "sample_id": "r13_spine_000"
+    },
+    {
+      "volume_mm3": 0.22532900990181098,
+      "gauss_volume_mm3": 0.2253290099018116,
+      "estimated_numerical_margin_mm3": 8.132689199052155e-16,
+      "estimated_relative_integration_error": 3.609250847281512e-15,
+      "raw_shape_volume_mm3": 0.22532900990185745,
+      "solid_count": 2,
+      "solids": [
+        {
+          "volume_mm3": 0.11266450495092889,
+          "estimated_relative_integration_error": 2.0450259119086347e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 2.0450259119086347e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 1.847669922376032e-15,
+          "cross_algorithm_relative_difference": 2.463559896501376e-16,
+          "gauss_volume_mm3": 0.11266450495092892,
+          "estimated_numerical_margin_mm3": 2.3040183197700827e-16,
+          "brep_sha256": "10db3547d3d910c82ec1d747982627ac8f2ca5dcc9f051d60cfe61a822f22172",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.11266450495092913,
+              "estimated_relative_integration_error": 0.001200786193055857
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.11266450495092892,
+              "estimated_relative_integration_error": 0.0004918792506340096
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.11266450495092889,
+              "estimated_relative_integration_error": 2.045025911665622e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.11266450495092889,
+              "estimated_relative_integration_error": 2.0450259119086347e-15
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_Instance:0",
+          "raw_shape_volume_mm3": 0.1126645049509284
+        },
+        {
+          "volume_mm3": 0.11266450495088208,
+          "estimated_relative_integration_error": 3.206900545541709e-15,
+          "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+          "coarse_gk_estimated_relative_error": 3.206900545541709e-15,
+          "selected_eps": 1e-10,
+          "convergence_relative_change": 0.0,
+          "coarse_gk_relative_change": 0.0,
+          "gauss_convergence_relative_change": 5.173475782655039e-15,
+          "cross_algorithm_relative_difference": 5.296653777480159e-15,
+          "gauss_volume_mm3": 0.11266450495088268,
+          "estimated_numerical_margin_mm3": 5.828670879282072e-16,
+          "brep_sha256": "f8171244f24a8a774c006c86b5fd40a3d6b0bcae79b2da195a7cc59367cc5454",
+          "measurements": [
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-08,
+              "volume_mm3": 0.1126645049508821,
+              "estimated_relative_integration_error": 0.0008404523636342728
+            },
+            {
+              "algorithm": "adaptive_Gauss",
+              "eps": 1e-10,
+              "volume_mm3": 0.11266450495088268,
+              "estimated_relative_integration_error": 0.0005978411987025056
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-08,
+              "volume_mm3": 0.11266450495088208,
+              "estimated_relative_integration_error": 3.206900545650812e-15
+            },
+            {
+              "algorithm": "adaptive_Gauss_Kronrod_spans",
+              "eps": 1e-10,
+              "volume_mm3": 0.11266450495088208,
+              "estimated_relative_integration_error": 3.206900545541709e-15
+            }
+          ],
+          "label": "LumbarIntegrated1 / OpenRB150_Carrier_r07_Instance:1",
+          "raw_shape_volume_mm3": 0.11266450495090538
+        }
+      ],
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "sample_id": "r13_spine_000"
+    }
+  ],
+  "collisions": [
+    {
+      "sample_id": "r13_spine_000",
+      "a": "Link1_L3_1",
+      "b": "Link1_L4_1",
+      "volume_mm3": 1.758993486054135
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "Link1_L3__1",
+      "b": "Link1_L4__1",
+      "volume_mm3": 1.7589934860541523
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "Link2_L3_1",
+      "b": "Link2_L4_1",
+      "volume_mm3": 1.5696888419957575
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "Link2_L3__1",
+      "b": "Link2_L4__1",
+      "volume_mm3": 1.569688841995812
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_0_0",
+      "volume_mm3": 0.6253217475195045
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_0_1",
+      "volume_mm3": 0.6253217475172859
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_1_0",
+      "volume_mm3": 0.6253217475171584
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampBolt_1_1",
+      "volume_mm3": 0.625321747517142
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampCap_0",
+      "volume_mm3": 2.011461345890579
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_ClampCap_1",
+      "volume_mm3": 2.011461345890737
+    },
+    {
+      "sample_id": "r13_spine_000",
+      "a": "LumbarIntegrated1",
+      "b": "OpenRB150_Carrier_r07_Instance",
+      "volume_mm3": 0.22532900990181098
+    }
+  ],
+  "errors": [],
+  "dynamic_sources_regenerated": 2,
+  "occ_checks": 609,
+  "cached_pair_checks": 0,
+  "exceptions": [],
+  "continuous_clearance": false,
+  "fabrication_release": false,
+  "coverage_scope": "91 inclusive spine states 0..360deg/4deg with actual stored neutral legs/wheel",
+  "tolerances": {
+    "intersection_volume_mm3": 1e-05,
+    "bbox_reject_mm": 1e-06,
+    "axis_mm": 0.0001,
+    "source_identity_boolean_mm3": 1e-05,
+    "source_identity_bbox_mm": 1e-05,
+    "source_identity_adaptive_relative": 1e-06
+  },
+  "limitations": [
+    "Finite requested poses only; no continuous clearance proof",
+    "Unchanged-versus-unchanged pair collisions are outside affected-pair coverage",
+    "Bearing fits, preload, thrust, retention and strength remain UNVERIFIED",
+    "Section and point probes bound local geometry only; no fabrication release"
+  ],
+  "section_screen": {
+    "status": "PASS_BOUNDED_LOCAL_PROBES_ONLY",
+    "bars": [
+      {
+        "source": "SPN_r02_L4",
+        "bores_mm": [
+          [
+            3.0,
+            3.0
+          ],
+          [
+            48.7876,
+            3.0
+          ]
+        ],
+        "width_mm": 8.0,
+        "thickness_mm": 1.2,
+        "single_leaf": true
+      }
+    ],
+    "frame_span_mm": 78.8,
+    "housing_span_mm": 56.8,
+    "compact_terminal_sources": [
+      {
+        "instance": "Link1_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B1_POS",
+        "added_terminal_length_mm": 9.5,
+        "fork_end": "B",
+        "A_end_single_eye": true,
+        "waist_width_mm": 6.0,
+        "organic_main_outline": {
+          "section_local_z_mm": 0.6,
+          "unique_circular_arcs": 4,
+          "waist_mm": 6.0,
+          "eye_diameter_mm": 8.0,
+          "maximum_tangent_unit_dot_error": 0.0,
+          "scope": "Actual main-leaf outer section only; fork leaf/root checked with separate probes"
+        },
+        "inward_reach_mm": 5.5,
+        "opening_mm": 3.5,
+        "web_interval_mm": [
+          3.5,
+          5.5
+        ]
+      },
+      {
+        "instance": "Link1_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+        "added_terminal_length_mm": 9.5,
+        "fork_end": "B",
+        "A_end_single_eye": true,
+        "waist_width_mm": 6.0,
+        "organic_main_outline": {
+          "section_local_z_mm": 0.6,
+          "unique_circular_arcs": 4,
+          "waist_mm": 6.0,
+          "eye_diameter_mm": 8.0,
+          "maximum_tangent_unit_dot_error": 0.0,
+          "scope": "Actual main-leaf outer section only; fork leaf/root checked with separate probes"
+        },
+        "inward_reach_mm": 5.5,
+        "opening_mm": 3.5,
+        "web_interval_mm": [
+          3.5,
+          5.5
+        ]
+      },
+      {
+        "instance": "Link2_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B2_POS",
+        "added_terminal_length_mm": 9.5,
+        "fork_end": "B",
+        "A_end_single_eye": true,
+        "waist_width_mm": 6.0,
+        "organic_main_outline": {
+          "section_local_z_mm": 0.6,
+          "unique_circular_arcs": 4,
+          "waist_mm": 6.0,
+          "eye_diameter_mm": 8.0,
+          "maximum_tangent_unit_dot_error": 0.0,
+          "scope": "Actual main-leaf outer section only; fork leaf/root checked with separate probes"
+        },
+        "inward_reach_mm": 5.5,
+        "opening_mm": 3.5,
+        "web_interval_mm": [
+          3.5,
+          5.5
+        ]
+      },
+      {
+        "instance": "Link2_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+        "added_terminal_length_mm": 9.5,
+        "fork_end": "B",
+        "A_end_single_eye": true,
+        "waist_width_mm": 6.0,
+        "organic_main_outline": {
+          "section_local_z_mm": 0.6,
+          "unique_circular_arcs": 4,
+          "waist_mm": 6.0,
+          "eye_diameter_mm": 8.0,
+          "maximum_tangent_unit_dot_error": 0.0,
+          "scope": "Actual main-leaf outer section only; fork leaf/root checked with separate probes"
+        },
+        "inward_reach_mm": 5.5,
+        "opening_mm": 3.5,
+        "web_interval_mm": [
+          3.5,
+          5.5
+        ]
+      }
+    ],
+    "fits_thrust_retention": "UNVERIFIED"
+  },
+  "s9": {
+    "status": "PASS_ACTUAL_NEUTRAL_CYLINDRICAL_AXES_ONLY",
+    "axes": [
+      {
+        "instance": "Link1_L2__1",
+        "pivot": "G",
+        "axis_error_mm": 8.881784197001252e-16
+      },
+      {
+        "instance": "Link1_L2__1",
+        "pivot": "B1",
+        "axis_error_mm": 1.0805156823142815e-14
+      },
+      {
+        "instance": "Link2_L2__1",
+        "pivot": "G",
+        "axis_error_mm": 8.881784197001252e-16
+      },
+      {
+        "instance": "Link2_L2__1",
+        "pivot": "B2",
+        "axis_error_mm": 7.32410687763558e-15
+      },
+      {
+        "instance": "Link1_L3__1",
+        "pivot": "A1",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link1_L3__1",
+        "pivot": "B1",
+        "axis_error_mm": 5.329070518200751e-15
+      },
+      {
+        "instance": "Link2_L3__1",
+        "pivot": "A2",
+        "axis_error_mm": 5.0242958677880805e-15
+      },
+      {
+        "instance": "Link2_L3__1",
+        "pivot": "B2",
+        "axis_error_mm": 1.1234667099445444e-14
+      },
+      {
+        "instance": "Link1_L4__1",
+        "pivot": "B1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link1_L4__1",
+        "pivot": "C1",
+        "axis_error_mm": 2.161031364628563e-14
+      },
+      {
+        "instance": "Link2_L4__1",
+        "pivot": "B2",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link2_L4__1",
+        "pivot": "C2",
+        "axis_error_mm": 7.105427357601002e-15
+      },
+      {
+        "instance": "Link1_L5__1",
+        "pivot": "C1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link1_L5__1",
+        "pivot": "D1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link2_L5__1",
+        "pivot": "C2",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link2_L5__1",
+        "pivot": "D2",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "DirectCrank_1",
+        "pivot": "O",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "DirectCrank_1",
+        "pivot": "G",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link1_L2_1",
+        "pivot": "G",
+        "axis_error_mm": 8.881784197001252e-16
+      },
+      {
+        "instance": "Link1_L2_1",
+        "pivot": "B1",
+        "axis_error_mm": 1.0805156823142815e-14
+      },
+      {
+        "instance": "Link2_L2_1",
+        "pivot": "G",
+        "axis_error_mm": 8.881784197001252e-16
+      },
+      {
+        "instance": "Link2_L2_1",
+        "pivot": "B2",
+        "axis_error_mm": 7.32410687763558e-15
+      },
+      {
+        "instance": "Link1_L3_1",
+        "pivot": "A1",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link1_L3_1",
+        "pivot": "B1",
+        "axis_error_mm": 5.329070518200751e-15
+      },
+      {
+        "instance": "Link2_L3_1",
+        "pivot": "A2",
+        "axis_error_mm": 5.0242958677880805e-15
+      },
+      {
+        "instance": "Link2_L3_1",
+        "pivot": "B2",
+        "axis_error_mm": 7.944109290391274e-15
+      },
+      {
+        "instance": "Link1_L4_1",
+        "pivot": "B1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link1_L4_1",
+        "pivot": "C1",
+        "axis_error_mm": 2.161031364628563e-14
+      },
+      {
+        "instance": "Link2_L4_1",
+        "pivot": "B2",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link2_L4_1",
+        "pivot": "C2",
+        "axis_error_mm": 7.105427357601002e-15
+      },
+      {
+        "instance": "Link1_L5_1",
+        "pivot": "C1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link1_L5_1",
+        "pivot": "D1",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "Link2_L5_1",
+        "pivot": "C2",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Link2_L5_1",
+        "pivot": "D2",
+        "axis_error_mm": 1.7763568394002505e-15
+      },
+      {
+        "instance": "DirectCrank1",
+        "pivot": "O",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "DirectCrank1",
+        "pivot": "G",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "Torso_hind",
+        "pivot": "E1",
+        "axis_error_mm": 2.753353101070388e-15
+      },
+      {
+        "instance": "Torso_hind",
+        "pivot": "D1",
+        "axis_error_mm": 6.787449953031483e-14
+      },
+      {
+        "instance": "Torso_hind",
+        "pivot": "D1",
+        "axis_error_mm": 7.460698725481052e-14
+      },
+      {
+        "instance": "Torso_fore",
+        "pivot": "E2",
+        "axis_error_mm": 2.753353101070388e-15
+      },
+      {
+        "instance": "Torso_fore",
+        "pivot": "D2",
+        "axis_error_mm": 3.6230712748823524e-14
+      },
+      {
+        "instance": "Torso_fore",
+        "pivot": "D2",
+        "axis_error_mm": 2.1316282072803006e-14
+      },
+      {
+        "instance": "LumbarIntegrated1",
+        "pivot": "A1",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "LumbarIntegrated1",
+        "pivot": "A2",
+        "axis_error_mm": 0.0
+      },
+      {
+        "instance": "LumbarIntegrated1",
+        "pivot": "E1",
+        "axis_error_mm": 5.9507954119908384e-15
+      },
+      {
+        "instance": "LumbarIntegrated1",
+        "pivot": "E2",
+        "axis_error_mm": 5.9507954119908384e-15
+      }
+    ],
+    "maximum_axis_error_mm": 7.460698725481052e-14,
+    "projected_edges_per_side": [
+      [
+        "O",
+        "G"
+      ],
+      [
+        "G",
+        "B1"
+      ],
+      [
+        "G",
+        "B2"
+      ],
+      [
+        "A1",
+        "B1"
+      ],
+      [
+        "A2",
+        "B2"
+      ],
+      [
+        "B1",
+        "C1"
+      ],
+      [
+        "B2",
+        "C2"
+      ],
+      [
+        "C1",
+        "D1"
+      ],
+      [
+        "C2",
+        "D2"
+      ],
+      [
+        "E1",
+        "D1"
+      ],
+      [
+        "E2",
+        "D2"
+      ]
+    ],
+    "world_shape_transform_applied_twice": false,
+    "limitation": "Neutral actual axes and projected graph; no complete spatial mobility proof"
+  },
+  "samples_completed": 1,
+  "completed_pair_decisions": 32032,
+  "all_requested_pair_decisions_complete": false,
+  "disk_inputs_unchanged": true,
+  "dependencies_unchanged": true
+}

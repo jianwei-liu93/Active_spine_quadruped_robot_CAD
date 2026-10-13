@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "revision": "r11",
+  "scope": "Disposable clone native edit/restore probe; canonical untouched",
+  "failure": "SPN_AB_LOCAL_FORK_r11_B1_NEG_ABridge edit restore: bbox differs by more than1e-5mm",
+  "source": "src/native_checks_r11.py; FreeCAD MCP traceback in reports/tmp/r11/freecad_restart.log",
+  "disposition": "Superseded fork geometry rejected by user; no r11 native edit/restore PASS claimed"
+}

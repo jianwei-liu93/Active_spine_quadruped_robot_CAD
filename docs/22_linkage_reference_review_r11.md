@@ -1,5 +1,7 @@
 # r11 — Movie S1 linkage construction review
 
+**Superseded after user review (2026-10-13).** The user rejected the long staggered cheeks. Later steering confirms compact A–B terminal forks in the source; the rejected r11 geometry must not be treated as accepted. See the r12 source review and compact-frame revision. Historical checks below apply only to r11. Fresh-source reproduction passed; the disposable native edit/restore probe failed a bounding-box identity check, and the larger motion run stopped after 664 completed states. No full r11 acceptance or fabrication release is claimed.
+
 The r11 candidate corrects the three-dimensional spine linkage construction. It preserves the r10 one-piece lumbar frame, central E attachments, torso ownership, S9 pivot locations, distinct leg mechanisms, seven motors and six commanded coordinates. It is a reconstructed research CAD candidate, not an exact recovered drawing set or fabrication release.
 
 ## Source review

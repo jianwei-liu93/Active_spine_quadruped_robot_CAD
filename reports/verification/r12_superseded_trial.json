@@ -1,0 +1,207 @@
+{
+  "status": "SUPERSEDED_USER_CORRECTION",
+  "native": "cad/flexor_r12_robot.FCStd",
+  "native_sha256": "5b528410c8e4a58f1646cd9b09a62942abf7108120f359d97e0865c4b57ec8cb",
+  "reason": "Latest close-up requires B-only fork, not both ends",
+  "preserved_parameter_snapshot": "parameters/history/assembly_r12_two_ended_trial.json",
+  "not_current_geometry": "Use r13 candidate and assembly_r13.json",
+  "native_bar_contract": {
+    "revision": "r12",
+    "changed_existing": [
+      "B1_1_Retainer1",
+      "B1__1_Retainer0",
+      "B2_1_Retainer1",
+      "B2__1_Retainer0",
+      "Link1_L3_1",
+      "Link1_L3__1",
+      "Link2_L3_1",
+      "Link2_L3__1",
+      "SyncB1",
+      "SyncB2",
+      "ThroughA1",
+      "ThroughA2",
+      "Link1_L4__1",
+      "Link2_L4__1",
+      "Link1_L4_1",
+      "Link2_L4_1"
+    ],
+    "new_instances": [
+      "A1_1_ForkInnerBearing",
+      "A1_1_ForkInnerSpacer",
+      "A1__1_ForkInnerBearing",
+      "A1__1_ForkInnerSpacer",
+      "A2_1_ForkInnerBearing",
+      "A2_1_ForkInnerSpacer",
+      "A2__1_ForkInnerBearing",
+      "A2__1_ForkInnerSpacer",
+      "B1_1_ForkOuterBearing",
+      "B1_1_ForkOuterSpacer",
+      "B1__1_ForkOuterBearing",
+      "B1__1_ForkOuterSpacer",
+      "B2_1_ForkOuterBearing",
+      "B2_1_ForkOuterSpacer",
+      "B2__1_ForkOuterBearing",
+      "B2__1_ForkOuterSpacer"
+    ],
+    "terminal_sections": [
+      {
+        "instance": "Link1_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+        "section": {
+          "A": {
+            "added_cheek_local_z_bounds_mm": [
+              -6.599999999999998,
+              -5.399999999999999
+            ],
+            "added_cheek_world_abs_y_mm": 25.8,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          },
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              3.600000000000001,
+              4.800000000000001
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A1",
+          "b": "B1",
+          "y": -32.4,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link2_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+        "section": {
+          "A": {
+            "added_cheek_local_z_bounds_mm": [
+              -4.800000000000001,
+              -3.600000000000001
+            ],
+            "added_cheek_world_abs_y_mm": 25.8,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          },
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              5.399999999999999,
+              6.599999999999998
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A2",
+          "b": "B2",
+          "y": -30.6,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link1_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B1_POS",
+        "section": {
+          "A": {
+            "added_cheek_local_z_bounds_mm": [
+              6.599999999999998,
+              7.799999999999997
+            ],
+            "added_cheek_world_abs_y_mm": 25.8,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          },
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              -3.6000000000000014,
+              -2.4000000000000012
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A1",
+          "b": "B1",
+          "y": 32.4,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link2_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B2_POS",
+        "section": {
+          "A": {
+            "added_cheek_local_z_bounds_mm": [
+              4.800000000000001,
+              6.0
+            ],
+            "added_cheek_world_abs_y_mm": 25.8,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          },
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              -5.399999999999999,
+              -4.199999999999999
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 3.5,
+            "maximum_inward_reach_mm": 5.5
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A2",
+          "b": "B2",
+          "y": 30.6,
+          "width": 6,
+          "thickness": 1.2
+        }
+      }
+    ],
+    "parameters": {
+      "outline_width_mm": 8.0,
+      "thickness_mm": 1.2,
+      "pose_frame_width_mm": 6.0,
+      "pivot_datum_xy_mm": [
+        3,
+        3
+      ],
+      "link_bore_mm": 4.05,
+      "long_relief_depth_mm": 0.6,
+      "long_relief_width_mm": 3.2,
+      "long_relief_end_inset_mm": 5.5,
+      "long_relief_corner_radius_mm": 0.7,
+      "source": "Compact A-B terminal forks at both ends, continuous center web; plain G-B, shallow recessed B-C. r11 long staggered cheeks rejected. Exact dimensions assumed.",
+      "terminal_reach_mm": 5.5,
+      "terminal_opening_depth_mm": 3.5,
+      "terminal_leaf_mm": 1.2,
+      "A_added_cheek_abs_y_mm": 25.8,
+      "B_added_cheek_abs_y_mm": 36.0,
+      "A_shoulder_span_mm": 50.4,
+      "B_shaft_length_mm": 76.0,
+      "B_shoulder_span_mm": 60.0,
+      "B_retainer_abs_y_mm": 37.5,
+      "A_inner_spacer_abs_y_mm": 26.7,
+      "B_outer_spacer_abs_y_mm": 36.9
+    },
+    "source_evidence": "Movie S1 54\u201355 s isolated A-B splits; user latest steering; exact metric sections assumed",
+    "frame_convention": "Legacy (3,3) datum and 6x1.2 placement frame retained",
+    "limits": "Terminal fork morphology revised; no capacity, fit, race-retention or fabrication qualification",
+    "bars": []
+  }
+}
