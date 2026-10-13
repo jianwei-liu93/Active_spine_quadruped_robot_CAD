@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def run(doc):
-    import Import,Part
+    import FreeCAD as App,Import,Part
     import animation_pose_export as ax
     from adaptive_volume_r07 import validate_solids
     native=Path(doc.FileName);sha=hashlib.sha256(native.read_bytes()).hexdigest();before=ax.snapshot(doc)
@@ -12,12 +12,18 @@ def run(doc):
     assert len(links)==455
     folder=ROOT/'exports/step/r14';folder.mkdir(parents=True,exist_ok=True)
     path=folder/'flexor_r14_robot.step';start=time.monotonic()
+    # Same prerequisite as export_robot_r07: explicit pcurves preserve the
+    # existing native spring topology. This changes no native solid or tolerance.
+    if not App.ParamGet('User parameter:BaseApp/Preferences/Mod/Part/STEP').GetBool('WriteSurfaceCurveMode',True):
+        raise ValueError('STEP WriteSurfaceCurveMode=True is required')
+    Part.setStaticValue('write.surfacecurve.mode',1)
     Import.export(links,str(path));shape=Part.read(str(path))
     assert len(shape.Solids)==455 and shape.isValid()
     result=validate_solids(shape,[o.Shape for o in links],ROOT,[o.Name for o in links])
     report={'status':'PASS','native_sha256':sha,'step_path':str(path.relative_to(ROOT)),
             'step_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'physical_solids':455,
             'geometry_roundtrip':result,'seconds':time.monotonic()-start,
+            'write_surfacecurve_mode':1,
             'native_file_unchanged':sha==hashlib.sha256(native.read_bytes()).hexdigest(),
             'native_document_unchanged':before==ax.snapshot(doc),
             'scope':'Editable CAD candidate assembly exchange only; drawings, STLs and fabrication release deferred'}

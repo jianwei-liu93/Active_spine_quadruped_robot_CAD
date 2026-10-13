@@ -1,0 +1,659 @@
+{
+  "stack": {
+    "revision": "r12",
+    "frame": {
+      "features": [
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftCaseCheek",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_ContinuousCrosswall0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_ContinuousCrosswall1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightCaseCheek",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CrosswallWindow0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CrosswallWindow1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CarrierAccess",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftLocalEndPlatform0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftLocalEndPlatform1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftShortEarE1A2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftShortEarE2A1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftBroadShelf0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftBroadShelf1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftOuterGuide0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftOuterGuide1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftCaseEdgeCollar",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftCaseFaceBand0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftCaseFaceBand1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftInnerJournalBossA1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_LeftInnerJournalBossA2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightLocalEndPlatform0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightLocalEndPlatform1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightShortEarE1A2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightShortEarE2A1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightBroadShelf0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightBroadShelf1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightOuterGuide0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightOuterGuide1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightCaseEdgeCollar",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightCaseFaceBand0",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightCaseFaceBand1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightInnerJournalBossA1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_RightInnerJournalBossA2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_WholeStackJournalClearances",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralBeamE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralBeamWindowsE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugThroughBoreE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugBearingSeatPositiveYE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugBearingSeatNegativeYE1",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralBeamE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralBeamWindowsE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugThroughBoreE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugBearingSeatPositiveYE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_CentralLugBearingSeatNegativeYE2",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_C1TravelRelief",
+        "FRM_LUMBAR_COMPACT_CAGE_r12_C2TravelRelief"
+      ],
+      "guide_slots": [
+        {
+          "slider": "C1",
+          "pivot": "A2",
+          "center_xz_mm": [
+            -27.707366118673086,
+            8.66
+          ],
+          "travel_bounds_x_mm": [
+            -33.16445019477227,
+            -22.250282042573904
+          ]
+        },
+        {
+          "slider": "C2",
+          "pivot": "A1",
+          "center_xz_mm": [
+            27.70736611867309,
+            -8.66
+          ],
+          "travel_bounds_x_mm": [
+            22.250282042573907,
+            33.16445019477227
+          ]
+        }
+      ],
+      "travel_reliefs": [
+        {
+          "shaft": "C1",
+          "center_x_bounds_mm": [
+            -33.17445581399401,
+            -22.24025583592318
+          ],
+          "center_z_mm": 8.66,
+          "radius_mm": 2.15,
+          "feature": "FRM_LUMBAR_COMPACT_CAGE_r12_C1TravelRelief"
+        },
+        {
+          "shaft": "C2",
+          "center_x_bounds_mm": [
+            22.240255835923183,
+            33.17445581399401
+          ],
+          "center_z_mm": -8.66,
+          "radius_mm": 2.15,
+          "feature": "FRM_LUMBAR_COMPACT_CAGE_r12_C2TravelRelief"
+        }
+      ],
+      "execution_native_validity": true,
+      "solid_count": 1,
+      "pad_count": 34,
+      "pocket_count": 14,
+      "sketch_count": 48,
+      "source_local_stack_bounds_mm": [
+        -11.0,
+        67.8
+      ]
+    },
+    "frame_source": "FRM_LUMBAR_COMPACT_CAGE_r12",
+    "replaced_frame_source": "FRM_LUMBAR_MONOLITHIC_CAGE_r09",
+    "changed_existing": [
+      "A1_1_CaptureCap",
+      "A1_1_OuterBearing",
+      "A1_1_OuterSpacer",
+      "A1_1_Retainer1",
+      "A1__1_CaptureCap",
+      "A1__1_OuterBearing",
+      "A1__1_OuterSpacer",
+      "A1__1_Retainer0",
+      "A2_1_CaptureCap",
+      "A2_1_OuterBearing",
+      "A2_1_OuterSpacer",
+      "A2_1_Retainer1",
+      "A2__1_CaptureCap",
+      "A2__1_OuterBearing",
+      "A2__1_OuterSpacer",
+      "A2__1_Retainer0",
+      "C1_1_Bearing2",
+      "C1_1_CaptureWasher",
+      "C1_1_Retainer1",
+      "C1_1_Spacer1",
+      "C1__1_Bearing2",
+      "C1__1_CaptureWasher",
+      "C1__1_Retainer0",
+      "C1__1_Spacer0",
+      "C2_1_Bearing2",
+      "C2_1_CaptureWasher",
+      "C2_1_Retainer1",
+      "C2_1_Spacer1",
+      "C2__1_Bearing2",
+      "C2__1_CaptureWasher",
+      "C2__1_Retainer0",
+      "C2__1_Spacer0",
+      "D1_1_Pin",
+      "D1_1_Retainer1",
+      "D1__1_Pin",
+      "D1__1_Retainer0",
+      "D2_1_Pin",
+      "D2_1_Retainer1",
+      "D2__1_Pin",
+      "D2__1_Retainer0",
+      "GuideLiner1_1_0_65",
+      "GuideLiner1_1__0_65",
+      "GuideLiner1__1_0_65",
+      "GuideLiner1__1__0_65",
+      "GuideLiner2_1_0_65",
+      "GuideLiner2_1__0_65",
+      "GuideLiner2__1_0_65",
+      "GuideLiner2__1__0_65",
+      "LumbarIntegrated1",
+      "ThroughA1",
+      "ThroughA2",
+      "ThroughC1",
+      "ThroughC2"
+    ],
+    "retired_physical_instances": [
+      "D1_1_Bearing1",
+      "D1_1_Spacer0",
+      "D1__1_Bearing1",
+      "D1__1_Spacer0",
+      "D2_1_Bearing1",
+      "D2_1_Spacer0",
+      "D2__1_Bearing1",
+      "D2__1_Spacer0",
+      "E1_1_Bearing0",
+      "E1_1_Bearing1",
+      "E1_1_Pin",
+      "E1_1_Retainer0",
+      "E1_1_Retainer1",
+      "E1_1_Spacer0",
+      "E1_1_TorsoBearing",
+      "E1_1_TorsoSpacer",
+      "E1__1_Bearing0",
+      "E1__1_Bearing1",
+      "E1__1_Pin",
+      "E1__1_Retainer0",
+      "E1__1_Retainer1",
+      "E1__1_Spacer0",
+      "E1__1_TorsoBearing",
+      "E1__1_TorsoSpacer",
+      "E2_1_Bearing0",
+      "E2_1_Bearing1",
+      "E2_1_Pin",
+      "E2_1_Retainer0",
+      "E2_1_Retainer1",
+      "E2_1_Spacer0",
+      "E2_1_TorsoBearing",
+      "E2_1_TorsoSpacer",
+      "E2__1_Bearing0",
+      "E2__1_Bearing1",
+      "E2__1_Pin",
+      "E2__1_Retainer0",
+      "E2__1_Retainer1",
+      "E2__1_Spacer0",
+      "E2__1_TorsoBearing",
+      "E2__1_TorsoSpacer"
+    ],
+    "retired_unused_sources": [
+      "SPACER_2mm_L9_0",
+      "SPACER_2mm_L3_0",
+      "A_OUTER_SPACER_L6_6",
+      "A_OUTER_SPACER_L8_4",
+      "TORSO_OUTPUT_JOURNAL_D1p9_L25p8",
+      "TORSO_OUTPUT_SPACER_L11_0",
+      "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956",
+      "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766",
+      "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383",
+      "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375",
+      "TENDON_r03_WHEEL_OD13_4p4772482_1p6145357",
+      "TENDON_r03_HindTendon_R_CABLE_u001",
+      "TENDON_r03_HindTendon_L_CABLE_u001",
+      "LEG_r05_ANKLE_SWIVEL_EYE_OD4_ID2p05_T1p2_RADIALp4",
+      "LEG_r02_JOURNAL_D1p9_L13p75",
+      "TENDON_r07_R_CABLE",
+      "TENDON_r07_L_CABLE",
+      "FRM_LUMBAR_MONOLITHIC_CAGE_r09"
+    ],
+    "new_physical_instances": [],
+    "baseline_count": 487,
+    "physical_instance_count": 447,
+    "ground_transverse_span_mm": 78.8,
+    "previous_ground_transverse_span_mm": 82.0,
+    "housing_transverse_span_mm": 56.8,
+    "capture_transverse_span_mm": 84.0,
+    "E_support": "Central r10 bearing lug and torso clevis only; old lateral E journal system retired",
+    "limits": "Metric reconstruction; strength, supplier fits, thrust and retention UNVERIFIED"
+  },
+  "bars": {
+    "revision": "r12",
+    "changed_existing": [
+      "B1_1_Retainer1",
+      "B1__1_Retainer0",
+      "B2_1_Retainer1",
+      "B2__1_Retainer0",
+      "Link1_L3_1",
+      "Link1_L3__1",
+      "Link2_L3_1",
+      "Link2_L3__1",
+      "SyncB1",
+      "SyncB2",
+      "ThroughA1",
+      "ThroughA2",
+      "Link1_L4__1",
+      "Link2_L4__1",
+      "Link1_L4_1",
+      "Link2_L4_1"
+    ],
+    "new_instances": [
+      "B1_1_ForkOuterBearing",
+      "B1_1_ForkOuterSpacer",
+      "B1__1_ForkOuterBearing",
+      "B1__1_ForkOuterSpacer",
+      "B2_1_ForkOuterBearing",
+      "B2_1_ForkOuterSpacer",
+      "B2__1_ForkOuterBearing",
+      "B2__1_ForkOuterSpacer"
+    ],
+    "terminal_sections": [
+      {
+        "instance": "Link1_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+        "section": {
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              3.600000000000001,
+              4.800000000000001
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 8.0,
+            "maximum_inward_reach_mm": 10.0
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A1",
+          "b": "B1",
+          "y": -32.4,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link2_L3__1",
+        "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+        "section": {
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              5.399999999999999,
+              6.599999999999998
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 8.0,
+            "maximum_inward_reach_mm": 10.0
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A2",
+          "b": "B2",
+          "y": -30.6,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link1_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B1_POS",
+        "section": {
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              -3.6000000000000014,
+              -2.4000000000000012
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 8.0,
+            "maximum_inward_reach_mm": 10.0
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A1",
+          "b": "B1",
+          "y": 32.4,
+          "width": 6,
+          "thickness": 1.2
+        }
+      },
+      {
+        "instance": "Link2_L3_1",
+        "source": "SPN_AB_TERMINAL_r12_B2_POS",
+        "section": {
+          "B": {
+            "added_cheek_local_z_bounds_mm": [
+              -5.399999999999999,
+              -4.199999999999999
+            ],
+            "added_cheek_world_abs_y_mm": 36.0,
+            "opening_depth_from_pivot_mm": 8.0,
+            "maximum_inward_reach_mm": 10.0
+          }
+        },
+        "motion": {
+          "kind": "segment",
+          "a": "A2",
+          "b": "B2",
+          "y": 30.6,
+          "width": 6,
+          "thickness": 1.2
+        }
+      }
+    ],
+    "parameters": {
+      "outline_width_mm": 8.0,
+      "thickness_mm": 1.2,
+      "pose_frame_width_mm": 6.0,
+      "pivot_datum_xy_mm": [
+        3,
+        3
+      ],
+      "link_bore_mm": 4.05,
+      "long_relief_depth_mm": 0.6,
+      "long_relief_width_mm": 3.2,
+      "long_relief_end_inset_mm": 5.5,
+      "long_relief_corner_radius_mm": 0.7,
+      "source": "Movie S1 compact B-end fork only, A single eye; user close-up correction. Organic tangent-arc web; dimensions assumed.",
+      "terminal_reach_mm": 10.0,
+      "terminal_opening_depth_mm": 8.0,
+      "terminal_leaf_mm": 1.2,
+      "B_added_cheek_abs_y_mm": 36.0,
+      "A_shoulder_span_mm": 54.0,
+      "B_shaft_length_mm": 76.0,
+      "B_shoulder_span_mm": 60.0,
+      "B_retainer_abs_y_mm": 37.5,
+      "B_outer_spacer_abs_y_mm": 36.9,
+      "fork_end": "B",
+      "waist_width_mm": 6.0,
+      "component_revision": "r14"
+    },
+    "source_evidence": "Movie S1 54\u201355 s and latest user close-up: B-end fork only, single-eye A; metric organic section assumed",
+    "frame_convention": "Legacy (3,3) datum and 6x1.2 placement frame retained",
+    "limits": "Terminal fork morphology revised; no capacity, fit, race-retention or fabrication qualification",
+    "bars": [
+      {
+        "source": "SPN_r02_L4",
+        "part_number": "SPN_BC_RECESSED_r12",
+        "instances": [
+          "Link1_L4__1",
+          "Link2_L4__1",
+          "Link1_L4_1",
+          "Link2_L4_1"
+        ],
+        "center_distance_mm": 45.7876,
+        "width_mm": 8.0,
+        "thickness_mm": 1.2,
+        "local_bores_mm": [
+          [
+            3,
+            3
+          ],
+          [
+            48.7876,
+            3
+          ]
+        ]
+      }
+    ]
+  },
+  "torsos": {
+    "revision": "r12",
+    "bodies": {
+      "fore": {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 5140.320480506984,
+        "preserved_group": [
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_EarD1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapR1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureRProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanL",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelL",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL0Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL0",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL1Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_TopStrapL1",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureLProfile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+          "ForeClipReliefR07_Profile",
+          "ForeClipReliefR07",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_PlateWebFill_r10Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_PlateWebFill_r10",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10Profile",
+          "TORSO_FORE_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10"
+        ]
+      },
+      "hind": {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 6948.551656956321,
+        "preserved_group": [
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlateProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TransverseSlottedPlate",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_EarD1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapR1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL0Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL0",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL1Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_TopStrapL1",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_InnerCaseCaptureL",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorRProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorR",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorLProfile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_KneeConnectorL",
+          "KneeCarrierBridgeR1Profile",
+          "KneeCarrierBridgeR1",
+          "KneeCarrierBridge1Profile",
+          "KneeCarrierBridge1",
+          "KneeCageRearBridgeProfile",
+          "KneeCageRearBridge",
+          "KneeCageRail_R11p2_R8p2Profile",
+          "KneeCageRail_R11p2_R8p2",
+          "KneeCageRail_R11p2_28p2Profile",
+          "KneeCageRail_R11p2_28p2",
+          "KneeCageRail_11p2_R8p2Profile",
+          "KneeCageRail_11p2_R8p2",
+          "KneeCageRail_11p2_28p2Profile",
+          "KneeCageRail_11p2_28p2",
+          "KneeCageFrontRimProfile",
+          "KneeCageFrontRim",
+          "KneeLockBoltBossRProfile",
+          "KneeLockBoltBossR",
+          "KneeLockBoltBossLProfile",
+          "KneeLockBoltBossL",
+          "KneeLockThroughBores",
+          "KneeLockThroughBorePocket",
+          "GuideBridgeRProfile",
+          "GuideBridgeR",
+          "HipGuideRearPostRProfile",
+          "HipGuideRearPostR",
+          "GuideStrutRshell_guideProfile",
+          "GuideStrutRshell_guide",
+          "GuideJournalBossRshell_guideProfile",
+          "GuideJournalBossRshell_guide",
+          "GuideStrutRhip_guideProfile",
+          "GuideStrutRhip_guide",
+          "GuideJournalBossRhip_guideProfile",
+          "GuideJournalBossRhip_guide",
+          "GuideBridgeLProfile",
+          "GuideBridgeL",
+          "HipGuideRearPostLProfile",
+          "HipGuideRearPostL",
+          "GuideStrutLshell_guideProfile",
+          "GuideStrutLshell_guide",
+          "GuideJournalBossLshell_guideProfile",
+          "GuideJournalBossLshell_guide",
+          "GuideStrutLhip_guideProfile",
+          "GuideStrutLhip_guide",
+          "GuideJournalBossLhip_guideProfile",
+          "GuideJournalBossLhip_guide",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_PlateWebFill_r10Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_PlateWebFill_r10",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_SourcePlatePattern_r10",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar0_r10",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10Profile",
+          "TORSO_HIND_TRANSVERSE_FRAME_r06_CentralClevisEar1_r10"
+        ]
+      }
+    },
+    "edited_profiles": [
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelR",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanR",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelL",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanL",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE0Profile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1",
+        "sketch": "TORSO_FORE_TRANSVERSE_FRAME_r06_EarE1Profile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelR",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelRProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanR",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanRProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelL",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_OuterHPanelLProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanL",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_BottomPanLProfile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE0Profile",
+        "fully_constrained": true
+      },
+      {
+        "body": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+        "pad": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1",
+        "sketch": "TORSO_HIND_TRANSVERSE_FRAME_r06_EarE1Profile",
+        "fully_constrained": true
+      }
+    ],
+    "ear_retirement": "Existing EarE0/EarE1 profiles replaced by plate-attached stubs; no history deletion",
+    "assumptions": [
+      "Contours/window radii and 2 mm pan rails are DESIGN_ASSUMPTION",
+      "Hip disk OD 7 mm and bore diameter 4.05 mm; H datum unchanged",
+      "Stub depth 0.4 mm inboard, full plate thickness overlap, height 7 mm, corner radius 0.4 mm",
+      "Retire obsolete lateral E hardware separately; central r10 clevis owns E"
+    ],
+    "scope": "Existing sketch geometry only; D, H, knee/cable owner features, top straps/case captures and source/instance frames preserved",
+    "clearance_and_load_status": "NOT_RUN; lead must verify native recompute, motion clearances and support contacts"
+  },
+  "assembly_revision": "r14",
+  "actual_final_instance_count": 455,
+  "construction": "preserved_r10_checkpoint_plus_executed_clearance_corrected_factories",
+  "supersedes": "r13 shallow-fork and inward-wall trial failed actual neutral interference",
+  "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87"
+}

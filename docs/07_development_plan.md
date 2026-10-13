@@ -1,6 +1,6 @@
 # 07 — Development plan
 
-**Current state:** `DESIGN_SPEC_ONLY`. No FreeCAD application connection, mechanism execution, CAD build, export, or physical test is claimed by this initial documentation commit.
+**Current state (2026-10-14):** `R14_COMPACT_REFERENCE_CANDIDATE`. Actual native r14 construction, local/identity checks, native edit probes, STEP exchange and AX0/AX1 are recorded in [24](24_clearance_corrected_reference_r14.md); affected finite-motion screening is being completed. Fabrication release and physical tests remain unqualified. The original documentation-only state and historical checkpoints are retained in repository history.
 
 Use [00](00_project_specification.md) for scope, [05](05_freecad_mcp_workflow.md) for execution, and [06](06_verification_and_acceptance.md) for gate definitions. The user may steer the scope; record changes rather than silently changing architecture.
 
@@ -107,3 +107,8 @@ User reopened CAD refinement after the r10 pause. Expanded Movie S1 51–80 s re
 ## r13 compact reference revision — 2026-10-13
 
 Latest user steering requires transverse narrowing, B-only terminal forks and organic rocker shape. Earlier r11 long-cheek and r12 two-ended interpretations are superseded; saved checkpoints preserved. Fresh r13 construction reuses corrected r12 component factories with a separate assembly revision. Lead serializes native rebuild, local/S9/identity checks, affected finite-motion screening and AX0/AX1. See [23](23_compact_reference_revision_r13.md). Manufacturing drawings/manual and new Blender videos remain outside this CAD refinement.
+
+
+## r14 executed reference correction — 2026-10-14
+
+The latest user crop takes precedence: organic A–B rocker, single eye at A and terminal fork only at B. A separate r14 native assembly has been saved through installed MCP, preserving all prior checkpoints. The center ground frame is narrowed transversely from 82.0 to 78.8 mm with coordinated shafts/guides/retainers; actual motor envelopes and the 56.8 mm motor housing span remain unchanged. Revised mounting profiles, a single connected ground frame with central E support, and broad recessed B–C links are included. Identity, native edit/recompute, 455-solid STEP and three-pose AX0/AX1 checks pass. The changed-pair cycle screen remains pending final merge. See [24](24_clearance_corrected_reference_r14.md) for actual evidence, superseded r13 failures, legacy metadata precedence, axial-fit questions and remaining engineering blockers. Drawings/manual and new rendering remain deferred.

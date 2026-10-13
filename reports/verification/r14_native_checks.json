@@ -1,0 +1,528 @@
+{
+  "status": "PASS",
+  "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "probe_is_disposable_copy": true,
+  "edit_tests": [
+    {
+      "feature": "SPN_AB_TERMINAL_r12_B1_POS_BTerminalLeaf",
+      "parameter": "Length",
+      "original_mm": 1.2,
+      "temporary_delta_mm": 0.1,
+      "volume_change_mm3": 6.838769009741327,
+      "restored_geometry": {
+        "method": "strict_boolean_adaptive_bbox",
+        "old_sha256": "c30e45ab3dbbe998efa6fa248275b8e87b9adfbc7791fb7bd2ce7d9317ecc117",
+        "new_sha256": "5d61f8281d92a1d85b3a3caa1cfb1c5ee18db160cea0b570f6b797763060483a",
+        "bidirectional_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "adaptive_comparison": {
+          "volume_mm3": 340.1063134376038,
+          "expected_volume_mm3": 340.10631343760366,
+          "volume_relative_error": 3.3426853083829376e-16,
+          "sum_absolute_individual_volume_differences_mm3": 1.1368683772161603e-13,
+          "maximum_individual_relative_volume_error": 3.3426853083829376e-16,
+          "maximum_individual_estimated_margin_upper_relative_difference": 6.274220323836741e-13,
+          "raw_import_compound_volume_mm3": 340.1063134376047,
+          "raw_native_solid_volume_sum_mm3": 340.1063134376046,
+          "one_to_one_placed_solids": [
+            {
+              "native_label": "SPN_AB_TERMINAL_r12_B1_POS_BTerminalLeaf restore",
+              "step_solid_index": 0,
+              "maximum_bbox_absolute_error_mm": 0.0,
+              "native_measurement": {
+                "volume_mm3": 340.10631343760366,
+                "estimated_relative_integration_error": 1.1361462001135982e-14,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 1.1361462001135982e-14,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 3.3426853083829376e-16,
+                "coarse_gk_relative_change": 3.3426853083829376e-16,
+                "gauss_convergence_relative_change": 3.133767476609004e-13,
+                "cross_algorithm_relative_difference": 3.3426853083829376e-15,
+                "gauss_volume_mm3": 340.1063134376048,
+                "estimated_numerical_margin_mm3": 1.0658141036401503e-10,
+                "brep_sha256": "f32a10ae2f2cda4d66a77a315fb86cd437913689cb30bbfe06af6189ff741282",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 340.1063134374982,
+                    "estimated_relative_integration_error": 3.381040386872829e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 340.1063134376048,
+                    "estimated_relative_integration_error": 2.6162153849163244e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 340.1063134376038,
+                    "estimated_relative_integration_error": 1.0767253172616195e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 340.10631343760366,
+                    "estimated_relative_integration_error": 1.1361462001135982e-14
+                  }
+                ],
+                "label": "SPN_AB_TERMINAL_r12_B1_POS_BTerminalLeaf restore",
+                "raw_shape_volume_mm3": 340.1063134376046
+              },
+              "step_measurement": {
+                "volume_mm3": 340.1063134376038,
+                "estimated_relative_integration_error": 1.131186405940139e-14,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 1.131186405940139e-14,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 0.0,
+                "coarse_gk_relative_change": 0.0,
+                "gauss_convergence_relative_change": 3.1354388192631947e-13,
+                "cross_algorithm_relative_difference": 3.1755510429637898e-15,
+                "gauss_volume_mm3": 340.10631343760485,
+                "estimated_numerical_margin_mm3": 1.0663825378287584e-10,
+                "brep_sha256": "9825f0a5f9918847f842d57a400ef318876db7eeeac6ac852a163ae12adb313e",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 340.1063134374982,
+                    "estimated_relative_integration_error": 3.7957352239577745e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 340.10631343760485,
+                    "estimated_relative_integration_error": 2.6162153849163244e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 340.1063134376038,
+                    "estimated_relative_integration_error": 1.076725288751589e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 340.1063134376038,
+                    "estimated_relative_integration_error": 1.131186405940139e-14
+                  }
+                ],
+                "label": "STEP_solid_0",
+                "raw_shape_volume_mm3": 340.1063134376047
+              },
+              "volume_relative_error": 3.3426853083829376e-16,
+              "paired_algorithm_difference_spread_mm3": 5.684341886080802e-14,
+              "estimated_margin_upper_relative_difference": 6.274220323836741e-13,
+              "status": "PASS"
+            }
+          ],
+          "adaptive_backend": {
+            "cpp_source": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+            "cpp_sha256": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+            "binary": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/adaptive_volume_r07/volume_8b0bc38f2b33280bd7ad.so",
+            "binary_sha256": "e40109e858a3e5490b91307bdebb4e6ebdadd23e517ff9fd69892c2c15664462",
+            "compiler": "/usr/bin/c++",
+            "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+            "compile_arguments": [
+              "/usr/bin/c++",
+              "-std=c++17",
+              "-O2",
+              "-shared",
+              "-fPIC",
+              "-I/snap/freecad/2830/usr/include/opencascade",
+              "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+              "-L/snap/freecad/2830/usr/lib",
+              "-lTKBRep",
+              "-lTKTopAlgo",
+              "-lTKMath",
+              "-Wl,-rpath,/snap/freecad/2830/usr/lib"
+            ],
+            "occt_header_directory": "/snap/freecad/2830/usr/include/opencascade",
+            "occt_library_directory": "/snap/freecad/2830/usr/lib",
+            "brepgprop_header_sha256": "a1d5c195f2234cbdc748ebbdd4af499d59e4b96ea235cde9ba74878e5d7d3056",
+            "freecad_occt_version": "7.8.0",
+            "primary_algorithm": "BRepGProp::VolumePropertiesGK,OnlyClosed=true,IsUseSpan=true,CGFlag=false,IFlag=false,SkipShared=false",
+            "cross_algorithm": "BRepGProp::VolumeProperties,OnlyClosed=true,SkipShared=false",
+            "eps_values": [
+              1e-08,
+              1e-10
+            ],
+            "bounded_gk_refinement_eps": 1e-12,
+            "precision_convergence_relative_tolerance": 1e-08,
+            "note": "Numerical margin uses selected GK error estimate, precision convergence and cross-algorithm paired-difference spread; not a certified global bound.",
+            "python_measurement_source_sha256": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+            "header_version": "7.8.0",
+            "domain_refinement_trigger_relative_error": 2.5e-07,
+            "domain_refinement_settings": [
+              [
+                8,
+                31
+              ],
+              [
+                16,
+                61
+              ]
+            ],
+            "domain_refinement": "Original BRepGProp_TFunction boundary parameter intervals; no geometry or topology mutation; full coarse variation and absolute algorithm disagreement retained"
+          }
+        }
+      }
+    },
+    {
+      "feature": "SPN_r02_L4_BlindReliefR12",
+      "parameter": "Length",
+      "original_mm": 0.6,
+      "temporary_delta_mm": 0.05,
+      "volume_change_mm3": 5.544985020012916,
+      "restored_geometry": {
+        "method": "strict_boolean_adaptive_bbox",
+        "old_sha256": "85f2c7e94abd95d687539c5ba9bfec242f92075a66c11aa5b3b9093a1de35a86",
+        "new_sha256": "d84d306d6fb6954dd7ea256a0e1bd5f0ab20bb82457310e8dfef1ab6ec92d892",
+        "bidirectional_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "adaptive_comparison": {
+          "volume_mm3": 402.42173460846374,
+          "expected_volume_mm3": 402.42173460846374,
+          "volume_relative_error": 0.0,
+          "sum_absolute_individual_volume_differences_mm3": 0.0,
+          "maximum_individual_relative_volume_error": 0.0,
+          "maximum_individual_estimated_margin_upper_relative_difference": 3.982048213751791e-11,
+          "raw_import_compound_volume_mm3": 402.42173460846453,
+          "raw_native_solid_volume_sum_mm3": 402.42173460846453,
+          "one_to_one_placed_solids": [
+            {
+              "native_label": "SPN_r02_L4_BlindReliefR12 restore",
+              "step_solid_index": 0,
+              "maximum_bbox_absolute_error_mm": 0.0,
+              "native_measurement": {
+                "volume_mm3": 402.42173460846374,
+                "estimated_relative_integration_error": 1.991024018551855e-11,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 1.991024018551855e-11,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 1.4125335182532779e-16,
+                "coarse_gk_relative_change": 1.4125335182532779e-16,
+                "gauss_convergence_relative_change": 4.3393029680740693e-13,
+                "cross_algorithm_relative_difference": 2.8250670365065556e-15,
+                "gauss_volume_mm3": 402.4217346084649,
+                "estimated_numerical_margin_mm3": 8.012313391927516e-09,
+                "brep_sha256": "e54b7e0a842a2dd4d0fa8149c9572f6812eb36be72639e22cff244d1ecf82bb9",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 402.42173460829025,
+                    "estimated_relative_integration_error": 2.068280867749054e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 402.4217346084649,
+                    "estimated_relative_integration_error": 4.010483590602808e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 402.4217346084638,
+                    "estimated_relative_integration_error": 4.1879510954359745e-11
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 402.42173460846374,
+                    "estimated_relative_integration_error": 1.991024018551855e-11
+                  }
+                ],
+                "label": "SPN_r02_L4_BlindReliefR12 restore",
+                "raw_shape_volume_mm3": 402.42173460846453
+              },
+              "step_measurement": {
+                "volume_mm3": 402.42173460846374,
+                "estimated_relative_integration_error": 1.9910241951206525e-11,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 1.9910241951206525e-11,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 1.4125335182532779e-16,
+                "coarse_gk_relative_change": 1.4125335182532779e-16,
+                "gauss_convergence_relative_change": 4.3393029680740693e-13,
+                "cross_algorithm_relative_difference": 2.8250670365065556e-15,
+                "gauss_volume_mm3": 402.4217346084649,
+                "estimated_numerical_margin_mm3": 8.012314102478733e-09,
+                "brep_sha256": "dc5feabbf8ff25362c4696f5096243c9dc24a03b7b4f125911cabc1fabdffea8",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 402.42173460829025,
+                    "estimated_relative_integration_error": 4.01048359060281e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 402.4217346084649,
+                    "estimated_relative_integration_error": 4.010483590602808e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 402.4217346084638,
+                    "estimated_relative_integration_error": 4.187951272004772e-11
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 402.42173460846374,
+                    "estimated_relative_integration_error": 1.9910241951206525e-11
+                  }
+                ],
+                "label": "STEP_solid_0",
+                "raw_shape_volume_mm3": 402.42173460846453
+              },
+              "volume_relative_error": 0.0,
+              "paired_algorithm_difference_spread_mm3": 0.0,
+              "estimated_margin_upper_relative_difference": 3.982048213751791e-11,
+              "status": "PASS"
+            }
+          ],
+          "adaptive_backend": {
+            "cpp_source": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+            "cpp_sha256": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+            "binary": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/adaptive_volume_r07/volume_8b0bc38f2b33280bd7ad.so",
+            "binary_sha256": "e40109e858a3e5490b91307bdebb4e6ebdadd23e517ff9fd69892c2c15664462",
+            "compiler": "/usr/bin/c++",
+            "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+            "compile_arguments": [
+              "/usr/bin/c++",
+              "-std=c++17",
+              "-O2",
+              "-shared",
+              "-fPIC",
+              "-I/snap/freecad/2830/usr/include/opencascade",
+              "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+              "-L/snap/freecad/2830/usr/lib",
+              "-lTKBRep",
+              "-lTKTopAlgo",
+              "-lTKMath",
+              "-Wl,-rpath,/snap/freecad/2830/usr/lib"
+            ],
+            "occt_header_directory": "/snap/freecad/2830/usr/include/opencascade",
+            "occt_library_directory": "/snap/freecad/2830/usr/lib",
+            "brepgprop_header_sha256": "a1d5c195f2234cbdc748ebbdd4af499d59e4b96ea235cde9ba74878e5d7d3056",
+            "freecad_occt_version": "7.8.0",
+            "primary_algorithm": "BRepGProp::VolumePropertiesGK,OnlyClosed=true,IsUseSpan=true,CGFlag=false,IFlag=false,SkipShared=false",
+            "cross_algorithm": "BRepGProp::VolumeProperties,OnlyClosed=true,SkipShared=false",
+            "eps_values": [
+              1e-08,
+              1e-10
+            ],
+            "bounded_gk_refinement_eps": 1e-12,
+            "precision_convergence_relative_tolerance": 1e-08,
+            "note": "Numerical margin uses selected GK error estimate, precision convergence and cross-algorithm paired-difference spread; not a certified global bound.",
+            "python_measurement_source_sha256": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+            "header_version": "7.8.0",
+            "domain_refinement_trigger_relative_error": 2.5e-07,
+            "domain_refinement_settings": [
+              [
+                8,
+                31
+              ],
+              [
+                16,
+                61
+              ]
+            ],
+            "domain_refinement": "Original BRepGProp_TFunction boundary parameter intervals; no geometry or topology mutation; full coarse variation and absolute algorithm disagreement retained"
+          }
+        }
+      }
+    },
+    {
+      "feature": "FRM_LUMBAR_COMPACT_CAGE_r12_ContinuousCrosswall0",
+      "parameter": "Length",
+      "original_mm": 56.8,
+      "temporary_delta_mm": 0.1,
+      "volume_change_mm3": 4.716906333718725,
+      "restored_geometry": {
+        "method": "strict_boolean_adaptive_bbox",
+        "old_sha256": "9000685720370d45634e96ae9417c40c6d34458bf3160a5b73eb52f4f8c6bad9",
+        "new_sha256": "6a7d8e73a6f673487a2b3499064e32e0bcbdf0af25908764dd1ce7590ab5f676",
+        "bidirectional_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "adaptive_comparison": {
+          "volume_mm3": 15444.995563587761,
+          "expected_volume_mm3": 15444.99556358767,
+          "volume_relative_error": 5.888604486990636e-15,
+          "sum_absolute_individual_volume_differences_mm3": 9.094947017729282e-11,
+          "maximum_individual_relative_volume_error": 5.888604486990636e-15,
+          "maximum_individual_estimated_margin_upper_relative_difference": 1.9437877886173436e-11,
+          "raw_import_compound_volume_mm3": 15444.995563587816,
+          "raw_native_solid_volume_sum_mm3": 15444.995563587707,
+          "one_to_one_placed_solids": [
+            {
+              "native_label": "FRM_LUMBAR_COMPACT_CAGE_r12_ContinuousCrosswall0 restore",
+              "step_solid_index": 0,
+              "maximum_bbox_absolute_error_mm": 0.0,
+              "native_measurement": {
+                "volume_mm3": 15444.99556358767,
+                "estimated_relative_integration_error": 9.715271028351971e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.715271028351971e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 0.0,
+                "coarse_gk_relative_change": 0.0,
+                "gauss_convergence_relative_change": 1.0893918300932676e-13,
+                "cross_algorithm_relative_difference": 3.533162692194382e-16,
+                "gauss_volume_mm3": 15444.995563587676,
+                "estimated_numerical_margin_mm3": 1.50052317931948e-07,
+                "brep_sha256": "7def3b3d79ab76eb1d01e4adda86c12fd460c2d44cbdcf7e6255a84ce64f73fe",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 15444.995563585993,
+                    "estimated_relative_integration_error": 8.761858626621226e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 15444.995563587676,
+                    "estimated_relative_integration_error": 7.009486901296955e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 15444.99556358767,
+                    "estimated_relative_integration_error": 1.8412841365425992e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 15444.99556358767,
+                    "estimated_relative_integration_error": 9.715271028351971e-12
+                  }
+                ],
+                "label": "FRM_LUMBAR_COMPACT_CAGE_r12_ContinuousCrosswall0 restore",
+                "raw_shape_volume_mm3": 15444.995563587707
+              },
+              "step_measurement": {
+                "volume_mm3": 15444.995563587761,
+                "estimated_relative_integration_error": 9.715776076427659e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.715776076427659e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 2.3554417947962407e-16,
+                "coarse_gk_relative_change": 2.3554417947962407e-16,
+                "gauss_convergence_relative_change": 1.0917472718880575e-13,
+                "cross_algorithm_relative_difference": 1.2954929871379323e-15,
+                "gauss_volume_mm3": 15444.995563587781,
+                "estimated_numerical_margin_mm3": 1.500601183972373e-07,
+                "brep_sha256": "de2f89f48ce3ef2dec8e6c60829949878de88f5b2541c37a53fcca653a0f2d43",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 15444.995563586095,
+                    "estimated_relative_integration_error": 8.761858626621226e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 15444.995563587781,
+                    "estimated_relative_integration_error": 7.997036535650565e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 15444.995563587758,
+                    "estimated_relative_integration_error": 1.8412846213581642e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 15444.995563587761,
+                    "estimated_relative_integration_error": 9.715776076427659e-12
+                  }
+                ],
+                "label": "STEP_solid_0",
+                "raw_shape_volume_mm3": 15444.995563587816
+              },
+              "volume_relative_error": 5.888604486990636e-15,
+              "paired_algorithm_difference_spread_mm3": 1.4551915228366852e-11,
+              "estimated_margin_upper_relative_difference": 1.9437877886173436e-11,
+              "status": "PASS"
+            }
+          ],
+          "adaptive_backend": {
+            "cpp_source": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+            "cpp_sha256": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+            "binary": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/tmp/adaptive_volume_r07/volume_8b0bc38f2b33280bd7ad.so",
+            "binary_sha256": "e40109e858a3e5490b91307bdebb4e6ebdadd23e517ff9fd69892c2c15664462",
+            "compiler": "/usr/bin/c++",
+            "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+            "compile_arguments": [
+              "/usr/bin/c++",
+              "-std=c++17",
+              "-O2",
+              "-shared",
+              "-fPIC",
+              "-I/snap/freecad/2830/usr/include/opencascade",
+              "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/src/occt_adaptive_volume_r07.cpp",
+              "-L/snap/freecad/2830/usr/lib",
+              "-lTKBRep",
+              "-lTKTopAlgo",
+              "-lTKMath",
+              "-Wl,-rpath,/snap/freecad/2830/usr/lib"
+            ],
+            "occt_header_directory": "/snap/freecad/2830/usr/include/opencascade",
+            "occt_library_directory": "/snap/freecad/2830/usr/lib",
+            "brepgprop_header_sha256": "a1d5c195f2234cbdc748ebbdd4af499d59e4b96ea235cde9ba74878e5d7d3056",
+            "freecad_occt_version": "7.8.0",
+            "primary_algorithm": "BRepGProp::VolumePropertiesGK,OnlyClosed=true,IsUseSpan=true,CGFlag=false,IFlag=false,SkipShared=false",
+            "cross_algorithm": "BRepGProp::VolumeProperties,OnlyClosed=true,SkipShared=false",
+            "eps_values": [
+              1e-08,
+              1e-10
+            ],
+            "bounded_gk_refinement_eps": 1e-12,
+            "precision_convergence_relative_tolerance": 1e-08,
+            "note": "Numerical margin uses selected GK error estimate, precision convergence and cross-algorithm paired-difference spread; not a certified global bound.",
+            "python_measurement_source_sha256": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+            "header_version": "7.8.0",
+            "domain_refinement_trigger_relative_error": 2.5e-07,
+            "domain_refinement_settings": [
+              [
+                8,
+                31
+              ],
+              [
+                16,
+                61
+              ]
+            ],
+            "domain_refinement": "Original BRepGProp_TFunction boundary parameter intervals; no geometry or topology mutation; full coarse variation and absolute algorithm disagreement retained"
+          }
+        }
+      }
+    }
+  ],
+  "comparison_geometry": "Both operands copied with copyGeom=True/copyMesh=False; mechanical BRep without display triangulation, strict identity gates unchanged",
+  "native_guard": {
+    "status": "PASS_NATIVE_STATE_ONLY",
+    "body_count": 93,
+    "body_and_member_count": 735,
+    "invalid_or_error_count": 0
+  },
+  "saved_recompute_instances": 455,
+  "canonical_file_unchanged": true,
+  "canonical_document_unchanged": true,
+  "limits": "Native load/edit/restore only; no supplier fit, structural or fabrication qualification"
+}

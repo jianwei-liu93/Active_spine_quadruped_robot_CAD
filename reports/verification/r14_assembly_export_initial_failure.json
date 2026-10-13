@@ -1,0 +1,8 @@
+{
+  "status": "FAIL_STRICT_STEP_VOLUME",
+  "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "step_sha256": "d2ec73e871814ccc3eae22688227068e0219d096d32f450b1345329aae7ea1d6",
+  "step_bytes": 4674005,
+  "error": "foreL_extension_Spring: strict adaptive per-solid volume failed; relative=4.77319269526e-06, with estimated numerical margin=5.07081006246e-06 > 1e-06",
+  "retry": "Apply the existing r07 explicit write.surfacecurve.mode=1 export prerequisite; preserve numerical gates and native geometry"
+}

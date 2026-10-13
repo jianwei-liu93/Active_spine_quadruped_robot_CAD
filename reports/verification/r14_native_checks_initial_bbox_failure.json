@@ -1,0 +1,17 @@
+{
+  "status": "FAIL",
+  "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "probe_is_disposable_copy": true,
+  "edit_tests": [],
+  "native_guard": {
+    "status": "PASS_NATIVE_STATE_ONLY",
+    "body_count": 93,
+    "body_and_member_count": 735,
+    "invalid_or_error_count": 0
+  },
+  "saved_recompute_instances": 455,
+  "error": "RuntimeError('SPN_AB_TERMINAL_r12_B1_POS_BTerminalLeaf restore: bbox differs by more than1e-5mm')",
+  "canonical_file_unchanged": true,
+  "canonical_document_unchanged": true,
+  "limits": "Native load/edit/restore only; no supplier fit, structural or fabrication qualification"
+}
