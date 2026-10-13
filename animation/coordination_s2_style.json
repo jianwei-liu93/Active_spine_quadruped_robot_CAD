@@ -1,0 +1,18 @@
+{
+  "version": "movie-s2-studio-kinematic-v1",
+  "scene": "spine_leg_coordination_s2",
+  "fps": 60,
+  "frame_count": 1500,
+  "sample_stride": 3,
+  "display_frequency_hz": 0.6,
+  "reference_movie": "/home/jianwei/freeCAD_projects/active_spine_robot_paper/sciadv.aed5603_movies_s1_to_s14/aed5603_movie_s2.mp4",
+  "source_scene": "animation/scenes/spine_leg_coordination.blend",
+  "source_manifest": "animation/motion/production_coordination_v2_r10.json",
+  "pitch_half_excursion_deg": 3,
+  "fore_aft_half_excursion_m": 0.008,
+  "flight_gap_max_m": 0.025,
+  "base_floor_clearance_m": 0.0008,
+  "root_motion_provenance": "PRESENTATION_KINEMATIC: floor envelope and prescribed flight gap; no contact forces or dynamics; root is not an extra robot command",
+  "shots": [[0,6,"overview"],[6,12,"spine"],[12,18,"hind"],[18,22,"fore"],[22,25,"overview"]],
+  "motion_blur": false
+}
