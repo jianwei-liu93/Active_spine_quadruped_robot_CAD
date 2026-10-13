@@ -1,0 +1,14 @@
+{
+  "output": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/animation/output/spine_leg_coordination_s2.mp4",
+  "ffmpeg": "/home/jianwei/miniforge3/envs/nerd/bin/ffmpeg",
+  "ffprobe": "/home/jianwei/miniforge3/envs/nerd/bin/ffprobe",
+  "ffmpeg_version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "frames": 1500,
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "codec": "h264",
+  "pixel_format": "yuv420p",
+  "duration_seconds": 25.0,
+  "decode_check": "passed"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_WITH_ILLUSTRATIVE_KINEMATIC_LIMITS",
+  "video_sha256": "9426a72f979d33e3becc91f910f5ce8a69b11eb2752362fc2d48a0d98870fef4",
+  "reviewed_contact_sheet": "reports/animation/spine_leg_coordination_s2_contact_sheet.png",
+  "adjacent_decoded_review": "reports/animation/spine_leg_coordination_s2_adjacent_frames.png",
+  "observed": [
+    "Warm studio floor and soft shadows, with dark frames, light links and metallic springs.",
+    "Visible whole-body bounce/pitch and coordinated motion of all four legs.",
+    "Full-robot overview retains all physical components within the frame.",
+    "Spine, hind and fore mechanism shots use labelled component views; toe or unrelated-module crops are intentional in detail shots.",
+    "Persistent high-contrast caption identifies prescribed body motion as illustrative kinematics.",
+    "Adjacent decoded samples show the intended shot cuts and no sampled discontinuity at the body/joint cycle seam."
+  ],
+  "limits": [
+    "Visual review covers 12 decoded contact-sheet frames and 15 adjacent-frame samples; full decoding and all-frame pose/floor/framing checks are recorded separately.",
+    "Five short event clips are generated as review aids; no claim that every frame was visually inspected.",
+    "The added body root, foot-floor envelope, pitch and flight gap are prescribed presentation assumptions. Feet may slide; contact forces, support equilibrium and locomotion dynamics are not simulated.",
+    "Existing separately prescribed knees and schematic cable routing guides remain unchanged.",
+    "The cut is inspired by Movie S2 visual treatment; it is not an exact recovered motion trace or geometry reproduction."
+  ]
+}

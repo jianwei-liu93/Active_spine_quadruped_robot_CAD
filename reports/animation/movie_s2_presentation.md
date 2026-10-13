@@ -1,6 +1,6 @@
 # Movie S2-inspired coordination presentation
 
-Status: scene and fresh-process verification PASS; full video rendering in progress.
+Status: complete. Scene/readback, 1,500-frame render, encoding/full decoding and decoded-sample visual review pass with documented kinematic limitations. See `spine_leg_coordination_s2_qa.json`.
 
 The source movie was inspected through sampled whole-robot, spine and hind-leg frames. The new cut uses a warm studio floor, soft shadows, graphite frames, light spine links, metallic springs and small white labels on charcoal backgrounds. Its shot order is overview (0–6 s), spine (6–12 s), hind mechanism (12–18 s), fore mechanism (18–22 s), and overview (22–25 s). Detail shots deliberately crop unrelated modules and may crop toe tips; the declared mechanism targets remain in frame. Overview shots retain every physical instance.
 
@@ -10,7 +10,7 @@ The display uses every third sample of the verified 300-state cycle: 100 exact s
 
 The added root has a prescribed +/-3-degree pitch and +/-8-mm fore-aft oscillation. Its vertical position follows the lowest rendered toe/foot surface plus an 0.8-mm minimum floor margin and a nonnegative prescribed flight gap of up to 25 mm. These are presentation assumptions, not recovered experimental motion. Feet can slide; no support forces, contact equilibrium, stability or locomotion speed is claimed. A persistent caption states “ILLUSTRATIVE KINEMATICS | Prescribed body motion; no dynamics.”
 
-The new scene is `animation/scenes/spine_leg_coordination_s2.blend`; the new output will be `animation/output/spine_leg_coordination_s2.mp4`. The prior technical coordination video and its QA remain intact. The new scene is standalone and uses baked channels and shape keys, with no playback handlers or FreeCAD dependency.
+The new scene is `animation/scenes/spine_leg_coordination_s2.blend`; the new output is `animation/output/spine_leg_coordination_s2.mp4`. The prior technical coordination video and its QA remain intact. The new scene is standalone and uses baked channels and shape keys, with no playback handlers or FreeCAD dependency.
 
 Reproduce by first building the verified technical scene as described in `animation/README.md`. In the installed Blender MCP, import `build_coordination_s2` from `animation/blender` and call `build()`. Package with `package_scene.py -- spine_leg_coordination_s2`, then run `verify_coordination_s2.py` in a fresh Blender process. After preview inspection, `python3 animation/blender/render_coordination_s2.py` renders and encode/decode-verifies the cut. Review helpers are `video_review_s2.py` and `review_s2_sequences.py`.
 
