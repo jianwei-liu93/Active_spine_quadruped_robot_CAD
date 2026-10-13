@@ -97,3 +97,8 @@ Do not restart a completed stage merely because context was compacted or a sessi
 Report delivered paths and revision; source-faithful features; engineering changes; actual model dimensions/mass; pass/fail/blocked results; verified and unresolved hardware interfaces; and the specific outstanding requirements for fabrication and physical validation.
 
 The task is complete at the agreed CAD deliverable level when the actual package and its evidence exist. Missing critical fabrication information must remain visible, even if the complete editable CAD candidate is delivered.
+
+
+## r11 reference review checkpoint — 2026-10-13
+
+User reopened CAD refinement after the r10 pause. Expanded Movie S1 51–80 s review identified local fork sections and recessed long-link faces missing from the generic thin-plate representation. Lead integrated r11 native geometry through MCP, preserving r10 and all existing physical IDs. Initial native/S9/AX0–AX1 and 13-pose affected-pair checks PASS; broader candidate verification pending. See [22](22_linkage_reference_review_r11.md), `reports/reviews/r11/` and `reports/verification/r11_*`. No new drawings/manual or Blender render requested for this CAD revision.

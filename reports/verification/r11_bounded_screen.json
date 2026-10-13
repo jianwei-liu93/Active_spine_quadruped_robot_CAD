@@ -1,0 +1,257 @@
+{
+  "status": "PASS_BOUNDED_ONLY",
+  "identity": {
+    "status": "PASS_IDENTITY_ONLY",
+    "unchanged_count": 471,
+    "unchanged_identity_sha256": "8e504a62986c8313a00e6611877d316031d07aaf0af75d050088f91fba2a2848",
+    "source_proof_count": 101,
+    "affected": [
+      "A1_1_ForkInnerBearing",
+      "A1_1_ForkInnerSpacer",
+      "A1__1_ForkInnerBearing",
+      "A1__1_ForkInnerSpacer",
+      "A2_1_ForkInnerBearing",
+      "A2_1_ForkInnerSpacer",
+      "A2__1_ForkInnerBearing",
+      "A2__1_ForkInnerSpacer",
+      "B1_1_ForkOuterBearing",
+      "B1_1_ForkOuterSpacer",
+      "B1_1_Retainer1",
+      "B1__1_ForkOuterBearing",
+      "B1__1_ForkOuterSpacer",
+      "B1__1_Retainer0",
+      "B2_1_ForkOuterBearing",
+      "B2_1_ForkOuterSpacer",
+      "B2_1_Retainer1",
+      "B2__1_ForkOuterBearing",
+      "B2__1_ForkOuterSpacer",
+      "B2__1_Retainer0",
+      "Link1_L3_1",
+      "Link1_L3__1",
+      "Link1_L4_1",
+      "Link1_L4__1",
+      "Link2_L3_1",
+      "Link2_L3__1",
+      "Link2_L4_1",
+      "Link2_L4__1",
+      "SyncB1",
+      "SyncB2",
+      "ThroughA1",
+      "ThroughA2"
+    ],
+    "pair_count": 15568,
+    "native_editability": {
+      "body_count": 98,
+      "body_member_count": 786,
+      "sketch_count": 344,
+      "fully_constrained_sketch_count": 344,
+      "invalid_or_error_count": 0
+    }
+  },
+  "manifest_sha256": "2676a286a1b5c839f980cd15a6039613c565a50ce115785c4de067711a839385",
+  "native_sha256": {
+    "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r11_robot.FCStd": "88f209191301a0333146ecfb8c121f70f7ab73b1094d32cf955854ef5739e531",
+    "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/cad/flexor_r10_robot.FCStd": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9"
+  },
+  "dependency_sha256": {
+    "src/adaptive_volume_r07.py": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+    "src/build_leg_r02.py": "7187b1cdc295f9c352eea21600feacfbdf538a4b5a7e639a4a856dca697a1cd9",
+    "src/build_robot_r08.py": "107066dc36fce0453f5ddd9199317241f546bc3b915bc673063be6e996cd8244",
+    "src/build_tendon_r03.py": "e623c808d5f0a566a5f99c6d066553e11181f7e198ada237e478269c204d05fd",
+    "src/cable_clamps_r07.py": "8c36a3d013fab3439858c659afda2d03b8f52e91342eb63f145aecf916a38440",
+    "src/cad_common.py": "5e4a2c629297c061bfa89b71d84a791a853a2c06f606d240ac3d1cdce33d0f84",
+    "src/compression_spring_r07.py": "8bde615c158d2c41ca8f99081411ec3336676e0d9b34ac1b5b44be7047825d0b",
+    "src/controller_carrier_r07.py": "7ec69887942221fbbad12e1057a4168cb13daa730e9ac945325ec68410c3c387",
+    "src/kinematics.py": "c053c7273b29ef108c12a2ae5244e72cd4ea554b1503164ce97bd8e6dd3517cb",
+    "src/leg_geometry_r02.py": "459c0b40a6add8ea9f7a781ef34e09e98c183c70e4542a2691e51f829e0887a6",
+    "src/leg_mechanics.py": "971bb313a22ab6037411f31f4e4dcfedcdd1730eb6d8ae25af0f5d91a84831fa",
+    "src/leg_motion_r07.py": "fbcba404cf162688e647c1d982c5f124467750c46ecc9204104d858d5a0da7a4",
+    "src/occt_adaptive_volume_r07.cpp": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+    "src/robot_geometry.py": "478b86a5b5ff985d5475113e2c4003de389d3492cb2e3a3473f192845931d4f4",
+    "src/robot_pose_r03.py": "962898052a75f1bd5ee0e43d968b38c676ed2e3ad8985da8744d865b220439a9",
+    "src/spine_attachments_r02.py": "5286eb532fd95db8e8902159eb22342a5c84b8678229368fa81c9f5510f8ae34",
+    "src/spine_frame_r08.py": "c216b6cf6249c0d96303644e3074f7b30168c10b199c212fa42ac788ec44c009",
+    "src/spine_link_sections_r11.py": "565c3d1873f48e5c67d0f9bd52313a84eb118ebec822d1fcb8325cb8dabfac40",
+    "src/spring_normalization_r07.py": "13a7d99d476aa9ab2bdcb08df976272ba9d5d3217c3430150038e5889eca0696",
+    "src/spring_wire_r03.py": "ea61499d6e2fd85bc2391bb648116321dcbb441d816ae0fdb5cc47a063158002",
+    "src/sweep_robot_r03.py": "3b9949bbcb2e885cf690cf2bfa598d56a964a06adc0ecfc45954f292780fb865",
+    "src/tendon_r03.py": "e53b5cbcd506149df39ca3d6677bcf9bf30b4bc779183117b4a9c4c85499c050",
+    "src/verify_changed_revision_r10.py": "fdd243030cec6c07f686500d6a0496c2d0815dff488f453e243e46e39bf27e02",
+    "src/verify_frame_revision_r09.py": "723239c9fda21e3a719d5cc7b14fcff7e280c7378775cd9a1b77ebe86ae4e59c",
+    "src/verify_link_sections_r11.py": "2d6c358158bc637bba6d9090205e97c1e71b484e35764583b9a733797b191e2f",
+    "src/verify_motion_package_r08.py": "4f7747804bc9edf1976f2017f3db2d40a2804142e8035782ae6df05c02924cdb",
+    "parameters/assembly_r11.json": "c99768178b6a111158e964a76c75dde88595d3483550c350a27e22cb8cdb27a0",
+    "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9"
+  },
+  "pair_count": 15568,
+  "pair_sha256": "294b71e9e29a9d36e3e7a74b292ff6b8a3b4269c558406db6649a2a5364a083b",
+  "records": [
+    {
+      "sample_id": "frame_spine_000",
+      "input_sha256": "fb853a2466526291ee02b2e6c04acf0275a66a2885a228fe9cf41b86e01376ba",
+      "pair_count": 15568,
+      "decision_sha256": "d5d7e18abb081e98889253ced243e5aaeb7c858e2a84301f23f372c913699a25",
+      "counts": {
+        "bbox": 15339,
+        "occ": 229
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_030",
+      "input_sha256": "c0abd48eefdd48b36cea5f44d98793846d9005946e9714af01363053d98eaafc",
+      "pair_count": 15568,
+      "decision_sha256": "2a66a8c98350b3030782003aa63174301474de4edd949d1e1823307eeb7be9e4",
+      "counts": {
+        "bbox": 15341,
+        "occ": 227
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_060",
+      "input_sha256": "d6b4f6cbe3e814dd86f22236ccfc15c1cb1bd99aa9ae7b63461107ea1d3ef4e1",
+      "pair_count": 15568,
+      "decision_sha256": "a08a2a0244e522c02910530344a002d0b0348ec0729f82f92a2921ee313d8c4e",
+      "counts": {
+        "bbox": 15337,
+        "occ": 231
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_090",
+      "input_sha256": "b45fb8d344f7bf3926befff408e2848785f7eea28d15639dd6d99d8559eb1cb4",
+      "pair_count": 15568,
+      "decision_sha256": "a08a2a0244e522c02910530344a002d0b0348ec0729f82f92a2921ee313d8c4e",
+      "counts": {
+        "bbox": 15337,
+        "occ": 231
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_120",
+      "input_sha256": "937313ad2ff5ab81c8859a761e86e41dcb9e166322ee930219c9062c114606a4",
+      "pair_count": 15568,
+      "decision_sha256": "e0b2d3d329817064835f4ff13c155d5a068fb23c52a0cf5bfff03ec9b06f4b77",
+      "counts": {
+        "bbox": 15335,
+        "occ": 233
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_150",
+      "input_sha256": "22ed0e2b089b15315a84febae3cfbc7e9c568f61b5701335a9815908313741e0",
+      "pair_count": 15568,
+      "decision_sha256": "25fbe2d62b74c8267b45ca77524e92db0e3c3767a4d878b99b41648b44d64a8d",
+      "counts": {
+        "bbox": 15336,
+        "occ": 232
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_180",
+      "input_sha256": "398a03da541de23c2b177b8b85831fcfc7793adca6fc53c2f0943be9a6fcc7ef",
+      "pair_count": 15568,
+      "decision_sha256": "25fbe2d62b74c8267b45ca77524e92db0e3c3767a4d878b99b41648b44d64a8d",
+      "counts": {
+        "bbox": 15336,
+        "occ": 232
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_210",
+      "input_sha256": "dbd6317dfb9f4e98ddeb126a5aaeb1c6f8878754801dbea3a2efca51e71e643a",
+      "pair_count": 15568,
+      "decision_sha256": "786c2dd821cd378eac2e135de987c5f5366ea34aaf304852b30144fc0fe048e6",
+      "counts": {
+        "bbox": 15336,
+        "occ": 232
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_240",
+      "input_sha256": "ada82dba77d836f41d32aa47e55e1fb7b997a9b27e89bbffa7ce449f8b470327",
+      "pair_count": 15568,
+      "decision_sha256": "f8cfbd92ef2cd8726b8fd0bffdc5e2e82c253f06ed4854a701518bb8ec745a2a",
+      "counts": {
+        "bbox": 15332,
+        "occ": 236
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_270",
+      "input_sha256": "0a0434922df0ab169a03425f6ddb544ac34d9e757cd97da5454abdcb1d594043",
+      "pair_count": 15568,
+      "decision_sha256": "f8cfbd92ef2cd8726b8fd0bffdc5e2e82c253f06ed4854a701518bb8ec745a2a",
+      "counts": {
+        "bbox": 15332,
+        "occ": 236
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_300",
+      "input_sha256": "cd460998033f799c684f1f69ae297df1088791c79b30fb3d3ab3c2862f60b652",
+      "pair_count": 15568,
+      "decision_sha256": "3eeea23f5abacf3699e70c0c50906d24445291075ebe49bf655488656f911e12",
+      "counts": {
+        "bbox": 15334,
+        "occ": 234
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_330",
+      "input_sha256": "ff45b8afaff83a309ade91aceb3884072996b1d4bd12f5543d15903cc25100a7",
+      "pair_count": 15568,
+      "decision_sha256": "25fbe2d62b74c8267b45ca77524e92db0e3c3767a4d878b99b41648b44d64a8d",
+      "counts": {
+        "bbox": 15336,
+        "occ": 232
+      },
+      "guide_warnings": []
+    },
+    {
+      "sample_id": "frame_spine_360",
+      "input_sha256": "718224959106c884e63ef72070cb91c3c012438768d364a74f318a2bb1fc3ad8",
+      "pair_count": 15568,
+      "decision_sha256": "d5d7e18abb081e98889253ced243e5aaeb7c858e2a84301f23f372c913699a25",
+      "counts": {
+        "bbox": 15339,
+        "occ": 229
+      },
+      "guide_warnings": []
+    }
+  ],
+  "collisions": [],
+  "errors": [],
+  "dynamic_sources_regenerated": 26,
+  "occ_checks": 3014,
+  "exceptions": [],
+  "continuous_clearance": false,
+  "fabrication_release": false,
+  "section_screen": {
+    "status": "PASS_LOCAL_PROBES_ONLY",
+    "fork_sources": [
+      "SPN_AB_LOCAL_FORK_r11_B1_NEG",
+      "SPN_AB_LOCAL_FORK_r11_B2_NEG",
+      "SPN_AB_LOCAL_FORK_r11_B1_POS",
+      "SPN_AB_LOCAL_FORK_r11_B2_POS"
+    ],
+    "long_sources": [
+      "SPN_r02_L4"
+    ],
+    "bearing_outer_race_retention": "UNVERIFIED",
+    "fits_thrust_loads": "UNVERIFIED"
+  },
+  "disk_inputs_unchanged": true,
+  "dependencies_unchanged": true,
+  "samples_completed": 13
+}

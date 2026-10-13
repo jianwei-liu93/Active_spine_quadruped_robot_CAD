@@ -1,0 +1,27 @@
+{
+  "source": "/home/jianwei/freeCAD_projects/active_spine_robot_paper/sciadv.aed5603_movies_s1_to_s14/aed5603_movie_s1.mp4",
+  "sha256": "16b180fa5da669e78e7d2038147e1f09fd8adbb2265341d8c3a14d0093a235a9",
+  "seek_times_s": [
+    51,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    76,
+    78,
+    80
+  ],
+  "method": "ffmpeg -ss before -i, one decoded frame at or after seek; exact frame PTS not independently recovered",
+  "purpose": "r11 spine linkage/frame assembly source review; metric dimensions not recoverable from perspective frames"
+}

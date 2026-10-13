@@ -1,0 +1,207 @@
+{
+  "revision": "r11",
+  "classification": "RECONSTRUCTED_CANDIDATE_NOT_FABRICATION_RELEASE",
+  "changed_existing": [
+    "B1_1_Retainer1",
+    "B1__1_Retainer0",
+    "B2_1_Retainer1",
+    "B2__1_Retainer0",
+    "Link1_L3_1",
+    "Link1_L3__1",
+    "Link1_L4_1",
+    "Link1_L4__1",
+    "Link2_L3_1",
+    "Link2_L3__1",
+    "Link2_L4_1",
+    "Link2_L4__1",
+    "SyncB1",
+    "SyncB2",
+    "ThroughA1",
+    "ThroughA2"
+  ],
+  "new_instances": [
+    "A1_1_ForkInnerBearing",
+    "A1_1_ForkInnerSpacer",
+    "A1__1_ForkInnerBearing",
+    "A1__1_ForkInnerSpacer",
+    "A2_1_ForkInnerBearing",
+    "A2_1_ForkInnerSpacer",
+    "A2__1_ForkInnerBearing",
+    "A2__1_ForkInnerSpacer",
+    "B1_1_ForkOuterBearing",
+    "B1_1_ForkOuterSpacer",
+    "B1__1_ForkOuterBearing",
+    "B1__1_ForkOuterSpacer",
+    "B2_1_ForkOuterBearing",
+    "B2_1_ForkOuterSpacer",
+    "B2__1_ForkOuterBearing",
+    "B2__1_ForkOuterSpacer"
+  ],
+  "retired_sources": [
+    "SPN_r02_L3"
+  ],
+  "retired_physical_instances": [],
+  "fork_sections": [
+    {
+      "instance": "Link1_L3__1",
+      "source": "SPN_AB_LOCAL_FORK_r11_B1_NEG",
+      "motion": {
+        "kind": "segment",
+        "a": "A1",
+        "b": "B1",
+        "y": -32.4,
+        "width": 6,
+        "thickness": 1.2
+      },
+      "section": {
+        "A": {
+          "added_cheek_local_z_bounds_mm": [
+            -6.599999999999998,
+            -5.399999999999999
+          ],
+          "added_cheek_world_abs_y_mm": 25.8,
+          "opening_depth_from_pivot_mm": 8.0
+        },
+        "B": {
+          "added_cheek_local_z_bounds_mm": [
+            3.600000000000001,
+            4.800000000000001
+          ],
+          "added_cheek_world_abs_y_mm": 36.0,
+          "opening_depth_from_pivot_mm": 8.0
+        }
+      }
+    },
+    {
+      "instance": "Link2_L3__1",
+      "source": "SPN_AB_LOCAL_FORK_r11_B2_NEG",
+      "motion": {
+        "kind": "segment",
+        "a": "A2",
+        "b": "B2",
+        "y": -30.6,
+        "width": 6,
+        "thickness": 1.2
+      },
+      "section": {
+        "A": {
+          "added_cheek_local_z_bounds_mm": [
+            -4.800000000000001,
+            -3.600000000000001
+          ],
+          "added_cheek_world_abs_y_mm": 25.8,
+          "opening_depth_from_pivot_mm": 8.0
+        },
+        "B": {
+          "added_cheek_local_z_bounds_mm": [
+            5.399999999999999,
+            6.599999999999998
+          ],
+          "added_cheek_world_abs_y_mm": 36.0,
+          "opening_depth_from_pivot_mm": 8.0
+        }
+      }
+    },
+    {
+      "instance": "Link1_L3_1",
+      "source": "SPN_AB_LOCAL_FORK_r11_B1_POS",
+      "motion": {
+        "kind": "segment",
+        "a": "A1",
+        "b": "B1",
+        "y": 32.4,
+        "width": 6,
+        "thickness": 1.2
+      },
+      "section": {
+        "A": {
+          "added_cheek_local_z_bounds_mm": [
+            6.599999999999998,
+            7.799999999999997
+          ],
+          "added_cheek_world_abs_y_mm": 25.8,
+          "opening_depth_from_pivot_mm": 8.0
+        },
+        "B": {
+          "added_cheek_local_z_bounds_mm": [
+            -3.6000000000000014,
+            -2.4000000000000012
+          ],
+          "added_cheek_world_abs_y_mm": 36.0,
+          "opening_depth_from_pivot_mm": 8.0
+        }
+      }
+    },
+    {
+      "instance": "Link2_L3_1",
+      "source": "SPN_AB_LOCAL_FORK_r11_B2_POS",
+      "motion": {
+        "kind": "segment",
+        "a": "A2",
+        "b": "B2",
+        "y": 30.6,
+        "width": 6,
+        "thickness": 1.2
+      },
+      "section": {
+        "A": {
+          "added_cheek_local_z_bounds_mm": [
+            4.800000000000001,
+            6.0
+          ],
+          "added_cheek_world_abs_y_mm": 25.8,
+          "opening_depth_from_pivot_mm": 8.0
+        },
+        "B": {
+          "added_cheek_local_z_bounds_mm": [
+            -5.399999999999999,
+            -4.199999999999999
+          ],
+          "added_cheek_world_abs_y_mm": 36.0,
+          "opening_depth_from_pivot_mm": 8.0
+        }
+      }
+    }
+  ],
+  "parameters": {
+    "classification": "DESIGN_ASSUMPTION",
+    "source_evidence": "Movie S1 54\u201358 s local fork/recess morphology; metric section and hidden bearing arrangement are reconstructed",
+    "pivot_local_xy_mm": [
+      3.0,
+      3.0
+    ],
+    "pose_frame_width_mm": 6.0,
+    "pose_frame_thickness_mm": 1.2,
+    "outline_width_mm": 8.0,
+    "base_leaf_mm": 1.2,
+    "fork_leaf_mm": 1.2,
+    "fork_opening_depth_from_pivot_mm": 8.0,
+    "fork_bridge_end_from_pivot_mm": 10.0,
+    "A_added_cheek_abs_y_mm": 25.8,
+    "B_added_cheek_abs_y_mm": 36.0,
+    "A_shoulder_span_mm": 50.4,
+    "B_shaft_length_mm": 76.0,
+    "B_shoulder_span_mm": 60.0,
+    "B_retainer_abs_y_mm": 37.5,
+    "A_inner_spacer_abs_y_mm": 26.7,
+    "B_outer_spacer_abs_y_mm": 36.9,
+    "spacer_length_mm": 0.6,
+    "bearing_diameter_mm": 4.0,
+    "bearing_bore_mm": 2.0,
+    "bearing_length_mm": 1.2,
+    "link_bore_mm": 4.05,
+    "long_relief_depth_mm": 0.6,
+    "long_floor_mm": 0.6,
+    "relief_width_mm": 3.2,
+    "relief_end_inset_mm": 5.5,
+    "relief_corner_radius_mm": 0.7,
+    "limits": [
+      "Fits, outer-race retention, thrust sharing and loads UNVERIFIED",
+      "Local fork section is not an independent linkage or full-width yoke",
+      "Existing kinematic pivot locations and source frame remain unchanged"
+    ]
+  },
+  "preserved_source_frame": "first pivot (3,3), local +Z -> world -Y; MotionMap 6 x 1.2 frame unchanged",
+  "long_relief": "blind pocket with retained floor; through bores are separate native feature",
+  "joint_stack": "A local fork encloses fixed ground lug; B local fork encloses independent incident members; added cheek bearings and inner-race spacers; bearing outer-race retention/fits/thrust remain UNVERIFIED"
+}
