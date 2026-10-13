@@ -199,7 +199,7 @@ def extract_clip(ffmpeg: str, ffprobe: str, video: Path, event: dict[str, Any], 
     start = min(max(0.0, event["seconds"] - clip_len / 2), max(0.0, duration - clip_len))
     run([ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-ss", f"{start:.6f}",
          "-i", str(video), "-t", f"{clip_len:.6f}", "-map", "0:v:0", "-an", "-c:v", "libx264",
-         "-preset", "veryfast", "-crf", "24", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+         "-preset", "veryfast", "-crf", "24", "-threads", "2", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
          "-y", str(target)])
     meta_result = run([ffprobe, "-v", "error", "-count_frames", "-select_streams", "v:0",
                        "-show_entries", "stream=width,height,avg_frame_rate,nb_read_frames",

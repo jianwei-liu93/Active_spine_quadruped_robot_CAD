@@ -1,0 +1,297 @@
+{
+  "encoder": {
+    "ffmpeg": "/home/jianwei/miniforge3/envs/nerd/bin/ffmpeg",
+    "ffprobe": "/home/jianwei/miniforge3/envs/nerd/bin/ffprobe",
+    "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "output_directory": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/animation/previews/video_review",
+  "results": [
+    {
+      "shot": "exploded_assembly",
+      "video": "animation/output/exploded_assembly.mp4",
+      "video_sha256": "7b08e6b8634ad33077f4dd903110b319c97581ce216e233b445b7763a52cdca6",
+      "video_metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "frame_count": 720,
+        "duration_seconds": 24.0,
+        "size_bytes": 3149390,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "expected_defaults": {
+        "duration": 24.0,
+        "fps": 30,
+        "frames": 720
+      },
+      "default_metadata_mismatches": [],
+      "events_source": "animation/review_events.json",
+      "extracted_frames": [
+        {
+          "label": "sample_06",
+          "seconds": 0.3333333333333333,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 170.581,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_07",
+          "seconds": 1.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 170.581,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_08",
+          "seconds": 1.6666666666666667,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 170.581,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_09",
+          "seconds": 2.3333333333333335,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 170.415,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "module_extraction",
+          "seconds": 3.5,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.823,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_10",
+          "seconds": 4.333333333333333,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.497,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_11",
+          "seconds": 5.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.492,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_12",
+          "seconds": 5.666666666666667,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.486,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "linkage_layers",
+          "seconds": 7.5,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.369,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "foreleg_detail",
+          "seconds": 13.7,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 173.332,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "hind_module_detail",
+          "seconds": 16.1,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 173.448,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "reassembly_and_final_hold",
+          "seconds": 22.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 170.586,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        }
+      ],
+      "contact_sheet": {
+        "path": "reports/animation/previews/video_review/exploded_assembly/exploded_assembly_contact_sheet.png",
+        "width": 1980,
+        "height": 948,
+        "frame_count": 12,
+        "frames": [
+          {
+            "label": "sample_06 \u00b7 0.333s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_07 \u00b7 1.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_08 \u00b7 1.667s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_09 \u00b7 2.333s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "module_extraction \u00b7 3.500s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_10 \u00b7 4.333s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_11 \u00b7 5.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_12 \u00b7 5.667s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "linkage_layers \u00b7 7.500s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "foreleg_detail \u00b7 13.700s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "hind_module_detail \u00b7 16.100s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "reassembly_and_final_hold \u00b7 22.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          }
+        ]
+      },
+      "basic_black_candidates": [],
+      "review_clips": [
+        {
+          "path": "reports/animation/previews/video_review/exploded_assembly/clips/exploded_assembly_module_extraction.mp4",
+          "event": "module_extraction",
+          "event_seconds": 3.5,
+          "start_seconds": 2.5,
+          "duration_seconds": 2.0,
+          "frame_count": 60,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/exploded_assembly/clips/exploded_assembly_linkage_layers.mp4",
+          "event": "linkage_layers",
+          "event_seconds": 7.5,
+          "start_seconds": 6.5,
+          "duration_seconds": 2.0,
+          "frame_count": 60,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/exploded_assembly/clips/exploded_assembly_foreleg_detail.mp4",
+          "event": "foreleg_detail",
+          "event_seconds": 13.7,
+          "start_seconds": 12.7,
+          "duration_seconds": 2.0,
+          "frame_count": 60,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/exploded_assembly/clips/exploded_assembly_hind_module_detail.mp4",
+          "event": "hind_module_detail",
+          "event_seconds": 16.1,
+          "start_seconds": 15.100000000000001,
+          "duration_seconds": 2.0,
+          "frame_count": 60,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/exploded_assembly/clips/exploded_assembly_reassembly_and_final_hold.mp4",
+          "event": "reassembly_and_final_hold",
+          "event_seconds": 22.0,
+          "start_seconds": 21.0,
+          "duration_seconds": 2.0,
+          "frame_count": 60,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1"
+        }
+      ],
+      "visual_acceptance": "not assessed; inspect the contact sheet and review clips"
+    }
+  ],
+  "failures": [],
+  "visual_acceptance": "not assessed; generated contact sheets/clips and black-frame heuristics are review aids only"
+}

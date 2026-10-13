@@ -1,0 +1,20 @@
+{
+  "status": "PASS_WITH_PRESENTATION_LIMITS",
+  "video_sha256": "7b08e6b8634ad33077f4dd903110b319c97581ce216e233b445b7763a52cdca6",
+  "reviewed_contact_sheet": "reports/animation/exploded_assembly_contact_sheet.png",
+  "transition_review": "reports/animation/previews/exploded_transition_review/transitions.png",
+  "checks_observed": [
+    "staged module extraction",
+    "separate fore/hind module detail holds",
+    "elastic subassemblies remain intact",
+    "smooth reassembly and final assembled hold",
+    "exact physical endpoint transforms checked in reopened scene",
+    "decoded first/last mean RGB absolute difference <0.31/255"
+  ],
+  "limits": [
+    "visibility cuts are intentional explanatory isolation",
+    "neighboring components leave the view during camera transitions; some graphics briefly overlay peripheral geometry",
+    "explosion is a presentation overview, not a validated service procedure"
+  ],
+  "review_scope": "Representative decoded frames and densely sampled transition sequences; full stream decode tested separately"
+}

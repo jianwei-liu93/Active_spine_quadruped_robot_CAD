@@ -1,0 +1,23 @@
+{
+  "exploded_assembly": [
+    {"label":"module extraction","seconds":3.5},
+    {"label":"linkage layers","seconds":7.5},
+    {"label":"foreleg detail","seconds":13.7},
+    {"label":"hind module detail","seconds":16.1},
+    {"label":"reassembly and final hold","seconds":22.0}
+  ],
+  "active_spine_mechanism": [
+    {"label":"whole to isolated spine","seconds":2.0},
+    {"label":"solver flexion-extension","seconds":3.2},
+    {"label":"full-cycle seam","seconds":5.0},
+    {"label":"side to oblique camera","seconds":8.7},
+    {"label":"whole robot return","seconds":12.0}
+  ],
+  "spine_leg_coordination": [
+    {"label":"prescribed knee and spring extremum","seconds":1.25},
+    {"label":"full-cycle seam","seconds":5.0},
+    {"label":"side to oblique camera","seconds":7.0},
+    {"label":"hind wheel and route detail","seconds":15.0},
+    {"label":"whole robot return","seconds":19.0}
+  ]
+}
