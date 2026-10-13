@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "physical_instances": 487,
+  "rigid_source_meshes": 97,
+  "triangles": 208030,
+  "timelines": {
+    "active_spine_mechanism": {
+      "samples": 901,
+      "loop_matrix_max_error": 3.673940397442059e-15,
+      "anchor_max_error_mm": 3.351623381340333e-14
+    },
+    "coordinated_spine_legs": {
+      "samples": 1201,
+      "loop_matrix_max_error": 2.842170943040401e-14,
+      "anchor_max_error_mm": 3.351623381340333e-14
+    }
+  }
+}

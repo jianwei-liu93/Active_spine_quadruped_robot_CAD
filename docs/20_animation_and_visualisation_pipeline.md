@@ -250,3 +250,7 @@ Only the **lead** may operate/write the canonical FreeCAD MCP session. Delegates
 - [Blender glTF 2.0](https://docs.blender.org/manual/en/4.5/addons/import_export/scene_gltf2.html) and [Blender Python API](https://docs.blender.org/api/current/): rendering/import APIs; verify installed version before use.
 
 Source-paper locomotion observations are not our robot's measured dynamics. Maintain reference/provenance classification, canonical CAD editability and manufacturing-first priorities throughout.
+
+## 2026-10-13 — Explicit AX2–AX4 production authorization
+
+The user's new video-production brief supersedes the earlier deferral of AX2–AX4. The mechanical source remains the paused, verified r10 candidate (`ddf84ab`), with its existing manufacturing limitations. Animation development is isolated on `animation/flexor-r10-videos`. See [the animation package](../animation/README.md), its source snapshot and the actual reports under `reports/animation/`. This authorization does not reopen mechanical redesign or fabrication release work. Earlier AX0/AX1 evidence and acceptance scopes remain unchanged.

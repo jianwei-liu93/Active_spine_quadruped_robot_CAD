@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "source_git_commit": "ddf84abc1563d132ffc645aa76ff5d7d7d034192",
+  "animation_branch": "animation/flexor-r10-videos",
+  "cad": {
+    "cad_path": "cad/flexor_r10_robot.FCStd",
+    "cad_revision": "r10",
+    "cad_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+    "exporter_revision": "93be72a964b0841fcf7c84ac3284fa6d3b16731f",
+    "motion_map_sha256": "bcd5eb099fabcca8e0a43e1bfaa5469ad3ee6adde057cf5cfde2a5550837c5be",
+    "parameter_files_sha256": {
+      "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9",
+      "parameters/candidate_r02.json": "10dd7267e75457bb855d15a75a0b2810704578b94501dd04c935db76196bfb3d"
+    }
+  },
+  "source_files_sha256": {
+    "animation/schema/grounded_instances_r10.json": "b02910cab629ac62ceb63040f104f9eeb6204ca826bf59d312dc68ea01af4d37",
+    "parameters/assembly_r07.json": "6537f008ea524bfa006ab3fe56e146a33e65d58f91881e4dee0e82a4eb8df82e",
+    "parameters/assembly_r10.json": "d21743a92570247982e943487976e07b2dc668ebb956a8808e2a17e01bc584d9",
+    "parameters/candidate_r02.json": "10dd7267e75457bb855d15a75a0b2810704578b94501dd04c935db76196bfb3d",
+    "src/animation_manifest_validate.py": "c32840fd45e6998bb7174d6583c03ce05c8fe302671091f860548da8fe71407d",
+    "src/animation_pose_export.py": "af9f55f3b4efe5183f53f089462070356fe8662423e8549313cffa134de35a3f",
+    "src/animation_production_export.py": "e3693b366ce41e59843b535636d7fb3a7488c703dc19921759c1dfb8306e2e07",
+    "src/animation_production_validate.py": "06191ffd76c0bb770226bbaf389e25f4a657059923c59032c1906ab72b4a615f",
+    "src/build_tendon_r03.py": "e623c808d5f0a566a5f99c6d066553e11181f7e198ada237e478269c204d05fd",
+    "src/cable_clamps_r07.py": "8c36a3d013fab3439858c659afda2d03b8f52e91342eb63f145aecf916a38440",
+    "src/compression_spring_r07.py": "8bde615c158d2c41ca8f99081411ec3336676e0d9b34ac1b5b44be7047825d0b",
+    "src/kinematics.py": "c053c7273b29ef108c12a2ae5244e72cd4ea554b1503164ce97bd8e6dd3517cb",
+    "src/leg_geometry_r02.py": "459c0b40a6add8ea9f7a781ef34e09e98c183c70e4542a2691e51f829e0887a6",
+    "src/leg_mechanics.py": "971bb313a22ab6037411f31f4e4dcfedcdd1730eb6d8ae25af0f5d91a84831fa",
+    "src/leg_motion_r07.py": "fbcba404cf162688e647c1d982c5f124467750c46ecc9204104d858d5a0da7a4",
+    "src/robot_pose_r03.py": "962898052a75f1bd5ee0e43d968b38c676ed2e3ad8985da8744d865b220439a9",
+    "src/spring_normalization_r07.py": "13a7d99d476aa9ab2bdcb08df976272ba9d5d3217c3430150038e5889eca0696",
+    "src/spring_wire_r03.py": "ea61499d6e2fd85bc2391bb648116321dcbb441d816ae0fdb5cc47a063158002",
+    "src/tendon_r03.py": "e53b5cbcd506149df39ca3d6677bcf9bf30b4bc779183117b4a9c4c85499c050",
+    "src/verify_motion_package_r07.py": "294491da09bc8205f0e0cc47bd52c48801db1a299e9b55415b87bbe77b4c554a"
+  },
+  "timeline_inputs": {
+    "spine": "existing closed mechanism; phase=2*pi*0.2*t; fixed neutral legs and wheel=0",
+    "coordination": "accepted combined_spine_gait; hips +/-5 degrees; fore knees +/-5 degrees; hind knees opposite; independent prescribed wheel 0..90 degrees"
+  },
+  "commanded_coordinates": 6,
+  "passive_states": "Four separately prescribed knee coordinates; no load model",
+  "source_cad_modified": false
+}

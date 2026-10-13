@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scene": "exploded_assembly",
+  "blender": "5.2.2 LTS",
+  "reopened_in_fresh_process": true,
+  "physical_instances": 487,
+  "frames_checked": [
+    1,
+    720
+  ],
+  "selected_world_vertex_checks": 11688,
+  "max_imported_world_vertex_error_mm": 1.1780402288468106e-05,
+  "max_axis_angle_error_rad": 4.519883231822796e-07,
+  "changing_rigid_instances_observed": 0,
+  "procedural_shape_keys_per_instance": 0,
+  "handlers_needed": false,
+  "freecad_needed": false,
+  "blend_sha256": "3f6a5b88a3fd3094e19c345a5951d39a1672b2db9a19e6f8bac2bfce11670e3b"
+}

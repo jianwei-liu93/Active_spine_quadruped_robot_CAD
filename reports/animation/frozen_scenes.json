@@ -1,0 +1,27 @@
+{
+  "scenes": [
+    {
+      "path": "animation/scenes/exploded_assembly.blend",
+      "sha256": "3f6a5b88a3fd3094e19c345a5951d39a1672b2db9a19e6f8bac2bfce11670e3b",
+      "bytes": 7755548,
+      "standalone": true,
+      "git_policy": "ignored large local reproducible artifact"
+    },
+    {
+      "path": "animation/scenes/active_spine_mechanism.blend",
+      "sha256": "4af10f30689a75358a8aa17e1863a48db8c351e45c2c67e4b41d851a6df32e98",
+      "bytes": 18720302,
+      "standalone": true,
+      "git_policy": "ignored large local reproducible artifact"
+    },
+    {
+      "path": "animation/scenes/spine_leg_coordination.blend",
+      "sha256": "50f3b87eceb446234127d332b7af968ad6dda961e0d181e1a4bb7f31f7ddec35",
+      "bytes": 141176223,
+      "standalone": true,
+      "git_policy": "ignored large local reproducible artifact"
+    }
+  ],
+  "canonical_cad_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "render_status": "IN_PROGRESS"
+}

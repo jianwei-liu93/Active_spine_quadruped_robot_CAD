@@ -1,0 +1,18 @@
+{
+  "scene": "spine_leg_coordination",
+  "path": "animation/scenes/spine_leg_coordination.blend",
+  "physical_instances": 487,
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "blender": "5.2.2 LTS",
+  "engine": "BLENDER_EEVEE",
+  "frame_count": 1200,
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "persistent_bake": true,
+  "handlers_required": false,
+  "mechanical_source": "existing r03/r07 descriptor, source-local meshes and versioned production timeline",
+  "render_status": "NOT_RUN"
+}

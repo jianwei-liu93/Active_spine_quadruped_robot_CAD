@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scene": "spine_leg_coordination",
+  "blender": "5.2.2 LTS",
+  "reopened_in_fresh_process": true,
+  "physical_instances": 487,
+  "frames_checked": [
+    1,
+    2,
+    75,
+    150,
+    300,
+    301,
+    1200
+  ],
+  "selected_world_vertex_checks": 40908,
+  "max_imported_world_vertex_error_mm": 1.5359765386647212e-05,
+  "max_axis_angle_error_rad": 2.9802321499516035e-07,
+  "changing_rigid_instances_observed": 395,
+  "procedural_shape_keys_per_instance": 301,
+  "handlers_needed": false,
+  "freecad_needed": false,
+  "blend_sha256": "90f442175241b10ab08628610f2be229923916f0fa95ada151a4fc58c6ae8eff"
+}

@@ -2,6 +2,9 @@
 
 **Current status: PAUSED_AT_VERIFIED_R10_CAD_CHECKPOINT (2026-10-13, user request).** The [main assembly](cad/flexor_r10_robot.FCStd) includes the one-piece central frame/attachment correction, distinct torso plates and relieved long spine bars. Native editability, source reproduction, STEP/profile round trips, AX0/AX1 and the 1,346-state revision-specific sampled clearance gate pass within their documented scopes. Remaining drawings, manual and delivery-package work are deferred. Fabrication release remains blocked by unresolved physical interfaces and engineering assumptions. See the [pause checkpoint](reports/checkpoints/r10_paused_2026-10-13.json) and [source fidelity](docs/21_reference_fidelity_r10.md).
 
+
+**Animation development (AX2–AX4) is now authorized and active** on `animation/flexor-r10-videos`; the r10 mechanical checkpoint above remains unchanged. See [animation reproduction and evidence](animation/README.md). Manufacturing drawings and release work remain deferred.
+
 A FreeCAD project for a manufacturable, editable active-spine quadruped inspired by **FLEXOR-F** in Wang et al., *Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*, Science Advances 12, eaed5603 (2026).
 
 **Historical recovery baseline (r01–r02).** Installed FreeCAD MCP execution and an exploratory editable whole robot exist. The exploratory r01 model is superseded because its spine packaging and output geometry diverge from the source. Recovery is on `fix/flexor-reference-fidelity`; see [the morphology audit](docs/10_reference_morphology_and_recovery.md). Numerical closure is separate from physical clearance and fabrication readiness.

@@ -1,0 +1,116 @@
+{
+  "active_spine_mechanism": {
+    "sample_count": 901,
+    "presentation_frequency_hz": 0.2,
+    "output_angles_deg": {
+      "fore": {
+        "min": -45.52937267892866,
+        "max": 14.726317768984321,
+        "span": 60.25569044791298
+      },
+      "hind": {
+        "min": -17.952594647191727,
+        "max": 42.303095800721245,
+        "span": 60.25569044791297
+      }
+    },
+    "wheel_deg": [
+      0.0,
+      0.0
+    ],
+    "coil_length_ranges_mm": {
+      "instance:foreL_compression_Spring": [
+        17.538633753705952,
+        17.53863375370598
+      ],
+      "instance:foreL_extension_Spring": [
+        17.591738299306297,
+        17.59173829930633
+      ],
+      "instance:foreR_compression_Spring": [
+        17.538633753705952,
+        17.53863375370598
+      ],
+      "instance:foreR_extension_Spring": [
+        17.591738299306297,
+        17.59173829930633
+      ],
+      "instance:hindL_compression_Spring": [
+        22.35480766372713,
+        22.35480766372716
+      ],
+      "instance:hindL_extension_Spring": [
+        25.611379556423994,
+        25.611379556424016
+      ],
+      "instance:hindR_compression_Spring": [
+        22.35480766372713,
+        22.35480766372716
+      ],
+      "instance:hindR_extension_Spring": [
+        25.611379556423994,
+        25.611379556424016
+      ]
+    },
+    "max_spine_closure_residual_mm": 1.4210854715202004e-14,
+    "max_leg_closure_residual_mm": 1.0658141036401503e-14,
+    "minimum_branch_margin_mm": 3.1961061952185155
+  },
+  "coordinated_spine_legs": {
+    "sample_count": 1201,
+    "presentation_frequency_hz": 0.2,
+    "output_angles_deg": {
+      "fore": {
+        "min": -45.52937267892866,
+        "max": 14.726317768984321,
+        "span": 60.25569044791298
+      },
+      "hind": {
+        "min": -17.952594647191727,
+        "max": 42.303095800721294,
+        "span": 60.255690447913025
+      }
+    },
+    "wheel_deg": [
+      0.0,
+      90.0
+    ],
+    "coil_length_ranges_mm": {
+      "instance:foreL_compression_Spring": [
+        17.026001446558915,
+        18.040856837899266
+      ],
+      "instance:foreL_extension_Spring": [
+        17.0740289074198,
+        18.1143002924602
+      ],
+      "instance:foreR_compression_Spring": [
+        17.026001446558915,
+        18.040856837899266
+      ],
+      "instance:foreR_extension_Spring": [
+        17.0740289074198,
+        18.1143002924602
+      ],
+      "instance:hindL_compression_Spring": [
+        21.831450941403055,
+        22.876966812011528
+      ],
+      "instance:hindL_extension_Spring": [
+        25.088821364827535,
+        26.12946686131307
+      ],
+      "instance:hindR_compression_Spring": [
+        21.831450941403055,
+        22.876966812011528
+      ],
+      "instance:hindR_extension_Spring": [
+        25.088821364827535,
+        26.12946686131307
+      ]
+    },
+    "max_spine_closure_residual_mm": 1.4210854715202004e-14,
+    "max_leg_closure_residual_mm": 1.0658141036401503e-14,
+    "minimum_branch_margin_mm": 3.1961061952185155
+  }
+}

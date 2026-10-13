@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "presentation_only": true,
+  "units": "metres; seconds",
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "samples": 32,
+  "motion_blur": false,
+  "scenes": {
+    "exploded_assembly": {
+      "fps": 30,
+      "duration_s": 24,
+      "shots": [
+        [
+          0,
+          12,
+          "staged module/layer/drive extraction"
+        ],
+        [
+          13,
+          14.5,
+          "foreleg module detail"
+        ],
+        [
+          15.5,
+          17,
+          "hind module detail"
+        ],
+        [
+          18,
+          22,
+          "reassembly"
+        ],
+        [
+          22,
+          24,
+          "assembled hold"
+        ]
+      ],
+      "detail_ortho_width_m": 0.32
+    },
+    "active_spine_mechanism": {
+      "fps": 60,
+      "duration_s": 15,
+      "shots": [
+        [
+          0,
+          2,
+          "whole robot"
+        ],
+        [
+          2,
+          8,
+          "isolated spine side with callouts"
+        ],
+        [
+          8,
+          12,
+          "isolated oblique"
+        ],
+        [
+          12,
+          15,
+          "integrated whole robot"
+        ]
+      ]
+    },
+    "spine_leg_coordination": {
+      "fps": 60,
+      "duration_s": 20,
+      "shots": [
+        [
+          0,
+          6,
+          "side timing"
+        ],
+        [
+          8,
+          13,
+          "whole oblique"
+        ],
+        [
+          14,
+          17,
+          "hind wheel/end view"
+        ],
+        [
+          19,
+          20,
+          "whole oblique"
+        ]
+      ]
+    }
+  }
+}

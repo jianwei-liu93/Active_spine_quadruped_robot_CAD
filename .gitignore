@@ -19,3 +19,14 @@ reports/verification/*_progress.json
 # Failed diagnostic exports are retained locally, with the failure record tracked.
 reports/diagnostics/r05_failed_step_export/*.step
 reports/diagnostics/r05_failed_step_export/parts/
+
+# Reproducible animation binaries/caches stay local; source and QA are tracked.
+animation/output/frames/
+animation/source/
+animation/scenes/*.blend
+animation/scenes/*.blend1
+reports/animation/previews/
+
+# Native comparison meshes are large reproducible local QA cache.
+animation/geometry/r10/procedural_examples/*.json
+!animation/geometry/r10/procedural_examples/manifest.json
