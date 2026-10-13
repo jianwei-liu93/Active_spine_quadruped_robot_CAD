@@ -1,0 +1,54 @@
+{
+  "sheet": "reports/animation/active_spine_mechanism_adjacent_frames.png",
+  "decoded_samples": [
+    {
+      "event": "isolation boundary",
+      "seconds": 1.9833333333333334
+    },
+    {
+      "event": "isolation boundary",
+      "seconds": 2
+    },
+    {
+      "event": "isolation boundary",
+      "seconds": 2.0166666666666666
+    },
+    {
+      "event": "linkage posture",
+      "seconds": 3.1833333333333336
+    },
+    {
+      "event": "linkage posture",
+      "seconds": 3.2
+    },
+    {
+      "event": "linkage posture",
+      "seconds": 3.216666666666667
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 4.983333333333333
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 5
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 5.016666666666667
+    },
+    {
+      "event": "whole robot return",
+      "seconds": 11.983333333333333
+    },
+    {
+      "event": "whole robot return",
+      "seconds": 12
+    },
+    {
+      "event": "whole robot return",
+      "seconds": 12.016666666666667
+    }
+  ],
+  "visual_acceptance": "PASS at listed samples; intended visibility/phase-indicator cuts preserved"
+}

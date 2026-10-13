@@ -1,0 +1,297 @@
+{
+  "encoder": {
+    "ffmpeg": "/home/jianwei/miniforge3/envs/nerd/bin/ffmpeg",
+    "ffprobe": "/home/jianwei/miniforge3/envs/nerd/bin/ffprobe",
+    "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "output_directory": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/animation/previews/video_review",
+  "results": [
+    {
+      "shot": "active_spine_mechanism",
+      "video": "animation/output/active_spine_mechanism.mp4",
+      "video_sha256": "62bedaf8ef6f4480492b285236bce05c5c51c3dbfffe99cdc38f2dad9ad580a6",
+      "video_metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "yuv420p",
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "frame_count": 900,
+        "duration_seconds": 15.0,
+        "size_bytes": 3832918,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "expected_defaults": {
+        "duration": 15.0,
+        "fps": 60,
+        "frames": 900
+      },
+      "default_metadata_mismatches": [],
+      "events_source": "animation/review_events.json",
+      "extracted_frames": [
+        {
+          "label": "sample_06",
+          "seconds": 0.20833333333333334,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 160.844,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_07",
+          "seconds": 1.0416666666666667,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 163.422,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "whole_to_isolated_spine",
+          "seconds": 2.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.551,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_08",
+          "seconds": 2.7083333333333335,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.345,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "solver_flexion-extension",
+          "seconds": 3.2,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.321,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_09",
+          "seconds": 3.9583333333333335,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.329,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "full-cycle_seam",
+          "seconds": 5.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.651,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_10",
+          "seconds": 5.625,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.64,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_11",
+          "seconds": 6.041666666666667,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.659,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_12",
+          "seconds": 6.875,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 169.624,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "side_to_oblique_camera",
+          "seconds": 8.7,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 168.373,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "whole_robot_return",
+          "seconds": 12.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 161.184,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        }
+      ],
+      "contact_sheet": {
+        "path": "reports/animation/previews/video_review/active_spine_mechanism/active_spine_mechanism_contact_sheet.png",
+        "width": 1980,
+        "height": 948,
+        "frame_count": 12,
+        "frames": [
+          {
+            "label": "sample_06 \u00b7 0.208s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_07 \u00b7 1.042s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "whole_to_isolated_spine \u00b7 2.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_08 \u00b7 2.708s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "solver_flexion-extension \u00b7 3.200s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_09 \u00b7 3.958s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "full-cycle_seam \u00b7 5.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_10 \u00b7 5.625s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_11 \u00b7 6.042s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_12 \u00b7 6.875s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "side_to_oblique_camera \u00b7 8.700s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "whole_robot_return \u00b7 12.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          }
+        ]
+      },
+      "basic_black_candidates": [],
+      "review_clips": [
+        {
+          "path": "reports/animation/previews/video_review/active_spine_mechanism/clips/active_spine_mechanism_whole_to_isolated_spine.mp4",
+          "event": "whole_to_isolated_spine",
+          "event_seconds": 2.0,
+          "start_seconds": 1.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/active_spine_mechanism/clips/active_spine_mechanism_solver_flexion-extension.mp4",
+          "event": "solver_flexion-extension",
+          "event_seconds": 3.2,
+          "start_seconds": 2.2,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/active_spine_mechanism/clips/active_spine_mechanism_full-cycle_seam.mp4",
+          "event": "full-cycle_seam",
+          "event_seconds": 5.0,
+          "start_seconds": 4.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/active_spine_mechanism/clips/active_spine_mechanism_side_to_oblique_camera.mp4",
+          "event": "side_to_oblique_camera",
+          "event_seconds": 8.7,
+          "start_seconds": 7.699999999999999,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/active_spine_mechanism/clips/active_spine_mechanism_whole_robot_return.mp4",
+          "event": "whole_robot_return",
+          "event_seconds": 12.0,
+          "start_seconds": 11.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        }
+      ],
+      "visual_acceptance": "not assessed; inspect the contact sheet and review clips"
+    }
+  ],
+  "failures": [],
+  "visual_acceptance": "not assessed; generated contact sheets/clips and black-frame heuristics are review aids only"
+}

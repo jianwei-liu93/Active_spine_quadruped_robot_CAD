@@ -14,5 +14,7 @@
   "persistent_bake": true,
   "handlers_required": false,
   "mechanical_source": "existing r03/r07 descriptor, source-local meshes and versioned production timeline",
-  "render_status": "NOT_RUN"
+  "render_status": "COMPLETE_ENCODE_DECODE_AND_REVIEW",
+  "packaged_blend_sha256": "4af10f30689a75358a8aa17e1863a48db8c351e45c2c67e4b41d851a6df32e98",
+  "video_sha256": "62bedaf8ef6f4480492b285236bce05c5c51c3dbfffe99cdc38f2dad9ad580a6"
 }

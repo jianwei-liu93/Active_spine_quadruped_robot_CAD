@@ -1,0 +1,297 @@
+{
+  "encoder": {
+    "ffmpeg": "/home/jianwei/miniforge3/envs/nerd/bin/ffmpeg",
+    "ffprobe": "/home/jianwei/miniforge3/envs/nerd/bin/ffprobe",
+    "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "output_directory": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/reports/animation/previews/video_review",
+  "results": [
+    {
+      "shot": "spine_leg_coordination",
+      "video": "animation/output/spine_leg_coordination.mp4",
+      "video_sha256": "eb4f909229ad10962320196d60ec7e2a4500777121f4b6da48e3e6f3392df010",
+      "video_metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "yuv420p",
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "frame_count": 1200,
+        "duration_seconds": 20.0,
+        "size_bytes": 6964776,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "expected_defaults": {
+        "duration": 20.0,
+        "fps": 60,
+        "frames": 1200
+      },
+      "default_metadata_mismatches": [],
+      "events_source": "animation/review_events.json",
+      "extracted_frames": [
+        {
+          "label": "sample_06",
+          "seconds": 0.2777777777777778,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.776,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "prescribed_knee_and_spring_extremum",
+          "seconds": 1.25,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.833,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_07",
+          "seconds": 1.9444444444444444,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.825,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_08",
+          "seconds": 3.0555555555555554,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.753,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_09",
+          "seconds": 3.611111111111111,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.773,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_10",
+          "seconds": 4.166666666666667,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.724,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "full-cycle_seam",
+          "seconds": 5.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.757,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_11",
+          "seconds": 5.833333333333333,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.785,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "sample_12",
+          "seconds": 6.388888888888889,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 165.185,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "side_to_oblique_camera",
+          "seconds": 7.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 162.847,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "hind_wheel_and_route_detail",
+          "seconds": 15.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 162.366,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "whole_robot_return",
+          "seconds": 19.0,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 161.954,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        }
+      ],
+      "contact_sheet": {
+        "path": "reports/animation/previews/video_review/spine_leg_coordination/spine_leg_coordination_contact_sheet.png",
+        "width": 1980,
+        "height": 948,
+        "frame_count": 12,
+        "frames": [
+          {
+            "label": "sample_06 \u00b7 0.278s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "prescribed_knee_and_spring_extremum \u00b7 1.250s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_07 \u00b7 1.944s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_08 \u00b7 3.056s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_09 \u00b7 3.611s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_10 \u00b7 4.167s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "full-cycle_seam \u00b7 5.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_11 \u00b7 5.833s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "sample_12 \u00b7 6.389s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "side_to_oblique_camera \u00b7 7.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "hind_wheel_and_route_detail \u00b7 15.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          },
+          {
+            "label": "whole_robot_return \u00b7 19.000s",
+            "source_width": 1920,
+            "source_height": 1080
+          }
+        ]
+      },
+      "basic_black_candidates": [],
+      "review_clips": [
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_prescribed_knee_and_spring_extremum.mp4",
+          "event": "prescribed_knee_and_spring_extremum",
+          "event_seconds": 1.25,
+          "start_seconds": 0.25,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_full-cycle_seam.mp4",
+          "event": "full-cycle_seam",
+          "event_seconds": 5.0,
+          "start_seconds": 4.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_side_to_oblique_camera.mp4",
+          "event": "side_to_oblique_camera",
+          "event_seconds": 7.0,
+          "start_seconds": 6.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_hind_wheel_and_route_detail.mp4",
+          "event": "hind_wheel_and_route_detail",
+          "event_seconds": 15.0,
+          "start_seconds": 14.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_whole_robot_return.mp4",
+          "event": "whole_robot_return",
+          "event_seconds": 19.0,
+          "start_seconds": 18.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        }
+      ],
+      "visual_acceptance": "not assessed; inspect the contact sheet and review clips"
+    }
+  ],
+  "failures": [],
+  "visual_acceptance": "not assessed; generated contact sheets/clips and black-frame heuristics are review aids only"
+}

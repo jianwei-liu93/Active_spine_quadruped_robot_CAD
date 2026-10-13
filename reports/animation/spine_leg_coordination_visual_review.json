@@ -1,0 +1,20 @@
+{
+  "status": "PASS_WITH_PRESENTATION_LIMITS",
+  "video_sha256": "eb4f909229ad10962320196d60ec7e2a4500777121f4b6da48e3e6f3392df010",
+  "reviewed_contact_sheet": "reports/animation/spine_leg_coordination_contact_sheet.png",
+  "adjacent_decoded_review": "reports/animation/spine_leg_coordination_adjacent_frames.png",
+  "observed": [
+    "all four legs move with the coupled active spine",
+    "different fore/hind articulation layouts retained",
+    "spring geometry and guides follow the prescribed motion",
+    "wheel/end view and dashed tendon routes visible",
+    "no sampled geometry pop at the 5-second mechanical cycle seam",
+    "side/oblique/hind-end camera shots and final whole view"
+  ],
+  "limits": [
+    "knee and wheel motion are independently prescribed, with no loaded dynamics",
+    "orange dashed cables are routing guides; no physical slack solution",
+    "camera narrative ends in an oblique view and begins in a side view, so the full edited movie is not a seamless camera loop",
+    "finite decoded frames and adjacent sequences inspected; full stream decoding verified separately"
+  ]
+}

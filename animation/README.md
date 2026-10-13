@@ -2,7 +2,7 @@
 
 The user authorized AX2–AX4 on 2026-10-13. Mechanical development remains at the verified r10 checkpoint; animation consumes that geometry and its existing motion interfaces. Source commit: `ddf84ab`. Work branch: `animation/flexor-r10-videos`.
 
-Production is in progress. Final video completion is established by the encoding/readback reports and final QA report, not by the existence of scene-building scripts.
+**Complete: all three videos are rendered, encoded and fully decoded, and the standalone scenes pass fresh-process playback checks.** See `reports/animation/final_video_qa.json` for source hashes, 2,820 rendered frames, timing, transform accuracy and documented limitations. Representative decoded contact sheets, adjacent-frame sequences and event clips have been inspected.
 
 ## Local assets
 
@@ -70,3 +70,11 @@ Run from the repository root. Installed Blender GUI and background binary both r
 ## Evidence and limits
 
 See `reports/animation/ax2_roundtrip.json`, `production_r10.json`, `procedural_surface_comparison.json`, each `*_readback.json`, each video verification report, and final QA. Original AX0/AX1 evidence remains intact. Canonical CAD and parameter hashes are pinned in the source snapshot and production manifest. Current fabrication blockers remain those recorded at the r10 checkpoint; video completion does not resolve them.
+
+For compact decoded contact sheets and event clips:
+
+```bash
+python3 animation/blender/video_review.py --events animation/review_events.json
+```
+
+After the three visual review records have been written, `python3 animation/blender/final_report.py` verifies the saved-scene/render/video source hash chain and aggregates the actual execution evidence. `reports/animation/final_video_qa.json` is the release record. The verified playback scope is rendered integer frames; subframe retiming or motion blur requires resampling and validation.

@@ -1,0 +1,54 @@
+{
+  "sheet": "reports/animation/spine_leg_coordination_adjacent_frames.png",
+  "decoded_samples": [
+    {
+      "event": "prescribed leg/wheel extremum",
+      "seconds": 1.2333333333333334
+    },
+    {
+      "event": "prescribed leg/wheel extremum",
+      "seconds": 1.25
+    },
+    {
+      "event": "prescribed leg/wheel extremum",
+      "seconds": 1.2666666666666666
+    },
+    {
+      "event": "opposite prescribed extremum",
+      "seconds": 3.7333333333333334
+    },
+    {
+      "event": "opposite prescribed extremum",
+      "seconds": 3.75
+    },
+    {
+      "event": "opposite prescribed extremum",
+      "seconds": 3.7666666666666666
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 4.983333333333333
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 5
+    },
+    {
+      "event": "cycle seam",
+      "seconds": 5.016666666666667
+    },
+    {
+      "event": "hind wheel and routing view",
+      "seconds": 14.983333333333333
+    },
+    {
+      "event": "hind wheel and routing view",
+      "seconds": 15
+    },
+    {
+      "event": "hind wheel and routing view",
+      "seconds": 15.016666666666667
+    }
+  ],
+  "visual_acceptance": "PASS at listed samples; intended visibility/phase-indicator cuts preserved"
+}

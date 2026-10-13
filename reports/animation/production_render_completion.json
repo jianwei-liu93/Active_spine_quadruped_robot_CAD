@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "scene": "exploded_assembly",
+      "blend_sha256": "3f6a5b88a3fd3094e19c345a5951d39a1672b2db9a19e6f8bac2bfce11670e3b",
+      "frames": 720,
+      "fps": 30,
+      "duration_s": 24.0,
+      "status": "ENCODE_AND_FULL_DECODE_PASS"
+    },
+    {
+      "scene": "active_spine_mechanism",
+      "blend_sha256": "4af10f30689a75358a8aa17e1863a48db8c351e45c2c67e4b41d851a6df32e98",
+      "frames": 900,
+      "fps": 60,
+      "duration_s": 15.0,
+      "status": "ENCODE_AND_FULL_DECODE_PASS"
+    },
+    {
+      "scene": "spine_leg_coordination",
+      "blend_sha256": "50f3b87eceb446234127d332b7af968ad6dda961e0d181e1a4bb7f31f7ddec35",
+      "frames": 1200,
+      "fps": 60,
+      "duration_s": 20.0,
+      "status": "ENCODE_AND_FULL_DECODE_PASS"
+    }
+  ],
+  "elapsed_s": 1166.8856235080166
+}

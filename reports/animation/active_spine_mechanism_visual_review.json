@@ -1,0 +1,17 @@
+{
+  "status": "PASS_WITH_PRESENTATION_LIMITS",
+  "video_sha256": "62bedaf8ef6f4480492b285236bce05c5c51c3dbfffe99cdc38f2dad9ad580a6",
+  "reviewed_contact_sheet": "reports/animation/active_spine_mechanism_contact_sheet.png",
+  "observed": [
+    "continuous sampled crank phase with coupled torso output motion",
+    "side and oblique views",
+    "upper and lower sliders and actual component-targeted callouts",
+    "whole robot introduction and return",
+    "intended leg/tendon visibility isolation"
+  ],
+  "limits": [
+    "finite decoded frame review, not a physical mechanism test",
+    "teal phase rail resets at each crank revolution by design",
+    "leg visibility changes at isolation boundaries are intentional"
+  ]
+}

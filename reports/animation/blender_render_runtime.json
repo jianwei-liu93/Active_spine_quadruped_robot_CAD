@@ -1,0 +1,12 @@
+{
+  "blender": "5.2.2 LTS",
+  "engine": "BLENDER_EEVEE",
+  "render_samples": 32,
+  "motion_blur": false,
+  "gpu_vendor": "NVIDIA Corporation",
+  "gpu_renderer": "NVIDIA GeForce RTX 4090/PCIe/SSE2",
+  "gpu_version": "4.6.0 NVIDIA 595.99.02",
+  "observed_via": "installed Blender MCP gpu.platform getters; nvidia-smi during active render saved separately",
+  "binary": "/snap/blender/current/blender",
+  "encoder": "ffmpeg 9.0.1, libx264, CRF18, yuv420p, faststart"
+}
