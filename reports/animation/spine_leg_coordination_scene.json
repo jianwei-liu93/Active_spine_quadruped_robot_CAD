@@ -14,5 +14,9 @@
   "persistent_bake": true,
   "handlers_required": false,
   "mechanical_source": "existing r03/r07 descriptor, source-local meshes and versioned production timeline",
-  "render_status": "NOT_RUN"
+  "render_status": "COMPLETE_ENCODE_DECODE_AND_REVIEW",
+  "packaged_blend_sha256": "e71a0dd50dd6d8b919153c9485207f3a1eb77840740c4b3e161b13191c689fd3",
+  "source_manifest": "animation/motion/production_coordination_v2_r10.json",
+  "source_manifest_sha256": "37c8c8c3810b5669609f5eb9f569dac8efd75406ffa4d5eadca0fe7438938e64",
+  "video_sha256": "9fb311c1ee4a5c43be9a58594eba4f72be2b8637d4b7242f6370b448101b0459"
 }

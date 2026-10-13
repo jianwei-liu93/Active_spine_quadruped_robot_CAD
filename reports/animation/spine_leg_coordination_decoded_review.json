@@ -9,7 +9,7 @@
     {
       "shot": "spine_leg_coordination",
       "video": "animation/output/spine_leg_coordination.mp4",
-      "video_sha256": "eb4f909229ad10962320196d60ec7e2a4500777121f4b6da48e3e6f3392df010",
+      "video_sha256": "9fb311c1ee4a5c43be9a58594eba4f72be2b8637d4b7242f6370b448101b0459",
       "video_metadata": {
         "codec": "h264",
         "width": 1920,
@@ -19,7 +19,7 @@
         "avg_frame_rate": "60/1",
         "frame_count": 1200,
         "duration_seconds": 20.0,
-        "size_bytes": 6964776,
+        "size_bytes": 3643011,
         "format": "mov,mp4,m4a,3gp,3g2,mj2"
       },
       "expected_defaults": {
@@ -31,45 +31,45 @@
       "events_source": "animation/review_events.json",
       "extracted_frames": [
         {
-          "label": "sample_06",
-          "seconds": 0.2777777777777778,
+          "label": "paper-informed_hip_and_prescribed_knee_m",
+          "seconds": 0.25,
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.776,
-            "fraction_pixels_below_10": 0.0,
-            "basic_black_candidate": false
-          }
-        },
-        {
-          "label": "prescribed_knee_and_spring_extremum",
-          "seconds": 1.25,
-          "width": 1920,
-          "height": 1080,
-          "black_check": {
-            "mean_luma_0_255": 165.833,
-            "fraction_pixels_below_10": 0.0,
-            "basic_black_candidate": false
-          }
-        },
-        {
-          "label": "sample_07",
-          "seconds": 1.9444444444444444,
-          "width": 1920,
-          "height": 1080,
-          "black_check": {
-            "mean_luma_0_255": 165.825,
+            "mean_luma_0_255": 175.244,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
         },
         {
           "label": "sample_08",
-          "seconds": 3.0555555555555554,
+          "seconds": 0.8333333333333334,
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.753,
+            "mean_luma_0_255": 175.268,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "spinal_extension_begins",
+          "seconds": 2.5,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 175.181,
+            "fraction_pixels_below_10": 0.0,
+            "basic_black_candidate": false
+          }
+        },
+        {
+          "label": "hind_backswing_begins_after_18deg_delay",
+          "seconds": 2.75,
+          "width": 1920,
+          "height": 1080,
+          "black_check": {
+            "mean_luma_0_255": 175.182,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -80,7 +80,7 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.773,
+            "mean_luma_0_255": 175.093,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -91,7 +91,7 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.724,
+            "mean_luma_0_255": 175.191,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -102,7 +102,7 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.757,
+            "mean_luma_0_255": 175.225,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -113,7 +113,7 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.785,
+            "mean_luma_0_255": 175.259,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -124,18 +124,18 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 165.185,
+            "mean_luma_0_255": 174.672,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
         },
         {
-          "label": "side_to_oblique_camera",
-          "seconds": 7.0,
+          "label": "oblique_whole_robot_view",
+          "seconds": 7.5,
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 162.847,
+            "mean_luma_0_255": 174.046,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -146,18 +146,18 @@
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 162.366,
+            "mean_luma_0_255": 174.206,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
         },
         {
-          "label": "whole_robot_return",
+          "label": "final_whole_robot_view",
           "seconds": 19.0,
           "width": 1920,
           "height": 1080,
           "black_check": {
-            "mean_luma_0_255": 161.954,
+            "mean_luma_0_255": 173.461,
             "fraction_pixels_below_10": 0.0,
             "basic_black_candidate": false
           }
@@ -170,22 +170,22 @@
         "frame_count": 12,
         "frames": [
           {
-            "label": "sample_06 \u00b7 0.278s",
+            "label": "paper-informed_hip_and_prescribed_knee_m \u00b7 0.250s",
             "source_width": 1920,
             "source_height": 1080
           },
           {
-            "label": "prescribed_knee_and_spring_extremum \u00b7 1.250s",
+            "label": "sample_08 \u00b7 0.833s",
             "source_width": 1920,
             "source_height": 1080
           },
           {
-            "label": "sample_07 \u00b7 1.944s",
+            "label": "spinal_extension_begins \u00b7 2.500s",
             "source_width": 1920,
             "source_height": 1080
           },
           {
-            "label": "sample_08 \u00b7 3.056s",
+            "label": "hind_backswing_begins_after_18deg_delay \u00b7 2.750s",
             "source_width": 1920,
             "source_height": 1080
           },
@@ -215,7 +215,7 @@
             "source_height": 1080
           },
           {
-            "label": "side_to_oblique_camera \u00b7 7.000s",
+            "label": "oblique_whole_robot_view \u00b7 7.500s",
             "source_width": 1920,
             "source_height": 1080
           },
@@ -225,7 +225,7 @@
             "source_height": 1080
           },
           {
-            "label": "whole_robot_return \u00b7 19.000s",
+            "label": "final_whole_robot_view \u00b7 19.000s",
             "source_width": 1920,
             "source_height": 1080
           }
@@ -234,10 +234,32 @@
       "basic_black_candidates": [],
       "review_clips": [
         {
-          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_prescribed_knee_and_spring_extremum.mp4",
-          "event": "prescribed_knee_and_spring_extremum",
-          "event_seconds": 1.25,
-          "start_seconds": 0.25,
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_paper-informed_hip_and_prescribed_knee_m.mp4",
+          "event": "paper-informed_hip_and_prescribed_knee_m",
+          "event_seconds": 0.25,
+          "start_seconds": 0.0,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_spinal_extension_begins.mp4",
+          "event": "spinal_extension_begins",
+          "event_seconds": 2.5,
+          "start_seconds": 1.5,
+          "duration_seconds": 2.0,
+          "frame_count": 120,
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1"
+        },
+        {
+          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_hind_backswing_begins_after_18deg_delay.mp4",
+          "event": "hind_backswing_begins_after_18deg_delay",
+          "event_seconds": 2.75,
+          "start_seconds": 1.75,
           "duration_seconds": 2.0,
           "frame_count": 120,
           "width": 1920,
@@ -256,32 +278,10 @@
           "avg_frame_rate": "60/1"
         },
         {
-          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_side_to_oblique_camera.mp4",
-          "event": "side_to_oblique_camera",
-          "event_seconds": 7.0,
-          "start_seconds": 6.0,
-          "duration_seconds": 2.0,
-          "frame_count": 120,
-          "width": 1920,
-          "height": 1080,
-          "avg_frame_rate": "60/1"
-        },
-        {
           "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_hind_wheel_and_route_detail.mp4",
           "event": "hind_wheel_and_route_detail",
           "event_seconds": 15.0,
           "start_seconds": 14.0,
-          "duration_seconds": 2.0,
-          "frame_count": 120,
-          "width": 1920,
-          "height": 1080,
-          "avg_frame_rate": "60/1"
-        },
-        {
-          "path": "reports/animation/previews/video_review/spine_leg_coordination/clips/spine_leg_coordination_whole_robot_return.mp4",
-          "event": "whole_robot_return",
-          "event_seconds": 19.0,
-          "start_seconds": 18.0,
           "duration_seconds": 2.0,
           "frame_count": 120,
           "width": 1920,

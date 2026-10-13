@@ -48,7 +48,29 @@ def apply(scene,objects,mats):
         # Hind-end view reveals the winding wheel whose axis is longitudinal.
         for f,loc,target in [(840,(-.36,-.22,.10),(-.035,0,-.012)),(1020,(-.36,-.22,.10),(-.035,0,-.012))]:
             point_camera(cam,loc,target,.30);cam.keyframe_insert('location',frame=f);cam.keyframe_insert('rotation_euler',frame=f)
-        callout(scene,cam,'HIND WINDING WHEEL',objects['instance:HindTendon_Wheel'],-.138,.025,.30,mats,[(1,False),(840,True),(1021,False)])
+        # The larger paper-informed leg envelope needs room in every camera
+        # view. Preserve mechanical transforms and screen-size HUD typography.
+        factor=1.7 if 'paper_motion_profile' in scene else 1.
+        if scene.get('source_manifest','').endswith('production_coordination_v2_r10.json'):factor=1.7
+        if factor!=1.:
+            positions=[]
+            for f in range(1,scene.frame_end+1):
+                scene.frame_set(f)
+                positions.append(cam.location.copy()+cam.rotation_euler.to_matrix()@Vector((0,-.30*factor*.5625*.04,0)))
+            for f,position in enumerate(positions,1):
+                cam.location=position;cam.keyframe_insert('location',frame=f)
+            cam.data.ortho_scale=.30*factor
+            for o in [o for o in scene.objects if o.parent==cam]:
+                o.location.x*=factor;o.location.y*=factor;o.scale*=factor
+                if o.animation_data and o.animation_data.action:
+                    for layer in o.animation_data.action.layers:
+                        for strip in layer.strips:
+                            for bag in strip.channelbags:
+                                for curve in bag.fcurves:
+                                    if curve.data_path=='location' and curve.array_index in (0,1):
+                                        for key in curve.keyframe_points:key.co[1]*=factor
+            linear_keys(cam)
+        callout(scene,cam,'HIND WINDING WHEEL',objects['instance:HindTendon_Wheel'],-.138*factor,.025*factor,.30*factor,mats,[(1,False),(840,True),(1021,False)])
     if name=='exploded_assembly':
         # Keep both hind legs and the tendon route in one intact subassembly.
         for iid,obj in objects.items():

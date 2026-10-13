@@ -5,8 +5,9 @@
   "AX4": "PASS_WITH_DOCUMENTED_LIMITATIONS",
   "cad_revision": "r10",
   "mechanical_source_commit": "ddf84abc1563d132ffc645aa76ff5d7d7d034192",
-  "source_cad_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
-  "canonical_cad_and_parameter_and_motion_source_hashes_unchanged": true,
+  "mechanical_source_cad_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "mechanical_source_hash_scope": "Original r10 CAD and parameter hashes plus the original production_r10.json source manifest; this claim applies to exploded_assembly and active_spine_mechanism. The coordinated video uses a separate v2 animation profile/source manifest.",
+  "original_mechanical_source_hashes_unchanged": true,
   "source_to_world_transform_verified": true,
   "runtime": {
     "blender": "5.2.2 LTS",
@@ -23,6 +24,8 @@
   "videos": [
     {
       "scene": "exploded_assembly",
+      "source_manifest": "animation/motion/production_r10.json",
+      "source_manifest_sha256": "a0b7672d268a14f8a06d668e386dc5df67685e4dd39b4af8525263c317117af3",
       "blend_path": "animation/scenes/exploded_assembly.blend",
       "blend_sha256": "3f6a5b88a3fd3094e19c345a5951d39a1672b2db9a19e6f8bac2bfce11670e3b",
       "video_path": "animation/output/exploded_assembly.mp4",
@@ -50,6 +53,8 @@
     },
     {
       "scene": "active_spine_mechanism",
+      "source_manifest": "animation/motion/production_r10.json",
+      "source_manifest_sha256": "a0b7672d268a14f8a06d668e386dc5df67685e4dd39b4af8525263c317117af3",
       "blend_path": "animation/scenes/active_spine_mechanism.blend",
       "blend_sha256": "4af10f30689a75358a8aa17e1863a48db8c351e45c2c67e4b41d851a6df32e98",
       "video_path": "animation/output/active_spine_mechanism.mp4",
@@ -77,11 +82,13 @@
     },
     {
       "scene": "spine_leg_coordination",
+      "source_manifest": "animation/motion/production_coordination_v2_r10.json",
+      "source_manifest_sha256": "37c8c8c3810b5669609f5eb9f569dac8efd75406ffa4d5eadca0fe7438938e64",
       "blend_path": "animation/scenes/spine_leg_coordination.blend",
-      "blend_sha256": "50f3b87eceb446234127d332b7af968ad6dda961e0d181e1a4bb7f31f7ddec35",
+      "blend_sha256": "e71a0dd50dd6d8b919153c9485207f3a1eb77840740c4b3e161b13191c689fd3",
       "video_path": "animation/output/spine_leg_coordination.mp4",
-      "video_sha256": "eb4f909229ad10962320196d60ec7e2a4500777121f4b6da48e3e6f3392df010",
-      "video_bytes": 6964776,
+      "video_sha256": "9fb311c1ee4a5c43be9a58594eba4f72be2b8637d4b7242f6370b448101b0459",
+      "video_bytes": 3643011,
       "frames": 1200,
       "fps": 60,
       "duration_s": 20.0,
@@ -91,18 +98,62 @@
       ],
       "decode": "PASS",
       "saved_scene_readback": "PASS",
-      "visual_review": "PASS_WITH_PRESENTATION_LIMITS",
+      "visual_review": "PASS_WITH_PRESCRIBED_MOTION_LIMITS",
       "representative_decoded_frames": 12,
       "review_clip_count": 5,
       "black_candidates": 0,
-      "render_seconds_sum": 431.8435870470421,
-      "median_seconds_per_frame": 0.35139044051175006,
-      "mean_seconds_per_frame_excluding_startup": 0.35893801767560124,
-      "png_cache_bytes": 2262263170,
+      "render_seconds_sum": 346.8679187488742,
+      "median_seconds_per_frame": 0.28600581650971435,
+      "mean_seconds_per_frame_excluding_startup": 0.2878117263627322,
+      "png_cache_bytes": 2135055956,
       "physical_instances": 487,
-      "max_sampled_world_vertex_error_mm": 1.5359765386647212e-05
+      "max_sampled_world_vertex_error_mm": 1.5756976153411558e-05
     }
   ],
+  "coordination_v2": {
+    "trajectory_validation": "reports/animation/production_coordination_v2.json",
+    "all_frame_camera_bounds": "reports/animation/coordination_v2_framing.json",
+    "event_validation": "reports/animation/coordination_v2_events.json",
+    "native_procedural_comparison": "reports/animation/procedural_surface_comparison_v2.json",
+    "source_manifest": "animation/motion/production_coordination_v2_r10.json",
+    "source_manifest_sha256": "37c8c8c3810b5669609f5eb9f569dac8efd75406ffa4d5eadca0fe7438938e64",
+    "profile_path": "animation/coordination_paper_profile_v2.json",
+    "profile_sha256": "0a329e8c013b56428d935cbdb43950f5041f7335079c64f9315a82ac85b275f4",
+    "timeline_path": "animation/motion/coordinated_spine_legs_v2_r10.jsonl.gz",
+    "timeline_sha256": "17fd9779899212616fd3e420eb57618e9685a6f4ae2246e6bf5189c83fd866f9",
+    "native_clearance": {
+      "status": "PASS_BOUNDED_NATIVE_SAMPLES",
+      "evidence": "reports/animation/coordination_v2_clearance.json",
+      "phase_samples_deg": [
+        0,
+        18,
+        90,
+        135,
+        180,
+        198,
+        240,
+        270,
+        330
+      ],
+      "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+      "continuous_clearance": false,
+      "full_campaign": false
+    },
+    "observed_rigid_pairs": {
+      "status": "PASS",
+      "evidence": "reports/animation/coordination_v2_observed_pairs_300.json",
+      "samples": 300,
+      "rigid_pairs_checked": 12,
+      "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9"
+    },
+    "leg_articulation": {
+      "status": "PASS",
+      "evidence": "reports/animation/leg_articulation_v2.json",
+      "blend_sha256": "e71a0dd50dd6d8b919153c9485207f3a1eb77840740c4b3e161b13191c689fd3",
+      "max_relative_rotation_error_rad": 5.503353046772518e-07,
+      "max_torso_relative_foot_pad_center_error_mm": 3.5144318387123206e-05
+    }
+  },
   "timeline_validation": "reports/animation/production_offline_validation.json",
   "native_procedural_comparison": "reports/animation/procedural_surface_comparison.json",
   "limitations": [
@@ -111,6 +162,7 @@
     "Baked motion is verified at rendered integer frame times; subframe retiming or motion blur requires resampling/validation.",
     "Exploded sequence is a presentation overview with intentional isolation cuts, not a verified assembly/service instruction. Peripheral geometry can cross the graphics area briefly during detail-camera transitions.",
     "Finite spring surface probes and source mesh tolerance support rendered approximation, not BRep equivalence.",
+    "The v2 native clearance result is bounded to its listed phases and checked bodies; the 300-sample observed-pair report covers only its named rigid clip/cap and fore/hind foot pairs. Neither establishes continuous or full-campaign clearance.",
     "Existing manufacturing blockers and finite r10 clearance scopes are unchanged.",
     "Large editable Blender projects and native comparison/frame caches are local ignored artifacts; tracked sources reproduce them."
   ]

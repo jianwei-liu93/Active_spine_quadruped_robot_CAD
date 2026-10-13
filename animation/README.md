@@ -2,7 +2,7 @@
 
 The user authorized AX2–AX4 on 2026-10-13. Mechanical development remains at the verified r10 checkpoint; animation consumes that geometry and its existing motion interfaces. Source commit: `ddf84ab`. Work branch: `animation/flexor-r10-videos`.
 
-**The original three-video release is complete. A paper-informed coordination replacement is in progress; its new editable scene and native checks pass, with full rendering pending.** See `reports/animation/final_video_qa.json` for source hashes, 2,820 rendered frames, timing, transform accuracy and documented limitations. Representative decoded contact sheets, adjacent-frame sequences and event clips have been inspected.
+**Complete: all three videos are rendered and verified, including the updated paper-informed coordination video with approximately 69 degrees of hip excursion.** See `reports/animation/final_video_qa.json` for source hashes, 2,820 rendered frames, timing, transform accuracy and documented limitations. Representative decoded contact sheets and adjacent-frame sequences have been inspected; event clips are available as review aids.
 
 ## Local assets
 
@@ -82,4 +82,6 @@ python3 animation/blender/video_review.py --events animation/review_events.json
 
 After the three visual review records have been written, `python3 animation/blender/final_report.py` verifies the saved-scene/render/video source hash chain and aggregates the actual execution evidence. `reports/animation/final_video_qa.json` is the release record. The verified playback scope is rendered integer frames; subframe retiming or motion blur requires resampling and validation.
 
-The updated leg articulation report, `reports/animation/leg_articulation_v2.json`, measures actual segment motion relative to each torso at every cycle frame. The original small-excursion release QA is preserved as `reports/animation/final_video_qa_v1.json`; v2 has separate clearance, profile, native surface and source evidence.
+To regenerate the v2 motion, the lead runs `animation_coordination_v2.run(read_only_r10_copy)` through the installed FreeCAD MCP, using `src/animation_coordination_v2.py`. Isolated native checks use `screen_clearance(native_path)` and `animation_coordination_clearance_v2.run(native_path)`. Native extrema examples use `animation_coordination_native_v2.run(native_path)` followed by `python3 animation/blender/compare_procedural_v2.py`. No canonical CAD save is needed.
+
+The updated leg articulation report, `reports/animation/leg_articulation_v2.json`, measures actual segment motion relative to each torso at every cycle frame. The original small-excursion release QA is preserved as `reports/animation/final_video_qa_v1.json`; v2 has separate clearance, profile, native surface, all-frame camera framing and source evidence. The corrected coordination video is 20 seconds, 60 fps, 1920 × 1080; its editable project is `scenes/spine_leg_coordination.blend`.

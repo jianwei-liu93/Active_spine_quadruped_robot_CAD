@@ -151,6 +151,9 @@ coordination_frozen = next(x for x in snapshot["scenes"] if Path(x["path"]).stem
 coordination_readback = load("reports/animation/spine_leg_coordination_readback.json")
 coordination_scene = load("reports/animation/spine_leg_coordination_scene.json")
 coordination_blend_hash = coordination_frozen["sha256"]
+framing = load("reports/animation/coordination_v2_framing.json")
+assert framing["status"] == "PASS" and framing["frames"] == 1200
+assert framing["blend_sha256"] == coordination_blend_hash and framing["violations"] == []
 assert articulation["status"] == "PASS" and articulation["scene"] == "spine_leg_coordination"
 assert articulation["source_manifest"] == COORDINATION_V2_MANIFEST
 assert articulation["source_manifest_sha256"] == v2_hash
@@ -171,6 +174,8 @@ assert procedural_v2["source_hashes"]["production_timeline_sha256"] == v2_timeli
 assert procedural_v2["spring_record_count"] == procedural_v2["spring_finite_probe_pass_count"] == 8
 
 coordination_checks = {
+    "trajectory_validation": "reports/animation/production_coordination_v2.json",
+    "all_frame_camera_bounds": "reports/animation/coordination_v2_framing.json",
     "event_validation": "reports/animation/coordination_v2_events.json",
     "native_procedural_comparison": "reports/animation/procedural_surface_comparison_v2.json",
     "source_manifest": COORDINATION_V2_MANIFEST,

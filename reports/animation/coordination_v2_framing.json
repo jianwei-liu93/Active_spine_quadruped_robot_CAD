@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "blend_sha256": "e71a0dd50dd6d8b919153c9485207f3a1eb77840740c4b3e161b13191c689fd3",
+  "physical_instances": 487,
+  "frames": 1200,
+  "screen_bounds_min_x_min_y_max_x_max_y": [
+    0.17095003961955874,
+    0.17016840714829817,
+    0.8561003309810924,
+    0.8036895665378738
+  ],
+  "safe_rectangle": [
+    0.03,
+    0.16,
+    0.97,
+    0.82
+  ],
+  "scope": "Conservative projected evaluated object bounding boxes; camera framing only, no geometry or clearance claim",
+  "violations": []
+}

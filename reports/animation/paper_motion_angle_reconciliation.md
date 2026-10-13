@@ -27,3 +27,14 @@ The larger hip trajectory exceeds the historical +/-15-degree demonstration inte
 The original release remains recoverable in Git; the original coordinated editable scene is archived locally. Canonical CAD remains unchanged. The versioned profile is `animation/coordination_paper_profile_v2.json`; the actual sampling adapter is `src/animation_coordination_v2.py`. A Sol/medium source-review worker supplied partial matching observations but then encountered model capacity; the lead completed this reconciliation and inspected the source pages directly.
 
 An Astra/low independent review is recorded in `paper_gait_feasibility_review.md`; it identified that existing leg coordinates already share the same forward/down convention and did not justify an opposing fore phase. This was reviewed before selecting the candidate.
+
+## Executed v2 evidence
+
+- `production_coordination_v2.json`: 1,201 serialized states, 487 physical instances, loop matrix residual 2.49e-14 and maximum anchor residual 3.36e-14 mm. Sampling leaves the source document and canonical CAD unchanged.
+- `coordination_v2_clearance.json`: all leg/tendon-versus-assembly pairs screened at cycle phases 0, 18, 90, 135, 180, 198, 240, 270 and 330 degrees; 5,184 exact native Boolean checks, no positive-volume intersections or guide warnings. Scope is finite sampled poses.
+- `coordination_v2_observed_pairs_300.json`: 12 named clip/cap and fore/hind foot pairs checked at every render-cycle frame, no positive-volume intersections.
+- `coordination_v2_events.json`: measured extension onset at cycle sample 150 and hind backswing onset at 165, an 18-degree / 0.25-second presentation delay; all four hip excursions 68.754935 degrees.
+- `leg_articulation_v2.json`: the reopened Blender scene matches the exported torso-relative thigh/shank rotations and foot-pad positions at all 300 cycle frames.
+- `procedural_surface_comparison_v2.json`: eight spring records at the two prescribed leg extrema pass the existing 0.05-mm finite surface-probe tolerance, worst measured error 0.02851 mm. Two cable records measure native route reconstruction only; dashed guides do not assert physical slack or solid coverage.
+
+The first complete v2 render was rejected during decoded review because larger leg excursions caused toe cropping in oblique shots. `coordination_v2_framing_rejected.json` preserves that diagnostic. Presentation-only camera widening and recentering then passed `coordination_v2_framing.json` at all 1,200 frames using evaluated physical-instance bounds; native geometry and motion exports were not altered.
