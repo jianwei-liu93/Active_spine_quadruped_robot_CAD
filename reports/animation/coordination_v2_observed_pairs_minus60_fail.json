@@ -1,0 +1,618 @@
+{
+  "status": "FAIL",
+  "pairs": [
+    [
+      "A2_1_CaptureCap",
+      "hindL_K_Clip0"
+    ],
+    [
+      "A2_1_CaptureCap",
+      "hindL_O1_Clip0"
+    ],
+    [
+      "A2__1_CaptureCap",
+      "hindR_K_Clip1"
+    ],
+    [
+      "A2__1_CaptureCap",
+      "hindR_O1_Clip1"
+    ]
+  ],
+  "profile": {
+    "version": "coordination-paper-informed-v2",
+    "presentation_frequency_hz": 0.2,
+    "reference_trial_frequency_hz": 3.5,
+    "hip_half_excursion_rad": 0.6,
+    "hip_half_excursion_provenance": "FIGURE_DIGITIZED_APPROX from Fig S27 dashed hip target ~-0.1..1.1rad; not a published numeric command table",
+    "hip_full_excursion_deg": 68.75493541569878,
+    "hip_encoder_datum_applied": false,
+    "hip_cad_midpoints_deg": {
+      "fore": -60,
+      "hind": -60
+    },
+    "hip_midpoint_provenance": "DESIGN_ASSUMPTION retargeting around downward vertical; -60deg mean preserves source excursion while clearing observed hind-knee clip/spine-cap interference at old mean. Exact paper encoder zero unavailable.",
+    "spine_phase_origin_rad": 1.0644238352523063,
+    "spine_phase_origin_deg": 60.9869933730856,
+    "phase_origin_definition": "Maximum extension = maximum(fore torso angle - hind torso angle); next minimum is maximum flexion and onset of extension",
+    "hind_backswing_lag_rad": 0.3141592653589793,
+    "hind_backswing_event_cycle_phase_rad": 3.4557519189487724,
+    "hip_formula": "qh = CAD midpoint - 0.6*cos(cycle_phase-lag+fore_phase_offset)",
+    "fore_phase_offset_rad": 3.141592653589793,
+    "fore_phase_offset_provenance": "DESIGN_ASSUMPTION: paired forelegs opposite paired hind legs; S28 supports sequential fore/hind contacts, not exact servo phase",
+    "knee_half_excursion_deg": 10,
+    "knee_provenance": "PRESCRIBED_ASSUMPTION retained within previously sampled knee range; source physical knee trace unavailable and winding angle is not directly a loaded knee angle",
+    "wheel_min_max_deg": [
+      0,
+      90
+    ],
+    "wheel_provenance": "Existing CAD route-supported interval; independent prescribed take-up command, not inverse loaded equilibrium",
+    "sources": {
+      "/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking fast robotic locomotor propulsion throughdynamic spine-leg synergy.pdf": "a922f5a4895ccab1b1af0868c35f9782f20ce1eef32e141c721cd9d856c3b8d4",
+      "/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking fast robotic locomotor propulsion throughdynamic spine-leg synergy_sm.pdf": "b4cb79060e2f9394ca8cf1fa67cdab2e664d3ff52ee8f78349358a732c6aefa6"
+    },
+    "source_pages": [
+      "main p7 onset phase definition and p9 paired foreleg bounding",
+      "supplement p37 FigS16 unified-model amplitude sweep",
+      "supplement p38 FigS17 angle conventions",
+      "supplement p48 FigS27 commanded/measured angles",
+      "supplement p49 FigS28 sequential fore/hind footfalls"
+    ],
+    "loaded_dynamics": false
+  },
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "samples": 300,
+  "overlaps": [
+    {
+      "sample": 144,
+      "phase_deg": 172.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.007625256369139802
+    },
+    {
+      "sample": 144,
+      "phase_deg": 172.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.007625256369139513
+    },
+    {
+      "sample": 145,
+      "phase_deg": 174.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.05563881180263944
+    },
+    {
+      "sample": 145,
+      "phase_deg": 174.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.05563881180263791
+    },
+    {
+      "sample": 146,
+      "phase_deg": 175.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.12225228062326043
+    },
+    {
+      "sample": 146,
+      "phase_deg": 175.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.12225228062324708
+    },
+    {
+      "sample": 147,
+      "phase_deg": 176.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.19873607852146358
+    },
+    {
+      "sample": 147,
+      "phase_deg": 176.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.19873607852146938
+    },
+    {
+      "sample": 148,
+      "phase_deg": 177.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.2804995405914482
+    },
+    {
+      "sample": 148,
+      "phase_deg": 177.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.28049954059141496
+    },
+    {
+      "sample": 149,
+      "phase_deg": 178.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.36448012072600605
+    },
+    {
+      "sample": 149,
+      "phase_deg": 178.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.36448012072599634
+    },
+    {
+      "sample": 150,
+      "phase_deg": 180.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.4378548332454633
+    },
+    {
+      "sample": 150,
+      "phase_deg": 180.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.43785483324546576
+    },
+    {
+      "sample": 151,
+      "phase_deg": 181.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.4905049516858652
+    },
+    {
+      "sample": 151,
+      "phase_deg": 181.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.490504951685852
+    },
+    {
+      "sample": 152,
+      "phase_deg": 182.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5331282891579094
+    },
+    {
+      "sample": 152,
+      "phase_deg": 182.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5331282891578942
+    },
+    {
+      "sample": 153,
+      "phase_deg": 183.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5687168011496563
+    },
+    {
+      "sample": 153,
+      "phase_deg": 183.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5687168011496287
+    },
+    {
+      "sample": 154,
+      "phase_deg": 184.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5978630927809123
+    },
+    {
+      "sample": 154,
+      "phase_deg": 184.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5978630927808962
+    },
+    {
+      "sample": 155,
+      "phase_deg": 186.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.6116244524751767
+    },
+    {
+      "sample": 155,
+      "phase_deg": 186.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.6116244524751464
+    },
+    {
+      "sample": 156,
+      "phase_deg": 187.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.6106658550384932
+    },
+    {
+      "sample": 156,
+      "phase_deg": 187.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.6106658550384709
+    },
+    {
+      "sample": 157,
+      "phase_deg": 188.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.6026255839763408
+    },
+    {
+      "sample": 157,
+      "phase_deg": 188.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.6026255839763212
+    },
+    {
+      "sample": 158,
+      "phase_deg": 189.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5910215775190502
+    },
+    {
+      "sample": 158,
+      "phase_deg": 189.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5910215775190232
+    },
+    {
+      "sample": 159,
+      "phase_deg": 190.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5781607609589425
+    },
+    {
+      "sample": 159,
+      "phase_deg": 190.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5781607609589118
+    },
+    {
+      "sample": 160,
+      "phase_deg": 192.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5656643838125626
+    },
+    {
+      "sample": 160,
+      "phase_deg": 192.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.565664383812536
+    },
+    {
+      "sample": 161,
+      "phase_deg": 193.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5546818215355143
+    },
+    {
+      "sample": 161,
+      "phase_deg": 193.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5546818215355083
+    },
+    {
+      "sample": 162,
+      "phase_deg": 194.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5460026041789019
+    },
+    {
+      "sample": 162,
+      "phase_deg": 194.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5460026041788899
+    },
+    {
+      "sample": 163,
+      "phase_deg": 195.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5401215728896066
+    },
+    {
+      "sample": 163,
+      "phase_deg": 195.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5401215728895923
+    },
+    {
+      "sample": 164,
+      "phase_deg": 196.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5372772524133005
+    },
+    {
+      "sample": 164,
+      "phase_deg": 196.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5372772524132824
+    },
+    {
+      "sample": 165,
+      "phase_deg": 198.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5374717995338447
+    },
+    {
+      "sample": 165,
+      "phase_deg": 198.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5374717995338153
+    },
+    {
+      "sample": 166,
+      "phase_deg": 199.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5404756131072816
+    },
+    {
+      "sample": 166,
+      "phase_deg": 199.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5404756131072813
+    },
+    {
+      "sample": 167,
+      "phase_deg": 200.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5458162166381342
+    },
+    {
+      "sample": 167,
+      "phase_deg": 200.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5458162166381206
+    },
+    {
+      "sample": 168,
+      "phase_deg": 201.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5527469928555568
+    },
+    {
+      "sample": 168,
+      "phase_deg": 201.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5527469928555445
+    },
+    {
+      "sample": 169,
+      "phase_deg": 202.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5601833571418613
+    },
+    {
+      "sample": 169,
+      "phase_deg": 202.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5601833571418489
+    },
+    {
+      "sample": 170,
+      "phase_deg": 204.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5665707645691285
+    },
+    {
+      "sample": 170,
+      "phase_deg": 204.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5665707645690987
+    },
+    {
+      "sample": 171,
+      "phase_deg": 205.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5695475729764825
+    },
+    {
+      "sample": 171,
+      "phase_deg": 205.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5695475729764464
+    },
+    {
+      "sample": 172,
+      "phase_deg": 206.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5638706963331747
+    },
+    {
+      "sample": 172,
+      "phase_deg": 206.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5638706963331613
+    },
+    {
+      "sample": 173,
+      "phase_deg": 207.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5474731099429171
+    },
+    {
+      "sample": 173,
+      "phase_deg": 207.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5474731099429104
+    },
+    {
+      "sample": 174,
+      "phase_deg": 208.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.5249374845358787
+    },
+    {
+      "sample": 174,
+      "phase_deg": 208.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.5249374845358659
+    },
+    {
+      "sample": 175,
+      "phase_deg": 210.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.4939639613857206
+    },
+    {
+      "sample": 175,
+      "phase_deg": 210.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.4939639613857213
+    },
+    {
+      "sample": 176,
+      "phase_deg": 211.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.45098025399313046
+    },
+    {
+      "sample": 176,
+      "phase_deg": 211.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.4509802539931155
+    },
+    {
+      "sample": 177,
+      "phase_deg": 212.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.3874214225373701
+    },
+    {
+      "sample": 177,
+      "phase_deg": 212.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.3874214225373731
+    },
+    {
+      "sample": 178,
+      "phase_deg": 213.6,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.3051819052334137
+    },
+    {
+      "sample": 178,
+      "phase_deg": 213.6,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.3051819052334056
+    },
+    {
+      "sample": 179,
+      "phase_deg": 214.79999999999998,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.224264290441964
+    },
+    {
+      "sample": 179,
+      "phase_deg": 214.79999999999998,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.22426429044196902
+    },
+    {
+      "sample": 180,
+      "phase_deg": 216.0,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.14724127712061116
+    },
+    {
+      "sample": 180,
+      "phase_deg": 216.0,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.14724127712060778
+    },
+    {
+      "sample": 181,
+      "phase_deg": 217.2,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.07783864576199843
+    },
+    {
+      "sample": 181,
+      "phase_deg": 217.2,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.07783864576198823
+    },
+    {
+      "sample": 182,
+      "phase_deg": 218.4,
+      "a": "A2_1_CaptureCap",
+      "b": "hindL_O1_Clip0",
+      "intersection_mm3": 0.022371442729985785
+    },
+    {
+      "sample": 182,
+      "phase_deg": 218.4,
+      "a": "A2__1_CaptureCap",
+      "b": "hindR_O1_Clip1",
+      "intersection_mm3": 0.022371442729973122
+    }
+  ],
+  "scope": "Observed rigid clip/cap pairs at all300 integer render phases; other pairs bounded separately",
+  "continuous_clearance": false,
+  "max_intersection_mm3": 0.6116244524751767,
+  "document_unchanged": true,
+  "native_file_unchanged": true,
+  "elapsed_seconds": 8.588411417033058
+}

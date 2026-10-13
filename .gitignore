@@ -30,3 +30,8 @@ reports/animation/previews/
 # Native comparison meshes are large reproducible local QA cache.
 animation/geometry/r10/procedural_examples/*.json
 !animation/geometry/r10/procedural_examples/manifest.json
+
+animation/scenes/**/*.blend
+animation/scenes/**/*.blend1
+animation/geometry/r10/procedural_examples_v2/*.json
+!animation/geometry/r10/procedural_examples_v2/manifest.json

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "timeline_sha256": "17fd9779899212616fd3e420eb57618e9685a6f4ae2246e6bf5189c83fd866f9",
+  "manifest_sha256": "37c8c8c3810b5669609f5eb9f569dac8efd75406ffa4d5eadca0fe7438938e64",
+  "cycle_samples": 300,
+  "extension_onset_sample": 150,
+  "hind_backswing_onset_sample": 165,
+  "lag_frames": 15,
+  "lag_deg": 18.0,
+  "lag_seconds_at_presentation_rate": 0.25,
+  "hip_full_excursions_deg": {
+    "foreL": 68.75493541569877,
+    "foreR": 68.75493541569877,
+    "hindL": 68.75493541569877,
+    "hindR": 68.75493541569877
+  },
+  "event_definition": "Spine extension starts at minimum fore-minus-hind torso angle; hind backswing starts at maximum CAD hip angle followed by decreasing angle",
+  "source_provenance": "Hip excursion from approximate S27 plot reading; lag from main paper; CAD datums and fore phase are explicit assumptions"
+}

@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "scene": "spine_leg_coordination",
+  "blender": "5.2.2 LTS",
+  "blend_path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/animation/scenes/spine_leg_coordination.blend",
+  "blend_sha256": "8ec58e994f3118d342e9db68d3804619bea6b9d1c896517e1e3be6d19afab4ae",
+  "source_manifest": "animation/motion/production_coordination_v2_r10.json",
+  "source_manifest_sha256": "37c8c8c3810b5669609f5eb9f569dac8efd75406ffa4d5eadca0fe7438938e64",
+  "timeline_path": "animation/motion/coordinated_spine_legs_v2_r10.jsonl.gz",
+  "timeline_sha256_expected": "17fd9779899212616fd3e420eb57618e9685a6f4ae2246e6bf5189c83fd866f9",
+  "timeline_sha256_actual": "17fd9779899212616fd3e420eb57618e9685a6f4ae2246e6bf5189c83fd866f9",
+  "frames_checked": {
+    "key_frames": [
+      1,
+      76,
+      226
+    ],
+    "full_timeline_frames": 300
+  },
+  "comparison": "actual torso-local segment rotations and foot-pad center point vs manifest matrices",
+  "max_relative_rotation_error_rad": 5.503353046772518e-07,
+  "max_torso_relative_foot_pad_center_error_mm": 3.5144318387123206e-05,
+  "tolerances": {
+    "rotation_rad": 0.0001,
+    "point_mm": 0.02
+  },
+  "legs": {
+    "foreL": {
+      "instance_ids": {
+        "torso": "instance:Torso_fore",
+        "thigh": "instance:foreL_thigh",
+        "shank": "instance:foreL_shank",
+        "foot_pad": "instance:foreL_FootPad"
+      },
+      "torso_relative_thigh_rotation_excursion_rad": 1.200000017867491,
+      "torso_relative_thigh_rotation_excursion_deg": 68.75493643943061,
+      "thigh_relative_shank_knee_rotation_excursion_rad": 0.34906581888019295,
+      "thigh_relative_shank_knee_rotation_excursion_deg": 19.999998194113065,
+      "torso_relative_shank_rotation_excursion_rad": 0.8509342415882836,
+      "torso_relative_shank_rotation_excursion_deg": 48.75494068617422,
+      "foot_pad_point_excursion_mm": 67.88850379188675,
+      "manifest_thigh_excursion_rad": 1.2000000489445184,
+      "manifest_knee_excursion_rad": 0.34906584822977427,
+      "key_frames": {
+        "1": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.0,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.0,
+          "torso_relative_foot_pad_center_mm": [
+            -2.533899,
+            -60.284149,
+            -31.999994
+          ]
+        },
+        "76": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.3852234119721735,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.11205680910719883,
+          "torso_relative_foot_pad_center_mm": [
+            20.898724,
+            -63.414209,
+            -31.999983
+          ]
+        },
+        "226": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.756043976886051,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.21992416954888633,
+          "torso_relative_foot_pad_center_mm": [
+            42.40486,
+            -58.263831,
+            -31.999994
+          ]
+        }
+      }
+    },
+    "foreR": {
+      "instance_ids": {
+        "torso": "instance:Torso_fore",
+        "thigh": "instance:foreR_thigh",
+        "shank": "instance:foreR_shank",
+        "foot_pad": "instance:foreR_FootPad"
+      },
+      "torso_relative_thigh_rotation_excursion_rad": 1.200000017867491,
+      "torso_relative_thigh_rotation_excursion_deg": 68.75493643943061,
+      "thigh_relative_shank_knee_rotation_excursion_rad": 0.34906581888019295,
+      "thigh_relative_shank_knee_rotation_excursion_deg": 19.999998194113065,
+      "torso_relative_shank_rotation_excursion_rad": 0.8509342415882836,
+      "torso_relative_shank_rotation_excursion_deg": 48.75494068617422,
+      "foot_pad_point_excursion_mm": 67.8884987546532,
+      "manifest_thigh_excursion_rad": 1.2000000489445184,
+      "manifest_knee_excursion_rad": 0.34906584822977427,
+      "key_frames": {
+        "1": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.0,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.0,
+          "torso_relative_foot_pad_center_mm": [
+            -2.533898,
+            -60.284145,
+            64.000003
+          ]
+        },
+        "76": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.3852234119721735,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.11205680910719883,
+          "torso_relative_foot_pad_center_mm": [
+            20.898722,
+            -63.414201,
+            63.999996
+          ]
+        },
+        "226": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.756043976886051,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.21992416954888633,
+          "torso_relative_foot_pad_center_mm": [
+            42.40486,
+            -58.263827,
+            64.000003
+          ]
+        }
+      }
+    },
+    "hindL": {
+      "instance_ids": {
+        "torso": "instance:Torso_hind",
+        "thigh": "instance:hindL_thigh",
+        "shank": "instance:hindL_shank",
+        "foot_pad": "instance:hindL_FootPad"
+      },
+      "torso_relative_thigh_rotation_excursion_rad": 1.199999852169182,
+      "torso_relative_thigh_rotation_excursion_deg": 68.75492694561683,
+      "thigh_relative_shank_knee_rotation_excursion_rad": 0.3490659656279478,
+      "thigh_relative_shank_knee_rotation_excursion_deg": 20.00000660214007,
+      "torso_relative_shank_rotation_excursion_rad": 0.850933975222476,
+      "torso_relative_shank_rotation_excursion_deg": 48.754925424537646,
+      "foot_pad_point_excursion_mm": 69.5653725234133,
+      "manifest_thigh_excursion_rad": 1.1999998521691795,
+      "manifest_knee_excursion_rad": 0.34906578088153417,
+      "key_frames": {
+        "1": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 5.9604644775390605e-08,
+          "thigh_relative_shank_rotation_from_frame1_rad": 2.0097183471152322e-14,
+          "torso_relative_foot_pad_center_mm": [
+            -74.194402,
+            -49.227633,
+            -31.999998
+          ]
+        },
+        "76": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.38522358747950086,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.11205706202986289,
+          "torso_relative_foot_pad_center_mm": [
+            -52.277356,
+            -59.994318,
+            -31.99999
+          ]
+        },
+        "226": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.75604419847144,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.21992434728281515,
+          "torso_relative_foot_pad_center_mm": [
+            -29.689578,
+            -61.961591,
+            -31.999998
+          ]
+        }
+      }
+    },
+    "hindR": {
+      "instance_ids": {
+        "torso": "instance:Torso_hind",
+        "thigh": "instance:hindR_thigh",
+        "shank": "instance:hindR_shank",
+        "foot_pad": "instance:hindR_FootPad"
+      },
+      "torso_relative_thigh_rotation_excursion_rad": 1.199999852169182,
+      "torso_relative_thigh_rotation_excursion_deg": 68.75492694561683,
+      "thigh_relative_shank_knee_rotation_excursion_rad": 0.3490659656279478,
+      "thigh_relative_shank_knee_rotation_excursion_deg": 20.00000660214007,
+      "torso_relative_shank_rotation_excursion_rad": 0.850933975222476,
+      "torso_relative_shank_rotation_excursion_deg": 48.754925424537646,
+      "foot_pad_point_excursion_mm": 69.56538591114416,
+      "manifest_thigh_excursion_rad": 1.1999998521691795,
+      "manifest_knee_excursion_rad": 0.34906578088153417,
+      "key_frames": {
+        "1": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 5.9604644775390605e-08,
+          "thigh_relative_shank_rotation_from_frame1_rad": 2.0097183471152322e-14,
+          "torso_relative_foot_pad_center_mm": [
+            -74.194402,
+            -49.227633,
+            64.000003
+          ]
+        },
+        "76": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.38522358747950086,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.11205706202986289,
+          "torso_relative_foot_pad_center_mm": [
+            -52.277356,
+            -59.99431,
+            64.000003
+          ]
+        },
+        "226": {
+          "torso_relative_thigh_rotation_from_frame1_rad": 0.75604419847144,
+          "thigh_relative_shank_rotation_from_frame1_rad": 0.21992434728281515,
+          "torso_relative_foot_pad_center_mm": [
+            -29.689578,
+            -61.961591,
+            64.000003
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "status": "FAIL",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "amplitude_deg": 34.37746770784939,
+  "phase_samples_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    165,
+    180,
+    195,
+    210,
+    225,
+    240,
+    255,
+    270,
+    285,
+    300,
+    315,
+    330,
+    345
+  ],
+  "scope": "Every unordered pair with a leg/tendon member; exact native regenerated solids at listed phases only",
+  "continuous_clearance": false,
+  "full_campaign": false,
+  "loaded_equilibrium": false,
+  "records": [
+    {
+      "phase_deg": 0,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 15,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 30,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 45,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 60,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 75,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 90,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 105,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 120,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 135,
+      "status": "FAIL",
+      "overlaps": [
+        {
+          "a": "A2_1_CaptureCap",
+          "b": "hindL_K_Clip0",
+          "intersection_mm3": 0.4986473864226685
+        },
+        {
+          "a": "A2_1_CaptureCap",
+          "b": "hindL_O1_Clip0",
+          "intersection_mm3": 0.23051811444531883
+        },
+        {
+          "a": "A2__1_CaptureCap",
+          "b": "hindR_K_Clip1",
+          "intersection_mm3": 0.49864738642265916
+        },
+        {
+          "a": "A2__1_CaptureCap",
+          "b": "hindR_O1_Clip1",
+          "intersection_mm3": 0.23051811444530856
+        }
+      ],
+      "guide_warnings": [],
+      "physical_instances": 487
+    }
+  ],
+  "elapsed_seconds": 426.7864040659624,
+  "occ_checks": 5727,
+  "document_unchanged": true,
+  "native_file_unchanged": true
+}

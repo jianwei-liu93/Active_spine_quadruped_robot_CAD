@@ -1,0 +1,41 @@
+{
+  "version": "coordination-paper-informed-v2",
+  "presentation_frequency_hz": 0.2,
+  "reference_trial_frequency_hz": 3.5,
+  "hip_half_excursion_rad": 0.6,
+  "hip_half_excursion_provenance": "FIGURE_DIGITIZED_APPROX from Fig S27 dashed hip target ~-0.1..1.1rad; not a published numeric command table",
+  "hip_full_excursion_deg": 68.75493541569878,
+  "hip_encoder_datum_applied": false,
+  "hip_cad_midpoints_deg": {
+    "fore": -60,
+    "hind": -75
+  },
+  "hip_midpoint_provenance": "DESIGN_ASSUMPTION: CAD means -90deg + offsets (fore +30deg, hind +15deg), preserving +/-0.6rad source excursion. Exact encoder-to-CAD zero unavailable; native screening evidence recorded separately.",
+  "spine_phase_origin_rad": 1.0644238352523063,
+  "spine_phase_origin_deg": 60.9869933730856,
+  "phase_origin_definition": "Maximum extension = maximum(fore torso angle - hind torso angle); next minimum is maximum flexion and onset of extension",
+  "hind_backswing_lag_rad": 0.3141592653589793,
+  "hind_backswing_event_cycle_phase_rad": 3.4557519189487724,
+  "hip_formula": "qh = CAD midpoint - 0.6*cos(cycle_phase-lag+fore_phase_offset)",
+  "fore_phase_offset_rad": 0.0,
+  "fore_phase_offset_provenance": "DESIGN_ASSUMPTION: paired fore/hind hip signals share phase in the existing same-direction leg coordinates; sequential source footfalls do not fix the servo phase. This also sets the separately prescribed fore-knee phase.",
+  "knee_half_excursion_deg": 10,
+  "knee_provenance": "PRESCRIBED_ASSUMPTION retained within previously sampled knee range; source physical knee trace unavailable and winding angle is not directly a loaded knee angle",
+  "wheel_min_max_deg": [
+    0,
+    90
+  ],
+  "wheel_provenance": "Existing CAD route-supported interval; independent prescribed take-up command, not inverse loaded equilibrium",
+  "sources": {
+    "/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking fast robotic locomotor propulsion throughdynamic spine-leg synergy.pdf": "a922f5a4895ccab1b1af0868c35f9782f20ce1eef32e141c721cd9d856c3b8d4",
+    "/home/jianwei/freeCAD_projects/active_spine_robot_paper/2026_Unlocking fast robotic locomotor propulsion throughdynamic spine-leg synergy_sm.pdf": "b4cb79060e2f9394ca8cf1fa67cdab2e664d3ff52ee8f78349358a732c6aefa6"
+  },
+  "source_pages": [
+    "main p7 onset phase definition and p9 paired foreleg bounding",
+    "supplement p37 FigS16 unified-model amplitude sweep",
+    "supplement p38 FigS17 angle conventions",
+    "supplement p48 FigS27 commanded/measured angles",
+    "supplement p49 FigS28 sequential fore/hind footfalls"
+  ],
+  "loaded_dynamics": false
+}

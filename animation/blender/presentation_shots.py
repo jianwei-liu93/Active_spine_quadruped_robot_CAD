@@ -35,7 +35,7 @@ def apply(scene,objects,mats):
         marker=next(o for o in scene.objects if o.type=='FONT' and o.data.body=='●')
         marker.animation_data_clear();marker.location.y=-width*.175
         for f in range(1,scene.frame_end+1):
-            marker.location.x=-width*.46+width*.20*((f-1)%300)/300;marker.keyframe_insert('location',frame=f)
+            marker.location.x=-width*.46+width*.20*((scene.get('phase_origin_rad',0.)/math.tau+(f-1)/300)%1);marker.keyframe_insert('location',frame=f)
         linear_keys(marker)
     if name=='active_spine_mechanism':
         for iid,obj in objects.items():

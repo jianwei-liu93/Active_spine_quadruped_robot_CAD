@@ -1,0 +1,303 @@
+{
+  "cable_record_count": 2,
+  "limitations": [
+    "One-direction finite sampling supports approximate rendered silhouette agreement; it does not establish Boolean or BRep equivalence.",
+    "Spring distances sample native surface points against render triangles; buried render surfaces are intentionally not tested in reverse.",
+    "Cable render geometry is a dashed routing guide, so cable comparison measures sampled native radius and route reconstruction only, not solid coverage.",
+    "Centroid KD-tree searches the 32 nearest candidate triangle centroids before exact point-to-triangle distance; this is a bounded numerical approximation."
+  ],
+  "records": [
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02819131319152604,
+        "mean_mm": 0.014174880236541464,
+        "median_mm": 0.015047742940636877,
+        "p95_mm": 0.025011591278730465
+      },
+      "instance_id": "instance:foreL_compression_Spring",
+      "kind": "compression",
+      "native_sha256": "8a15ebff93a0feae72a985c8f3bf521214ad1e1e45eef0d215ed8d11fed5b72b",
+      "native_triangle_count": 291780,
+      "native_vertex_count": 145888,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 4112,
+      "render_triangle_count": 8208,
+      "render_vertex_count": 4106,
+      "sample_index": 15,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.027782596384589756,
+        "mean_mm": 0.014843922596715032,
+        "median_mm": 0.01572967780482668,
+        "p95_mm": 0.024779537916165717
+      },
+      "instance_id": "instance:foreL_extension_Spring",
+      "kind": "extension",
+      "native_sha256": "61ba1f0db9c80712ece60c9f8194148d16e5bee337ac89ddf50ccfd544c78f20",
+      "native_triangle_count": 348730,
+      "native_vertex_count": 174363,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 6320,
+      "render_triangle_count": 12560,
+      "render_vertex_count": 6362,
+      "sample_index": 15,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02798015566832479,
+        "mean_mm": 0.013521039640748873,
+        "median_mm": 0.013862100760417249,
+        "p95_mm": 0.02463998112503951
+      },
+      "instance_id": "instance:hindL_compression_Spring",
+      "kind": "compression",
+      "native_sha256": "5c4a6a21f72b2a867272877d8799c70e683caf414225d61485f3aaeb7baecd36",
+      "native_triangle_count": 292172,
+      "native_vertex_count": 146084,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 4112,
+      "render_triangle_count": 8208,
+      "render_vertex_count": 4106,
+      "sample_index": 15,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02850701043516572,
+        "mean_mm": 0.014787036351697959,
+        "median_mm": 0.014955450929946436,
+        "p95_mm": 0.025879410334885212
+      },
+      "instance_id": "instance:hindL_extension_Spring",
+      "kind": "extension",
+      "native_sha256": "4696738088fa84215d37180ed8eb7c71b460109a09387487673884d31db37072",
+      "native_triangle_count": 419638,
+      "native_vertex_count": 209817,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 8880,
+      "render_triangle_count": 17680,
+      "render_vertex_count": 8922,
+      "sample_index": 15,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "arc_endpoint_error_max_mm": 7.105427357601002e-12,
+      "arc_midpoint_error_max_mm": 4.440892098500626e-13,
+      "comparison": "dashed route-guide centerline reconstruction and native cable surface radius samples",
+      "direction": "native_surface_samples_to_source_route_centerline",
+      "instance_id": "instance:HindTendon_L_Cable",
+      "native_sha256": "4e4e157e80422b2313ea3ca788c4fe829a0e1a5022003eb8f6475bcaa8778d4b",
+      "native_surface_radius_residual_from_0p15mm": {
+        "max_mm": 0.06217784266299843,
+        "mean_mm": 0.0003141076028157428,
+        "median_mm": 7.925968319413834e-05,
+        "p95_mm": 0.0007966973491455309
+      },
+      "native_triangle_count": 38552,
+      "native_vertex_count": 19278,
+      "primitive_join_gap_max_mm": 0.0,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 3072,
+      "render_vertex_count": 2688,
+      "route_centerline_sample_count": 385,
+      "route_primitive_count": 8,
+      "sample_index": 15,
+      "solid_coverage_compared": false,
+      "status": "MEASURED_DASHED_GUIDE_ONLY"
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02810467468279377,
+        "mean_mm": 0.014236851687588313,
+        "median_mm": 0.014705920598955832,
+        "p95_mm": 0.0250479464825659
+      },
+      "instance_id": "instance:foreL_compression_Spring",
+      "kind": "compression",
+      "native_sha256": "3c5489dc81d3724618f2d70d55931e5d510bc9db67ea9c218562a311af5d68ab",
+      "native_triangle_count": 294106,
+      "native_vertex_count": 147051,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 4112,
+      "render_triangle_count": 8208,
+      "render_vertex_count": 4106,
+      "sample_index": 165,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02781885251763745,
+        "mean_mm": 0.014479919937880122,
+        "median_mm": 0.015562704495260133,
+        "p95_mm": 0.024845189162090733
+      },
+      "instance_id": "instance:foreL_extension_Spring",
+      "kind": "extension",
+      "native_sha256": "ee8c1159dac8870d193894d511fbaa36c211f9aff64fcbc908d04e3b78317a63",
+      "native_triangle_count": 348830,
+      "native_vertex_count": 174413,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 6320,
+      "render_triangle_count": 12560,
+      "render_vertex_count": 6362,
+      "sample_index": 165,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02831620565612601,
+        "mean_mm": 0.014191712206846925,
+        "median_mm": 0.014944272217966046,
+        "p95_mm": 0.024967315078402035
+      },
+      "instance_id": "instance:hindL_compression_Spring",
+      "kind": "compression",
+      "native_sha256": "bb4a1b4912b3229194738d76297765c09b592738426fa28ed5e23e5d2df3adf6",
+      "native_triangle_count": 290472,
+      "native_vertex_count": 145234,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 4112,
+      "render_triangle_count": 8208,
+      "render_vertex_count": 4106,
+      "sample_index": 165,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "comparison": "native boundary vertex/triangle-centroid samples to candidate render triangles",
+      "direction": "native_to_render_only",
+      "distance": {
+        "max_mm": 0.02801437108469963,
+        "mean_mm": 0.014913831954791106,
+        "median_mm": 0.015287581249538733,
+        "p95_mm": 0.02522472366999107
+      },
+      "instance_id": "instance:hindL_extension_Spring",
+      "kind": "extension",
+      "native_sha256": "3aa11ada2f045c25c4b2eb0196e0646ec987af0769f25d2ef573229ff42007d2",
+      "native_triangle_count": 419452,
+      "native_vertex_count": 209724,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 8880,
+      "render_triangle_count": 17680,
+      "render_vertex_count": 8922,
+      "sample_index": 165,
+      "status": "PASS_FINITE_PROBES",
+      "tolerance_mm": 0.05
+    },
+    {
+      "arc_endpoint_error_max_mm": 7.105427357601002e-12,
+      "arc_midpoint_error_max_mm": 4.440892098500626e-13,
+      "comparison": "dashed route-guide centerline reconstruction and native cable surface radius samples",
+      "direction": "native_surface_samples_to_source_route_centerline",
+      "instance_id": "instance:HindTendon_L_Cable",
+      "native_sha256": "ca4ac48669c89cae5ffd2e3c824f6aa97b8b94fc24516b971d0473fb8ea6eff7",
+      "native_surface_radius_residual_from_0p15mm": {
+        "max_mm": 0.09975215304937918,
+        "mean_mm": 0.0004909215054559334,
+        "median_mm": 4.1441684079407404e-05,
+        "p95_mm": 0.0005491142948406136
+      },
+      "native_triangle_count": 25196,
+      "native_vertex_count": 12600,
+      "primitive_join_gap_max_mm": 0.0,
+      "probe_method": {
+        "count": 500,
+        "native_triangle_centroids": 250,
+        "native_vertices": 250,
+        "selection": "deterministic evenly spaced index samples from source-local native mesh"
+      },
+      "render_face_count": 3072,
+      "render_vertex_count": 2688,
+      "route_centerline_sample_count": 321,
+      "route_primitive_count": 7,
+      "sample_index": 165,
+      "solid_coverage_compared": false,
+      "status": "MEASURED_DASHED_GUIDE_ONLY"
+    }
+  ],
+  "sample_mapping": {
+    "15": "coordinated_spine_legs:15",
+    "165": "coordinated_spine_legs:165"
+  },
+  "schema_version": 1,
+  "scope": "source-local exported native tessellation compared to pure procedural render mesh",
+  "source_hashes": {
+    "comparison_script_sha256": "91d8390d6f3d9f2109d45794144e0861706b59871ea3a9d1903f1430d421d7fc",
+    "manifest_sha256": "0b9237764de597fb3eb64da45323e6c5761bbb83d52df76fd20187d40749d043",
+    "procedural_geometry_sha256": "1ef6f0d47346f37add8354c286f15a8a7bda940907a2900039f88a61ab238d25",
+    "production_timeline_sha256": "17fd9779899212616fd3e420eb57618e9685a6f4ae2246e6bf5189c83fd866f9"
+  },
+  "spring_finite_probe_pass_count": 8,
+  "spring_record_count": 8,
+  "spring_tolerance_mm": 0.05,
+  "status": "FINITE_NUMERICAL_COMPARISON"
+}

@@ -4,7 +4,7 @@ from pathlib import Path
 from mathutils import Vector,Matrix
 ROOT=Path(__file__).resolve().parents[2]
 kind=sys.argv[sys.argv.index('--')+1];scene=bpy.data.scenes[kind];bpy.context.window.scene=scene
-manifest=json.loads((ROOT/'animation/motion/production_r10.json').read_text())
+manifest=json.loads((ROOT/scene.get('source_manifest','animation/motion/production_r10.json')).read_text())
 objects={o['instance_id']:o for o in scene.objects if 'instance_id' in o};assert set(objects)==set(manifest['instance_order'])
 frames={};timeline='active_spine_mechanism' if kind=='active_spine_mechanism' else 'coordinated_spine_legs'
 if kind!='exploded_assembly':

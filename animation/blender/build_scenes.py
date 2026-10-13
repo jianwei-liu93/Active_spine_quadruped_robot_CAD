@@ -13,8 +13,8 @@ SCENES=ROOT/'animation/scenes'
 REPORTS=ROOT/'reports/animation'
 
 
-def load_manifest():
-    return json.loads((ROOT/'animation/motion/production_r10.json').read_text())
+def load_manifest(path='animation/motion/production_r10.json'):
+    return json.loads((ROOT/path).read_text())
 
 
 def linear_keys(data):
@@ -178,8 +178,13 @@ def bake_mechanics(scene,data,objects,frames,count):
         obj=objects[iid];obj.rotation_mode='QUATERNION'
         for axis in range(3):
             bake_channel(obj,'location',axis,[frames[(f-1)%300]['transforms_m'][i][axis][3] for f in range(1,count+1)])
+        continuous_quaternions=[]
+        for f in range(1,count+1):
+            q=list(frames[(f-1)%300]['quaternions_wxyz'][i])
+            if continuous_quaternions and sum(a*b for a,b in zip(q,continuous_quaternions[-1]))<0:q=[-x for x in q]
+            continuous_quaternions.append(q)
         for axis in range(4):
-            bake_channel(obj,'rotation_quaternion',axis,[frames[(f-1)%300]['quaternions_wxyz'][i][axis] for f in range(1,count+1)])
+            bake_channel(obj,'rotation_quaternion',axis,[q[axis] for q in continuous_quaternions])
     # Absolute shape keys bake each source-local procedural pose. One full
     # 300-sample cycle is reused; no transient handlers are needed on reopen.
     for iid in [i['instance_id'] for i in data['instances'] if i['geometry_kind']!='rigid']:
@@ -217,14 +222,14 @@ def save_scene(scene):
     return str(path.relative_to(ROOT))
 
 
-def build(kind):
-    data=load_manifest();mats=materials()
+def build(kind,manifest_path='animation/motion/production_r10.json'):
+    data=load_manifest(manifest_path);mats=materials()
     if kind in bpy.data.scenes:
-        old=bpy.data.scenes[kind];assert old.get('source_manifest')=='animation/motion/production_r10.json'
+        old=bpy.data.scenes[kind];assert old.get('source_manifest','').startswith('animation/motion/production')
         bpy.data.scenes.remove(old)
     scene=bpy.data.scenes.new(kind)
     bpy.context.window.scene=scene;stage(scene);cam=camera(scene);objects=import_robot(scene,data,mats)
-    scene['source_manifest']='animation/motion/production_r10.json';scene['source_cad_sha256']=data['source']['cad_sha256']
+    scene['source_manifest']=manifest_path;scene['source_cad_sha256']=data['source']['cad_sha256']
     scene['motion_provenance']='PRESCRIBED_KINEMATIC; no passive loads simulated';scene['motion_blur']=False
     scene['physical_instances']=len(objects);scene.frame_start=1
     if kind=='exploded_assembly':
@@ -263,10 +268,10 @@ def build(kind):
     else:
         is_spine=kind=='active_spine_mechanism';scene.render.fps=60;scene.frame_end=900 if is_spine else 1200;width=.30
         timeline='active_spine_mechanism' if is_spine else 'coordinated_spine_legs'
-        frames=read_cycle(data,timeline);bake_mechanics(scene,data,objects,frames,scene.frame_end)
+        frames=read_cycle(data,timeline);scene['phase_origin_rad']=frames[0]['commanded_rad'][0];bake_mechanics(scene,data,objects,frames,scene.frame_end)
         point_camera(cam,(.20,-.36,.13),(0,0,-.008),width)
         hud(scene,cam,'ACTIVE SPINE' if is_spine else 'SPINE + LEG COORDINATION',
-            'Two redundant drives  /  One coupled spine coordinate' if is_spine else 'Prescribed kinematic demonstration — passive loads not simulated',mats,width)
+            'Two redundant drives  /  One coupled spine coordinate' if is_spine else ('Paper-informed hip cycle (~69 deg) — passive loads not simulated' if 'paper_motion_profile' in data['production'] else 'Prescribed kinematic demonstration — passive loads not simulated'),mats,width)
         if is_spine:
             text(scene,cam,'Continuous crank  /  Captured sliders  /  Coupled torso outputs',-width*.46,-width*.205,width*.012,mats['muted'])
             # Isolate spine after whole robot introduction; all components
@@ -275,7 +280,7 @@ def build(kind):
                 if item['group'] in ('foreL','foreR','hindL','hindR','HindTendon'):
                     visibility(objects[item['instance_id']],[(1,True),(121,False),(721,True)])
         else:
-            text(scene,cam,'0.2 Hz illustrative cycle  |  Orange dashed: routing guide; slack shape unresolved',-width*.46,-width*.205,width*.011,mats['muted'])
+            text(scene,cam,('0.2 Hz display  |  Hind backswing lags extension by 18 deg  |  Dashed tendon guides' if 'paper_motion_profile' in data['production'] else '0.2 Hz illustrative cycle  |  Orange dashed: routing guide; slack shape unresolved'),-width*.46,-width*.205,width*.011,mats['muted'])
         # Side explanatory shot then return to three-quarter. Camera transitions
         # may ease; mechanical parts stay exact linear baked per-frame samples.
         poses=[(1,(.20,-.36,.13),(0,0,-.008)),(121,(.0,-.40,.025),(0,0,-.008)),(480,(.0,-.40,.025),(0,0,-.008)),(600,(.20,-.36,.13),(0,0,-.008)),(scene.frame_end,(.20,-.36,.13),(0,0,-.008))]

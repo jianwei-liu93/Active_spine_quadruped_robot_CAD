@@ -1,0 +1,92 @@
+{
+  "status": "FAIL",
+  "native_sha256": "d90c7dba99b8a5f0825160d4c1d2058509ce64401e95b49aa4101fc66b8e9ad9",
+  "amplitude_deg": 34.37746770784939,
+  "phase_samples_deg": [
+    0,
+    18,
+    90,
+    135,
+    180,
+    198,
+    240,
+    270,
+    330
+  ],
+  "scope": "Every unordered pair with a leg/tendon member; exact native regenerated solids at listed phases only",
+  "continuous_clearance": false,
+  "full_campaign": false,
+  "loaded_equilibrium": false,
+  "records": [
+    {
+      "phase_deg": 0,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 18,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 90,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 135,
+      "status": "PASS",
+      "overlaps": [],
+      "guide_warnings": [],
+      "physical_instances": 487
+    },
+    {
+      "phase_deg": 180,
+      "status": "FAIL",
+      "overlaps": [
+        {
+          "a": "A2_1_CaptureCap",
+          "b": "hindL_O1_Clip0",
+          "intersection_mm3": 0.4378548332454633
+        },
+        {
+          "a": "A2__1_CaptureCap",
+          "b": "hindR_O1_Clip1",
+          "intersection_mm3": 0.43785483324546576
+        },
+        {
+          "a": "foreL_Foot",
+          "b": "hindL_Foot",
+          "intersection_mm3": 36.220769358283796
+        },
+        {
+          "a": "foreL_FootPad",
+          "b": "hindL_Foot",
+          "intersection_mm3": 3.434266470407616
+        },
+        {
+          "a": "foreR_Foot",
+          "b": "hindR_Foot",
+          "intersection_mm3": 36.22076935828372
+        },
+        {
+          "a": "foreR_FootPad",
+          "b": "hindR_Foot",
+          "intersection_mm3": 3.4342664704076213
+        }
+      ],
+      "guide_warnings": [],
+      "physical_instances": 487
+    }
+  ],
+  "elapsed_seconds": 222.8450685380376,
+  "occ_checks": 2941,
+  "document_unchanged": true,
+  "native_file_unchanged": true
+}
