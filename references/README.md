@@ -30,3 +30,5 @@ The mechanism evidence and source ambiguities are summarized in [01_reference_ev
 Agents may use the written specifications for planning, a software scaffold, and calculations whose assumptions are explicit. They must not claim to have read missing figures. Original-source visual verification remains `NOT_RUN` or `BLOCKED` until the relevant content is actually available.
 
 Source PDFs and vendor CAD should retain their original notices. Adding project documentation does not establish a license for the source publication or purchased component designs.
+
+See [the public attribution notices](../THIRD_PARTY_NOTICES.md) for extracted supplementary Movie S1 stills and crops. The reviewed article carries a CC BY-NC 4.0 notice. A machine-readable [BibTeX citation](flexor_paper.bib) is provided; the repository's own CAD and animation previews remain distinguished from original publication media.

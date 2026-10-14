@@ -1,0 +1,102 @@
+{
+  "schema": "flexor.readme-media.v1",
+  "revision": "r14",
+  "generator": {
+    "path": "animation/blender/build_readme_media.py",
+    "sha256": "2cb2e6b467f6450e019578dbf1722e9ae5cdf09d8fee0f93bf8537f2bc04572c",
+    "bytes": 5223
+  },
+  "source_cad": {
+    "path": "cad/flexor_r14_robot.FCStd",
+    "sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+    "bytes": 8596980
+  },
+  "source_video": {
+    "path": "animation/output/spine_leg_coordination_s2_r14.mp4",
+    "sha256": "24d34c024ba5b6d251e9ff91100ce70edb0e208b73c03cacfe61de98b9f6ad45",
+    "bytes": 15025052
+  },
+  "release_qa": {
+    "path": "reports/animation/spine_leg_coordination_s2_r14_qa.json",
+    "sha256": "6a25a6e7b09bd0b09c56748b561b16368eb5f5d62d466ca8825a73515e2dcd75",
+    "bytes": 12831
+  },
+  "images": [
+    {
+      "source": {
+        "path": "reports/views/r14_robot_assembled.png",
+        "sha256": "b810a83f26776ef08b7fc753a5b169678f7d834f7c2ff0e9aa61b022692184cd",
+        "bytes": 130880
+      },
+      "output": {
+        "path": "docs/media/robot_assembled_r14.png",
+        "sha256": "b445e11cd40091bba16e4c5b787d18f908a43803acec09ccc664fa511200b949",
+        "bytes": 343967
+      },
+      "size_px": [
+        1280,
+        880
+      ],
+      "changes": "RGB conversion and downscale only"
+    },
+    {
+      "source": {
+        "path": "reports/views/r14_spine_source_facing.png",
+        "sha256": "ff7a33c28f09c5580924643ff3803a91aede3befe8f938478fb3930bb7348a70",
+        "bytes": 87975
+      },
+      "output": {
+        "path": "docs/media/spine_mechanism_r14.png",
+        "sha256": "2ae5cf586f197b76e4f4b97d49493acfb10ed067354a6067e5704687b7ddbe09",
+        "bytes": 274011
+      },
+      "size_px": [
+        1280,
+        880
+      ],
+      "changes": "RGB conversion and downscale only"
+    },
+    {
+      "source": {
+        "path": "reports/views/r14_AB_isolated.png",
+        "sha256": "ec04d2b2429a77c444d6e070845043655698b2c1f4e4961b1d7c58b28952580f",
+        "bytes": 30876
+      },
+      "output": {
+        "path": "docs/media/rocker_r14.png",
+        "sha256": "192e7ddab67cb6dde7ad9e6475f0db72a351dfb39b848274e84f67f9d66ed040",
+        "bytes": 100078
+      },
+      "size_px": [
+        1280,
+        853
+      ],
+      "changes": "RGB conversion and downscale only"
+    }
+  ],
+  "gif": {
+    "path": "docs/media/spine_leg_coordination_r14.gif",
+    "sha256": "6d7adc16ef16e2d73d7a03e885280694b03a722e0b6781ad2261c193190411d7",
+    "bytes": 2708377,
+    "size_px": [
+      960,
+      540
+    ],
+    "frames": 30,
+    "duration_seconds": 1.67,
+    "loop": "infinite",
+    "target_fps": 18,
+    "source_frame_range_zero_based": [
+      0,
+      99
+    ],
+    "source_fps": 60,
+    "source_cycle_seconds": 1.6666666666666667,
+    "ffmpeg_version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "decode_check": "PASS_PILLOW_AND_FFMPEG",
+    "timing_check": "PASS",
+    "motion_sample_check": "PASS_DISTINCT_FRAMES",
+    "scope": "One existing r14 studio overview cycle; illustrative prescribed kinematics"
+  },
+  "geometry_or_motion_modified": false
+}

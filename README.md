@@ -1,70 +1,99 @@
-# Active spine quadruped robot CAD
+# FLEXOR-inspired active-spine quadruped
 
-**Current status: R14_COMPACT_REFERENCE_CANDIDATE (2026-10-14).** The [native r14 assembly](cad/flexor_r14_robot.FCStd) has a 78.8 mm transverse center frame, smooth A–B rockers forked only at B, rounded torso mounting profiles and recessed B–C links. Native edit/recompute checks, the 455-solid [STEP round trip](reports/verification/r14_assembly_export.json), and [AX0/AX1 pose exports](reports/animation/ax01_r14.json) pass; the [91-pose affected-pair spine-cycle screen](reports/verification/r14_motion_91.json) passes with neutral legs and wheel. The r13 shallow-fork/housing-wall trial failed neutral interference and remains preserved. See [r14 changes, evidence and limits](docs/24_clearance_corrected_reference_r14.md). Older native checkpoints and r10 animations remain preserved. Drawings/manual remain deferred; fabrication release remains blocked by unresolved physical interfaces and engineering assumptions.
+Editable **FreeCAD robot CAD**, coupled spine and compliant leg mechanisms, and **Blender animations** built from the CAD geometry and kinematics.
 
+This independent research reconstruction is inspired by **FLEXOR-F** from Wang et al., [*Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*](https://doi.org/10.1126/sciadv.aed5603), *Science Advances* **12**(39), eaed5603 (2026). The paper, supplementary kinematic diagrams, and Movies S1/S2 guide the design. This repository contains our reconstruction and engineering assumptions; it is not the authors' original CAD or a validated reproduction of their experimental performance.
 
-**Animation update:** the [r14 spine–leg coordination video](animation/output/spine_leg_coordination_s2_r14.mp4) is complete: 25 seconds at 1080p/60 fps, with moving legs and labelled illustrative body motion. [Release QA](reports/animation/spine_leg_coordination_s2_r14_qa.json) passes with documented limits. The earlier r10 technical videos and Movie S2-inspired cut remain preserved. See [animation reproduction and evidence](animation/README.md). Manufacturing drawings and release work remain deferred.
+**Latest checkpoint: r14 · 14 October 2026 · Research CAD candidate**
 
-A FreeCAD project for a manufacturable, editable active-spine quadruped inspired by **FLEXOR-F** in Wang et al., *Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy*, Science Advances 12, eaed5603 (2026).
+## Spine–leg coordination
 
-**Historical recovery baseline (r01–r02).** Installed FreeCAD MCP execution and an exploratory editable whole robot exist. The exploratory r01 model is superseded because its spine packaging and output geometry diverge from the source. Recovery is on `fix/flexor-reference-fidelity`; see [the morphology audit](docs/10_reference_morphology_and_recovery.md). Numerical closure is separate from physical clearance and fabrication readiness.
+[![R14 quadruped: coupled spine, moving forelegs and hind legs, and illustrative body motion](docs/media/spine_leg_coordination_r14.gif)](animation/output/spine_leg_coordination_s2_r14.mp4)
 
-The historical r02 corrected spine is [flexor_r02_spine.FCStd](cad/flexor_r02_spine.FCStd), with [STEP exports](exports/step/r02/) and [slider-plate source reconciliation](reports/source_review/slider_plate_reconciliation.md). Its fixed guide plates now connect C1 to A2 and C2 to A1 through tall contoured ears, as shown in the paper and Movie S2. Exact fit, liner retention and manufacturer mounting interfaces remain provisional.
+The looping GIF shows one complete cycle of the latest r14 design. **Both the spine and legs move.** The full [25-second, 1080p/60-fps video](animation/output/spine_leg_coordination_s2_r14.mp4) includes whole-robot and mechanism close-ups in a Movie S2-inspired studio presentation.
 
-The initial target is a desktop-scale research prototype, approximately **110 × 99 × 84 mm**, with a **338 g reference mass**. These are source-prototype targets, not promised dimensions or performance of the eventual design. See the source definitions in [the reference evidence](docs/01_reference_evidence.md).
+Motion is **illustrative kinematics**: approximately 69° of full hip excursion, separately prescribed 20° knee excursion, independent winding-wheel motion, and prescribed body pitch/translation. It is not a dynamics simulation or a prediction of ground contact, speed, or running performance. Springs regenerate from their anchors; cable graphics show routing, with loaded slack shape unresolved. See [motion assumptions and reproduction](animation/README.md) and [video verification](reports/animation/spine_leg_coordination_s2_r14_qa.json).
 
-## Start here
+## Latest CAD design
 
-1. Read [AGENTS.md](AGENTS.md).
-2. Read the [project specification](docs/00_project_specification.md) and [reference evidence](docs/01_reference_evidence.md).
-3. Follow the [development plan](docs/07_development_plan.md).
-4. For local CAD development, connect to the **installed FreeCAD MCP server** and complete its documented sanity round trip before modeling. See the [FreeCAD workflow](docs/05_freecad_mcp_workflow.md).
-5. Keep evidence and completion claims aligned with the [acceptance criteria](docs/06_verification_and_acceptance.md).
+![R14 assembled FreeCAD robot with compact central frame and distinct foreleg and hind-leg assemblies](docs/media/robot_assembled_r14.png)
 
-The lead agent is the sole writer to the live FreeCAD document. Subagents may independently research components, derive/check mathematics, and write assigned source modules, then hand their work to the lead for serial integration.
+| Coupled spine and torso attachments | Organic A–B rocker |
+| :---: | :---: |
+| ![R14 coupled spine, oval slider guides and torso mounting plates](docs/media/spine_mechanism_r14.png) | ![R14 rocker with a single A eye and a fork only at B](docs/media/rocker_r14.png) |
 
-## Documentation map
+The current assembly has **455 physical component instances** and **108 source definitions**. The r14 revision narrows the central frame to a 78.8 mm transverse span, uses a connected lumbar frame, smooth rockers forked only at B, recessed B–C links, and rounded front/rear mounting profiles. Foreleg and hind-leg assemblies retain their distinct layouts.
 
-| Document | Purpose |
-|---|---|
-| [00 — Project specification](docs/00_project_specification.md) | Scope, architecture, requirements, parameters, decision ownership, and delivery contract |
-| [01 — Reference evidence](docs/01_reference_evidence.md) | Paper facts, exact provenance, source ambiguities, missing dimensions, and apparent equation inconsistencies |
-| [02 — Spine kinematics](docs/02_spine_kinematics.md) | Link graph, geometric solver, assembly branches, derivatives, transmission, and redundant drive |
-| [03 — Leg, cable, and spring kinematics](docs/03_leg_cable_spring_kinematics.md) | Three-segment legs, coupling, routed cables, unilateral constraints, and elastic elements |
-| [04 — Components and manufacturing](docs/04_components_and_manufacturing.md) | Supplier interfaces, process choices, tolerances, load screening, and mass properties |
-| [05 — FreeCAD MCP workflow](docs/05_freecad_mcp_workflow.md) | Required MCP use, native editability, assembly implementation, scripts, and exports |
-| [06 — Verification and acceptance](docs/06_verification_and_acceptance.md) | Meaningful gates, evidence requirements, tolerances, and completion levels |
-| [07 — Development plan](docs/07_development_plan.md) | Dependency order, parallel work, first deliverable, and progress recording |
-| [08 — Agent orchestration](docs/08_agent_orchestration.md) | Model/effort defaults, cheaper workers, escalation rules, and live-session ownership |
-| [09 — Codex start prompt](docs/09_codex_start_prompt.md) | Ready-to-copy development request that refers to the specifications and requires actual MCP execution |
-| [10 — Morphology and recovery](docs/10_reference_morphology_and_recovery.md) | Source comparison, preserved r01 work and spine-first correction controls |
-| [20 — Animation and visualisation](docs/20_animation_and_visualisation_pipeline.md) | Stable physical-instance IDs, CAD-to-Blender geometry/pose contract, procedural spring/cable geometry, and later video pipeline |
-| [Reference files](references/README.md) | Original PDF names, hashes, and local setup after cloning |
+| Mechanical feature | Implementation |
+| --- | --- |
+| Spine | Two coupled sagittal outputs driven through one closed linkage/slider mechanism |
+| Spine actuation | 2 × DYNAMIXEL **XL330-M077-T**, synchronized redundant drive |
+| Leg actuation | 5 × DYNAMIXEL **XC330-M181-T**: four proximal joints and one shared hind-knee winding wheel |
+| Coordinates | **7 physical motors, 6 commanded coordinates**, with passive/prescribed knee states represented separately |
+| Legs | Four three-segment compliant legs, tension/compression springs, and bilateral hind-leg cable routing |
+| CAD-to-animation interface | Stable instance IDs, separate source geometry, explicit local-to-world transforms, and procedural spring/cable geometry |
 
-## Mechanical baseline
+The animation consumes the verified CAD mechanism and its closure solution. It does not replace the mechanism with independently posed decorative links.
 
-- Three torso segments and two sagittal spine output joints.
-- One cyclic spine coordinate realized by a closed linkage/slider mechanism.
-- Two synchronized, redundant spine motors.
-- Four separately actuated proximal leg joints.
-- One common winding-wheel motor for both hind knees.
-- Three-segment compliant legs with tension and compression springs.
-- **Seven physical servos; six nominal commanded coordinates**, plus passive elastic coordinates.
+## Open the model
 
-The angular relation `psi1 + psi2 = pi` is a synthesis objective, not an exact extra assembly constraint. The supplement reports a 9.29-degree maximum symmetry discrepancy. Numerical link closure, manufacturing tolerances, and this symmetry discrepancy must be treated separately.
+```bash
+git clone https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD.git
+cd Active_spine_quadruped_robot_CAD
+```
 
-## Use after cloning
+Open [**cad/flexor_r14_robot.FCStd**](cad/flexor_r14_robot.FCStd) in FreeCAD for the native editable assembly. Use [**exports/step/r14/flexor_r14_robot.step**](exports/step/r14/flexor_r14_robot.step) for CAD exchange. Start with these r14 files; older revisions and unsuccessful trials are retained for traceability.
 
-Open Codex in this repository. The local machine's existing FreeCAD MCP configuration remains the connection authority; a repository clone does not install or connect that server.
+The animation files use Blender 5.2.2 LTS. Large `.blend` scenes and render caches are kept local and ignored by Git; tracked meshes, motion samples, configuration and scripts support regeneration. See [the animation guide](animation/README.md) for the installed MCP workflow, scene building, rendering and verification. Viewing the GIF or MP4 does not require either application.
 
-Paste the [Codex start prompt](docs/09_codex_start_prompt.md) to begin development. Keep detailed requirements in the linked documents as they evolve.
+CAD uses millimetres and a right-handed robot frame: **+X forward, +Y left, +Z up**. Animation meshes and translations use metres; conversion and instance transforms are applied once at the export boundary.
 
-Place your copies of the paper and supplement in `references/` using the names in [references/README.md](references/README.md). The documentation records the reviewed evidence and equations, so work on planning, software structure, and explicitly assumed geometry can proceed before those local copies are available. Source-visual checks must remain incomplete until the PDFs or the corresponding verified source figures have actually been inspected.
+## Verification and remaining work
 
-Recommended base model: **GPT-6.1 Sol, high reasoning**. Use **GPT-6 Luna, high reasoning** for bounded routine work. Current model availability must be checked in the local client. Detailed rules and optional configuration examples are in [08](docs/08_agent_orchestration.md).
+The following checks were executed for r14:
 
-## Expected future outputs
+| Check | Recorded result |
+| --- | --- |
+| Native editability and recompute | Passed saved-file reopen, forced recompute and parameter edit/restore probes |
+| STEP exchange | 455 valid closed solids matched one-to-one |
+| AX0/AX1 animation interface | All 455 instances mapped; neutral plus two non-neutral poses; rotations and source-to-world transforms verified |
+| Spine-cycle clearance screen | 91 sampled phases at 4° intervals; affected pairs checked with legs and wheel held neutral |
+| Coordination animation | Saved-scene, transform, spring/cable, leg articulation, framing and full video decode checks passed; nine coordinated phases screened for affected-pair clearance |
 
-The development plan calls for native `.FCStd` documents, reproducible Python/macros and parameters, STEP assembly and custom parts, applicable print/profile exports, dimensioned drawings, BOM, assembly instructions, and verification evidence. Native exploratory checkpoints and source/verification scripts are present. Corrected CAD, export and drawing acceptance must be established by the revision-specific reports; the exploratory checkpoints are not manufacturing deliverables.
+Evidence: [r14 CAD checkpoint](reports/verification/r14_checkpoint_summary.json), [design changes and limits](docs/24_clearance_corrected_reference_r14.md), [AX0/AX1](reports/animation/ax01_r14.json), and [coordination video QA](reports/animation/spine_leg_coordination_s2_r14_qa.json).
 
-The final CAD candidate should be assessed for manufacturability. Fabrication release, physical operation, endurance, and locomotion performance require their own evidence.
+**This is a research design candidate, not a fabrication release.** Finite pose checks do not establish continuous or loaded clearance. Exact supplier mounting/output datums, bearing fits and retention/thrust, strength/fatigue, central support stiffness, insertion/tool access, and physical spring/cable characterization remain unresolved. A complete rebuild through the historical source chain is also not yet qualified. Manufacturing drawings and assembly documentation are deferred; no hardware locomotion performance is claimed.
+
+## Repository guide
+
+| Path | Contents |
+| --- | --- |
+| [`cad/`](cad/) | Native FreeCAD checkpoints; r14 is current |
+| [`src/`](src/) | Part generation, mechanism solvers, pose/export adapters and verification helpers |
+| [`parameters/`](parameters/) | Versioned dimensions, component interfaces and explicit assumptions |
+| [`exports/step/r14/`](exports/step/r14/) | Latest STEP exchange model |
+| [`animation/`](animation/) | Blender builders, source meshes, motion data, videos and reproduction guide |
+| [`docs/`](docs/) | Specification, source interpretation, kinematics, workflow and acceptance criteria |
+| [`reports/`](reports/) | Revision-specific checks, failures, screenshots and provenance |
+| [`references/`](references/) | Source citation and attributed reference stills; original PDFs/videos are not bundled |
+| [`docs/media/`](docs/media/) | Lightweight README previews and their source/hash manifest |
+
+For development, read [AGENTS.md](AGENTS.md), [the specification](docs/00_project_specification.md), [reference evidence](docs/01_reference_evidence.md), [spine kinematics](docs/02_spine_kinematics.md), [leg/cable/spring kinematics](docs/03_leg_cable_spring_kinematics.md), and [the development plan](docs/07_development_plan.md). Follow the [FreeCAD MCP workflow](docs/05_freecad_mcp_workflow.md), [agent ownership rules](docs/08_agent_orchestration.md), and [animation interface contract](docs/20_animation_and_visualisation_pipeline.md). The lead exclusively owns the live CAD session; reviewers and workers use assigned files and static evidence.
+
+README media can be regenerated from existing verified screenshots and the r14 MP4, without opening FreeCAD or Blender:
+
+```bash
+python3 animation/blender/build_readme_media.py
+```
+
+This uses Pillow and local FFmpeg/FFprobe. Source and output hashes, GIF timing and decode checks are recorded in [the media manifest](docs/media/manifest_r14.json).
+
+## Inspiration and citation
+
+Please credit the original research when discussing the FLEXOR mechanism:
+
+> Ruochao Wang, Weitao Zhang, Xiaolong Quan, Rongjie Du, Zhenshan Bing, Gang Wang, Jian Sun, Zhiqiang Yu, and Qing Shi. **Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy.** *Science Advances* **12**(39), eaed5603, 25 September 2026. DOI: [10.1126/sciadv.aed5603](https://doi.org/10.1126/sciadv.aed5603).
+
+[Publisher article and supplementary materials](https://www.science.org/doi/10.1126/sciadv.aed5603) · [PubMed record](https://pubmed.ncbi.nlm.nih.gov/42789728/) · [BibTeX](references/flexor_paper.bib) · [Local source setup and provenance](references/README.md)
+
+The README previews are generated from this project's r14 CAD and Blender outputs. Third-party paper/movie reference stills and the ROBOTIS reference image have separate attribution and notices in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No project-wide open-source license has been selected yet; public visibility does not assign a new license to this work or to third-party material.
