@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-14",
+  "revision": "r14",
+  "status": "CAD_CANDIDATE_VERIFIED_WITH_FINITE_SCOPE",
+  "implementation_commit": "470e6b9",
+  "primary_cad_interface": "Installed FreeCAD MCP; exclusive lead ownership",
+  "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "artifacts": {
+    "cad/flexor_r14_robot.FCStd": {
+      "bytes": 8596980,
+      "sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87"
+    },
+    "exports/step/r14/flexor_r14_robot.step": {
+      "bytes": 9815588,
+      "sha256": "c76607167ddab759f1560d21a82032aee877a64b3b95e3f187eacb7de09ce7f9"
+    },
+    "parameters/assembly_r14.json": {
+      "bytes": 19254,
+      "sha256": "75821051074baf6c5da164f3ac073be164b6c3ef87a1191b125d0e34cf757710"
+    },
+    "animation/schema/grounded_instances_r14.json": {
+      "bytes": 1541,
+      "sha256": "e7373878e96c84e398ab9732438c1d8466b81c3d480749eb653445c782cc6dd3"
+    },
+    "animation/motion/ax01_r14.json": {
+      "bytes": 1948816,
+      "sha256": "20773f23041131a72342f8e278fbc3a56761e6461865ff1603ea026a7454010a"
+    },
+    "reports/verification/r14_integration.json": {
+      "bytes": 23944,
+      "sha256": "c41839fa81613fed9706d18d4d4c51970e0c0a692f0bdcffbf13fe9bbbe6e3bd"
+    },
+    "reports/verification/r14_identity.json": {
+      "bytes": 20439,
+      "sha256": "2093673e4d1b7dca933b43c1cb87e4ca2c613994d41d2cb32cc3de5709f03b26"
+    },
+    "reports/verification/r14_sections_s9.json": {
+      "bytes": 9501,
+      "sha256": "8e10414d55368508e93a232d108df52242d8a17101e1f73386d856fa42a20899"
+    },
+    "reports/verification/r14_native_checks.json": {
+      "bytes": 26348,
+      "sha256": "f65ad4dc31830abde47894814c9fcad5e14648f2b864bf10b7b35431ed10f18b"
+    },
+    "reports/verification/r14_assembly_export.json": {
+      "bytes": 1871193,
+      "sha256": "9486c416832cfa0a6d46cc551e074e477e15121e47e172892f3c6c003c577007"
+    },
+    "reports/verification/r14_motion_91.json": {
+      "bytes": 430290,
+      "sha256": "d7fd3ded2542b6a6dec85f510f7a1445f37d56cd0e5cf9a061a9d97c285c382c"
+    },
+    "reports/animation/ax01_r14.json": {
+      "bytes": 405073,
+      "sha256": "c94c4888235081e511e3792ba68762366e5fa78c0de5dccbfc121843e561a9aa"
+    },
+    "reports/views/r14_reference_capture_manifest.json": {
+      "bytes": 44242,
+      "sha256": "c33845fb7f97cd51a80eea7489dedaf9f1b0a24ce696a86ed993b1999ce2fca8"
+    },
+    "reports/reviews/r14/integration_evidence_review.json": {
+      "bytes": 2002,
+      "sha256": "1d139b71cf12f88044c9ebc96d896699c65157c6d179ff7d14273d2a8ea47e05"
+    }
+  },
+  "physical_instances": 455,
+  "source_definitions": 108,
+  "migration": {
+    "baseline_r10": 487,
+    "retired": 40,
+    "new": 8,
+    "surviving_stable_ids": 447,
+    "strictly_unchanged_geometry": 378,
+    "changed_existing": 69
+  },
+  "gates": {
+    "native_reopen_forced_recompute_and_three_edit_restore_probes": "PASS",
+    "local_sections_and_neutral_S9_axes": "PASS_BOUNDED_LOCAL_PROBES_ONLY",
+    "assembly_STEP_455_solids_strict_roundtrip": "PASS",
+    "AX0": "PASS",
+    "AX1_neutral_plus_two_non_neutral": "PASS",
+    "affected_finite_motion": {
+      "status": "PASS_AFFECTED_FINITE_ONLY",
+      "spine_phases": 91,
+      "phase_step_deg": 4,
+      "legs": "stored neutral",
+      "wheel_angle_rad": 0,
+      "affected_pairs_each": 32032,
+      "completed_pair_decisions": 2914912,
+      "decision_counts": {
+        "bbox": 2858552,
+        "occ": 49136,
+        "cached": 7224
+      },
+      "collisions": 0,
+      "guide_warnings": 0,
+      "errors": 0
+    },
+    "full_historical_source_rebuild": "INCOMPLETE_RUNTIME_STALL_AT_R04",
+    "continuous_clearance": "NOT_VERIFIED",
+    "fabrication_release": "BLOCKED"
+  },
+  "animation_interface": {
+    "source_to_world": "VERIFIED; LinkTransform=false; identity source/shape placements; one source-local placement",
+    "maximum_reprojection_error_mm": 9.77480602571575e-14,
+    "commanded_coordinates": 6,
+    "physical_motors": 7,
+    "prescribed_knees": 4,
+    "procedural_deforming_instances": 10,
+    "loaded_passive_response": "NOT_SOLVED",
+    "current_r14_Blender_meshes_scene_and_videos": "NOT_PRODUCED; existing videos remain r10"
+  },
+  "engineering_limits": [
+    "Qualitative video morphology reconstruction; exact sections and offsets remain design assumptions.",
+    "Central-E-only frame/clevis stiffness, shaft bending and bearing reactions unverified.",
+    "Supplier mounting/output interfaces, bearing fits/thrust/retention and clip/groove standards provisional.",
+    "B-stack0.6 mm axial gap needs intentional float/race-capture decision.",
+    "Strength/fatigue, assembly insertion/tool access and physical cable/spring behavior unqualified.",
+    "Superseded central_attachment_r10.outer_E_supports text is historical; final center_frame_r12.E_support_ownership and executed migration govern.",
+    "Finite affected-pair sampling with neutral legs/wheel does not certify continuous or complete coordinated-gait clearance."
+  ],
+  "deferred": [
+    "Drawings/manual and fabrication package",
+    "Full historical clean source build qualification",
+    "Controlled legacy metadata cleanup and new dependent evidence freeze",
+    "r14 local meshes/Blender import, complete animation export and rerendering"
+  ]
+}
