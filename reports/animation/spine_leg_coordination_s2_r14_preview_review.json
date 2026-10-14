@@ -1,0 +1,32 @@
+{
+  "status": "PASS_LEAD_PREVIEW_REVIEW",
+  "blend_sha256": "7f2b5b7455e9019bd808e99631f3bb974e9142a57f5417d95112b06d6559cda5",
+  "preview_frames": [
+    1,
+    26,
+    51,
+    76,
+    451,
+    801,
+    1171,
+    1411
+  ],
+  "inspected_corrected_frames": [
+    1,
+    451
+  ],
+  "previous_preview_inspection": [
+    801,
+    1171
+  ],
+  "findings": [
+    "Updated one-ended organic forks and center frame are visible in the spine shot.",
+    "Whole robot fits the overview; macro crops are intentional and match declared framing groups.",
+    "Leg articulation is visible and separately verified relative to each torso.",
+    "Warm floor, shadows, labels and persistent illustrative-kinematics caption are readable."
+  ],
+  "limits": [
+    "Static preview inspection; final decoded contact/adjacent-frame review pending."
+  ],
+  "preview_render_signature_sha256": "000f5c2d987cdfedefa52c7291b3e28e9a768e972647f73ee1055ea54f02263c"
+}

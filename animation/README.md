@@ -1,4 +1,41 @@
-# r10 animation package
+# FLEXOR animation package
+
+## r14 coordination update — 2026-10-14
+
+The user requested regeneration with the current r14 design. The versioned output is `output/spine_leg_coordination_s2_r14.mp4`, with editable standalone project `scenes/spine_leg_coordination_s2_r14.blend`. **Production rendering is in progress; video QA is not yet complete.** Older r10 scenes/videos and their evidence remain unchanged.
+
+The new cut consumes the SHA-pinned `cad/flexor_r14_robot.FCStd`: 455 physical instances and 108 source definitions, including the compact frame, organic A–B rockers forked only at B, revised torso mounting profiles and recessed B–C links. All 108 current source geometries passed strict comparison with saved BReps extracted from the canonical native file. Twenty raw serialization hashes differed from the AX01 header on the disposable export document; the original AX01 header remains intact and these differences are recorded alongside strict geometry identity. No CAD source geometry, placement, parameter, or native file was changed.
+
+The existing paper-informed v2 trajectory is retained: approximately 68.75 degrees of full hip excursion, separately prescribed 20-degree full knee excursion, and independent 0–90-degree wheel motion. The 20-second source timeline has 1,201 solver-evaluated samples at 60 fps. The studio cut uses stride three to display 0.6 Hz for 25 seconds, with the previously authorized illustrative body pitch/translation and a persistent kinematic caption. Springs and cables have 300 baked procedural states per instance; cable slack remains a schematic dashed route, not a solved physical shape.
+
+Actual pre-render checks pass: 455 separately identified instances and 98 rigid source meshes in saved-scene readback, shared rigid definitions, all 3,000 procedural shape samples, evaluated procedural surfaces, root-relative transforms, 1,500-frame floor/framing checks, and all four torso-relative leg articulations. A separate nine-phase screen checks 32,032 affected pairs per phase (288,288 decisions) with zero overlaps/warnings/errors. This is bounded changed-pair evidence; the neutral-leg r14 cycle screen and earlier r10 evidence do not certify continuous or complete coordinated-gait clearance. Mechanical fabrication blockers remain unchanged.
+
+Blender's read-only absolute shape-key times accumulate float32 increments. The new builders bake `eval_time` from each stored `key.frame` value, rather than an assumed exact integer time grid. Readback verifies the stored-time convention, all key geometry, and evaluated procedural mesh error (maximum about 9.32e-9 m). The initial strict time-grid failure is retained in `reports/animation/spine_leg_coordination_s2_r14_readback_initial_keytime_failure.json`.
+
+### Reproduce r14
+
+Only the lead operates the live CAD/MCP session. Use a byte-identical disposable copy at `reports/tmp/r14_animation/flexor_r14_robot.FCStd` or the unchanged canonical document. Through installed FreeCAD MCP, import `src/animation_coordination_r14.py` and call `run(doc)`. It exports `geometry/r14/`, `motion/coordinated_spine_legs_r14.jsonl.gz` and `motion/production_coordination_r14.json`, with native/snapshot preservation guards. Validate with `python src/animation_production_validate.py animation/motion/production_coordination_r14.json`.
+
+Through installed Blender MCP, add `animation/blender` to `sys.path`, import and call `build_coordination_r14.build()`. Package the saved source library in a separate process:
+
+```bash
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_r14.blend --python animation/blender/package_scene.py -- spine_leg_coordination_r14
+```
+
+Then call `build_coordination_s2_r14.build()` through Blender MCP and package the studio scene:
+
+```bash
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_s2_r14.blend --python animation/blender/package_scene.py -- spine_leg_coordination_s2_r14
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_s2_r14.blend --python animation/blender/verify_coordination_s2_r14.py
+```
+
+For articulation readback, reuse `verify_leg_articulation` in a fresh process with `SCENE_NAME='spine_leg_coordination_r14'` and report path `reports/animation/leg_articulation_r14.json`. The nine-pose supplemental FreeCADCmd screen calls `animation_coordination_screen_r14.run(canonical_path)`; it never saves or mutates the live document.
+
+Use generic `render_frames.py --scene spine_leg_coordination_s2_r14 --preview --frames 1 26 51 76 451 801 1171 1411` for hash-named preview frames. After lead visual review and matching saved-scene readback, `python animation/blender/render_coordination_r14.py` resumes rendering with one GPU process, encodes H.264/yuv420p, and fully decodes the output. Large scenes and PNG caches remain local/ignored; new geometry/motion assets, final MP4 and compact evidence are tracked.
+
+For decoded review, run `python animation/blender/video_review_coordination_r14.py --shot spine_leg_coordination_s2_r14 --events animation/review_events_r14.json --output-dir reports/animation/previews/r14_video_review`, followed by `python animation/blender/review_r14_sequences.py`. Lead inspection supplies the versioned visual/adjacent acceptance records. `python animation/blender/final_report_coordination_r14.py` fails closed until the full hash/readback/render/decode/visual/clearance/articulation chain passes. Its final release record is `reports/animation/spine_leg_coordination_s2_r14_qa.json`.
+
+## Historical r10 package
 
 The user authorized AX2–AX4 on 2026-10-13. Mechanical development remains at the verified r10 checkpoint; animation consumes that geometry and its existing motion interfaces. Source commit: `ddf84ab`. Work branch: `animation/flexor-r10-videos`.
 
