@@ -1,0 +1,16 @@
+{
+  "status": "PASS_LEAD_SAMPLED_VISUAL_REVIEW",
+  "review_date": "2026-10-14",
+  "video_sha256": "24d34c024ba5b6d251e9ff91100ce70edb0e208b73c03cacfe61de98b9f6ad45",
+  "decoded_representative_frames": 12,
+  "contact_sheet": "reports/animation/spine_leg_coordination_s2_r14_contact_sheet.png",
+  "contact_sheet_sha256": "fc128dc2da3060d2058fe85317401617e7fead5678b51b65670dbf6e07f3ffec",
+  "findings": [
+    "Updated r14 compact frame, one-ended organic fork geometry and mounting profiles appear in the decoded spine views.",
+    "Leg motion is visible across overview samples; all four torso-relative articulations are independently verified.",
+    "Warm studio presentation, floor shadows, camera labels and persistent illustrative-kinematics caption are retained.",
+    "Overview shots contain the complete robot; unrelated modules/toes may be intentionally cropped in mechanism detail shots.",
+    "No black-frame or stale-design candidate found in reviewed samples."
+  ],
+  "scope": "Lead inspection of12 representative decoded frames and full-resolution preview shots; full stream decoding verified separately, not a claim of inspecting every frame."
+}

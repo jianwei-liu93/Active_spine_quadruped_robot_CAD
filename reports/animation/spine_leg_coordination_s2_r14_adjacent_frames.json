@@ -1,0 +1,74 @@
+{
+  "decoded_samples": [
+    {
+      "event": "body/joint cycle seam",
+      "seconds": 1.6500000003333335
+    },
+    {
+      "event": "body/joint cycle seam",
+      "seconds": 1.666666667
+    },
+    {
+      "event": "body/joint cycle seam",
+      "seconds": 1.6833333336666667
+    },
+    {
+      "event": "spine shot cut",
+      "seconds": 5.983333333333333
+    },
+    {
+      "event": "spine shot cut",
+      "seconds": 6.0
+    },
+    {
+      "event": "spine shot cut",
+      "seconds": 6.016666666666667
+    },
+    {
+      "event": "hind shot cut",
+      "seconds": 11.983333333333333
+    },
+    {
+      "event": "hind shot cut",
+      "seconds": 12.0
+    },
+    {
+      "event": "hind shot cut",
+      "seconds": 12.016666666666667
+    },
+    {
+      "event": "fore shot cut",
+      "seconds": 17.983333333333334
+    },
+    {
+      "event": "fore shot cut",
+      "seconds": 18.0
+    },
+    {
+      "event": "fore shot cut",
+      "seconds": 18.016666666666666
+    },
+    {
+      "event": "overview return",
+      "seconds": 21.983333333333334
+    },
+    {
+      "event": "overview return",
+      "seconds": 22.0
+    },
+    {
+      "event": "overview return",
+      "seconds": 22.016666666666666
+    }
+  ],
+  "video_sha256": "24d34c024ba5b6d251e9ff91100ce70edb0e208b73c03cacfe61de98b9f6ad45",
+  "visual_acceptance": "PASS",
+  "status": "PASS_LEAD_ADJACENT_REVIEW",
+  "review_date": "2026-10-14",
+  "findings": [
+    "Three adjacent decoded frames around the1.6667 s cycle seam show natural pose progression without an apparent reset jump.",
+    "Hard camera cuts at6,12,18,22 s match the declared shot schedule.",
+    "Persistent kinematic caption remains visible around all sampled cuts."
+  ],
+  "scope": "15 decoded frames around five named events; not continuous-mechanical or dynamics qualification"
+}

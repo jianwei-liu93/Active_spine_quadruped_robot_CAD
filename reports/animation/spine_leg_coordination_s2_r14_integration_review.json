@@ -1,0 +1,27 @@
+{
+  "review_date": "2026-10-14",
+  "reviewer": "r12_width_stack_review, existing Sol/high session",
+  "scope": "Bounded independent static animation integration review; no live application writes, new mechanical design review or physical qualification",
+  "status": "PASS_WITH_BOUNDED_SCOPE",
+  "confirmed": [
+    "Canonical r14 SHA and455physical/108source inventory match.",
+    "Six commands, seven physical motors, four prescribed knees and ten procedural instances are retained.",
+    "All108source geometries pass strict canonical-file identity despite20raw serialization differences; AX01 source header remains unchanged.",
+    "Sampled timeline phase/hip calculations and mm-to-m conversion agree; readback supports exactly one presentation root."
+  ],
+  "finding": {
+    "description": "Final clearance acceptance initially did not explicitly bind the profile, inputs, phase IDs and empty overlap/error ledgers.",
+    "resolution": "Added exact profile/SHA and current frozen input hash checks, ordered phase/count and preservation guards, actual input coordinates/digests and empty overlap/error/guide-warning gates. Current report passes288288 decisions and2362 frozen input checks."
+  },
+  "evidence_sha256": {
+    "reports/animation/production_coordination_r14.json": "c73b1fc398f1c7737591afe959a55fdb16d9743681d505cb599a990620d9c729",
+    "reports/animation/coordination_r14_changed_clearance.json": "71e1ac515a9098297c96407b97c5ac108023df05a9c9d9aa47413cafe415dec3",
+    "reports/animation/leg_articulation_r14.json": "e7fa054e98ef367e662abe5a56cd33babe44b9e464a0426d3e02b2698a9dbd53",
+    "reports/animation/spine_leg_coordination_s2_r14_readback.json": "3c495e701523ec702afa21fe65b302184a71143df7700361261c5f48c80d4861",
+    "animation/blender/final_report_coordination_r14.py": "27bf6d3db5bfba87f4fdf486dc29a6c631d989e06c5b030cfb386bc9387e293a"
+  },
+  "limits": [
+    "Independent review covered static inputs/verification chain. Lead decoded visual review and complete stream decode are separate release evidence.",
+    "No dynamics, continuous-clearance or fabrication qualification."
+  ]
+}

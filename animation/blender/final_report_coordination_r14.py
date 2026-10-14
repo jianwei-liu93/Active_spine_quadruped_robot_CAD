@@ -190,7 +190,8 @@ def validate_leg_articulation(report: dict[str, Any], manifest: dict[str, Any],
     return {"status": "PASS", "legs": measured, "evidence": LEG_ARTICULATION}
 
 
-def validate_changed_clearance(clearance: dict[str, Any], cad_sha: str) -> dict[str, Any]:
+def validate_changed_clearance(clearance: dict[str, Any], cad_sha: str,
+                               manifest: dict[str, Any]) -> dict[str, Any]:
     phase_samples = clearance.get("phase_samples_deg")
     records = clearance.get("records")
     scope = clearance.get("scope")
@@ -211,6 +212,49 @@ def validate_changed_clearance(clearance: dict[str, Any], cad_sha: str) -> dict[
             clearance.get("full_campaign") is False and
             clearance.get("loaded_equilibrium") is False,
             "Changed-pair r14 clearance evidence does not match its native identity, scope, or 9-phase counts")
+    require(phase_samples == [0, 18, 90, 135, 180, 198, 240, 270, 330] and
+            [row.get('phase_deg') for row in records] == phase_samples and
+            clearance.get('phases_completed') == 9 and
+            clearance.get('overlaps') == [] and clearance.get('errors') == [] and
+            all(row.get('status') == 'PASS' and row.get('overlaps') == [] and
+                row.get('guide_warnings') == [] and row.get('physical_instances') == 455 and
+                row.get('valid_single_finite_solids') == 455 and
+                row.get('bbox_excluded', -1) + row.get('occ_checks', -1) == pair_count
+                for row in records), 'Incomplete, failed or reordered clearance phase evidence')
+    require(all(clearance.get(key) is True for key in
+                ('native_file_unchanged', 'input_files_unchanged', 'document_unchanged', 'source_shapes_unchanged')) and
+            clearance.get('fabrication_release') is False,
+            'Clearance input preservation or qualification scope differs')
+    profile_path = 'animation/coordination_paper_profile_v2.json'
+    profile = manifest['production']['paper_motion_profile']
+    require(clearance.get('profile') == profile == read_json(profile_path) and
+            clearance.get('profile_sha256') == sha256(profile_path),
+            'Clearance motion profile differs from production')
+    frozen = clearance.get('input_files_sha256', {})
+    require(bool(frozen) and frozen.get(profile_path) == clearance['profile_sha256'],
+            'Clearance frozen-input manifest is missing')
+    for rel, expected in frozen.items():
+        pinned_file(rel, expected, 'Clearance input')
+    neutral = manifest['frames'][0]['leg_angles_rad']
+    for row in records:
+        cycle = math.tau * profile['presentation_frequency_hz'] * (row['phase_deg'] / (360 * .2))
+        expected_theta = cycle + profile['spine_phase_origin_rad']
+        lag = profile['hind_backswing_lag_rad']
+        expected_wheel = math.radians(45 + 45 * math.cos(cycle - lag))
+        require(abs(row['theta_rad'] - expected_theta) <= 1e-12 and
+                abs(row['wheel_angle_rad'] - expected_wheel) <= 1e-12,
+                'Clearance spine/wheel input differs from the production profile')
+        for tag, q in neutral.items():
+            fore = tag.startswith('fore')
+            signal = math.cos(cycle - lag + (profile['fore_phase_offset_rad'] if fore else 0.))
+            hip = math.radians(profile['hip_cad_midpoints_deg']['fore' if fore else 'hind']) - profile['hip_half_excursion_rad'] * signal
+            knee = q[1] + math.radians(profile['knee_half_excursion_deg']) * signal
+            require(max(abs(a - b) for a, b in zip(row['leg_angles_rad'][tag], (hip, knee))) <= 1e-12,
+                    'Clearance leg input differs from the production profile')
+        payload = json.dumps([row['theta_rad'], row['leg_angles_rad'], row['wheel_angle_rad']],
+                             sort_keys=True, allow_nan=False, separators=(',', ':')).encode()
+        require(hashlib.sha256(payload).hexdigest() == row.get('input_sha256'),
+                'Clearance phase input digest differs')
     return {
         "status": clearance["status"],
         "phase_samples_deg": phase_samples,
@@ -220,6 +264,8 @@ def validate_changed_clearance(clearance: dict[str, Any], cad_sha: str) -> dict[
         "continuous_clearance": False,
         "full_campaign": False,
         "loaded_equilibrium": False,
+        "profile_sha256": clearance['profile_sha256'],
+        "frozen_inputs_checked": len(frozen),
     }
 
 
@@ -329,7 +375,7 @@ def main() -> None:
             "Readback lacks its 100 representative relative-pose checks")
     clearance_path = CLEARANCE
     clearance = read_json(clearance_path)
-    clearance_evidence = validate_changed_clearance(clearance, cad_sha)
+    clearance_evidence = validate_changed_clearance(clearance, cad_sha, manifest)
     articulation_report = read_json(LEG_ARTICULATION)
     require(Path(articulation_report.get('blend_path', '')).resolve() == (ROOT / presentation['source_scene_path']).resolve() and
             articulation_report.get('blend_sha256') == presentation['source_scene_sha256'],
