@@ -1,4 +1,4 @@
-# FLEXOR-inspired active-spine quadruped
+# FLEXOR-inspired active-spine quadruped model
 
 Editable **FreeCAD robot CAD**, coupled spine and compliant leg mechanisms, and **Blender animations** built from the CAD geometry and kinematics.
 
@@ -92,23 +92,20 @@ This uses Pillow and local FFmpeg/FFprobe. Source and output hashes, GIF timing 
 
 If this repository's CAD models, code, documentation, or animations help your work, please cite this project:
 
-> Jianwei Liu (2026). **FLEXOR-inspired active-spine quadruped: FreeCAD CAD and Blender animations** (r14; commit `e58676a`) [CAD models, software, and animations]. GitHub. [Versioned repository](https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD/tree/e58676a433110ac3a26d8d52687fd551c0cc7b18).
+> Jianwei Liu (2026). **FLEXOR-inspired active-spine quadruped model**. GitHub. [Project repository](https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD).
 
 Use GitHub's **Cite this repository** button for APA or BibTeX, or download [CITATION.bib](CITATION.bib). The machine-readable metadata is in [CITATION.cff](CITATION.cff).
 
 ```bibtex
-@software{Liu2026FLEXORInspired,
+@misc{Liu2026FLEXORInspired,
   author = {Liu, Jianwei},
-  title = {{FLEXOR}-inspired active-spine quadruped: {FreeCAD} {CAD} and {Blender} animations},
+  title = {{FLEXOR}-inspired active-spine quadruped model},
   year = {2026},
-  month = {10},
-  version = {r14},
-  url = {https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD/tree/e58676a433110ac3a26d8d52687fd551c0cc7b18},
-  note = {Research CAD candidate; commit e58676a433110ac3a26d8d52687fd551c0cc7b18}
+  url = {https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD}
 }
 ```
 
-This citation identifies the current r14 checkpoint. If you use another revision, record its version and exact commit so readers can recover the same design. When updating the CAD checkpoint, update the version, date and commit in both citation files and this example. Credit the original paper below as well when discussing the FLEXOR mechanism.
+This citation refers to the project as a whole, across model revisions and software tools. Credit the original paper below as well when discussing the FLEXOR mechanism.
 
 ## Inspiration and original paper
 

@@ -1,16 +1,21 @@
 cff-version: 1.2.0
 message: >-
-  If you use this repository's CAD models, code, or animations, please cite
+  If you use this repository's models, code, documentation, or animations, please cite
   this work. Please also cite the original FLEXOR paper when discussing
   the mechanism that inspired the design; see the README.
 type: software
-title: "FLEXOR-inspired active-spine quadruped: FreeCAD CAD and Blender animations"
+title: "FLEXOR-inspired active-spine quadruped model"
 authors:
   - family-names: Liu
     given-names: Jianwei
     website: "https://github.com/jianwei-liu93"
-version: r14
-date-released: "2026-10-14"
-commit: e58676a433110ac3a26d8d52687fd551c0cc7b18
 repository-code: "https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD"
-url: "https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD/tree/e58676a433110ac3a26d8d52687fd551c0cc7b18"
+url: "https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD"
+preferred-citation:
+  type: generic
+  authors:
+    - family-names: Liu
+      given-names: Jianwei
+  title: "FLEXOR-inspired active-spine quadruped model"
+  year: 2026
+  url: "https://github.com/jianwei-liu93/Active_spine_quadruped_robot_CAD"
