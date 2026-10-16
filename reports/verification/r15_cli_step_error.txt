@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "src/run_checks_r15.py", line 25, in <module>
+    report=package_sculpted_r15.export_step(doc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/package_sculpted_r15.py", line 332, in export_step
+    raise RuntimeError("STEP export changed the native file or caller document")
+RuntimeError: STEP export changed the native file or caller document

@@ -1,0 +1,261 @@
+{
+  "status": "PASS_SAVED_BLENDER_PREVIEW",
+  "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "scene_path": "animation/scenes/r15_geometry_interoperability_preview.blend",
+  "scene_sha256": "50b469a29a9844f80f8bff9273a003e6285706b186b83178b645f290dcbd791d",
+  "instances": 455,
+  "sources": 108,
+  "changed_source_vertices": 6251,
+  "changed_source_triangles": 12598,
+  "maximum_source_mesh_coordinate_error_m": 3.635883330521672e-09,
+  "source_to_world_matrix_error": 1.3435885670709524e-07,
+  "maximum_source_to_world_vertex_error_mm": 1.4351653306602191e-05,
+  "matrix_precision": "Blender float32; matrix bound1e-6, actual vertex reprojection bound0.001mm",
+  "all_60_sample_framing": [
+    {
+      "source_frame": 1,
+      "minimum_normalized_image_margin": 0.11094219182613585
+    },
+    {
+      "source_frame": 6,
+      "minimum_normalized_image_margin": 0.11204840027661167
+    },
+    {
+      "source_frame": 11,
+      "minimum_normalized_image_margin": 0.11429970896808606
+    },
+    {
+      "source_frame": 16,
+      "minimum_normalized_image_margin": 0.11766459750567326
+    },
+    {
+      "source_frame": 21,
+      "minimum_normalized_image_margin": 0.11963814106415369
+    },
+    {
+      "source_frame": 26,
+      "minimum_normalized_image_margin": 0.12281157010814961
+    },
+    {
+      "source_frame": 31,
+      "minimum_normalized_image_margin": 0.1273505933987942
+    },
+    {
+      "source_frame": 36,
+      "minimum_normalized_image_margin": 0.13341851902498203
+    },
+    {
+      "source_frame": 41,
+      "minimum_normalized_image_margin": 0.13171079189214052
+    },
+    {
+      "source_frame": 46,
+      "minimum_normalized_image_margin": 0.1288042736280489
+    },
+    {
+      "source_frame": 51,
+      "minimum_normalized_image_margin": 0.12547175012443068
+    },
+    {
+      "source_frame": 56,
+      "minimum_normalized_image_margin": 0.12176151937978305
+    },
+    {
+      "source_frame": 61,
+      "minimum_normalized_image_margin": 0.11773270612994512
+    },
+    {
+      "source_frame": 66,
+      "minimum_normalized_image_margin": 0.11345357256993112
+    },
+    {
+      "source_frame": 71,
+      "minimum_normalized_image_margin": 0.10899967550502122
+    },
+    {
+      "source_frame": 76,
+      "minimum_normalized_image_margin": 0.10445098689934068
+    },
+    {
+      "source_frame": 81,
+      "minimum_normalized_image_margin": 0.09988840014146937
+    },
+    {
+      "source_frame": 86,
+      "minimum_normalized_image_margin": 0.09539054345153622
+    },
+    {
+      "source_frame": 91,
+      "minimum_normalized_image_margin": 0.09103063168099917
+    },
+    {
+      "source_frame": 96,
+      "minimum_normalized_image_margin": 0.08687331811242514
+    },
+    {
+      "source_frame": 101,
+      "minimum_normalized_image_margin": 0.08297239089835352
+    },
+    {
+      "source_frame": 106,
+      "minimum_normalized_image_margin": 0.07923528527377902
+    },
+    {
+      "source_frame": 111,
+      "minimum_normalized_image_margin": 0.07569413591655703
+    },
+    {
+      "source_frame": 116,
+      "minimum_normalized_image_margin": 0.07245459949748581
+    },
+    {
+      "source_frame": 121,
+      "minimum_normalized_image_margin": 0.06951156978937927
+    },
+    {
+      "source_frame": 126,
+      "minimum_normalized_image_margin": 0.0668495745399366
+    },
+    {
+      "source_frame": 131,
+      "minimum_normalized_image_margin": 0.06444880312338319
+    },
+    {
+      "source_frame": 136,
+      "minimum_normalized_image_margin": 0.06229278507759239
+    },
+    {
+      "source_frame": 141,
+      "minimum_normalized_image_margin": 0.06037729720714712
+    },
+    {
+      "source_frame": 146,
+      "minimum_normalized_image_margin": 0.058715661773954
+    },
+    {
+      "source_frame": 151,
+      "minimum_normalized_image_margin": 0.05734081970226626
+    },
+    {
+      "source_frame": 156,
+      "minimum_normalized_image_margin": 0.05629995560269836
+    },
+    {
+      "source_frame": 161,
+      "minimum_normalized_image_margin": 0.055645206742308446
+    },
+    {
+      "source_frame": 166,
+      "minimum_normalized_image_margin": 0.05542199166817294
+    },
+    {
+      "source_frame": 171,
+      "minimum_normalized_image_margin": 0.05566056381655238
+    },
+    {
+      "source_frame": 176,
+      "minimum_normalized_image_margin": 0.056371250819875804
+    },
+    {
+      "source_frame": 181,
+      "minimum_normalized_image_margin": 0.05746191023267964
+    },
+    {
+      "source_frame": 186,
+      "minimum_normalized_image_margin": 0.05886735127479841
+    },
+    {
+      "source_frame": 191,
+      "minimum_normalized_image_margin": 0.06071557516005527
+    },
+    {
+      "source_frame": 196,
+      "minimum_normalized_image_margin": 0.06297129901037478
+    },
+    {
+      "source_frame": 201,
+      "minimum_normalized_image_margin": 0.0655975890622003
+    },
+    {
+      "source_frame": 206,
+      "minimum_normalized_image_margin": 0.06855889368865713
+    },
+    {
+      "source_frame": 211,
+      "minimum_normalized_image_margin": 0.07182150411177984
+    },
+    {
+      "source_frame": 216,
+      "minimum_normalized_image_margin": 0.07535324726102742
+    },
+    {
+      "source_frame": 221,
+      "minimum_normalized_image_margin": 0.07912195006585881
+    },
+    {
+      "source_frame": 226,
+      "minimum_normalized_image_margin": 0.08309355821413812
+    },
+    {
+      "source_frame": 231,
+      "minimum_normalized_image_margin": 0.08723063883739576
+    },
+    {
+      "source_frame": 236,
+      "minimum_normalized_image_margin": 0.09149191979860119
+    },
+    {
+      "source_frame": 241,
+      "minimum_normalized_image_margin": 0.0958329039751326
+    },
+    {
+      "source_frame": 246,
+      "minimum_normalized_image_margin": 0.10014355793003225
+    },
+    {
+      "source_frame": 251,
+      "minimum_normalized_image_margin": 0.10429315456879869
+    },
+    {
+      "source_frame": 256,
+      "minimum_normalized_image_margin": 0.10836922921462233
+    },
+    {
+      "source_frame": 261,
+      "minimum_normalized_image_margin": 0.11233438739171919
+    },
+    {
+      "source_frame": 266,
+      "minimum_normalized_image_margin": 0.11615480514406702
+    },
+    {
+      "source_frame": 271,
+      "minimum_normalized_image_margin": 0.11979930761095064
+    },
+    {
+      "source_frame": 276,
+      "minimum_normalized_image_margin": 0.12323664314628366
+    },
+    {
+      "source_frame": 281,
+      "minimum_normalized_image_margin": 0.11865520557977793
+    },
+    {
+      "source_frame": 286,
+      "minimum_normalized_image_margin": 0.11483682263976747
+    },
+    {
+      "source_frame": 291,
+      "minimum_normalized_image_margin": 0.11230083218449616
+    },
+    {
+      "source_frame": 296,
+      "minimum_normalized_image_margin": 0.11101452364582476
+    }
+  ],
+  "minimum_normalized_image_margin": 0.05542199166817294,
+  "units": "metres",
+  "transform_application": "one preserved source-to-world transform",
+  "source_library_r14_sha256": "15b2d86dc69c410c99f88a6f74f9e3039970b0b588316dcd08401494060ba285",
+  "limits": "Small inherited prescribed-kinematics preview; no new dynamics or complete Blender export campaign."
+}

@@ -1,0 +1,41 @@
+"""Supplemental isolated FreeCAD GUI matched views; never save native files.
+
+xvfb-run -a /snap/bin/freecad --user-cfg reports/tmp/r15/view_user.cfg src/capture_robot_r15.FCMacro
+The primary live MCP session and its documents are left intact.
+"""
+import FreeCAD as App,FreeCADGui as Gui
+from PySide import QtCore,QtWidgets
+from pathlib import Path
+import hashlib,json,traceback
+from pivy import coin
+ROOT=Path(__file__).resolve().parents[1]
+
+def capture():
+    docs=[];records=[];cameras={}
+    try:
+        for revision in ('r14','r15'):
+            path=ROOT/'cad'/('flexor_'+revision+'_robot.FCStd')
+            sha=hashlib.sha256(path.read_bytes()).hexdigest()
+            doc=App.openDocument(str(path));docs.append(doc)
+            App.setActiveDocument(doc.Name);Gui.updateGui()
+            view=Gui.activeDocument().activeView()
+            for label,orientation in [('isometric','viewAxonometric'),('side','viewRear')]:
+                getattr(view,orientation)();view.fitAll();Gui.updateGui()
+                view.getCameraNode().height.setValue(view.getCameraNode().height.getValue()*.70)
+                if revision=='r14':cameras[label]=view.getCamera()
+                else:view.setCamera(cameras[label])
+                output=ROOT/'reports/views'/(revision+'_robot_matched_'+label+'.png')
+                view.saveImage(str(output),1500,1000,'White')
+                records.append({'path':str(output.relative_to(ROOT)),'sha256':hashlib.sha256(output.read_bytes()).hexdigest(),
+                                'native_sha256':sha,'camera':cameras[label]})
+            if hashlib.sha256(path.read_bytes()).hexdigest()!=sha:raise RuntimeError('Native file changed')
+        (ROOT/'reports/views/r15_robot_capture_manifest.json').write_text(json.dumps({
+            'status':'CAPTURED_ACTUAL_NATIVE_FREECAD_VIEWS','method':'Supplemental isolated installed FreeCAD GUI under Xvfb; live MCP dispatcher unavailable',
+            'captures':records,'native_files_saved':False},indent=2)+'\n')
+    except Exception:
+        (ROOT/'reports/tmp/r15/view_error.txt').write_text(traceback.format_exc())
+    finally:
+        for doc in docs:App.closeDocument(doc.Name)
+        QtWidgets.QApplication.instance().quit()
+
+QtCore.QTimer.singleShot(1500,capture)

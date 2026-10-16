@@ -309,7 +309,22 @@ def export_step(doc):
         raise ValueError("STEP WriteSurfaceCurveMode=True is required")
     Part.setStaticValue("write.surfacecurve.mode", 1)
     ordered_links = [links[name] for name in sorted(links)]
-    Import.export(ordered_links, str(step_path))
+    # STEP may attach pcurves to its input TopoShapes. Deep-copy placed native
+    # BReps into a temporary exchange document so exporter bookkeeping cannot
+    # alter the caller's source BRep serialization or physical placements.
+    exchange=App.newDocument('R15_TransientSTEPExchange')
+    try:
+        exported=[]
+        for link in ordered_links:
+            item=exchange.addObject('Part::Feature',link.Name)
+            item.Label=link.Label
+            item.Shape=link.Shape.copy(copyGeom=True,copyMesh=False)
+            exported.append(item)
+        exchange.recompute()
+        Import.export(exported, str(step_path))
+    finally:
+        App.closeDocument(exchange.Name)
+        App.setActiveDocument(doc.Name)
     shape = Part.read(str(step_path))
     if len(shape.Solids) != EXPECTED_LINKS or not shape.isValid():
         raise RuntimeError("STEP import did not round-trip to 455 valid solids")
@@ -323,6 +338,7 @@ def export_step(doc):
         "changed_instance": TARGET_LINK, "changed_source": CHANGED_SOURCE,
         "geometry_roundtrip": geometry_result, "seconds": time.monotonic() - start,
         "write_surfacecurve_mode": 1,
+        "export_inputs":"455 deep-copied placed native BReps in temporary exchange document; no additional transform",
         "native_file_unchanged": native_sha == _sha(native_path),
         "native_document_unchanged": before == _doc_fingerprint(doc),
         "scope": "Candidate assembly STEP exchange; no drawings, fabrication release or structural qualification",

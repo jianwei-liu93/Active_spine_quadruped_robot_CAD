@@ -1,0 +1,367 @@
+{
+  "date": "2026-10-16",
+  "revision": "r15",
+  "status": "RESEARCH_CAD_CANDIDATE_VERIFIED_WITH_FINITE_SCOPE",
+  "branch": "feat/flexor-r15-sculpted",
+  "baseline_commit": "1a7781349a336020e235e80e17b9336a545842a8",
+  "geometry_checkpoint_commit": "fc5bdf4",
+  "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "physical_instances": 455,
+  "source_definitions": 108,
+  "changed_sources": 1,
+  "unchanged_sources": 107,
+  "geometry": "Four continuous shelf-to-case shoulder pads and twelve additive R1 root blends; no baseline material removed",
+  "frame_volume_mm3": {
+    "r14": 15444.995563587707,
+    "r15": 16600.45466521339,
+    "added_delta": 1155.4591016256777,
+    "removed_delta": 0.0,
+    "volume_difference": 1155.4591016256836,
+    "added_solid_count": 16,
+    "density_kg_m3_assumption": 1000.0,
+    "added_mass_kg_assumption": 0.0011554591016256777
+  },
+  "gates": {
+    "native_reopen_recompute_edit_restore": "PASS",
+    "STEP_455_solids": "PASS",
+    "BOM_identity": "PASS",
+    "AX0": "PASS",
+    "AX1": "PASS",
+    "numeric_cycle_361_poses": "PASS",
+    "finite_delta_cycle_91_poses": "PASS",
+    "finite_full_frame_coordination_9_poses": "PASS",
+    "small_Blender_preview": "PASS",
+    "continuous_clearance": "NOT_VERIFIED",
+    "fabrication_release": "BLOCKED"
+  },
+  "source_to_world": {
+    "native_AX_maximum_reprojection_error_mm": 9.77480602571575e-14,
+    "Blender_maximum_vertex_error_mm": 1.4351653306602191e-05,
+    "verified_convention": "+X forward,+Y left,+Z up; CAD mm to Blender metres once; one source-to-world transform"
+  },
+  "r14_preservation": {
+    "all_checkpoint_artifact_hashes_match": true,
+    "immutable_artifact_count": 14,
+    "full_r14_videos_unchanged": true
+  },
+  "application_workflow": "Installed FreeCAD MCP constructed and inspected native geometry. Read-only isolated installed FreeCAD processes completed native/exchange/pose checks and offscreen matched views. Installed Blender MCP constructed the preview; isolated Blender packaged/rendered/reopened it.",
+  "live_session_limit": "Live FreeCAD GUI dispatcher stopped starting requests after the detached sweep; session preserved, no restart or unsaved-session overwrite. Saved r15 candidate independently verified.",
+  "limits": [
+    "Source-informed morphology; new radius and shoulder dimensions are design assumptions.",
+    "Finite sampling does not prove continuous or all-gait clearance.",
+    "Knees and whole motion remain prescribed; loaded passive response unsolved.",
+    "Supplier mounting/output datums, fits, shaft/bearing retention, structural/fatigue capacity and fabrication process remain unqualified.",
+    "Historical complete source rebuild remains unqualified; r14 native checkpoint is the accepted reconstruction base.",
+    "Full r15 polished animation videos and drawings were not produced."
+  ],
+  "artifacts": {
+    "animation/assets/r15/lumbar_source.json": {
+      "bytes": 584401,
+      "sha256": "4204dc4ad976e6db64047c9b60aaa1551be964d29c1b980c8fcc9e1b4a68672b"
+    },
+    "animation/blender/check_preview_r15.py": {
+      "bytes": 4039,
+      "sha256": "485457993cf8c4e6481130e511fcc03c754e6d47503bb5e19f926bc886b63df5"
+    },
+    "animation/blender/preview_geometry_r15.py": {
+      "bytes": 16601,
+      "sha256": "682e7bd68ab5e301b8682e71dccce0ec1b5d429a6a58c41b995883300d70bea3"
+    },
+    "animation/blender/quality_preview_r15.py": {
+      "bytes": 4552,
+      "sha256": "e8596586ec548e11f0e74a7568a888ff39be3227944c9be09e14c6533332ddad"
+    },
+    "animation/blender/render_preview_r15.py": {
+      "bytes": 1487,
+      "sha256": "b5f812abe9b0c5a6f055a3401d218b399920487bf04429f3a4cf1c708bc0572b"
+    },
+    "animation/motion/ax01_r15.json": {
+      "bytes": 1948816,
+      "sha256": "f305954c89beb0ca41b770c1280d8ea18fd87a1ff2dc91eae4908da2746d6812"
+    },
+    "animation/motion/geometry_preview_r15.json": {
+      "bytes": 1236,
+      "sha256": "43771a610d7eb11ead64146cb68ba8ebe83bdae66d3841675f72d223c4c4b1f1"
+    },
+    "animation/previews/r15_spine_leg_coordination.gif": {
+      "bytes": 1200092,
+      "sha256": "950d20b3b4318ffcbacb501f60a7b1f901bdc844c5f678258dcf409241ab4cbc"
+    },
+    "animation/previews/r15_spine_leg_coordination.mp4": {
+      "bytes": 152144,
+      "sha256": "7188bdd86755b944fb655e9931d2e1ee2eeb7deefb24ffc2b1bdb39f8a384dfd"
+    },
+    "animation/schema/grounded_instances_r15.json": {
+      "bytes": 1541,
+      "sha256": "586fb70c250a9b10084049909a12a6b5c99a793d82cd9f0977d7224f6b3f46e7"
+    },
+    "bom/bom_r15.csv": {
+      "bytes": 7339,
+      "sha256": "fe0b8f41567b8ee56585b519e55ff03ce15840e51cc1d47b9c938eafb20347f5"
+    },
+    "bom/instances_r15.csv": {
+      "bytes": 55103,
+      "sha256": "50b1831f7179ca301c9f6320b5d8b333f052a1be47d31b0f56e95b1503a1ff6e"
+    },
+    "cad/flexor_r15_robot.FCStd": {
+      "bytes": 9029905,
+      "sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4"
+    },
+    "cad/prototypes/r15_lumbar_root.FCStd": {
+      "bytes": 2033007,
+      "sha256": "c60fdd5d5f64841f8491ee10f9b8222f8e29d4288f0ccfd8092def9d26e60d03"
+    },
+    "cad/prototypes/r15_lumbar_shoulders.FCStd": {
+      "bytes": 2326571,
+      "sha256": "4e7fd481870f2b8d73b5d2c3adf6584625bfb4bac4302e39a742e22f2b616236"
+    },
+    "docs/25_sculpted_geometry_refinement_r15.md": {
+      "bytes": 10284,
+      "sha256": "e13fdf4a3dfd033cb70e150d7b5b98f496faa67a70323298b98b96375b0ebf2b"
+    },
+    "exports/step/r15/flexor_r15_robot.step": {
+      "bytes": 16239889,
+      "sha256": "b477bb357da6dd7ce8a244fa15f608e7688cc455e90a17af8711be9827acc7f1"
+    },
+    "parameters/assembly_r15.json": {
+      "bytes": 20873,
+      "sha256": "b23bd87ca0f97280b98f292d41e2799fa79fbd4d29bc82483be5ad44269a4cb0"
+    },
+    "reports/animation/ax01_r15.json": {
+      "bytes": 405073,
+      "sha256": "94c5572c30b5c60830cffb5a471937b198fe6eed4896a2a2f50f98d1174e8688"
+    },
+    "reports/animation/r15_preview_build.json": {
+      "bytes": 350,
+      "sha256": "c535c558b1a8d0dc2969a1db8e7e816fe86955958a384058480d36c9ed52515d"
+    },
+    "reports/animation/r15_preview_motion_probe.json": {
+      "bytes": 14784,
+      "sha256": "aa456096d38a3663f301bd47b86e4116f1f1378b79dbbf688f01d0457440b123"
+    },
+    "reports/animation/r15_preview_qa.json": {
+      "bytes": 1878,
+      "sha256": "f804ac901fc677351f2860e781bfa9e1027a2434a885d86e839621736421b8b8"
+    },
+    "reports/animation/r15_saved_scene.json": {
+      "bytes": 7131,
+      "sha256": "90261f41f6fbcb70909eb22323d31a56a6cbabfc20eff03c19d70a5525a1367b"
+    },
+    "reports/reviews/r15_geometry_comparison.md": {
+      "bytes": 8050,
+      "sha256": "1e4de2d2a952204221975d2d95c5dd556fc53dc11d33d1bdac60a6a98d8b4326"
+    },
+    "reports/reviews/r15_prototype_independent_review.md": {
+      "bytes": 29647,
+      "sha256": "16e0d384e62b4882ba928a384560e5172ef07e715085afc3d3f071fba1565d88"
+    },
+    "reports/reviews/r15_source_morphology_audit.md": {
+      "bytes": 8429,
+      "sha256": "c7b4430e1f60e61e572363af4961ba8fb29763b100457fade89df9f206e616e3"
+    },
+    "reports/reviews/r15_verification_reuse_plan.md": {
+      "bytes": 14325,
+      "sha256": "57b4731b677562ad0bb21dd5aecff7a767dac3cae7f29fe37747564d3d1f515d"
+    },
+    "reports/verification/r15_assembly_export.json": {
+      "bytes": 1871435,
+      "sha256": "d2d75177af4ae64e21fed9ce16b941400613f3e6a0547f77e95c2eb08fcacbe8"
+    },
+    "reports/verification/r15_baseline_inspection.json": {
+      "bytes": 13381,
+      "sha256": "e8493c33d93885d1ec96a829b45ab4fc88fb085e2d5bad151c949d432b6e31f2"
+    },
+    "reports/verification/r15_bom.json": {
+      "bytes": 637,
+      "sha256": "2b8388c1a36c82b4afbc20e75ac069f92fbb8ade64c680939e5c65a7cf353587"
+    },
+    "reports/verification/r15_environment.json": {
+      "bytes": 1282,
+      "sha256": "12a475e0fc097c81d8abe3dfcf2c6e196f8e1d5df4965c02e5cc9098c69da46a"
+    },
+    "reports/verification/r15_full_frame_prefix.json": {
+      "bytes": 421,
+      "sha256": "101ef2456b6a5a9ac2ffb46946eb6036fa3c126a0df2a9aab5e33ad39c9c2d59"
+    },
+    "reports/verification/r15_identity.json": {
+      "bytes": 76218,
+      "sha256": "71ca268b5151dcefeb2d41313883eb7085ab0ef148a7ca02c1c6fe926fab3b30"
+    },
+    "reports/verification/r15_integration.json": {
+      "bytes": 6251,
+      "sha256": "bc20cde9c4db639e488d3af9cace76aff35f4989f734b7d27386d4b8373a1559"
+    },
+    "reports/verification/r15_motion.json": {
+      "bytes": 86979,
+      "sha256": "d615b6913df2e004eb4440dd03da3f0ee26a08d35cc9ae3fe40f45b3d4e0dbfc"
+    },
+    "reports/verification/r15_motion_error.json": {
+      "bytes": 653,
+      "sha256": "b7da432a8839d8c3de8ba6d7cfdfe52ea9e125effbd02bc6cee29f93732de13d"
+    },
+    "reports/verification/r15_motion_initial.json": {
+      "bytes": 76810,
+      "sha256": "a32396cd4079338f2e2103833731e6c8298b8b89c7604aed805d5ea17ac41e1b"
+    },
+    "reports/verification/r15_native_checks.json": {
+      "bytes": 23419,
+      "sha256": "9e45fa5f6bc87cf43ec9f77c50ac8ab43647c6a59ef99fe4095e7aee4d5eb146"
+    },
+    "reports/verification/r15_native_initial_probe_failure.json": {
+      "bytes": 6107,
+      "sha256": "351d1bebe16fbe957afd62ec64e6213e39479ef5e2bdc81bf13d208a235206c9"
+    },
+    "reports/verification/r15_numeric_cycle.json": {
+      "bytes": 57739,
+      "sha256": "4532dd468ebd0d5374fe76af9cf20c60d9293189018c6fc595f7f445f8a07584"
+    },
+    "reports/verification/r15_prototype_evidence_binding.json": {
+      "bytes": 2756,
+      "sha256": "85a83bd08ef01b17939c12564aef506a0fe653996a01e00a873344d0d8013d0b"
+    },
+    "reports/verification/r15_prototype_integrated_roots.json": {
+      "bytes": 3542,
+      "sha256": "2065895e1ecc66ff07f977b4e217787093a5839761ee2c0f31b7a89dabb0ed92"
+    },
+    "reports/verification/r15_prototype_sections.json": {
+      "bytes": 303765,
+      "sha256": "3faf1ffdfe8f15b0c081868d766a861a0be4dbaa6106b97f03901acad62f92c9"
+    },
+    "reports/verification/r15_prototype_trial.json": {
+      "bytes": 278,
+      "sha256": "c489f4549088d03ecde26b5885354cc2382e57829a70ea0e1e4ed8898b603968"
+    },
+    "reports/verification/r15_shoulder_prototype.json": {
+      "bytes": 1462,
+      "sha256": "7b526c3cf880e5d264f838a5aade828c04511624f76d142fa612ef238acdfe70"
+    },
+    "reports/verification/r15_shoulder_sections.json": {
+      "bytes": 25004,
+      "sha256": "cb30e663b308a1c625d8fb1c5e2b72e9a54e846dec6bf2db0b4797466fac46e4"
+    },
+    "reports/views/r14_lumbar_matched.png": {
+      "bytes": 51095,
+      "sha256": "4afab5343003e089bbe450911e876e56913dedf2a78634b76ce20fb1dbcb8c79"
+    },
+    "reports/views/r14_lumbar_under_matched.png": {
+      "bytes": 55887,
+      "sha256": "d1ecb58adffd57ae20255f307e2e5a3355d0133ff55f65fc14ad0c5c0dee4449"
+    },
+    "reports/views/r14_robot_matched_isometric.png": {
+      "bytes": 102086,
+      "sha256": "85587bf6de93a2ed6a2cce0973c58eaa47288c1c979b5e1333007e26986d8bec"
+    },
+    "reports/views/r14_robot_matched_side.png": {
+      "bytes": 43580,
+      "sha256": "3ceb28a021de59e990dd33abdb68a071e2edc36720ad93a07613b7798d5358f3"
+    },
+    "reports/views/r14_root_matched_close.png": {
+      "bytes": 40226,
+      "sha256": "00e599998c64d2d023f51ef841108a558ba9c733d523a9379302cba874d6d9b8"
+    },
+    "reports/views/r14_shoulder_matched_close.png": {
+      "bytes": 44358,
+      "sha256": "c0398d29b15198e3b0e9e651362b5377f550d74399f4335610a85f7649958832"
+    },
+    "reports/views/r15_lumbar_matched.png": {
+      "bytes": 51711,
+      "sha256": "6c3b3701cd26722874a06aaf9adc51667afd8214e80a5a133d3f6d986ba28e0d"
+    },
+    "reports/views/r15_lumbar_under_matched.png": {
+      "bytes": 58539,
+      "sha256": "36ea7ccd761ca1a8ca747a11c03dcbd97b90a6a2e3ea91f430ae9b0b6d13b792"
+    },
+    "reports/views/r15_preview_contact_sheet.png": {
+      "bytes": 532800,
+      "sha256": "c0bef78ed46ae39827738356d6b1a1ea58485bacdce7abd2f9b803728f43ef1c"
+    },
+    "reports/views/r15_prototype_capture_manifest.json": {
+      "bytes": 3474,
+      "sha256": "238389212db15c7cc51327f35f0aeb37903d6c99267a9f5da6f8e5b486f2469f"
+    },
+    "reports/views/r15_robot_capture_manifest.json": {
+      "bytes": 2471,
+      "sha256": "dbd3ed325e99dc678d6d4cc97ed4bf73c0a586256b5b8fb744cb86b6facd8087"
+    },
+    "reports/views/r15_robot_matched_isometric.png": {
+      "bytes": 101954,
+      "sha256": "cd2dc6eda842f839059aee363d943551e82477c6c5f348044978645e8f6e530f"
+    },
+    "reports/views/r15_robot_matched_side.png": {
+      "bytes": 43614,
+      "sha256": "a4f0142e5a04dcf8f062d6ec862e00d2b62133350a40b00cb735e918e2687b4a"
+    },
+    "reports/views/r15_root_matched_close.png": {
+      "bytes": 43938,
+      "sha256": "0e4862854e3622b02316b0f997eca4f0dca9786273e68a2941777e828cffef05"
+    },
+    "reports/views/r15_shoulder_matched_close.png": {
+      "bytes": 46424,
+      "sha256": "0e2903618d8a81c6e4314e2015c5072502bec053a8dbd09b8c84987e355af822"
+    },
+    "src/bom_r15.py": {
+      "bytes": 1814,
+      "sha256": "724baec6afd1f475020658d16fcfbbadd1f72cb76bc53c3714572affac00e24a"
+    },
+    "src/build_robot_r15.py": {
+      "bytes": 2146,
+      "sha256": "c71e68133acfe89379215ed23bb44cbc9084b3582b48c1fcd39126e3415abf55"
+    },
+    "src/capture_robot_r15.FCMacro": {
+      "bytes": 2261,
+      "sha256": "be408394da5c998aa55c1c5730281869898a98d4faa70fc7f0ca799172fa0eb0"
+    },
+    "src/capture_sculpted_r15.py": {
+      "bytes": 3377,
+      "sha256": "afbfb4a8f84dcedd3399fdc111fd3871f3a99006de3e2d42eede668cf0d9f74d"
+    },
+    "src/checkpoint_r15.py": {
+      "bytes": 5330,
+      "sha256": "0d76fb207907625f5e0da667b3b18916eb4ff571d129a85763d00f8f21b9b2c9"
+    },
+    "src/export_mesh_r15.py": {
+      "bytes": 1411,
+      "sha256": "a1da3bec2890afa6004866c9039654ed1acc4236eeda86b02e53442cbab402b9"
+    },
+    "src/frozen_motion_r15.py": {
+      "bytes": 1660,
+      "sha256": "8432ee81c4a668a5027828d64fdb646c45222f422d8b78346b898210f53233b7"
+    },
+    "src/kinematic_cycle_r15.py": {
+      "bytes": 2406,
+      "sha256": "1ff615d9d96b80840b546f812251744c8abd7c7c2316a23ab368cf4f72e71d36"
+    },
+    "src/package_sculpted_r15.py": {
+      "bytes": 17105,
+      "sha256": "827be12ded59b65b571d3c5e8a96e6b87341426341fb7f85edac0ac68a5ea6cf"
+    },
+    "src/run_checks_r15.py": {
+      "bytes": 2161,
+      "sha256": "492e0767a35c47d52e9f7380be2daed6b2afc62d69b50652d4f64464d9d90a0d"
+    },
+    "src/sculpted_frame_r15.py": {
+      "bytes": 5148,
+      "sha256": "3d35b6583047632bf327a75ef7d704fd5ed36b762e4dea51aeff098d83deb0a1"
+    },
+    "src/section_compare_r15.py": {
+      "bytes": 20736,
+      "sha256": "e9c438e36774fb1794a9ae47631edef9afd62db1c2a64840491e3449c74bb17f"
+    },
+    "src/shelf_shoulders_r15.py": {
+      "bytes": 2469,
+      "sha256": "9c1f6ca4c33a9a199dade704f0e6d58919375343540ce843ffc7c7ffb7c41697"
+    },
+    "src/shoulder_sections_r15.py": {
+      "bytes": 1654,
+      "sha256": "f90bd87b182130e05bfdf212b6e5a3b54533da9219f66f2277f0d5feb6ac9969"
+    },
+    "src/verify_sculpted_delta_r15.py": {
+      "bytes": 30434,
+      "sha256": "1750dadb6a8a3bc8ce485000f1f817075d1f3a0d30a738fe1608edca6f82f34f"
+    },
+    "src/verify_sculpted_r15.py": {
+      "bytes": 22424,
+      "sha256": "806ede8695abfec83aef13784c66e6f148f238623f291bea82aa64d58952c14e"
+    }
+  }
+}

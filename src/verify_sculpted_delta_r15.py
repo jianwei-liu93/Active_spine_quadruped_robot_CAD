@@ -89,8 +89,10 @@ def _baseline_samples():
                 '91 inclusive spine phases0..360deg at4deg, stored neutral legs and wheel0; affected pairs only'
                 and report.get('requested_sample_count') == 91
                 and report.get('samples_completed') == 91
+                and report.get('pair_count') == 32032
                 and report.get('expected_pair_decisions') == report.get('completed_pair_decisions')
                 and report.get('all_requested_pair_decisions_complete') is True
+                and FRAME_INSTANCE in report.get('affected', [])
                 and not report.get('collisions') and not report.get('errors')
                 and not report.get('exceptions'))
     if not required:
@@ -101,6 +103,8 @@ def _baseline_samples():
     raw = json.loads(R14_PLAN.read_bytes())
     if plan_record.get('raw_report') != raw:
         raise RuntimeError('Historical r14 embedded plan differs from the immutable plan file')
+    if raw.get('pair_count') != report.get('pair_count'):
+        raise RuntimeError('Historical r14 plan does not cover the recorded affected-pair manifest')
     states = raw.get('states')
     if not isinstance(states, list) or len(states) != 91:
         raise RuntimeError('Historical r14 plan must contain exactly 91 poses')
@@ -168,6 +172,7 @@ def _screen_pairs(component_shapes, component_bounds, names, other_bounds,
     """Record every component/link decision; exact common only after AABB gate."""
     bbox_excluded = occ_checks = 0
     hits = []
+    totals = {}
     shape_cache = {}
     for component_index, component in enumerate(component_shapes):
         bounds = component_bounds[component_index]
@@ -187,15 +192,15 @@ def _screen_pairs(component_shapes, component_bounds, names, other_bounds,
                 if not math.isfinite(volume) or volume < 0:
                     raise RuntimeError('Invalid OCC common volume for frame component/{}'.format(name))
             occ_checks += 1
-            if volume > VOLUME_TOL_MM3:
-                hits.append({'component_index': component_index, 'instance': name,
-                             'intersection_mm3': volume})
+            totals[name] = totals.get(name,0.) + volume
+    hits=[{'instance':name,'intersection_mm3':volume} for name,volume in sorted(totals.items()) if volume>VOLUME_TOL_MM3]
     expected = len(component_shapes) * len(names)
     if bbox_excluded + occ_checks != expected:
         raise RuntimeError('Component/link decision ledger is incomplete')
     return {'component_count': len(component_shapes), 'instance_count': len(names),
             'pair_decisions': expected, 'bbox_excluded': bbox_excluded,
             'exact_common_checks': occ_checks, 'forbidden_overlaps': hits,
+            'positive_delta_intersections_mm3':{n:v for n,v in totals.items() if v>0.},
             'status': 'FAIL' if hits else 'PASS_ADDITIVE_DELTA_FINITE_SAMPLE'}
 
 
@@ -214,7 +219,7 @@ def _kinematic_metrics(doc, theta, plan):
     }
 
 
-def run(doc, old_frame_source, new_frame_source, config):
+def run(doc, old_frame_source, new_frame_source, config, paper_evidence_path=None):
     """Run a bounded additive-delta check without mutating the frozen document.
 
     Preconditions: the lead has already completed the r14-to-r15 107-source
@@ -244,7 +249,40 @@ def run(doc, old_frame_source, new_frame_source, config):
     if not native_path.is_file():
         raise RuntimeError('Saved r15 native file is required for hash-bound evidence')
     native_sha = _file_sha(native_path)
+    identity_path=ROOT/'reports/verification/r15_identity.json'
+    identity=json.loads(identity_path.read_text())
+    if (identity.get('status')!='PASS_R15_IDENTITY_ONLY'
+            or identity.get('strict_unchanged_source_count')!=107
+            or identity.get('native_files_sha256',{}).get('r15')!=native_sha
+            or identity.get('native_files_sha256',{}).get('r14')!=_file_sha(ROOT/'cad/flexor_r14_robot.FCStd')):
+        raise RuntimeError('Saved r14/r15 identity evidence missing or stale')
     links, sources = _links_and_sources(doc)
+    # Bind supplied source geometry to independent copies of SHA-pinned native
+    # files. BRep serialization may differ across save/reload, so use the strict
+    # geometric identity gate. Run this helper in isolated FreeCADCmd, not an
+    # async GUI thread: these private documents are opened and closed here.
+    source_bindings={}
+    import tempfile,shutil
+    from verify_frame_revision_r09 import _strict_shape_identity
+    for revision,source in [('r14',old_frame_source),('r15',new_frame_source)]:
+        document=getattr(source,'Document',None)
+        expected=ROOT/'cad'/('flexor_'+revision+'_robot.FCStd')
+        if (document is None or Path(document.FileName).resolve()!=expected.resolve()
+                or document.getObject(FRAME_SOURCE)!=source
+                or _file_sha(expected)!=identity['native_files_sha256'][revision]):
+            raise RuntimeError('Frame source not bound to its saved '+revision+' document')
+        with tempfile.TemporaryDirectory(dir=ROOT/'reports/tmp/r15') as folder:
+            copied=Path(folder)/(revision+'_source_binding.FCStd')
+            shutil.copy2(expected,copied)
+            pristine=App.openDocument(str(copied))
+            try:
+                proof=_strict_shape_identity(source.Shape.copy(copyGeom=True,copyMesh=False),
+                    pristine.LumbarIntegrated1.LinkedObject.Shape.copy(copyGeom=True,copyMesh=False),revision+' pristine source binding')
+            finally:App.closeDocument(pristine.Name)
+        source_bindings[revision]={'native_sha256':_file_sha(expected),'path':str(expected.relative_to(ROOT)),
+                                  'source':source.Name,'strict_saved_source_geometry':proof}
+    if json.loads(R14_PLAN.read_text()).get('native_sha256')!=identity['native_files_sha256']['r14']:
+        raise RuntimeError('Historical motion plan refers to a different r14 native file')
     if not old_frame_source.Shape.isValid() or len(old_frame_source.Shape.Solids) != 1:
         raise RuntimeError('Detached r14 lumbar source is invalid/non-single-solid')
     if not new_frame_source.Shape.isValid() or len(new_frame_source.Shape.Solids) != 1:
@@ -253,6 +291,8 @@ def run(doc, old_frame_source, new_frame_source, config):
         raise RuntimeError('Detached old/new frame source identity mismatch')
     old_shape = old_frame_source.Shape.copy(copyGeom=True, copyMesh=False)
     new_shape = new_frame_source.Shape.copy(copyGeom=True, copyMesh=False)
+    from verify_frame_revision_r09 import _strict_shape_identity
+    _strict_shape_identity(new_shape,sources[FRAME_SOURCE].Shape.copy(copyGeom=True,copyMesh=False),'r15 motion source binding')
     if tuple(old_frame_source.Placement.toMatrix().A) != tuple(new_frame_source.Placement.toMatrix().A):
         raise RuntimeError('r14/r15 frame source-local placement changed')
     removed = old_shape.cut(new_shape)
@@ -327,6 +367,22 @@ def run(doc, old_frame_source, new_frame_source, config):
             return _world_native_shape(doc, name, plan['placements'][name])
 
         clearance = _screen_pairs(components, component_bounds, names, other_bounds, other_shape)
+        # Do not add two independent 1e-5 tolerances. For any strictly positive
+        # delta intersection (including sub-threshold pieces), screen the full
+        # new frame against that instance at the original 1e-5 gate.
+        exact_full=[]
+        if clearance['positive_delta_intersections_mm3']:
+            full=_world_local_shape(new_shape,frame_target,FRAME_INSTANCE)
+            clearance['forbidden_overlaps']=[]
+            for name in clearance['positive_delta_intersections_mm3']:
+                common=full.common(other_shape(name))
+                if not common.isNull() and not common.isValid():raise RuntimeError('Invalid exact tolerance resolution')
+                volume=0. if common.isNull() else float(common.Volume)
+                if not math.isfinite(volume) or volume<0:raise RuntimeError('Invalid exact tolerance volume')
+                exact_full.append({'instance':name,'intersection_mm3':volume})
+                if volume>VOLUME_TOL_MM3:clearance['forbidden_overlaps'].append({'instance':name,'intersection_mm3':volume})
+            clearance['status']='FAIL' if clearance['forbidden_overlaps'] else 'PASS_ADDITIVE_DELTA_FINITE_SAMPLE'
+        clearance['full_frame_positive_delta_resolution']=exact_full
         kinematic = _kinematic_metrics(doc, theta, plan)
         max_spine = max(max_spine, kinematic['spine_closure_max_residual_mm'])
         max_leg = max(max_leg, kinematic['leg_closure_max_residual_mm'])
@@ -344,64 +400,81 @@ def run(doc, old_frame_source, new_frame_source, config):
     # outside the stored-neutral r14 trajectory. Pair checks remain bbox-pruned.
     paper_rows = []
     frequency = float(coordination.PROFILE['presentation_frequency_hz'])
-    with coordination.paper_descriptor_context():
-        for degree in PAPER_PHASES_DEG:
-            t = degree / (360.0 * frequency)
-            theta, angles, wheel = coordination.trajectory('coordinated_spine_legs', t,
-                                                            samples[0]['leg_angles'])
-            plan = motion.descriptor(doc, theta, angles, wheel, config)
-            generated = motion.regenerate_sources(plan, cache)
-            frame_target = plan['placements'][FRAME_INSTANCE]
-            frame = _world_local_shape(new_shape, frame_target, FRAME_INSTANCE)
-            frame_bounds = _box_values(frame)
-            other_bounds = {}
-            for name in names:
-                obj = links[name]
-                target = plan['placements'][name]
-                if name in generated:
-                    other_bounds[name] = _transform_bounds(_box_values(generated[name]), target, App)
-                else:
-                    relative = target.multiply(obj.LinkPlacement.inverse())
-                    other_bounds[name] = _transform_bounds(_box_values(obj.Shape), relative, App)
-            exact_cache = {}
-            bbox_excluded = occ_checks = 0
-            overlaps = []
-            for name in names:
-                if _bbox_disjoint(frame_bounds, other_bounds[name]):
-                    bbox_excluded += 1
-                    continue
-                if name in generated:
-                    other = _world_local_shape(generated[name], plan['placements'][name], name)
-                else:
-                    other = _world_native_shape(doc, name, plan['placements'][name])
-                common = frame.common(other)
-                if common.isNull():
-                    volume = 0.0
-                else:
-                    if not common.isValid():
-                        raise RuntimeError('Invalid full-frame common at paper pose {}'.format(degree))
-                    volume = float(common.Volume)
-                    if not math.isfinite(volume) or volume < 0:
-                        raise RuntimeError('Invalid full-frame common volume at paper pose {}'.format(degree))
-                occ_checks += 1
-                if volume > VOLUME_TOL_MM3:
-                    overlaps.append({'instance': name, 'intersection_mm3': volume})
-            if bbox_excluded + occ_checks != len(names):
-                raise RuntimeError('Full-frame paper-pose pair ledger is incomplete')
-            kinematic = _kinematic_metrics(doc, theta, plan)
-            paper_rows.append({'profile_phase_deg': degree, 'time_s': t,
-                               'theta_rad': float(theta), 'leg_angles_rad': angles,
-                               'wheel_angle_rad': float(wheel), 'frame_source_sha256': _shape_sha(new_shape),
-                               'pair_count': len(names), 'bbox_excluded': bbox_excluded,
-                               'exact_common_checks': occ_checks,
-                               'forbidden_overlaps': overlaps,
-                               'status': 'FAIL' if overlaps else 'PASS_FULL_FRAME_FINITE_SAMPLE',
-                               **kinematic})
-            max_spine = max(max_spine, kinematic['spine_closure_max_residual_mm'])
-            max_leg = max(max_leg, kinematic['leg_closure_max_residual_mm'])
-            min_margin = min(min_margin, kinematic['spine_min_branch_margin_mm'])
-            if overlaps or kinematic['guide_warnings']:
-                break
+    reused_paper_sha=None
+    if paper_evidence_path is not None:
+        evidence=json.loads(Path(paper_evidence_path).read_text())
+        paper_rows=evidence['paper_profile_full_frame']['records']
+        if (evidence.get('status')!='PASS_BOUNDED_ADDITIVE_DELTA_R15'
+                or evidence.get('native_sha256')!=native_sha
+                or evidence.get('r15_config_sha256')!=_file_sha(config_file)
+                or evidence['paper_profile_full_frame']['profile_sha256']!=_file_sha(coordination.PROFILE_PATH)
+                or [r['profile_phase_deg'] for r in paper_rows]!=list(PAPER_PHASES_DEG)
+                or any(r['status']!='PASS_FULL_FRAME_FINITE_SAMPLE' or r['forbidden_overlaps'] or r['guide_warnings'] for r in paper_rows)):
+            raise RuntimeError('Complete nine-pose full-frame evidence is stale or incomplete')
+        reused_paper_sha=_file_sha(paper_evidence_path)
+        max_spine=max(max_spine,*(r['spine_closure_max_residual_mm'] for r in paper_rows))
+        max_leg=max(max_leg,*(r['leg_closure_max_residual_mm'] for r in paper_rows))
+        min_margin=min(min_margin,*(r['spine_min_branch_margin_mm'] for r in paper_rows))
+    else:
+        with coordination.paper_descriptor_context():
+            for degree in PAPER_PHASES_DEG:
+                t = degree / (360.0 * frequency)
+                theta, angles, wheel = coordination.trajectory('coordinated_spine_legs', t,
+                                                                samples[0]['leg_angles'])
+                plan = motion.descriptor(doc, theta, angles, wheel, config)
+                generated = motion.regenerate_sources(plan, cache)
+                frame_target = plan['placements'][FRAME_INSTANCE]
+                frame = _world_local_shape(new_shape, frame_target, FRAME_INSTANCE)
+                frame_bounds = _box_values(frame)
+                other_bounds = {}
+                for name in names:
+                    obj = links[name]
+                    target = plan['placements'][name]
+                    if name in generated:
+                        other_bounds[name] = _transform_bounds(_box_values(generated[name]), target, App)
+                    else:
+                        relative = target.multiply(obj.LinkPlacement.inverse())
+                        other_bounds[name] = _transform_bounds(_box_values(obj.Shape), relative, App)
+                exact_cache = {}
+                bbox_excluded = occ_checks = 0
+                overlaps = []
+                for name in names:
+                    if _bbox_disjoint(frame_bounds, other_bounds[name]):
+                        bbox_excluded += 1
+                        continue
+                    if name in generated:
+                        other = _world_local_shape(generated[name], plan['placements'][name], name)
+                    else:
+                        other = _world_native_shape(doc, name, plan['placements'][name])
+                    common = frame.common(other)
+                    if common.isNull():
+                        volume = 0.0
+                    else:
+                        if not common.isValid():
+                            raise RuntimeError('Invalid full-frame common at paper pose {}'.format(degree))
+                        volume = float(common.Volume)
+                        if not math.isfinite(volume) or volume < 0:
+                            raise RuntimeError('Invalid full-frame common volume at paper pose {}'.format(degree))
+                    occ_checks += 1
+                    if volume > VOLUME_TOL_MM3:
+                        overlaps.append({'instance': name, 'intersection_mm3': volume})
+                if bbox_excluded + occ_checks != len(names):
+                    raise RuntimeError('Full-frame paper-pose pair ledger is incomplete')
+                kinematic = _kinematic_metrics(doc, theta, plan)
+                paper_rows.append({'profile_phase_deg': degree, 'time_s': t,
+                                   'theta_rad': float(theta), 'leg_angles_rad': angles,
+                                   'wheel_angle_rad': float(wheel), 'frame_source_sha256': _shape_sha(new_shape),
+                                   'pair_count': len(names), 'bbox_excluded': bbox_excluded,
+                                   'exact_common_checks': occ_checks,
+                                   'forbidden_overlaps': overlaps,
+                                   'status': 'FAIL' if overlaps else 'PASS_FULL_FRAME_FINITE_SAMPLE',
+                                   **kinematic})
+                max_spine = max(max_spine, kinematic['spine_closure_max_residual_mm'])
+                max_leg = max(max_leg, kinematic['leg_closure_max_residual_mm'])
+                min_margin = min(min_margin, kinematic['spine_min_branch_margin_mm'])
+                print('R15_PAPER_FRAME_SCREEN',degree,paper_rows[-1]['status'],occ_checks,flush=True)
+                if overlaps or kinematic['guide_warnings']:
+                    break
 
     if _snapshot(doc) != before:
         raise RuntimeError('Delta screen mutated the native FreeCAD document')
@@ -411,13 +484,16 @@ def run(doc, old_frame_source, new_frame_source, config):
                      'changed_instance': FRAME_INSTANCE, 'changed_source': FRAME_SOURCE,
                      'precondition': 'Lead must run the r14-to-r15 identity helper first; this helper does not re-prove 107 source identities.'}
     closure_pass = max_spine <= 1e-6 and max_leg <= 1e-6 and min_margin > 0
-    delta_pass = len(delta_rows) == 91 and all(row['status'] == 'PASS_ADDITIVE_DELTA_FINITE_SAMPLE'
+    delta_pass = len(delta_rows) == 91 and all(row['status'] == 'PASS_ADDITIVE_DELTA_FINITE_SAMPLE' and not row['guide_warnings']
                                                 for row in delta_rows)
     paper_pass = len(paper_rows) == len(PAPER_PHASES_DEG) and all(
-        row['status'] == 'PASS_FULL_FRAME_FINITE_SAMPLE' for row in paper_rows)
+        row['status'] == 'PASS_FULL_FRAME_FINITE_SAMPLE' and not row['guide_warnings'] for row in paper_rows)
     return {
         'status': 'PASS_BOUNDED_ADDITIVE_DELTA_R15' if closure_pass and delta_pass and paper_pass else 'FAIL',
         'native_sha256': native_sha,
+        'identity_evidence_sha256':_file_sha(identity_path),
+        'source_native_bindings':source_bindings,
+        'reused_full_frame_paper_evidence_sha256':reused_paper_sha,
         'r14_report_sha256': _file_sha(R14_REPORT),
         'r14_plan_sha256': _file_sha(R14_PLAN),
         'r15_config_sha256': _file_sha(config_file),

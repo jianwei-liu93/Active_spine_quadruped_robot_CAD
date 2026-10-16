@@ -19,6 +19,7 @@ import bpy
 
 
 SCENE_NAME = "r15_geometry_interoperability_preview"
+FRAMING_ORTHO_SCALE_M=.345
 MANIFEST_REL = Path("animation/motion/geometry_preview_r15.json")
 SOURCE_SCENE_NAME = "spine_leg_coordination_r14"
 TARGET_INSTANCE_ID = "instance:LumbarIntegrated1"
@@ -153,6 +154,9 @@ def _make_mesh(root, record):
     if _sha256(asset_path) != record["sha256"]:
         raise ValueError("r15 changed mesh asset SHA-256 mismatch")
     asset = json.loads(asset_path.read_text(encoding="utf-8"))
+    if (asset.get('source_object')!=record['source_object'] or asset.get('units')!='m'
+            or asset.get('native_sha256')!=_sha256(Path(root)/'cad/flexor_r15_robot.FCStd')):
+        raise ValueError('Changed mesh source, units or native binding is stale')
     vertices = asset.get("vertices_m")
     triangles = asset.get("triangles")
     if vertices is None or triangles is None:
@@ -176,6 +180,23 @@ def _make_mesh(root, record):
         bpy.data.meshes.remove(mesh)
         raise RuntimeError("Blender changed the mesh vertex or triangle count")
     return mesh
+
+
+def stamp_source_metadata(scene,target,data,root):
+    """Update changed source metadata while retaining baseline motion provenance."""
+    payload=json.loads(_path(root,data['ax01_path']).read_text())
+    instance=next(i for i in payload['instances'] if i['instance_id']==TARGET_INSTANCE_ID)
+    asset=json.loads(_path(root,data['changed_mesh']['path']).read_text())
+    target['part_number']=instance['part_number']
+    target['source_geometry_hash']=asset['geometry_hash']
+    target.data['asset_sha256']=data['changed_mesh']['sha256']
+    target.data['units']='m'
+    for key in ('source_manifest','source_manifest_sha256','builder_path','builder_sha256'):
+        if 'baseline_r14_'+key not in scene:scene['baseline_r14_'+key]=scene.get(key,'')
+    scene['source_manifest']=data['ax01_path']
+    scene['source_manifest_sha256']=data['ax01_sha256']
+    scene['builder_path']='animation/blender/preview_geometry_r15.py'
+    scene['builder_sha256']=_sha256(Path(__file__))
 
 
 def _relabel_r15(scene):
@@ -240,6 +261,10 @@ def build(root, r14_library_path):
     scene["source_definitions"] = 108
     scene["preview_samples"] = 60
     scene["preview_source_frames"] = "1,6,...,296"
+    if scene.camera.data.type!='ORTHO':raise ValueError('Expected pinned orthographic preview camera')
+    scene.camera.data.ortho_scale=FRAMING_ORTHO_SCALE_M
+    scene['preview_camera_ortho_scale_m']=FRAMING_ORTHO_SCALE_M
+    stamp_source_metadata(scene,target,data,root)
     _relabel_r15(scene)
     scene.frame_set(1)
 
@@ -273,7 +298,7 @@ def render(outdir):
     outdir.mkdir(parents=True, exist_ok=True)
     scene.render.engine = "BLENDER_EEVEE"
     scene.render.resolution_x = 640
-    scene.render.resolution_y = 480
+    scene.render.resolution_y = 360
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = "PNG"
     scene.render.image_settings.color_mode = "RGB"
@@ -294,7 +319,7 @@ def render(outdir):
         "source_frames": source_frames,
         "output_fps": 12,
         "duration_seconds": 5,
-        "resolution": [640, 480],
+        "resolution": [scene.render.resolution_x, scene.render.resolution_y],
         "movie_encoded": False,
         "images": paths,
     }
