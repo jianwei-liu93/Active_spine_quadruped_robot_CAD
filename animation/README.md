@@ -1,5 +1,34 @@
 # FLEXOR animation package
 
+## Current r15b studio coordination video — 2026-10-16
+
+The current studio cut is [spine_leg_coordination_s2_r15b.mp4](output/spine_leg_coordination_s2_r15b.mp4): **25 seconds, 1920 × 1080, 60 fps, H.264/yuv420p**. It retains the r14 shot schedule, warm floor, labelled mechanism views, illustrative body motion and persistent kinematic caption. The README shows only this studio version, through [its looping GIF](../docs/media/spine_leg_coordination_r15b.gif). Earlier videos remain versioned files for traceability.
+
+This cut uses a fresh read-only export of `cad/flexor_r15b_robot.FCStd`, including the centred-depth A–B rockers, repacked A bearings/spacers and reinforced r15 lumbar frame. All **108 source definitions** pass strict comparison with saved native BReps; **455 physical instances**, 98 rigid mesh definitions and ten procedural spring/cable instances are preserved. The 1,201-sample solver-evaluated export uses the existing paper-informed trajectory. The studio cut consumes the first 300 samples with stride three, retaining the 0.6-Hz presentation cycle, approximately 69° full hip excursion and separately prescribed 20° full knee excursion.
+
+The release record is [r15b studio QA](../reports/animation/spine_leg_coordination_s2_r15b_qa.json). Fresh-process saved-scene checks cover all 1,500 frames for floor/framing, 100 distinct root-relative poses, all 3,000 procedural shape samples and articulation of all twelve leg segments relative to their own torso. The existing native r15b finite-clearance evidence covers 91 cycle poses and nine coordinated poses for pairs involving sixteen changed/repacked instances. It does not certify continuous or all-gait clearance, loaded motion or fabrication readiness. Source shapes and the native file are unchanged by export and rendering.
+
+### Reproduce r15b
+
+Only the lead operates the live apps. In installed FreeCAD MCP, add `src/` to `sys.path`, import `animation_coordination_r15b` and call `run(doc)` on the unchanged canonical r15b file. This writes `geometry/r15b/`, `motion/coordinated_spine_legs_r15b.jsonl.gz` and `motion/production_coordination_r15b.json`. Validate with:
+
+```bash
+python src/animation_production_validate.py animation/motion/production_coordination_r15b.json
+```
+
+Through installed Blender MCP, add `animation/blender` to `sys.path` and call `build_coordination_r15b.build()`. Package its library in a separate process, then call `build_coordination_s2_r15b.build()` through Blender MCP:
+
+```bash
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_r15b.blend --python animation/blender/package_scene.py -- spine_leg_coordination_r15b
+# After the studio builder runs through MCP:
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_s2_r15b.blend --python animation/blender/package_scene.py -- spine_leg_coordination_s2_r15b
+/snap/blender/current/blender -b animation/scenes/spine_leg_coordination_s2_r15b.blend --python animation/blender/verify_coordination_s2_r15b.py
+```
+
+Render representative previews with `render_frames.py --scene spine_leg_coordination_s2_r15b --preview --frames 1 26 51 76 451 801 1171 1411`. After actual lead review and matching readback evidence, run `python animation/blender/render_coordination_r15b.py`. It renders one GPU job, verifies every PNG, encodes the complete MP4 and fully decodes it.
+
+Decoded review uses `video_review_coordination_r15b.py` with `animation/review_events_r15b.json`, followed by `review_r15b_sequences.py`. The lead records visual and adjacent-frame acceptance. `final_report_coordination_r15b.py` fails closed until the source/saved-scene/render/decode/review chain passes. Then `build_readme_media_r15b.py` generates the GIF and its hash-bound media manifest. The editable standalone projects remain local under `animation/scenes/`; tracked geometry, motion and builders support reconstruction. No frame handlers or external CAD process are needed for playback.
+
 ## r14 coordination update — 2026-10-14
 
 The user requested regeneration with the current r14 design. The versioned output is `output/spine_leg_coordination_s2_r14.mp4`, with editable standalone project `scenes/spine_leg_coordination_s2_r14.blend`. **Complete:** all 1,500 frames are rendered and the 1080p/60-fps H.264 video passes full decoding, saved-scene checks and sampled decoded/adjacent-frame review. The release record is [r14 video QA](../reports/animation/spine_leg_coordination_s2_r14_qa.json). Older r10 scenes/videos and their evidence remain unchanged.

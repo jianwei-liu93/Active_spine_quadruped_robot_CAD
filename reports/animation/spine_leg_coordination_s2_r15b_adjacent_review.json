@@ -1,0 +1,19 @@
+{
+  "status": "PASS_LEAD_ADJACENT_REVIEW",
+  "video_sha256": "9e739a34f08d33857dedb9f62c55a4515cb50a16e36d1fb6f7c5abfc8721092e",
+  "contact_sheet": "reports/animation/spine_leg_coordination_s2_r15b_adjacent_frames.png",
+  "decoded_samples": 15,
+  "events_s": [
+    1.6666666666666667,
+    6,
+    12,
+    18,
+    22
+  ],
+  "observations": [
+    "One-frame neighbourhood of repeated100-frame cycle shows continuous body/joint motion.",
+    "Cuts at6,12,18,22seconds switch to intended camera/label sets without intervening black frames.",
+    "Neighbouring frames retain the coupled spine, moving legs and persistent kinematic caption."
+  ],
+  "scope": "Sampled decoded adjacent-frame review, not every possible subframe."
+}
