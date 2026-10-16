@@ -1,0 +1,1551 @@
+{
+  "status": "PASS_R15_IDENTITY_ONLY",
+  "native_files_sha256": {
+    "r14": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+    "r15": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4"
+  },
+  "configuration_sha256": {
+    "r14": "75821051074baf6c5da164f3ac073be164b6c3ef87a1191b125d0e34cf757710",
+    "r15": "b23bd87ca0f97280b98f292d41e2799fa79fbd4d29bc82483be5ad44269a4cb0"
+  },
+  "configuration_projection_sha256": "75df61a619dac437e03d0d7fd90deccfee393a96f996be32a0ea6ecde9836a0c",
+  "motion_map_sha256": "74964b3fa853b63a3fe7d338dceb497afed291fcd1529190b6b984e5a1ecce30",
+  "instance_count": 455,
+  "source_definition_count": 108,
+  "changed_sources": [
+    "FRM_LUMBAR_COMPACT_CAGE_r12"
+  ],
+  "changed_instances": [
+    "LumbarIntegrated1"
+  ],
+  "retired_instances": [],
+  "new_instances": [],
+  "maximum_link_placement_matrix_error": 0.0,
+  "strict_unchanged_source_count": 107,
+  "source_checks": [
+    {
+      "source": "A_OUTER_SPACER_L5_0_r12",
+      "old_part_number": "A_OUTER_SPACER_L5.0_r12",
+      "new_part_number": "A_OUTER_SPACER_L5.0_r12",
+      "old_brep_sha256": "688dd745661e53684ca958712b10b9f200072dff6d5ca8477d8e3ccee73c858b",
+      "new_brep_sha256": "688dd745661e53684ca958712b10b9f200072dff6d5ca8477d8e3ccee73c858b",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "688dd745661e53684ca958712b10b9f200072dff6d5ca8477d8e3ccee73c858b",
+        "new_sha256": "688dd745661e53684ca958712b10b9f200072dff6d5ca8477d8e3ccee73c858b"
+      }
+    },
+    {
+      "source": "A_OUTER_SPACER_L6_8_r12",
+      "old_part_number": "A_OUTER_SPACER_L6.8_r12",
+      "new_part_number": "A_OUTER_SPACER_L6.8_r12",
+      "old_brep_sha256": "f28bd95a687da7b5857b4752153eade1993a878b11b038a655b9a6a75cc428f7",
+      "new_brep_sha256": "f28bd95a687da7b5857b4752153eade1993a878b11b038a655b9a6a75cc428f7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "f28bd95a687da7b5857b4752153eade1993a878b11b038a655b9a6a75cc428f7",
+        "new_sha256": "f28bd95a687da7b5857b4752153eade1993a878b11b038a655b9a6a75cc428f7"
+      }
+    },
+    {
+      "source": "BRG_2x4x1p2_PROVISIONAL",
+      "old_part_number": "BRG_2x4x1p2_PROVISIONAL",
+      "new_part_number": "BRG_2x4x1p2_PROVISIONAL",
+      "old_brep_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+      "new_brep_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+        "new_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19"
+      }
+    },
+    {
+      "source": "CENTRAL_E_GROOVED_PIN_r10",
+      "old_part_number": "CENTRAL_E_GROOVED_PIN_r10",
+      "new_part_number": "CENTRAL_E_GROOVED_PIN_r10",
+      "old_brep_sha256": "a25b7466ce7396cadc06400df63c691e8541fa309e7f72c96ecb5da43de8bfe1",
+      "new_brep_sha256": "a25b7466ce7396cadc06400df63c691e8541fa309e7f72c96ecb5da43de8bfe1",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "a25b7466ce7396cadc06400df63c691e8541fa309e7f72c96ecb5da43de8bfe1",
+        "new_sha256": "a25b7466ce7396cadc06400df63c691e8541fa309e7f72c96ecb5da43de8bfe1"
+      }
+    },
+    {
+      "source": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "old_part_number": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "new_part_number": "CENTRAL_E_SPLIT_RETAINER_r10",
+      "old_brep_sha256": "d1642a58bce095bc0ebf749cfc6a0996d99119a8d2161e85fdf718373744a73c",
+      "new_brep_sha256": "d1642a58bce095bc0ebf749cfc6a0996d99119a8d2161e85fdf718373744a73c",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d1642a58bce095bc0ebf749cfc6a0996d99119a8d2161e85fdf718373744a73c",
+        "new_sha256": "d1642a58bce095bc0ebf749cfc6a0996d99119a8d2161e85fdf718373744a73c"
+      }
+    },
+    {
+      "source": "CENTRAL_E_THRUST_WASHER_r10",
+      "old_part_number": "CENTRAL_E_THRUST_WASHER_r10",
+      "new_part_number": "CENTRAL_E_THRUST_WASHER_r10",
+      "old_brep_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+      "new_brep_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+        "new_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8"
+      }
+    },
+    {
+      "source": "C_OUTER_SPACER_L1p4_r12",
+      "old_part_number": "C_OUTER_SPACER_L1p4_r12",
+      "new_part_number": "C_OUTER_SPACER_L1p4_r12",
+      "old_brep_sha256": "13ab1e9888481c2553aac9f11e3c8f5c0ca530fb052fa2f53cca010ccef52e35",
+      "new_brep_sha256": "13ab1e9888481c2553aac9f11e3c8f5c0ca530fb052fa2f53cca010ccef52e35",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "13ab1e9888481c2553aac9f11e3c8f5c0ca530fb052fa2f53cca010ccef52e35",
+        "new_sha256": "13ab1e9888481c2553aac9f11e3c8f5c0ca530fb052fa2f53cca010ccef52e35"
+      }
+    },
+    {
+      "source": "DIRECT_CRANK_FLUSH_M2_L",
+      "old_part_number": "DIRECT_CRANK_FLUSH_M2_L",
+      "new_part_number": "DIRECT_CRANK_FLUSH_M2_L",
+      "old_brep_sha256": "33d4f2f9e862c9862720f3feb061f526380987266ae25228ffd6be8bee24ec7b",
+      "new_brep_sha256": "33d4f2f9e862c9862720f3feb061f526380987266ae25228ffd6be8bee24ec7b",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "33d4f2f9e862c9862720f3feb061f526380987266ae25228ffd6be8bee24ec7b",
+        "new_sha256": "33d4f2f9e862c9862720f3feb061f526380987266ae25228ffd6be8bee24ec7b"
+      }
+    },
+    {
+      "source": "DIRECT_CRANK_FLUSH_M2_R",
+      "old_part_number": "DIRECT_CRANK_FLUSH_M2_R",
+      "new_part_number": "DIRECT_CRANK_FLUSH_M2_R",
+      "old_brep_sha256": "b784ad973e36d22996a806cae1bc37aa94c34418243c69adbe40cf57f8acf38e",
+      "new_brep_sha256": "b784ad973e36d22996a806cae1bc37aa94c34418243c69adbe40cf57f8acf38e",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "b784ad973e36d22996a806cae1bc37aa94c34418243c69adbe40cf57f8acf38e",
+        "new_sha256": "b784ad973e36d22996a806cae1bc37aa94c34418243c69adbe40cf57f8acf38e"
+      }
+    },
+    {
+      "source": "ENV_TENDON_XC330_M181_r03",
+      "old_part_number": "DYNAMIXEL_XC330_M181_T",
+      "new_part_number": "DYNAMIXEL_XC330_M181_T",
+      "old_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "new_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+        "new_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8"
+      }
+    },
+    {
+      "source": "ENV_XC330_M181_FORE_DATUM_r03",
+      "old_part_number": "DYNAMIXEL_XC330_M181_T",
+      "new_part_number": "DYNAMIXEL_XC330_M181_T",
+      "old_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "new_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+        "new_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8"
+      }
+    },
+    {
+      "source": "ENV_XC330_M181_HIND_DATUM_r03",
+      "old_part_number": "DYNAMIXEL_XC330_M181_T",
+      "new_part_number": "DYNAMIXEL_XC330_M181_T",
+      "old_brep_sha256": "ceaac6ad1183e2d9f94b889da8856cd495e8cae335a6fb77a45a39eee6987066",
+      "new_brep_sha256": "ceaac6ad1183e2d9f94b889da8856cd495e8cae335a6fb77a45a39eee6987066",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "ceaac6ad1183e2d9f94b889da8856cd495e8cae335a6fb77a45a39eee6987066",
+        "new_sha256": "ceaac6ad1183e2d9f94b889da8856cd495e8cae335a6fb77a45a39eee6987066"
+      }
+    },
+    {
+      "source": "ENV_XL330_r02",
+      "old_part_number": "DYNAMIXEL_XL330_M077_T",
+      "new_part_number": "DYNAMIXEL_XL330_M077_T",
+      "old_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "new_brep_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8",
+        "new_sha256": "623112052e812a37888315fb192487977f599e3c0ba13dd8ed1477a8bd214dc8"
+      }
+    },
+    {
+      "source": "FRM_LUMBAR_COMPACT_CAGE_r12",
+      "old_part_number": "FRM_LUMBAR_COMPACT_CAGE_r14",
+      "new_part_number": "FRM_LUMBAR_COMPACT_CAGE_r15",
+      "old_brep_sha256": "9000685720370d45634e96ae9417c40c6d34458bf3160a5b73eb52f4f8c6bad9",
+      "new_brep_sha256": "c2faf4d18cde7aae47f80756eba2a03684c19331e52ee4ce1a972799c5f66e0f",
+      "prescribed_changed_source": true,
+      "brep_sha_changed": true,
+      "geometry_check": {
+        "method": "changed_source_recorded",
+        "old_brep_sha256": "9000685720370d45634e96ae9417c40c6d34458bf3160a5b73eb52f4f8c6bad9",
+        "new_brep_sha256": "c2faf4d18cde7aae47f80756eba2a03684c19331e52ee4ce1a972799c5f66e0f",
+        "brep_sha_changed": true
+      }
+    },
+    {
+      "source": "GUIDE_COPPER_r02",
+      "old_part_number": "GUIDE_COPPER_r02",
+      "new_part_number": "GUIDE_COPPER_r02",
+      "old_brep_sha256": "1dc3281e8885ce279998b19f4ff2a82cafb7753ecab15846eb43875a9e15f01d",
+      "new_brep_sha256": "1dc3281e8885ce279998b19f4ff2a82cafb7753ecab15846eb43875a9e15f01d",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "1dc3281e8885ce279998b19f4ff2a82cafb7753ecab15846eb43875a9e15f01d",
+        "new_sha256": "1dc3281e8885ce279998b19f4ff2a82cafb7753ecab15846eb43875a9e15f01d"
+      }
+    },
+    {
+      "source": "G_CRANK_SPACER_L0p3",
+      "old_part_number": "G_CRANK_SPACER_L0p3",
+      "new_part_number": "G_CRANK_SPACER_L0p3",
+      "old_brep_sha256": "3390372b22774f2ae38c471a56b401d911ab081146fb8693ff4870fc1cfab12e",
+      "new_brep_sha256": "3390372b22774f2ae38c471a56b401d911ab081146fb8693ff4870fc1cfab12e",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3390372b22774f2ae38c471a56b401d911ab081146fb8693ff4870fc1cfab12e",
+        "new_sha256": "3390372b22774f2ae38c471a56b401d911ab081146fb8693ff4870fc1cfab12e"
+      }
+    },
+    {
+      "source": "HORN_GAP_WASHER_OD8_T0p3",
+      "old_part_number": "HORN_GAP_WASHER_OD8_T0p3",
+      "new_part_number": "HORN_GAP_WASHER_OD8_T0p3",
+      "old_brep_sha256": "4665ed1a4527dee307f931c0c3a722f721faf8d087aca2a8da91bb185a5b396e",
+      "new_brep_sha256": "4665ed1a4527dee307f931c0c3a722f721faf8d087aca2a8da91bb185a5b396e",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4665ed1a4527dee307f931c0c3a722f721faf8d087aca2a8da91bb185a5b396e",
+        "new_sha256": "4665ed1a4527dee307f931c0c3a722f721faf8d087aca2a8da91bb185a5b396e"
+      }
+    },
+    {
+      "source": "HORN_M2_TRIMMED_CORE_L1p9",
+      "old_part_number": "HORN_M2_TRIMMED_CORE_L1p9",
+      "new_part_number": "HORN_M2_TRIMMED_CORE_L1p9",
+      "old_brep_sha256": "a54906803876676fbaee56b2a4837217a3283550856182311e53d252afef4e15",
+      "new_brep_sha256": "a54906803876676fbaee56b2a4837217a3283550856182311e53d252afef4e15",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "a54906803876676fbaee56b2a4837217a3283550856182311e53d252afef4e15",
+        "new_sha256": "a54906803876676fbaee56b2a4837217a3283550856182311e53d252afef4e15"
+      }
+    },
+    {
+      "source": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "old_part_number": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "new_part_number": "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "old_brep_sha256": "bd8d1e5b527c2957d0cacb4d9522c3e64e8e3e10570d44840342c9fb3268ccf7",
+      "new_brep_sha256": "bd8d1e5b527c2957d0cacb4d9522c3e64e8e3e10570d44840342c9fb3268ccf7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "bd8d1e5b527c2957d0cacb4d9522c3e64e8e3e10570d44840342c9fb3268ccf7",
+        "new_sha256": "bd8d1e5b527c2957d0cacb4d9522c3e64e8e3e10570d44840342c9fb3268ccf7"
+      }
+    },
+    {
+      "source": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "old_part_number": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "new_part_number": "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "old_brep_sha256": "e8b3a8381bad8bf855c7fb48ca455e3991141013d8d6e284860931c8e48e6f40",
+      "new_brep_sha256": "e8b3a8381bad8bf855c7fb48ca455e3991141013d8d6e284860931c8e48e6f40",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "e8b3a8381bad8bf855c7fb48ca455e3991141013d8d6e284860931c8e48e6f40",
+        "new_sha256": "e8b3a8381bad8bf855c7fb48ca455e3991141013d8d6e284860931c8e48e6f40"
+      }
+    },
+    {
+      "source": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "old_part_number": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "new_part_number": "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "old_brep_sha256": "57dc3421126a853cba24a0d7bf58e0fe57d59104f2099099a16cf7fcd21da85b",
+      "new_brep_sha256": "57dc3421126a853cba24a0d7bf58e0fe57d59104f2099099a16cf7fcd21da85b",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "57dc3421126a853cba24a0d7bf58e0fe57d59104f2099099a16cf7fcd21da85b",
+        "new_sha256": "57dc3421126a853cba24a0d7bf58e0fe57d59104f2099099a16cf7fcd21da85b"
+      }
+    },
+    {
+      "source": "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "old_part_number": "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "new_part_number": "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "old_brep_sha256": "daac3e3eae3b76c996f46986b63614af48ad04117c750e2a83d494a961ed0d63",
+      "new_brep_sha256": "daac3e3eae3b76c996f46986b63614af48ad04117c750e2a83d494a961ed0d63",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "daac3e3eae3b76c996f46986b63614af48ad04117c750e2a83d494a961ed0d63",
+        "new_sha256": "daac3e3eae3b76c996f46986b63614af48ad04117c750e2a83d494a961ed0d63"
+      }
+    },
+    {
+      "source": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "old_part_number": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "new_part_number": "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "old_brep_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+      "new_brep_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19",
+        "new_sha256": "90e9e22bf3a5cfe5638934ee240a525972fa2bd75800629e82d3bc2f37904d19"
+      }
+    },
+    {
+      "source": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "old_part_number": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "new_part_number": "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "old_brep_sha256": "f0d46bb8a52641d58567ab684c31a25e6421b4b14c2ce090100a407ab3f94642",
+      "new_brep_sha256": "f0d46bb8a52641d58567ab684c31a25e6421b4b14c2ce090100a407ab3f94642",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "f0d46bb8a52641d58567ab684c31a25e6421b4b14c2ce090100a407ab3f94642",
+        "new_sha256": "f0d46bb8a52641d58567ab684c31a25e6421b4b14c2ce090100a407ab3f94642"
+      }
+    },
+    {
+      "source": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "old_part_number": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "new_part_number": "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "old_brep_sha256": "067004becece1ec0495ea050cf3bd330a2b5e196e526878a730eb9f522fafe4d",
+      "new_brep_sha256": "067004becece1ec0495ea050cf3bd330a2b5e196e526878a730eb9f522fafe4d",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "067004becece1ec0495ea050cf3bd330a2b5e196e526878a730eb9f522fafe4d",
+        "new_sha256": "067004becece1ec0495ea050cf3bd330a2b5e196e526878a730eb9f522fafe4d"
+      }
+    },
+    {
+      "source": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "old_part_number": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "new_part_number": "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "old_brep_sha256": "504114d9ad42a5e46d9d1c33a112e4e3ba0c6c2e493d3c76c8a89597c3766edd",
+      "new_brep_sha256": "504114d9ad42a5e46d9d1c33a112e4e3ba0c6c2e493d3c76c8a89597c3766edd",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "504114d9ad42a5e46d9d1c33a112e4e3ba0c6c2e493d3c76c8a89597c3766edd",
+        "new_sha256": "504114d9ad42a5e46d9d1c33a112e4e3ba0c6c2e493d3c76c8a89597c3766edd"
+      }
+    },
+    {
+      "source": "LEG_r02_CURVED_CONTACT_PAD",
+      "old_part_number": "LEG_r02_CURVED_CONTACT_PAD",
+      "new_part_number": "LEG_r02_CURVED_CONTACT_PAD",
+      "old_brep_sha256": "64422b7161226916553b57f0e453f708564975f4e360486a3e6e65a241283e09",
+      "new_brep_sha256": "64422b7161226916553b57f0e453f708564975f4e360486a3e6e65a241283e09",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "64422b7161226916553b57f0e453f708564975f4e360486a3e6e65a241283e09",
+        "new_sha256": "64422b7161226916553b57f0e453f708564975f4e360486a3e6e65a241283e09"
+      }
+    },
+    {
+      "source": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "old_part_number": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "new_part_number": "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "old_brep_sha256": "5eda5a6768b59c0109f5a0ad02598e59c734d8b2f96bdac108435a0d9ef58454",
+      "new_brep_sha256": "5eda5a6768b59c0109f5a0ad02598e59c734d8b2f96bdac108435a0d9ef58454",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "5eda5a6768b59c0109f5a0ad02598e59c734d8b2f96bdac108435a0d9ef58454",
+        "new_sha256": "5eda5a6768b59c0109f5a0ad02598e59c734d8b2f96bdac108435a0d9ef58454"
+      }
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "old_part_number": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "new_part_number": "LEG_r02_JOURNAL_D1p9_L10p75",
+      "old_brep_sha256": "24d0b746405343ef53bf6f92bb0996a291046d0ee483699049219645df7bacbc",
+      "new_brep_sha256": "24d0b746405343ef53bf6f92bb0996a291046d0ee483699049219645df7bacbc",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "24d0b746405343ef53bf6f92bb0996a291046d0ee483699049219645df7bacbc",
+        "new_sha256": "24d0b746405343ef53bf6f92bb0996a291046d0ee483699049219645df7bacbc"
+      }
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "old_part_number": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "new_part_number": "LEG_r02_JOURNAL_D1p9_L11p7",
+      "old_brep_sha256": "f941a48dc00c151e62d6de14772aed95539322ef879cc70bdba5b5232cb2346e",
+      "new_brep_sha256": "f941a48dc00c151e62d6de14772aed95539322ef879cc70bdba5b5232cb2346e",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "f941a48dc00c151e62d6de14772aed95539322ef879cc70bdba5b5232cb2346e",
+        "new_sha256": "f941a48dc00c151e62d6de14772aed95539322ef879cc70bdba5b5232cb2346e"
+      }
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "old_part_number": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "new_part_number": "LEG_r02_JOURNAL_D1p9_L4p7",
+      "old_brep_sha256": "684c1afbccf005893620431b6ea3b22a8773629e0b1afc41948f46fc1ddd7983",
+      "new_brep_sha256": "684c1afbccf005893620431b6ea3b22a8773629e0b1afc41948f46fc1ddd7983",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "684c1afbccf005893620431b6ea3b22a8773629e0b1afc41948f46fc1ddd7983",
+        "new_sha256": "684c1afbccf005893620431b6ea3b22a8773629e0b1afc41948f46fc1ddd7983"
+      }
+    },
+    {
+      "source": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "old_part_number": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "new_part_number": "LEG_r02_JOURNAL_D1p9_L9p9",
+      "old_brep_sha256": "5ede13c8e63602e30cd9a44cd1e9885170c1e657ca096a83d632eb98cc44351d",
+      "new_brep_sha256": "5ede13c8e63602e30cd9a44cd1e9885170c1e657ca096a83d632eb98cc44351d",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "5ede13c8e63602e30cd9a44cd1e9885170c1e657ca096a83d632eb98cc44351d",
+        "new_sha256": "5ede13c8e63602e30cd9a44cd1e9885170c1e657ca096a83d632eb98cc44351d"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "old_brep_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+      "new_brep_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+        "new_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "old_brep_sha256": "63d247deadb5dec1cb1a9f353ceed8c6b7151178a61f5fd116385e3a21fede2c",
+      "new_brep_sha256": "63d247deadb5dec1cb1a9f353ceed8c6b7151178a61f5fd116385e3a21fede2c",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "63d247deadb5dec1cb1a9f353ceed8c6b7151178a61f5fd116385e3a21fede2c",
+        "new_sha256": "63d247deadb5dec1cb1a9f353ceed8c6b7151178a61f5fd116385e3a21fede2c"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "old_brep_sha256": "d5a50aa594022d90074cc47bbadeef51e9f55d879cb81df85c953b16574f8fee",
+      "new_brep_sha256": "d5a50aa594022d90074cc47bbadeef51e9f55d879cb81df85c953b16574f8fee",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d5a50aa594022d90074cc47bbadeef51e9f55d879cb81df85c953b16574f8fee",
+        "new_sha256": "d5a50aa594022d90074cc47bbadeef51e9f55d879cb81df85c953b16574f8fee"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "old_brep_sha256": "d206dba914d42318311050bfa5d1f2effda26b226cdd292fe51966b218185688",
+      "new_brep_sha256": "d206dba914d42318311050bfa5d1f2effda26b226cdd292fe51966b218185688",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d206dba914d42318311050bfa5d1f2effda26b226cdd292fe51966b218185688",
+        "new_sha256": "d206dba914d42318311050bfa5d1f2effda26b226cdd292fe51966b218185688"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "old_brep_sha256": "4b55d1e3bc755482a88fcf8f0572b167fe9472f485dfb2bc8e338735e91025ba",
+      "new_brep_sha256": "4b55d1e3bc755482a88fcf8f0572b167fe9472f485dfb2bc8e338735e91025ba",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4b55d1e3bc755482a88fcf8f0572b167fe9472f485dfb2bc8e338735e91025ba",
+        "new_sha256": "4b55d1e3bc755482a88fcf8f0572b167fe9472f485dfb2bc8e338735e91025ba"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "old_brep_sha256": "614c123ca1aaf853152f7b30ae34bacb13b9fac3d81e2f90d1c0d98a6ba2c7cd",
+      "new_brep_sha256": "614c123ca1aaf853152f7b30ae34bacb13b9fac3d81e2f90d1c0d98a6ba2c7cd",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "614c123ca1aaf853152f7b30ae34bacb13b9fac3d81e2f90d1c0d98a6ba2c7cd",
+        "new_sha256": "614c123ca1aaf853152f7b30ae34bacb13b9fac3d81e2f90d1c0d98a6ba2c7cd"
+      }
+    },
+    {
+      "source": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "old_part_number": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "new_part_number": "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "old_brep_sha256": "bd2187cd42f196c1978783869d6f75ac285f24096b0fc6ed5dfcf4769eeafbd3",
+      "new_brep_sha256": "bd2187cd42f196c1978783869d6f75ac285f24096b0fc6ed5dfcf4769eeafbd3",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "bd2187cd42f196c1978783869d6f75ac285f24096b0fc6ed5dfcf4769eeafbd3",
+        "new_sha256": "bd2187cd42f196c1978783869d6f75ac285f24096b0fc6ed5dfcf4769eeafbd3"
+      }
+    },
+    {
+      "source": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+      "old_part_number": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375",
+      "new_part_number": "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375",
+      "old_brep_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+      "new_brep_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+        "new_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74"
+      }
+    },
+    {
+      "source": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+      "old_part_number": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383",
+      "new_part_number": "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383",
+      "old_brep_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+      "new_brep_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+        "new_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28"
+      }
+    },
+    {
+      "source": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "old_part_number": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "new_part_number": "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "old_brep_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+      "new_brep_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74",
+        "new_sha256": "4b7c00667f4a3ae4a47b907fdfdd05b00cdfdc7b4baca5e84851d87e4debbb74"
+      }
+    },
+    {
+      "source": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "old_part_number": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "new_part_number": "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "old_brep_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+      "new_brep_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28",
+        "new_sha256": "5cbc87eed25a192ce83ed70409ac089fd7360bec4fbadb2ac8c9a6312861af28"
+      }
+    },
+    {
+      "source": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "old_part_number": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "new_part_number": "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "old_brep_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+      "new_brep_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+        "new_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489"
+      }
+    },
+    {
+      "source": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "old_part_number": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "new_part_number": "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "old_brep_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+      "new_brep_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+        "new_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7"
+      }
+    },
+    {
+      "source": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+      "old_part_number": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766",
+      "new_part_number": "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766",
+      "old_brep_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+      "new_brep_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489",
+        "new_sha256": "de0e367e3d428677451089befda24838bc8399aa9c24c22deb2a720954253489"
+      }
+    },
+    {
+      "source": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+      "old_part_number": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956",
+      "new_part_number": "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956",
+      "old_brep_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+      "new_brep_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7",
+        "new_sha256": "c7b8d6af1c9f5a6fd46b024308a367756b78cc646d4157279c1fdc3bfd92eee7"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "old_part_number": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "new_part_number": "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "old_brep_sha256": "3fe7be58a10ea6296bef8e6ee4393fa236a954176693883fd98bb4a005713596",
+      "new_brep_sha256": "3fe7be58a10ea6296bef8e6ee4393fa236a954176693883fd98bb4a005713596",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3fe7be58a10ea6296bef8e6ee4393fa236a954176693883fd98bb4a005713596",
+        "new_sha256": "3fe7be58a10ea6296bef8e6ee4393fa236a954176693883fd98bb4a005713596"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_SHANK",
+      "old_part_number": "LEG_r03_DIRECT_FORE_SHANK",
+      "new_part_number": "LEG_r03_DIRECT_FORE_SHANK",
+      "old_brep_sha256": "6b554a42998a0eb30c31aa172aea7710d66de2cb88b8bd9c3db21c4ce9a7e60b",
+      "new_brep_sha256": "6b554a42998a0eb30c31aa172aea7710d66de2cb88b8bd9c3db21c4ce9a7e60b",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "6b554a42998a0eb30c31aa172aea7710d66de2cb88b8bd9c3db21c4ce9a7e60b",
+        "new_sha256": "6b554a42998a0eb30c31aa172aea7710d66de2cb88b8bd9c3db21c4ce9a7e60b"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_FORE_THIGH",
+      "old_part_number": "LEG_r03_DIRECT_FORE_THIGH",
+      "new_part_number": "LEG_r03_DIRECT_FORE_THIGH",
+      "old_brep_sha256": "c442a0cf19b2de9205e2f3cbe15b89580ab3380f554c4f4f98253f35664e96df",
+      "new_brep_sha256": "c442a0cf19b2de9205e2f3cbe15b89580ab3380f554c4f4f98253f35664e96df",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c442a0cf19b2de9205e2f3cbe15b89580ab3380f554c4f4f98253f35664e96df",
+        "new_sha256": "c442a0cf19b2de9205e2f3cbe15b89580ab3380f554c4f4f98253f35664e96df"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "old_part_number": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "new_part_number": "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "old_brep_sha256": "babd35b0350fea71329267fdddab09aa261ef01fab109641c96707865fc7b95a",
+      "new_brep_sha256": "babd35b0350fea71329267fdddab09aa261ef01fab109641c96707865fc7b95a",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "babd35b0350fea71329267fdddab09aa261ef01fab109641c96707865fc7b95a",
+        "new_sha256": "babd35b0350fea71329267fdddab09aa261ef01fab109641c96707865fc7b95a"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_SHANK",
+      "old_part_number": "LEG_r03_DIRECT_HIND_SHANK",
+      "new_part_number": "LEG_r03_DIRECT_HIND_SHANK",
+      "old_brep_sha256": "22501ca47f03abe57d91964e489997981d3352e19d4069efe6050bb2738bcd61",
+      "new_brep_sha256": "22501ca47f03abe57d91964e489997981d3352e19d4069efe6050bb2738bcd61",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "22501ca47f03abe57d91964e489997981d3352e19d4069efe6050bb2738bcd61",
+        "new_sha256": "22501ca47f03abe57d91964e489997981d3352e19d4069efe6050bb2738bcd61"
+      }
+    },
+    {
+      "source": "LEG_r03_DIRECT_HIND_THIGH",
+      "old_part_number": "LEG_r03_DIRECT_HIND_THIGH",
+      "new_part_number": "LEG_r03_DIRECT_HIND_THIGH",
+      "old_brep_sha256": "6e8f8fd9a8cc619bb669c5eaca00b4180f421a48dcad98fa138018ab0d2d7096",
+      "new_brep_sha256": "6e8f8fd9a8cc619bb669c5eaca00b4180f421a48dcad98fa138018ab0d2d7096",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "6e8f8fd9a8cc619bb669c5eaca00b4180f421a48dcad98fa138018ab0d2d7096",
+        "new_sha256": "6e8f8fd9a8cc619bb669c5eaca00b4180f421a48dcad98fa138018ab0d2d7096"
+      }
+    },
+    {
+      "source": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "old_part_number": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "new_part_number": "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "old_brep_sha256": "f00cb4bbcba65730fd8f1ac5ecaf40fe8f58cf9fe1870cac060cc1568a1e55e7",
+      "new_brep_sha256": "f00cb4bbcba65730fd8f1ac5ecaf40fe8f58cf9fe1870cac060cc1568a1e55e7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "f00cb4bbcba65730fd8f1ac5ecaf40fe8f58cf9fe1870cac060cc1568a1e55e7",
+        "new_sha256": "f00cb4bbcba65730fd8f1ac5ecaf40fe8f58cf9fe1870cac060cc1568a1e55e7"
+      }
+    },
+    {
+      "source": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "old_part_number": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "new_part_number": "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "old_brep_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+      "new_brep_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+        "new_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912"
+      }
+    },
+    {
+      "source": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "old_part_number": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "new_part_number": "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "old_brep_sha256": "b56982786bfb04b3dcdf5740bc6f2439a3ef735743501769bc2c1d5cbdfd866f",
+      "new_brep_sha256": "b56982786bfb04b3dcdf5740bc6f2439a3ef735743501769bc2c1d5cbdfd866f",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "b56982786bfb04b3dcdf5740bc6f2439a3ef735743501769bc2c1d5cbdfd866f",
+        "new_sha256": "b56982786bfb04b3dcdf5740bc6f2439a3ef735743501769bc2c1d5cbdfd866f"
+      }
+    },
+    {
+      "source": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "old_part_number": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "new_part_number": "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "old_brep_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+      "new_brep_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912",
+        "new_sha256": "d4c24e73a5314373d9742cf293d0b561e98a2edc7dbf63f7533fc807bb82a912"
+      }
+    },
+    {
+      "source": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "old_part_number": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "new_part_number": "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "old_brep_sha256": "b34fbe8aecce311b101c3649ee8cb22151310afa585be92d6402c47b650fbd62",
+      "new_brep_sha256": "b34fbe8aecce311b101c3649ee8cb22151310afa585be92d6402c47b650fbd62",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "b34fbe8aecce311b101c3649ee8cb22151310afa585be92d6402c47b650fbd62",
+        "new_sha256": "b34fbe8aecce311b101c3649ee8cb22151310afa585be92d6402c47b650fbd62"
+      }
+    },
+    {
+      "source": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "old_part_number": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "new_part_number": "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "old_brep_sha256": "12495598b006a85d940a34d4ec3dfed146a83789d3c99a617731cc67d16d789e",
+      "new_brep_sha256": "12495598b006a85d940a34d4ec3dfed146a83789d3c99a617731cc67d16d789e",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "12495598b006a85d940a34d4ec3dfed146a83789d3c99a617731cc67d16d789e",
+        "new_sha256": "12495598b006a85d940a34d4ec3dfed146a83789d3c99a617731cc67d16d789e"
+      }
+    },
+    {
+      "source": "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "old_part_number": "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "new_part_number": "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "old_brep_sha256": "3fc0aa19932bf366d8a4b0b5ff66fa84b7a17d748251254f4347ba8afad2e9f6",
+      "new_brep_sha256": "3fc0aa19932bf366d8a4b0b5ff66fa84b7a17d748251254f4347ba8afad2e9f6",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3fc0aa19932bf366d8a4b0b5ff66fa84b7a17d748251254f4347ba8afad2e9f6",
+        "new_sha256": "3fc0aa19932bf366d8a4b0b5ff66fa84b7a17d748251254f4347ba8afad2e9f6"
+      }
+    },
+    {
+      "source": "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "old_part_number": "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "new_part_number": "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "old_brep_sha256": "6a64b8708a7652b8aa20a8375f26134682dff166285aeb335d1c5de7ab6d93a5",
+      "new_brep_sha256": "6a64b8708a7652b8aa20a8375f26134682dff166285aeb335d1c5de7ab6d93a5",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "6a64b8708a7652b8aa20a8375f26134682dff166285aeb335d1c5de7ab6d93a5",
+        "new_sha256": "6a64b8708a7652b8aa20a8375f26134682dff166285aeb335d1c5de7ab6d93a5"
+      }
+    },
+    {
+      "source": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "old_part_number": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "new_part_number": "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "old_brep_sha256": "3382e27ddc85bc0dd106d8166f7ab7fbcf2be6ac3052673907603c33e951e4b3",
+      "new_brep_sha256": "3382e27ddc85bc0dd106d8166f7ab7fbcf2be6ac3052673907603c33e951e4b3",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3382e27ddc85bc0dd106d8166f7ab7fbcf2be6ac3052673907603c33e951e4b3",
+        "new_sha256": "3382e27ddc85bc0dd106d8166f7ab7fbcf2be6ac3052673907603c33e951e4b3"
+      }
+    },
+    {
+      "source": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "old_part_number": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "new_part_number": "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "old_brep_sha256": "c9689589d586ede8ee329115284c5c42f7b6489dfeb75a9ed67d1746bf53409f",
+      "new_brep_sha256": "c9689589d586ede8ee329115284c5c42f7b6489dfeb75a9ed67d1746bf53409f",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c9689589d586ede8ee329115284c5c42f7b6489dfeb75a9ed67d1746bf53409f",
+        "new_sha256": "c9689589d586ede8ee329115284c5c42f7b6489dfeb75a9ed67d1746bf53409f"
+      }
+    },
+    {
+      "source": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "old_part_number": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "new_part_number": "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "old_brep_sha256": "81e9705bc8f84fa6619672b56e67b64e934cabc013f5b6813945f4ab70783ad3",
+      "new_brep_sha256": "81e9705bc8f84fa6619672b56e67b64e934cabc013f5b6813945f4ab70783ad3",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "81e9705bc8f84fa6619672b56e67b64e934cabc013f5b6813945f4ab70783ad3",
+        "new_sha256": "81e9705bc8f84fa6619672b56e67b64e934cabc013f5b6813945f4ab70783ad3"
+      }
+    },
+    {
+      "source": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "old_part_number": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "new_part_number": "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "old_brep_sha256": "bba1e749d9567bb92a24ab9b4748946c3f2e54b09b60a5a241efedec0bf3cbe5",
+      "new_brep_sha256": "bba1e749d9567bb92a24ab9b4748946c3f2e54b09b60a5a241efedec0bf3cbe5",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "bba1e749d9567bb92a24ab9b4748946c3f2e54b09b60a5a241efedec0bf3cbe5",
+        "new_sha256": "bba1e749d9567bb92a24ab9b4748946c3f2e54b09b60a5a241efedec0bf3cbe5"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_BoardEnvelope",
+      "old_part_number": "OPENRB150_PCB_ENVELOPE_r07",
+      "new_part_number": "OPENRB150_PCB_ENVELOPE_r07",
+      "old_brep_sha256": "9538a13517b9589ddfa8ecc825f3b991da23982e021a4f65e5fae3c29d2e9a68",
+      "new_brep_sha256": "9538a13517b9589ddfa8ecc825f3b991da23982e021a4f65e5fae3c29d2e9a68",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "9538a13517b9589ddfa8ecc825f3b991da23982e021a4f65e5fae3c29d2e9a68",
+        "new_sha256": "9538a13517b9589ddfa8ecc825f3b991da23982e021a4f65e5fae3c29d2e9a68"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "old_part_number": "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "new_part_number": "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "old_brep_sha256": "460666f46a27c0fccf7751d3c0b94346e1bf414dda178d98b7b80e5eca46f288",
+      "new_brep_sha256": "460666f46a27c0fccf7751d3c0b94346e1bf414dda178d98b7b80e5eca46f288",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "460666f46a27c0fccf7751d3c0b94346e1bf414dda178d98b7b80e5eca46f288",
+        "new_sha256": "460666f46a27c0fccf7751d3c0b94346e1bf414dda178d98b7b80e5eca46f288"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "old_part_number": "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "new_part_number": "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "old_brep_sha256": "3af7ca87516cada6e7f96c60d80f5870978c4cfd42044b653baca54f8fd7c416",
+      "new_brep_sha256": "3af7ca87516cada6e7f96c60d80f5870978c4cfd42044b653baca54f8fd7c416",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3af7ca87516cada6e7f96c60d80f5870978c4cfd42044b653baca54f8fd7c416",
+        "new_sha256": "3af7ca87516cada6e7f96c60d80f5870978c4cfd42044b653baca54f8fd7c416"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "old_part_number": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "new_part_number": "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "old_brep_sha256": "10f3662085c83ba2f81eb045fb4dc678139f216c36432f525a09801a2789b06f",
+      "new_brep_sha256": "10f3662085c83ba2f81eb045fb4dc678139f216c36432f525a09801a2789b06f",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "10f3662085c83ba2f81eb045fb4dc678139f216c36432f525a09801a2789b06f",
+        "new_sha256": "10f3662085c83ba2f81eb045fb4dc678139f216c36432f525a09801a2789b06f"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "old_part_number": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "new_part_number": "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "old_brep_sha256": "eed1513f81f39b8fb338981bb1ac2cfec4880bab6dbb350dc705ff6061c5e950",
+      "new_brep_sha256": "eed1513f81f39b8fb338981bb1ac2cfec4880bab6dbb350dc705ff6061c5e950",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "eed1513f81f39b8fb338981bb1ac2cfec4880bab6dbb350dc705ff6061c5e950",
+        "new_sha256": "eed1513f81f39b8fb338981bb1ac2cfec4880bab6dbb350dc705ff6061c5e950"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "old_part_number": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "new_part_number": "OpenRB150_Carrier_r07_SplitClampCaps",
+      "old_brep_sha256": "edb469f97397c648375e201ecaad5d244fc84eaeff310a9c902d819ef5020f89",
+      "new_brep_sha256": "edb469f97397c648375e201ecaad5d244fc84eaeff310a9c902d819ef5020f89",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "edb469f97397c648375e201ecaad5d244fc84eaeff310a9c902d819ef5020f89",
+        "new_sha256": "edb469f97397c648375e201ecaad5d244fc84eaeff310a9c902d819ef5020f89"
+      }
+    },
+    {
+      "source": "OpenRB150_Carrier_r07_Tray",
+      "old_part_number": "OpenRB150_Carrier_r07_Tray",
+      "new_part_number": "OpenRB150_Carrier_r07_Tray",
+      "old_brep_sha256": "7b9c3023a44f7023757b418dc20ab12dd62db96b98495f360b625371007803b2",
+      "new_brep_sha256": "7b9c3023a44f7023757b418dc20ab12dd62db96b98495f360b625371007803b2",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "7b9c3023a44f7023757b418dc20ab12dd62db96b98495f360b625371007803b2",
+        "new_sha256": "7b9c3023a44f7023757b418dc20ab12dd62db96b98495f360b625371007803b2"
+      }
+    },
+    {
+      "source": "PIN_D1_9_L5_2",
+      "old_part_number": "JOURNAL_D1p9_L8_GROOVED",
+      "new_part_number": "JOURNAL_D1p9_L8_GROOVED",
+      "old_brep_sha256": "1236588874e8e4af4098ffdec16204fcf666287df1eb9c698ac97aad0b7ff148",
+      "new_brep_sha256": "1236588874e8e4af4098ffdec16204fcf666287df1eb9c698ac97aad0b7ff148",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "1236588874e8e4af4098ffdec16204fcf666287df1eb9c698ac97aad0b7ff148",
+        "new_sha256": "1236588874e8e4af4098ffdec16204fcf666287df1eb9c698ac97aad0b7ff148"
+      }
+    },
+    {
+      "source": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "old_part_number": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "new_part_number": "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "old_brep_sha256": "00d2e8760d521194f51964e7bec4fc71a515d97722b56a6896540aaa137aa366",
+      "new_brep_sha256": "00d2e8760d521194f51964e7bec4fc71a515d97722b56a6896540aaa137aa366",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "00d2e8760d521194f51964e7bec4fc71a515d97722b56a6896540aaa137aa366",
+        "new_sha256": "00d2e8760d521194f51964e7bec4fc71a515d97722b56a6896540aaa137aa366"
+      }
+    },
+    {
+      "source": "SPACER_2mm_L0_6",
+      "old_part_number": "SPACER_2mm_L0.6",
+      "new_part_number": "SPACER_2mm_L0.6",
+      "old_brep_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+      "new_brep_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4",
+        "new_sha256": "4be04ad23c5f967c8794f168f64c315f358ec6cf74198938d80b4110bad1d4b4"
+      }
+    },
+    {
+      "source": "SPACER_2mm_L1_8",
+      "old_part_number": "SPACER_2mm_L1.8",
+      "new_part_number": "SPACER_2mm_L1.8",
+      "old_brep_sha256": "9312c368d09551dab76467c4d888380fce89e9605f4e943cd8be41e54e5eb451",
+      "new_brep_sha256": "9312c368d09551dab76467c4d888380fce89e9605f4e943cd8be41e54e5eb451",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "9312c368d09551dab76467c4d888380fce89e9605f4e943cd8be41e54e5eb451",
+        "new_sha256": "9312c368d09551dab76467c4d888380fce89e9605f4e943cd8be41e54e5eb451"
+      }
+    },
+    {
+      "source": "SPACER_2mm_L3_6",
+      "old_part_number": "SPACER_2mm_L3.6",
+      "new_part_number": "SPACER_2mm_L3.6",
+      "old_brep_sha256": "38633b8c220985b8f18ea0ad3047767e9a4b8b5f18c3242f4ab02dbad94949d7",
+      "new_brep_sha256": "38633b8c220985b8f18ea0ad3047767e9a4b8b5f18c3242f4ab02dbad94949d7",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "38633b8c220985b8f18ea0ad3047767e9a4b8b5f18c3242f4ab02dbad94949d7",
+        "new_sha256": "38633b8c220985b8f18ea0ad3047767e9a4b8b5f18c3242f4ab02dbad94949d7"
+      }
+    },
+    {
+      "source": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+      "old_part_number": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "new_part_number": "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "old_brep_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+      "new_brep_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+        "new_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2"
+      }
+    },
+    {
+      "source": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+      "old_part_number": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "new_part_number": "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "old_brep_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+      "new_brep_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2",
+        "new_sha256": "fa0249dc7b2014091315fdb946b06213ffe8f57a7fa1326e90d2b9efc44ce7f2"
+      }
+    },
+    {
+      "source": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+      "old_part_number": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72_R12",
+      "new_part_number": "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72_R12",
+      "old_brep_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+      "new_brep_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+        "new_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593"
+      }
+    },
+    {
+      "source": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+      "old_part_number": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72_R12",
+      "new_part_number": "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72_R12",
+      "old_brep_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+      "new_brep_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593",
+        "new_sha256": "8c3bf9ce0bfe1f2727a3637e0eddfa21ad2d5297bba8e5a08d99fd57c7397593"
+      }
+    },
+    {
+      "source": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+      "old_part_number": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "new_part_number": "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "old_brep_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+      "new_brep_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+        "new_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488"
+      }
+    },
+    {
+      "source": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+      "old_part_number": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "new_part_number": "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6_R12",
+      "old_brep_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+      "new_brep_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488",
+        "new_sha256": "c190a6a51e5948228c6f7c82fd7222e9ab0b0734197ddd155bddd95ec7ae5488"
+      }
+    },
+    {
+      "source": "SPINE_r04_CAPTURE_CAP_NEG",
+      "old_part_number": "SPINE_r04_CAPTURE_CAP_NEG",
+      "new_part_number": "SPINE_r04_CAPTURE_CAP_NEG",
+      "old_brep_sha256": "d84a2c2473626fe1539ce1a25e895e9add2db313812922481f54ee6f7510fa04",
+      "new_brep_sha256": "d84a2c2473626fe1539ce1a25e895e9add2db313812922481f54ee6f7510fa04",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "d84a2c2473626fe1539ce1a25e895e9add2db313812922481f54ee6f7510fa04",
+        "new_sha256": "d84a2c2473626fe1539ce1a25e895e9add2db313812922481f54ee6f7510fa04"
+      }
+    },
+    {
+      "source": "SPINE_r04_CAPTURE_CAP_POS",
+      "old_part_number": "SPINE_r04_CAPTURE_CAP_POS",
+      "new_part_number": "SPINE_r04_CAPTURE_CAP_POS",
+      "old_brep_sha256": "76c0935980c0fa6a2af892e60ae849d9c5ef340c664434d0f0897149dea9fb43",
+      "new_brep_sha256": "76c0935980c0fa6a2af892e60ae849d9c5ef340c664434d0f0897149dea9fb43",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "76c0935980c0fa6a2af892e60ae849d9c5ef340c664434d0f0897149dea9fb43",
+        "new_sha256": "76c0935980c0fa6a2af892e60ae849d9c5ef340c664434d0f0897149dea9fb43"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+      "old_part_number": "SPN_AB_TERMINAL_r14_B1_NEG",
+      "new_part_number": "SPN_AB_TERMINAL_r14_B1_NEG",
+      "old_brep_sha256": "cc8155da98bb3c62cf59992e7f0c3bcf4e29b4ef00cae6df2d8d340458a52021",
+      "new_brep_sha256": "cc8155da98bb3c62cf59992e7f0c3bcf4e29b4ef00cae6df2d8d340458a52021",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "cc8155da98bb3c62cf59992e7f0c3bcf4e29b4ef00cae6df2d8d340458a52021",
+        "new_sha256": "cc8155da98bb3c62cf59992e7f0c3bcf4e29b4ef00cae6df2d8d340458a52021"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_POS",
+      "old_part_number": "SPN_AB_TERMINAL_r14_B1_POS",
+      "new_part_number": "SPN_AB_TERMINAL_r14_B1_POS",
+      "old_brep_sha256": "c30e45ab3dbbe998efa6fa248275b8e87b9adfbc7791fb7bd2ce7d9317ecc117",
+      "new_brep_sha256": "c30e45ab3dbbe998efa6fa248275b8e87b9adfbc7791fb7bd2ce7d9317ecc117",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "c30e45ab3dbbe998efa6fa248275b8e87b9adfbc7791fb7bd2ce7d9317ecc117",
+        "new_sha256": "c30e45ab3dbbe998efa6fa248275b8e87b9adfbc7791fb7bd2ce7d9317ecc117"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+      "old_part_number": "SPN_AB_TERMINAL_r14_B2_NEG",
+      "new_part_number": "SPN_AB_TERMINAL_r14_B2_NEG",
+      "old_brep_sha256": "b1a1a8204f2bcf7d29e7ad0fc27847a6c28afa69a9a24f33d47ed59608b88e12",
+      "new_brep_sha256": "b1a1a8204f2bcf7d29e7ad0fc27847a6c28afa69a9a24f33d47ed59608b88e12",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "b1a1a8204f2bcf7d29e7ad0fc27847a6c28afa69a9a24f33d47ed59608b88e12",
+        "new_sha256": "b1a1a8204f2bcf7d29e7ad0fc27847a6c28afa69a9a24f33d47ed59608b88e12"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_POS",
+      "old_part_number": "SPN_AB_TERMINAL_r14_B2_POS",
+      "new_part_number": "SPN_AB_TERMINAL_r14_B2_POS",
+      "old_brep_sha256": "8dc13a0003c0de1c682d75e6abe24d67d9e7a5210f6bbfd7e767196ef56b8c21",
+      "new_brep_sha256": "8dc13a0003c0de1c682d75e6abe24d67d9e7a5210f6bbfd7e767196ef56b8c21",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "8dc13a0003c0de1c682d75e6abe24d67d9e7a5210f6bbfd7e767196ef56b8c21",
+        "new_sha256": "8dc13a0003c0de1c682d75e6abe24d67d9e7a5210f6bbfd7e767196ef56b8c21"
+      }
+    },
+    {
+      "source": "SPN_r02_L2",
+      "old_part_number": "SPN_r02_L2",
+      "new_part_number": "SPN_r02_L2",
+      "old_brep_sha256": "7d0f00c1284caf212b2dc83783baef8f72f88de4e531cf3ac8be196ee399f6e1",
+      "new_brep_sha256": "7d0f00c1284caf212b2dc83783baef8f72f88de4e531cf3ac8be196ee399f6e1",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "7d0f00c1284caf212b2dc83783baef8f72f88de4e531cf3ac8be196ee399f6e1",
+        "new_sha256": "7d0f00c1284caf212b2dc83783baef8f72f88de4e531cf3ac8be196ee399f6e1"
+      }
+    },
+    {
+      "source": "SPN_r02_L4",
+      "old_part_number": "SPN_BC_RECESSED_r12",
+      "new_part_number": "SPN_BC_RECESSED_r12",
+      "old_brep_sha256": "85f2c7e94abd95d687539c5ba9bfec242f92075a66c11aa5b3b9093a1de35a86",
+      "new_brep_sha256": "85f2c7e94abd95d687539c5ba9bfec242f92075a66c11aa5b3b9093a1de35a86",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "85f2c7e94abd95d687539c5ba9bfec242f92075a66c11aa5b3b9093a1de35a86",
+        "new_sha256": "85f2c7e94abd95d687539c5ba9bfec242f92075a66c11aa5b3b9093a1de35a86"
+      }
+    },
+    {
+      "source": "SPN_r02_L5",
+      "old_part_number": "SPN_r02_L5",
+      "new_part_number": "SPN_r02_L5",
+      "old_brep_sha256": "0fc0057d2e1b7297e35b4bb4b56c2026802c42aa626419301438de76ad082727",
+      "new_brep_sha256": "0fc0057d2e1b7297e35b4bb4b56c2026802c42aa626419301438de76ad082727",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "0fc0057d2e1b7297e35b4bb4b56c2026802c42aa626419301438de76ad082727",
+        "new_sha256": "0fc0057d2e1b7297e35b4bb4b56c2026802c42aa626419301438de76ad082727"
+      }
+    },
+    {
+      "source": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "old_part_number": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "new_part_number": "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "old_brep_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+      "new_brep_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+        "new_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8"
+      }
+    },
+    {
+      "source": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "old_part_number": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "new_part_number": "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "old_brep_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+      "new_brep_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8",
+        "new_sha256": "fad5c48ca25d37f2b753d58b8d4a45ac95c59c7719bbf024187969f0763c5eb8"
+      }
+    },
+    {
+      "source": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "old_part_number": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "new_part_number": "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "old_brep_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+      "new_brep_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8",
+        "new_sha256": "3209248e039d06f118b1d63804a729c1a475fa63164c337a096cbd46bdbccff8"
+      }
+    },
+    {
+      "source": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "old_part_number": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "new_part_number": "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "old_brep_sha256": "0d496b05ebc6d45938707edf0a092f983c370effdf8b1f09b3caf083bc089710",
+      "new_brep_sha256": "0d496b05ebc6d45938707edf0a092f983c370effdf8b1f09b3caf083bc089710",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "0d496b05ebc6d45938707edf0a092f983c370effdf8b1f09b3caf083bc089710",
+        "new_sha256": "0d496b05ebc6d45938707edf0a092f983c370effdf8b1f09b3caf083bc089710"
+      }
+    },
+    {
+      "source": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "old_part_number": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "new_part_number": "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "old_brep_sha256": "24663f4560fea30522a573db2efad89540229b4dc4f2f56485bd2100007f5d07",
+      "new_brep_sha256": "24663f4560fea30522a573db2efad89540229b4dc4f2f56485bd2100007f5d07",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "24663f4560fea30522a573db2efad89540229b4dc4f2f56485bd2100007f5d07",
+        "new_sha256": "24663f4560fea30522a573db2efad89540229b4dc4f2f56485bd2100007f5d07"
+      }
+    },
+    {
+      "source": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "old_part_number": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "new_part_number": "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "old_brep_sha256": "2f4bd24a8cc03731ba565999902e12dd68d4b2ec6159f4eb13da8469ba4bfa53",
+      "new_brep_sha256": "2f4bd24a8cc03731ba565999902e12dd68d4b2ec6159f4eb13da8469ba4bfa53",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "2f4bd24a8cc03731ba565999902e12dd68d4b2ec6159f4eb13da8469ba4bfa53",
+        "new_sha256": "2f4bd24a8cc03731ba565999902e12dd68d4b2ec6159f4eb13da8469ba4bfa53"
+      }
+    },
+    {
+      "source": "TENDON_r07_L_CABLE_PoseR07",
+      "old_part_number": "TENDON_r07_L_CABLE",
+      "new_part_number": "TENDON_r07_L_CABLE",
+      "old_brep_sha256": "7d3e89a8c2d3122c6399bb2e01181818a91cab66d9da3b8a09bb3ceb231ba564",
+      "new_brep_sha256": "7d3e89a8c2d3122c6399bb2e01181818a91cab66d9da3b8a09bb3ceb231ba564",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "7d3e89a8c2d3122c6399bb2e01181818a91cab66d9da3b8a09bb3ceb231ba564",
+        "new_sha256": "7d3e89a8c2d3122c6399bb2e01181818a91cab66d9da3b8a09bb3ceb231ba564"
+      }
+    },
+    {
+      "source": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "old_part_number": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "new_part_number": "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "old_brep_sha256": "aa4094968c6b7e686cb4f7f753c74e560a527c7bad34abafaff5aa7d51a248eb",
+      "new_brep_sha256": "aa4094968c6b7e686cb4f7f753c74e560a527c7bad34abafaff5aa7d51a248eb",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "aa4094968c6b7e686cb4f7f753c74e560a527c7bad34abafaff5aa7d51a248eb",
+        "new_sha256": "aa4094968c6b7e686cb4f7f753c74e560a527c7bad34abafaff5aa7d51a248eb"
+      }
+    },
+    {
+      "source": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "old_part_number": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "new_part_number": "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "old_brep_sha256": "8bfc9d870629b6cbe39c135b33072463199930177ff4509133c1d5fae4d90c7a",
+      "new_brep_sha256": "8bfc9d870629b6cbe39c135b33072463199930177ff4509133c1d5fae4d90c7a",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "8bfc9d870629b6cbe39c135b33072463199930177ff4509133c1d5fae4d90c7a",
+        "new_sha256": "8bfc9d870629b6cbe39c135b33072463199930177ff4509133c1d5fae4d90c7a"
+      }
+    },
+    {
+      "source": "TENDON_r07_R_CABLE_PoseR07",
+      "old_part_number": "TENDON_r07_R_CABLE",
+      "new_part_number": "TENDON_r07_R_CABLE",
+      "old_brep_sha256": "733ce28722134d1060b2a17454cda95f6422b69abafd9d98c281f9baef03c77f",
+      "new_brep_sha256": "733ce28722134d1060b2a17454cda95f6422b69abafd9d98c281f9baef03c77f",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "733ce28722134d1060b2a17454cda95f6422b69abafd9d98c281f9baef03c77f",
+        "new_sha256": "733ce28722134d1060b2a17454cda95f6422b69abafd9d98c281f9baef03c77f"
+      }
+    },
+    {
+      "source": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "old_part_number": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "new_part_number": "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "old_brep_sha256": "e21ea6bd351909588a906d52eb2636d6011c0aadeef22578e7f31155c4951cfb",
+      "new_brep_sha256": "e21ea6bd351909588a906d52eb2636d6011c0aadeef22578e7f31155c4951cfb",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "e21ea6bd351909588a906d52eb2636d6011c0aadeef22578e7f31155c4951cfb",
+        "new_sha256": "e21ea6bd351909588a906d52eb2636d6011c0aadeef22578e7f31155c4951cfb"
+      }
+    },
+    {
+      "source": "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "old_part_number": "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "new_part_number": "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "old_brep_sha256": "6fb84dcf3c317b6ef0e9ffb337026821eb54a591a80a806e22dc43c2b06f41c2",
+      "new_brep_sha256": "6fb84dcf3c317b6ef0e9ffb337026821eb54a591a80a806e22dc43c2b06f41c2",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "6fb84dcf3c317b6ef0e9ffb337026821eb54a591a80a806e22dc43c2b06f41c2",
+        "new_sha256": "6fb84dcf3c317b6ef0e9ffb337026821eb54a591a80a806e22dc43c2b06f41c2"
+      }
+    },
+    {
+      "source": "TORSO_D_JOURNAL_D1p9_L24_r12",
+      "old_part_number": "TORSO_D_JOURNAL_D1p9_L24_r12",
+      "new_part_number": "TORSO_D_JOURNAL_D1p9_L24_r12",
+      "old_brep_sha256": "687de65a1dde6d29ccee401203b3a130da8caad5a6768f4ea52b6f2bc9062ccf",
+      "new_brep_sha256": "687de65a1dde6d29ccee401203b3a130da8caad5a6768f4ea52b6f2bc9062ccf",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "687de65a1dde6d29ccee401203b3a130da8caad5a6768f4ea52b6f2bc9062ccf",
+        "new_sha256": "687de65a1dde6d29ccee401203b3a130da8caad5a6768f4ea52b6f2bc9062ccf"
+      }
+    },
+    {
+      "source": "TORSO_FORE_TRANSVERSE_FRAME_r06",
+      "old_part_number": "TORSO_FORE_COMPACT_FRAME_r12",
+      "new_part_number": "TORSO_FORE_COMPACT_FRAME_r12",
+      "old_brep_sha256": "572c38a1d7549cbeeff3845190a9acfea02ea70a7ad4b4eed900ea0d3c5d9ceb",
+      "new_brep_sha256": "572c38a1d7549cbeeff3845190a9acfea02ea70a7ad4b4eed900ea0d3c5d9ceb",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "572c38a1d7549cbeeff3845190a9acfea02ea70a7ad4b4eed900ea0d3c5d9ceb",
+        "new_sha256": "572c38a1d7549cbeeff3845190a9acfea02ea70a7ad4b4eed900ea0d3c5d9ceb"
+      }
+    },
+    {
+      "source": "TORSO_HIND_TRANSVERSE_FRAME_r06",
+      "old_part_number": "TORSO_HIND_COMPACT_FRAME_r12",
+      "new_part_number": "TORSO_HIND_COMPACT_FRAME_r12",
+      "old_brep_sha256": "f976df9d9155598867d058148fd182ad0334bad418fa592222c8de5bc7237302",
+      "new_brep_sha256": "f976df9d9155598867d058148fd182ad0334bad418fa592222c8de5bc7237302",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "f976df9d9155598867d058148fd182ad0334bad418fa592222c8de5bc7237302",
+        "new_sha256": "f976df9d9155598867d058148fd182ad0334bad418fa592222c8de5bc7237302"
+      }
+    },
+    {
+      "source": "TORSO_OUTPUT_SPACER_L19_4",
+      "old_part_number": "TORSO_OUTPUT_SPACER_L19.4",
+      "new_part_number": "TORSO_OUTPUT_SPACER_L19.4",
+      "old_brep_sha256": "0b3121d2206537564a4a9bd2e3f11dea194e15e112800d47b0fc5f8824fea45a",
+      "new_brep_sha256": "0b3121d2206537564a4a9bd2e3f11dea194e15e112800d47b0fc5f8824fea45a",
+      "prescribed_changed_source": false,
+      "brep_sha_changed": false,
+      "geometry_check": {
+        "method": "exact_brep",
+        "old_sha256": "0b3121d2206537564a4a9bd2e3f11dea194e15e112800d47b0fc5f8824fea45a",
+        "new_sha256": "0b3121d2206537564a4a9bd2e3f11dea194e15e112800d47b0fc5f8824fea45a"
+      }
+    }
+  ],
+  "native_pose_parameters_equal": true,
+  "motion_map_equal": true,
+  "controller_pose_parameters_equal": true,
+  "document_unchanged": true,
+  "native_files_unchanged": true,
+  "helper_sha256": {
+    "verify_sculpted_r15.py": "806ede8695abfec83aef13784c66e6f148f238623f291bea82aa64d58952c14e",
+    "verify_frame_revision_r09.py": "723239c9fda21e3a719d5cc7b14fcff7e280c7378775cd9a1b77ebe86ae4e59c",
+    "animation_pose_export.py": "af9f55f3b4efe5183f53f089462070356fe8662423e8549313cffa134de35a3f"
+  },
+  "scope": "Identity and exact saved native/source comparison only; no mechanism or strength qualification"
+}

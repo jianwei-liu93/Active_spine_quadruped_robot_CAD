@@ -1,0 +1,64 @@
+{
+  "status": "BOUND_ACTUAL_NATIVE_EVIDENCE",
+  "artifacts": {
+    "cad/prototypes/r15_lumbar_root.FCStd": {
+      "sha256": "c60fdd5d5f64841f8491ee10f9b8222f8e29d4288f0ccfd8092def9d26e60d03",
+      "bytes": 2033007
+    },
+    "cad/prototypes/r15_lumbar_shoulders.FCStd": {
+      "sha256": "4e7fd481870f2b8d73b5d2c3adf6584625bfb4bac4302e39a742e22f2b616236",
+      "bytes": 2326571
+    },
+    "cad/flexor_r15_robot.FCStd": {
+      "sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+      "bytes": 9029905
+    },
+    "parameters/assembly_r15.json": {
+      "sha256": "b23bd87ca0f97280b98f292d41e2799fa79fbd4d29bc82483be5ad44269a4cb0",
+      "bytes": 20873
+    },
+    "src/sculpted_frame_r15.py": {
+      "sha256": "3d35b6583047632bf327a75ef7d704fd5ed36b762e4dea51aeff098d83deb0a1",
+      "bytes": 5148
+    },
+    "src/shelf_shoulders_r15.py": {
+      "sha256": "9c1f6ca4c33a9a199dade704f0e6d58919375343540ce843ffc7c7ffb7c41697",
+      "bytes": 2469
+    },
+    "src/section_compare_r15.py": {
+      "sha256": "e9c438e36774fb1794a9ae47631edef9afd62db1c2a64840491e3449c74bb17f",
+      "bytes": 20736
+    },
+    "src/shoulder_sections_r15.py": {
+      "sha256": "f90bd87b182130e05bfdf212b6e5a3b54533da9219f66f2277f0d5feb6ac9969",
+      "bytes": 1654
+    },
+    "reports/verification/r15_identity.json": {
+      "sha256": "71ca268b5151dcefeb2d41313883eb7085ab0ef148a7ca02c1c6fe926fab3b30",
+      "bytes": 76218
+    },
+    "reports/verification/r15_prototype_integrated_roots.json": {
+      "sha256": "2065895e1ecc66ff07f977b4e217787093a5839761ee2c0f31b7a89dabb0ed92",
+      "bytes": 3542
+    },
+    "reports/verification/r15_prototype_sections.json": {
+      "sha256": "3faf1ffdfe8f15b0c081868d766a861a0be4dbaa6106b97f03901acad62f92c9",
+      "bytes": 303765
+    },
+    "reports/verification/r15_shoulder_prototype.json": {
+      "sha256": "7b526c3cf880e5d264f838a5aade828c04511624f76d142fa612ef238acdfe70",
+      "bytes": 1462
+    },
+    "reports/verification/r15_shoulder_sections.json": {
+      "sha256": "cb30e663b308a1c625d8fb1c5e2b72e9a54e846dec6bf2db0b4797466fac46e4",
+      "bytes": 25004
+    },
+    "reports/views/r15_prototype_capture_manifest.json": {
+      "sha256": "238389212db15c7cc51327f35f0aeb37903d6c99267a9f5da6f8e5b486f2469f",
+      "bytes": 3474
+    }
+  },
+  "root_sections_geometry": "cad/prototypes/r15_lumbar_root.FCStd; before shoulder pads. Shoulders occupy |X|10..16 outside root section ROIs |X|22..37; all root geometry retained.",
+  "shoulder_sections_geometry": "cad/prototypes/r15_lumbar_shoulders.FCStd; same executed feature parameters as final integrated frame; identity checks final source inventory.",
+  "limits": "Local geometry evidence; final native, motion, STEP and animation gates pending."
+}

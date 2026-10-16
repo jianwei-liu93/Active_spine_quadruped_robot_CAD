@@ -1,0 +1,12 @@
+{
+  "status": "INTERRUPTED_PREFIX_ONLY",
+  "reason": "Full complex-frame Boolean at every 1-degree phase exceeds bounded changed-part scope; replace with additive-material delta at the validated r14 sample phases",
+  "last_completed_sample": {
+    "pair_count": 454,
+    "bbox_excluded": 297,
+    "occ_checks": 157,
+    "forbidden_overlaps": [],
+    "status": "PASS_FINITE_SAMPLE"
+  },
+  "elapsed_s": 676.3175762150204
+}
