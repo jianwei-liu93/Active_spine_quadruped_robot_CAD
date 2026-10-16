@@ -12,10 +12,10 @@ assert len(counts)==108 and sum(counts.values())==455
 assert counts[('FRM_LUMBAR_COMPACT_CAGE_r12','FRM_LUMBAR_COMPACT_CAGE_r15')]==1
 folder=ROOT/'bom';folder.mkdir(exist_ok=True)
 with (folder/'bom_r15.csv').open('w',newline='') as f:
-    writer=csv.writer(f);writer.writerow(['source_object','part_number','quantity'])
+    writer=csv.writer(f,lineterminator='\n');writer.writerow(['source_object','part_number','quantity'])
     writer.writerows((source,number,n) for (source,number),n in sorted(counts.items()))
 with (folder/'instances_r15.csv').open('w',newline='') as f:
-    writer=csv.writer(f);keys=['instance_id','freecad_object_name','source_object_name','part_number','group','geometry_kind']
+    writer=csv.writer(f,lineterminator='\n');keys=['instance_id','freecad_object_name','source_object_name','part_number','group','geometry_kind']
     writer.writerow(keys);writer.writerows([r[k] for k in keys] for r in rows)
 report={'status':'PASS_SOURCE_INVENTORY_BOM','native_sha256':data['source']['cad_sha256'],'ax01_sha256':sha(path),
         'physical_instances':455,'source_definition_rows':108,'summed_quantities':455,

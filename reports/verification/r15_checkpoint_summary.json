@@ -96,12 +96,12 @@
       "sha256": "586fb70c250a9b10084049909a12a6b5c99a793d82cd9f0977d7224f6b3f46e7"
     },
     "bom/bom_r15.csv": {
-      "bytes": 7339,
-      "sha256": "fe0b8f41567b8ee56585b519e55ff03ce15840e51cc1d47b9c938eafb20347f5"
+      "bytes": 7230,
+      "sha256": "4eb001866c1d366a8a93feccf56d334f317a126ef085c7affcbe1d5b2d36a53a"
     },
     "bom/instances_r15.csv": {
-      "bytes": 55103,
-      "sha256": "50b1831f7179ca301c9f6320b5d8b333f052a1be47d31b0f56e95b1503a1ff6e"
+      "bytes": 54647,
+      "sha256": "7e2e41b322b347713f4463e5398a4b7820b987b94699a129be1e2dc6deabcff6"
     },
     "cad/flexor_r15_robot.FCStd": {
       "bytes": 9029905,
@@ -173,7 +173,7 @@
     },
     "reports/verification/r15_bom.json": {
       "bytes": 637,
-      "sha256": "2b8388c1a36c82b4afbc20e75ac069f92fbb8ade64c680939e5c65a7cf353587"
+      "sha256": "99eb92e91db917f8bf106916495b28c8e22d55330a4263e7aeea82085806d616"
     },
     "reports/verification/r15_environment.json": {
       "bytes": 1282,
@@ -300,8 +300,8 @@
       "sha256": "0e2903618d8a81c6e4314e2015c5072502bec053a8dbd09b8c84987e355af822"
     },
     "src/bom_r15.py": {
-      "bytes": 1814,
-      "sha256": "724baec6afd1f475020658d16fcfbbadd1f72cb76bc53c3714572affac00e24a"
+      "bytes": 1854,
+      "sha256": "688bed119d74f3a4de735fda6bc3102c034b226069cfd6a0d7a4cdbcaae102b7"
     },
     "src/build_robot_r15.py": {
       "bytes": 2146,
