@@ -1,0 +1,140 @@
+{
+  "status": "INTEGRATED_PENDING_GATES",
+  "native_path": "cad/flexor_r15b_robot.FCStd",
+  "baseline_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "changed_sources": [
+    "A_OUTER_SPACER_L5_0_r12",
+    "A_OUTER_SPACER_L6_8_r12",
+    "SPACER_2mm_L1_8",
+    "SPACER_2mm_L3_6",
+    "SPN_AB_TERMINAL_r12_B1_NEG",
+    "SPN_AB_TERMINAL_r12_B1_POS",
+    "SPN_AB_TERMINAL_r12_B2_NEG",
+    "SPN_AB_TERMINAL_r12_B2_POS"
+  ],
+  "moved_instances": [
+    "A1_1_Bearing1",
+    "A1_1_Spacer0",
+    "A1__1_Bearing1",
+    "A1__1_OuterSpacer",
+    "A2_1_Bearing1",
+    "A2_1_Spacer0",
+    "A2__1_Bearing1",
+    "A2__1_OuterSpacer"
+  ],
+  "rockers": [
+    {
+      "instance": "Link1_L3__1",
+      "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+      "section": {
+        "revision": "r15b",
+        "symmetry_plane_source_z_mm": 2.4000000000000004,
+        "A_single_eye_world_abs_y_mm": 34.2,
+        "B_cheek_centres_world_abs_y_mm": [
+          32.4,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 4.800000000000001,
+        "B_gap_mm": 2.400000000000001,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 1.2000000000000004,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      }
+    },
+    {
+      "instance": "Link2_L3__1",
+      "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+      "section": {
+        "revision": "r15b",
+        "symmetry_plane_source_z_mm": 3.299999999999999,
+        "A_single_eye_world_abs_y_mm": 33.3,
+        "B_cheek_centres_world_abs_y_mm": [
+          30.6,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 6.599999999999999,
+        "B_gap_mm": 4.199999999999999,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 2.0999999999999996,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      }
+    },
+    {
+      "instance": "Link1_L3_1",
+      "source": "SPN_AB_TERMINAL_r12_B1_POS",
+      "section": {
+        "revision": "r15b",
+        "symmetry_plane_source_z_mm": -1.2000000000000006,
+        "A_single_eye_world_abs_y_mm": 34.2,
+        "B_cheek_centres_world_abs_y_mm": [
+          32.4,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 4.800000000000002,
+        "B_gap_mm": 2.4000000000000017,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 1.2000000000000008,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      }
+    },
+    {
+      "instance": "Link2_L3_1",
+      "source": "SPN_AB_TERMINAL_r12_B2_POS",
+      "section": {
+        "revision": "r15b",
+        "symmetry_plane_source_z_mm": -2.0999999999999996,
+        "A_single_eye_world_abs_y_mm": 33.3,
+        "B_cheek_centres_world_abs_y_mm": [
+          30.6,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 6.599999999999999,
+        "B_gap_mm": 4.199999999999999,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 2.0999999999999996,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      }
+    }
+  ],
+  "motion_map_unchanged": true,
+  "limits": "Source-informed assumed sections; no strength, fit, race-capture or continuous clearance qualification",
+  "repacked_instances": [
+    "A1_1_Bearing1",
+    "A1_1_OuterSpacer",
+    "A1_1_Spacer0",
+    "A1__1_Bearing1",
+    "A1__1_OuterSpacer",
+    "A1__1_Spacer0",
+    "A2_1_Bearing1",
+    "A2_1_OuterSpacer",
+    "A2_1_Spacer0",
+    "A2__1_Bearing1",
+    "A2__1_OuterSpacer",
+    "A2__1_Spacer0"
+  ]
+}

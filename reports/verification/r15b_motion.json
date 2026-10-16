@@ -1,0 +1,1419 @@
+{
+  "status": "PASS_FINITE_CHANGED_PAIRS",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "elapsed_s": 462.8013343811035,
+  "selected_instances": [
+    "A1_1_Bearing1",
+    "A1_1_OuterSpacer",
+    "A1_1_Spacer0",
+    "A1__1_Bearing1",
+    "A1__1_OuterSpacer",
+    "A1__1_Spacer0",
+    "A2_1_Bearing1",
+    "A2_1_OuterSpacer",
+    "A2_1_Spacer0",
+    "A2__1_Bearing1",
+    "A2__1_OuterSpacer",
+    "A2__1_Spacer0",
+    "Link1_L3_1",
+    "Link1_L3__1",
+    "Link2_L3_1",
+    "Link2_L3__1"
+  ],
+  "physical_instance_count": 455,
+  "source_count": 108,
+  "pairs_per_pose": 7144,
+  "cycle_step_deg": 4,
+  "cycle": [
+    {
+      "phase_deg": 0,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 0,
+      "occ_checks": 112,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.915969238167138,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 4,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.8563514894993745,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 8,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.807180996784007,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 12,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.767385150349856,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 16,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7358635089400227,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 20,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7115175244626073,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 24,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.693276191461461,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 28,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.680117301558191,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 32,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.671084322339974,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 36,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 4.440892098500626e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6436748968417128,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 40,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.49933058155405,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 44,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 4.440892098500626e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.38195829482755,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 48,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.29270025262184,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 52,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 4.440892098500626e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.232247069384684,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 56,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.2008552036541182,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 60,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 5.329070518200751e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.198372014205061,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 64,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.2242661249185165,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 68,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.2776610767955514,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 72,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.357370607487386,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 76,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.4619342916915645,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 80,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.5896526595852727,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 84,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6600430929673458,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 88,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.660827045856337,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 92,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.663071517026177,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 96,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6675014340426664,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 100,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6749771083979343,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 104,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.686496496464681,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 108,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7031941839129345,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 112,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.726335595312854,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 116,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7573047647384232,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 120,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.797583955327438,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 124,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.8487235524139347,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 128,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.9123010429659804,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 132,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.989868583937218,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 136,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.082889664826229,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 140,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.192666634074058,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 144,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.3202622571624225,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 148,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.466419806613521,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 152,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.631487209096621,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 156,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.540994235879209,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 160,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.402053393492327,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 164,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.277485763375562,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 168,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.167105182376327,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 172,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.07049693954567,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 176,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.987045925554817,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 180,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.915969238167138,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 184,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.8563514894993745,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 188,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.807180996784007,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 192,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.767385150349856,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 196,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7358635089400227,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 200,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7115175244626073,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 204,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.693276191461461,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 208,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.680117301558191,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 212,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.671084322339974,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 216,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6436748968417128,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 220,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.49933058155405,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 224,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.38195829482755,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 228,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.29270025262184,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 232,
+      "pair_count": 7144,
+      "bbox_excluded": 7026,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 78,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 4.440892098500626e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.232247069384684,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 236,
+      "pair_count": 7144,
+      "bbox_excluded": 7026,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 78,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.200855203654113,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 240,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 5.329070518200751e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.198372014205056,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 244,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.2242661249185254,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 248,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.2776610767955514,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 252,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.357370607487386,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 256,
+      "pair_count": 7144,
+      "bbox_excluded": 7026,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 78,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.4619342916915645,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 260,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.5896526595852727,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 264,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6600430929673458,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 268,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.660827045856337,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 272,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.663071517026177,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 276,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6675014340426664,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 280,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 1.0658141036401503e-14,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.6749771083979343,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 284,
+      "pair_count": 7144,
+      "bbox_excluded": 7024,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 80,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.686496496464681,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 288,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7031941839129345,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 292,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.726335595312854,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 296,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.7573047647384232,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 300,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.797583955327438,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 304,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.8487235524139347,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 308,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.912301042965982,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 312,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.9898685839372163,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 316,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.082889664826229,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 320,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.192666634074058,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 324,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.3202622571624225,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 328,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.466419806613521,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 332,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.631487209096621,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 336,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.540994235879207,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 340,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.402053393492325,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 344,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.277485763375562,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 348,
+      "pair_count": 7144,
+      "bbox_excluded": 7030,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 74,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 4.440892098500626e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.167105182376327,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 352,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 4.07049693954567,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 356,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 3.552713678800501e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.987045925554817,
+      "guide_warnings": []
+    },
+    {
+      "phase_deg": 360,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 112,
+      "occ_checks": 0,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 1.0658141036401503e-14,
+      "spine_min_branch_margin_mm": 3.915969238167138,
+      "guide_warnings": []
+    }
+  ],
+  "paper_profile": [
+    {
+      "profile_phase_deg": 0,
+      "theta_rad": 1.0644238352523063,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.8796308487728393,
+          -1.5793385761753542
+        ],
+        "hindL": [
+          -1.8796308487728393,
+          -1.5793385761753542
+        ],
+        "foreR": [
+          -1.6178314609736897,
+          -1.4048056509759212
+        ],
+        "foreL": [
+          -1.6178314609736897,
+          -1.4048056509759212
+        ]
+      },
+      "wheel_angle_rad": 1.5323562045828374,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 5.329070518200751e-15,
+      "leg_closure_max_residual_mm": 3.552713678800501e-15,
+      "spine_min_branch_margin_mm": 3.2021524626188516,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 18,
+      "theta_rad": 1.3785831006112856,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.908996938995747,
+          -1.5707963267948966
+        ],
+        "hindL": [
+          -1.908996938995747,
+          -1.5707963267948966
+        ],
+        "foreR": [
+          -1.6471975511965975,
+          -1.3962634015954636
+        ],
+        "foreL": [
+          -1.6471975511965975,
+          -1.3962634015954636
+        ]
+      },
+      "wheel_angle_rad": 1.5707963267948966,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 8.881784197001252e-16,
+      "spine_min_branch_margin_mm": 3.5552199505292776,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 90,
+      "theta_rad": 2.6352201620472027,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.4944071356207156,
+          -1.6913956120297333
+        ],
+        "hindL": [
+          -1.4944071356207156,
+          -1.6913956120297333
+        ],
+        "foreR": [
+          -1.232607747821566,
+          -1.5168626868303003
+        ],
+        "foreL": [
+          -1.232607747821566,
+          -1.5168626868303003
+        ]
+      },
+      "wheel_angle_rad": 1.0280995432381317,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 0.0,
+      "spine_min_branch_margin_mm": 4.587893283480746,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 135,
+      "theta_rad": 3.420618325444651,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.0366026391520191,
+          -1.8245655419266251
+        ],
+        "hindL": [
+          -1.0366026391520191,
+          -1.8245655419266251
+        ],
+        "foreR": [
+          -0.7748032513528696,
+          -1.6500326167271921
+        ],
+        "foreL": [
+          -0.7748032513528696,
+          -1.6500326167271921
+        ]
+      },
+      "wheel_angle_rad": 0.4288348587021186,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 3.552713678800501e-15,
+      "spine_min_branch_margin_mm": 3.735953787607727,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 180,
+      "theta_rad": 4.206016488842099,
+      "leg_angles_rad": {
+        "hindR": [
+          -0.7383630292186552,
+          -1.9113199278133048
+        ],
+        "hindL": [
+          -0.7383630292186552,
+          -1.9113199278133048
+        ],
+        "foreR": [
+          -0.4765636414195056,
+          -1.7367870026138719
+        ],
+        "foreL": [
+          -0.4765636414195056,
+          -1.7367870026138719
+        ]
+      },
+      "wheel_angle_rad": 0.03844012221205939,
+      "pair_count": 7144,
+      "bbox_excluded": 7028,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 76,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 5.329070518200751e-15,
+      "leg_closure_max_residual_mm": 3.552713678800501e-15,
+      "spine_min_branch_margin_mm": 3.2021524626188516,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 198,
+      "theta_rad": 4.5201757542010785,
+      "leg_angles_rad": {
+        "hindR": [
+          -0.7089969389957472,
+          -1.9198621771937625
+        ],
+        "hindL": [
+          -0.7089969389957472,
+          -1.9198621771937625
+        ],
+        "foreR": [
+          -0.44719755119659765,
+          -1.7453292519943295
+        ],
+        "foreL": [
+          -0.44719755119659765,
+          -1.7453292519943295
+        ]
+      },
+      "wheel_angle_rad": 0.0,
+      "pair_count": 7144,
+      "bbox_excluded": 7026,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 78,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 3.552713678800501e-15,
+      "spine_min_branch_margin_mm": 3.555219950529274,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 240,
+      "theta_rad": 5.2532140400386975,
+      "leg_angles_rad": {
+        "hindR": [
+          -0.8631100437093109,
+          -1.8750324922317212
+        ],
+        "hindL": [
+          -0.8631100437093109,
+          -1.8750324922317212
+        ],
+        "foreR": [
+          -0.6013106559101613,
+          -1.7004995670322882
+        ],
+        "foreL": [
+          -0.6013106559101613,
+          -1.7004995670322882
+        ]
+      },
+      "wheel_angle_rad": 0.20173358232918592,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 3.972054645195637e-15,
+      "spine_min_branch_margin_mm": 3.809132465004648,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 270,
+      "theta_rad": 5.776812815636996,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.1235867423707786,
+          -1.7992628919589257
+        ],
+        "hindL": [
+          -1.1235867423707786,
+          -1.7992628919589257
+        ],
+        "foreR": [
+          -0.8617873545716291,
+          -1.6247299667594928
+        ],
+        "foreL": [
+          -0.8617873545716291,
+          -1.6247299667594928
+        ]
+      },
+      "wheel_angle_rad": 0.5426967835567649,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 7.105427357601002e-15,
+      "spine_min_branch_margin_mm": 4.587893283480746,
+      "guide_warnings": []
+    },
+    {
+      "profile_phase_deg": 330,
+      "theta_rad": 6.824010366833593,
+      "leg_angles_rad": {
+        "hindR": [
+          -1.7104753028110617,
+          -1.6285439299260478
+        ],
+        "hindL": [
+          -1.7104753028110617,
+          -1.6285439299260478
+        ],
+        "foreR": [
+          -1.4486759150119122,
+          -1.4540110047266148
+        ],
+        "foreL": [
+          -1.4486759150119122,
+          -1.4540110047266148
+        ]
+      },
+      "wheel_angle_rad": 1.310932112704716,
+      "pair_count": 7144,
+      "bbox_excluded": 7032,
+      "cached_rigid_pairs": 40,
+      "occ_checks": 72,
+      "forbidden_overlaps": [],
+      "spine_closure_max_residual_mm": 7.105427357601002e-15,
+      "leg_closure_max_residual_mm": 3.552713678800501e-15,
+      "spine_min_branch_margin_mm": 3.6730315981283663,
+      "guide_warnings": []
+    }
+  ],
+  "numeric_cycle_samples": 361,
+  "numeric_spine_closure_max_mm": 1.4210854715202004e-14,
+  "document_and_native_unchanged": true,
+  "limits": [
+    "Finite sampled poses, not continuous collision certification.",
+    "Only pairs involving the 16 changed physical instances; earlier r15 evidence retained for other pairs.",
+    "Prescribed knees, springs and cable regeneration; no loaded equilibrium or structural/fit qualification."
+  ]
+}

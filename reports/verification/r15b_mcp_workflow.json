@@ -1,0 +1,32 @@
+{
+  "status": "PASS_INSTALLED_MCP_ROUND_TRIP",
+  "addon_version": "0.1.26",
+  "protocol_version": 1,
+  "FreeCAD_version": "27.1.0devR49185",
+  "Python_version": "3.12.3",
+  "initial_open_documents": [],
+  "sanity": [
+    {
+      "name": "KnownBox",
+      "volume_mm3": 120.0,
+      "valid": true
+    },
+    {
+      "name": "KnownCylinder",
+      "volume_mm3": 62.83185307179585,
+      "valid": true
+    }
+  ],
+  "sanity_native_path": "reports/tmp/r15b/mcp_sanity.FCStd",
+  "sanity_native_sha256": "1e7af2ba740828402ae95931373d1ed9c779fecce3798300a0f462241b79992a",
+  "actual_sanity_screenshot_returned_by_MCP": true,
+  "canonical_construction": "src/symmetric_rocker_r15b.py:integrate through installed MCP execute_code",
+  "native_path": "cad/flexor_r15b_robot.FCStd",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "exclusive_writer": "/root",
+  "source_review_frames_s": [
+    55,
+    58
+  ],
+  "supplemental_checks": "Isolated installed FreeCADCmd processes, saved/private copies only"
+}

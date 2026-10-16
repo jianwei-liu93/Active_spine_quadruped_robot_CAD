@@ -1,0 +1,561 @@
+{
+  "status": "PASS",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "baseline_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "physical_instances": 455,
+  "sources": 108,
+  "strict_unchanged_sources": [
+    "BRG_2x4x1p2_PROVISIONAL",
+    "CENTRAL_E_GROOVED_PIN_r10",
+    "CENTRAL_E_SPLIT_RETAINER_r10",
+    "CENTRAL_E_THRUST_WASHER_r10",
+    "C_OUTER_SPACER_L1p4_r12",
+    "DIRECT_CRANK_FLUSH_M2_L",
+    "DIRECT_CRANK_FLUSH_M2_R",
+    "ENV_TENDON_XC330_M181_r03",
+    "ENV_XC330_M181_FORE_DATUM_r03",
+    "ENV_XC330_M181_HIND_DATUM_r03",
+    "ENV_XL330_r02",
+    "FRM_LUMBAR_COMPACT_CAGE_r12",
+    "GUIDE_COPPER_r02",
+    "G_CRANK_SPACER_L0p3",
+    "HORN_GAP_WASHER_OD8_T0p3",
+    "HORN_M2_TRIMMED_CORE_L1p9",
+    "HORN_PATTERN_ASSUMED_OD8_T1p2",
+    "KNEE_r05_M2_CORE_D1p65_L8p8",
+    "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+    "KNEE_r05_REMOVABLE_REAR_LOCK",
+    "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+    "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+    "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+    "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+    "LEG_r02_CURVED_CONTACT_PAD",
+    "LEG_r02_HEADED_PIN_D1p9_L4p8",
+    "LEG_r02_JOURNAL_D1p9_L10p75",
+    "LEG_r02_JOURNAL_D1p9_L11p7",
+    "LEG_r02_JOURNAL_D1p9_L4p7",
+    "LEG_r02_JOURNAL_D1p9_L9p9",
+    "LEG_r02_SPACER_D3_ID2p05_L0p6",
+    "LEG_r02_SPACER_D3_ID2p05_L2p15",
+    "LEG_r02_SPACER_D3_ID2p05_L2p2",
+    "LEG_r02_SPACER_D3_ID2p05_L4p0",
+    "LEG_r02_SPACER_D3_ID2p05_L4p2",
+    "LEG_r02_SPACER_D3_ID2p05_L5p8",
+    "LEG_r02_SPACER_D3_ID2p05_L7p35",
+    "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+    "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+    "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+    "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+    "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+    "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+    "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+    "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+    "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+    "LEG_r03_DIRECT_FORE_SHANK",
+    "LEG_r03_DIRECT_FORE_THIGH",
+    "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+    "LEG_r03_DIRECT_HIND_SHANK",
+    "LEG_r03_DIRECT_HIND_THIGH",
+    "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+    "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+    "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+    "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+    "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+    "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+    "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+    "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+    "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+    "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+    "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+    "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+    "OpenRB150_Carrier_r07_BoardEnvelope",
+    "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+    "OpenRB150_Carrier_r07_EdgeRetainerRight",
+    "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+    "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+    "OpenRB150_Carrier_r07_SplitClampCaps",
+    "OpenRB150_Carrier_r07_Tray",
+    "PIN_D1_9_L5_2",
+    "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+    "SPACER_2mm_L0_6",
+    "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+    "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+    "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+    "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+    "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+    "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+    "SPINE_r04_CAPTURE_CAP_NEG",
+    "SPINE_r04_CAPTURE_CAP_POS",
+    "SPN_r02_L2",
+    "SPN_r02_L4",
+    "SPN_r02_L5",
+    "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+    "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+    "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+    "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+    "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+    "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+    "TENDON_r07_L_CABLE_PoseR07",
+    "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+    "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+    "TENDON_r07_R_CABLE_PoseR07",
+    "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+    "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+    "TORSO_D_JOURNAL_D1p9_L24_r12",
+    "TORSO_FORE_TRANSVERSE_FRAME_r06",
+    "TORSO_HIND_TRANSVERSE_FRAME_r06",
+    "TORSO_OUTPUT_SPACER_L19_4"
+  ],
+  "changed_sources": [
+    {
+      "source": "A_OUTER_SPACER_L5_0_r12",
+      "old_volume_mm3": 18.839738444496287,
+      "new_volume_mm3": 12.057432604477611
+    },
+    {
+      "source": "A_OUTER_SPACER_L6_8_r12",
+      "old_volume_mm3": 25.62204428451496,
+      "new_volume_mm3": 15.448585524486965
+    },
+    {
+      "source": "SPACER_2mm_L1_8",
+      "old_volume_mm3": 6.782305840018665,
+      "new_volume_mm3": 16.955764600046646
+    },
+    {
+      "source": "SPACER_2mm_L3_6",
+      "old_volume_mm3": 13.56461168003732,
+      "new_volume_mm3": 20.346917520056003
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+      "old_volume_mm3": 340.10631343760554,
+      "new_volume_mm3": 467.0096023584124
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_POS",
+      "old_volume_mm3": 340.1063134376046,
+      "new_volume_mm3": 467.0096023585365
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+      "old_volume_mm3": 357.437145551577,
+      "new_volume_mm3": 526.1428447323215
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_POS",
+      "old_volume_mm3": 357.4371455515759,
+      "new_volume_mm3": 526.1428447338022
+    }
+  ],
+  "moved_instances": [
+    "A1_1_Bearing1",
+    "A1_1_Spacer0",
+    "A1__1_Bearing1",
+    "A1__1_OuterSpacer",
+    "A2_1_Bearing1",
+    "A2_1_Spacer0",
+    "A2__1_Bearing1",
+    "A2__1_OuterSpacer"
+  ],
+  "rocker_depth_symmetry": [
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+      "symmetry_plane_source_z_mm": 2.4000000000000004,
+      "reflection_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "revision": "r15b",
+      "A_single_eye_world_abs_y_mm": 34.2,
+      "B_cheek_centres_world_abs_y_mm": [
+        32.4,
+        36.0
+      ],
+      "web_mm": 1.2,
+      "cheek_mm": 1.2,
+      "total_depth_mm": 4.800000000000001,
+      "B_gap_mm": 2.400000000000001,
+      "B_minimum_open_depth_mm": 8.0,
+      "ramp_source_x_mm": [
+        7.121500000000001,
+        15.121500000000001
+      ],
+      "slot_root_radius_mm": 1.2000000000000004,
+      "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_POS",
+      "symmetry_plane_source_z_mm": -1.2000000000000006,
+      "reflection_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "revision": "r15b",
+      "A_single_eye_world_abs_y_mm": 34.2,
+      "B_cheek_centres_world_abs_y_mm": [
+        32.4,
+        36.0
+      ],
+      "web_mm": 1.2,
+      "cheek_mm": 1.2,
+      "total_depth_mm": 4.800000000000002,
+      "B_gap_mm": 2.4000000000000017,
+      "B_minimum_open_depth_mm": 8.0,
+      "ramp_source_x_mm": [
+        7.121500000000001,
+        15.121500000000001
+      ],
+      "slot_root_radius_mm": 1.2000000000000008,
+      "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+      "symmetry_plane_source_z_mm": 3.299999999999999,
+      "reflection_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "revision": "r15b",
+      "A_single_eye_world_abs_y_mm": 33.3,
+      "B_cheek_centres_world_abs_y_mm": [
+        30.6,
+        36.0
+      ],
+      "web_mm": 1.2,
+      "cheek_mm": 1.2,
+      "total_depth_mm": 6.599999999999999,
+      "B_gap_mm": 4.199999999999999,
+      "B_minimum_open_depth_mm": 8.0,
+      "ramp_source_x_mm": [
+        7.121500000000001,
+        15.121500000000001
+      ],
+      "slot_root_radius_mm": 2.0999999999999996,
+      "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_POS",
+      "symmetry_plane_source_z_mm": -2.0999999999999996,
+      "reflection_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "revision": "r15b",
+      "A_single_eye_world_abs_y_mm": 33.3,
+      "B_cheek_centres_world_abs_y_mm": [
+        30.6,
+        36.0
+      ],
+      "web_mm": 1.2,
+      "cheek_mm": 1.2,
+      "total_depth_mm": 6.599999999999999,
+      "B_gap_mm": 4.199999999999999,
+      "B_minimum_open_depth_mm": 8.0,
+      "ramp_source_x_mm": [
+        7.121500000000001,
+        15.121500000000001
+      ],
+      "slot_root_radius_mm": 2.0999999999999996,
+      "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+    }
+  ],
+  "rocker_instance_and_source_frames_preserved": true,
+  "motion_map_unchanged": true,
+  "native_states": {
+    "status": "PASS_NATIVE_STATE_ONLY",
+    "body_count": 93,
+    "body_and_member_count": 745,
+    "invalid_or_error_count": 0
+  },
+  "sketches": {
+    "status": "PASS",
+    "sketch_count": 325,
+    "underconstrained": []
+  },
+  "forced_recompute_identity": {
+    "status": "PASS",
+    "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+    "baseline_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+    "physical_instances": 455,
+    "sources": 108,
+    "strict_unchanged_sources": [
+      "BRG_2x4x1p2_PROVISIONAL",
+      "CENTRAL_E_GROOVED_PIN_r10",
+      "CENTRAL_E_SPLIT_RETAINER_r10",
+      "CENTRAL_E_THRUST_WASHER_r10",
+      "C_OUTER_SPACER_L1p4_r12",
+      "DIRECT_CRANK_FLUSH_M2_L",
+      "DIRECT_CRANK_FLUSH_M2_R",
+      "ENV_TENDON_XC330_M181_r03",
+      "ENV_XC330_M181_FORE_DATUM_r03",
+      "ENV_XC330_M181_HIND_DATUM_r03",
+      "ENV_XL330_r02",
+      "FRM_LUMBAR_COMPACT_CAGE_r12",
+      "GUIDE_COPPER_r02",
+      "G_CRANK_SPACER_L0p3",
+      "HORN_GAP_WASHER_OD8_T0p3",
+      "HORN_M2_TRIMMED_CORE_L1p9",
+      "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "LEG_r02_CURVED_CONTACT_PAD",
+      "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "LEG_r02_JOURNAL_D1p9_L10p75",
+      "LEG_r02_JOURNAL_D1p9_L11p7",
+      "LEG_r02_JOURNAL_D1p9_L4p7",
+      "LEG_r02_JOURNAL_D1p9_L9p9",
+      "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+      "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+      "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+      "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+      "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "LEG_r03_DIRECT_FORE_SHANK",
+      "LEG_r03_DIRECT_FORE_THIGH",
+      "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "LEG_r03_DIRECT_HIND_SHANK",
+      "LEG_r03_DIRECT_HIND_THIGH",
+      "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "OpenRB150_Carrier_r07_BoardEnvelope",
+      "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "OpenRB150_Carrier_r07_SplitClampCaps",
+      "OpenRB150_Carrier_r07_Tray",
+      "PIN_D1_9_L5_2",
+      "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "SPACER_2mm_L0_6",
+      "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+      "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+      "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_CAPTURE_CAP_NEG",
+      "SPINE_r04_CAPTURE_CAP_POS",
+      "SPN_r02_L2",
+      "SPN_r02_L4",
+      "SPN_r02_L5",
+      "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "TENDON_r07_L_CABLE_PoseR07",
+      "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "TENDON_r07_R_CABLE_PoseR07",
+      "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "TORSO_D_JOURNAL_D1p9_L24_r12",
+      "TORSO_FORE_TRANSVERSE_FRAME_r06",
+      "TORSO_HIND_TRANSVERSE_FRAME_r06",
+      "TORSO_OUTPUT_SPACER_L19_4"
+    ],
+    "changed_sources": [
+      {
+        "source": "A_OUTER_SPACER_L5_0_r12",
+        "old_volume_mm3": 18.839738444496287,
+        "new_volume_mm3": 12.057432604477611
+      },
+      {
+        "source": "A_OUTER_SPACER_L6_8_r12",
+        "old_volume_mm3": 25.62204428451496,
+        "new_volume_mm3": 15.448585524486965
+      },
+      {
+        "source": "SPACER_2mm_L1_8",
+        "old_volume_mm3": 6.782305840018665,
+        "new_volume_mm3": 16.95576460004665
+      },
+      {
+        "source": "SPACER_2mm_L3_6",
+        "old_volume_mm3": 13.56461168003732,
+        "new_volume_mm3": 20.346917520056003
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+        "old_volume_mm3": 340.10631343760554,
+        "new_volume_mm3": 467.00960235839676
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B1_POS",
+        "old_volume_mm3": 340.1063134376046,
+        "new_volume_mm3": 467.0096023583767
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+        "old_volume_mm3": 357.437145551577,
+        "new_volume_mm3": 526.1428447304462
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B2_POS",
+        "old_volume_mm3": 357.4371455515759,
+        "new_volume_mm3": 526.1428447341998
+      }
+    ],
+    "moved_instances": [
+      "A1_1_Bearing1",
+      "A1_1_Spacer0",
+      "A1__1_Bearing1",
+      "A1__1_OuterSpacer",
+      "A2_1_Bearing1",
+      "A2_1_Spacer0",
+      "A2__1_Bearing1",
+      "A2__1_OuterSpacer"
+    ],
+    "rocker_depth_symmetry": [
+      {
+        "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+        "symmetry_plane_source_z_mm": 2.4000000000000004,
+        "reflection_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "revision": "r15b",
+        "A_single_eye_world_abs_y_mm": 34.2,
+        "B_cheek_centres_world_abs_y_mm": [
+          32.4,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 4.800000000000001,
+        "B_gap_mm": 2.400000000000001,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 1.2000000000000004,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B1_POS",
+        "symmetry_plane_source_z_mm": -1.2000000000000006,
+        "reflection_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "revision": "r15b",
+        "A_single_eye_world_abs_y_mm": 34.2,
+        "B_cheek_centres_world_abs_y_mm": [
+          32.4,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 4.800000000000002,
+        "B_gap_mm": 2.4000000000000017,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 1.2000000000000008,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+        "symmetry_plane_source_z_mm": 3.299999999999999,
+        "reflection_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "revision": "r15b",
+        "A_single_eye_world_abs_y_mm": 33.3,
+        "B_cheek_centres_world_abs_y_mm": [
+          30.6,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 6.599999999999999,
+        "B_gap_mm": 4.199999999999999,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 2.0999999999999996,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      },
+      {
+        "source": "SPN_AB_TERMINAL_r12_B2_POS",
+        "symmetry_plane_source_z_mm": -2.0999999999999996,
+        "reflection_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "revision": "r15b",
+        "A_single_eye_world_abs_y_mm": 33.3,
+        "B_cheek_centres_world_abs_y_mm": [
+          30.6,
+          36.0
+        ],
+        "web_mm": 1.2,
+        "cheek_mm": 1.2,
+        "total_depth_mm": 6.599999999999999,
+        "B_gap_mm": 4.199999999999999,
+        "B_minimum_open_depth_mm": 8.0,
+        "ramp_source_x_mm": [
+          7.121500000000001,
+          15.121500000000001
+        ],
+        "slot_root_radius_mm": 2.0999999999999996,
+        "provenance": "DESIGN_ASSUMPTION; Movie S1 morphology and user symmetry correction"
+      }
+    ],
+    "rocker_instance_and_source_frames_preserved": true,
+    "motion_map_unchanged": true,
+    "native_states": {
+      "status": "PASS_NATIVE_STATE_ONLY",
+      "body_count": 93,
+      "body_and_member_count": 745,
+      "invalid_or_error_count": 0
+    },
+    "sketches": {
+      "status": "PASS",
+      "sketch_count": 325,
+      "underconstrained": []
+    }
+  },
+  "edit_probe": {
+    "status": "PASS",
+    "rocker_bore_native_shift_mm": 0.025,
+    "bore_edit_volume_difference_mm3": 0.7289953703438713,
+    "spacer_native_length_edit_mm": 0.025,
+    "both_edits_restored": true,
+    "probe_file_saved": false
+  },
+  "probe_saved_after_edits": false
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS_FOUR_SECTION_REBUILDS",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "helper_sha256": "3af7f74aef04c6ac31e4ff23717a0006b75a6dc2c6184f1a266e1a61eb58b8dc",
+  "scope": "Each rocker section independently rebuilt using current factory and inherited MotionMap frame thickness; not a full historical assembly rebuild",
+  "results": [
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_NEG",
+      "check": {
+        "method": "exact_brep",
+        "old_sha256": "17f2037168f2a8fdafad5be422aa7b6f58e1b8d427645bf5cf889f12cafa4828",
+        "new_sha256": "17f2037168f2a8fdafad5be422aa7b6f58e1b8d427645bf5cf889f12cafa4828"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_NEG",
+      "check": {
+        "method": "exact_brep",
+        "old_sha256": "a002e81cdb4ce0082d596e8c064a1961e90b616788a63debe44ed5644dd2d358",
+        "new_sha256": "a002e81cdb4ce0082d596e8c064a1961e90b616788a63debe44ed5644dd2d358"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B1_POS",
+      "check": {
+        "method": "exact_brep",
+        "old_sha256": "305c25051a72251310f5dfc67cb6ec5cb5a876483cffb44a2627ec1d5ddb9ad1",
+        "new_sha256": "305c25051a72251310f5dfc67cb6ec5cb5a876483cffb44a2627ec1d5ddb9ad1"
+      }
+    },
+    {
+      "source": "SPN_AB_TERMINAL_r12_B2_POS",
+      "check": {
+        "method": "exact_brep",
+        "old_sha256": "e7a1722d5cb25882b8da2c0a6dd2d1a440db8301f2be9f477553be85fef6bcf6",
+        "new_sha256": "e7a1722d5cb25882b8da2c0a6dd2d1a440db8301f2be9f477553be85fef6bcf6"
+      }
+    }
+  ]
+}

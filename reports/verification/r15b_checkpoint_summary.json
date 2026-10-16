@@ -1,0 +1,212 @@
+{
+  "status": "RESEARCH_CAD_CANDIDATE_VERIFIED_WITH_FINITE_SCOPE",
+  "date": "2026-10-16",
+  "revision": "r15b",
+  "branch": "feat/flexor-r15-sculpted",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "baseline_native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "physical_instances": 455,
+  "source_definitions": 108,
+  "changed_source_count": 8,
+  "strict_unchanged_sources": 100,
+  "part_number_changed_instances": [
+    "instance:A1_1_OuterSpacer",
+    "instance:A1_1_Spacer0",
+    "instance:A1__1_OuterSpacer",
+    "instance:A1__1_Spacer0",
+    "instance:A2_1_OuterSpacer",
+    "instance:A2_1_Spacer0",
+    "instance:A2__1_OuterSpacer",
+    "instance:A2__1_Spacer0",
+    "instance:Link1_L3_1",
+    "instance:Link1_L3__1",
+    "instance:Link2_L3_1",
+    "instance:Link2_L3__1"
+  ],
+  "geometry": "Four centred-depth, tangent-arc AB rockers, single A eye and rounded B-only fork;four nominal A-spacer sources resized",
+  "gates": {
+    "native_reopen_forced_recompute_edit_restore": "PASS",
+    "depth_symmetry_four_rockers": "PASS",
+    "STEP_455_solids": "PASS",
+    "AX0": "PASS",
+    "AX1": "PASS",
+    "BOM": "PASS",
+    "numeric_closure_361": "PASS",
+    "changed_pair_cycle_91": "PASS",
+    "changed_pair_coordination_9": "PASS",
+    "continuous_clearance": "NOT_VERIFIED",
+    "loaded_equilibrium": "NOT_SOLVED",
+    "fabrication_release": "NOT_QUALIFIED",
+    "r15b_Blender_video": "NOT_PRODUCED"
+  },
+  "clearance": {
+    "pairs_per_pose": 7144,
+    "pose_count": 100,
+    "pair_decisions": 714400,
+    "occ_checks": 7346,
+    "bbox_exclusions": 703022,
+    "cached_rigid_pairs": 4032,
+    "positive_volume_intersections": 0
+  },
+  "source_to_world_verified": true,
+  "maximum_AX_vertex_reprojection_error_mm": 9.77480602571575e-14,
+  "stable_instance_and_source_mapping": true,
+  "rocker_local_frames_and_instance_matrices_unchanged": true,
+  "MotionMap_unchanged": true,
+  "six_commands_and_separate_knees_preserved": true,
+  "prior_r15_artifacts_preserved": 77,
+  "application_workflow": "Lead installed FreeCAD MCP construction/inspection; independent installed FreeCADCmd checks on saved/private copies",
+  "limits": [
+    "Morphology is source-informed; exact section dimensions are assumptions.",
+    "Finite changed-pair samples do not prove continuous or all-gait clearance.",
+    "Strength, fatigue, bearing fits/race capture/thrust, supplier datums, process and access remain unqualified.",
+    "Historical complete rebuild is unqualified; migration uses preserved native r15.",
+    "Earlier r15/r14 videos retain previous geometry; no new video is claimed."
+  ],
+  "artifacts": {
+    "README.md": {
+      "bytes": 11576,
+      "sha256": "9e5ec2bfbe5e3a3f0a852c8493038bb3ee40e86a9e38a4f39703417569a85fa8"
+    },
+    "animation/motion/ax01_r15b.json": {
+      "bytes": 1949045,
+      "sha256": "6eca6d35327766dd2a49d98747f0c5ebe956e97dd0e1931eb58aa6c6add82740"
+    },
+    "animation/schema/grounded_instances_r15b.json": {
+      "bytes": 1314,
+      "sha256": "aacb7ea945eccfd8e866e1e4dd0d57360eec9b8c6a5ad7879ba9cf2f01ad248d"
+    },
+    "bom/bom_r15b.csv": {
+      "bytes": 7258,
+      "sha256": "a11bc5dda91b9f58623cca91264d0b43f926e11a6640c326a875d02238202b95"
+    },
+    "bom/instances_r15b.csv": {
+      "bytes": 54699,
+      "sha256": "7e6b1f004ecd8ca997c0a1d316ca997dfa313fca7a5940a0467a8a9ead55f92a"
+    },
+    "cad/flexor_r15b_robot.FCStd": {
+      "bytes": 9118469,
+      "sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3"
+    },
+    "docs/26_symmetric_rocker_r15b.md": {
+      "bytes": 9560,
+      "sha256": "43148d47d76f19ea93b02d691f286f3fb53b1cc2c95f15def2ebcec59e9bd2dc"
+    },
+    "exports/step/r15b/flexor_r15b_robot.step": {
+      "bytes": 16357287,
+      "sha256": "d237c87a447ce5f94ff208836cf482b8654237bd7daa0ce6945a684419e4229e"
+    },
+    "parameters/assembly_r15b.json": {
+      "bytes": 21453,
+      "sha256": "dd4caf74490dbbf2d10b2bae9261b5eaebeebcc8f7f2570d5a697c58353da530"
+    },
+    "reports/animation/ax01_r15b.json": {
+      "bytes": 405075,
+      "sha256": "87192da57eaadf5ce1d4055a265f32489d01dce3b74d0447c045d6ff8d0be3ac"
+    },
+    "reports/reviews/r15b_symmetric_rocker_independent.md": {
+      "bytes": 6591,
+      "sha256": "84dae99119da8b3533495da8e90fade00fc56d2a6b7e5211f43c3b44fd03943f"
+    },
+    "reports/reviews/r15b_symmetric_rocker_source.md": {
+      "bytes": 6832,
+      "sha256": "b3d01534f21bdd1d2cc8bd3da034df2791357221b8f31121f5fc2c44dbe8d52f"
+    },
+    "reports/verification/r15b_bom.json": {
+      "bytes": 532,
+      "sha256": "0d628a7bc68477357f5a9c365615973923f722df5b2c02806cadec2aa7aadc35"
+    },
+    "reports/verification/r15b_factory_rebuild.json": {
+      "bytes": 1576,
+      "sha256": "30741f02a6c8a65855dd77e1d8ecdf94370c8009049df5a12394fb14c481495e"
+    },
+    "reports/verification/r15b_identity.json": {
+      "bytes": 8926,
+      "sha256": "0d18a839fa86e800706c61b5a9e5330487db7ebfd28c0611f922354eef11c41e"
+    },
+    "reports/verification/r15b_integration.json": {
+      "bytes": 4206,
+      "sha256": "9bb1343741afee8341d1a7d2a35502b71d24c77609bb48bf67040ecf45270169"
+    },
+    "reports/verification/r15b_mcp_workflow.json": {
+      "bytes": 1034,
+      "sha256": "ae376adadccc9923785feeefe64bd17a0e9f3ffbf1bffd3da93d96361c2d671b"
+    },
+    "reports/verification/r15b_motion.json": {
+      "bytes": 43994,
+      "sha256": "597bee7f556f173311d4cc4af9e51f0d60a8d4dc6f4b0d11e764690a951252c8"
+    },
+    "reports/verification/r15b_native.json": {
+      "bytes": 18720,
+      "sha256": "ebe11f875c7a7a7f0cb34d593d4aedbc70d08ee69020d6e2aafb4ff5b62f10c5"
+    },
+    "reports/verification/r15b_step.json": {
+      "bytes": 1871642,
+      "sha256": "f37eff077fa7c21b6d0cf18db93005a70c33d103e32c3d232c90d56622c1490f"
+    },
+    "reports/views/r15_before_AB_depth.png": {
+      "bytes": 11773,
+      "sha256": "bc136646b01922a8ee06d335a13645424d37d4d33e9d1516f0e025ff431359ba"
+    },
+    "reports/views/r15_before_AB_isolated.png": {
+      "bytes": 30750,
+      "sha256": "d9672295dd75d9a0de9409124036b116c15d1ef3ee5ae6ee6428b08c4cb32b0f"
+    },
+    "reports/views/r15_before_AB_plan.png": {
+      "bytes": 16516,
+      "sha256": "2fb047c212807f46b11af444012cd2428557a2b858f32653ec8262aca8147b2a"
+    },
+    "reports/views/r15b_AB_depth.png": {
+      "bytes": 13427,
+      "sha256": "7f75f2d73e267f36268714975c212b8f01cd1632a9405484509a75b35b743cc4"
+    },
+    "reports/views/r15b_AB_isolated.png": {
+      "bytes": 40564,
+      "sha256": "8af9cb53c2c5a8c13605af3d79f70daaeaa12ec640ce98a1d5fde2f6b842d8d7"
+    },
+    "reports/views/r15b_AB_plan.png": {
+      "bytes": 19200,
+      "sha256": "45adf42ba67b68c51166f79f61abb5fbbf90b28828e5ee666fdb43da5511b330"
+    },
+    "reports/views/r15b_capture_manifest.json": {
+      "bytes": 3335,
+      "sha256": "208aec03e7215629af3c4958867cb301904c8aeb6ee66d2d249d2cd545fdefc1"
+    },
+    "reports/views/r15b_robot_isometric.png": {
+      "bytes": 112055,
+      "sha256": "558aba0a9daf26bc166f25f3e228a79516528b1d25f9b1cb292a9d8c31cef2ac"
+    },
+    "reports/views/r15b_spine_close.png": {
+      "bytes": 110943,
+      "sha256": "427ea964b0fc44236818bbd3d83316f64d56f36c54373b9463c098ea1c770499"
+    },
+    "src/bom_symmetric_r15b.py": {
+      "bytes": 1872,
+      "sha256": "2b18a3494aeb2433f695f05165b36d43f279e57b7201ccd933f57a7292b9274f"
+    },
+    "src/capture_symmetric_r15b.py": {
+      "bytes": 3692,
+      "sha256": "8e5432f196721231b62d26596dbdf6e9ae08db154bfacd2932b7d563230b4468"
+    },
+    "src/checkpoint_r15b.py": {
+      "bytes": 5853,
+      "sha256": "e45173cf47782713fb35da4f7945cb7eb9fc0db513aa579e091601761df9deef"
+    },
+    "src/package_symmetric_r15b.py": {
+      "bytes": 1991,
+      "sha256": "e91c85c3ac84bfe7fc18472ef58dcc49866029b03793dd9e588aa1cfdf28d1e3"
+    },
+    "src/run_checks_r15b.py": {
+      "bytes": 2333,
+      "sha256": "c3c8c65371e653bd79ef7bdbe960bb583d2b5b6ef637fcd5e5fedcc8d6994125"
+    },
+    "src/symmetric_rocker_r15b.py": {
+      "bytes": 10283,
+      "sha256": "3af7f74aef04c6ac31e4ff23717a0006b75a6dc2c6184f1a266e1a61eb58b8dc"
+    },
+    "src/verify_symmetric_r15b.py": {
+      "bytes": 10765,
+      "sha256": "42bf0fd9478e730233780ab86da1cd16139ef8ecebbe975b3edbf0c3ffa118b0"
+    }
+  }
+}

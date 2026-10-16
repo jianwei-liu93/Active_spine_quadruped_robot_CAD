@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SOURCE_INVENTORY_BOM",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "physical_instances": 455,
+  "source_definition_rows": 108,
+  "summed_quantities": 455,
+  "files": {
+    "bom/bom_r15b.csv": "a11bc5dda91b9f58623cca91264d0b43f926e11a6640c326a875d02238202b95",
+    "bom/instances_r15b.csv": "7e6b1f004ecd8ca997c0a1d316ca997dfa313fca7a5940a0467a8a9ead55f92a"
+  },
+  "limits": "Source definition inventory; supplier purchasing/fit/strength qualification outstanding."
+}
