@@ -1,0 +1,31 @@
+{
+  "status": "CAPTURED_ACTUAL_NATIVE_FREECAD_VIEWS",
+  "method": "Supplemental isolated installed FreeCAD GUI under Xvfb; live MCP dispatcher unavailable",
+  "captures": [
+    {
+      "path": "reports/views/r14_robot_matched_isometric.png",
+      "sha256": "85587bf6de93a2ed6a2cce0973c58eaa47288c1c979b5e1333007e26986d8bec",
+      "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+      "camera": "#Inventor V2.1 ascii\n\n\nOrthographicCamera {\n  viewportMapping ADJUST_CAMERA\n  position 95.32869 -96.69648 81.786697\n  orientation 0.74290609 0.30772209 0.59447283  1.2171158\n  nearDistance 49.822281\n  farDistance 285.37946\n  aspectRatio 1\n  focalDistance 167.48323\n  height 234.47652\n\n}\n"
+    },
+    {
+      "path": "reports/views/r14_robot_matched_side.png",
+      "sha256": "3ceb28a021de59e990dd33abdb68a071e2edc36720ad93a07613b7798d5358f3",
+      "native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+      "camera": "#Inventor V2.1 ascii\n\n\nOrthographicCamera {\n  viewportMapping ADJUST_CAMERA\n  position -1.3678322 167.48322 -14.909784\n  orientation 0 0.70710677 0.70710677  3.1415927\n  nearDistance 106.57654\n  farDistance 228.51155\n  aspectRatio 1\n  focalDistance 167.48323\n  height 234.47652\n\n}\n"
+    },
+    {
+      "path": "reports/views/r15_robot_matched_isometric.png",
+      "sha256": "cd2dc6eda842f839059aee363d943551e82477c6c5f348044978645e8f6e530f",
+      "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+      "camera": "#Inventor V2.1 ascii\n\n\nOrthographicCamera {\n  viewportMapping ADJUST_CAMERA\n  position 95.32869 -96.69648 81.786697\n  orientation 0.74290609 0.30772209 0.59447283  1.2171158\n  nearDistance 49.822281\n  farDistance 285.37946\n  aspectRatio 1\n  focalDistance 167.48323\n  height 234.47652\n\n}\n"
+    },
+    {
+      "path": "reports/views/r15_robot_matched_side.png",
+      "sha256": "a4f0142e5a04dcf8f062d6ec862e00d2b62133350a40b00cb735e918e2687b4a",
+      "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+      "camera": "#Inventor V2.1 ascii\n\n\nOrthographicCamera {\n  viewportMapping ADJUST_CAMERA\n  position -1.3678322 167.48322 -14.909784\n  orientation 0 0.70710677 0.70710677  3.1415927\n  nearDistance 106.57654\n  farDistance 228.51155\n  aspectRatio 1\n  focalDistance 167.48323\n  height 234.47652\n\n}\n"
+    }
+  ],
+  "native_files_saved": false
+}

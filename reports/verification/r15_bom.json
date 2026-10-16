@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SOURCE_INVENTORY_BOM",
+  "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "ax01_sha256": "f305954c89beb0ca41b770c1280d8ea18fd87a1ff2dc91eae4908da2746d6812",
+  "physical_instances": 455,
+  "source_definition_rows": 108,
+  "summed_quantities": 455,
+  "files": {
+    "bom/bom_r15.csv": "4eb001866c1d366a8a93feccf56d334f317a126ef085c7affcbe1d5b2d36a53a",
+    "bom/instances_r15.csv": "7e2e41b322b347713f4463e5398a4b7820b987b94699a129be1e2dc6deabcff6"
+  },
+  "limits": "Native source-definition inventory; not a supplier purchasing list, mass qualification or fabrication release."
+}

@@ -1,0 +1,5 @@
+{
+  "status": "ERROR",
+  "error": "RuntimeError('Lead stopped expensive full-frame sweep after completed sample; additive-delta screen required')",
+  "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/verify_sculpted_r15.py\", line 356, in motion\n    clearance = _shape_pair_screen(shapes, frame_pairs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 4, in _r15stop_after_sample\nRuntimeError: Lead stopped expensive full-frame sweep after completed sample; additive-delta screen required\n"
+}

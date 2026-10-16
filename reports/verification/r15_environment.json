@@ -1,0 +1,52 @@
+{
+  "freecad": [
+    "27",
+    "1",
+    "0",
+    "49185 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git main",
+    "2026/10/12 06:56:12",
+    "main",
+    "44d332262e946287289fc2647f41c8e589e67a7b"
+  ],
+  "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "workbenches": [
+    "AssemblyWorkbench",
+    "BIMWorkbench",
+    "CAMWorkbench",
+    "DraftWorkbench",
+    "FemWorkbench",
+    "FreeCADMCPAddonWorkbench",
+    "InspectionWorkbench",
+    "MaterialWorkbench",
+    "MeshWorkbench",
+    "NoneWorkbench",
+    "OpenSCADWorkbench",
+    "PartDesignWorkbench",
+    "PartWorkbench",
+    "PointsWorkbench",
+    "ReverseEngineeringWorkbench",
+    "RobotWorkbench",
+    "SketcherWorkbench",
+    "SpreadsheetWorkbench",
+    "SurfaceWorkbench",
+    "TechDrawWorkbench",
+    "TestWorkbench"
+  ],
+  "mcp_addon": "0.1.26",
+  "protocol": 1,
+  "sanity": [
+    {
+      "name": "DiagnosticBox",
+      "volume_mm3": 120.0,
+      "valid": true
+    },
+    {
+      "name": "DiagnosticCylinder",
+      "volume_mm3": 62.83185307179585,
+      "valid": true
+    }
+  ],
+  "diagnostic_file": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/reports/tmp/r15/mcp_sanity.FCStd",
+  "baseline_native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87"
+}

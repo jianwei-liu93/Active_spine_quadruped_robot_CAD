@@ -1,0 +1,142 @@
+{
+  "scope": "Matched camera actual native source BRep snapshots with one preserved assembly placement",
+  "captures": [
+    {
+      "path": "reports/views/r14_lumbar_matched.png",
+      "sha256": "4afab5343003e089bbe450911e876e56913dedf2a78634b76ce20fb1dbcb8c79",
+      "revision": "r14",
+      "view": "lumbar_matched",
+      "normal_xyz": [
+        0.35,
+        1,
+        0.35
+      ],
+      "center_mm": [
+        -7.105427357601002e-15,
+        7.105427357601002e-15,
+        9.987306449882906
+      ],
+      "camera_height_mm": 89.44635009765625
+    },
+    {
+      "path": "reports/views/r15_lumbar_matched.png",
+      "sha256": "6c3b3701cd26722874a06aaf9adc51667afd8214e80a5a133d3f6d986ba28e0d",
+      "revision": "r15",
+      "view": "lumbar_matched",
+      "normal_xyz": [
+        0.35,
+        1,
+        0.35
+      ],
+      "center_mm": [
+        -7.105427357601002e-15,
+        7.105427357601002e-15,
+        9.987306449882906
+      ],
+      "camera_height_mm": 89.44635009765625
+    },
+    {
+      "path": "reports/views/r14_root_matched_close.png",
+      "sha256": "00e599998c64d2d023f51ef841108a558ba9c733d523a9379302cba874d6d9b8",
+      "revision": "r14",
+      "view": "root_matched_close",
+      "normal_xyz": [
+        0.2,
+        1,
+        0.6
+      ],
+      "center_mm": [
+        29.5,
+        32.5,
+        4.5
+      ],
+      "camera_height_mm": 19.0
+    },
+    {
+      "path": "reports/views/r15_root_matched_close.png",
+      "sha256": "0e4862854e3622b02316b0f997eca4f0dca9786273e68a2941777e828cffef05",
+      "revision": "r15",
+      "view": "root_matched_close",
+      "normal_xyz": [
+        0.2,
+        1,
+        0.6
+      ],
+      "center_mm": [
+        29.5,
+        32.5,
+        4.5
+      ],
+      "camera_height_mm": 19.0
+    },
+    {
+      "path": "reports/views/r14_shoulder_matched_close.png",
+      "sha256": "c0398d29b15198e3b0e9e651362b5377f550d74399f4335610a85f7649958832",
+      "revision": "r14",
+      "view": "shoulder_matched_close",
+      "normal_xyz": [
+        0.1,
+        1,
+        0.55
+      ],
+      "center_mm": [
+        15.0,
+        32.0,
+        0.0
+      ],
+      "camera_height_mm": 27.0
+    },
+    {
+      "path": "reports/views/r15_shoulder_matched_close.png",
+      "sha256": "0e2903618d8a81c6e4314e2015c5072502bec053a8dbd09b8c84987e355af822",
+      "revision": "r15",
+      "view": "shoulder_matched_close",
+      "normal_xyz": [
+        0.1,
+        1,
+        0.55
+      ],
+      "center_mm": [
+        15.0,
+        32.0,
+        0.0
+      ],
+      "camera_height_mm": 27.0
+    },
+    {
+      "path": "reports/views/r14_lumbar_under_matched.png",
+      "sha256": "d1ecb58adffd57ae20255f307e2e5a3355d0133ff55f65fc14ad0c5c0dee4449",
+      "revision": "r14",
+      "view": "lumbar_under_matched",
+      "normal_xyz": [
+        0.35,
+        1,
+        -0.6
+      ],
+      "center_mm": [
+        -7.105427357601002e-15,
+        0.0,
+        9.987306449882905
+      ],
+      "camera_height_mm": 104.8886947631836
+    },
+    {
+      "path": "reports/views/r15_lumbar_under_matched.png",
+      "sha256": "36ea7ccd761ca1a8ca747a11c03dcbd97b90a6a2e3ea91f430ae9b0b6d13b792",
+      "revision": "r15",
+      "view": "lumbar_under_matched",
+      "normal_xyz": [
+        0.35,
+        1,
+        -0.6
+      ],
+      "center_mm": [
+        -7.105427357601002e-15,
+        0.0,
+        9.987306449882905
+      ],
+      "camera_height_mm": 104.8886947631836
+    }
+  ],
+  "geometry_edited_for_visualization": false
+}

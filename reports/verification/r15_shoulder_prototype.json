@@ -1,0 +1,75 @@
+{
+  "status": "PASS_LOCAL_GEOMETRY_ONLY",
+  "features": [
+    {
+      "feature": "ShelfShoulderPositiveNearR15",
+      "length_mm": 9.4,
+      "source_x_bounds_mm": [
+        10.0,
+        16.0
+      ],
+      "source_y_bounds_mm": [
+        -2.5,
+        2.5
+      ],
+      "source_z_bounds_mm": [
+        -9.4,
+        0.0
+      ]
+    },
+    {
+      "feature": "ShelfShoulderPositiveFarR15",
+      "length_mm": 9.400000000000006,
+      "source_x_bounds_mm": [
+        10.0,
+        16.0
+      ],
+      "source_y_bounds_mm": [
+        -2.5,
+        2.5
+      ],
+      "source_z_bounds_mm": [
+        56.8,
+        66.2
+      ]
+    },
+    {
+      "feature": "ShelfShoulderNegativeNearR15",
+      "length_mm": 9.4,
+      "source_x_bounds_mm": [
+        -16.0,
+        -10.0
+      ],
+      "source_y_bounds_mm": [
+        -2.5,
+        2.5
+      ],
+      "source_z_bounds_mm": [
+        -9.4,
+        0.0
+      ]
+    },
+    {
+      "feature": "ShelfShoulderNegativeFarR15",
+      "length_mm": 9.400000000000006,
+      "source_x_bounds_mm": [
+        -16.0,
+        -10.0
+      ],
+      "source_y_bounds_mm": [
+        -2.5,
+        2.5
+      ],
+      "source_z_bounds_mm": [
+        56.8,
+        66.2
+      ]
+    }
+  ],
+  "baseline_material_removed_mm3": 0.0,
+  "material_added_mm3": 1127.9999999999998,
+  "volume_before_mm3": 15472.454665213418,
+  "volume_after_mm3": 16600.454665213394,
+  "single_valid_solid": true,
+  "source_dimensions": "DESIGN_ASSUMPTION"
+}

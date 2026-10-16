@@ -1,0 +1,507 @@
+{
+  "status": "PASS",
+  "native_path": "cad/flexor_r15_robot.FCStd",
+  "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "r14_native_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "probe_path": "reports/tmp/r15/native_recompute_probe.FCStd",
+  "probe_is_disposable_copy": true,
+  "edit_tests": [
+    {
+      "feature": "RootBlendShortEarR15",
+      "property": "Radius",
+      "original_value": 1.0,
+      "temporary_delta": 0.05,
+      "temporary_volume_change_mm3": 0.9424937776711886,
+      "restored_geometry": {
+        "method": "strict_boolean_adaptive_bbox",
+        "old_sha256": "b279d5722e602d2263e66043b4d583748b671b897a6ff075f6293ccf79aa24f7",
+        "new_sha256": "7a07671907e40ddaf71c521726294c9e23e20df940bb61e7336a7cd0eec46795",
+        "bidirectional_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "adaptive_comparison": {
+          "volume_mm3": 16600.45466521336,
+          "expected_volume_mm3": 16600.45466521336,
+          "volume_relative_error": 0.0,
+          "sum_absolute_individual_volume_differences_mm3": 0.0,
+          "maximum_individual_relative_volume_error": 0.0,
+          "maximum_individual_estimated_margin_upper_relative_difference": 1.8395095451448823e-11,
+          "raw_import_compound_volume_mm3": 16600.45466521339,
+          "raw_native_solid_volume_sum_mm3": 16600.45466521339,
+          "one_to_one_placed_solids": [
+            {
+              "native_label": "RootBlendShortEarR15 edit/restore",
+              "step_solid_index": 0,
+              "maximum_bbox_absolute_error_mm": 0.0,
+              "native_measurement": {
+                "volume_mm3": 16600.45466521336,
+                "estimated_relative_integration_error": 9.197547727421175e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.197547727421175e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 2.1914934744017475e-16,
+                "coarse_gk_relative_change": 2.1914934744017475e-16,
+                "gauss_convergence_relative_change": 9.861720634807864e-14,
+                "cross_algorithm_relative_difference": 8.76597389760699e-16,
+                "gauss_volume_mm3": 16600.454665213376,
+                "estimated_numerical_margin_mm3": 1.526834740801914e-07,
+                "brep_sha256": "39477e207595d8f0e051498d5d6234ed957438781577ba94975cf4d3e0a7a221",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.45466521174,
+                    "estimated_relative_integration_error": 5.672867329395698e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.454665213376,
+                    "estimated_relative_integration_error": 9.10788266822598e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.454665213365,
+                    "estimated_relative_integration_error": 1.7179191785301307e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.45466521336,
+                    "estimated_relative_integration_error": 9.197547727421175e-12
+                  }
+                ],
+                "label": "RootBlendShortEarR15 edit/restore",
+                "raw_shape_volume_mm3": 16600.45466521339
+              },
+              "step_measurement": {
+                "volume_mm3": 16600.45466521336,
+                "estimated_relative_integration_error": 9.19754772385846e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.19754772385846e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 2.1914934744017475e-16,
+                "coarse_gk_relative_change": 2.1914934744017475e-16,
+                "gauss_convergence_relative_change": 9.861720634807864e-14,
+                "cross_algorithm_relative_difference": 8.76597389760699e-16,
+                "gauss_volume_mm3": 16600.454665213376,
+                "estimated_numerical_margin_mm3": 1.526834740210487e-07,
+                "brep_sha256": "62e389e55876c021b18298cc45727dc18b99488315c07fca45c526ac6c853008",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.45466521174,
+                    "estimated_relative_integration_error": 5.672867329395698e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.454665213376,
+                    "estimated_relative_integration_error": 9.10788266822598e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.454665213365,
+                    "estimated_relative_integration_error": 1.717919178526568e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.45466521336,
+                    "estimated_relative_integration_error": 9.19754772385846e-12
+                  }
+                ],
+                "label": "STEP_solid_0",
+                "raw_shape_volume_mm3": 16600.45466521339
+              },
+              "volume_relative_error": 0.0,
+              "paired_algorithm_difference_spread_mm3": 0.0,
+              "estimated_margin_upper_relative_difference": 1.8395095451448823e-11,
+              "status": "PASS"
+            }
+          ],
+          "adaptive_backend": {
+            "cpp_source": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/occt_adaptive_volume_r07.cpp",
+            "cpp_sha256": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+            "binary": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/reports/tmp/adaptive_volume_r07/volume_4fc6c2b105dd6bdb3ae9.so",
+            "binary_sha256": "c799e0d5f192a671742109b1d2d938f2acb0911707280c194ed9abacc50b31ba",
+            "compiler": "/usr/bin/c++",
+            "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+            "compile_arguments": [
+              "/usr/bin/c++",
+              "-std=c++17",
+              "-O2",
+              "-shared",
+              "-fPIC",
+              "-I/snap/freecad/2834/usr/include/opencascade",
+              "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/occt_adaptive_volume_r07.cpp",
+              "-L/snap/freecad/2834/usr/lib",
+              "-lTKBRep",
+              "-lTKTopAlgo",
+              "-lTKMath",
+              "-Wl,-rpath,/snap/freecad/2834/usr/lib"
+            ],
+            "occt_header_directory": "/snap/freecad/2834/usr/include/opencascade",
+            "occt_library_directory": "/snap/freecad/2834/usr/lib",
+            "brepgprop_header_sha256": "a1d5c195f2234cbdc748ebbdd4af499d59e4b96ea235cde9ba74878e5d7d3056",
+            "freecad_occt_version": "7.8.0",
+            "primary_algorithm": "BRepGProp::VolumePropertiesGK,OnlyClosed=true,IsUseSpan=true,CGFlag=false,IFlag=false,SkipShared=false",
+            "cross_algorithm": "BRepGProp::VolumeProperties,OnlyClosed=true,SkipShared=false",
+            "eps_values": [
+              1e-08,
+              1e-10
+            ],
+            "bounded_gk_refinement_eps": 1e-12,
+            "precision_convergence_relative_tolerance": 1e-08,
+            "note": "Numerical margin uses selected GK error estimate, precision convergence and cross-algorithm paired-difference spread; not a certified global bound.",
+            "python_measurement_source_sha256": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+            "header_version": "7.8.0",
+            "domain_refinement_trigger_relative_error": 2.5e-07,
+            "domain_refinement_settings": [
+              [
+                8,
+                31
+              ],
+              [
+                16,
+                61
+              ]
+            ],
+            "domain_refinement": "Original BRepGProp_TFunction boundary parameter intervals; no geometry or topology mutation; full coarse variation and absolute algorithm disagreement retained"
+          }
+        }
+      }
+    },
+    {
+      "feature": "RootBlendGuidesR15",
+      "property": "Radius",
+      "original_value": 1.0,
+      "temporary_delta": 0.05,
+      "temporary_volume_change_mm3": 1.8653191637604323,
+      "restored_geometry": {
+        "method": "exact_brep",
+        "old_sha256": "7a07671907e40ddaf71c521726294c9e23e20df940bb61e7336a7cd0eec46795",
+        "new_sha256": "7a07671907e40ddaf71c521726294c9e23e20df940bb61e7336a7cd0eec46795"
+      }
+    },
+    {
+      "feature": "ShelfShoulderPositiveNearR15",
+      "property": "Length",
+      "original_value": 9.4,
+      "temporary_delta": -0.05,
+      "temporary_volume_change_mm3": 1.500000000014552,
+      "restored_geometry": {
+        "method": "strict_boolean_adaptive_bbox",
+        "old_sha256": "7a07671907e40ddaf71c521726294c9e23e20df940bb61e7336a7cd0eec46795",
+        "new_sha256": "c91c71aacdd4dac4464c6f45c4d2730c8ad5432b622a3d45d1dc98653ea3c845",
+        "bidirectional_difference_mm3": [
+          0.0,
+          0.0
+        ],
+        "adaptive_comparison": {
+          "volume_mm3": 16600.45466521336,
+          "expected_volume_mm3": 16600.45466521336,
+          "volume_relative_error": 0.0,
+          "sum_absolute_individual_volume_differences_mm3": 0.0,
+          "maximum_individual_relative_volume_error": 0.0,
+          "maximum_individual_estimated_margin_upper_relative_difference": 1.8395095447886108e-11,
+          "raw_import_compound_volume_mm3": 16600.45466521339,
+          "raw_native_solid_volume_sum_mm3": 16600.45466521339,
+          "one_to_one_placed_solids": [
+            {
+              "native_label": "ShelfShoulderPositiveNearR15 edit/restore",
+              "step_solid_index": 0,
+              "maximum_bbox_absolute_error_mm": 0.0,
+              "native_measurement": {
+                "volume_mm3": 16600.45466521336,
+                "estimated_relative_integration_error": 9.19754772385846e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.19754772385846e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 2.1914934744017475e-16,
+                "coarse_gk_relative_change": 2.1914934744017475e-16,
+                "gauss_convergence_relative_change": 9.861720634807864e-14,
+                "cross_algorithm_relative_difference": 8.76597389760699e-16,
+                "gauss_volume_mm3": 16600.454665213376,
+                "estimated_numerical_margin_mm3": 1.526834740210487e-07,
+                "brep_sha256": "62e389e55876c021b18298cc45727dc18b99488315c07fca45c526ac6c853008",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.45466521174,
+                    "estimated_relative_integration_error": 5.672867329395698e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.454665213376,
+                    "estimated_relative_integration_error": 9.10788266822598e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.454665213365,
+                    "estimated_relative_integration_error": 1.717919178526568e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.45466521336,
+                    "estimated_relative_integration_error": 9.19754772385846e-12
+                  }
+                ],
+                "label": "ShelfShoulderPositiveNearR15 edit/restore",
+                "raw_shape_volume_mm3": 16600.45466521339
+              },
+              "step_measurement": {
+                "volume_mm3": 16600.45466521336,
+                "estimated_relative_integration_error": 9.19754772385846e-12,
+                "selected_algorithm": "adaptive_Gauss_Kronrod_spans",
+                "coarse_gk_estimated_relative_error": 9.19754772385846e-12,
+                "selected_eps": 1e-10,
+                "convergence_relative_change": 2.1914934744017475e-16,
+                "coarse_gk_relative_change": 2.1914934744017475e-16,
+                "gauss_convergence_relative_change": 9.861720634807864e-14,
+                "cross_algorithm_relative_difference": 8.76597389760699e-16,
+                "gauss_volume_mm3": 16600.454665213376,
+                "estimated_numerical_margin_mm3": 1.526834740210487e-07,
+                "brep_sha256": "4235063659d27adcd470966563dd4eb45fd9867c3d8604330c310d597b21f8e9",
+                "measurements": [
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.45466521174,
+                    "estimated_relative_integration_error": 5.672867329395698e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.454665213376,
+                    "estimated_relative_integration_error": 9.10788266822598e-16
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-08,
+                    "volume_mm3": 16600.454665213365,
+                    "estimated_relative_integration_error": 1.717919178526568e-09
+                  },
+                  {
+                    "algorithm": "adaptive_Gauss_Kronrod_spans",
+                    "eps": 1e-10,
+                    "volume_mm3": 16600.45466521336,
+                    "estimated_relative_integration_error": 9.19754772385846e-12
+                  }
+                ],
+                "label": "STEP_solid_0",
+                "raw_shape_volume_mm3": 16600.45466521339
+              },
+              "volume_relative_error": 0.0,
+              "paired_algorithm_difference_spread_mm3": 0.0,
+              "estimated_margin_upper_relative_difference": 1.8395095447886108e-11,
+              "status": "PASS"
+            }
+          ],
+          "adaptive_backend": {
+            "cpp_source": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/occt_adaptive_volume_r07.cpp",
+            "cpp_sha256": "4e6abf7f099c11824c83ca648357aaabf17bd6b1df4c3708a30da894f67cceaf",
+            "binary": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/reports/tmp/adaptive_volume_r07/volume_4fc6c2b105dd6bdb3ae9.so",
+            "binary_sha256": "c799e0d5f192a671742109b1d2d938f2acb0911707280c194ed9abacc50b31ba",
+            "compiler": "/usr/bin/c++",
+            "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+            "compile_arguments": [
+              "/usr/bin/c++",
+              "-std=c++17",
+              "-O2",
+              "-shared",
+              "-fPIC",
+              "-I/snap/freecad/2834/usr/include/opencascade",
+              "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/occt_adaptive_volume_r07.cpp",
+              "-L/snap/freecad/2834/usr/lib",
+              "-lTKBRep",
+              "-lTKTopAlgo",
+              "-lTKMath",
+              "-Wl,-rpath,/snap/freecad/2834/usr/lib"
+            ],
+            "occt_header_directory": "/snap/freecad/2834/usr/include/opencascade",
+            "occt_library_directory": "/snap/freecad/2834/usr/lib",
+            "brepgprop_header_sha256": "a1d5c195f2234cbdc748ebbdd4af499d59e4b96ea235cde9ba74878e5d7d3056",
+            "freecad_occt_version": "7.8.0",
+            "primary_algorithm": "BRepGProp::VolumePropertiesGK,OnlyClosed=true,IsUseSpan=true,CGFlag=false,IFlag=false,SkipShared=false",
+            "cross_algorithm": "BRepGProp::VolumeProperties,OnlyClosed=true,SkipShared=false",
+            "eps_values": [
+              1e-08,
+              1e-10
+            ],
+            "bounded_gk_refinement_eps": 1e-12,
+            "precision_convergence_relative_tolerance": 1e-08,
+            "note": "Numerical margin uses selected GK error estimate, precision convergence and cross-algorithm paired-difference spread; not a certified global bound.",
+            "python_measurement_source_sha256": "c9325c38b62cd8fae843a1f02931aa1042392e0e67359577481cf8b41be90fd0",
+            "header_version": "7.8.0",
+            "domain_refinement_trigger_relative_error": 2.5e-07,
+            "domain_refinement_settings": [
+              [
+                8,
+                31
+              ],
+              [
+                16,
+                61
+              ]
+            ],
+            "domain_refinement": "Original BRepGProp_TFunction boundary parameter intervals; no geometry or topology mutation; full coarse variation and absolute algorithm disagreement retained"
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Native reopen/recompute/source identity/editability only; no fit, strength, clearance or release claim",
+  "native_state_guard_before_recompute": {
+    "status": "PASS_NATIVE_STATE_ONLY",
+    "body_count": 93,
+    "body_and_member_count": 745,
+    "invalid_or_error_count": 0
+  },
+  "native_guard": {
+    "status": "PASS_NATIVE_STATE_ONLY",
+    "body_count": 93,
+    "body_and_member_count": 745,
+    "invalid_or_error_count": 0
+  },
+  "fully_constrained_sketches": {
+    "status": "PASS",
+    "sketch_count": 325,
+    "underconstrained": []
+  },
+  "reopened_recomputed_instances": 455,
+  "r14_to_r15_identity": {
+    "r14_links": 455,
+    "r15_links": 455,
+    "exact_link_placements": 455,
+    "unchanged_source_count": 107,
+    "unchanged_source_names": [
+      "A_OUTER_SPACER_L5_0_r12",
+      "A_OUTER_SPACER_L6_8_r12",
+      "BRG_2x4x1p2_PROVISIONAL",
+      "CENTRAL_E_GROOVED_PIN_r10",
+      "CENTRAL_E_SPLIT_RETAINER_r10",
+      "CENTRAL_E_THRUST_WASHER_r10",
+      "C_OUTER_SPACER_L1p4_r12",
+      "DIRECT_CRANK_FLUSH_M2_L",
+      "DIRECT_CRANK_FLUSH_M2_R",
+      "ENV_TENDON_XC330_M181_r03",
+      "ENV_XC330_M181_FORE_DATUM_r03",
+      "ENV_XC330_M181_HIND_DATUM_r03",
+      "ENV_XL330_r02",
+      "GUIDE_COPPER_r02",
+      "G_CRANK_SPACER_L0p3",
+      "HORN_GAP_WASHER_OD8_T0p3",
+      "HORN_M2_TRIMMED_CORE_L1p9",
+      "HORN_PATTERN_ASSUMED_OD8_T1p2",
+      "KNEE_r05_M2_CORE_D1p65_L8p8",
+      "KNEE_r05_M2_HEX_NUT_AF4_T2p8",
+      "KNEE_r05_REMOVABLE_REAR_LOCK",
+      "LEG_r02_BRG_2x4x1p2_PROVISIONAL",
+      "LEG_r02_COMPRESSION_PIVOT_SEAT_NATIVE",
+      "LEG_r02_COMP_GUIDE_ROD_D1p2_L14",
+      "LEG_r02_COMP_GUIDE_TUBE_OD1p7_ID1p3_L14",
+      "LEG_r02_CURVED_CONTACT_PAD",
+      "LEG_r02_HEADED_PIN_D1p9_L4p8",
+      "LEG_r02_JOURNAL_D1p9_L10p75",
+      "LEG_r02_JOURNAL_D1p9_L11p7",
+      "LEG_r02_JOURNAL_D1p9_L4p7",
+      "LEG_r02_JOURNAL_D1p9_L9p9",
+      "LEG_r02_SPACER_D3_ID2p05_L0p6",
+      "LEG_r02_SPACER_D3_ID2p05_L2p15",
+      "LEG_r02_SPACER_D3_ID2p05_L2p2",
+      "LEG_r02_SPACER_D3_ID2p05_L4p0",
+      "LEG_r02_SPACER_D3_ID2p05_L4p2",
+      "LEG_r02_SPACER_D3_ID2p05_L5p8",
+      "LEG_r02_SPACER_D3_ID2p05_L7p35",
+      "LEG_r02_foreL_COMPRESSION_WIRE_L24p73863375_PoseR07",
+      "LEG_r02_foreL_EXTENSION_WIRE_L17p5917383_PoseR07",
+      "LEG_r02_foreR_COMPRESSION_WIRE_L24p73863375",
+      "LEG_r02_foreR_EXTENSION_WIRE_L17p5917383",
+      "LEG_r02_hindL_COMPRESSION_WIRE_L29p55480766",
+      "LEG_r02_hindL_EXTENSION_WIRE_L25p61137956",
+      "LEG_r02_hindR_COMPRESSION_WIRE_L29p55480766_PoseR07",
+      "LEG_r02_hindR_EXTENSION_WIRE_L25p61137956_PoseR07",
+      "LEG_r03_DIRECT_FORE_RETURN_RAIL",
+      "LEG_r03_DIRECT_FORE_SHANK",
+      "LEG_r03_DIRECT_FORE_THIGH",
+      "LEG_r03_DIRECT_HIND_RETURN_RAIL",
+      "LEG_r03_DIRECT_HIND_SHANK",
+      "LEG_r03_DIRECT_HIND_THIGH",
+      "LEG_r03_DUAL_KEYED_H_JOURNAL_D1p9_L10p85",
+      "LEG_r03_FORE_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "LEG_r03_FORE_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "LEG_r03_HIND_BENT_INPUT_HORN_KEYED_SAME_DIRECTION_PROVISIONAL",
+      "LEG_r03_HIND_CURVED_FOOT_RETURN_TOWARD_HIP",
+      "LEG_r05_ANKLE_SPACER_OD3_ID2p05_L2p6",
+      "LEG_r07_ANKLE_CLAMP_L_OD6_ID2p05_T2p4",
+      "LEG_r07_ANKLE_CLAMP_R_OD6_ID2p05_T2p4",
+      "LEG_r07_ANKLE_JOURNAL_L_D1p9_L15p05",
+      "LEG_r07_ANKLE_JOURNAL_R_D1p9_L15p05",
+      "LEG_r07_M1p4_ANKLE_GRUB_CORE1p1_L1p65",
+      "MOTOR_CENTER_INSULATING_SHIM_T0p8",
+      "OpenRB150_Carrier_r07_BoardEnvelope",
+      "OpenRB150_Carrier_r07_EdgeRetainerLeft",
+      "OpenRB150_Carrier_r07_EdgeRetainerRight",
+      "OpenRB150_Carrier_r07_M1p4RetainerBolt",
+      "OpenRB150_Carrier_r07_M1p4SplitClampBolt",
+      "OpenRB150_Carrier_r07_SplitClampCaps",
+      "OpenRB150_Carrier_r07_Tray",
+      "PIN_D1_9_L5_2",
+      "RETAINING_CLIP_1p7x3p6_T0p6_PROVISIONAL",
+      "SPACER_2mm_L0_6",
+      "SPACER_2mm_L1_8",
+      "SPACER_2mm_L3_6",
+      "SPINE_r04_A1_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_A2_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_B1_STEPPED_CROSS_SHAFT_L72",
+      "SPINE_r04_B2_STEPPED_CROSS_SHAFT_L72",
+      "SPINE_r04_C1_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_C2_STEPPED_CROSS_SHAFT_L85p6",
+      "SPINE_r04_CAPTURE_CAP_NEG",
+      "SPINE_r04_CAPTURE_CAP_POS",
+      "SPN_AB_TERMINAL_r12_B1_NEG",
+      "SPN_AB_TERMINAL_r12_B1_POS",
+      "SPN_AB_TERMINAL_r12_B2_NEG",
+      "SPN_AB_TERMINAL_r12_B2_POS",
+      "SPN_r02_L2",
+      "SPN_r02_L4",
+      "SPN_r02_L5",
+      "TENDON_r03_GUIDE_WASHER_OD3p6_ID2p05_Tp2",
+      "TENDON_r04_DRIVE_OUTER_WASHER_OD3p6_ID2p05_Tp2",
+      "TENDON_r04_DRIVE_ROOT_SHIM_OD3_ID2p05_Tp2",
+      "TENDON_r04_D_DRIVE_Rp95_Fp8_L3p7",
+      "TENDON_r04_GUIDE_OD5p4_ID2p05_L1p2",
+      "TENDON_r04_HEADED_GUIDE_SHAFT_D1p9_L3p6",
+      "TENDON_r07_L_CABLE_PoseR07",
+      "TENDON_r07_M1_ANCHOR_BOLT_COREp75_L2p2_HEAD1p6",
+      "TENDON_r07_M1p4_TERMINAL_GRUB_CORE1p1_Lp95",
+      "TENDON_r07_R_CABLE_PoseR07",
+      "TENDON_r07_STEEL_KEYED_CLAMP_R3p3_6p4_T1p4",
+      "TENDON_r07_WHEEL_OD13_KEYED_POSITIVE_TERMINALS",
+      "TORSO_D_JOURNAL_D1p9_L24_r12",
+      "TORSO_FORE_TRANSVERSE_FRAME_r06",
+      "TORSO_HIND_TRANSVERSE_FRAME_r06",
+      "TORSO_OUTPUT_SPACER_L19_4"
+    ],
+    "changed_source": "FRM_LUMBAR_COMPACT_CAGE_r12",
+    "changed_source_instances": [
+      "LumbarIntegrated1"
+    ],
+    "changed_source_material_removed_mm3": 0.0,
+    "changed_source_material_added_mm3": 1155.4591016256777,
+    "source_geometry_comparisons": 108
+  },
+  "forced_recompute_source_comparisons": 108,
+  "native_file_unchanged": true,
+  "native_document_unchanged": true,
+  "r14_file_unchanged": true
+}

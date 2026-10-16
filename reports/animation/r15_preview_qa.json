@@ -1,0 +1,52 @@
+{
+  "status": "PASS_SMALL_PREVIEW_QA",
+  "frames": 60,
+  "fps": 12,
+  "duration_s": 5,
+  "resolution": [
+    640,
+    360
+  ],
+  "full_mp4_decode": "PASS",
+  "gif_frames": 60,
+  "gif_duration_ms": 5000,
+  "sample_image_difference_mean_rgb": [
+    9.068768807870372,
+    12.265480324074074,
+    9.502113715277778
+  ],
+  "foreleg_matrix_change": 0.0885477215051651,
+  "hindleg_matrix_change": 1.5822150707244873,
+  "spring_local_vertex_change_m": 2.464592398609966e-06,
+  "lumbar_transform_unchanged": true,
+  "saved_blender_scene": "PASS",
+  "ffmpeg": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "artifacts": {
+    "animation/previews/r15_spine_leg_coordination.mp4": {
+      "sha256": "7188bdd86755b944fb655e9931d2e1ee2eeb7deefb24ffc2b1bdb39f8a384dfd",
+      "bytes": 152144
+    },
+    "animation/previews/r15_spine_leg_coordination.gif": {
+      "sha256": "950d20b3b4318ffcbacb501f60a7b1f901bdc844c5f678258dcf409241ab4cbc",
+      "bytes": 1200092
+    },
+    "reports/views/r15_preview_contact_sheet.png": {
+      "sha256": "c0bef78ed46ae39827738356d6b1a1ea58485bacdce7abd2f9b803728f43ef1c",
+      "bytes": 532800
+    },
+    "animation/assets/r15/lumbar_source.json": {
+      "sha256": "4204dc4ad976e6db64047c9b60aaa1551be964d29c1b980c8fcc9e1b4a68672b",
+      "bytes": 584401
+    },
+    "animation/motion/geometry_preview_r15.json": {
+      "sha256": "43771a610d7eb11ead64146cb68ba8ebe83bdae66d3841675f72d223c4c4b1f1",
+      "bytes": 1236
+    },
+    "reports/animation/r15_saved_scene.json": {
+      "sha256": "90261f41f6fbcb70909eb22323d31a56a6cbabfc20eff03c19d70a5525a1367b",
+      "bytes": 7131
+    }
+  },
+  "all_sample_framing_minimum_margin": 0.05542199166817294,
+  "limits": "Five-second geometry interoperability preview using inherited prescribed r14 kinematics; full videos unchanged; no loaded dynamics or full future animation release."
+}

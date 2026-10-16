@@ -1,0 +1,19 @@
+{
+  "scope": "Finite serialized illustrative kinematic motion verification only; no dynamics, loaded gait, contact-force, locomotion performance, or fabrication claims.",
+  "freecad_needed": false,
+  "playback_handlers_needed": false,
+  "status": "FAIL",
+  "mechanical_readback_status": "FAIL",
+  "failure_count": 2,
+  "failures": [
+    {
+      "message": "Source cycle sample count differs",
+      "count": 1201
+    },
+    {
+      "message": "Readback could not complete",
+      "exception_type": "RuntimeError",
+      "detail": "Source cycle must contain exactly 300 samples"
+    }
+  ]
+}

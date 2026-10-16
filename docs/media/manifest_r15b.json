@@ -1,0 +1,85 @@
+{
+  "schema": "flexor.readme-media.v1",
+  "revision": "r15b",
+  "generator": {
+    "path": "animation/blender/build_readme_media_r15b.py",
+    "sha256": "4d0cd0b3b90b3b9031aa23b5af41f81f8894893ffd53a41a75d7286942d7f141",
+    "bytes": 5169
+  },
+  "source_cad": {
+    "path": "cad/flexor_r15b_robot.FCStd",
+    "sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+    "bytes": 9118469
+  },
+  "source_video": {
+    "path": "animation/output/spine_leg_coordination_s2_r15b.mp4",
+    "sha256": "9e739a34f08d33857dedb9f62c55a4515cb50a16e36d1fb6f7c5abfc8721092e",
+    "bytes": 15023911
+  },
+  "release_qa": {
+    "path": "reports/animation/spine_leg_coordination_s2_r15b_qa.json",
+    "sha256": "86b6944b2beaf1c3705f165650b63cfe23a2c5e4ebddccc9c61b644eacf8948b",
+    "bytes": 22168
+  },
+  "images": [
+    {
+      "source": {
+        "path": "reports/views/r15b_robot_isometric.png",
+        "sha256": "558aba0a9daf26bc166f25f3e228a79516528b1d25f9b1cb292a9d8c31cef2ac",
+        "bytes": 112055
+      },
+      "output": {
+        "path": "docs/media/robot_assembled_r15b.png",
+        "sha256": "90ddf15ed1db4cc35b31ad0801d227ebabb9802ba3e6ecfc33490d3d11158972",
+        "bytes": 297712
+      },
+      "size_px": [
+        1280,
+        853
+      ],
+      "changes": "RGB conversion and downscale only"
+    },
+    {
+      "source": {
+        "path": "reports/views/r15b_AB_isolated.png",
+        "sha256": "8af9cb53c2c5a8c13605af3d79f70daaeaa12ec640ce98a1d5fde2f6b842d8d7",
+        "bytes": 40564
+      },
+      "output": {
+        "path": "docs/media/rocker_r15b.png",
+        "sha256": "205939a980e12e6f6e6078f11235c64e10cacc6872333576f71b08a07ae974ba",
+        "bytes": 131583
+      },
+      "size_px": [
+        1280,
+        853
+      ],
+      "changes": "RGB conversion and downscale only"
+    }
+  ],
+  "gif": {
+    "path": "docs/media/spine_leg_coordination_r15b.gif",
+    "sha256": "a905e0e4172e7df87906f4184177bf395ea66956dd4de64dd36d98b73e11df10",
+    "bytes": 2720566,
+    "size_px": [
+      960,
+      540
+    ],
+    "frames": 30,
+    "duration_seconds": 1.67,
+    "loop": "infinite",
+    "target_fps": 18,
+    "source_frame_range_zero_based": [
+      0,
+      99
+    ],
+    "source_fps": 60,
+    "source_cycle_seconds": 1.6666666666666667,
+    "ffmpeg_version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "decode_check": "PASS_PILLOW_AND_FFMPEG",
+    "timing_check": "PASS",
+    "motion_sample_check": "PASS_DISTINCT_FRAMES",
+    "scope": "One existing r15b studio overview cycle; illustrative prescribed kinematics"
+  },
+  "geometry_or_motion_modified": false
+}

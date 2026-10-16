@@ -1,0 +1,240 @@
+{
+  "status": "INTEGRATED_PENDING_REVISION_GATES",
+  "baseline_sha256": "7e4d8fbf239bde96e9ef63c4cdbe3001427e37b1358739cc3a2a0a990610eb87",
+  "native_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "config_sha256": "b23bd87ca0f97280b98f292d41e2799fa79fbd4d29bc82483be5ad44269a4cb0",
+  "helper_sha256": {
+    "build_robot_r15.py": "c71e68133acfe89379215ed23bb44cbc9084b3582b48c1fcd39126e3415abf55",
+    "sculpted_frame_r15.py": "3d35b6583047632bf327a75ef7d704fd5ed36b762e4dea51aeff098d83deb0a1",
+    "shelf_shoulders_r15.py": "9c1f6ca4c33a9a199dade704f0e6d58919375343540ce843ffc7c7ffb7c41697"
+  },
+  "roots": {
+    "status": "PASS_LOCAL_GEOMETRY_ONLY",
+    "source_object": "FRM_LUMBAR_COMPACT_CAGE_r12",
+    "physical_instance": "LumbarIntegrated1",
+    "features": [
+      {
+        "family": "short_ear",
+        "feature": "RootBlendShortEarR15",
+        "radius_mm": 1.0,
+        "selector": "source-local root planes and straight X-oriented lines",
+        "selected": [
+          {
+            "edge": "Edge11",
+            "length_mm": 10.930930930930927,
+            "center_local_mm": [
+              29.884384384384383,
+              2.5,
+              0.0
+            ]
+          },
+          {
+            "edge": "Edge182",
+            "length_mm": 10.930930930930927,
+            "center_local_mm": [
+              29.884384384384383,
+              2.5,
+              56.800000000000004
+            ]
+          },
+          {
+            "edge": "Edge333",
+            "length_mm": 10.930930930930934,
+            "center_local_mm": [
+              -29.884384384384386,
+              -2.5,
+              0.0
+            ]
+          },
+          {
+            "edge": "Edge386",
+            "length_mm": 10.930930930930934,
+            "center_local_mm": [
+              -29.884384384384386,
+              -2.5,
+              56.800000000000004
+            ]
+          }
+        ],
+        "state": [
+          "Up-to-date"
+        ],
+        "status": "Valid"
+      },
+      {
+        "family": "guide",
+        "feature": "RootBlendGuidesR15",
+        "radius_mm": 1.0,
+        "selector": "source-local root planes and straight X-oriented lines",
+        "selected": [
+          {
+            "edge": "Edge21",
+            "length_mm": 9.907159353348735,
+            "center_local_mm": [
+              29.18460596368512,
+              2.5,
+              -9.4
+            ]
+          },
+          {
+            "edge": "Edge102",
+            "length_mm": 11.292840646651275,
+            "center_local_mm": [
+              28.522760154987978,
+              -2.5,
+              -9.4
+            ]
+          },
+          {
+            "edge": "Edge111",
+            "length_mm": 11.292840646651275,
+            "center_local_mm": [
+              28.522760154987978,
+              -2.5,
+              66.2
+            ]
+          },
+          {
+            "edge": "Edge200",
+            "length_mm": 9.907159353348735,
+            "center_local_mm": [
+              29.18460596368512,
+              2.5,
+              66.2
+            ]
+          },
+          {
+            "edge": "Edge292",
+            "length_mm": 11.292840646651271,
+            "center_local_mm": [
+              -28.52276015498797,
+              2.5,
+              -9.4
+            ]
+          },
+          {
+            "edge": "Edge304",
+            "length_mm": 11.292840646651271,
+            "center_local_mm": [
+              -28.52276015498797,
+              2.5,
+              66.2
+            ]
+          },
+          {
+            "edge": "Edge321",
+            "length_mm": 9.907159353348732,
+            "center_local_mm": [
+              -29.184605963685115,
+              -2.5,
+              -9.4
+            ]
+          },
+          {
+            "edge": "Edge407",
+            "length_mm": 9.907159353348732,
+            "center_local_mm": [
+              -29.184605963685115,
+              -2.5,
+              66.2
+            ]
+          }
+        ],
+        "state": [
+          "Up-to-date"
+        ],
+        "status": "Valid"
+      }
+    ],
+    "baseline_material_removed_mm3": 0.0,
+    "material_added_mm3": 27.45910162567881,
+    "volume_before_mm3": 15444.995563587707,
+    "volume_after_mm3": 15472.454665213418,
+    "single_valid_solid": true,
+    "source_frame_preserved": true,
+    "accepted_history_preserved": true,
+    "scope": "Local additive geometry; section, pose, clearance and interface checks required separately"
+  },
+  "shoulders": {
+    "status": "PASS_LOCAL_GEOMETRY_ONLY",
+    "features": [
+      {
+        "feature": "ShelfShoulderPositiveNearR15",
+        "length_mm": 9.4,
+        "source_x_bounds_mm": [
+          10.0,
+          16.0
+        ],
+        "source_y_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "source_z_bounds_mm": [
+          -9.4,
+          0.0
+        ]
+      },
+      {
+        "feature": "ShelfShoulderPositiveFarR15",
+        "length_mm": 9.400000000000006,
+        "source_x_bounds_mm": [
+          10.0,
+          16.0
+        ],
+        "source_y_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "source_z_bounds_mm": [
+          56.8,
+          66.2
+        ]
+      },
+      {
+        "feature": "ShelfShoulderNegativeNearR15",
+        "length_mm": 9.4,
+        "source_x_bounds_mm": [
+          -16.0,
+          -10.0
+        ],
+        "source_y_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "source_z_bounds_mm": [
+          -9.4,
+          0.0
+        ]
+      },
+      {
+        "feature": "ShelfShoulderNegativeFarR15",
+        "length_mm": 9.400000000000006,
+        "source_x_bounds_mm": [
+          -16.0,
+          -10.0
+        ],
+        "source_y_bounds_mm": [
+          -2.5,
+          2.5
+        ],
+        "source_z_bounds_mm": [
+          56.8,
+          66.2
+        ]
+      }
+    ],
+    "baseline_material_removed_mm3": 0.0,
+    "material_added_mm3": 1128.0,
+    "volume_before_mm3": 15472.454665213418,
+    "volume_after_mm3": 16600.45466521339,
+    "single_valid_solid": true,
+    "source_dimensions": "DESIGN_ASSUMPTION"
+  },
+  "native_path": "cad/flexor_r15_robot.FCStd",
+  "changed_sources": [
+    "FRM_LUMBAR_COMPACT_CAGE_r12"
+  ],
+  "changed_instances": [
+    "LumbarIntegrated1"
+  ]
+}

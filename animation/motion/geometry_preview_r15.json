@@ -1,0 +1,23 @@
+{
+  "source_cad_sha256": "56126360d99fc6019a0e95f0c0d036ebed607cc50c4a16333c6f9c70aa34b4c4",
+  "ax01_path": "animation/motion/ax01_r15.json",
+  "ax01_sha256": "f305954c89beb0ca41b770c1280d8ea18fd87a1ff2dc91eae4908da2746d6812",
+  "identity_report_path": "reports/verification/r15_identity.json",
+  "identity_report_sha256": "71ca268b5151dcefeb2d41313883eb7085ab0ef148a7ca02c1c6fe926fab3b30",
+  "r14_library_path": "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD/animation/scenes/spine_leg_coordination_r14.blend",
+  "r14_library_sha256": "15b2d86dc69c410c99f88a6f74f9e3039970b0b588316dcd08401494060ba285",
+  "changed_mesh": {
+    "path": "animation/assets/r15/lumbar_source.json",
+    "sha256": "4204dc4ad976e6db64047c9b60aaa1551be964d29c1b980c8fcc9e1b4a68672b",
+    "mesh_id": "mesh:FRM_LUMBAR_COMPACT_CAGE_r12",
+    "source_object": "FRM_LUMBAR_COMPACT_CAGE_r12"
+  },
+  "unchanged_geometry_proof": {
+    "status": "PASS",
+    "unchanged_native_source_count": 107,
+    "preserved_physical_instances": 455,
+    "preserved_source_local_frames": true,
+    "preserved_motion_map": true
+  },
+  "scope": "Small r15 changed-geometry interoperability preview, inherited prescribed r14 kinematics. Full r14 videos immutable."
+}

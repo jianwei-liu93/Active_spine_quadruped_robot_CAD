@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "src/run_checks_r15.py", line 32, in <module>
+    report=verify_sculpted_delta_r15.run(doc,old.LumbarIntegrated1.LinkedObject,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jianwei/freeCAD_projects/Active_spine_quadruped_robot_CAD_r15/src/verify_sculpted_delta_r15.py", line 268, in run
+    or document.isModified() or document.getObject(FRAME_SOURCE)!=source
+       ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'App.Document' object has no attribute 'isModified'

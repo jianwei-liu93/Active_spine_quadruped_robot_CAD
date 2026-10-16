@@ -1,0 +1,143 @@
+{
+  "native_path": "cad/flexor_r15b_robot.FCStd",
+  "native_sha256": "8ccc26f91390fcef76ca7538c2f50f2564e9d71390dec0abb1fe9cf11c9c83b3",
+  "actual_FreeCAD_native_geometry": true,
+  "captures": [
+    {
+      "path": "reports/views/r15_before_AB_isolated.png",
+      "sha256": "d9672295dd75d9a0de9409124036b116c15d1ef3ee5ae6ee6428b08c4cb32b0f",
+      "camera": {
+        "normal": [
+          0.65,
+          -1,
+          0.9
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 24.59832763671875
+      }
+    },
+    {
+      "path": "reports/views/r15b_AB_isolated.png",
+      "sha256": "8af9cb53c2c5a8c13605af3d79f70daaeaa12ec640ce98a1d5fde2f6b842d8d7",
+      "camera": {
+        "normal": [
+          0.65,
+          -1,
+          0.9
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 24.59832763671875
+      }
+    },
+    {
+      "path": "reports/views/r15_before_AB_depth.png",
+      "sha256": "bc136646b01922a8ee06d335a13645424d37d4d33e9d1516f0e025ff431359ba",
+      "camera": {
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 25.24741554260254
+      }
+    },
+    {
+      "path": "reports/views/r15b_AB_depth.png",
+      "sha256": "7f75f2d73e267f36268714975c212b8f01cd1632a9405484509a75b35b743cc4",
+      "camera": {
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 25.24741554260254
+      }
+    },
+    {
+      "path": "reports/views/r15_before_AB_plan.png",
+      "sha256": "2fb047c212807f46b11af444012cd2428557a2b858f32653ec8262aca8147b2a",
+      "camera": {
+        "normal": [
+          0.001,
+          0.001,
+          1
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 33.46199417114258
+      }
+    },
+    {
+      "path": "reports/views/r15b_AB_plan.png",
+      "sha256": "45adf42ba67b68c51166f79f61abb5fbbf90b28828e5ee666fdb43da5511b330",
+      "camera": {
+        "normal": [
+          0.001,
+          0.001,
+          1
+        ],
+        "centre_mm": [
+          15.06075,
+          3.0,
+          -1.2000000000000006
+        ],
+        "height_mm": 33.46199417114258
+      }
+    },
+    {
+      "path": "reports/views/r15b_robot_isometric.png",
+      "sha256": "558aba0a9daf26bc166f25f3e228a79516528b1d25f9b1cb292a9d8c31cef2ac",
+      "camera": {
+        "normal": [
+          0.8,
+          1,
+          0.65
+        ],
+        "centre_mm": [
+          -3.931964430317265,
+          0.0,
+          -9.312606481070084
+        ],
+        "height_mm": 203.2733154296875
+      }
+    },
+    {
+      "path": "reports/views/r15b_spine_close.png",
+      "sha256": "427ea964b0fc44236818bbd3d83316f64d56f36c54373b9463c098ea1c770499",
+      "camera": {
+        "normal": [
+          0.8,
+          1,
+          0.65
+        ],
+        "centre_mm": [
+          -7.220726056604647,
+          0.1823493070369011,
+          3.431030057658351
+        ],
+        "height_mm": 157.714111328125
+      }
+    }
+  ]
+}

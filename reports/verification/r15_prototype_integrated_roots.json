@@ -1,0 +1,147 @@
+{
+  "status": "PASS_LOCAL_GEOMETRY_ONLY",
+  "source_object": "FRM_LUMBAR_COMPACT_CAGE_r12",
+  "physical_instance": "LumbarIntegrated1",
+  "features": [
+    {
+      "family": "short_ear",
+      "feature": "RootBlendShortEarR15",
+      "radius_mm": 1.0,
+      "selector": "source-local root planes and straight X-oriented lines",
+      "selected": [
+        {
+          "edge": "Edge11",
+          "length_mm": 10.930930930930927,
+          "center_local_mm": [
+            29.884384384384383,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "edge": "Edge182",
+          "length_mm": 10.930930930930927,
+          "center_local_mm": [
+            29.884384384384383,
+            2.5,
+            56.800000000000004
+          ]
+        },
+        {
+          "edge": "Edge333",
+          "length_mm": 10.930930930930934,
+          "center_local_mm": [
+            -29.884384384384386,
+            -2.5,
+            0.0
+          ]
+        },
+        {
+          "edge": "Edge386",
+          "length_mm": 10.930930930930934,
+          "center_local_mm": [
+            -29.884384384384386,
+            -2.5,
+            56.800000000000004
+          ]
+        }
+      ],
+      "state": [
+        "Up-to-date"
+      ],
+      "status": "Valid"
+    },
+    {
+      "family": "guide",
+      "feature": "RootBlendGuidesR15",
+      "radius_mm": 1.0,
+      "selector": "source-local root planes and straight X-oriented lines",
+      "selected": [
+        {
+          "edge": "Edge21",
+          "length_mm": 9.907159353348735,
+          "center_local_mm": [
+            29.18460596368512,
+            2.5,
+            -9.4
+          ]
+        },
+        {
+          "edge": "Edge102",
+          "length_mm": 11.292840646651275,
+          "center_local_mm": [
+            28.522760154987978,
+            -2.5,
+            -9.4
+          ]
+        },
+        {
+          "edge": "Edge111",
+          "length_mm": 11.292840646651275,
+          "center_local_mm": [
+            28.522760154987978,
+            -2.5,
+            66.2
+          ]
+        },
+        {
+          "edge": "Edge200",
+          "length_mm": 9.907159353348735,
+          "center_local_mm": [
+            29.18460596368512,
+            2.5,
+            66.2
+          ]
+        },
+        {
+          "edge": "Edge292",
+          "length_mm": 11.292840646651271,
+          "center_local_mm": [
+            -28.52276015498797,
+            2.5,
+            -9.4
+          ]
+        },
+        {
+          "edge": "Edge304",
+          "length_mm": 11.292840646651271,
+          "center_local_mm": [
+            -28.52276015498797,
+            2.5,
+            66.2
+          ]
+        },
+        {
+          "edge": "Edge321",
+          "length_mm": 9.907159353348732,
+          "center_local_mm": [
+            -29.184605963685115,
+            -2.5,
+            -9.4
+          ]
+        },
+        {
+          "edge": "Edge407",
+          "length_mm": 9.907159353348732,
+          "center_local_mm": [
+            -29.184605963685115,
+            -2.5,
+            66.2
+          ]
+        }
+      ],
+      "state": [
+        "Up-to-date"
+      ],
+      "status": "Valid"
+    }
+  ],
+  "baseline_material_removed_mm3": 0.0,
+  "material_added_mm3": 27.459101625678468,
+  "volume_before_mm3": 15444.99556358771,
+  "volume_after_mm3": 15472.454665213418,
+  "single_valid_solid": true,
+  "source_frame_preserved": true,
+  "accepted_history_preserved": true,
+  "scope": "Local additive geometry; section, pose, clearance and interface checks required separately"
+}
